@@ -1,14 +1,18 @@
 ---
-layout: default
+layout: page
+title: Avances
+permalink: /avances/
+weight: 2
+showInNavbar: true
 ---
 
 <div class="home">
 
-  <h1 class="page-heading">Historias</h1>
+  <h1 class="page-heading">Avances de la iniciativa de datos abiertos</h1>
 
   <ul class="post-list">
     {% for post in site.posts %}
-      {% if post.categories contains 'historias' %}
+      {% if post.categories contains 'avances' %}
         <li>
           <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
