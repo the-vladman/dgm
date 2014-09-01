@@ -10,8 +10,11 @@ layout: default
   <h3>En datos.gob.mx puedes descargar y utilizar libremente datos
     abiertos que el Gobierno de la República genera y recolecta.</h3>
 
+  <h3>Historias con datos: Conoce quienes ya usan datos abiertos</h3>
+
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% assign stories = site.posts | where:'category','historias' %}
+    {% for post in stories %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
