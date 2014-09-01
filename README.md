@@ -10,4 +10,4 @@ A static, blog-aware website for [datos.gob.mx](http://datos.gob.mx).
 
 ### Run
 
-    % jekyll serve --watch
+    % jekyll serve --watch --config _config-local.yml
