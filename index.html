@@ -16,7 +16,7 @@ layout: default
     {% assign stories = site.posts | where:'section','historias' %}
     {% for post in stories %}
       <li>
-        <span class="post-meta">{{ post.tags | first }}</span>
+        <span class="post-meta">{{ post.category }}</span>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
