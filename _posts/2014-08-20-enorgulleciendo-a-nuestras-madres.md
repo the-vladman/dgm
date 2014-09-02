@@ -3,7 +3,7 @@ layout:   post
 title:    "Enorgullenciendo a nuestras madres: Reduciendo la mortalidad materna en México"
 author:   "Nick Eng | DSSG"
 date:     2014-07-15 18:09:00 -0500
-category: historias
+section: historias
 tags:
 - salud
 - mortalidad materna

@@ -2,7 +2,7 @@
 layout: post
 title:  "Edición en vivo de la Política de Datos Abiertos"
 date:   2014-04-15
-category: avances
+section: avances
 tags:
  - política
  - en vivo
