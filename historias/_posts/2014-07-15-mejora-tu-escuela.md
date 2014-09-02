@@ -3,7 +3,8 @@ layout:   post
 title:    "MejoraTuEscuela.org"
 author:   "IMCO"
 date:     2014-07-15
-section: historias
+section:  historias
+category: educación
 tags:
 - educación
 - escuelas
