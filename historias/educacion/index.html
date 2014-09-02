@@ -1,0 +1,24 @@
+---
+layout: page
+title: Historias sobre educación
+permalink: /historias/educacion/
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Historias con datos: Conoce quienes ya usan
+    datos abiertos</h1>
+
+  <ul class="post-list">
+    {% for post in site.categories.educacion %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
