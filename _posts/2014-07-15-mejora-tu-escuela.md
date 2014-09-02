@@ -1,7 +1,8 @@
 ---
-layout: post
-title:  "MejoraTuEscuela.org"
-date:   2014-07-15
+layout:   post
+title:    "MejoraTuEscuela.org"
+author:   "IMCO"
+date:     2014-07-15
 category: historias
 tags:
 - educación
