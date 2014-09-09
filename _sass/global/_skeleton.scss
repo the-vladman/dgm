@@ -1,0 +1,78 @@
+.site-header {
+  @include clearfix;  
+
+  .site-brand-wrapper {
+    float: left;
+    padding: 38px;
+  }
+
+  .site-brand {
+    display: block;
+    position: relative;
+
+    .site-tagline {
+      width: 185px;
+      position: absolute;
+      top: 18px;
+      left: 44px;
+    }
+
+    .site-tagline-p1 {
+      float: left;
+      height: 20px;
+    }
+
+    .site-tagline-p2{
+      float: left;
+      overflow: hidden;
+      height: 20px;
+      margin-left: 5px;
+    }
+  }
+
+  .site-navigation {
+    float: right;
+    @include clearfix;
+
+    ul li {
+      float: left;
+
+      a {
+        display: block;
+        height: 105px;
+        padding: 0px 25px;
+      }
+    }
+
+    .i {
+      display: block;
+      margin: 15px auto 5px auto;
+    }
+  }
+
+  @include max-screen(720px) {
+    .site-brand-wrapper {
+      float: none;
+      width: 220px;
+      margin: 0 auto;
+    }
+
+    .site-navigation {
+      float: none;
+
+      ul li {
+        display: inline-block;
+        float: none;
+
+        a {
+          height: auto;
+          padding: 10px 18px 12px 18px;
+        }
+      }
+
+      .i {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.i {
+  background-image: url('../images/bg/pack.png');
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+
+  &.dgm-logo { width: 204px; height: 34px; background-position: -44px -1px; }
+  &.data-white { width: 42px; height: 53px; background-position: 0 0; }
+  &.stories-white { width: 42px; height: 53px; background-position: 0px -54px; }
+  &.progress-white { width: 34px; height: 53px; background-position: -4px -111px; }
+}
