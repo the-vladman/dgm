@@ -1,44 +1,65 @@
 <header class="site-header">
-  <div class="site-brand-wrapper">
-    <a class="site-brand" href="{{ site.url }}">
-      <i class="i dgm-logo"></i>
-      <div class="site-tagline">
-        <div class="site-tagline-p1">Abrir para</div>
-        <div class="site-tagline-p2">
-          <ul>
-            <li>innovar</li>
-            <li>emprender</li>
-            <li>transparentar</li>
-            <li>participar</li>
-            <li>ahorrar</li>
-            <li>evaluar</li>
-            <li>eficientar</li>
-          </ul>
+  <div class="site-header-top">
+    <div class="wrapper">
+      <div class="cols-12">
+        <div class="col col-12">
+          <div class="col-inner">
+            
+          </div>
         </div>
       </div>
-    </a>
+    </div>
   </div>
+  <div class="site-header-bottom">
+    <div class="wrapper">
+      <div class="cols-12">
+        <div class="col col-12">
+          <div class="col-inner">
+            <div class="site-brand-wrapper">
+              <a class="site-brand" href="{{ site.url }}">
+                <i class="i dgm-logo"></i>
+                <div class="site-tagline">
+                  <div class="site-tagline-p1">Abrir para</div>
+                  <div class="site-tagline-p2">
+                    <ul>
+                      <li>innovar</li>
+                      <li>emprender</li>
+                      <li>transparentar</li>
+                      <li>participar</li>
+                      <li>ahorrar</li>
+                      <li>evaluar</li>
+                      <li>eficientar</li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-  <nav class="site-navigation">
-    <ul>
-      <li>
-        <a href="">
-          <i class="i data-white"></i>
-          Datos
-        </a>
-      </li>
-      <li>
-        <a href="{{ site.url }}/historias/" {% if page.body_class == 'stories' %} class="active"{% endif %}>
-          <i class="i stories-white"></i>
-          Historias
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <i class="i progress-white"></i>
-          Avances
-        </a>
-      </li>
-    </ul>
-  </nav>
+            <nav class="site-navigation">
+              <ul>
+                <li>
+                  <a href="">
+                    <i class="i data-white"></i>
+                    Datos
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ site.url }}/historias/" {% if page.body_class == 'stories' %} class="active"{% endif %}>
+                    <i class="i stories-white"></i>
+                    Historias
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="i progress-white"></i>
+                    Avances
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
