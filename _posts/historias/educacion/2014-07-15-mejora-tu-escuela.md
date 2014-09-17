@@ -5,6 +5,20 @@ author:   "Ariadna Camargo y Alexandra Zapata | IMCO | Omidyar Network"
 date:     2014-07-15
 cover:    "mejora-screenshot.png"
 cover_photo: "Screen-Shot-2014-07-15-at-12.51.37-PM-1214x400.png"
+datasets:
+  -
+    title: "Mortalidad Materna"
+    url: http://catalogo.datos.gob.mx/dataset/mortalidad-materna
+  -
+    title: "Recursos en salud"
+    url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
+similar_datasets:
+  -
+    title: "Mortalidad Materna"
+    url: http://catalogo.datos.gob.mx/dataset/mortalidad-materna
+  -
+    title: "Recursos en salud"
+    url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
 section:  historias
 category: educacion
 tags:
