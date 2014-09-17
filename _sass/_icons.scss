@@ -1,11 +1,15 @@
 .i {
-  background-image: url('../images/bg/pack.png');
+  background-image: url('../assets/images/bg/pack.png');
   background-repeat: no-repeat;
   vertical-align: middle;
   display: inline-block;
 
-  &.dgm-logo { width: 204px; height: 34px; background-position: -44px -1px; }
-  &.data-white { width: 42px; height: 53px; background-position: 0 0; }
-  &.stories-white { width: 42px; height: 53px; background-position: 0px -54px; }
-  &.progress-white { width: 34px; height: 53px; background-position: -4px -111px; }
+  &.dgm-logo { width: 140px; height: 20px; background-position: -38px -26px; }
+  &.presidencia { width: 83px; height: 25px; background-position: 0 0; }
+  &.twitter-gray { width: 20px; height: 20px; background-position: 0 -26px; }
+  &.fb-gray { width: 9px; height: 20px; background-position: -25px -26px; }
+  &.libre-uso-white { width: 122px; height: 23px; background-position: -85px -2px; }
+  &.presidencia-gray { width: 108px; height: 33px; background-position: 0 -47px; }
+  &.mxabierto-gray { width: 105px; height: 30px; background-position: -109px -48px; }
+  &.arrow-right-gray { width: 11px; height: 16px; background-position: -183px -29px; }
 }

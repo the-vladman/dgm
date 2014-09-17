@@ -1,0 +1,83 @@
+.post {
+  &.educacion { 
+    .post-tags, .post-title, .similar-datasets a { color: $education-color; }
+    .post-cover-photo, .datasets-list a { background-color: $education-color; }
+  }
+
+  &.salud { 
+    .post-tags, .post-title, .similar-datasets a { color: $health-color; }
+    .post-cover-photo, .datasets-list a { background-color: $health-color; }
+  }
+
+  .post-cover-photo {
+    @include cover-background;
+
+    .fake-half {
+      background: $white-color;
+    }
+  }  
+
+  .post-main {
+    .post-main-inner {
+      background: $white-color;
+    }
+
+    .breadcrumbs {
+      font-size: 13px;
+      text-transform: capitalize;
+      color: $gray-light-color;
+
+      a {
+        color: $gray-color;
+      }
+    }
+
+    .post-title {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .post-author {
+      font-size: 18px;
+      color: $gray-color;
+    }
+
+    .post-tags {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .post-content p {
+      @include text-size-large;
+    }
+
+    .post-datasets {
+      h6 {
+        color: $gray-color;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .datasets-list {
+        list-style: none; 
+
+        a {
+          font-size: 12px;
+          color: $white-color;
+        }
+      }
+    }
+ 
+    .datasets-bg {
+      background: #dce0e3;
+    }
+  }
+
+  .post-section {
+    border-top: 2px solid $black-color;
+
+    h5 {
+      font-size: 14px;
+    }
+  }
+}

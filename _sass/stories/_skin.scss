@@ -1,0 +1,92 @@
+.categories-stories {
+  .categories-list {
+    list-style: none;
+
+    li {
+      float: left;
+      width: (100%/6);
+    }
+
+    .category-inner {
+      text-align: center;
+      color: $white-color;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      &.all { background: $gray-color; }
+      &.educacion { background: $education-color; }
+      &.medio-ambiente { background: $enviroment-color; }
+      &.salud { background: $health-color; }
+      &.seguridad { background: $security-color; }
+      &.otros { background: $gray-light-color; }
+
+    }
+  }
+}
+
+.posts-list {
+  .story-post {
+    .story-category h5 { 
+      font-size: 14px;
+      font-weight: 600;
+      color: $white-color;
+      text-transform: uppercase;
+    }
+
+    .story-cover {
+      @include cover-background;
+    }
+
+    .story-main {
+      h3 {
+        color: $white-color;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .post-author {
+        color: $white-color;
+        font-size: 14px;
+      }
+
+      .post-meta {
+        color: $white-color;
+        font-size: 13px;
+
+        span {
+          font-weight: 100;
+        }
+      }
+    }
+
+    &.salud .story-category, &.salud .story-main {
+      background: #007eee;
+    }
+
+    &.educacion .story-category, &.educacion .story-main {
+      background: #ff6666;
+    }
+
+    &.seguridad .story-category, &.seguridad .story-main {
+      background: #ffb418;
+    }
+
+    &.other .story-category, &.other .story-main {
+      background: #b4b4b4;
+    }
+  }
+
+  .post-list-load-more {
+    text-align: center;
+    
+    a {
+      background: $gray-color;
+      color: $white-color;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: inset 0 -3px 0 $black-color;
+    }
+  }
+}

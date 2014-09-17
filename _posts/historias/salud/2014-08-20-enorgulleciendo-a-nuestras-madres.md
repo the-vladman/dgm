@@ -3,6 +3,22 @@ layout:   post
 title:    "Enorgullenciendo a nuestras madres: Reduciendo la mortalidad materna en México"
 author:   "Nick Eng | DSSG"
 date:     2014-07-15 18:09:00 -0500
+cover:    "MMRate-Map2-SP-1024x593.png"
+cover_photo: "MMRate-Map2-SP-copy-1280x400.png"
+datasets:
+  -
+    title: "Mortalidad Materna"
+    url: http://catalogo.datos.gob.mx/dataset/mortalidad-materna
+  -
+    title: "Recursos en salud"
+    url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
+similar_datasets:
+  -
+    title: "Mortalidad Materna"
+    url: http://catalogo.datos.gob.mx/dataset/mortalidad-materna
+  -
+    title: "Recursos en salud"
+    url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
 section:  historias
 category: salud
 tags:
@@ -18,7 +34,7 @@ México ha avanzado sustancialmente desde la firma de los ODM en 2000; se ha des
 
 A pesar de estas mejoras, sus esfuerzos todavía se encuentran lejos del objetivo final. En los últimos 10 años, la RMM de México se ha estancado a pesar de los esfuerzos gubernamentales para reducirla. El siguiente gráfico, adaptado de un documento de investigación de Celia Huber, muestra la brecha entre la RMM deseada y la razón observada desde 1990, en particular el estancamiento entre 2002 y 2010.
 
-![RMM observada vs. objetivo en México]({{ site.url | append: site.baseurl }}/assets/MMR-Target-SP-1024x566.png)
+![RMM observada vs. objetivo en México]({{ site.url | append: site.baseurl }}/assets/images/MMR-Target-SP-1024x566.png)
 
 Debido a esto, estamos trabajando con la Coordinación de la Estrategia Digital Nacional de la Oficina de la Presidencia de México para limpiar los datos disponibles y mejor entender la razón por la cual su razón de mortalidad materna se ha mantenido relativamente estancada en los últimos 10 años. Adicionalmente, estamos intentando entender el problema de la mortalidad materna a un nivel mucho más granular que lo que ha sido estudiado antes.
 
@@ -26,7 +42,7 @@ Debido a esto, estamos trabajando con la Coordinación de la Estrategia Digital 
 
 Las evaluaciones previas y los estudios de la métrica de mortalidad materna han sido elaborados principalmente al nivel estatal. Con la riqueza de información que nos ha sido provista, nos gustaría estudiarlo al nivel municipal, o inclusive al nivel de las localidades. En México existen 32 estados (incluyendo al Distrito Federal), mientras que hay alrededor de 2,500 municipios y más de 192 mil localidades. El entender donde se encuentra la problemática a un nivel potencialmente 6 mil veces más refinado podria habilitar a México a mejor elegir sus objetivos y diseñar intervenciones que salven las vidas de las madres mexicanas.
 
-![RMM: muertes por cada 1,000 mujeres en edad reproductiva]({{ site.url | append: site.baseurl }}/assets/MMRate-Map2-SP-1024x593.png)
+![RMM: muertes por cada 1,000 mujeres en edad reproductiva]({{ site.url | append: site.baseurl }}/assets/images/MMRate-Map2-SP-1024x593.png)
 
 De hecho es sensacional la cantidad de información que ha sido recopilada para esta problemática. Se nos ha proporcionado acceso a todo tipo de datos que van desde censos hasta información sobre hospitales, de registros de nacimientos, certificados de defunción e inclusive información sobre egresos hospitalarios, anonimizados y con cobertura de por lo menos los últimos 10 años.
 
@@ -49,7 +65,7 @@ Una pieza interesante de este rompecabezas que hemos estado explorando es el rol
 El gráfico siguiente muestra la tasa de mortalidad de aquellos individuos que visitan una institución médica afiliada al empleo.  El gráfico muestra claramente que la tasa de mortalidad de aquellos derechohabientes del Seguro Popular es de prácticamente el doble. Es dificil decir cual es la causa de este fenómeno, los derechohabientes del Seguro Popular tal vez estén recibiendo peor tratamiento de parte de las instituciones médicas asociadas al empleo y no reciban priorización adecuada, o alternativamente estos individuos están asistiendo a dicha institución debido a la urgencia del evento lo cual les genera un riesgo más alto de inicio. Esto es una pista sobre un área en la cual el gobierno Mexicano podria reformar para mejorar su razón de mortalidad materna.
 
 ![Tasa de mortalidad en hospitales IMSS, ISSSTE, SEMAR, SEDENA y PEMEX
-para derechohabientes de IMSS y SSA]({{ site.url | append: site.baseurl }}/assets/Employer-Hospitals-Graph-SP.png)
+para derechohabientes de IMSS y SSA]({{ site.url | append: site.baseurl }}/assets/images/Employer-Hospitals-Graph-SP.png)
 
 #### Encontrando los factores de riesgo correctos
 
@@ -57,7 +73,7 @@ A pesar de la situación de nuestros datos, no estamos completamente excluidos d
 
 Pronto estaremos utilizando árboles de decision, random forests, modelos de regresiones logísticas, modelos Poisson de regresión y modelos jerárquicos, en distintas capacidades. Mientras que en este momento aún estamos en las fases preliminares, estos emocionados sobre los hallazgos que los modelos pueden ofrecer y estamos ansiosos de empezar este siguiente paso. Estamos emocionados de compartir hallazgos interesantes pronto.
 
-### Sobre el programa _Ciencia de datos para el bien público:_
+#### Sobre el programa _Ciencia de datos para el bien público:_
 
 La beca universitaria Eric & Wendy Schmidt Data Science for Social Good es un programa de verano de la Universidad de Chicago para que aspirantes a científicos de datos trabajen en minería de datos, aprendizaje automático, big data y proyectos de ciencia de datos con un impacto social.
 
@@ -66,5 +82,5 @@ Trabajando de manera de cercana con gobiernos y organizaciones sin fines de lucr
 Durante tres meses en Chicago ellos aplican su conocimiento en sistemas de cómputo y sus habilidades de análisis, colaboran en un ambiente intenso, y aprenden de sus mentores de la industria y la academia.
 
 
-![Equipo de DSSG]({{ site.url | append: site.baseurl }}/assets/dssg-team.png)
+![Equipo de DSSG]({{ site.url | append: site.baseurl }}/assets/images/dssg-team.png)
 

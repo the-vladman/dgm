@@ -4,3 +4,4 @@ ruby File.read('.ruby-version').strip
 
 gem 'jekyll'
 gem 'bourbon'
+gem 'jekyll-timeago'
