@@ -45,52 +45,41 @@ showInNavbar: true
   </div>
 </div>
 
-<div class="categories-stories">
-  <div class="wrapper">
-    <div class="cols-12">
-      <div class="col col-12">
-        <div class="col-inner">
-          <ul class="categories-list">
-            <li>
-              <a href="" class="category-inner all">Todas</a>
-            </li>
-            <li>
-              <a href="" class="category-inner educacion">Educación</a>
-            </li>
-            <li>
-              <a href="" class="category-inner medio-ambiente">Medio Ambiente</a>
-            </li>
-            <li>
-              <a href="" class="category-inner salud">Salud</a>
-            </li>
-            <li>
-              <a href="" class="category-inner seguridad">Seguridad</a>
-            </li>
-            <li>
-              <a href="" class="category-inner otros">Otros</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="posts-list">
-  {% for post in stories %}
-    {% include story-post.html post=post %}
-  {% endfor %}
-  <div class="post-list-load-more">
+<div class="stories-content">
+  <div class="categories-stories">
     <div class="wrapper">
       <div class="cols-12">
         <div class="col col-12">
           <div class="col-inner">
-            <a href="" title="Más historias">Más Historias</a>  
+            <ul class="categories-list">
+              <li>
+                <a href="" class="category-inner all">Todas</a>
+              </li>
+              <li>
+                <a href="" class="category-inner educacion">Educación</a>
+              </li>
+              <li>
+                <a href="" class="category-inner medio-ambiente">Medio Ambiente</a>
+              </li>
+              <li>
+                <a href="" class="category-inner salud">Salud</a>
+              </li>
+              <li>
+                <a href="" class="category-inner seguridad">Seguridad</a>
+              </li>
+              <li>
+                <a href="" class="category-inner otros">Otros</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="posts-list">
+    {% for post in stories %}
+      {% include story-post.html post=post %}
+    {% endfor %}
   </div>
 </div>
 
