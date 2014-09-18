@@ -1,0 +1,34 @@
+// Cover Style
+@mixin cover-background () {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+// Text Sizing
+@mixin text-size-x-small () {
+  font-size: 11px;
+  line-height: 16px;
+} 
+
+@mixin text-size-small () {
+  font-size: 13px;
+  line-height: 19px;
+} 
+
+@mixin text-size-regular () {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@mixin text-size-medium () {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+@mixin text-size-large () {
+  font-size: 18px;
+  line-height: 31px;
+}

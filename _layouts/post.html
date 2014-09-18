@@ -1,22 +1,86 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <a href="{{ site.url | append: site.baseurl }}/{{ page.section }}/{{ page.category }}">
-      {{ page.section }} / {{ page.category }}
-    </a>
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">
-      {{ page.date | date: "%b %-d, %Y" }}
-      {% if page.author %} • {{ page.author }}{% endif %}
-      {% if page.meta %} • {{ page.meta }}{% endif %}
-    </p>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
+<div class="post {{ page.category }}">
+  <div class="post-cover-photo" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ page.cover_photo }}');">
+    <div class="fake-half"></div>
+  </div>
+  <div class="post-main">
+    <div class="wrapper">
+      <div class="cols-12">
+        <div class="col col-9">
+          <div class="col-inner">
+            <div class="post-main-inner">
+              <div class="breadcrumbs">
+                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}">{{ page.section }}</a> /
+                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}/{{ page.category }}">{{ page.category }}</a>
+              </div>
+              <h1 class="post-title">{{ page.title }}</h1>
+              <span class="post-author">{{ page.author }}</span>
+              <div class="post-tags">
+                {% for tag in page.tags %}
+                  <span>
+                    {{tag}}
+                    {% unless forloop.length == forloop.index %}, {% endunless %}
+                  </span>
+                {% endfor %}
+              </div>
+              <article class="post-content">
+                {{ content }}
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="col col-3">
+          <div class="col-inner">
+            <div class="post-datasets">
+              <h6>Conjuntos de datos utilizados:</h6>
+              <ul class="datasets-list">
+                {% for dataset in page.datasets %}
+                  <li>
+                    <a href="{{ dataset.url }}" title="{{ dataset.title }}" target="_blank">{{ dataset.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="datasets-bg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="cols-12">
+        <div class="col col-9">
+          <div class="col-inner">
+            {% if page.similar_datasets %}
+              <div class="post-section similar-datasets">
+                <h5>Conjuntos de datos relacionados</h5>
+                <ul class="no-bullets">
+                  {% for dataset in page.similar_datasets %}
+                    <li>
+                      <a href="{{ dataset.url }}" title="{{ dataset.title }}">{{ dataset.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+            <div class="post-section comments">
+              <div id="disqus_thread"></div>
+              <script type="text/javascript">
+                  var disqus_shortname = 'blog-datos-mx';
+                  var disqus_config = function () { 
+                  this.language = "es_MX";
+                };
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              </script>
+              <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

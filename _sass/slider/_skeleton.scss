@@ -1,0 +1,45 @@
+.slider-wrapper {
+  position: relative;
+
+  .slide {
+    
+    @include cover-background;
+  }
+
+  .slide-card-box {
+    padding: 25px;
+    height: 180px;
+    margin: 80px 0;
+    position: relative;
+
+    .complement-tagline {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    
+    .post-read-more {
+      position: absolute;
+      left: 25px;
+      bottom: 25px;
+    }
+  }
+
+  .slider-pager {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+
+    .slider-pager-buttons {
+      float: right;
+
+      .slider-button {
+        display: inline-block;
+      }
+
+      a {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}

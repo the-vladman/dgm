@@ -2,62 +2,99 @@
   font-family: $site-font;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: $black-color;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 25px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+a {
+  color: #0079bc;
+  text-decoration: none !important;
+}
+
+p {
+  color: $text-color;
+  font-weight: 100;
+  @include text-size-medium; 
+}
+
 .site-header {
-  background: $black-color;
+  .site-header-top {
+    background: #eeeeee;
 
-  .site-tagline {
-    text-transform: uppercase;
-    color: $white-color;
-    font-size: 12px;
+    .social-links {
+      ul {
+        list-style: none;
 
-    .site-tagline-p1 {
-      line-height: 20px;
-    }
-
-    ul {
-      font-weight: 700;
-      list-style: none;
-      @include animation(change 7s 1s ease-in-out infinite);
-
-      li {
-        line-height: 20px;
-      }
-    }
-  }
-
-  .site-navigation {
-
-    ul {
-      list-style: none;
-      
-      li a {
-        color: #f1f1f1;
-        font-size: 14px;
-        border-top: 5px solid #333;
-
-        &.active {
-          border-top-color: #dedede;
-          background: #333;
-        }
-
-        &:hover {
-          color: #20cac8;
+        li {
+          float: left;
         }
       }
     }
   }
 
-  @include max-screen(720px) {
-    .site-navigation ul {
-      text-align: center;
+  .site-header-bottom {
+    background: #474747;
 
-      li a {
-        font-size: 10px;
+    .site-navigation {
+      ul {
+        list-style: none;
+
+        li {
+          float: left;
+        }
+      }
+
+      a {
+        color: $white-color;
+        font-size: 12px;
       }
     }
   }
 }
 
+.site-footer {
+  background: #474747;
+
+  .open-knowledge ul {
+    list-style: none;
+  }
+
+  .legal-footer ul {
+    list-style: none;
+  }
+}
+
+.no-bullets {
+  list-style: none;
+}
+
+// @include animation(change 7s 1s ease-in-out infinite);
 @include keyframes(change) {
   0% {
     margin-top: 0;

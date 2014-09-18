@@ -1,0 +1,27 @@
+<div class="story-post {{ post.category }}">
+  <div class="wrapper">
+    <div class="cols-12">
+      <div class="col col-2">
+        <div class="col-inner">
+          <div class="story-category">
+            <div class="story-category-inner">
+              <h5>{{ post.category }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-10">
+        <div class="col-inner">
+          <div class="story-cover" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover }}');"></div>
+          <div class="story-main">
+            <div class="story-main-inner">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><h3>{{ post.title }}</h3></a>
+              <h6 class="post-author">{{ post.author }}</h6>
+              <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }} <span> | {{ post.date | timeago }}</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

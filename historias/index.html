@@ -6,23 +6,81 @@ permalink: /historias/
 weight: 1
 showInNavbar: true
 ---
+{% assign stories = site.posts | where:'section', 'historias' %}
 
-<div class="home">
+<div class="slider-wrapper">
+  <div class="slider">
+    {% for post in stories | limi: 4 %}
+      <div class="slide" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover_photo }}');">
+        <div class="wrapper">
+          <div class="cols-12">
+            <div class="col col-6">
+              <div class="col-inner">
+                <div class="slide-card-box {{ post.category }}">
+                  <span class="complement-tagline">Datos abiertos para</span>
+                  <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="post-link">{{ post.title }}</h3></a>
 
-  <h1 class="page-heading">Historias con datos: Conoce quienes ya usan
-    datos abiertos</h1>
-
-  <ul class="post-list">
-    {% assign stories = site.posts | where:'section','historias' %}
-    {% for post in stories %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+                  <a class="post-read-more" href="{{ post.url | prepend: site.baseurl }}">Leer Más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     {% endfor %}
-  </ul>
-
+  </div>
+  <div class="slider-pager">
+    <div class="wrapper">
+      <div class="cols-12">
+        <div class="col col-12">
+          <div class="col-inner">
+            <div class="slider-pager-buttons">
+              <div class="slider-button prev"></div>
+              <div class="slider-button next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="stories-content">
+  <div class="categories-stories">
+    <div class="wrapper">
+      <div class="cols-12">
+        <div class="col col-12">
+          <div class="col-inner">
+            <ul class="categories-list">
+              <li>
+                <a href="" class="category-inner all">Todas</a>
+              </li>
+              <li>
+                <a href="" class="category-inner educacion">Educación</a>
+              </li>
+              <li>
+                <a href="" class="category-inner medio-ambiente">Medio Ambiente</a>
+              </li>
+              <li>
+                <a href="" class="category-inner salud">Salud</a>
+              </li>
+              <li>
+                <a href="" class="category-inner seguridad">Seguridad</a>
+              </li>
+              <li>
+                <a href="" class="category-inner otros">Otros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="posts-list">
+    {% for post in stories %}
+      {% include story-post.html post=post %}
+    {% endfor %}
+  </div>
+</div>
+
+{% include subscribe.html %}
