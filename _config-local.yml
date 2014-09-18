@@ -11,7 +11,7 @@ github_username:  mxabierto
 
 # Build settings
 markdown: kramdown
-gems: [bourbon, jekyll-timeago]
+gems: ['bourbon', 'jekyll-timeago']
 jekyll_timeago:
   depth: 1 # Level of detail
   today: 'hoy'
