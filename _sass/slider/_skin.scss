@@ -39,3 +39,24 @@
     }
   }
 }
+
+// Home Presentation Sliders
+.presentation-box {
+  text-align: center;
+
+  .tag-top {
+    font-weight: 600;
+    font-size: 14px;
+    color: $text-color;
+    background: $white-color;
+  }
+
+  .main-headline {
+    span {
+      background: $education-color;
+      color: $white-color;
+      font-size: 36px;
+      font-weight: 600;
+    }
+  }
+}

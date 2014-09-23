@@ -2,27 +2,69 @@
 layout: default
 ---
 
-<div class="home">
+{% assign stories = site.posts | where:'section', 'historias' %}
 
-  <h1 class="page-heading">Con datos abiertos puedes prevenir daños por desastres naturales</h1>
-  <img src="{{ site.url | append: site.baseurl }}/assets/slide-1.jpg" alt="Con datos abiertos puedes prevenir daños por desastres naturales" />
+<div class="slider-wrapper">
+  <div class="slider">
 
-  <h3>En datos.gob.mx puedes descargar y utilizar libremente datos
-    abiertos que el Gobierno de la República genera y recolecta.</h3>
+    <div class="slide" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/home-slider-1.jpg');">
+      <div class="wrapper">
+        <div class="cols-12">
+          <div class="col col-12">
+            <div class="col-inner">
+              <div class="presentation-box">
+                <span class="tag-top">Datos Abiertos para</span>
+                <h1 class="main-headline">
+                  <span>Mapa interactivo de pobreza </span><br>
+                  <span>interdimensional y rezago social</span>
+                </h1>
+                <a class="btn btn-red presentation-cta" href="{{ 'historias' | prepend: site.baseurl }}" title="Más Historias">Más Historias</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <h3>Historias con datos: Conoce quienes ya usan datos abiertos</h3>
-
-  <ul class="post-list">
-    {% assign stories = site.posts | where:'section','historias' %}
-    {% for post in stories %}
-      <li>
-        <span class="post-meta">{{ post.category }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <span class="post-meta">{{ post.author }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-
+  </div>
+  <div class="slider-pager">
+    <div class="wrapper">
+      <div class="cols-12">
+        <div class="col col-12">
+          <div class="col-inner">
+            <div class="slider-pager-buttons">
+              <div class="slider-button prev"></div>
+              <div class="slider-button next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+{% include search-data.html %}
+{% include open-data-poster.html %}
+
+<div class="stories-content">
+  <div class="stories-title">
+    <div class="wrapper">
+      <div class="cols-12">
+        <div class="col col-12">
+          <div class="col-inner">
+            <h2>Historias con Datos</h2>
+            <p>Conoce quiénes ya usan datos abiertos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="posts-list">
+    {% for post in stories %}
+      {% include story-post.html post=post %}
+    {% endfor %}
+    {% include show-more-stories.html %}
+  </div>
+</div>
+
+{% include subscribe.html %}

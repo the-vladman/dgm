@@ -19,7 +19,6 @@ showInNavbar: true
                 <div class="slide-card-box {{ post.category }}">
                   <span class="complement-tagline">Datos abiertos para</span>
                   <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="post-link">{{ post.title }}</h3></a>
-
                   <a class="post-read-more" href="{{ post.url | prepend: site.baseurl }}">Leer Más</a>
                 </div>
               </div>
@@ -46,36 +45,7 @@ showInNavbar: true
 </div>
 
 <div class="stories-content">
-  <div class="categories-stories">
-    <div class="wrapper">
-      <div class="cols-12">
-        <div class="col col-12">
-          <div class="col-inner">
-            <ul class="categories-list">
-              <li>
-                <a href="" class="category-inner all">Todas</a>
-              </li>
-              <li>
-                <a href="" class="category-inner educacion">Educación</a>
-              </li>
-              <li>
-                <a href="" class="category-inner medio-ambiente">Medio Ambiente</a>
-              </li>
-              <li>
-                <a href="" class="category-inner salud">Salud</a>
-              </li>
-              <li>
-                <a href="" class="category-inner seguridad">Seguridad</a>
-              </li>
-              <li>
-                <a href="" class="category-inner otros">Otros</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include stories-categories.html %}  
   <div class="posts-list">
     {% for post in stories %}
       {% include story-post.html post=post %}
