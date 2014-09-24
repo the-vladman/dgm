@@ -25,6 +25,18 @@
   }
 }
 
+.stories-title {
+  text-align: center;
+
+  h2 {
+    color: $education-color;
+  }
+
+  p {
+    @include text-size-large;
+  }
+}
+
 .posts-list {
   .story-post {
     .story-category h5 { 
@@ -79,14 +91,5 @@
 
   .post-list-load-more {
     text-align: center;
-    
-    a {
-      background: $gray-color;
-      color: $white-color;
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: 600;
-      box-shadow: inset 0 -3px 0 $black-color;
-    }
   }
 }
