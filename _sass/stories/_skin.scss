@@ -73,19 +73,19 @@
     }
 
     &.salud .story-category, &.salud .story-main {
-      background: #007eee;
+      background: $health-color;
     }
 
     &.educacion .story-category, &.educacion .story-main {
-      background: #ff6666;
+      background: $education-color;
     }
 
     &.seguridad .story-category, &.seguridad .story-main {
-      background: #ffb418;
+      background: $security-color;
     }
 
-    &.other .story-category, &.other .story-main {
-      background: #b4b4b4;
+    &.otro .story-category, &.otro .story-main {
+      background: $other-color;
     }
   }
 

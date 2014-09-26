@@ -9,6 +9,11 @@
     .post-cover-photo, .datasets-list a { background-color: $health-color; }
   }
 
+  &.otro { 
+    .post-tags, .post-title, .similar-datasets a { color: $other-color; }
+    .post-cover-photo, .datasets-list a { background-color: $other-color; }
+  }
+
   .post-cover-photo {
     @include cover-background;
 

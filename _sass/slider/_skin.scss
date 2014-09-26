@@ -13,6 +13,7 @@
 
     .post-link {
       font-size: 23px;
+      line-height: 32px;
       font-weight: 600;
     }
 
@@ -23,6 +24,7 @@
 
     &.salud .post-link, &.salud .post-read-more { color: $health-color; }
     &.educacion .post-link, &.educacion .post-read-more { color: $education-color; }
+    &.otro .post-link, &.otro .post-read-more { color: $other-color; }
   }
 
   .slider-pager .slider-pager-buttons {
