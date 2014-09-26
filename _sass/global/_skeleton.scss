@@ -5,7 +5,9 @@ img {
 p + p,
 img + p,
 p + img,
-img + img {
+img + img,
+p + ul,
+img + ul {
   margin-top: 25px;
 }
 
@@ -17,6 +19,11 @@ p + h5,
 p + h6 {
   margin-top: 35px;
   margin-bottom: 15px;
+}
+
+.post-content ul {
+  margin: 20px 0;
+  padding-left: 45px;
 }
 
 .site-header { 

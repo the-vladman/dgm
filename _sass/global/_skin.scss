@@ -44,6 +44,10 @@ p {
   @include text-size-medium; 
 }
 
+.post-content ul {
+  @extend p;
+}
+
 .site-header {
   .site-header-top {
     background: #eeeeee;
