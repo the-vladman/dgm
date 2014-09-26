@@ -39,6 +39,9 @@
             </a>
             <nav class="site-navigation">
               <ul>
+                <li>
+                  <a class="page-link" href="http://catalogo.datos.gob.mx/dataset">Datos</a>
+                </li>
                 {% assign sorted_pages = site.pages | where:'showInNavbar',true | sort:'weight' %}
                 {% for page in sorted_pages %}
                   {% if page.title %}
