@@ -69,7 +69,13 @@ layout: default
                 <h5>Colaboradores</h5>
                 {% for collaborator in page.collaborators %}
                   {% assign institution = site.collaborators[collaborator] %}
-                  <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
+                  {% if institution.site == "" %}
+                    <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
+                  {% else %}
+                    <a href="{{ institution.site }}" title="{{ institution.title }}" target="_blank">
+                      <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
+                    </a>
+                  {% endif %}
                 {% endfor %}
               </div>
             {% endif %}

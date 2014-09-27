@@ -22,6 +22,7 @@ similar_datasets:
     url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
 section:  historias
 category: salud
+category_title: Salud
 tags:
 - salud
 - mortalidad materna

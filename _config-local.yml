@@ -15,6 +15,22 @@ collaborators:
     title: "Secretaria de Salud"
     site: "http://portal.salud.gob.mx/"
     logo_url: "logoSALUD_hoz-233x80.png"
+  imco:
+    title: "IMCO"
+    site: "http://imco.org.mx/home/"
+    logo_url: "IMCO_presidencia-205x80.jpg"
+  data4:
+    title: "Data4"
+    site: ""
+    logo_url: "D4_Logo-80x80.png"
+  inegi_facil:
+    title: "INEGI Fácil"
+    site: ""
+    logo_url: "logo_160-80x80.png"
+  cartografica:
+    title: "Cartográfica"
+    site: "http://cartografica.mx/"
+    logo_url: "logo_cartografica-72-57x80.png"
 
 
 # Build settings

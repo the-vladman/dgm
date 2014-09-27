@@ -17,7 +17,7 @@ category_info:
 <div class="slider-wrapper">
   <div class="slider">
     {% assign featured_stories = site.posts | where:'section', 'historias' | where: 'featured', true %}
-    {% for post in featured_stories | limi: 4 %}
+    {% for post in featured_stories | limit: 3 %}
       <div class="slide" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover_photo }}');">
         <div class="wrapper">
           <div class="cols-12">

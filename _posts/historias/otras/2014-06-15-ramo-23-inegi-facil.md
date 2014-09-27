@@ -15,7 +15,8 @@ datasets:
     url: http://catalogo.datos.gob.mx/dataset/avance-fisico-de-obras-y-proyectos-por-centro-sct
 
 section:  historias
-category: otras
+category: medio_ambiente
+category_title: "Medio Ambiente"
 tags:
 - Buscador
 - Datos Abiertos

@@ -90,6 +90,10 @@
     &.otras .story-category, &.otras .story-main {
       background: $other-color;
     }
+
+    &.medio_ambiente .story-category, &.medio_ambiente .story-main {
+      background: $enviroment-color;
+    }
   }
 
   .post-list-load-more {

@@ -20,6 +20,7 @@ collaborators:
   - secretaria_salud
 section:  historias
 category: salud
+category_title: Salud
 tags:
 - Enfermeras
 - Hospitales

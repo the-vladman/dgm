@@ -22,6 +22,7 @@ datasets:
 
 section:  historias
 category: educacion
+category_title: "Educación"
 tags:
 - Educación
 - Escuelas
