@@ -4,24 +4,12 @@
       <div class="col col-12">
         <div class="col-inner">
           <ul class="categories-list">
-            <li>
-              <a href="" class="category-inner all">Todas</a>
-            </li>
-            <li>
-              <a href="" class="category-inner educacion">Educación</a>
-            </li>
-            <li>
-              <a href="" class="category-inner medio-ambiente">Medio Ambiente</a>
-            </li>
-            <li>
-              <a href="" class="category-inner salud">Salud</a>
-            </li>
-            <li>
-              <a href="" class="category-inner seguridad">Seguridad</a>
-            </li>
-            <li>
-              <a href="" class="category-inner otros">Otros</a>
-            </li>
+            {% assign stories_categories = site.pages | where: 'stories_category', true | sort: 'order' %}
+            {% for category_page in stories_categories %}
+              <li>
+                <a href="{{ category_page.url }}" class="category-inner {{ category_page.category_info.name }}{% if page.active == category_page.category_info.name %} active{% endif %}">{{ category_page.category_info.title }}</a>  
+              </li>
+            {% endfor %}
           </ul>
         </div>
       </div>

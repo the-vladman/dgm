@@ -5,6 +5,7 @@ author:   "Nick Eng | DSSG"
 date:     2014-07-15 18:09:00 -0500
 cover:    "MMRate-Map2-SP-1024x593.png"
 cover_photo: "MMRate-Map2-SP-copy-1280x400.png"
+featured: true
 datasets:
   -
     title: "Mortalidad Materna"
@@ -21,6 +22,7 @@ similar_datasets:
     url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
 section:  historias
 category: salud
+category_title: Salud
 tags:
 - salud
 - mortalidad materna

@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="post {{ page.category }}">
   <div class="post-cover-photo" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ page.cover_photo }}');">
     <div class="fake-half"></div>
@@ -62,6 +63,23 @@ layout: default
                 </ul>
               </div>
             {% endif %}
+
+            {% if page.collaborators %}
+              <div class="post-section collaborators">
+                <h5>Colaboradores</h5>
+                {% for collaborator in page.collaborators %}
+                  {% assign institution = site.collaborators[collaborator] %}
+                  {% if institution.site == "" %}
+                    <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
+                  {% else %}
+                    <a href="{{ institution.site }}" title="{{ institution.title }}" target="_blank">
+                      <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
+                    </a>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+
             <div class="post-section comments">
               <div id="disqus_thread"></div>
               <script type="text/javascript">

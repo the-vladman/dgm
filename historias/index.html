@@ -5,12 +5,19 @@ title: Historias
 permalink: /historias/
 weight: 1
 showInNavbar: true
+
+active: all
+stories_category: true
+order: 1
+category_info:
+  name: all
+  title: Todas
 ---
-{% assign stories = site.posts | where:'section', 'historias' %}
 
 <div class="slider-wrapper">
   <div class="slider">
-    {% for post in stories | limi: 4 %}
+    {% assign featured_stories = site.posts | where:'section', 'historias' | where: 'featured', true %}
+    {% for post in featured_stories | limit: 3 %}
       <div class="slide" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover_photo }}');">
         <div class="wrapper">
           <div class="cols-12">
@@ -47,6 +54,7 @@ showInNavbar: true
 <div class="stories-content">
   {% include stories-categories.html %}  
   <div class="posts-list">
+    {% assign stories = site.posts | where:'section', 'historias' %}
     {% for post in stories %}
       {% include story-post.html post=post %}
     {% endfor %}

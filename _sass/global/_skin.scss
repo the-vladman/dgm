@@ -17,7 +17,7 @@ h2 {
 
 h3 {
   font-size: 22px;
-  line-height: 25px;
+  line-height: 29px;
 }
 
 h4 {
@@ -42,6 +42,10 @@ p {
   color: $text-color;
   font-weight: 100;
   @include text-size-medium; 
+}
+
+.post-content ul {
+  @extend p;
 }
 
 .site-header {
@@ -93,4 +97,13 @@ p {
 
 .no-bullets {
   list-style: none;
+}
+
+.full-page-title {
+  background: #676565;
+  text-align: center;
+
+  h1 {
+    color: $white-color;
+  }
 }
