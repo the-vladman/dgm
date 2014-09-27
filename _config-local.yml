@@ -32,7 +32,6 @@ collaborators:
     site: "http://cartografica.mx/"
     logo_url: "logo_cartografica-72-57x80.png"
 
-
 # Build settings
 markdown: kramdown
 gems: ['jekyll-timeago']
