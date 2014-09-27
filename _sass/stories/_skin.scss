@@ -16,11 +16,14 @@
 
       &.all { background: $gray-color; }
       &.educacion { background: $education-color; }
-      &.medio-ambiente { background: $enviroment-color; }
+      &.medio_ambiente { background: $enviroment-color; }
       &.salud { background: $health-color; }
       &.seguridad { background: $security-color; }
-      &.otros { background: $gray-light-color; }
+      &.otras { background: $gray-light-color; }
 
+      &.active {
+        box-shadow: inset 0 -4px 0 rgba(0,0,0,.1);
+      }
     }
   }
 }
@@ -84,7 +87,7 @@
       background: $security-color;
     }
 
-    &.otro .story-category, &.otro .story-main {
+    &.otras .story-category, &.otras .story-main {
       background: $other-color;
     }
   }

@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Salud · Historias
-permalink: /historias/salud/
+body_class: stories
+title: Seguridad · Historias
+permalink: /historias/seguridad/
 
-active: salud
+active: seguridad
 stories_category: true
-order: 4
+order: 5
 category_info:
-  name: salud
-  title: Salud
+  name: seguridad
+  title: Seguridad
 ---
-
 {% include page-title.html title=page.category_info.title %}  
 
 <div class="stories-content">
   {% include stories-categories.html %}  
   <div class="posts-list">
-    {% assign stories = site.posts | where:'section', 'historias' | where: 'category', 'salud' %}
+    {% assign stories = site.posts | where:'section', 'historias' | where: 'category', 'seguridad' %}
     {% for post in stories %}
       {% include story-post.html post=post %}
     {% endfor %}

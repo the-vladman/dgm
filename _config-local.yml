@@ -16,6 +16,7 @@ collaborators:
     site: "http://portal.salud.gob.mx/"
     logo_url: "logoSALUD_hoz-233x80.png"
 
+
 # Build settings
 markdown: kramdown
 gems: ['jekyll-timeago']
