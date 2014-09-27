@@ -98,3 +98,12 @@ p {
 .no-bullets {
   list-style: none;
 }
+
+.full-page-title {
+  background: #676565;
+  text-align: center;
+
+  h1 {
+    color: $white-color;
+  }
+}

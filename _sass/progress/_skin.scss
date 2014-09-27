@@ -1,0 +1,28 @@
+.progress-post {
+  .post-date {
+
+    .dot {
+      background: $green-color;
+      border-radius: 50%;
+
+      &:after {
+        background: $green-color;
+      }
+    }
+
+    span {
+      color: $green-color;
+      font-size: 22px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .post-image {
+    @include cover-background;
+  }
+
+  .post-link {
+    color: $green-color;
+  }
+}

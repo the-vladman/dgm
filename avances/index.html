@@ -7,23 +7,38 @@ weight: 2
 showInNavbar: true
 ---
 
-{{ site.categories }}
+{% include full-page-title.html title=page.title %}  
 
-<div class="home">
 
-  <h1 class="page-heading">Avances de la iniciativa de datos abiertos</h1>
-
-  <ul class="post-list">
-    {% assign stories = site.posts | where:'section','avances' %}
-    {% for post in stories %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-</div>
+<div class="progress-posts-list">{% assign stories = site.posts | where: 'section', 'avances' %}
+  {% for post in stories %}
+    <div class="progress-post">
+      <div class="wrapper">
+        <div class="cols-12">
+          <div class="col col-2">
+            <div class="col-inner">
+              <div class="post-date">
+                <div class="dot"></div>
+                <span>{{ post.date | date: "%-d" }}</span>
+                <span>{{ post.date | date: "%b" }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="col col-10">
+            <div class="col-inner">
+              <div class="post-main">
+                <div class="post-image" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover }}')">
+                </div>
+                <div class="post-excerp">
+                  <div class="post-excerp-inner">
+                    <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                    {{ post.excerpt }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}</div>
