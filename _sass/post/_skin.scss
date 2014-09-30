@@ -1,35 +1,35 @@
 .post {
   &.educacion { 
-    .post-tags, .post-title, .similar-datasets a { color: $education-color; }
-    .post-cover-photo, .datasets-list a { background-color: $education-color; }
+    .post-content a, .datasets-list a, .datasets-list span,  .post-title, .similar-datasets a { color: $education-color; }
+    .post-cover-photo { background-color: $education-color; }
   }
 
   &.salud { 
-    .post-tags, .post-title, .similar-datasets a { color: $health-color; }
-    .post-cover-photo, .datasets-list a { background-color: $health-color; }
+    .post-content a, .datasets-list a, .datasets-list span, .post-title, .similar-datasets a { color: $health-color; }
+    .post-cover-photo { background-color: $health-color; }
   }
 
   &.otras { 
-    .post-tags, .post-title, .similar-datasets a { color: $other-color; }
-    .post-cover-photo, .datasets-list a { background-color: $other-color; }
+    .post-content a, .datasets-list a, .datasets-list span, .post-title, .similar-datasets a { color: $other-color; }
+    .post-cover-photo { background-color: $other-color; }
   }
 
   &.seguridad { 
-    .post-tags, .post-title, .similar-datasets a { color: $security-color; }
-    .post-cover-photo, .datasets-list a { background-color: $security-color; }
+    .post-content a, .datasets-list a, .datasets-list span, .post-title, .similar-datasets a { color: $security-color; }
+    .post-cover-photo { background-color: $security-color; }
   }
 
   .post-cover-photo {
     @include cover-background;
-
-    .fake-half {
-      background: $white-color;
-    }
   }  
 
   .post-main {
-    .post-main-inner {
+    .wrapper {
       background: $white-color;
+    }
+
+    .post-main-inner {
+      
     }
 
     .breadcrumbs {
@@ -43,7 +43,7 @@
     }
 
     .post-title {
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 700;
     }
 
@@ -55,6 +55,10 @@
     .post-tags {
       font-size: 13px;
       font-weight: 600;
+
+      span {
+        color: $gray-color;
+      }
     }
 
     .post-content p {
@@ -62,24 +66,14 @@
     }
 
     .post-datasets {
-      h6 {
-        color: $gray-color;
-        font-size: 12px;
-        font-weight: 600;
-      }
-
       .datasets-list {
-        list-style: none; 
+        list-style: none;
 
         a {
-          font-size: 12px;
-          color: $white-color;
+          font-size: 13px;
+          font-weight: 300;
         }
       }
-    }
- 
-    .datasets-bg {
-      background: #dce0e3;
     }
   }
 

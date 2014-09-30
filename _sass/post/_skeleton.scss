@@ -3,15 +3,6 @@ $height-half: 240px;
 .post {
   .post-cover-photo {
     height: 460px;
-    position: relative;
-
-    .fake-half {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 50%;
-      height: $height-half;
-    }
   }
 
   .post-main {
@@ -21,12 +12,11 @@ $height-half: 240px;
     margin-top: -$height-half;
 
     .post-main-inner {
-      padding: 25px;
-      margin-left: -25px;
+      padding: 25px 25px 25px 15px;
     }
 
     .breadcrumbs {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .post-author {
@@ -34,32 +24,54 @@ $height-half: 240px;
       margin: 15px 0;
     }
 
+    .post-tags {
+      margin-bottom: 20px;
+    }
+
     .post-content {
-      margin: 35px 0;
+      margin-bottom: 35px;
     }
 
     .post-datasets {
-      padding-top: 15px;
-      position: relative;
-      z-index: 1;
+      .datasets-list li {
+        padding-left: 15px;
+        margin-top: 5px;
+        position: relative;
 
-      .datasets-list {
-        margin-top: 15px;
+        &:first-child {
+          margin-top: 0;
+        }
 
-        a {
-          display: block;
-          margin-bottom: 5px;
-          padding: 5px;
-        } 
+        span {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
       }
     }
 
-    .datasets-bg {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 1000px;
-      height: $height-half;
+    .post-sidebar {
+      padding: 25px 25px 0 0;
+
+      .sidebar-box {
+        h6 {
+          margin-bottom: 5px;
+        }
+
+        margin-bottom: 25px;
+      }
+    }
+
+    .collaborators .collaborator {
+      margin-top: 10px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      img {
+        display: block;
+      }
     }
   }
 
@@ -70,9 +82,5 @@ $height-half: 240px;
     h5 {
       margin-bottom: 10px;
     }
-  }
-
-  .collaborators img {
-    margin: 0 10px 1px 0;
   }
 }

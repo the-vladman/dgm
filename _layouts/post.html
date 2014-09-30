@@ -4,12 +4,11 @@ layout: default
 
 <div class="post {{ page.category }}">
   <div class="post-cover-photo" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ page.cover_photo }}');">
-    <div class="fake-half"></div>
   </div>
   <div class="post-main">
     <div class="wrapper">
       <div class="cols-12">
-        <div class="col col-9">
+        <div class="col col-8">
           <div class="col-inner">
             <div class="post-main-inner">
               <div class="breadcrumbs">
@@ -18,67 +17,77 @@ layout: default
               </div>
               <h1 class="post-title">{{ page.title }}</h1>
               <span class="post-author">{{ page.author }}</span>
-              <div class="post-tags">
-                {% for tag in page.tags %}
-                  <span>
-                    {{tag}}
-                    {% unless forloop.length == forloop.index %}, {% endunless %}
-                  </span>
-                {% endfor %}
-              </div>
+              {% if page.tags.size > 0 %}
+                <div class="post-tags">
+                  {% for tag in page.tags %}
+                    <span>
+                      {{tag}}
+                      {% unless forloop.length == forloop.index %}, {% endunless %}
+                    </span>
+                  {% endfor %}
+                </div>
+              {% endif %}
               <article class="post-content">
                 {{ content }}
               </article>
             </div>
           </div>
         </div>
-        <div class="col col-3">
+        <div class="col col-4">
           <div class="col-inner">
-            <div class="post-datasets">
-              <h6>Conjuntos de datos utilizados:</h6>
-              <ul class="datasets-list">
-                {% for dataset in page.datasets %}
-                  <li>
-                    <a href="{{ dataset.url }}" title="{{ dataset.title }}" target="_blank">{{ dataset.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-            <div class="datasets-bg"></div>
-          </div>
-        </div>
-      </div>
-      <div class="cols-12">
-        <div class="col col-9">
-          <div class="col-inner">
-            {% if page.similar_datasets %}
-              <div class="post-section similar-datasets">
-                <h5>Conjuntos de datos relacionados</h5>
-                <ul class="no-bullets">
-                  {% for dataset in page.similar_datasets %}
+            <div class="post-sidebar">
+              <div class="sidebar-box post-datasets">
+                <h6>Conjuntos de datos utilizados</h6>
+                <ul class="datasets-list">
+                  {% for dataset in page.datasets %}
                     <li>
-                      <a href="{{ dataset.url }}" title="{{ dataset.title }}">{{ dataset.title }}</a>
+                      <span>&#65515;</span>
+                      <a href="{{ dataset.url }}" title="{{ dataset.title }}" target="_blank"> {{ dataset.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>
               </div>
-            {% endif %}
 
-            {% if page.collaborators %}
-              <div class="post-section collaborators">
-                <h5>Colaboradores</h5>
-                {% for collaborator in page.collaborators %}
-                  {% assign institution = site.collaborators[collaborator] %}
-                  {% if institution.site == "" %}
-                    <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
-                  {% else %}
-                    <a href="{{ institution.site }}" title="{{ institution.title }}" target="_blank">
-                      <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
-                    </a>
-                  {% endif %}
-                {% endfor %}
-              </div>
-            {% endif %}
+              {% if page.similar_datasets %}
+                <div class="sidebar-box post-datasets">
+                  <h6>Otras fuentes</h6>
+                  <ul class="datasets-list">
+                    {% for dataset in page.similar_datasets %}
+                      <li>
+                        <span>&#65515;</span>
+                        <a href="{{ dataset.url }}" title="{{ dataset.title }}" target="_blank"> {{ dataset.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+
+              {% if page.collaborators %}
+                <div class="sidebar-box collaborators">
+                  <h6>Colaboradores</h6>
+                  {% for collaborator in page.collaborators %}
+                    <div class="collaborator">
+                      {% assign institution = site.collaborators[collaborator] %}
+                      {% if institution.site == "" %}
+                        <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
+                      {% else %}
+                        <a href="{{ institution.site }}" title="{{ institution.title }}" target="_blank">
+                          <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
+                        </a>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cols-12">
+        <div class="col col-9">
+          <div class="col-inner">
 
             <div class="post-section comments">
               <div id="disqus_thread"></div>
