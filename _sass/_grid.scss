@@ -36,7 +36,12 @@
 
     &.omega .col-inner {
       padding-right: 0;
-    }   
+    }
+
+    &.centered {
+      float: none;
+      margin: 0 auto;
+    }
 
     @include max-screen(640px) {
       width: 100%;

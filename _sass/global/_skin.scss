@@ -150,6 +150,12 @@ p {
   list-style: none;
 }
 
+.page-title {
+  p {
+    @include text-size-large;
+  }
+}
+
 .full-page-title {
   background: #676565;
   text-align: center;
