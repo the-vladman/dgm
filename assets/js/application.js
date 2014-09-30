@@ -27,4 +27,17 @@ $(function() {
       nav.slideDown(400);
     };
   });
+
+  $(window).resize(function(event) {
+    var nav = $('.site-navigation'),
+        burguer = $('.nav-burguer'),
+        windowWidth = $(window).width();
+
+    if ( windowWidth > 640 ) {
+      burguer.removeClass('active')
+      nav.show();
+    } else if ( windowWidth < 640 && !burguer.hasClass('active') ) {
+      nav.hide()
+    }
+  });
 });
