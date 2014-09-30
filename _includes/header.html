@@ -21,6 +21,11 @@
                     <i class="i fb-gray"></i>
                   </a>
                 </li>
+                <li>
+                  <a href="https://github.com/mxabierto/dgm" title="Repositorio GitHub" target="_blank">
+                    <i class="i octocat-gray"></i>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -37,16 +42,33 @@
             <a class="site-brand" href="{{ site.url | append: site.baseurl }}">
               <i class="i dgm-logo"></i>
             </a>
+            <div class="open-data-header-poster">
+              <div class="poster-part-1">
+                Abrir para
+              </div>
+              <div class="poster-part-2">
+                <ul>
+                  <li>innovar</li>
+                  <li>emprender</li>
+                  <li>transparentar</li>
+                  <li>participar</li>
+                  <li>ahorrar</li>
+                  <li>evaluar</li>
+                  <li>eficientar</li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav-burguer"><span></span></div>
             <nav class="site-navigation">
               <ul>
                 <li>
                   <a class="page-link" href="http://catalogo.datos.gob.mx/dataset">Datos</a>
                 </li>
-                {% assign sorted_pages = site.pages | where:'showInNavbar',true | sort:'weight' %}
-                {% for page in sorted_pages %}
-                  {% if page.title %}
+                {% assign sorted_pages = site.pages | where:'showInNavbar',true | sort: 'weight' %}
+                {% for section in sorted_pages %}
+                  {% if section.title %}
                     <li>
-                      <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                      <a class="page-link{% if section.url == page.url %} active{% endif %}" href="{{ section.url | prepend: site.baseurl }}">{{ section.title }}</a>
                     </li>
                   {% endif %}
                 {% endfor %}

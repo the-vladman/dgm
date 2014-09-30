@@ -28,6 +28,12 @@
 $post-height: 240px;
 .posts-list {
   .story-post {
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
     &:nth-of-type(even) {
       .story-main {
         float: right;

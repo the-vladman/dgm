@@ -7,8 +7,7 @@ weight: 2
 showInNavbar: true
 ---
 
-{% include full-page-title.html title=page.title %}  
-
+{% include page-title.html title=page.title tagline="El ecosistema de datos abiertos en México y el mundo está en constante movimiento. En esta sección encontrarás actualizaciones sobre el desarrollo de nuestra Política de Datos Abiertos, además de noticias, estudios y casos de éxito relacionados." %}  
 
 <div class="progress-posts-list">{% assign stories = site.posts | where: 'section', 'avances' %}
   {% for post in stories %}

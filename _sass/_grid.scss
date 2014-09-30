@@ -9,7 +9,7 @@
   }
 
   @include max-screen(960px) {
-    width: 85%;
+    width: 95%;
   }
 }
 
@@ -25,7 +25,7 @@
       position: relative;
       @include clearfix;
 
-      @include max-screen(630px) {
+      @include max-screen(640px) {
         padding: 0;
       }
     }
@@ -36,9 +36,14 @@
 
     &.omega .col-inner {
       padding-right: 0;
-    }   
+    }
 
-    @include max-screen(630px) {
+    &.centered {
+      float: none;
+      margin: 0 auto;
+    }
+
+    @include max-screen(640px) {
       width: 100%;
       clear: both;
     }
