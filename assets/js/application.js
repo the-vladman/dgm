@@ -14,6 +14,17 @@ $(function() {
     speed: 800
   });
 
-  
 
+  $('.nav-burguer').on('click', function(e) {
+    var self = $(this),
+        nav = $('.site-navigation');
+
+    if ( self.hasClass('active') ) {
+      self.removeClass('active');
+      nav.slideUp(400);
+    } else {
+      self.addClass('active');
+      nav.slideDown(400);
+    };
+  });
 });

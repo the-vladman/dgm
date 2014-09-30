@@ -51,60 +51,84 @@ p {
 .site-header {
   .site-header-top {
     background: #eeeeee;
+  }
 
-    .social-links {
-      ul {
-        list-style: none;
+  .social-links {
+    ul {
+      list-style: none;
 
-        li {
-          float: left;
-        }
+      li {
+        float: left;
       }
     }
   }
 
   .site-header-bottom {
     background: #474747;
+  }
 
-    .open-data-header-poster {
-      color: $white-color;
+  .open-data-header-poster {
+    color: $white-color;
 
-      .poster-part-1, .poster-part-2 {
-        font-size: 11px;
-        line-height: 50px;
-        text-transform: uppercase;
+    .poster-part-1, .poster-part-2 {
+      font-size: 11px;
+      line-height: 50px;
+      text-transform: uppercase;
+    }
+
+    .poster-part-1 {
+      color: shade($white-color, 10%);
+    }
+
+    .poster-part-2 {
+      ul {
+        list-style: none;
+        font-weight: 700;
+        @include animation(change-header 10s 2s ease-in-out infinite);
       }
+    }
+  }
 
-      .poster-part-1 {
-        color: shade($white-color, 10%);
-      }
+  .nav-burguer {
+    border: 1px solid lighten(#474747, 10%);
+    border-radius: 3px;
 
-      .poster-part-2 {
-        ul {
-          list-style: none;
-          font-weight: 700;
-          @include animation(change-header 10s 2s ease-in-out infinite);
+    span,
+    span:after, 
+    span:before {
+      background-color: #888;
+      transition: all 0.3s;
+      backface-visibility: hidden;
+      border-radius: 2px;
+    }
+
+    &.active {
+      span {
+        background-color: transparent;
+
+        &:before {
+          @include transform(rotate(45deg) translate(5px, 5px));
+        }
+
+        &:after {
+          @include transform(rotate(-45deg) translate(5px, -5px));
         }
       }
     }
+  }
 
-    .site-navigation {
-      ul {
-        list-style: none;
+  .site-navigation {
+    ul {
+      list-style: none;
+    }
 
-        li {
-          float: left;
-        }
-      }
+    a {
+      color: $white-color;
+      font-size: 12px;
 
-      a {
-        color: $white-color;
-        font-size: 12px;
-
-        &.active {
-          background: lighten(#474747, 5%);
-          color: lighten(#474747, 40%)
-        }
+      &.active {
+        background: lighten(#474747, 5%);
+        color: lighten(#474747, 40%)
       }
     }
   }
