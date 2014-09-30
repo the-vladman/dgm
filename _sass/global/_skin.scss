@@ -78,6 +78,11 @@ p {
       a {
         color: $white-color;
         font-size: 12px;
+
+        &.active {
+          background: lighten(#474747, 5%);
+          color: lighten(#474747, 40%)
+        }
       }
     }
   }

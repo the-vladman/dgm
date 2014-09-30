@@ -42,11 +42,11 @@
                 <li>
                   <a class="page-link" href="http://catalogo.datos.gob.mx/dataset">Datos</a>
                 </li>
-                {% assign sorted_pages = site.pages | where:'showInNavbar',true | sort:'weight' %}
-                {% for page in sorted_pages %}
-                  {% if page.title %}
+                {% assign sorted_pages = site.pages | where:'showInNavbar',true | sort: 'weight' %}
+                {% for section in sorted_pages %}
+                  {% if section.title %}
                     <li>
-                      <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                      <a class="page-link{% if section.url == page.url %} active{% endif %}" href="{{ section.url | prepend: site.baseurl }}">{{ section.title }}</a>
                     </li>
                   {% endif %}
                 {% endfor %}
