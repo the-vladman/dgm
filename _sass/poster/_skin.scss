@@ -67,3 +67,37 @@
     margin-top:0px;
   }
 }
+
+@include keyframes(change-header) {
+  0% {
+    margin-top: 0;
+  }
+
+  12.5% {
+    margin-top: -50px;
+  }
+
+  25% {
+    margin-top: -100px;
+  }
+
+  37.5% {
+    margin-top:-150px;
+  }
+
+  50% {
+    margin-top: -200px;
+  }
+
+  62.5% {
+    margin-top: -250px;
+  }
+
+  75% {
+    margin-top: -300px;
+  }
+
+  87.5% {
+    margin-top:0px;
+  }
+}

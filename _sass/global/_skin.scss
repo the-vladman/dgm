@@ -66,6 +66,28 @@ p {
   .site-header-bottom {
     background: #474747;
 
+    .open-data-header-poster {
+      color: $white-color;
+
+      .poster-part-1, .poster-part-2 {
+        font-size: 11px;
+        line-height: 50px;
+        text-transform: uppercase;
+      }
+
+      .poster-part-1 {
+        color: shade($white-color, 10%);
+      }
+
+      .poster-part-2 {
+        ul {
+          list-style: none;
+          font-weight: 700;
+          @include animation(change-header 10s 2s ease-in-out infinite);
+        }
+      }
+    }
+
     .site-navigation {
       ul {
         list-style: none;
