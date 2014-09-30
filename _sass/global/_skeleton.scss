@@ -120,7 +120,7 @@ img + ul {
     }
   }
 
-  @include max-screen(480px) {
+  @include max-screen(640px) {
     .nav-burguer {
       display: block;
     }

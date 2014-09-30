@@ -25,7 +25,7 @@
       position: relative;
       @include clearfix;
 
-      @include max-screen(630px) {
+      @include max-screen(640px) {
         padding: 0;
       }
     }
@@ -38,7 +38,7 @@
       padding-right: 0;
     }   
 
-    @include max-screen(630px) {
+    @include max-screen(640px) {
       width: 100%;
       clear: both;
     }
