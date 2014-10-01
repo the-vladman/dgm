@@ -21,6 +21,8 @@ similar_datasets:
   -
     title: "Recursos en salud"
     url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
+
+permalink: /historias/salud/reduciendo-mortalidad-materna.html
 section:  historias
 category: salud
 category_title: Salud

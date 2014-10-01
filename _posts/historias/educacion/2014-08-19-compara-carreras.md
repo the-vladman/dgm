@@ -1,6 +1,7 @@
 ---
 layout:   post
 title:    "Compara Carreras"
+
 tagline:  "Elige mejor..."
 author:   "IMCO"
 date:     2014-06-19
@@ -22,6 +23,8 @@ datasets:
     url: http://www.inegi.org.mx/est/contenidos/Proyectos/encuestas/hogares/regulares/enigh/
 collaborators:
   - imco
+
+permalink: /historias/educacion/compara-carreras.html
 section:  historias
 category: educacion
 category_title: "Educación"

@@ -34,6 +34,8 @@ datasets:
     url: http://catalogo.datos.gob.mx/dataset/proyecciones-de-la-poblacion-de-mexico
 collaborators:
   - data4
+
+permalink: /historias/otras/migrantes-en-eeuu.html
 section:  historias
 category: otras
 category_title: "Otras"

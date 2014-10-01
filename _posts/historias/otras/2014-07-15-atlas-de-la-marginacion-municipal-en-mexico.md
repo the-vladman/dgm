@@ -34,6 +34,8 @@ datasets:
     url: http://catalogo.datos.gob.mx/dataset/programa-de-desarrollo-humano-oportunidades0c2db
 collaborators:
   - cartografica
+
+permalink: /historias/otras/atlas-marginacion.html
 section:  historias
 category: otras
 category_title: "Otras"
