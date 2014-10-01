@@ -7,5 +7,8 @@
   ga('create', 'UA-44411606-15', 'auto');
   ga('send', 'pageview');
 
+  function trackSearch(query) {
+    ga('send', 'event', 'landing', 'search', 'query', query);
+  };
 </script>
 
