@@ -1,10 +1,15 @@
 ---
 layout: post-progress
 title:  "Edición en vivo de la Política de Datos Abiertos"
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut tempor felis. Quisque at eleifend leo vestibulum quis nibh efficitur neque rhoncus scelerisque."
 date:   2014-04-15
 cover: "avances/politica-en-vivo/politica-en-vivo-cover.png"
 cover_photo: "avances/politica-en-vivo/politica-en-vivo-cover.png"
+
 section: avances
+category: eventos
+category_title: Eventos
+
 tags:
  - política
  - en vivo

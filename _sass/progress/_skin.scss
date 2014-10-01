@@ -1,28 +1,44 @@
-.progress-post {
+.progress {
+  margin: 50px 0;
+
+  .category-title {
+    color: $gray-color;
+  }
+}
+
+.progress-post-wrap {
+
   .post-date {
 
     .dot {
       background: $green-color;
+      border: 2px solid $white-color;
       border-radius: 50%;
 
       &:after {
-        background: $green-color;
+        background: $gray-light-color;
+        z-index: -1;
       }
     }
 
     span {
-      color: $green-color;
-      font-size: 22px;
+      color: $gray-color;
+      font-size: 12px;
       font-weight: 600;
       text-transform: uppercase;
     }
   }
 
-  .post-image {
-    @include cover-background;
+  .progress-post {
+    background: #f7f7f7;
   }
 
-  .post-link {
-    color: $green-color;
+  .post-meta {
+    font-size: 12px;
+    color: $gray-color;
+  }
+
+  .post-image {
+    @include cover-background;
   }
 }
