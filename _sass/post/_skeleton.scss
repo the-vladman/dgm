@@ -84,3 +84,12 @@ $height-half: 240px;
     }
   }
 }
+
+.social-buttons {
+  @include clearfix;
+
+  .button-item {
+    float: left;
+    margin-right: 5px;
+  }
+}
