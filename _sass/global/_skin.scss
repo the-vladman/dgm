@@ -139,6 +139,11 @@ p {
 
   .open-knowledge ul {
     list-style: none;
+
+    a {
+      font-size: 12px;
+      color: $white-color;
+    }
   }
 
   .legal-footer ul {
