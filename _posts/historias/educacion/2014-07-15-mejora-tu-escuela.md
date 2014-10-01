@@ -2,7 +2,7 @@
 layout:   post
 title:    "MejoraTuEscuela.org"
 
-tagline:  "Mejorar la educación..."
+tagline:  "Mejorar nuestras escuelas" 
 author:   "Ariadna Camargo y Alexandra Zapata | IMCO | Omidyar Network"
 date:     2014-07-15
 cover:    "historias/mejora-tu-escuela/mejora-screenshot.png"
