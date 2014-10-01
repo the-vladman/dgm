@@ -7,11 +7,10 @@ $(function() {
         url = form.attr('action'),
         query = form.find('input[type=text]').val();
 
-    trackSearch(query);
-
     if ( query == "" ) {
       message.addClass('active error');
     } else {
+      trackSearch(query);
       message.removeClass('active error');
       window.open( url + query ,'_self');
     };
