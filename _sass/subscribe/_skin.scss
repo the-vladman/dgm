@@ -7,36 +7,42 @@
   }
 }
 
-.input-button {  
-  input[type=text], button {
-    @include transition (all .1s ease);
-  }
-
-  input[type=text] {
-    border: 0;
-    font-family: $site-font;
-    font-size: 14px;
-    outline: none;
-
-    &:focus {
-      box-shadow: inset 0 0 0 2px $black-color;
+.input-button-wrap {
+  .input-button {  
+    input[type=text], button {
+      @include transition (all .1s ease);
     }
-  }
 
-  button {
-    background: #474747;
-    border: 0;
-    outline: none;
-    cursor: pointer;
+    input[type=text], input[type=email] {
+      border: 0;
+      font-family: $site-font;
+      font-size: 14px;
+      outline: none;
 
-    &:hover {
-      background: $black-color;
+      &:focus {
+        box-shadow: inset 0 0 0 2px $black-color;
+      }
+    }
+
+    button {
+      background: #474747;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        background: $black-color;
+      }
     }
   }
 
   .message {
     &.error {
       color: red;
+    }
+
+    &.success {
+      color: green;
     }
   }
 }
