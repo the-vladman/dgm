@@ -6,6 +6,7 @@ date:   2014-04-15
 cover: "avances/politica-en-vivo/politica-en-vivo-cover.png"
 cover_photo: "avances/politica-en-vivo/politica-en-vivo-cover.png"
 
+permalink: /avances/politica-en-vivo.html
 section: avances
 category: eventos
 category_title: Eventos
