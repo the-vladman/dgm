@@ -1,11 +1,13 @@
 $(function() {
   $('.search-data-form-js').submit(function(event) {
     event.preventDefault();
-    
+
     var form = $(this),
         message = form.find('.message'),
         url = form.attr('action'),
         query = form.find('input[type=text]').val();
+
+    trackSearch(query);
 
     if ( query == "" ) {
       message.addClass('active error');
