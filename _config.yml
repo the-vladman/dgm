@@ -5,7 +5,7 @@ description: >
   En datos.gob.mx puedes descargar y utilizar libremente datos abiertos
   que el Gobierno de la República genera y recolecta.
 baseurl: ""
-url: "http://datos.gob.mx"
+url: "http://datos.gob.mx/"
 twitter_username: DatosGobMx
 github_username:  mxabierto
 
