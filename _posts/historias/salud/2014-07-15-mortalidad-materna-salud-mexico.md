@@ -19,6 +19,8 @@ datasets:
     url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
 collaborators:
   - secretaria_salud
+
+permalink: /historias/salud/mortalidad-materna.html
 section:  historias
 category: salud
 category_title: Salud

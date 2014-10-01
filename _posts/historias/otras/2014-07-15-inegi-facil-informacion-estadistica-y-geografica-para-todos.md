@@ -28,6 +28,8 @@ datasets:
     url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
 collaborators:
   - inegi_facil
+
+permalink: /historias/otras/inegi-facil.html
 section:  historias
 category: otras
 category_title: "Otras"

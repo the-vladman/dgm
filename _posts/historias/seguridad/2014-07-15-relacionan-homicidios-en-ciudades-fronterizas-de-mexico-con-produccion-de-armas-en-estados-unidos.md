@@ -19,6 +19,8 @@ datasets:
     url: http://catalogo.datos.gob.mx/dataset/casetas-de-cobro
 collaborators:
   - data4
+
+permalink: /historias/seguridad/homicidios-frontera-armas-eeuu.html
 section:  historias
 category: seguridad
 category_title: Seguridad

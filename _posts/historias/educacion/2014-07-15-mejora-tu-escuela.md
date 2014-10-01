@@ -1,6 +1,7 @@
 ---
 layout:   post
 title:    "MejoraTuEscuela.org"
+
 tagline:  "Mejorar la educación..."
 author:   "Ariadna Camargo y Alexandra Zapata | IMCO | Omidyar Network"
 date:     2014-07-15
@@ -21,6 +22,7 @@ datasets:
     title: "Sistema Nacional de Información Estadística Educativa, SEP"
     url: http://www.snie.sep.gob.mx/
 
+permalink: /historias/educacion/mejora-tu-escuela.html
 section:  historias
 category: educacion
 category_title: "Educación"

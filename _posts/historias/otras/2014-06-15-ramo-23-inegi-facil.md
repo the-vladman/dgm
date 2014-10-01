@@ -15,6 +15,7 @@ datasets:
     title: "Avance físico de obras y proyectos por Centro SCT"
     url: http://catalogo.datos.gob.mx/dataset/avance-fisico-de-obras-y-proyectos-por-centro-sct
 
+permalink: /historias/otras/ramo-23.html
 section:  historias
 category: otras
 category_title: "Otras"
