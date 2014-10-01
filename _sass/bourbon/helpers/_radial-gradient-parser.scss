@@ -1,5 +1,8 @@
+/*
+
 @function _radial-gradient-parser($image) {
   $image: unquote($image);
+
   $gradients: ();
   $start: str-index($image, "(");
   $end: str-index($image, ",");
@@ -48,3 +51,4 @@
 
   @return $gradients;
 }
+*/
