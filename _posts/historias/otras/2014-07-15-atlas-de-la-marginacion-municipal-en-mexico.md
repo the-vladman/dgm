@@ -1,7 +1,8 @@
 ---
 layout:   post
 title:    "Atlas de la Marginación Municipal en México"
-tagline:  "Aporta sabiendo..."
+
+tagline:  "Para entender la marginación a nivel municipal"
 author:   "Cartográfica"
 date:     2014-07-15 12:09:00 -0500
 cover:    "historias/atlas-marginacion/Atlas-de-marginación.png--480x225.png"
