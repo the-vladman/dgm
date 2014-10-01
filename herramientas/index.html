@@ -9,12 +9,35 @@ showInNavbar: true
 
 {% include page-title.html title=page.title tagline="Los datos abiertos deben poder ser utilizados por cualquier persona y para cualquier fin. En esta sección encontrarás herramientas para facilitar el uso de los datos abiertos del gobierno y poder crear tus propias historias." %}
 
+{% assign tools_categories = site.pages | where: 'tools_category', true | sort: 'order' %}
+{% for category_page in tools_categories %}
+  <li>
+    <a href="{{ site.baseurl | append: category_page.url }}" class="category-inner {{ category_page.category_info.name }}{% if page.active == category_page.category_info.name %} active{% endif %}">{{ category_page.category_info.title }}</a>  
+  </li>
+{% endfor %}
+
 <div class="{{ page.body_class }}-content">
-  <div class="posts-list">
-    {% assign stories = site.posts | where:'section', 'herramientas' %}
-    {% for post in stories %}
-      {% include story-post.html post=post %}
-    {% endfor %}
+  <div class="tools-list">
+    <div class="wrapper">
+      <div class="cols-12">
+        {% assign stories = site.posts | where:'section', 'herramientas' %}
+        {% for post in stories %}
+          <div class="col col-4">
+            <div class="col-inner">
+              <div class="tool-box">
+                <a class="tool-link" href="{{ post.url | prepend: site.baseurl }}">
+                  <div class="tool-cover" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover }}');"></div>
+                </a>
+                <div class="tool-main">
+                  <a class="tool-link" href="{{ post.url | prepend: site.baseurl }}"><h5>{{ post.title }}</h5></a>
+                  <div class="tool-meta">{{ post.date | date: "%b %-d, %Y" }} <span> | {{ post.date | timeago }}</span></div>
+                </div>
+              </div>  
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </div>
 

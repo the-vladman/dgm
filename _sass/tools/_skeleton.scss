@@ -1,8 +1,35 @@
+.tools-list {
+  .tool-box {
+    margin-bottom: 20px;
+
+    .tool-cover {
+      margin: -1px -1px 0 -1px;
+      height: 200px;
+    }
+
+    .tool-main {
+      padding: 20px;
+      height: 120px;
+      position: relative;
+    }
+
+    .tool-meta {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+}
+
 .tools-content {
   @extend .stories-content;
 }
 
 .post .post-main.clear-iframe {
-  margin-top: 0;
+  margin: 40px 0;
+
+  .post-main-inner {
+    padding: 0;
+  }
 }
 
