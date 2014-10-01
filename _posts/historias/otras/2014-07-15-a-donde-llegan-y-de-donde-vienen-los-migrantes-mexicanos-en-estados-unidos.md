@@ -1,7 +1,8 @@
 ---
 layout:   post
 title:    "¿De donde vienen y a donde llegan los migrantes mexicanos en EE.UU.?"
-tagline:  "Conoce..."
+
+tagline:  "Para entender el fenómeno de migración mexicana a EE.UU."
 author:   "Data4"
 date:     2014-07-15 12:09:00 -0500
 cover:    "historias/migrantes-mexicanos/Screen-Shot-2014-07-03-at-5.14.22-PM1-480x225.png"

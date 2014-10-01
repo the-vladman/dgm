@@ -2,7 +2,7 @@
 layout:   post
 title:    "Compara Carreras"
 
-tagline:  "Elige mejor..."
+tagline:  "Comparar carreras profesionales"
 author:   "IMCO"
 date:     2014-06-19
 cover:    "historias/compara-carreras/7d80a355.background-480x225.jpg"
