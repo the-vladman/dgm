@@ -13,7 +13,7 @@ title: DATOS.gob.mx
             <div class="col col-6">
               <div class="col-inner">
                 <div class="slide-card-box {{ post.category }}">
-                  <span class="complement-tagline">Datos abiertos para</span>
+                  <span class="complement-tagline">{{ post.tagline }}</span>
                   <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="post-link">{{ post.title }}</h3></a>
                   <a class="post-read-more" href="{{ post.url | prepend: site.baseurl }}">Leer Más</a>
                 </div>

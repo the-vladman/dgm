@@ -34,7 +34,7 @@ h6 {
 }
 
 a {
-  color: #0079bc;
+  color: #0795e3;
   text-decoration: none !important;
 }
 
@@ -44,7 +44,7 @@ p {
   @include text-size-medium; 
 }
 
-.post-content ul {
+.styled {
   @extend p;
 }
 
@@ -139,6 +139,11 @@ p {
 
   .open-knowledge ul {
     list-style: none;
+
+    a {
+      font-size: 12px;
+      color: $white-color;
+    }
   }
 
   .legal-footer ul {

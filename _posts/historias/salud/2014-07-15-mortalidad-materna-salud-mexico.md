@@ -1,6 +1,7 @@
 ---
 layout:   post
 title:    "Mortalidad materna y salud en México"
+tagline:  "Conoce..."
 author:   "Carlos Castro Correa | CEDN"
 date:     2014-07-15 12:00:00 -0500
 cover:    "historias/mortalidad-materna-salud-mexico/salud_d4d-07-480x225.png"
@@ -39,12 +40,14 @@ El valor de los datos abiertos.
 
 Como parte de la primera entrega del sitio [datos.gob.mx](http://datos.gob.mx/), la Secretaría de Salud publicó bases de datos abiertos que incluyen información sobre:
 
-- Catálogo de establecimientos de salud.
-- Defunciones.
-- Defunciones maternas.
-- Egresos hospitalarios.
-- Nacimientos.
-- Recursos para servicios de Salud.
+<ul class="styled">
+  <li>Catálogo de establecimientos de salud.</li>
+  <li>Defunciones.</li>
+  <li>Defunciones maternas.</li>
+  <li>Egresos hospitalarios.</li>
+  <li>Nacimientos.</li>
+  <li>Recursos para servicios de Salud.</li>
+</ul>
 
 Además de las ventajas de formato, acceso y análisis que tienen los datos abiertos, la disponibilidad de distintas fuentes en un mismo sitio permite analizar el mismo problema desde diferentes perspectivas; por ejemplo, la relación entre el número de casos de mortalidad materna y el número de médicos en un hospital, la distancia al hospital más cercano, la relación entre nacimientos y los casos de muerte materna, entre otras.
 

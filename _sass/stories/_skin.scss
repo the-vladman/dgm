@@ -31,10 +31,6 @@
 .stories-title {
   text-align: center;
 
-  h2 {
-    color: $education-color;
-  }
-
   p {
     @include text-size-large;
   }

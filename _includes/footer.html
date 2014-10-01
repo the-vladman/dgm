@@ -12,9 +12,17 @@
               </li>
               <li>
                 <a href="http://opendefinition.org/" target="_blank">
-                  <img alt="This material is Open Knowledge" src="http://assets.okfn.org/images/ok_buttons/ok_80x15_blue.png">
+                  <img alt="This material is Open Knowledge" src="http://assets.okfn.org/images/ok_buttons/ok_80x15_blue.png" style="margin-top: 5px;">
                 </a>
               </li>
+              {% assign sorted_pages = site.pages | where:'showInNavbar', false | sort: 'weight' %}
+              {% for section in sorted_pages %}
+                {% if section.title %}
+                  <li>
+                    <a class="page-link{% if section.url == page.url %} active{% endif %}" href="{{ section.url | prepend: site.baseurl }}">{{ section.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
             </ul>
           </div>
           <div class="legal-footer">
