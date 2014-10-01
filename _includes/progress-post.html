@@ -1,0 +1,16 @@
+<div class="progress-post-wrap">
+  <div class="post-date">
+    <div class="dot"></div>
+    <span>{{ post.date | date: "%-d %b %Y" }}</span>
+  </div>
+  <div class="progress-post">
+    <div class="post-excerp">
+      <div class="post-excerp-inner">
+        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt }}</p>
+      </div>
+      <div class="post-meta">{{ post.category_title }}</div>
+    </div>
+    <div class="post-image" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover }}')"></div>
+  </div>
+</div>

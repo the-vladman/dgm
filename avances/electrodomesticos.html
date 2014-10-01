@@ -1,28 +1,25 @@
 ---
 layout: default
 body_class: progress
-title: Avances
-permalink: /avances/
-weight: 2
-showInNavbar: true
+title: Avances → Electrodomésticos
+permalink: /avances/electrodomesticos/
 
-active: all
+active: electrodomesticos
 progress_category: true
-order: 1
+order: 4
 category_info:
-  name: all
-  title: Todos
+  name: electrodomesticos
+  title: Electrodomésticos
 ---
 
-{% include page-title.html title=page.title tagline="El ecosistema de datos abiertos en México y el mundo está en constante movimiento. En esta sección encontrarás actualizaciones sobre el desarrollo de nuestra Política de Datos Abiertos, además de noticias, estudios y casos de éxito relacionados." %}  
-
+{% include page-title.html title=page.title %}  
 
 <div class="{{ page.body_class }}">
   <div class="wrapper">
     <div class="cols-12">
       <div class="col col-10">
         <div class="col-inner">
-          <div class="progress-posts-list">{% assign stories = site.posts | where: 'section', 'avances' %}
+          <div class="progress-posts-list">{% assign stories = site.posts | where: 'section', 'avances' | where: 'category', 'electrodomesticos' %}
             {% for post in stories %}
               {% include progress-post.html post=post %}
             {% endfor %}

@@ -1,51 +1,37 @@
-.progress-posts-list {
-  margin: 70px 0;
+.progress {
+  margin: 50px 0;
 
-  .progress-post {
-    padding-bottom: 50px;
-
-    &:last-child {
-      padding-bottom: 0;
-
-      .dot:after {
-        display: none;
-      }
-    }
-
-    &:nth-of-type(even) {
-      .post-image {
-        float: right;
-      }
-
-      .post-excerp {
-        float: left;
-
-        .post-excerp-inner {
-          padding: 0 30px 0 0;
-        }
-      }
-    }
+  .category-title {
+    margin-bottom: 30px;
   }
 }
 
-.progress-post {
+.progress-posts-list {
+  .progress-post-wrap:last-child .post-date .dot:after {
+    height: 30px;
+  }
+}
+
+.progress-post-wrap {
   overflow: hidden;
+  padding-bottom: 40px;
 
   .post-date {
-    padding-left: 40px;
+    padding-left: 25px;
+    margin: 0 0 10px 10px;
     position: relative;
 
     .dot {
       position: absolute;
       left: 0;
       top: 0;
-      width: 25px;
-      height: 25px;
+      width: 15px;
+      height: 15px;
 
       &:after {
         content: "";
-        left: 10px;
-        width: 5px;
+        left: 7px;
+        width: 1px;
         height: 1000px;
         position: absolute;
       }
@@ -56,22 +42,31 @@
     }
   }
 
-  .post-main {
+  .progress-post {
+    height: 260px;
     @include clearfix;
-  }
-
-  .post-image {
-    width: 40%;
-    height: 230px;
-    float: left;
   }
 
   .post-excerp {
     width: 60%;
-    float: right;
+    height: 100%;
+    float: left;
+    position: relative;
 
     .post-excerp-inner {
-      padding-left: 30px;
+      padding: 25px;
     }
+  }
+
+  .post-meta {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+  }
+
+  .post-image {
+    width: 40%;
+    height: 100%;
+    float: right;
   }
 }
