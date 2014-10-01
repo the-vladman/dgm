@@ -33,6 +33,7 @@ tags:
 - Mortalidad materna
 - Salud
 - Secretaría de salud
+redirect_from: /mortalidad-materna-y-salud-en-mexico/
 ---
 
 Como parte de los Objetivos de desarrollo del Milenio de la ONU, la reducción del número de casos de mortalidad materna es uno de los problemas de salud pública más importantes en México. Además de este compromiso, existen acuerdos relacionados en temas como pobreza, medio ambiente, educación y salud que fueron aprobados por 189 países durante la Cumbre del Milenio de la Naciones Unidas celebrada en el año 2000.

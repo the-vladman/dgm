@@ -40,6 +40,7 @@ tags:
 - INEGI
 - INEGI Fácil
 - Mapas
+redirect_from: /inegi-facil/
 ---
 
 La semana pasada, INEGI fácil cumplió dos meses de su “relanzamiento” y ocho meses de su estreno en línea. Es un proyecto que está aprendiendo a caminar.
