@@ -1,0 +1,21 @@
+---
+layout: default
+body_class: tools
+title: Herramientas
+permalink: /herramientas/
+weight: 2
+showInNavbar: true
+---
+
+{% include page-title.html title=page.title tagline="Los datos abiertos deben poder ser utilizados por cualquier persona y para cualquier fin. En esta sección encontrarás herramientas para facilitar el uso de los datos abiertos del gobierno y poder crear tus propias historias." %}
+
+<div class="{{ page.body_class }}-content">
+  <div class="posts-list">
+    {% assign stories = site.posts | where:'section', 'herramientas' %}
+    {% for post in stories %}
+      {% include story-post.html post=post %}
+    {% endfor %}
+  </div>
+</div>
+
+{% include subscribe.html %}
