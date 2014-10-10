@@ -44,7 +44,7 @@ p {
   @include text-size-medium; 
 }
 
-.styled {
+.styled, .post-content ul {
   @extend p;
 }
 
