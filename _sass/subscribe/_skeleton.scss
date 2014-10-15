@@ -20,6 +20,17 @@
       padding: 9px 15px 9px 17px;
       float: left;
     }
+
+    @include max-screen(400px) {
+      input[type=text], input[type=email] {
+        display: inline-block;
+        width: 60%;
+      }
+
+      button {
+        float: none;
+      }
+    }
   }
 
   .message {

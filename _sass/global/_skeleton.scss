@@ -146,6 +146,10 @@ img + ul {
   padding: 69px 0 68px 0;
   @include clearfix;
 
+  @include max-screen(880px) {
+    padding: 30px 0;
+  }
+
   .open-knowledge {
     margin-top: 6px;
     float: left;
@@ -153,6 +157,15 @@ img + ul {
     ul li {
       float: left;
       margin-right: 20px;
+    }
+
+    @include max-screen(880px) {
+      float: none; 
+
+      ul li {
+        float: none;
+        margin: 0 0 15px 0;
+      }
     }
   }
 
@@ -162,6 +175,15 @@ img + ul {
     ul li {
       float: left;
       margin-left: 35px;
+    }
+
+    @include max-screen(880px) {
+      float: none; 
+
+      ul li {
+        float: none;
+        margin: 0 0 15px 0;
+      }
     }
   }
 }
