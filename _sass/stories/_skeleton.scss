@@ -79,6 +79,26 @@ $post-height: 240px;
       width: 40%;
       float: right;
     }
+
+    @include max-screen(640px) {
+      .story-category {
+        display: none;
+      }
+    }
+
+    @include max-screen(450px) {
+      .story-cover {
+        float: none;
+        width: 100%;
+        height: ($post-height/2);
+      }
+
+      .story-main {
+        float: none;
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 
   .post-list-load-more {

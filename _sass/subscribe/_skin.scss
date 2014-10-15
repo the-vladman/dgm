@@ -9,6 +9,8 @@
 
 .input-button-wrap {
   .input-button {  
+    text-align: center;
+    
     input[type=text], button {
       @include transition (all .1s ease);
     }
