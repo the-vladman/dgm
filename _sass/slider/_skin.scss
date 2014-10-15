@@ -21,12 +21,6 @@
       text-transform: uppercase;
       font-size: 12px;
     }
-
-    &.salud .post-link, &.salud .post-read-more { color: $health-color; }
-    &.educacion .post-link, &.educacion .post-read-more { color: $education-color; }
-    &.otras .post-link, &.otras .post-read-more { color: $other-color; }
-    &.seguridad .post-link, &.seguridad .post-read-more { color: $security-color; }
-    &.medio_ambiente .post-link, &.medio_ambiente .post-read-more { color: $enviroment-color; }
   }
 
   .slider-pager .slider-pager-buttons {

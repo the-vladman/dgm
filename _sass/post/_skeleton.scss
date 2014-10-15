@@ -32,21 +32,23 @@ $height-half: 240px;
       margin-bottom: 35px;
     }
 
-    .post-datasets {
-      .datasets-list li {
-        padding-left: 15px;
-        margin-top: 5px;
-        position: relative;
+    .post-datasets .datasets-list li {
+      padding-left: 15px;
+      margin-top: 5px;
+      position: relative;
 
-        &:first-child {
-          margin-top: 0;
-        }
+      &:hover {
+        padding-left: 18px;
+      }
 
-        span {
-          position: absolute;
-          left: 0;
-          top: 0;
-        }
+      &:first-child {
+        margin-top: 0;
+      }
+
+      span {
+        position: absolute;
+        left: 0;
+        top: 0;
       }
     }
 
@@ -64,6 +66,10 @@ $height-half: 240px;
 
     .collaborators .collaborator {
       margin-top: 10px;
+
+      a {
+        display: inline-block;
+      }
 
       &:first-child {
         margin-top: 0;
