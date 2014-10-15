@@ -192,6 +192,13 @@ img + ul {
   margin: 40px 0 30px 0;
 }
 
+.page-title-icon {
+  margin: 50px 0;
+
+  .title-icon {
+    padding-top: 8px;
+  }
+}
 
 .full-page-title {
   padding: 50px 0;
@@ -200,7 +207,7 @@ img + ul {
 .section-nav {
   a {
     display: block;
-    padding: 3px 10px;
-    margin-bottom: 3px;
+    padding: 5px 10px;
+    margin-bottom: 9px;
   } 
 }

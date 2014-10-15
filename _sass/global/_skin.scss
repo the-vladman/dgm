@@ -34,8 +34,13 @@ h6 {
 }
 
 a {
-  color: $anchor-color;
+  color: $base-color;
   text-decoration: none !important;
+  @include transition (all .1s ease-in-out);
+
+  &:hover {
+    color: lighten($base-color, 5%);
+  }
 }
 
 p {
@@ -143,6 +148,10 @@ p {
     a {
       font-size: 12px;
       color: $white-color;
+
+      &:hover {
+        opacity: .5;
+      }
     }
 
     @include max-screen(880px) {
@@ -170,6 +179,24 @@ p {
   }
 }
 
+.page-title-icon {
+  .title-icon {
+    text-align: center;
+  }
+
+  .title {
+    h1 {
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $base-color;
+    }
+
+    p {
+      @include text-size-large;
+    }
+  }
+}
+
 .full-page-title {
   background: #676565;
   text-align: center;
@@ -184,10 +211,11 @@ p {
 
   a {
     font-size: 13px;
-    border-left: 3px solid transparent;
+    color: $white-color;
+    background-color: $gray-color;
 
     &.active {
-      border-color: #0795e3;
+      background-color: $base-color;
     }
   }
 }

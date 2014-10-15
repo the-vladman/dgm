@@ -1,4 +1,5 @@
 .categories-stories {
+
   .categories-list {
     list-style: none;
 
@@ -13,16 +14,16 @@
       font-size: 13px;
       font-weight: 600;
       text-transform: uppercase;
+      background-color: $gray-color;
 
-      &.all { background: $gray-color; }
-      &.educacion { background: $education-color; }
-      &.medio_ambiente { background: $enviroment-color; }
-      &.salud { background: $health-color; }
-      &.seguridad { background: $security-color; }
-      &.otras { background: $gray-light-color; }
+      &:hover {
+        color: $base-color;
+        background-color: lighten($gray-color, 5%);
+      }
 
       &.active {
-        box-shadow: inset 0 -4px 0 rgba(0,0,0,.1);
+        background-color: $base-color;
+        box-shadow: inset 0 -4px 0 $base-color-darker;
       }
     }
   }
@@ -38,11 +39,36 @@
 
 .posts-list {
   .story-post {
-    .story-category h5 { 
-      font-size: 14px;
-      font-weight: 600;
-      color: $white-color;
-      text-transform: uppercase;
+    
+    .main-container:hover {
+      .story-category {
+        background-color: $base-color;
+
+        h5 {
+          color: $white-color;
+        }
+      }
+
+      .story-main {
+        background-color: $base-color;
+
+        h3, .post-author, .post-meta {
+          color: $white-color;
+        }
+      }
+    }
+
+    .story-category {
+      background-color: $gray-light-color;
+      @include transition (all .1s ease-in-out);
+
+      h5 { 
+        font-size: 14px;
+        font-weight: 600;
+        color: $gray-color;
+        text-transform: uppercase;
+        @include transition (all .1s ease-in-out);
+      }
     }
 
     .story-cover {
@@ -50,45 +76,31 @@
     }
 
     .story-main {
+      background-color: $gray-light-color;
+      @include transition (all .1s ease-in-out);
+
       h3 {
-        color: $white-color;
         font-size: 18px;
         font-weight: 600;
+        color: $gray-color;
+        @include transition (all .1s ease-in-out);
       }
 
       .post-author {
-        color: $white-color;
+        color: $gray-color;
         font-size: 14px;
+        @include transition (all .1s ease-in-out);
       }
 
       .post-meta {
-        color: $white-color;
+        color: $gray-color;
         font-size: 13px;
+        @include transition (all .1s ease-in-out);
 
         span {
           font-weight: 100;
         }
       }
-    }
-
-    &.salud .story-category, &.salud .story-main {
-      background: $health-color;
-    }
-
-    &.educacion .story-category, &.educacion .story-main {
-      background: $education-color;
-    }
-
-    &.seguridad .story-category, &.seguridad .story-main {
-      background: $security-color;
-    }
-
-    &.otras .story-category, &.otras .story-main {
-      background: $other-color;
-    }
-
-    &.medio_ambiente .story-category, &.medio_ambiente .story-main {
-      background: $enviroment-color;
     }
   }
 

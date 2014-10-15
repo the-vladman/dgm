@@ -1,25 +1,7 @@
 .post {
-  &.educacion { 
-    .post-content a, .datasets-list a, .datasets-list span,  .post-title, .similar-datasets a { color: $education-color; }
-    .post-cover-photo { background-color: $education-color; }
-  }
-
-  &.salud { 
-    .post-content a, .datasets-list a, .datasets-list span, .post-title, .similar-datasets a { color: $health-color; }
-    .post-cover-photo { background-color: $health-color; }
-  }
-
-  &.otras { 
-    .post-content a, .datasets-list a, .datasets-list span, .post-title, .similar-datasets a { color: $other-color; }
-    .post-cover-photo { background-color: $other-color; }
-  }
-
-  &.seguridad { 
-    .post-content a, .datasets-list a, .datasets-list span, .post-title, .similar-datasets a { color: $security-color; }
-    .post-cover-photo { background-color: $security-color; }
-  }
 
   .post-cover-photo {
+    background-color: $base-color;
     @include cover-background;
   }  
 
@@ -38,13 +20,14 @@
       color: $gray-light-color;
 
       a {
-        color: $gray-color;
+        color: $purple-color;
       }
     }
 
     .post-title {
       font-size: 26px;
       font-weight: 700;
+      color: $base-color;
     }
 
     .post-author {
@@ -65,14 +48,26 @@
       @include text-size-large;
     }
 
-    .post-datasets {
-      .datasets-list {
-        list-style: none;
+    .post-datasets .datasets-list {
+      list-style: none;
 
-        a {
-          font-size: 13px;
-          font-weight: 300;
-        }
+      li {
+        @include transition (all .1s ease-in-out);
+      }
+
+      a {
+        font-size: 13px;
+        font-weight: 300;
+        color: $purple-color;
+      }
+    }
+
+    .collaborators .collaborator a {
+      @include transition (all .1s ease-in-out);
+      @include transform-origin(center center);
+
+      &:hover {
+        @include transform(scale(1.05, 1.05));
       }
     }
   }
