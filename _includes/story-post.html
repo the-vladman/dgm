@@ -18,7 +18,7 @@
               <div class="story-main-inner">
                 <h3 class="post-link">{{ post.title }}</h3>
                 <h6 class="post-author">{{ post.author }}</h6>
-                <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }} <span> | {{ post.date | timeago }}</span></div>
+                <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }} | <span class="timeago" data-timestamp="{{ post.date }}"></span></div>
               </div>
             </div>
           </div>

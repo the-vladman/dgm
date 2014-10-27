@@ -1,5 +1,6 @@
 $(function() {
 
+
   $('.slider').bxSlider({
     autoHover: true,
     pager: false,
@@ -40,4 +41,12 @@ $(function() {
       nav.hide()
     }
   });
+
+  $('.timeago').each(function(index, item) {
+    var $self = $(this),
+        timestamp = $self.data('timestamp');
+        
+    $self.html( moment(timestamp, "YYYYMMDD").fromNow() );
+  });
+  
 });
