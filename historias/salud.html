@@ -1,17 +1,14 @@
 ---
 layout: default
-body_class: stories
-title: Historias
-permalink: /historias/
-weight: 1
-showInNavbar: true
+title: Salud · Historias
+permalink: /historias/salud/
 
-active: all
+active: salud
 stories_category: true
-order: 1
+order: 4
 category_info:
-  name: all
-  title: Todas
+  name: salud
+  title: Salud
 ---
 
 {% include stories-title.html %}
@@ -19,7 +16,7 @@ category_info:
 <div class="stories-content">
   {% include stories-categories.html %}  
   <div class="posts-list">
-    {% assign stories = site.posts | where:'section', 'historias' %}
+    {% assign stories = site.posts | where:'section', 'historias' | where: 'category', 'salud' %}
     {% for post in stories %}
       {% include story-post.html post=post %}
     {% endfor %}
