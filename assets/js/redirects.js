@@ -13,7 +13,7 @@ function pathExist(name) {
 var list = [
       {
         name: 'xalapa',
-        url: 'http://catalogo.datos.gob.mx/organization/ayuntamiento-de-xalapa'
+        url: 'http://catalogo.datos.gob.mx/organization/ayuntamiento-de-xalapa/'
       },
       {
         name: 'datatron',
