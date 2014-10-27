@@ -1,20 +1,22 @@
 function pathExist(name) {
   for (var i = list.length - 1; i >= 0; i--) {
-    if ( list[i].name === name ) {
-      return list[i];
-    };
+    var item = list[i],
+        posibleNames = [ '/' + item.name, '/' + item.name + '/' ];
+
+    if ( _.contains( posibleNames, name ) )
+      return item;
   };
-  
+
   return false;
 }
 
 var list = [
       {
-        name: '/xalapa',
+        name: 'xalapa',
         url: 'http://catalogo.datos.gob.mx/organization/ayuntamiento-de-xalapa'
       },
       {
-        name: '/datatron',
+        name: 'datatron',
         url: 'http://datatron.herokuapp.com/'
       }
     ],
