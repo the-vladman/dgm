@@ -44,9 +44,20 @@ $(function() {
 
   $('.timeago').each(function(index, item) {
     var $self = $(this),
-        timestamp = $self.data('timestamp');
-        
-    $self.html( moment(timestamp, "YYYYMMDD").fromNow() );
+        timestamp = $self.data('timestamp'),
+        format = $self.data('timestamp-format'),
+        date;
+    
+    switch (format) {
+      case 'normal':
+        date = moment(timestamp).format("DD MMM YYYY");
+        break;
+      case 'timeago':
+        date = moment(timestamp, "YYYYMMDD").fromNow();
+        break;
+    };
+
+    $self.html( date );
   });
   
 });
