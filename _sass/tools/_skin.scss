@@ -1,20 +1,35 @@
 .tools-list {
   .tool-box {
-    border: 1px solid $gray-light-color;
+    background-color: $gray-light-color;
+    @include transition (all .1s ease-in-out);
 
     .tool-cover {
       box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
       @include cover-background;
     }
 
-    .tool-link h5 {
-      color: $base-color;
+    .tool-link {
+      color: $gray-color;
+      @include transition (all .1s ease-in-out);
     }
 
     .tool-meta {
       font-size: 12px;
       text-transform: capitalize;
       color: $gray-color;
+      @include transition (all .1s ease-in-out);
+    }
+
+    &:hover {
+      background-color: $base-color;
+
+      .tool-link {
+        color: $white-color;
+      }
+
+      .tool-meta {
+        color: $white-color;
+      }
     }
   }
 }
