@@ -42,12 +42,10 @@ $(function() {
     }
   });
 
-  moment.locale('fr');
-
   $('.timeago').each(function(index, item) {
     var $self = $(this),
         timestamp = $self.data('timestamp');
-
+        
     $self.html( moment(timestamp, "YYYYMMDD").fromNow() );
   });
   
