@@ -7,7 +7,7 @@ weight: 2
 showInNavbar: true
 ---
 
-{% include page-title.html title=page.title tagline="Los datos abiertos deben poder ser utilizados por cualquier persona y para cualquier fin. En esta sección encontrarás herramientas para facilitar el uso de los datos abiertos del gobierno y poder crear tus propias historias." %}
+{% include page-title-icon.html title=page.title tagline="Los datos abiertos deben poder ser utilizados por cualquier persona y para cualquier fin. En esta sección encontrarás herramientas para facilitar el uso de los datos abiertos del gobierno y poder crear tus propias historias." icon="tools-illustration" %}
 
 {% assign tools_categories = site.pages | where: 'tools_category', true | sort: 'order' %}
 {% for category_page in tools_categories %}
@@ -24,15 +24,15 @@ showInNavbar: true
         {% for post in stories %}
           <div class="col col-4">
             <div class="col-inner">
-              <div class="tool-box">
-                <a class="tool-link" href="{{ post.url | prepend: site.baseurl }}">
+              <a class="tool-link" href="{{ post.url | prepend: site.baseurl }}">
+                <div class="tool-box">
                   <div class="tool-cover" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover }}');"></div>
-                </a>
-                <div class="tool-main">
-                  <a class="tool-link" href="{{ post.url | prepend: site.baseurl }}"><h5>{{ post.title }}</h5></a>
-                  <div class="tool-meta"><span class="timeago" data-timestamp="{{ post.date }}" data-timestamp-format="normal"></span></div>
+                  <div class="tool-main">
+                    <h6 class="tool-link">{{ post.title }}</h6>
+                    <div class="tool-meta"><span class="timeago" data-timestamp="{{ post.date }}" data-timestamp-format="normal"></span></div>
+                  </div>
                 </div>
-              </div>  
+              </a>
             </div>
           </div>
         {% endfor %}
