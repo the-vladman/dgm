@@ -1,0 +1,49 @@
+<div class="post-sidebar">
+
+  {% if page.datasets %}
+    <div class="sidebar-box post-datasets">
+      <h6>Conjuntos de datos utilizados</h6>
+      <ul class="datasets-list">
+        {% for dataset in page.datasets %}
+          <li>
+            <span>&#65515;</span>
+            <a href="{{ dataset.url }}" title="{{ dataset.title }}" target="_blank"> {{ dataset.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  {% if page.similar_datasets %}
+    <div class="sidebar-box post-datasets">
+      <h6>Otras fuentes</h6>
+      <ul class="datasets-list">
+        {% for dataset in page.similar_datasets %}
+          <li>
+            <span>&#65515;</span>
+            <a href="{{ dataset.url }}" title="{{ dataset.title }}" target="_blank"> {{ dataset.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  {% if page.collaborators %}
+    <div class="sidebar-box collaborators">
+      <h6>Colaboradores</h6>
+      {% for collaborator in page.collaborators %}
+        <div class="collaborator">
+          {% assign institution = site.collaborators[collaborator] %}
+          {% if institution.site == "" %}
+            <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
+          {% else %}
+            <a href="{{ institution.site }}" title="{{ institution.title }}" target="_blank">
+              <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
+            </a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+</div>

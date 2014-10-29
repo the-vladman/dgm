@@ -1,0 +1,10 @@
+{% if page.tags.size > 0 %}
+  <div class="post-tags">
+    {% for tag in page.tags %}
+      <span>
+        {{tag}}
+        {% unless forloop.length == forloop.index %}, {% endunless %}
+      </span>
+    {% endfor %}
+  </div>
+{% endif %}
