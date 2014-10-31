@@ -22,6 +22,7 @@ category_title: Salud
 tags:
 - salud
 - mortalidad materna
+redirect_from: /enorgullenciendo-a-nuestras-madres-reduciendo-la-mortalidad-materna-en-mexico/
 ---
 
 A pesar de los avances en cuidados prenatales y postnatales, la mortalidad materna continúa siendo un serio problema de salud alrededor del mundo. De acuerdo a la Organización Mundial para la Salud, 800 mujeres mueren cada día de causas evitables relacionadas al embarazo o al parto, donde el 99 por ciento de estas muertes ocurren en países en vías de desarrollo.  En 1990, las Naciones Unidades incorporaron la reducción de la mortalidad materna en tres cuartos a uno de sus ocho Objetivos de Desarrollo del Milenio, y desde entonces el número de muertes de este tipo se ha reducido a la mitad.

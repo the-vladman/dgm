@@ -26,6 +26,7 @@ tags:
 - Ramo 23
 - Recursos
 - Transparencia
+redirect_from: /ramo-23-inegi-facil/
 ---
 
 Tras casi cinco meses trabajando en INEGI FÁCIL,necesitábamos fondos para seguir con el proyecto, por lo que inscribimos el sitio al concurso de transparencia del IFAI. Tres días después, notamos que la Secretaría de Hacienda había liberado una base de datos con la información de las asignaciones del Ramo 23 aprobados para el 2014 en la Cámara de Diputados e inmediatamente vimos la oportunidad de hacer útiles estos datos abiertos.
