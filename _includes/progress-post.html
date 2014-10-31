@@ -1,7 +1,7 @@
 <div class="progress-post-wrap">
   <div class="post-date">
     <div class="dot"></div>
-    <span>{{ post.date | date: "%-d %b %Y" }}</span>
+    <span class="timeago" data-timestamp="{{ post.date }}" data-timestamp-format="normal"></span>
   </div>
   <div class="progress-post">
     <div class="post-excerp">
