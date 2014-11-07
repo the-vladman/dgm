@@ -13,8 +13,8 @@ datasets:
     title: "Recursos Ramo 23"
     url: "http://www.hacienda.gob.mx/maps/mapas/csv/RAMO_23_general.csv"
   -
-    title: "Avance físico de obras y proyectos por Centro SCT"
-    url: http://catalogo.datos.gob.mx/dataset/avance-fisico-de-obras-y-proyectos-por-centro-sct
+    title: "Infraestructura Carretera"
+    url: http://catalogo.datos.gob.mx/dataset/infraestructura-carretera
 
 permalink: /historias/otras/ramo-23.html
 section:  historias

@@ -32,7 +32,7 @@ datasets:
     url: http://catalogo.datos.gob.mx/dataset/programa-de-apoyo-alimentario
   -
     title: "Programa de Desarrollo Humano Oportunidades"
-    url: http://catalogo.datos.gob.mx/dataset/programa-de-desarrollo-humano-oportunidades0c2db
+    url: http://catalogo.datos.gob.mx/dataset/programa-de-desarrollo-humano-oportunidades
 collaborators:
   - cartografica
 

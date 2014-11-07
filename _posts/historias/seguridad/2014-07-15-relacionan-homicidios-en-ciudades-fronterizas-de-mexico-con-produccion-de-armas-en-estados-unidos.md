@@ -13,11 +13,8 @@ datasets:
     title: "Defunciones Generales"
     url: http://www.sinais.salud.gob.mx/basesdedatos/std_defunciones.html
   -
-    title: "Carreteras libres"
-    url: http://catalogo.datos.gob.mx/dataset/carreteras-libres
-  -
-    title: "Casetas de cobro"
-    url: http://catalogo.datos.gob.mx/dataset/casetas-de-cobro
+    title: "Infraestructura Carretera"
+    url: http://catalogo.datos.gob.mx/dataset/infraestructura-carretera
 collaborators:
   - data4
 

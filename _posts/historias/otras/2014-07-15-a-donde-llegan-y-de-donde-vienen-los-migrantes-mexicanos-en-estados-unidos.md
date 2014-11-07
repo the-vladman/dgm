@@ -10,14 +10,8 @@ cover_photo: "historias/migrantes-mexicanos/Screen-Shot-2014-07-03-at-5.14.22-PM
 featured: true
 datasets:
   -
-    title: "Datos Consulados"
-    url: http://catalogo.datos.gob.mx/dataset/carreteras-libres
-  -
-    title: "Carreteras libres"
-    url: http://catalogo.datos.gob.mx/dataset/carreteras-libres
-  -
-    title: "Casetas de cobro"
-    url: http://catalogo.datos.gob.mx/dataset/casetas-de-cobro
+    title: "Infraestructura Carretera"
+    url: http://catalogo.datos.gob.mx/dataset/infraestructura-carretera
   -
     title: "Indicadores de pobreza, pobreza por ingresos, rezago social y gini 2010"
     url: http://catalogo.datos.gob.mx/dataset/indicadores-de-pobreza-pobreza-por-ingresos-rezago-social-y-gini-2010-municipal
