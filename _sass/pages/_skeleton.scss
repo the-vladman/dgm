@@ -3,5 +3,12 @@
 
   .title {
     margin-bottom: 20px;
-  } 
+  }
+
+  a[rel="license"] {
+    padding-left: 10px;
+    img {
+      height: 12px;
+    }
+  }
 }
