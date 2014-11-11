@@ -1,29 +1,34 @@
 ---
 layout: "post-progress"
-title: Edición en vivo de la Política de Datos Abiertos
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut tempor felis. Quisque at eleifend leo vestibulum quis nibh efficitur neque rhoncus scelerisque."
+title: 'La participación ciudadana en la Política Nacional de Datos Abiertos'
+excerpt: "La participación de los ciudadanos en la vida pública es una de las características definitorias de una democracia cercana y moderna. La co-creación y la co-responsabilidad entre sociedad y gobierno son necesarias."
 date:   2014-04-15
 cover: "avances/politica-en-vivo/politica-en-vivo-cover.png"
 cover_photo: "avances/politica-en-vivo/politica-en-vivo-cover.png"
 permalink: "/avances/politica-en-vivo.html"
 section: avances
-category: eventos
-category_title: Eventos
+category: politica
+category_title: Politica
 tags: 
-  - política
-  - en vivo
+  - participacion ciudadana
   - datos abiertos
 published: true
 ---
 
-### Texto de prueba
+La participación de los ciudadanos en la vida pública es una de las características definitorias de una democracia cercana y moderna. La co-creación y la co-responsabilidad entre sociedad y gobierno son necesarias, la primera para generar soluciones colaborativas a los retos comunes del país; la segunda para tener un esquema de colaboración en donde la sociedad participe activa y conscientemente en las decisiones que les afectan día con día.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut tempor felis. Quisque at eleifend leo. Vestibulum quis nibh efficitur neque rhoncus scelerisque. Aenean eget fringilla purus, vel malesuada lectus. Sed sed velit sapien. Nullam sodales, dui sit amet aliquet pretium, quam dui rutrum lectus, congue luctus nulla tortor nec massa. Mauris ex arcu, lobortis a tortor a, tempor consequat risus. Cras et velit eu tellus elementum vestibulum sagittis in diam. Donec est arcu, tincidunt a leo quis, gravida porta lacus. Sed venenatis, elit in viverra mollis, risus diam pellentesque nisl, vitae vulputate purus massa in eros. Aenean sed eros eget nisl pharetra efficitur vel at felis. Etiam risus massa, sagittis a auctor at, ullamcorper eu quam. Praesent sagittis et tellus porttitor ultrices.
+Con este entendimiento de co-creación y co-responsabilidad es que publicamos el borrador de la Política Nacional de Datos Abiertos en una plataforma en línea, para ser votada, discutida y comentada directamente en datos.gob.mx, el portal de Datos Abiertos de México.
 
-Nunc eleifend massa ut tellus placerat tincidunt. Sed neque urna, sollicitudin mattis malesuada non, congue vitae risus. Nullam cursus eleifend mollis. Quisque tincidunt dignissim mauris, sit amet blandit ante fringilla id. Donec iaculis eu elit auctor porta. Duis a efficitur ante, eu faucibus elit. Nunc pellentesque eu erat vitae elementum. Phasellus pellentesque tempus dolor vitae finibus. Sed sapien diam, commodo a sapien et, tincidunt varius mi. Morbi egestas laoreet consequat.
+El borrador de la Política estuvo abierta por 5 semanas, en las cuales recibimos 1,043 participaciones y más de 300 comentarios directos al documento.
 
-Quisque ornare rhoncus leo sed dictum. Sed id rutrum lectus, in placerat lorem. Etiam fringilla odio sed nisi scelerisque, eget congue arcu bibendum. Donec eleifend pretium ante, vitae sagittis orci pellentesque et. Fusce varius fringilla mauris eu porttitor. Quisque convallis ligula sit amet semper convallis. Mauris imperdiet felis at elit euismod vulputate. Morbi faucibus nibh quam, vel pellentesque lorem egestas id.
+![Politica de Datos](avances/politica-en-vivo/politica-en-vivo/politica-en-vivo-01.JPG)
 
-Etiam ornare aliquam molestie. Duis sed nisi eget dolor bibendum porta. Aenean non est dapibus, interdum ipsum at, venenatis velit. Ut non ligula vel arcu tincidunt cursus. Fusce consequat, nulla et fringilla eleifend, dui sem egestas sem, non pellentesque quam purus quis libero. Etiam quis arcu nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In quis nisi non risus sagittis tincidunt. Fusce eu facilisis ante. Nunc nec ipsum convallis, luctus neque in, posuere enim. Ut commodo sem non fringilla euismod. In viverra, neque vel dapibus pharetra, nibh lectus tempus diam, a aliquam sem diam in magna. Integer gravida vitae ligula euismod ultricies. Integer vitae interdum enim, sed congue ex. Morbi in viverra ex.
+Además, llevamos a cabo dos eventos públicos de ‘Edición en vivo’ en el Centro de Investigación y Docencia Económicas, A.C. (CIDE) y del Instituto Tecnológico Autónomo de México (ITAM), un evento con la Asociación Mexicana de Informática, A.C. (AMIAC), y un evento ‘En vivo y en línea’ a través del portal de Datos Abiertos, en el cual ciudadanos y expertos dialogaron y discutieron sobre los beneficios, oportunidades y retos de los Datos Abiertos en el país.
 
-Suspendisse ornare, justo ac finibus sollicitudin, nibh elit tincidunt massa, ut venenatis erat ante eget nunc. Integer et lacus lacus. Pellentesque ut enim mi. Suspendisse tincidunt dui nec ultrices condimentum. Nullam non sapien porttitor, aliquam libero sed, ultricies nisl. Integer auctor ipsum in mauris vulputate, at elementum turpis condimentum. Vestibulum at nulla quis felis venenatis aliquet ut ornare risus. Aenean sollicitudin convallis nisl, quis dapibus tortor sodales eget. Donec interdum auctor sem, nec consequat mauris eleifend at. Aliquam vel laoreet justo, nec blandit leo. Maecenas posuere pulvinar elit sed commodo. Nullam volutpat massa sed urna pulvinar, ut consequat dolor tempus. Cras vel enim quis mi lobortis dapibus. Mauris id dapibus risus, sit amet molestie velit.
+Un común denominador durante este periodo fue el escepticismo sobre el impacto real de la colaboración ciudadana en esta Política. Sin embargo, la visión del Gobierno de la República es que un Gobierno Abierto, que promueve la participación ciudadana, se ve beneficiado, al igual que toda la población, con la adición de las habilidades y conocimiento que están dispersos en la sociedad. Por esto todos los comentarios son importantes y serán todmados en cuenta para la vesión final de la Política.
+
+Gracias a la participación de más de 1,000 ciudadanos, hoy sabemos cómo abordar de mejor manera temas de seguridad de la información, privacidad, arquitectura de la información y uso de los Datos Abiertos. Gracias a este ejercicio, hoy sabemos de manera empírica qué acciones de apertura gubernamental añaden valor social a las políticas públicas, para beneficio de todos.
+
+En las próximas semanas, nuestro equipo junto con asesores fuera del gobierno, analizarán los comentarios para que aquellos que tengan valor y viabilidad se vean reflejados en el documento que guiará las acciones de Datos Abiertos en el Gobierno de la República.
+
+Te invitamos a seguir participando con nosotros, a seguir los avances rumbo a la implementación de este documento y a ser parte del cambio que los Datos Abiertos y el Gobierno Abierto harán en la vida pública de nuestro país.
