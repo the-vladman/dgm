@@ -19,9 +19,15 @@ A las 8 de la mañana de un viernes de Mayo, la estación “Centro Médico” d
 
 Durante 6 semanas esta escena se repitió de lunes a viernes. Por las mañanas y por las tardes un equipo de hackers visitamos 60 veces a un grupo de 10 dependencias de gobierno, para entender cómo es que íbamos a lograr implementar una política de datos abiertos en el país.
 
+![Escuadrón de Datos en CONAGUA]({{ site.url | append: site.baseurl }}assets/images/avances/escuadron-g1/escuadron-g1-01.jpg)
+
 Es fácil creer que el gobierno puede acatar una tema más, pero la realidad es que está saturado a nivel de procesos, enredado a nivel organizacional, y apretado a nivel presupuestal. Teníamos claro que llegar con “el nuevo tema”, “eso de datos y gobierno digital” no sería nada fácil. Sin embargo, vimos todo lo contrario. Trabajamos con equipos entusiasmados, comprometidos, algunos con dudas y preocupaciones, pero abiertos a entender esta nueva petición de las muchas que probablemente les llegaron en ese periodo.
 
+![Escuadrón de Datos en acción]({{ site.url | append: site.baseurl }}assets/images/avances/escuadron-g1/escuadron-g1-02.jpg)
+
 Y después de más de 60 reuniones, unos 700km recorridos, más de 100 tazas de café (algunas buenas, otras no tanto), logramos la humilde meta de liberar los primeros 100 conjuntos de datos de esta iniciativa. Datos de la SCT, NAFIN, SEDESOL, SSA, CONEVAL, CONAPO, PEMEX, CONAGUA, SAGARPA y SEP (por orden de agenda), están disponibles ya para ser utilizados con libre uso.
+
+![Presentación 1ra generación del Escuadrón de Datos]({{ site.url | append: site.baseurl }}assets/images/avances/escuadron-g1/escuadron-g1-03.jpg)
 
 Pásenle a datos.gob.mx y ayúdenos a mejorar el sitio, los datos, y la iniciativa.
 Escucharán de nosotros próximamente; ya viene la segunda generación.

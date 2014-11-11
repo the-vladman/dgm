@@ -29,6 +29,8 @@ Un común denominador durante este periodo fue el escepticismo sobre el impacto 
 
 Gracias a la participación de más de 1,000 ciudadanos, hoy sabemos cómo abordar de mejor manera temas de seguridad de la información, privacidad, arquitectura de la información y uso de los Datos Abiertos. Gracias a este ejercicio, hoy sabemos de manera empírica qué acciones de apertura gubernamental añaden valor social a las políticas públicas, para beneficio de todos.
 
+<iframe width="640" height="360" margin="20px" src="//www.youtube.com/embed/VlEAMTFdb_A?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
 En las próximas semanas, nuestro equipo junto con asesores fuera del gobierno, analizarán los comentarios para que aquellos que tengan valor y viabilidad se vean reflejados en el documento que guiará las acciones de Datos Abiertos en el Gobierno de la República.
 
 Te invitamos a seguir participando con nosotros, a seguir los avances rumbo a la implementación de este documento y a ser parte del cambio que los Datos Abiertos y el Gobierno Abierto harán en la vida pública de nuestro país.
