@@ -37,5 +37,9 @@ Los temas tomados a consideración en la encuesta fueron:
 
 En primera instancia, se seleccionaban aleatoriamente dos temas, de los cuales el encuestado debía elegir cuál le interesaba más. Posteriormente, se desglosaban un par de preguntas más específicas sobre el tema elegido. 
 
+
+![Resultados Datatrón]({{ site.url | append: site.baseurl }}assets/images/avances/datatron-pnda/datatron-pnda02.png)
+
+
 Este ejercicio demostró que el tema preferido por la mayoría de los encuestados fue Democracia y rendición de cuentas (14.07%), seguido por Economía y finanzas (13.62%) y por Educación (12.44%). En contraparte, Geografía resultó ser el más bajo en la lista de interés (6.77%), seguido por Salud (9.24%) y Energía y medio ambiente (10.45%).
  
