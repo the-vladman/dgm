@@ -7,8 +7,8 @@ cover: "avances/escuadron-g1/escuadron-g1-cover.jpg"
 cover_photo: "avances/escuadron-g1/escuadron-g1-cover.jpg"
 permalink: "/avances/escuadron-g1.html"
 section: avances
-category: eventos
-category_title: Eventos
+category: politica
+category_title: Política
 tags: 
   - escuadron de datos 
   - datos abiertos
