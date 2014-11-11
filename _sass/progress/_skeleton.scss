@@ -44,6 +44,7 @@
 
   .progress-post {
     display: table;
+    min-height: 250px;
     @include clearfix;
   }
 
