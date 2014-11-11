@@ -3,8 +3,8 @@ layout: "post-progress"
 title: 'La primera generación del escuadrón de datos'
 excerpt: "Después de más de 60 reuniones, 700km recorridos, 100 tazas de café, logramos liberar los primeros 100 conjuntos de datos de esta iniciativa."
 date:   2014-06-01
-cover: "avances/politica-en-vivo/politica-en-vivo-cover.png"
-cover_photo: "avances/politica-en-vivo/politica-en-vivo-cover.png"
+cover: "avances/escuadron-g1/escuadron-g1-cover.jpg"
+cover_photo: "avances/escuadron-g1/escuadron-g1-cover.jpg"
 permalink: "/avances/escuadron-g1.html"
 section: avances
 category: eventos
