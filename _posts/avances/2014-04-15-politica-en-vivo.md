@@ -21,7 +21,7 @@ Con este entendimiento de co-creación y co-responsabilidad es que publicamos el
 
 El borrador de la Política estuvo abierta por 5 semanas, en las cuales recibimos 1,043 participaciones y más de 300 comentarios directos al documento.
 
-![Politica de Datos](avances/politica-en-vivo/politica-en-vivo/politica-en-vivo-01.JPG)
+![Politica de Datos]({{ site.url | append: site.baseurl }}assets/images/avances/politica-en-vivo/politica-en-vivo-01.JPG)
 
 Además, llevamos a cabo dos eventos públicos de ‘Edición en vivo’ en el Centro de Investigación y Docencia Económicas, A.C. (CIDE) y del Instituto Tecnológico Autónomo de México (ITAM), un evento con la Asociación Mexicana de Informática, A.C. (AMIAC), y un evento ‘En vivo y en línea’ a través del portal de Datos Abiertos, en el cual ciudadanos y expertos dialogaron y discutieron sobre los beneficios, oportunidades y retos de los Datos Abiertos en el país.
 
