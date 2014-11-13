@@ -17,7 +17,9 @@ img + p,
 p + img,
 img + img,
 p + ul,
-img + ul {
+img + ul,
+p + iframe,
+iframe + p {
   margin-top: 25px;
 }
 
