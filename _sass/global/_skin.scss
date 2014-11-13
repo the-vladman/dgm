@@ -49,6 +49,14 @@ p {
   @include text-size-medium; 
 }
 
+.dgm-site {
+  background: #474747;
+
+  body {
+    background: #fff;
+  }
+}
+
 .styled, .post-content ul {
   @extend p;
 }
