@@ -23,7 +23,9 @@ Datatón para el desarrollo fue la oportunidad para que la ciudadanía utilizara
 
 Como resultado de un esfuerzo por parte de la Coordinación de Estrategia Digital Nacional de la Presidencia de la República y en alianza con Infotec, el Gobierno Municipal de Zapopan y Telefónica, se abrieron 24 bases de datos. Entre ellas el catálogo de escuelas de la SEP y la del uso de antenas de telefonía celular.
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/tuHpInsVNsU?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<div class="video">
+  <iframe src="//www.youtube.com/embed/tuHpInsVNsU?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ####Creando, innovando, emprendiendo
 
