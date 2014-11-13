@@ -21,7 +21,7 @@ Los Datos Abiertos permiten maximizar el valor de la información pública. Por 
 
 ### Datatrón
 
-Como uno de los primeros pasos para identificar las necesidades e intereses de datos de la ciudadanía, la oficina de Presidencia lanzó un Datatrón. Se trata de una encuesta digital en el portal datos.gob.mx, con el propósito de conocer las preferencias de la población en materia de Datos Abiertos, desarrollar un plan de acción con la demanda como eje rector y abrir el proceso a una mayor participación. 
+Como uno de los primeros pasos para identificar las necesidades e intereses de datos de la ciudadanía, la oficina de Presidencia lanzó un [Datatrón](http://datatron.herokuapp.com/ "Title"). Se trata de una encuesta digital en el portal datos.gob.mx, con el propósito de conocer las preferencias de la población en materia de Datos Abiertos, desarrollar un plan de acción con la demanda como eje rector y abrir el proceso a una mayor participación. 
 
 Los temas tomados a consideración en la encuesta fueron:
 
@@ -42,4 +42,8 @@ En primera instancia, se seleccionaban aleatoriamente dos temas, de los cuales e
 
 
 Este ejercicio demostró que el tema preferido por la mayoría de los encuestados fue Democracia y rendición de cuentas (14.07%), seguido por Economía y finanzas (13.62%) y por Educación (12.44%). En contraparte, Geografía resultó ser el más bajo en la lista de interés (6.77%), seguido por Salud (9.24%) y Energía y medio ambiente (10.45%).
+
+Más información sobre el Datatrón [aquí](http://datatron.herokuapp.com/ "Title").
+
+Consulta la metodología [aquí](https://docs.google.com/document/d/1o9OK54l2L1bFvS0jS1RUoyqV1qnCot4klRcmBVMGQHc/edit?usp=sharing "Title").
  
