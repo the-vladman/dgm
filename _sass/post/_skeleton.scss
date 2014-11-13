@@ -30,6 +30,10 @@ $height-half: 240px;
 
     .post-content {
       margin-bottom: 35px;
+
+      iframe {
+        margin: 20px 0;
+      }
     }
 
     .post-datasets .datasets-list li {
