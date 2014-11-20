@@ -7,13 +7,6 @@ date:     2014-11-15 18:09:00 -0500
 cover:    "historias/derechos-de-propiedad-sobre-la-tierra/derechos-de-propiedad-sobre-la-tierra-cover.jpg"
 cover_photo: "historias/derechos-de-propiedad-sobre-la-tierra/derechos-de-propiedad-sobre-la-tierra-cover.jpg"
 featured: false
-datasets:
-  -
-    title: "Mortalidad Materna"
-    url: http://catalogo.datos.gob.mx/dataset/mortalidad-materna
-  -
-    title: "Recursos en salud"
-    url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
 permalink: /historias/otros/derechos-de-propiedad-sobre-la-tierra.html
 section:  historias
 category: otros
