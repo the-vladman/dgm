@@ -4,8 +4,8 @@ title:    "Zapopan como sistema complejo"
 tagline:  "Predicción y análisis espacial de crimen"
 author:   ""
 date:     2014-07-15 18:09:00 -0500
-cover:    ""
-cover_photo: ""
+cover:    "historias/zapopan-como-sistema-complejo/zapopan-como-sistema-complejo-cover.jpg"
+cover_photo: "historias/zapopan-como-sistema-complejo/zapopan-como-sistema-complejo-cover_photo.jpg"
 featured: false
 datasets:
   -
