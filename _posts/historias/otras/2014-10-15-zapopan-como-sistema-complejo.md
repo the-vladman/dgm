@@ -7,13 +7,6 @@ date:     2014-07-15 18:09:00 -0500
 cover:    "historias/zapopan-como-sistema-complejo/zapopan-como-sistema-complejo-cover.jpg"
 cover_photo: "historias/zapopan-como-sistema-complejo/zapopan-como-sistema-complejo-cover_photo.jpg"
 featured: false
-datasets:
-  -
-    title: "Mortalidad Materna"
-    url: http://catalogo.datos.gob.mx/dataset/mortalidad-materna
-  -
-    title: "Recursos en salud"
-    url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
 permalink: /historias/otros/zapopan-como-sistema-complejo.html
 section:  historias
 category: seguridad
