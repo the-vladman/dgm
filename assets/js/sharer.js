@@ -7,7 +7,7 @@ $(function() {
     event.preventDefault();
     
     var $self = $(this),
-        url = $self.attr('href'),
+        url = $self.data('title-share'),
         title = $self.attr('title');
 
     popup(url, title);
