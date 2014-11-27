@@ -18,6 +18,10 @@ var list = [
       {
         name: 'datatron',
         url: 'http://datatron.herokuapp.com/'
+      },
+      {
+        name: 'presidencia',
+        url: 'http://catalogo.datos.gob.mx/organization/presidencia/'
       }
     ],
     dependency  = pathExist( window.location.pathname );
