@@ -36,7 +36,7 @@
           <li class="collaborator">
             {% assign institution = site.collaborators[collaborator] %}
             {% if institution.site == "" %}
-              <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
+              <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}" aria-label="{{ institution.title }}">
             {% else %}
               <a href="{{ institution.site }}" title="{{ institution.title }}" target="_blank">
                 <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
