@@ -21,7 +21,7 @@
                 {% if post.author != empty %}
                   <h6 aria-hidden="true" class="post-author">{{ post.author }}</h6>
                 {% endif %}
-                <div class="post-meta"><span aria-hidden="true">{{ post.date | date: "%b %-d, %Y" }} |</span> <span aria-hidden="false" class="timeago" data-timestamp="{{ post.date }}" data-timestamp-format="timeago"></span></div>
+                <div class="post-meta"><span aria-hidden="true">{{ post.date | date: "%b %-d, %Y" }} |</span> <span aria-hidden="true" class="timeago" data-timestamp="{{ post.date }}" data-timestamp-format="timeago"></span></div>
               </div>
             </div>
           </div>
