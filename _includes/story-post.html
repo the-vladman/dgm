@@ -1,12 +1,12 @@
 <div class="story-post {{ post.category }}">
   <div class="main-container">
-    <a href="{{ post.url | prepend: site.baseurl }}">
+    <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
       <div class="cols-12">
         <div class="col col-2">
           <div class="col-inner">
             <div class="story-category">
               <div class="story-category-inner">
-                <h5>{{ post.category_title }}</h5>
+                <h5 aria-hidden="true">{{ post.category_title }}</h5>
               </div>
             </div>
           </div>
@@ -19,9 +19,9 @@
                 <h3 class="post-link">{{ post.title }}</h3>
 
                 {% if post.author != empty %}
-                  <h6 class="post-author">{{ post.author }}</h6>
+                  <h6 aria-hidden="true" class="post-author">{{ post.author }}</h6>
                 {% endif %}
-                <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }} | <span class="timeago" data-timestamp="{{ post.date }}" data-timestamp-format="timeago"></span></div>
+                <div class="post-meta"><span aria-hidden="true">{{ post.date | date: "%b %-d, %Y" }} |</span> <span aria-hidden="false" class="timeago" data-timestamp="{{ post.date }}" data-timestamp-format="timeago"></span></div>
               </div>
             </div>
           </div>

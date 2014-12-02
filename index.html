@@ -3,25 +3,25 @@ layout: default
 title: datos.gob.mx
 ---
 
-<div class="slider-wrapper">
+<section class="slider-wrapper">
   <div class="slider">
     {% assign featured_stories = site.posts | where:'section', 'historias' | where: 'featured', true %}
     {% for post in featured_stories | limi: 4 %}
-      <div class="slide" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover_photo }}');">
+      <article class="slide" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover_photo }}');">
         <div class="main-container">
           <div class="cols-12">
             <div class="col col-6">
               <div class="col-inner">
                 <div class="slide-card-box {{ post.category }}">
                   <span class="complement-tagline">Datos abiertos para:</span>
-                  <h3 class="post-link"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.tagline }}</a></h3>
-                  <a class="post-read-more" href="{{ post.url | prepend: site.baseurl }}">Leer Más</a>
+                  <h3 class="post-link"><a tabindex="-1" href="{{ post.url | prepend: site.baseurl }}">{{ post.tagline }}</a></h3>
+                  <a tabindex="-1" class="post-read-more" href="{{ post.url | prepend: site.baseurl }}" aria-hidden="true">Leer Más</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     {% endfor %}
   </div>
   <div class="slider-pager">
@@ -38,30 +38,34 @@ title: datos.gob.mx
       </div>
     </div>
   </div>
-</div>
+</section>
 
 {% include search-data.html %}
 
-<div class="stories-content">
+<section class="stories-content">
   <div class="stories-title">
     <div class="main-container">
       <div class="cols-12">
         <div class="col col-12">
           <div class="col-inner">
-            <h2>Historias con Datos</h2>
-            <p>Conoce quiénes ya usan datos abiertos</p>
+            <header>
+              <h2 id="home-stories-title">Historias con Datos</h2>
+              <p id="home-stories-desc">Conoce quiénes ya usan datos abiertos</p>
+            </header>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="posts-list">
+  <ul class="posts-list" aria-label="Historias recientes con Datos">
     {% assign stories = site.posts | where:'section', 'historias' %}
     {% for post in stories %}
-      {% include story-post.html post=post %}
+      <li>
+        {% include story-post.html post=post %}
+      </li>
     {% endfor %}
     {% include show-more-stories.html %}
-  </div>
-</div>
+  </ul>
+</section>
 
 {% include subscribe.html %}

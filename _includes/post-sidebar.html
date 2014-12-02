@@ -1,12 +1,12 @@
-<div class="post-sidebar">
+<aside class="post-sidebar" aria-label="Información sobre el articulo" role="complementary">
 
   {% if page.datasets %}
     <div class="sidebar-box post-datasets">
-      <h6>Conjuntos de datos utilizados</h6>
-      <ul class="datasets-list">
+      <h6 id="dataset-used-title" aria-hidden="true">Conjuntos de datos utilizados</h6>
+      <ul class="datasets-list" aria-labelledby="dataset-used-title">
         {% for dataset in page.datasets %}
           <li>
-            <span>&#65515;</span>
+            <span aria-hidden="true" tabindex="-1">&#65515;</span>
             <a href="{{ dataset.url }}" title="{{ dataset.title }}" target="_blank"> {{ dataset.title }}</a>
           </li>
         {% endfor %}
@@ -16,8 +16,8 @@
 
   {% if page.similar_datasets %}
     <div class="sidebar-box post-datasets">
-      <h6>Otras fuentes</h6>
-      <ul class="datasets-list">
+      <h6 id="other-sources-title" aria-hidden="true">Otras fuentes</h6>
+      <ul class="datasets-list" aria-labelledby="other-sources-title">
         {% for dataset in page.similar_datasets %}
           <li>
             <span>&#65515;</span>
@@ -30,20 +30,22 @@
 
   {% if page.collaborators %}
     <div class="sidebar-box collaborators">
-      <h6>Colaboradores</h6>
-      {% for collaborator in page.collaborators %}
-        <div class="collaborator">
-          {% assign institution = site.collaborators[collaborator] %}
-          {% if institution.site == "" %}
-            <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
-          {% else %}
-            <a href="{{ institution.site }}" title="{{ institution.title }}" target="_blank">
+      <h6 id="collaborators-title" aria-hidden="true">Colaboradores</h6>
+      <ul class="collaborators" aria-labelledby="collaborators-title">
+        {% for collaborator in page.collaborators %}
+          <li class="collaborator">
+            {% assign institution = site.collaborators[collaborator] %}
+            {% if institution.site == "" %}
               <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
-            </a>
-          {% endif %}
-        </div>
-      {% endfor %}
+            {% else %}
+              <a href="{{ institution.site }}" title="{{ institution.title }}" target="_blank">
+                <img src="{{ site.url | append: site.baseurl }}assets/images/collaborators/{{ institution.logo_url }}" alt="{{ institution.title }}">
+              </a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   {% endif %}
 
-</div>
+</aside>

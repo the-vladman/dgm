@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<div class="post {{ page.category }}">
-  <div class="post-cover-photo" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ page.cover_photo }}');">
-  </div>
+<article class="post {{ page.category }}">
+  <div class="post-cover-photo" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ page.cover_photo }}');"></div>
+
   <div class="post-main">
     <div class="main-container">
       <div class="cols-12">
@@ -12,15 +12,15 @@ layout: default
           <div class="col-inner">
             <div class="post-main-inner">
               <div class="breadcrumbs">
-                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}">{{ page.section }}</a> /
-                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}/{{ page.category }}">{{ page.category }}</a>
+                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}" arial-hidden="true" tabindex="-1">{{ page.section }}</a> /
+                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}/{{ page.category }}" arial-hidden="true" tabindex="-1">{{ page.category }}</a>
               </div>
-              <h1 class="post-title">{{ page.title }}</h1>
-              <span class="post-author">{{ page.author }}</span>
-              {% include post-tags.html %}
-              <article class="post-content">
-                {{ content }}
-              </article>
+              <header>
+                <h1 class="post-title">{{ page.title }}</h1>
+                <P class="post-author" >Autor: {{ page.author }}</P>
+                {% include post-tags.html %}
+              </header>
+              {{ content }}
             </div>
           </div>
         </div>
@@ -40,4 +40,4 @@ layout: default
       </div>
     </div>
   </div>
-</div>
+</article>

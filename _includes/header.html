@@ -1,28 +1,27 @@
-<header class="site-header">
-  <div class="site-header-top">
+<a class="skiplink" href="#main-content" title="Saltar al contenido principal">Saltar al contenido principal</a>
+<div class="site-header">
+  <section class="site-header-top">
     <div class="main-container">
       <div class="cols-12">
         <div class="col col-12">
           <div class="col-inner">
-            <div class="presidencia-brand">
-              <a href="http://presidencia.gob.mx/" title="Presidencia de la República" target="_blank">
-                <i class="i presidencia"></i>
-              </a>
-            </div>
+            <a href="http://presidencia.gob.mx/" title="Ir al sitio de la Presidencia de la República Mexicana" target="_blank" aria-hidden="true" tabindex="-1">
+              <i class="i presidencia"></i>
+            </a>
             <div class="social-links">
               <ul>
                 <li>
-                  <a class="custom-share-button" href="https://twitter.com/DatosGobMx" data-title-share="http://twitter.com/share?url=http://datos.gob.mx/&amp;text={{ site.twitter_text }}" title="Twitter" target="_blank">
+                  <a tabindex="-1" aria-hidden="true" class="custom-share-button" href="https://twitter.com/DatosGobMx" data-title-share="http://twitter.com/share?url=http://datos.gob.mx/&amp;text={{ site.twitter_text }}" title="Twitter" target="_blank">
                     <i class="i twitter-gray"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="custom-share-button" href="#" data-title-share="https://www.facebook.com/sharer/sharer.php?u=http://datos.gob.mx/" title="Facebook">
+                  <a tabindex="-1" aria-hidden="true" class="custom-share-button" href="#" data-title-share="https://www.facebook.com/sharer/sharer.php?u=http://datos.gob.mx/" title="Facebook">
                     <i class="i fb-gray"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/mxabierto/dgm" title="Repositorio GitHub" target="_blank">
+                  <a tabindex="-1" aria-hidden="true" href="https://github.com/mxabierto/dgm" title="Repositorio GitHub" target="_blank">
                     <i class="i octocat-gray"></i>
                   </a>
                 </li>
@@ -32,17 +31,17 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
   
-  <div class="site-header-bottom">
+  <header class="site-header-bottom">
     <div class="main-container">
       <div class="cols-12">
         <div class="col col-12">
           <div class="col-inner">
-            <a class="site-brand" href="{{ site.url | append: site.baseurl }}">
-              <i class="i dgm-logo"></i>
+            <a class="site-brand" href="{{ site.url | append: site.baseurl }}" title="Ir al inicio de DATOS.GOB.MX">
+              <i class="i dgm-logo" role="presentation"></i>
             </a>
-            <div class="open-data-header-poster">
+            <div class="open-data-header-poster" aria-hidden="true">
               <div class="poster-part-1">
                 Abrir para
               </div>
@@ -58,25 +57,25 @@
                 </ul>
               </div>
             </div>
-            <div class="nav-burguer"><span></span></div>
-            <nav class="site-navigation">
-              <ul>
-                <li>
-                  <a class="page-link" href="http://catalogo.datos.gob.mx/dataset">Datos</a>
-                </li>
-                {% assign sorted_pages = site.pages | where:'showInNavbar',true | sort: 'weight' %}
-                {% for section in sorted_pages %}
-                  {% if section.title %}
-                    <li>
-                      <a class="page-link{% if section.url == page.url %} active{% endif %}" href="{{ section.url | prepend: site.baseurl }}">{{ section.title }}</a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </nav>
+            <div class="nav-burguer" aria-hidden="true"><span></span></div>
+            <ul class="site-navigation" aria-label="Navegación principal" role="navigation">
+              <li>
+                <a class="page-link" href="http://catalogo.datos.gob.mx/dataset" title="Ir al conjunto de datos" aria-label="Ir al conjunto de datos">Datos</a>
+              </li>
+              {% assign sorted_pages = site.pages | where:'showInNavbar',true | sort: 'weight' %}
+              {% for section in sorted_pages %}
+                {% if section.title %}
+                  <li>
+                    <a class="page-link{% if section.url == page.url %} active{% endif %}" href="{{ section.url | prepend: site.baseurl }}" aria-label="{{ section.aria_label }}">{{ section.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
+</div>
+
+

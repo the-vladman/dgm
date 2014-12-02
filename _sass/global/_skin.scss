@@ -69,10 +69,6 @@ p {
   .social-links {
     ul {
       list-style: none;
-
-      li {
-        float: left;
-      }
     }
   }
 
@@ -131,11 +127,9 @@ p {
   }
 
   .site-navigation {
-    ul {
-      list-style: none;
-    }
+    list-style: none;
 
-    a {
+    li a {
       color: $white-color;
       font-size: 12px;
 
