@@ -20,17 +20,17 @@ showInNavbar: true
 <div class="{{ page.body_class }}-content">
   <div class="tools-list">
     <div class="main-container">
-      <div class="cols-12">
+      <div class="cols-12" role="list" aria-label="Herramientas">
         {% assign stories = site.posts | where:'section', 'herramientas' %}
         {% for post in stories %}
-          <div class="col col-4">
+          <div class="col col-4" role="listitem">
             <div class="col-inner">
               <a class="tool-link" href="{{ post.url | prepend: site.baseurl }}">
                 <div class="tool-box">
                   <div class="tool-cover" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover }}');"></div>
                   <div class="tool-main">
                     <h6 class="tool-link">{{ post.title }}</h6>
-                    <div class="tool-meta"><span class="timeago" data-timestamp="{{ post.date }}" data-timestamp-format="normal"></span></div>
+                    <div class="tool-meta"><span class="timeago" aria-hidden="true" data-timestamp="{{ post.date }}" data-timestamp-format="normal"></span></div>
                   </div>
                 </div>
               </a>
