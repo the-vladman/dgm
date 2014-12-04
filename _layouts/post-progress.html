@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="post {{ page.category }}">
+<article class="post {{ page.category }}">
   <div class="post-cover-photo" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ page.cover_photo }}');">
     <div class="fake-half"></div>
   </div>
@@ -12,21 +12,14 @@ layout: default
         <div class="col col-9">
           <div class="col-inner">
             <div class="post-main-inner">
-              <div class="breadcrumbs">
-                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}">{{ page.section }}</a>
+              <div class="breadcrumbs" role="presentation" aria-hidden="true">
+                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}" tabindex="-1">{{ page.section }}</a>
               </div>
-              <h1 class="post-title">{{ page.title }}</h1>
-              <div class="post-tags">
-                {% for tag in page.tags %}
-                  <span>
-                    {{tag}}
-                    {% unless forloop.length == forloop.index %}, {% endunless %}
-                  </span>
-                {% endfor %}
-              </div>
-              <article class="post-content">
-                {{ content }}
-              </article>
+              <header>
+                <h1 class="post-title">{{ page.title }}</h1>
+                {% include post-tags.html %}
+              </header>
+              {{ content }}
             </div>
           </div>
         </div>
@@ -43,4 +36,4 @@ layout: default
       </div>
     </div>
   </div>
-</div>
+</article>
