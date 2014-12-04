@@ -1,3 +1,10 @@
+function addAriaHiddenAttrs(iframe) {
+  iframe.attr({
+    'aria-hidden': 'true',
+    'tabindex': '-1'
+  });
+};
+
 $(function() {
 
 

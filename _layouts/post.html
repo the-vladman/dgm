@@ -11,9 +11,9 @@ layout: default
         <div class="col col-8">
           <div class="col-inner">
             <div class="post-main-inner">
-              <div class="breadcrumbs">
-                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}" arial-hidden="true" tabindex="-1">{{ page.section }}</a> /
-                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}/{{ page.category }}" arial-hidden="true" tabindex="-1">{{ page.category }}</a>
+              <div class="breadcrumbs" role="presentation" aria-hidden="true">
+                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}" tabindex="-1">{{ page.section }}</a> /
+                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}/{{ page.category }}" tabindex="-1">{{ page.category }}</a>
               </div>
               <header>
                 <h1 class="post-title">{{ page.title }}</h1>
