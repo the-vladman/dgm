@@ -22,6 +22,10 @@ var list = [
       {
         name: 'presidencia',
         url: 'http://catalogo.datos.gob.mx/organization/presidencia/'
+      },
+      {
+        name: 'guia',
+        url: 'http://mxabierto.github.io/playbook/'
       }
     ],
     dependency  = pathExist( window.location.pathname );
