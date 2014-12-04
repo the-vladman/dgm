@@ -2,27 +2,27 @@
 layout: default
 ---
 
-<div class="post">
-  <iframe class="tool-iframe" src="{{ page.iframe_src }}"></iframe>
+<article class="post">
+  <iframe class="tool-iframe" src="{{ page.iframe_src }}" aria-hidden="true" tabindex="-1"></iframe>
   <div class="post-main clear-iframe">
     <div class="main-container">
       <div class="cols-12">
         <div class="col col-8">
           <div class="col-inner">
             <div class="post-main-inner">
-              <div class="breadcrumbs">
-                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}">{{ page.section }}</a>
+              <div class="breadcrumbs" role="presentation" aria-hidden="true">
+                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}" tabindex="-1">{{ page.section }}</a>
               </div>
-              <h1 class="post-title">{{ page.title }}</h1>
-              {% include post-tags.html %}
-              <article class="post-content">
-                {{ content }}
-              </article>
+              <header>
+                <h1 class="post-title">{{ page.title }}</h1>
+                {% include post-tags.html %}
+              </header>
+              {{ content }}
             </div>
           </div>
         </div>
         <div class="col col-4">
-          {% include post-sidebar.html %}
+          {% include post-sidebar.html aria-label="la herramienta" %}
         </div>
       </div>
       <div class="cols-12">
@@ -35,4 +35,4 @@ layout: default
       </div>
     </div>
   </div>
-</div>
+</article>
