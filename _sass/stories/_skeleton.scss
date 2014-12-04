@@ -28,12 +28,13 @@
 $post-height: 240px;
 
 .posts-list {
+
+  li:first-child .story-post {
+    margin-top: 0;  
+  }
+
   .story-post {
     margin-top: 10px;
-
-    &:first-child {
-      margin-top: 0;
-    }
 
     &:nth-of-type(even) {
       .story-main {

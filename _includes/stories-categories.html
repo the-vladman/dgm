@@ -1,9 +1,9 @@
-<div class="categories-stories">
+<section class="categories-stories">
   <div class="main-container">
     <div class="cols-12">
       <div class="col col-12">
         <div class="col-inner">
-          <ul class="categories-list">
+          <ul class="categories-list" role="presentation" aria-hidden="true">
             {% assign stories_categories = site.pages | where: 'stories_category', true | sort: 'order' %}
             {% for category_page in stories_categories %}
               <li>
@@ -15,4 +15,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>
