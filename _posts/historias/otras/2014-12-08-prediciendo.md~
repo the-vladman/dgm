@@ -24,7 +24,7 @@ category_title: Otro
 tags:
 - Datatón
 redirect_from: /prediciendo/
-published: true
+published: false
 ---
 
 Buscamos caracterizar la distribución de delitos en el municipio de Zapopan creando un sistema que pudiera analizar el stream de Twitter en tiempo real para encontrar sucesos clave y brindar información relevante utilizando un sistema de Google.
