@@ -16,8 +16,10 @@ datasets:
     url: https://www.dropbox.com/sh/oirgysjvjfz33fo/AABiuHu3-ohe8nPm-jZFqQn4a
   -
     title: "Tweets georeferenciados Zapopán"
-    url: https://www.dropbox.com/sh/skv5nl9t5mdxr4n/AADqqEU5bx2gTZdMldjdvLfVa
-
+    url: http://www.rname.sep.gob.mx/
+  -
+    title: "Sistema Nacional de Información Estadística Educativa, SEP"
+    url: http://www.snie.sep.gob.mx/
 permalink: /historias/otros/2014-12-08-appdata.html
 section:  historias
 category: otros
