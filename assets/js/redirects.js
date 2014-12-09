@@ -25,7 +25,7 @@ var list = [
       },
       {
         name: 'guia',
-        url: 'http://mxabierto.github.io/playbook/'
+        url: 'http://mxabierto.github.io/guia/'
       }
     ],
     dependency  = pathExist( window.location.pathname );
