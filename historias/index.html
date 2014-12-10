@@ -2,6 +2,7 @@
 layout: default
 body_class: stories
 title: Historias
+aria_label: Conoce las historias con Datos
 permalink: /historias/
 weight: 1
 showInNavbar: true
@@ -13,17 +14,16 @@ category_info:
   name: all
   title: Todas
 ---
-
-{% include stories-title.html %}
-
-<div class="stories-content">
+<section class="stories-content">
+  {% include stories-title.html %}
   {% include stories-categories.html %}  
-  <div class="posts-list">
+  
+  <ul class="posts-list" aria-label="Historias con Datos">
     {% assign stories = site.posts | where:'section', 'historias' %}
     {% for post in stories %}
-      {% include story-post.html post=post %}
+      <li>
+        {% include story-post.html post=post %}
+      </li>
     {% endfor %}
-  </div>
-</div>
-
-{% include subscribe.html %}
+  </ul>
+</section>

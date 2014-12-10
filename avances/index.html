@@ -2,6 +2,7 @@
 layout: default
 body_class: progress
 title: Avances
+aria_label: Entérate sobre los avances de la iniciativa
 permalink: /avances/
 weight: 3
 showInNavbar: true
@@ -14,19 +15,19 @@ name: all
 category_info:
   name: all
   title: Todos
----
+--- 
 
-{% include page-title-icon.html title="Avances" tagline="El ecosistema de datos abiertos en México y el mundo está en constante movimiento. En esta sección encontrarás actualizaciones sobre el desarrollo de nuestra Política de Datos Abiertos, además de noticias, estudios y casos de éxito relacionados." icon="progress-illustration" %}  
+<section class="{{ page.body_class }}">
+  {% include page-title-icon.html title="Avances" tagline="El ecosistema de datos abiertos en México y el mundo está en constante movimiento. En esta sección encontrarás actualizaciones sobre el desarrollo de nuestra Política de Datos Abiertos, además de noticias, estudios y casos de éxito relacionados." icon="progress-illustration" %} 
 
-
-<div class="{{ page.body_class }}">
   <div class="main-container">
     <div class="cols-12">
       <div class="col col-10">
         <div class="col-inner">
-          <div class="progress-posts-list">{% assign stories = site.posts | where: 'section', 'avances' %}
+          <div class="progress-posts-list" role="list" aria-label="Avances">
+            {% assign stories = site.posts | where: 'section', 'avances' %}
             {% for post in stories %}
-            {% include progress-post.html post=post %}
+              {% include progress-post.html post=post %}
             {% endfor %}
           </div>
         </div>
@@ -38,4 +39,4 @@ category_info:
       </div>
     </div>
   </div>
-</div>
+</section>

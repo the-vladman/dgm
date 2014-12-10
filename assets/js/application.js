@@ -1,3 +1,10 @@
+function addAriaHiddenAttrs(iframe) {
+  iframe.attr({
+    'aria-hidden': 'true',
+    'tabindex': '-1'
+  });
+};
+
 $(function() {
 
 
@@ -12,7 +19,10 @@ $(function() {
     prevText: '',
     nextSelector: $('.slider-button.next'),
     prevSelector: $('.slider-button.prev'),
-    speed: 800
+    speed: 800,
+    onSliderLoad: function() {
+      $('.slider-button a').attr('tabindex', '-1');
+    }
   });
 
 

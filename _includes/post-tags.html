@@ -1,7 +1,7 @@
 {% if page.tags.size > 0 %}
-  <div class="post-tags">
+  <div class="post-tags" aria-hidden="true">
     {% for tag in page.tags %}
-      <span>
+      <span aria-hidden="true" tabindex="-1">
         {{tag}}
         {% unless forloop.length == forloop.index %}, {% endunless %}
       </span>

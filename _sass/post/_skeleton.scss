@@ -74,19 +74,24 @@ $height-half: 240px;
       }
     }
 
-    .collaborators .collaborator {
-      margin-top: 10px;
+    .collaborators {
+      @include clearfix;
 
-      a {
-        display: inline-block;
-      }
-
-      &:first-child {
-        margin-top: 0;
-      }
-
-      img {
+      .collaborator {
         display: block;
+        margin-top: 10px;
+  
+        a {
+          display: inline-block;
+        }
+  
+        &:first-child {
+          margin-top: 0;
+        }
+  
+        img {
+          display: block;
+        }
       }
     }
   }

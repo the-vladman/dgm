@@ -1,13 +1,13 @@
-<div class="categories-stories">
+<section class="categories-stories">
   <div class="main-container">
     <div class="cols-12">
       <div class="col col-12">
         <div class="col-inner">
-          <ul class="categories-list">
+          <ul class="categories-list" role="presentation" aria-hidden="true">
             {% assign stories_categories = site.pages | where: 'stories_category', true | sort: 'order' %}
             {% for category_page in stories_categories %}
               <li>
-                <a href="{{ site.baseurl | append: category_page.url }}" class="category-inner {{ category_page.category_info.name }}{% if page.active == category_page.category_info.name %} active{% endif %}">{{ category_page.category_info.title }}</a>  
+                <a href="{{ site.baseurl | append: category_page.url }}" class="category-inner {{ category_page.category_info.name }}{% if page.active == category_page.category_info.name %} active{% endif %}" aria-hidden="true" tabindex="-1">{{ category_page.category_info.title }}</a>  
               </li>
             {% endfor %}
           </ul>
@@ -15,4 +15,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>

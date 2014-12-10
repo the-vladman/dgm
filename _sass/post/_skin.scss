@@ -62,12 +62,16 @@
       }
     }
 
-    .collaborators .collaborator a {
-      @include transition (all .1s ease-in-out);
-      @include transform-origin(center center);
+    .collaborators {
+      list-style: none;
 
-      &:hover {
-        @include transform(scale(1.05, 1.05));
+     .collaborator a {
+        @include transition (all .1s ease-in-out);
+        @include transform-origin(center center);
+  
+        &:hover {
+          @include transform(scale(1.05, 1.05));
+        }
       }
     }
   }
