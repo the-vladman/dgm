@@ -6,15 +6,33 @@
   .slide-card-box {
     background: $white-color;
 
+    > a:hover {
+      background: $base-color;
+
+      .complement-tagline {
+        color: tint($base-color, 80%);
+      }
+
+      .post-link {
+        color: $white-color;
+      }
+
+      .post-read-more {
+        color: tint($base-color, 80%);
+      }
+    }
+
     .complement-tagline {
       font-size: 15px;
       font-weight: 500;
+      color: $gray-color;
     }
 
     .post-link {
       font-size: 23px;
       line-height: 32px;
       font-weight: 600;
+      color: $base-color;
     }
 
     .post-read-more {

@@ -7,10 +7,14 @@
   }
 
   .slide-card-box {
-    padding: 25px;
-    height: 180px;
     margin: 80px 0;
     position: relative;
+
+    > a {
+      height: 180px;
+      display: block;
+      padding: 25px;
+    }
 
     .complement-tagline {
       display: inline-block;
