@@ -15,9 +15,10 @@
   <meta content="website" property="og:type">
 {% endif %}
 
-{% if page.description %}
-  <meta content="{{ page.description }}" property="og:description">
-  <meta name="twitter:description" content="{{ page.description }}" />
+
+{% if page.social_msgs %}
+  <meta content="{{ page.social_msgs.facebook }}" property="og:description">
+  <meta name="twitter:description" content="{{ page.social_msgs.twitter }}" />
 {% else %}
   <meta content="{{ site.description }}" property="og:description">
   <meta name="twitter:description" content="{{ site.description }}" />
