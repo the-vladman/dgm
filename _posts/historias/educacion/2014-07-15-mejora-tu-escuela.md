@@ -1,9 +1,13 @@
 ---
 layout:   post
 title:    "MejoraTuEscuela.org"
-
 tagline:  "Mejorar nuestras escuelas" 
 author:   "Ariadna Camargo y Alexandra Zapata | IMCO | Omidyar Network"
+
+social_msgs:
+  facebook: "Mejora tu Escuela invita a padres de familia a transformar la educación en México."
+  twitter: "#MejoraTuEscuela invita a padres de familia a transformar la #educación en México. @imcomx"
+
 date:     2014-07-15
 cover:    "historias/mejora-tu-escuela/mejora-screenshot.png"
 cover_photo: "historias/mejora-tu-escuela/Screen-Shot-2014-07-15-at-12.51.37-PM-1214x400.png"
