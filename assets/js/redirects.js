@@ -12,6 +12,10 @@ function pathExist(name) {
 
 var list = [
       {
+        name: 'san-luis-potosi',
+        url: 'http://catalogo.datos.gob.mx/organization/ayuntamiento-de-san-luis-potosi/'
+      },
+      {
         name: 'xalapa',
         url: 'http://catalogo.datos.gob.mx/organization/ayuntamiento-de-xalapa/'
       },
