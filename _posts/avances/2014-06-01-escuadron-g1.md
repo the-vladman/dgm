@@ -1,4 +1,5 @@
 ---
+published: true
 layout: "post-progress"
 title: 'La primera generación del escuadrón de datos'
 excerpt: "Después de más de 60 reuniones, 700km recorridos, 100 tazas de café, logramos liberar los primeros 100 conjuntos de datos de esta iniciativa."
@@ -12,7 +13,6 @@ category_title: Política
 tags: 
   - escuadron de datos 
   - datos abiertos
-published: true
 ---
 
 A las 8 de la mañana de un viernes de Mayo, la estación “Centro Médico” de la línea 3 del Metro de la Ciudad de México estaba a reventar como de costumbre. Lo que no fue usual fue al momento de pelear entrada a los vagones, cuando en espera de mi siguiente intento me tocan al hombro y preguntan “¿Rodolfo?, ¿del escuadrón de datos no?”; en el tramo de un par de estaciones rumbo a una reunión con cierta secretaría, me platicarían del impresionante potencial de utilizar datos abiertos para mejorar la industria de la caña de azúcar y su impacto en el país.

@@ -25,7 +25,7 @@ category_info:
       <div class="col col-10">
         <div class="col-inner">
           <div class="progress-posts-list" role="list" aria-label="Avances">
-            {% assign stories = site.posts | where: 'section', 'avances' %}
+            {% assign stories = site.posts | where: 'section', 'avances' | where: 'published', true %}
             {% for post in stories %}
               {% include progress-post.html post=post %}
             {% endfor %}

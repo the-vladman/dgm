@@ -1,4 +1,5 @@
 ---
+published: true
 layout: "post-progress"
 title: 'LabConDatos: Laboratorio de visualización en ConDatos | MX 2014'
 excerpt: "La Presidencia de la República, Data4 y APPlícate convocaron a siete programadores, siete diseñadores y siete analistas de datos que analizaron y generaron visualizaciones interactivas con Datos Abiertos."
@@ -13,7 +14,6 @@ tags:
   - datos abiertos
   - visualización
   - ConDatos
-published: true
 ---
 
 Dentro del marco de [ConDatos](http://condatos.org/ "Title"), la Segunda Conferencia Regional de Datos Abiertos en América Latina y el Caribe (1 y 2 de octubre), la Presidencia de la República, Data4 y APPlícate convocaron a siete programadores, siete diseñadores y siete analistas de datos que, bajo el liderazgo de un mentor, analizaron y generaron visualizaciones interactivas sobre una de siete bases de datos que el Gobierno Federal hizo públicas este año en datos.gob.mx.

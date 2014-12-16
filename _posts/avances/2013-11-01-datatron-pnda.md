@@ -1,4 +1,5 @@
 ---
+published: true
 layout: "post-progress"
 title: 'Datatrón e Iniciativa de Datos Abiertos'
 excerpt: "La Iniciativa de Datos Abiertos es un plan de acción amplio e integral, para crear un ecosistema de innovación, participación ciudadana y desarrollo mediante los Datos Abiertos. Como uno de los primeros pasos para identificar las necesidades e intereses de datos de la ciudadanía, la oficina de Presidencia lanzó un Datatrón."
@@ -12,7 +13,6 @@ category_title: Politica
 tags: 
   - datatron
   - datos abiertos
-published: true
 ---
 
 La Iniciativa de Datos Abiertos es un plan de acción amplio e integral, para crear un ecosistema de innovación, participación ciudadana y desarrollo mediante los Datos Abiertos. Esta iniciativa forma parte de los compromisos de México en la Alianza para el Gobierno Abierto; seguir los principios de gobierno abierto significa promover la participación ciudadana, impulsar la transparencia y utilizar la tecnología para generar soluciones.

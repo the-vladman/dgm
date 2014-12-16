@@ -1,4 +1,5 @@
 ---
+published: true
 layout: "post-progress"
 title: 'Datatón para el Desarrollo: Campus Party 2014'
 excerpt: "Datatón para el desarrollo fue la oportunidad para que la ciudadanía utilizara datos abiertos e información del sector privado para colaborar en el proceso de elaboración y evaluación de políticas públicas."
@@ -14,7 +15,6 @@ tags:
   - datos abiertos
   - campus party
   - zapopan
-published: true
 ---
 
 #### Datatón: espacio de participación ciudadana
