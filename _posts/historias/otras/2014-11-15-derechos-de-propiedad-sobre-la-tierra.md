@@ -1,4 +1,5 @@
 ---
+published: true
 layout:   post
 title:    "Derechos de propiedad sobre la tierra"
 tagline:  "Mejorando la ubicación de la fuerza laboral rural en México"

@@ -1,4 +1,5 @@
 ---
+published: true
 layout: post
 title: Datos Abiertos para combatir la pobreza en México
 excerpt: "Los datos que forman parte del mapa Pobreza y rezago social en México permiten saber qué ha sucedido en el país en términos de pobreza. el CONEVAL ofrece estos datos para impulsar la transparencia en sus procesos de medición de la pobreza y de evaluación de políticas y programas de desarrollo social."
@@ -25,7 +26,6 @@ tags:
   - visualizacion de datos 
   - interpretacion de datos 
   - pobreza
-published: false
 ---
 
 Los datos que forman parte del mapa [Pobreza y rezago social en México](http://datos.gob.mx/herramientas/coneval.html) permiten saber qué ha sucedido en el país en términos de pobreza, qué carencias sociales fueron las responsables del incremento de la pobreza (o de la reducción de la pobreza extrema), y qué entidades federativas tuvieron mayores avances y mayores problemas en el combate a la pobreza.

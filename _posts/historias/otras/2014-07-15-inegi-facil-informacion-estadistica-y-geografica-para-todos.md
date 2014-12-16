@@ -1,4 +1,5 @@
 ---
+published: true
 layout:   post
 title:    "INEGI Fácil: información estadística y geográfica para todos"
 

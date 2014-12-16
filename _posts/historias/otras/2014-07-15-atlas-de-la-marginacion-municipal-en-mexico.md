@@ -1,4 +1,5 @@
 ---
+published: true
 layout:   post
 title:    "Atlas de la Marginación Municipal en México"
 

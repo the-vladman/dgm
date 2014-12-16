@@ -1,4 +1,5 @@
 ---
+published: true
 layout:   post
 title:    "Prediciendo delitos en tiempo real con Twitter y Google en Zapopan, Jalisco"
 tagline:  "Sistema que analiza el stream de Twitter en tiempo real para encontrar sucesos clave y brindar información relevante utilizando un sistema de Google"
@@ -24,7 +25,6 @@ category_title: Otro
 tags:
 - Datatón
 redirect_from: /prediciendo/
-published: false
 ---
 
 Buscamos caracterizar la distribución de delitos en el municipio de Zapopan creando un sistema que pudiera analizar el stream de Twitter en tiempo real para encontrar sucesos clave y brindar información relevante utilizando un sistema de Google.

@@ -1,4 +1,5 @@
 ---
+published: true
 layout:   post
 title:    "Relación entre los homicidios en la frontera de México y la producción de armas en EE.UU."
 

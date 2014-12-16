@@ -1,4 +1,5 @@
 ---
+published: true
 layout:   post
 title:    "Zapopan como sistema complejo"
 tagline:  "Predicción y análisis espacial de crimen"

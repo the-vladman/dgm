@@ -1,4 +1,5 @@
 ---
+published: true
 layout:   post
 title:    "Mortalidad materna y salud en México"
 

@@ -1,4 +1,5 @@
 ---
+published: true
 layout:   post
 title:    "Ramo 23: Conoce cómo se gastan las provisiones salariales y económicas de México"
 
