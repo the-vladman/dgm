@@ -3,10 +3,11 @@ layout: default
 title: datos.gob.mx
 ---
 
+{% assign all_stories = site.posts | where:'section', 'historias' | where: 'published', true %}
+
 <section class="slider-wrapper">
   <div class="slider">
-    {% assign featured_stories = site.posts | where:'section', 'historias' | where: 'featured', true %}
-    {% for post in featured_stories | limi: 4 %}
+    {% for post in all_stories | where: 'featured', true | limi: 4 %}
       <article class="slide" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover_photo }}');">
         <div class="main-container">
           <div class="cols-12">
@@ -60,8 +61,7 @@ title: datos.gob.mx
     </div>
   </div>
   <ul class="posts-list" aria-label="Historias recientes con Datos">
-    {% assign stories = site.posts | where:'section', 'historias' | where: 'published', true %}
-    {% for post in stories %}
+    {% for post in all_stories | limit: 6 %}
       <li>
         {% include story-post.html post=post %}
       </li>
