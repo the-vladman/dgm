@@ -19,7 +19,7 @@ category_info:
   {% include stories-categories.html %}  
   
   <ul class="posts-list" aria-label="Historias con Datos">
-    {% assign stories = site.posts | where:'section', 'historias' %}
+    {% assign stories = site.posts | where:'section', 'historias' | where: 'published', true %}
     {% for post in stories %}
       <li>
         {% include story-post.html post=post %}
