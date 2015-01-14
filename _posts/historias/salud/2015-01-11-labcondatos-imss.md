@@ -1,7 +1,7 @@
 ---
 layout:   post
 title:    "LabConDatos: Atención en unidades médicas del IMSS en el 2013."
-tagline:  "El objetivo del proyecto es mostrar la relación que existe entre la presencia de centros de atención del IMSS con el grado de marginación de los municipios cercanos a dichos centros. La herramienta fue presentada en LabConDatos."
+tagline:  "Mostrar la relación entre la presencia de centros del IMSS con el grado de marginación."
 author:   "Mariana Ruiz | Rubén López | Orlando García | José Rodrigo Patiño | Luis Mauricio Torres"
 date:     2015-01-11 13:09:00 -0500
 cover:    "historias/labcondatos-imss/labcondatos-imss_cover_photo-1284x460.jpg"
