@@ -1,7 +1,7 @@
 ---
 layout:   post
 title:    "Datos Abiertos para prevenir la Mortalidad Materna: Recomendaciones"
-tagline:  "Como parte del Data Science for Social Good Fellowship generamos varias recomendaciones a México para reducir la mortalidad materna, sobre todo en la intersección de los servicios de salud y la pobreza."
+tagline:  "Generar recomendaciones para reducir la mortalidad materna."
 author:   "Nick Eng | DSSG"
 date:     2015-01-13 13:09:00 -0500
 cover:    "historias/mortalidad-materna-recomendaciones/mortalidad-materna-recomendaciones_cover_photo-1284x460.jpg"
