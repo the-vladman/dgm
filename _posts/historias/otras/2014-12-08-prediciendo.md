@@ -2,7 +2,7 @@
 published: true
 layout:   post
 title:    "Datos abiertos para predecir delitos en tiempo real"
-tagline:  "Sistema que analiza el stream de Twitter en tiempo real para encontrar sucesos clave y brindar información relevante utilizando un sistema de Google"
+tagline:  "Datos abiertos para predecir delitos en tiempo real."
 author:   "Luis Román García | Omar Trejo"
 date:     2014-12-08 13:09:00 -0500
 cover:    "historias/prediciendo/prediciendo_cover_photo-1284x460.jpg"
