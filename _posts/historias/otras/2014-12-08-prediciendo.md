@@ -1,7 +1,7 @@
 ---
 published: true
 layout:   post
-title:    "Prediciendo delitos en tiempo real con Twitter y Google en Zapopan, Jalisco"
+title:    "Datos abiertos para predecir delitos en tiempo real"
 tagline:  "Sistema que analiza el stream de Twitter en tiempo real para encontrar sucesos clave y brindar información relevante utilizando un sistema de Google"
 author:   "Luis Román García | Omar Trejo"
 date:     2014-12-08 13:09:00 -0500
