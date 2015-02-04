@@ -43,7 +43,88 @@ title: datos.gob.mx
   </div>
 </section>
 
+<section class="main-features">
+  <div class="main-container">
+    <div class="cols-12">
+      <div class="col col-4">
+        <div class="col-inner">
+          <div class="feature">
+            <img src="/assets/svg/icon-stories.svg" alt="">
+            <h4 class="title">CONOCE</h4>
+            <a class="btn btn-green" href="{{ 'historias' | prepend: site.baseurl }}" title="Ir a Historias" aria-label="Ir a Historias">Ir a Historias</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-4">
+        <div class="col-inner">
+          <div class="feature">
+            <img src="/assets/svg/icon-explore.svg" alt="">
+            <h4 class="title">EXPLORA</h4>
+            <a class="btn btn-green" href="http://catalogo.datos.gob.mx/dataset" title="Ir a los datos" aria-label="Ir a los datos">Ir a los datos</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-4">
+        <div class="col-inner">
+          <div class="feature">
+            <img src="/assets/svg/icon-use.svg" alt="">
+            <h4 class="title">UTILIZA</h4>
+            <a class="btn btn-green" href="{{ 'herramientas' | prepend: site.baseurl }}" title="Ir a las herramientas" aria-label="Ir a las herramientas">Ir a las herramientas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% include search-data.html %}
+
+<section class="latests-datasets">
+  <div class="main-container">
+    <div class="cols-12">
+      <div class="col col-12">
+        <div class="col-inner">
+          <header class="datasets-title">
+            <h3>Conjuntos de Datos Recientes y Oportunos</h3>
+          </header>
+        </div>
+      </div>
+    </div>
+    <div class="cols-12">
+      <div class="col col-1"></div>
+      <div class="col col-10">
+        <div class="col-inner">
+          <div class="latests-datasets-list">
+            <a href="#" class="dataset-item">
+              <div class="item-name">
+                <h5>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS</h5>
+              </div>
+              <div class="from">
+                <img src="http://placehold.it/36x36" alt="">
+              </div>
+            </a>
+            <a href="#" class="dataset-item">
+              <div class="item-name">
+                <h5>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS</h5>
+              </div>
+              <div class="from">
+                <img src="http://placehold.it/36x36" alt="">
+              </div>
+            </a>
+            <a href="#" class="dataset-item">
+              <div class="item-name">
+                <h5>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS</h5>
+              </div>
+              <div class="from">
+                <img src="http://placehold.it/36x36" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="stories-content">
   <div class="stories-title">
@@ -52,20 +133,33 @@ title: datos.gob.mx
         <div class="col col-12">
           <div class="col-inner">
             <header>
-              <h2 id="home-stories-title">Historias con Datos</h2>
-              <p id="home-stories-desc">Conoce quiénes ya usan datos abiertos</p>
+              <h3 id="home-stories-title">Historias con datos abiertos</h3>
             </header>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <ul class="posts-list" aria-label="Historias recientes con Datos">
-    {% for post in all_stories | limit: 6 %}
-      <li>
-        {% include story-post.html post=post %}
-      </li>
-    {% endfor %}
-    {% include show-more-stories.html %}
-  </ul>
+
+  <div class="main-container">
+    <div class="cols-12 entities-list-cards" role="list" aria-label="Historias con datos abiertos">
+      {% for post in all_stories | limit: 6 %}
+        <div class="col col-4" role="listitem">
+          <div class="col-inner">
+            <a class="entity-item-card" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+              <div class="entity-cover" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover }}');"></div>
+              <div class="entity-main">
+                <div class="entity-body">
+                  <h5 class="entity-link">{{ post.title }}</h5>
+                  <div class="entity-meta">
+                    <span class="timeago" aria-hidden="true" data-timestamp="{{ post.date }}" data-timestamp-format="normal"></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>

@@ -21,6 +21,10 @@ img + ul {
   margin-top: 25px;
 }
 
+#main-content {
+  outline: none;
+}
+
 .styled, .post-content ul {
   margin: 20px 0;
   padding-left: 45px;
@@ -152,6 +156,12 @@ img + ul {
     padding: 30px 0;
   }
 
+  @include max-screen(640px) {
+    .footer-section {
+      padding-bottom: 20px;
+    }
+  }
+
   .open-knowledge {
     margin-top: 6px;
     float: left;
@@ -186,6 +196,16 @@ img + ul {
         float: none;
         margin: 0 0 15px 0;
       }
+    }
+  }
+
+  .footer-section {
+    & + .footer-section {
+      margin-top: 15px;
+    }
+
+    .open-knowledge-list li {
+      padding-bottom: 15px;
     }
   }
 }
@@ -253,3 +273,25 @@ img + ul {
   left: 0;
 }
 
+// Entities Lists
+.entities-list-cards {
+
+}
+
+.entity-item-card {
+  margin-bottom: 20px;
+  display: block;
+
+  .entity-cover {
+    height: 140px;
+  }
+
+  .entity-main {
+    height: 100px;
+    @include clearfix;
+  }
+
+  .entity-body {
+    padding: 15px;
+  }
+}

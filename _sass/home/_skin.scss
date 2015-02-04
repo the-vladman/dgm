@@ -1,0 +1,46 @@
+.main-features {
+  background-color: $gray-light-background-color;
+
+  .feature {
+    text-align: center;
+  }
+}
+
+.latests-datasets {
+  .datasets-title {
+    text-align: center;
+  }
+
+  .latests-datasets-list {
+    .dataset-item {
+      background-color: $gray-light-background-color;
+
+      &:hover {
+        background-color: $base-color;
+        @include transition(all, .14s, ease);
+
+        .item-name h5 {
+          color: $white-color;
+        }
+      }
+    }
+
+    .item-name {
+      line-height: 60px;
+
+      h5 {
+        @include transition(all, .14s, ease);
+      }
+    }
+
+    .from {
+      background-color: #D7D7D7;
+      text-align: center;
+      line-height: 58px;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+}

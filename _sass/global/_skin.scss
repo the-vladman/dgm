@@ -169,6 +169,28 @@ p {
       text-align: center;
     }
   }
+
+  .footer-section {
+    @include text-size-small;
+
+    .section-links-list, .open-knowledge-list {
+      list-style: none;
+    }
+
+    .footer-section-title {
+      font-weight: 600;
+      color: $white-color;
+    }
+
+    a {
+      color: shade($white-color, 30%);
+      @include transition(color, .15s, ease);
+
+      &:hover {
+        color: $base-color;
+      }
+    }
+  }
 }
 
 .no-bullets {
@@ -231,4 +253,45 @@ p {
   font-size: 18px;
   text-transform: uppercase;
   color: $base-color; 
+}
+
+// Entities Lists
+.entities-list-cards {
+  
+}
+
+.entity-item-card {
+  background-color: #EEEEEE; 
+
+  .entity-cover {
+    @include cover-background;
+  }
+
+  .entity-link {
+    color: $base-color;
+    @include transition(color, .15s, ease);
+    @include text-size-regular;
+  }
+
+  .entity-meta {
+    @include transition(color, .15s, ease);
+    color: $gray-color;
+    @include text-size-small;
+  }
+}
+
+a.entity-item-card {
+  @include transition(background-color, .15s, ease);
+
+  &:hover {
+    background-color: $base-color;
+
+    .entity-link {
+      color: $white-color;
+    }
+
+    .entity-meta {
+      color: tint($base-color, 95%);
+    }
+  }
 }

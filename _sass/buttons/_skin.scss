@@ -3,10 +3,19 @@
   font-size: 14px;
   color: $white-color;
   background: $gray-color;
-  text-transform: uppercase;
   font-weight: 600;
+  line-height: 40px;
 
   &-red {
     background: $education-color;
+  }
+}
+
+.btn-green {
+  background-color: $base-color;
+  color: $text-color;
+
+  &:hover {
+    color: $white-color;
   }
 }

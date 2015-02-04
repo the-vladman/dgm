@@ -1,0 +1,40 @@
+.main-features {
+  padding: 30px 0;
+
+  .feature {
+    padding: 40px 0;
+  }
+
+  .title {
+    margin: 15px 0;
+  }
+}
+
+.latests-datasets {
+  .datasets-title {
+    margin-bottom: 30px;
+  }
+
+  .latests-datasets-list {
+    .dataset-item {
+      margin-bottom: 20px;
+      height: 60px;
+      position: relative;
+      display: block;
+    }
+
+    .item-name {
+      height: 100%;
+      padding: 0 20px;
+    }
+
+    .from {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0px 10px;
+      width: 40px;
+      height: 100%;
+    }
+  }
+}
