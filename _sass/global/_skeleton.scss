@@ -25,12 +25,21 @@ img + ul {
   outline: none;
 }
 
+body {
+  padding-top: 45px;
+}
+
 .styled, .post-content ul {
   margin: 20px 0;
   padding-left: 45px;
 }
 
-.site-header { 
+.site-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 50;
 
   .site-header-top {
     padding: 8px 0 7px 0;
@@ -53,7 +62,7 @@ img + ul {
   .site-brand {
     float: left;
     display: block;
-    padding: 14px 0 10px 0;
+    padding: 7px 0 2px 0;
   }
 
   .open-data-header-poster {
@@ -114,7 +123,7 @@ img + ul {
       float: left;
       
       a {
-        padding: 17px 16px 16px 16px;
+        padding: 14px 16px 14px 16px;
         display: block;
       }
     }
@@ -282,13 +291,33 @@ img + ul {
   margin-bottom: 20px;
   display: block;
 
+  &.lg .entity-cover {
+    height: 250px;
+  }
+
+  &.show-category {
+    .entity-body {
+      padding-left: 50px;
+    }
+  }
+
   .entity-cover {
     height: 140px;
   }
 
+  .entity-author {
+    @include ellipsis(95%);
+    display: block;
+  }
+
   .entity-main {
-    height: 100px;
     @include clearfix;
+  }
+
+  .entity-category {
+    float: left;
+    width: 50px;
+    padding-top: 20px;
   }
 
   .entity-body {

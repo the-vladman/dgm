@@ -1,0 +1,19 @@
+<a class="entity-item-card {{ include.size }} {% if include.showCategory %}show-category{% endif %}" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+  <div class="entity-cover" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover }}');"></div>
+  <div class="entity-main">
+    {% if include.showCategory %}
+      <div class="entity-category">
+        <img src="/assets/svg/icon-{{ post.category }}.svg" alt="">
+      </div>
+    {% endif %}
+    <div class="entity-body">
+      <h5 class="entity-link">{{ post.title }}</h5>
+      {% if post.author != empty and include.showAuthor %}
+        <div aria-hidden="true" class="entity-author">{{ post.author }}</div>
+      {% endif %}
+      <div class="entity-meta">
+        <span class="timeago" aria-hidden="true" data-timestamp="{{ post.date }}" data-timestamp-format="normal"></span>
+      </div>
+    </div>
+  </div>
+</a>

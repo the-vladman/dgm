@@ -146,17 +146,7 @@ title: datos.gob.mx
       {% for post in all_stories | limit: 6 %}
         <div class="col col-4" role="listitem">
           <div class="col-inner">
-            <a class="entity-item-card" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
-              <div class="entity-cover" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover }}');"></div>
-              <div class="entity-main">
-                <div class="entity-body">
-                  <h5 class="entity-link">{{ post.title }}</h5>
-                  <div class="entity-meta">
-                    <span class="timeago" aria-hidden="true" data-timestamp="{{ post.date }}" data-timestamp-format="normal"></span>
-                  </div>
-                </div>
-              </div>
-            </a>
+            {% include entity-card.html post=post showAuthor=false showCategory=false %}
           </div>
         </div>
       {% endfor %}
