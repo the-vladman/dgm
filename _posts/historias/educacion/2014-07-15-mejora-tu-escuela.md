@@ -2,7 +2,6 @@
 published: true
 layout:   post
 title:    "MejoraTuEscuela.org"
-
 tagline:  "Mejorar nuestras escuelas" 
 author:   "Ariadna Camargo y Alexandra Zapata | IMCO | Omidyar Network"
 date:     2014-07-15

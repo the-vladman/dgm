@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Herramientas
-permalink: /herramientas/
-weight: 1
-showInNavbar: true
-active: all
+title: Geografia · Herramientas
+permalink: /herramientas/geografia/
+
+active: geografia
 tools_category: true
+order: 3
 category_info:
-  name: all
-  title: Todas
+  name: geografia
+  title: Geografia
 ---
 
 <section class="stories-content">
@@ -22,7 +22,7 @@ category_info:
       <div class="col col-10">
         <div class="col-inner">
           <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
-            {% assign tools = site.posts | where:'section', 'herramientas' %}
+            {% assign tools = site.posts | where:'section', 'herramientas' | where: 'category', 'geografia' %}
             {% for post in tools %}
               {% if forloop.first %}
                 <div class="col col-12" role="listitem">

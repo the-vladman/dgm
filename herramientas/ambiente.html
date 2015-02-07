@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Herramientas
-permalink: /herramientas/
-weight: 1
-showInNavbar: true
-active: all
+title: Medio Ambiente · Herramientas
+permalink: /herramientas/ambiente/
+
+active: medio_ambiente
 tools_category: true
+order: 5
 category_info:
-  name: all
-  title: Todas
+  name: medio_ambiente
+  title: Ambiente
 ---
 
 <section class="stories-content">
@@ -22,7 +22,7 @@ category_info:
       <div class="col col-10">
         <div class="col-inner">
           <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
-            {% assign tools = site.posts | where:'section', 'herramientas' %}
+            {% assign tools = site.posts | where:'section', 'herramientas' | where: 'category', 'medio_ambiente' %}
             {% for post in tools %}
               {% if forloop.first %}
                 <div class="col col-12" role="listitem">

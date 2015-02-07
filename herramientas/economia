@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Herramientas
-permalink: /herramientas/
-weight: 1
-showInNavbar: true
-active: all
+title: Economia · Herramientas
+permalink: /herramientas/economia/
+
+active: economia
 tools_category: true
+order: 7
 category_info:
-  name: all
-  title: Todas
+  name: economia
+  title: Economia
 ---
 
 <section class="stories-content">
@@ -21,19 +21,19 @@ category_info:
       </div>
       <div class="col col-10">
         <div class="col-inner">
-          <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
-            {% assign tools = site.posts | where:'section', 'herramientas' %}
+          <div class="entities-list-cards" role="list" aria-label="Historias en medio ambiente con datos abiertos">
+            {% assign tools = site.posts | where:'section', 'herramientas' | where: 'category', 'economia' %}
             {% for post in tools %}
               {% if forloop.first %}
                 <div class="col col-12" role="listitem">
                   <div class="col-inner">
-                    {% include entity-card.html post=post size="lg" showAuthor=false showCategory=true %}
+                    {% include entity-card.html post=post size="lg" showAuthor=true showCategory=true %}
                   </div>
                 </div>
               {% else %}
                 <div class="col col-6" role="listitem">
                   <div class="col-inner">
-                    {% include entity-card.html post=post showAuthor=false showCategory=true %}
+                    {% include entity-card.html post=post showAuthor=true showCategory=true %}
                   </div>
                 </div>
               {% endif %}
