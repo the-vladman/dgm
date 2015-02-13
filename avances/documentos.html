@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Eventos
-permalink: /avances/eventos/
-active: eventos
+title: Documentos
+permalink: /avances/documentos/
+
+active: documentos
 progress_category: true
-order: 2
+order: 6
 category_info:
-  name: eventos
-  title: Eventos
+  name: documentos
+  title: Documentos
 ---
 
 <section class="progress">
@@ -21,7 +22,7 @@ category_info:
       <div class="col col-10">
         <div class="col-inner">
           <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
-            {% assign progress_posts = site.posts | where: 'section', 'avances' | where: 'published', true | where: 'category', 'eventos' %}
+            {% assign progress_posts = site.posts | where: 'section', 'avances' | where: 'published', true | where: 'category', 'documentos' %}
             {% for post in progress_posts %}
               {% if forloop.first %}
                 <div class="col col-12" role="listitem">

@@ -8,7 +8,7 @@ cover: "avances/labcondatos/labcondatos-cover.jpg"
 cover_photo: "avances/labcondatos/labcondatos-cover_photo.jpg"
 permalink: "/avances/labcondatos.html"
 section: avances
-category: evento
+category: eventos
 category_title: Eventos
 tags: 
   - datos abiertos
