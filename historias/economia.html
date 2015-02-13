@@ -1,17 +1,16 @@
 ---
 layout: default
 body_class: stories
-title: Otras · Historias
-permalink: /historias/otras/
+title: Economia · Historias
+permalink: /historias/economia/
 
-active: otras
+active: economia
 stories_category: true
-order: 8
+order: 7
 category_info:
-  name: otras
-  title: Otras
+  name: economia
+  title: Economia
 ---
-
 <section class="stories-content">
   <div class="main-container">
     <div class="cols-12">
@@ -22,8 +21,8 @@ category_info:
       </div>
       <div class="col col-10">
         <div class="col-inner">
-          <div class="entities-list-cards" role="list" aria-label="Otras historias con datos abiertos">
-            {% assign stories = site.posts | where:'section', 'historias' | where: 'category', 'otras' %}
+          <div class="entities-list-cards" role="list" aria-label="Historias de educación con datos abiertos">
+            {% assign stories = site.posts | where:'section', 'historias' | where: 'category', 'economia' %}
             {% for post in stories %}
               {% if forloop.first %}
                 <div class="col col-12" role="listitem">
