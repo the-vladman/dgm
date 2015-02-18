@@ -267,6 +267,7 @@ p {
 
   .entity-cover {
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .045);
+    background-color: #FCFCFC;
     @include cover-background;
   }
 

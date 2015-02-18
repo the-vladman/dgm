@@ -7,6 +7,14 @@
   -o-background-size: cover;
 }
 
+@mixin contain-background () {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+}
+
 // Text Sizing
 @mixin text-size-x-small () {
   font-size: 11px;
@@ -20,12 +28,12 @@
 
 @mixin text-size-regular () {
   font-size: 14px;
-  line-height: 21px;
+  line-height: 24px;
 }
 
 @mixin text-size-medium () {
   font-size: 16px;
-  line-height: 26px;
+  line-height: 27px;
 }
 
 @mixin text-size-large () {
