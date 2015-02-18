@@ -1,15 +1,14 @@
 ---
 layout: default
-title: Apps
-permalink: /apps/
-weight: 1
-showInNavbar: true
+title: Movil Apps
+permalink: /apps/movil/
+weight: 2
 
-active: all
+active: movil
 apps_category: true
 category_info:
-  name: all
-  title: Todas
+  name: movil
+  title: Movil
 --- 
 
 <section class="apps">
@@ -23,7 +22,7 @@ category_info:
       <div class="col col-10">
         <div class="col-inner">
           <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
-            {% assign apps_posts = site.posts | where: 'section', 'apps' | where: 'published', true %}
+            {% assign apps_posts = site.posts | where: 'section', 'apps' | where: 'published', true | where: 'category', 'movil' %}
             {% for post in apps_posts %}
               {% if forloop.first %}
                 <div class="col col-12" role="listitem">
