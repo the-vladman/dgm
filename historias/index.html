@@ -24,7 +24,6 @@ category_info:
       </div>
       <div class="col col-10">
         <div class="col-inner">
-          <h1>Hello, Maggie</h1>
           <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
             {% assign stories = site.posts | where:'section', 'historias' | where: 'published', true %}
             {% for post in stories %}
