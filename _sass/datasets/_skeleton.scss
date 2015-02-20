@@ -148,22 +148,51 @@
   }
 }
 
-.single-organization {
-  .organization-detail-card {
-    .organization-logo {
-      height: 0px;
-      overflow: hidden;
-      padding-bottom: 100%;
+.single-organization {}
 
-      img {
-        max-width: 75%;
-        margin-top: 50%;
-        @include transform(translateY(-50%));
-      }
+.organization-detail-card {
+  .organization-logo {
+    height: 0px;
+    overflow: hidden;
+    padding-bottom: 100%;
+
+    img {
+      max-width: 75%;
+      margin-top: 50%;
+      @include transform(translateY(-50%));
+    }
+  }
+
+  .organization-desc {
+    margin-top: 20px;
+  }
+}
+
+// Detalle de un dataset
+.dataset-detail {
+  margin-top: 30px;
+
+  .dataset-detail-excerpt {
+    padding: 20px;
+  }
+
+  .dataset-resources-title {
+    margin: 10px 20px;
+  }
+}
+
+.dataset-resources-list {
+  .resource-item {
+    display: block;
+    margin-top: 20px;
+
+    &:first-child { 
+      margin-top: 0;
     }
 
-    .organization-desc {
-      margin-top: 20px;
+    .resource-main {
+      padding: 20px;
+      margin-right: 160px;
     }
   }
 }

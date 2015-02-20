@@ -60,7 +60,7 @@
     }
     
     .dataset-main {
-      background-color: #EEEEEE;
+      background-color: $gray-light-background-color;
     }
 
     .title {
@@ -113,24 +113,48 @@
   .organization-item {
     a {
       text-align: center;
-      background-color: #EEEEEE;
+      background-color: $gray-light-background-color;
 
       &:hover {
-        background-color: darken(#EEEEEE, 5%);
+        background-color: darken($gray-light-background-color, 5%);
       }
     }
   }
 }
 
-.single-organization {
-  .organization-detail-card {
-    .organization-logo {
-      background-color: #EEEEEE;
-      text-align: center;
-    }
+.single-organization {}
 
-    .organization-desc p {
-      @include text-size-small;
+.organization-detail-card {
+  .organization-logo {
+    background-color: $gray-light-background-color;
+    text-align: center;
+  }
+
+  .organization-desc p {
+    @include text-size-small;
+  }
+}
+
+// Detalle de un dataset
+.dataset-detail {
+  margin-top: 30px;
+
+  .dataset-detail-excerpt {
+    background-color: $gray-light-background-color;
+  }
+}
+
+.dataset-resources-list {
+  .resource-item {
+    background-color: #D7D7D7;   
+
+    .resource-main {
+      word-break: break-word;
+      background-color: $gray-light-background-color;
+
+      p {
+        @include text-size-small;
+      }
     }
   }
 }
