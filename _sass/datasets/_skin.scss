@@ -93,16 +93,16 @@
   text-transform: uppercase;
   font-size: 13px;
   
-  &.csv {
+  &.csv, &.CSV {
     background-color: #FFD100;
   }
 
-  &.kml, &.kmz {
+  &.kml, &.KML, &.kmz, &.KMZ {
     background-color: #474747;
   }
 }
 
-.organizations-alphabet-filter {
+.alphabet-filter {
   > a {
     color: $gray-color;
     font-size: 18px;
