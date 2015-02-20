@@ -30,11 +30,11 @@
       }
     }
 
-    &.alpha .col-inner {
+    &.alpha > .col-inner {
       padding-left: 0;
     }
 
-    &.omega .col-inner {
+    &.omega > .col-inner {
       padding-right: 0;
     }
 

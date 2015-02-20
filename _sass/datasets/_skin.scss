@@ -49,6 +49,18 @@
   }
 }
 
+.context-filters {
+  .search {
+    input {
+      font-size: 14px;
+      color: #909090;
+      border: 0;
+      line-height: 18px;
+      background-color: $gray-light-background-color;
+    }
+  }
+}
+
 .datasets-list {
   .dataset-item {
     background-color: #D7D7D7;
