@@ -1,0 +1,12 @@
+.form-select {
+  select {
+    @include appearance(none);
+    font-size: 14px;
+    color: #909090;
+    border: 0;
+    line-height: 18px;
+    border-radius: 0;
+    cursor: pointer;
+    background-color: $white-color;
+  }
+}

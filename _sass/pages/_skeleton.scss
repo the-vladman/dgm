@@ -29,6 +29,12 @@
     list-style: none;
     margin-bottom: 15px;
 
+    &.links {
+      li {
+        padding-bottom: 5px;
+      }
+    }
+
     .cat-icon {
       width: 18px;
       height: 18px;

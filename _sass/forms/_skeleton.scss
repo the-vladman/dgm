@@ -1,0 +1,20 @@
+.form-select {
+  height: 35px;
+
+  select {
+    height: 35px;
+    display: block;
+    width: 100%;
+    padding: 0px 10px;
+  } 
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    pointer-events: none;
+    @include triangle(10px, #D8D8D8, down);
+  }
+}
