@@ -30,6 +30,10 @@ var list = [
       {
         name: 'guia',
         url: 'http://mxabierto.github.io/guia/'
+      },
+      {
+        name: 'catalogo',
+        url: 'http://mxabierto.github.io/ng-ckan/'
       }
     ],
     dependency  = pathExist( window.location.pathname );
