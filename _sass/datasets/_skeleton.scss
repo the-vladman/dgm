@@ -113,3 +113,38 @@
   width: 30px;
   padding: 2px 5px;
 }
+
+.organizations-alphabet-filter {
+  margin-top: 30px; 
+
+  > a {
+    margin-right: 10px;
+  }
+}
+
+.organizations-list {
+  @include clearfix;
+
+  .organization-item {
+    width: (100/5) * 1%;
+    float: left;
+
+    .inner {
+      padding: 10px;
+    }
+
+    a {
+      display: block;
+      height: 0px;
+      overflow: hidden;
+      padding-bottom: 100%;
+    }
+
+    img {
+      max-width: 75%;
+      height: 60px;
+      margin-top: 50%;
+      @include transform(translateY(-50%));
+    }
+  }
+}

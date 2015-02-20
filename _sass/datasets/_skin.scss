@@ -96,3 +96,24 @@
     background-color: #474747;
   }
 }
+
+.organizations-alphabet-filter {
+  > a {
+    color: $gray-color;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.organizations-list {
+  .organization-item {
+    a {
+      text-align: center;
+      background-color: #EEEEEE;
+
+      &:hover {
+        background-color: darken(#EEEEEE, 5%);
+      }
+    }
+  }
+}
