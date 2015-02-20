@@ -77,15 +77,38 @@
 .datasets-list {
   .dataset-item {
     margin-top: 20px;
-    min-height: 150px;
+    min-height: 110px;
+    position: relative;
 
     &:first-child {
       margin-top: 0;
     }
 
+    .dataset-trending-flag { 
+      position: absolute;
+      right: 19px;
+      top: 10px;
+    }
+
+    .dataset-formats {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+
     .dataset-main {
       padding: 20px;
-      min-height: 150px;
+      min-height: 110px;
+      margin-right: 60px;
+    }
+
+    .dataset-meta-data {
+      margin-top: 5px;
     }
   }
+}
+
+.dataset-format {
+  width: 30px;
+  padding: 2px 5px;
 }

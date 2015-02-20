@@ -75,3 +75,17 @@
     }
   }
 }
+
+.dataset-format {
+  color: $white-color;
+  text-align: center;
+  font-size: 13px;
+  
+  &.csv {
+    background-color: #FFD100;
+  }
+
+  &.kml {
+    background-color: #474747;
+  }
+}
