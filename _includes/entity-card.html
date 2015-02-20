@@ -3,7 +3,7 @@
   <div class="entity-main">
     {% if include.showCategory %}
       <div class="entity-category">
-        <img src="/assets/svg/icon-{{ post.category }}.svg" alt="">
+        <img src="/assets/svg/icon-{{ post.category | downcase }}.svg" alt="">
       </div>
     {% endif %}
     <div class="entity-body">

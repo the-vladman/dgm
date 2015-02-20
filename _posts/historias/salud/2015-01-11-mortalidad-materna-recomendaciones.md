@@ -21,7 +21,7 @@ collaborators:
   - secretaria_salud
 
 section:  historias
-category: Salud
+category: salud
 category_title: Salud
 tags:
 - salud
