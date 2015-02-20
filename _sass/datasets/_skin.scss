@@ -90,13 +90,14 @@
 .dataset-format {
   color: $white-color;
   text-align: center;
+  text-transform: uppercase;
   font-size: 13px;
   
   &.csv {
     background-color: #FFD100;
   }
 
-  &.kml {
+  &.kml, &.kmz {
     background-color: #474747;
   }
 }

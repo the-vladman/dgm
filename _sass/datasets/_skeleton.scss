@@ -112,6 +112,7 @@
 .dataset-format {
   width: 30px;
   padding: 2px 5px;
+  height: 20px;
 }
 
 .organizations-alphabet-filter {
@@ -185,9 +186,26 @@
   .resource-item {
     display: block;
     margin-top: 20px;
+    position: relative;
 
     &:first-child { 
       margin-top: 0;
+    }
+
+    .resource-download {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      width: 35px;
+      height: 35px;
+      margin-top: -17px;
+    }
+    
+    .resourse-format {
+      position: absolute;
+      right: 95px;
+      top: 50%;
+      margin-top: -10px;
     }
 
     .resource-main {
