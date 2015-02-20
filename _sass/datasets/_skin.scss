@@ -1,6 +1,14 @@
 .datasets-navbar {
-  .datasets-home {
-    float: left;
+  .datasets-breadcrumbs {
+    list-style: none;
+    
+    li {
+      @include text-size-small;
+    }
+
+    .divider {
+      color: #999999;
+    }
   }
 
   .nav-list {
@@ -39,7 +47,11 @@
 
 .datasets-list {
   .dataset-item {
-    background-color: #EEEEEE;
+    background-color: #D7D7D7;
+    
+    .dataset-main {
+      background-color: #EEEEEE;
+    }
 
     .title {
       font-size: 14px;
