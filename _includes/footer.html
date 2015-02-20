@@ -51,7 +51,7 @@
               {% for category_page in stories_categories %}
                 {% unless category_page.category_info.title  == 'Todas' %}
                 <li>
-                  <a href="{{ site.baseurl | append: category_page.url }}" class="category-inner {{ category_page.category_info.name }}{% if page.active == category_page.category_info.name %} active{% endif %}" aria-hidden="true" tabindex="-1">{{ category_page.category_info.title }}</a>  
+                  <a href="{{ site.baseurl | append: category_page.url }}" aria-hidden="true" tabindex="-1">{{ category_page.category_info.title }}</a>  
                 </li>
                 {% endunless %}
               {% endfor %}  
@@ -61,18 +61,24 @@
       </div>
       <div class="col col-2">
         <div class="col-inner">
+          {% assign apps_categories = site.pages | where: 'apps_category', true | sort: 'order' %}
           <div class="footer-section">
             <a href="/apps/" class="footer-section-title">Apps</a>
             <ul class="section-links-list">
-              <li><a href="/apps/moviles">Móviles</a></li>
-              <li><a href="/apps/web">Web</a></li>
+              {% for apps_category in apps_categories %}
+                {% unless apps_category.category_info.title  == 'Todas' %}
+                <li>
+                  <a href="{{ site.baseurl | append: apps_category.url }}" aria-hidden="true" tabindex="-1">{{ apps_category.category_info.title }}</a>  
+                </li>
+                {% endunless %}
+              {% endfor %}  
             </ul>
           </div>
           <div class="footer-section">
             <a href="/herramientas/" class="footer-section-title">Herramientas</a>
           </div>
           <div class="footer-section">
-            <a href="#" class="footer-section-title">Foro</a>
+            <a href="http://foro.datos.gob.mx/" class="footer-section-title" target="_blank">Foro</a>
           </div>
         </div>
       </div>
@@ -85,7 +91,7 @@
               {% for category_page in progress_categories %}
                 {% unless category_page.category_info.title == 'Todos' %}
                   <li>
-                    <a href="{{ site.baseurl | append: category_page.url }}" class="category-inner {{ category_page.category_info.name }}{% if page.active == category_page.category_info.name %} active{% endif %}" tabindex="-1">{{ category_page.category_info.title }}</a>  
+                    <a href="{{ site.baseurl | append: category_page.url }}" tabindex="-1">{{ category_page.category_info.title }}</a>  
                   </li>
                 {% endunless %}
               {% endfor %}
