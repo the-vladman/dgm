@@ -48,6 +48,12 @@
 .datasets-list {
   .dataset-item {
     background-color: #D7D7D7;
+
+    &:hover {
+      .title {
+        color: $base-color;
+      }
+    }
     
     .dataset-main {
       background-color: #EEEEEE;
@@ -71,6 +77,7 @@
     }
 
     .dataset-meta-data {
+      color: $gray-color;
       @include text-size-small;
     }
   }
