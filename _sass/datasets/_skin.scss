@@ -27,6 +27,10 @@
 .datasets-heading {
   background-color: $gray-light-background-color;
 
+  .heading-title {
+    color: $gray-color;
+  }
+
   .search-datasets {
     input {
       font-size: 14px;
@@ -114,6 +118,19 @@
       &:hover {
         background-color: darken(#EEEEEE, 5%);
       }
+    }
+  }
+}
+
+.single-organization {
+  .organization-detail-card {
+    .organization-logo {
+      background-color: #EEEEEE;
+      text-align: center;
+    }
+
+    .organization-desc p {
+      @include text-size-small;
     }
   }
 }
