@@ -1,0 +1,115 @@
+.apps {
+  margin: 50px 0;
+}
+
+// Single App Detail
+.app-detail-page {
+  margin-bottom: 60px;
+
+  .app-name {
+    margin-bottom: 15px;
+  }
+
+  .share-section {
+    margin: 30px 0 40px 0;
+
+    h5 {
+      margin-bottom: 5px;
+    }
+  }
+
+  .app-use-buttons {
+    margin-bottom: 30px;
+
+    .store-button {
+      padding: 15px 20px;
+      display: block;
+      margin-top: 15px;
+      @include clearfix;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .icon {
+        margin-right: 15px;
+        width: 30px;
+        float: left;
+        padding-top: 3px;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    .web-button .icon img {
+      margin-top: 6px;
+    }
+  }
+
+  .app-meta-data {
+    .meta-data {
+      margin-top: 25px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      h6 {
+        margin-bottom: 7px;
+      }
+    }
+  }
+
+  .app-datasets-list {
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding-top: 5px;
+
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+.app-screenshots-slider {
+  position: relative;
+  margin-bottom: 40px;
+
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    margin-top: -29px;
+    z-index: 5;
+
+    > a {
+      display: block;
+      width: 45px;
+      height: 70px;
+    }
+
+    &.prev {
+      left: 20px;
+    }
+
+    &.next {
+      right: 20px;
+    }
+  }
+
+  .app-screen-slide {
+    height: 310px;
+  }
+}
+
+.recent-apps {
+  margin-bottom: 20px;
+
+  .recent-apps-title {
+    margin-bottom: 30px;
+  }
+}

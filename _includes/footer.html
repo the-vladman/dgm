@@ -1,11 +1,11 @@
 <footer class="site-footer" role="contentinfo" aria-label="Pie de página del sitio">
   <div class="main-container">
     <div class="cols-12">
-      <div class="col col-12">
+      <div class="col col-3">
         <div class="col-inner">
-          <div class="open-knowledge">
-            <ul aria-label="Enlaces legales" role="navigation"> 
-              <li>
+          <div class="footer-section">
+            <ul class="open-knowledge-list" aria-label="Enlaces legales" role="navigation"> 
+              <li class="footer-libre-">
                 <a href="/libreusomx" title="Libre Uso MX">
                   <i class="i libre-uso-white"></i>
                 </a>
@@ -16,6 +16,23 @@
                 </a>
               </li>
               <li>
+                <a href="https://github.com/mxabierto/dgm" title="Repositorio GitHub" target="_blank">
+                  <img src="/assets/svg/icon-octocat.svg" alt="Github">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col col-3">
+        <div class="col-inner">
+          <div class="footer-section">
+            <a href="http://catalogo.datos.gob.mx/dataset" class="footer-section-title">Datos</a>
+            <ul class="section-links-list">
+              <li><a href="/acerca/">Acerca de</a></li>
+              <li><a href="">ADELA</a></li>
+              <li><a href="">Guía de implementación</a></li>
+              <li>
                 <a class="page-link" href="/terminos-y-condiciones">Términos y condiciones</a>
               </li>
               <li>
@@ -23,18 +40,61 @@
               </li>
             </ul>
           </div>
-          <div class="legal-footer">
-            <ul aria-label="Enlaces oficiales">
-              <li>
-                <a href="http://presidencia.gob.mx/" target="_blank" title="Presidencia de la República">
-                  <i class="i presidencia-gray"></i>
-                </a>
-              </li>
-              <li>
-                <a href="http://mxabierto.tumblr.com/" target="_blank" title="México Abierto">
-                  <i class="i mxabierto-gray"></i>
-                </a>
-              </li>
+        </div>
+      </div>
+      <div class="col col-2">
+        <div class="col-inner">
+          {% assign stories_categories = site.pages | where: 'stories_category', true | sort: 'order' %}
+          <div class="footer-section">
+            <a href="/historias/" class="footer-section-title">Historias</a>
+            <ul class="section-links-list">
+              {% for category_page in stories_categories %}
+                {% unless category_page.category_info.title  == 'Todas' %}
+                <li>
+                  <a href="{{ site.baseurl | append: category_page.url }}" aria-hidden="true" tabindex="-1">{{ category_page.category_info.title }}</a>  
+                </li>
+                {% endunless %}
+              {% endfor %}  
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col col-2">
+        <div class="col-inner">
+          {% assign apps_categories = site.pages | where: 'apps_category', true | sort: 'order' %}
+          <div class="footer-section">
+            <a href="/apps/" class="footer-section-title">Apps</a>
+            <ul class="section-links-list">
+              {% for apps_category in apps_categories %}
+                {% unless apps_category.category_info.title  == 'Todas' %}
+                <li>
+                  <a href="{{ site.baseurl | append: apps_category.url }}" aria-hidden="true" tabindex="-1">{{ apps_category.category_info.title }}</a>  
+                </li>
+                {% endunless %}
+              {% endfor %}  
+            </ul>
+          </div>
+          <div class="footer-section">
+            <a href="/herramientas/" class="footer-section-title">Herramientas</a>
+          </div>
+          <div class="footer-section">
+            <a href="http://foro.datos.gob.mx/" class="footer-section-title" target="_blank">Foro</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-2">
+        <div class="col-inner">
+          <div class="footer-section">
+            <a href="/avances/" class="footer-section-title">Avances</a>
+            {% assign progress_categories = site.pages | where: 'progress_category', true | sort: 'order' %}
+            <ul class="section-links-list">
+              {% for category_page in progress_categories %}
+                {% unless category_page.category_info.title == 'Todos' %}
+                  <li>
+                    <a href="{{ site.baseurl | append: category_page.url }}" tabindex="-1">{{ category_page.category_info.title }}</a>  
+                  </li>
+                {% endunless %}
+              {% endfor %}
             </ul>
           </div>
         </div>

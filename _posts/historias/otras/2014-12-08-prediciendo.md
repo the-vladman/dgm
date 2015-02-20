@@ -20,8 +20,8 @@ datasets:
     url: https://www.dropbox.com/sh/skv5nl9t5mdxr4n/AADqqEU5bx2gTZdMldjdvLfVa
 permalink: /historias/otros/2014-12-08-prediciendo.html
 section:  historias
-category: otros
-category_title: Otro
+category: otras
+category_title: "Otras"
 tags:
 - Datatón
 redirect_from: /prediciendo/

@@ -1,26 +1,27 @@
 ---
 layout: default
-body_class: progress
 title: Consejo Consultivo
 permalink: /avances/consejo-consultivo/
 
 active: consejo
 progress_category: true
-order: 3
+order: 5
 category_info:
   name: consejo
   title: Consejo Consultivo
 ---
 
-{% include page-title.html title=page.title %}
-
-
-
-<div class="{{ page.body_class }}">
+<section class="progress">
   <div class="main-container">
     <div class="cols-12">
+      <div class="col col-2">
+        <div class="col-inner">
+          {% include progress-sidebar.html %}
+        </div>
+      </div>
       <div class="col col-10">
-        <p>En esta sección podrás encontrar los documentos relativos al trabajo y reuniones de este Consejo Consultivo de Datos Abiertos. El Consejo es el mecanismo encargado de cazar la oferta y la demanda de datos abiertos, para crear un ecosistema capaz de crear valor y beneficios para toda la sociedad; tiene como objetivo integrar los esfuerzos gubernamentales con los de la sociedad civil y fortalecer los valores democráticos.</p>
+        <div class="col-inner">
+          <p>En esta sección podrás encontrar los documentos relativos al trabajo y reuniones de este Consejo Consultivo de Datos Abiertos. El Consejo es el mecanismo encargado de cazar la oferta y la demanda de datos abiertos, para crear un ecosistema capaz de crear valor y beneficios para toda la sociedad; tiene como objetivo integrar los esfuerzos gubernamentales con los de la sociedad civil y fortalecer los valores democráticos.</p>
         <p>Este Consejo fue fue establecido como parte del Plan de Acción de México para 2013-2015, de la Alianza para el Gobierno Abierto (AGA), cuenta con una participación multidisciplinaria y plural de la sociedad civil, academia e industria, y tiene como tareas verificar el cumplimiento, hacer recomendaciones, e incentivar la implementación y evaluación de la política de datos abiertos.</p>
         <p>
         <h4>Primeros miembros del Consejo consultivo</h4>
@@ -38,19 +39,27 @@ category_info:
         <p><h4><a href="http://tablero.gobabiertomx.org/files/54385d990c2dd.pdf">Reglas de operación</a></h4></p>
         <p><h4><a href="http://tablero.gobabiertomx.org/files/53ff85b18b465.pdf">Programa de trabajo</a></h4></p>
         <p><h4><a href="https://drive.google.com/file/d/0B6xuFjlJEb0NdGtjMm9xYlEyd1E/view?usp=sharing">Minutas Consejo Consultivo</a></h4></p>
-        <div class="col-inner">
-          <div class="progress-posts-list">{% assign stories = site.posts | where: 'section', 'avances' | where: 'category', 'consejo_consultivo' %}
-            {% for post in stories %}
-              {% include progress-post.html post=post %}
+
+          <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
+            {% assign progress_posts = site.posts | where: 'section', 'avances' | where: 'published', true | where: 'category', 'consejo_consultivo' %}
+            {% for post in progress_posts %}
+              {% if forloop.first %}
+                <div class="col col-12" role="listitem">
+                  <div class="col-inner">
+                    {% include entity-card.html post=post size="lg" showAuthor=false showCategory=true %}
+                  </div>
+                </div>
+              {% else %}
+                <div class="col col-6" role="listitem">
+                  <div class="col-inner">
+                    {% include entity-card.html post=post showAuthor=false showCategory=true %}
+                  </div>
+                </div>
+              {% endif %}
             {% endfor %}
           </div>
         </div>
       </div>
-      <div class="col col-2">
-        <div class="col-inner">
-          {% include progress-nav.html %}
-        </div>
-      </div>
     </div>
   </div>
-</div>
+</section>

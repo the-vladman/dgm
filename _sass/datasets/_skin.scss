@@ -1,0 +1,65 @@
+.datasets-navbar {
+  .datasets-home {
+    float: left;
+  }
+
+  .nav-list {
+    list-style: none;
+
+    li {
+      a {
+        font-size: 14px;
+        color: $gray-color;
+        border-bottom: 6px solid $gray-color;
+      }
+    }
+  }
+}
+
+.datasets-heading {
+  background-color: $gray-light-background-color;
+
+  .search-datasets {
+    input {
+      font-size: 14px;
+      color: #909090;
+      border: 0;
+      line-height: 18px;
+    }
+  }
+
+  .datesets-categories {
+    list-style: none;
+
+    li {
+      
+    }
+  }
+}
+
+.datasets-list {
+  .dataset-item {
+    background-color: #EEEEEE;
+
+    .title {
+      font-size: 14px;
+      text-transform: uppercase;
+
+      a {
+        color: $gray-color;
+
+        &:hover {
+          color: $base-color;
+        }
+      }
+    }
+
+    .dataset-excerpt p {
+      @include text-size-regular;
+    }
+
+    .dataset-meta-data {
+      @include text-size-small;
+    }
+  }
+}

@@ -19,7 +19,7 @@ $(function() {
     prevText: '',
     nextSelector: $('.slider-button.next'),
     prevSelector: $('.slider-button.prev'),
-    speed: 800,
+    speed: 900,
     onSliderLoad: function() {
       $('.slider-button a').attr('tabindex', '-1');
     }

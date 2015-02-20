@@ -1,0 +1,19 @@
+<div class="page-sidebar">
+  <div class="page-info">
+    <a href="/historias" class="page-info-title" tabindex="-1" role="presentation" title="Herramientas">Herramientas</a>
+    <p>Estas herramientas facilitan el uso de los datos abiertos del gobierno y así puedes crear tus propias historias.</p>
+  </div>
+  <ul class="page-filters" role="presentation" aria-hidden="true">
+    <li class="page-filters-title">Filtros</li>
+    {% assign tools_categories = site.pages | where: 'tools_category', true | sort: 'order' %}
+    
+    {% for category_page in tools_categories %}
+      <li>
+        <a href="{{ site.baseurl | append: category_page.url }}" class="category-inner {{ category_page.category_info.name }}{% if page.active == category_page.category_info.name %} active{% endif %}" aria-hidden="true" tabindex="-1">
+          <img class="cat-icon" src="/assets/svg/icon-{{ category_page.category_info.name }}.svg" alt="">
+          {{ category_page.category_info.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

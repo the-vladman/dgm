@@ -1,0 +1,19 @@
+<div class="page-sidebar">
+  <div class="page-info">
+    <a href="/apps" class="page-info-title" tabindex="-1" role="presentation" title="Apps">Apps</a>
+    <p>Aplicaciones móvil, web y herramientas con Datos Abiertos</p>
+  </div>
+  <ul class="page-filters" role="presentation" aria-hidden="true">
+    <li class="page-filters-title">Filtros</li>
+    {% assign apps_categories = site.pages | where: 'apps_category', true | sort: 'order' %}
+    
+    {% for category_page in apps_categories %}
+      <li>
+        <a href="{{ site.baseurl | append: category_page.url }}" class="category-inner {{ category_page.category_info.name }}{% if page.active == category_page.category_info.name %} active{% endif %}" aria-hidden="true" tabindex="-1">
+          <img class="cat-icon" src="/assets/svg/icon-{{ category_page.category_info.name }}.svg" alt="">
+          {{ category_page.category_info.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

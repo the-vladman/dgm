@@ -3,10 +3,24 @@
   font-size: 14px;
   color: $white-color;
   background: $gray-color;
-  text-transform: uppercase;
   font-weight: 600;
+  line-height: 40px;
 
   &-red {
     background: $education-color;
+  }
+}
+
+.btn-sm {
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.btn-green {
+  background-color: $base-color;
+  color: $text-color;
+
+  &:hover {
+    color: $white-color;
   }
 }

@@ -16,3 +16,37 @@
     margin: 20px 0;
   }
 }
+
+
+.page-sidebar {
+  .page-info {
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+
+  .page-filters {
+    display: block;
+    list-style: none;
+    margin-bottom: 15px;
+
+    &.links {
+      li {
+        padding-bottom: 5px;
+      }
+    }
+
+    .cat-icon {
+      width: 18px;
+      height: 18px;
+      margin-right: 5px;
+    }
+
+    li {
+      padding-bottom: 15px;
+
+      a {
+        display: block;
+      }
+    }
+  }
+}

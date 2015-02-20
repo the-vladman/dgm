@@ -22,9 +22,17 @@
 @import "pages/skeleton";
 @import "pages/skin";
 
+// Home
+@import "home/skeleton";
+@import "home/skin";
+
 // Stories Page
 @import "stories/skeleton";
 @import "stories/skin";
+
+// Apps
+@import "apps/skeleton";
+@import "apps/skin";
 
 // Tools Page
 @import "tools/skeleton";
@@ -54,6 +62,14 @@
 @import "post/skeleton";
 @import "post/skin";
 
+// Datasets
+@import "datasets/skeleton";
+@import "datasets/skin";
+
 // Buttons
 @import "buttons/skeleton";
 @import "buttons/skin";
+
+// Forms
+@import "forms/skeleton";
+@import "forms/skin";

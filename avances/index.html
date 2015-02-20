@@ -1,10 +1,8 @@
 ---
 layout: default
-body_class: progress
 title: Avances
-aria_label: Entérate sobre los avances de la iniciativa
 permalink: /avances/
-weight: 3
+weight: 4
 showInNavbar: true
 
 active: all
@@ -17,24 +15,34 @@ category_info:
   title: Todos
 --- 
 
-<section class="{{ page.body_class }}">
-  {% include page-title-icon.html title="Avances" tagline="El ecosistema de datos abiertos en México y el mundo está en constante movimiento. En esta sección encontrarás actualizaciones sobre el desarrollo de nuestra Política de Datos Abiertos, además de noticias, estudios y casos de éxito relacionados." icon="progress-illustration" %} 
-
+<section class="progress">
   <div class="main-container">
     <div class="cols-12">
-      <div class="col col-10">
-        <div class="col-inner">
-          <div class="progress-posts-list" role="list" aria-label="Avances">
-            {% assign stories = site.posts | where: 'section', 'avances' | where: 'published', true %}
-            {% for post in stories %}
-              {% include progress-post.html post=post %}
-            {% endfor %}
-          </div>
-        </div>
-      </div>
       <div class="col col-2">
         <div class="col-inner">
-          {% include progress-nav.html %}
+          {% include progress-sidebar.html %}
+        </div>
+      </div>
+      <div class="col col-10">
+        <div class="col-inner">
+          <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
+            {% assign progress_posts = site.posts | where: 'section', 'avances' | where: 'published', true %}
+            {% for post in progress_posts %}
+              {% if forloop.first %}
+                <div class="col col-12" role="listitem">
+                  <div class="col-inner">
+                    {% include entity-card.html post=post size="lg" showAuthor=false showCategory=true %}
+                  </div>
+                </div>
+              {% else %}
+                <div class="col col-6" role="listitem">
+                  <div class="col-inner">
+                    {% include entity-card.html post=post showAuthor=false showCategory=true %}
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>

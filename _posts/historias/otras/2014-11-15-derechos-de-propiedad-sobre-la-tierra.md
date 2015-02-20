@@ -10,8 +10,8 @@ cover_photo: "historias/derechos-de-propiedad-sobre-la-tierra/derechos-de-propie
 featured: false
 permalink: /historias/otros/derechos-de-propiedad-sobre-la-tierra.html
 section:  historias
-category: otros
-category_title: Otros
+category: otras
+category_title: "Otras"
 tags:
 - fuerza laboral
 - Desarrollo

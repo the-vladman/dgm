@@ -1,43 +1,46 @@
 ---
 layout: default
-body_class: tools
 title: Herramientas
-aria_label: Herramientas creadas con Datos
 permalink: /herramientas/
-weight: 2
+weight: 3
 showInNavbar: true
+active: all
+tools_category: true
+category_info:
+  name: all
+  title: Todas
 ---
 
-{% include page-title-icon.html title=page.title tagline="Los datos abiertos deben poder ser utilizados por cualquier persona y para cualquier fin. En esta sección encontrarás herramientas para facilitar el uso de los datos abiertos del gobierno y poder crear tus propias historias." icon="tools-illustration" %}
-
-{% assign tools_categories = site.pages | where: 'tools_category', true | sort: 'order' %}
-{% for category_page in tools_categories %}
-  <li>
-    <a href="{{ site.baseurl | append: category_page.url }}" class="category-inner {{ category_page.category_info.name }}{% if page.active == category_page.category_info.name %} active{% endif %}">{{ category_page.category_info.title }}</a>  
-  </li>
-{% endfor %}
-
-<div class="{{ page.body_class }}-content">
-  <div class="tools-list">
-    <div class="main-container">
-      <div class="cols-12" role="list" aria-label="Herramientas">
-        {% assign stories = site.posts | where:'section', 'herramientas' %}
-        {% for post in stories %}
-          <div class="col col-4" role="listitem">
-            <div class="col-inner">
-              <a class="tool-link" href="{{ post.url | prepend: site.baseurl }}">
-                <div class="tool-box">
-                  <div class="tool-cover" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover }}');"></div>
-                  <div class="tool-main">
-                    <h6 class="tool-link">{{ post.title }}</h6>
-                    <div class="tool-meta"><span class="timeago" aria-hidden="true" data-timestamp="{{ post.date }}" data-timestamp-format="normal"></span></div>
+<section class="stories-content">
+  <div class="main-container">
+    <div class="cols-12">
+      <div class="col col-2">
+        <div class="col-inner">
+          {% include tools-sidebar.html %}
+        </div>
+      </div>
+      <div class="col col-10">
+        <div class="col-inner">
+          <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
+            {% assign tools = site.posts | where:'section', 'herramientas' %}
+            {% for post in tools %}
+              {% if forloop.first %}
+                <div class="col col-12" role="listitem">
+                  <div class="col-inner">
+                    {% include entity-card.html post=post size="lg" showAuthor=false showCategory=true %}
                   </div>
                 </div>
-              </a>
-            </div>
+              {% else %}
+                <div class="col col-6" role="listitem">
+                  <div class="col-inner">
+                    {% include entity-card.html post=post showAuthor=false showCategory=true %}
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
           </div>
-        {% endfor %}
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>

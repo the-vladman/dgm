@@ -38,6 +38,18 @@
     }
   }
 
+  &.white {
+    .input-button {
+      input[type=text], input[type=email] {
+        background-color: $gray-light-background-color;
+      }
+
+      button {
+        background-color: #D8D8D8;
+      }
+    }
+  }
+
   .message {
     &.error {
       color: red;
