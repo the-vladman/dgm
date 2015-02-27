@@ -39,7 +39,7 @@ La creación de [Red México Abierto](http://mxabierto.org) es un paso en la dir
 
 Confiamos en que la presentación de [Red México Abierto](http://mxabierto.org) y los resultados de su programa piloto, contribuyan a que los gobiernos locales en México se acerquen al tema y lo incorporen como parte central de una nueva forma de gobernar y hacer política. Hoy, por cierto, los ciudadanos no esperan menos.
 
-**Ana Francisca Vega es periodista y Open Data Specialist/USAID. Ana Francisca participó en la creación del kit y es parte del equipo coordinador de Red México Abierto.**
+*Ana Francisca Vega es periodista y especialista en Datos Abiertos en USAID. Participó en la creación del kit de implementación y es parte del equipo coordinador de Red México Abierto.*
 
 
 
