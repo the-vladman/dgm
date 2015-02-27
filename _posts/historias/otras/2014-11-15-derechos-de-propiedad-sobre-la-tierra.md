@@ -7,7 +7,6 @@ author:   "Qué Funciona para el Desarrollo"
 date:     2014-11-15 18:09:00 -0500
 cover:    "historias/derechos-de-propiedad-sobre-la-tierra/derechos-de-propiedad-sobre-la-tierra-cover.jpg"
 cover_photo: "historias/derechos-de-propiedad-sobre-la-tierra/derechos-de-propiedad-sobre-la-tierra-cover.jpg"
-featured: false
 permalink: /historias/otros/derechos-de-propiedad-sobre-la-tierra.html
 section:  historias
 category: otras

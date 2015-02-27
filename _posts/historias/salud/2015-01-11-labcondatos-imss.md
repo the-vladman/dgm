@@ -6,7 +6,6 @@ author:   "Mariana Ruiz | Rubén López | Orlando García | José Rodrigo Patiñ
 date:     2015-01-11 13:09:00 -0500
 cover:    "historias/labcondatos-imss/labcondatos-imss_cover_photo-1284x460.jpg"
 cover_photo: "historias/labcondatos-imss/labcondatos-imss_cover_photo-1284x460.jpg"
-featured: false
 datasets:
 
   -

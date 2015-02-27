@@ -8,7 +8,6 @@ author:   "Cartográfica"
 date:     2014-07-15 12:09:00 -0500
 cover:    "historias/atlas-marginacion/atlas-de-marginacion.png--480x225.png"
 cover_photo: "historias/atlas-marginacion/atlas-de-marginacion.png--1280x400.png"
-featured: true
 datasets:
   -
     title: "Índice de marginación municipal de 2010, elaborado por el Consejo Nacional de Población (CONAPO)"

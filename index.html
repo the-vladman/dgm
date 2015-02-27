@@ -7,7 +7,8 @@ title: datos.gob.mx
 
 <section class="slider-wrapper">
   <div class="slider">
-    {% for post in all_stories | where: 'featured', true | limi: 4 %}
+    {% assign featured_posts = site.posts | where: 'featured', true %}
+    {% for post in featured_posts limit: 4 %}
       <article class="slide" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover_photo }}');">
         <div class="main-container">
           <div class="cols-12">

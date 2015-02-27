@@ -6,7 +6,6 @@ excerpt: "El día de hoy, con motivo de la publicación Decreto de Datos Abierto
 date: 2015-02-20
 cover: "avances/impulsando/impulsando-cover.png"
 cover_photo: "avances/impulsando-xalapa/impulsando-cover.png"
-featured: true
 permalink: "avances/impulsando.html"
 section: avances
 category: noticias
