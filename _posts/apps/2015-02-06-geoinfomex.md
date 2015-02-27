@@ -32,4 +32,4 @@ tags:
   - recursos naturales
 ---
 
-GeoInfoMex es una poderosa herramienta que permite obtener a todos los usuarios información generada por más de 7 décadas de exploración minera en México, simplificando la planeación estratégica de exploración en cualquier parte del Territorio Nacional
+GeoInfoMex es una poderosa herramienta que permite a los usuarios obtener información generada por más de 7 décadas de exploración minera en México, simplificando la planeación estratégica de exploración en cualquier parte del Territorio Nacional
