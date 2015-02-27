@@ -43,24 +43,6 @@ title: datos.gob.mx
   </div>
 </section>
 
-<section class="latest-progress-posts">
-  <div class="main-container">
-    <h3 class="latest-progress-title">Avances de datos.gob.mx</h3>
-    <div class="cols-12">
-      <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
-        {% assign progress_posts = site.posts | where: 'section', 'avances' | where: 'published', true %}
-        {% for post in progress_posts limit:3 %}
-          <div class="col col-4" role="listitem">
-            <div class="col-inner">
-              {% include entity-card.html post=post showAuthor=false showCategory=true %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="main-features">
   <div class="main-container">
     <div class="cols-12">
