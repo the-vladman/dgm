@@ -38,8 +38,9 @@ tags:
   - aeropuertuario
 ---
 
-La SCT está comprometida con el postulado que sostiene que los temas de gobierno y administración deben ser abiertos a todos los niveles en cuanto a transparencia, participación y rendición de cuentas.
-
-Por ello pone a disposición de la sociedad información relevante en materia de Obra Pública e Infraestructura para ser consultada libremente y dar seguimiento a los proyectos de desarrollo en sus etapas generales de Planeación, Contratación, Ejecución y Conclusión.
+Información relevante en materia de Obra Pública e Infraestructura para ser consultada libremente y dar seguimiento a los proyectos de desarrollo en sus etapas generales de Planeación, Contratación, Ejecución y Conclusión.
 
 Permite ubicar los proyectos por tipo de infraestructura: Carretera, Aeroportuaria, Marítima, Ferroviaria y de Telecomunicaciones.
+
+La SCT está comprometida con el postulado que sostiene que los temas de gobierno y administración deben ser abiertos a todos los niveles en cuanto a transparencia, participación y rendición de cuentas.
+
