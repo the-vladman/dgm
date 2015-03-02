@@ -1,7 +1,7 @@
 ---
 layout:   post
-featured: true
-featured_tagline: 'Mortalidad Materna:'
+featured: false
+featured_tagline: 'Datos Abiertos para:'
 title:    "Datos Abiertos para prevenir la Mortalidad Materna: Recomendaciones"
 author:   "Nick Eng | DSSG"
 date:     2015-01-13 13:09:00 -0500

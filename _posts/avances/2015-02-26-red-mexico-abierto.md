@@ -2,7 +2,7 @@
 layout: "post-progress"
 published: true
 featured: true
-featured_tagline: 'Red México Abierto:'
+featured_tagline: 'Avance:'
 title: 'Red México Abierto: inicios, logros y desafíos'
 excerpt: "Se se impulsó la creación de la Red México Abierto, una plataforma que permite a los distintos niveles de gobierno compartir sus experiencias y aprendizajes en torno a la apertura de datos de una forma sencilla y abierta."
 date: 2015-02-26
