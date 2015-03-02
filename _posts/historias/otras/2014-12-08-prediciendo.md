@@ -7,7 +7,6 @@ author:   "Luis Román García | Omar Trejo"
 date:     2014-12-08 13:09:00 -0500
 cover:    "historias/prediciendo/prediciendo_cover_photo-1284x460.jpg"
 cover_photo: "historias/prediciendo/prediciendo_cover_photo-1284x460.jpg"
-featured: false
 datasets:
   -
     title: "Catálogo de Centros de Trabajo"

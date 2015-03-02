@@ -8,7 +8,6 @@ author:   "Hugo Osorio | INEGI Fácil"
 date:     2014-06-15 12:09:00 -0500
 cover:    "historias/ramo-23-inegi-facil/ramo23ImgDestacada2-480x225.png"
 cover_photo: "historias/ramo-23-inegi-facil/ramo23Imgcover2-1280x400.png"
-featured: true
 datasets:
   -
     title: "Recursos Ramo 23"

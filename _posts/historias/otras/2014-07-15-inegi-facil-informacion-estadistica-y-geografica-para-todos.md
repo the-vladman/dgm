@@ -8,7 +8,6 @@ author:   "Boris Cuapio Morales | INEGI fácil"
 date:     2014-07-15 12:09:00 -0500
 cover:    "historias/inegi-facil/Screen-Shot-2014-07-03-at-5.41.50-PM-480x225.png"
 cover_photo: "historias/inegi-facil/Screen-Shot-2014-07-03-at-5.41.50-PM.png"
-featured: true
 datasets:
   -
     title: "INEGI, Información Estadística"

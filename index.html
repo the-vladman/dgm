@@ -7,7 +7,8 @@ title: datos.gob.mx
 
 <section class="slider-wrapper">
   <div class="slider">
-    {% for post in all_stories | where: 'featured', true | limi: 4 %}
+    {% assign featured_posts = site.posts | where: 'featured', true %}
+    {% for post in featured_posts limit: 7 %}
       <article class="slide" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ post.cover_photo }}');">
         <div class="main-container">
           <div class="cols-12">
@@ -15,8 +16,8 @@ title: datos.gob.mx
               <div class="col-inner">
                 <div class="slide-card-box {{ post.category }}">
                   <a tabindex="-1" href="{{ post.url | prepend: site.baseurl }}">
-                    <span class="complement-tagline">Datos abiertos para:</span>
-                    <h3 class="post-link">{{ post.tagline }}</h3>
+                    <span class="complement-tagline">{{post.featured_tagline}}</span>
+                    <h3 class="post-link">{{ post.title }}</h3>
                     <span class="post-read-more" aria-hidden="true">Leer Más</span>
                   </a>
                 </div>
