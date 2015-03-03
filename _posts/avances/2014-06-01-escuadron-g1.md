@@ -15,9 +15,9 @@ tags:
   - datos abiertos
 ---
 
-A las 8 de la mañana de un viernes de Mayo, la estación “Centro Médico” de la línea 3 del Metro de la Ciudad de México estaba a reventar como de costumbre. Lo que no fue usual fue al momento de pelear entrada a los vagones, cuando en espera de mi siguiente intento me tocan al hombro y preguntan “¿Rodolfo?, ¿del escuadrón de datos no?”; en el tramo de un par de estaciones rumbo a una reunión con cierta secretaría, me platicarían del impresionante potencial de utilizar datos abiertos para mejorar la industria de la caña de azúcar y su impacto en el país.
+A las 8 de la mañana de un viernes de Mayo, la estación “Centro Médico” de la línea 3 del Metro de la Ciudad de México estaba a reventar como de costumbre. Lo que no fue usual fue al momento de pelear entrada a los vagones, cuando en espera de mi siguiente intento me tocan al hombro y preguntan “¿Rodolfo?, ¿del Escuadrón de Datos no?”; en el tramo de un par de estaciones rumbo a una reunión con cierta secretaría, me platicarían del impresionante potencial de utilizar datos abiertos para mejorar la industria de la caña de azúcar y su impacto en el país.
 
-Durante 6 semanas esta escena se repitió de lunes a viernes. Por las mañanas y por las tardes un equipo de hackers visitamos 60 veces a un grupo de 10 dependencias de gobierno, para entender cómo es que íbamos a lograr implementar una política de datos abiertos en el país.
+Durante 6 semanas esta escena se repitió de lunes a viernes. Por las mañanas y por las tardes un equipo de hackers visitamos 60 veces a un grupo de 10 dependencias de gobierno, para entender cómo es que íbamos a lograr implementar una política de Datos Abiertos en el país.
 
 ![Escuadrón de Datos en CONAGUA]({{ site.url | append: site.baseurl }}assets/images/avances/escuadron-g1/escuadron-g1-01.jpg)
 
@@ -25,9 +25,9 @@ Es fácil creer que el gobierno puede acatar una tema más, pero la realidad es 
 
 ![Escuadrón de Datos en acción]({{ site.url | append: site.baseurl }}assets/images/avances/escuadron-g1/escuadron-g1-02.jpg)
 
-Y después de más de 60 reuniones, unos 700km recorridos, más de 100 tazas de café (algunas buenas, otras no tanto), logramos la humilde meta de liberar los primeros 100 conjuntos de datos de esta iniciativa. Datos de la SCT, NAFIN, SEDESOL, SSA, CONEVAL, CONAPO, PEMEX, CONAGUA, SAGARPA y SEP (por orden de agenda), están disponibles ya para ser utilizados con libre uso.
+Y después de más de 60 reuniones, unos 700km recorridos, más de 100 tazas de café (algunas buenas, otras no tanto), logramos la humilde meta de liberar los primeros 100 conjuntos de datos de esta iniciativa. Datos de la SCT, NAFIN, SEDESOL, SSA, CONEVAL, CONAPO, PEMEX, CONAGUA, SAGARPA y SEP (por orden de agenda), están disponibles ya para ser utilizados con [libre uso](http://datos.gob.mx/libreusomx/).
 
 ![Presentación 1ra generación del Escuadrón de Datos]({{ site.url | append: site.baseurl }}assets/images/avances/escuadron-g1/escuadron-g1-03.jpg)
 
-Pásenle a datos.gob.mx y ayúdenos a mejorar el sitio, los datos, y la iniciativa.
+Pásenle a [datos.gob.mx](http://datos.gob.mx/) y ayúdenos a mejorar el sitio, los datos, y la iniciativa.
 Escucharán de nosotros próximamente; ya viene la segunda generación.
