@@ -34,4 +34,4 @@ Para construir este listado de manera conjunta con la ciudadanía, publicamos el
 
 Este ejercicio permanecerá abierto a comentarios y recomendaciones del 3 de marzo al 1 de abril de 2015. Los comentarios serán analizados por el [Consejo Consultivo de Datos Abiertos](http://datos.gob.mx/avances/consejo-consultivo/), un órgano independiente de representación multisectorial, para definir cómo mejorar este documento rector de acuerdo a tu participación.
 
-**Participa, tu opinión ayudará a definir los siguientes pasos y procesos de la iniciativa de Datos Abiertos en México.**
+#### Participa, tu opinión ayudará a definir los siguientes pasos y procesos de la iniciativa de Datos Abiertos en México.
