@@ -15,7 +15,7 @@ tags:
   - datos abiertos
 ---
 
-La Iniciativa de Datos Abiertos es un plan de acción amplio e integral, para crear un ecosistema de innovación, participación ciudadana y desarrollo mediante los Datos Abiertos. Esta iniciativa forma parte de los compromisos de México en la Alianza para el Gobierno Abierto; seguir los principios de gobierno abierto significa promover la participación ciudadana, impulsar la transparencia y utilizar la tecnología para generar soluciones.
+La Iniciativa de Datos Abiertos es un plan de acción amplio e integral, para crear un ecosistema de innovación, participación ciudadana y desarrollo mediante los Datos Abiertos. Esta iniciativa forma parte de los compromisos de México en la Alianza para el Gobierno Abierto; seguir los principios de Gobierno Abierto significa promover la participación ciudadana, impulsar la transparencia y utilizar la tecnología para generar soluciones.
 
 Los Datos Abiertos permiten maximizar el valor de la información pública. Por ello, el Gobierno Federal promovió la Iniciativa de Datos Abiertos. Esto significa que las bases de datos que se generan y administran desde el propio gobierno podrán ser publicadas con ciertas características, para que los datos sean utilizados, reutilizados y redistribuidos, y así crear valor.
 
