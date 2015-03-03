@@ -19,7 +19,7 @@ La participación de los ciudadanos en la vida pública es una de las caracterí
 
 Con este entendimiento de co-creación y co-responsabilidad es que publicamos el borrador de la Política Nacional de Datos Abiertos en una plataforma en línea, para ser votada, discutida y comentada directamente en datos.gob.mx, el portal de Datos Abiertos de México.
 
-El borrador de la Política estuvo abierta por 5 semanas, en las cuales recibimos 1,043 participaciones y más de 300 comentarios directos al documento.
+El borrador de la Política estuvo abierto por 5 semanas, en las cuales recibimos 1,043 participaciones y más de 300 comentarios directos al documento.
 
 ![Politica de Datos]({{ site.url | append: site.baseurl }}assets/images/avances/politica-en-vivo/politica-en-vivo-01.JPG)
 
@@ -33,6 +33,6 @@ Gracias a la participación de más de 1,000 ciudadanos, hoy sabemos cómo abord
   <iframe src="//www.youtube.com/embed/VlEAMTFdb_A?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-En las próximas semanas, nuestro equipo junto con asesores fuera del gobierno, analizarán los comentarios para que aquellos que tengan valor y viabilidad se vean reflejados en el documento que guiará las acciones de Datos Abiertos en el Gobierno de la República.
+En las próximas semanas, nuestro equipo junto con asesores fuera del gobierno, analizarán los comentarios, para que aquellos que tengan valor y viabilidad se vean reflejados en el documento que guiará las acciones de Datos Abiertos en el Gobierno de la República.
 
 Te invitamos a seguir participando con nosotros, a seguir los avances rumbo a la implementación de este documento y a ser parte del cambio que los Datos Abiertos y el Gobierno Abierto harán en la vida pública de nuestro país.
