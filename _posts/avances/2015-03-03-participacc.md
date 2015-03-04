@@ -27,6 +27,7 @@ Esta invitación estará abierta del 3 al 25 de marzo de 2015. Una vez cerrada e
 
 #### Te invitamos a formar parte del Consejo Consultivo y participar en este ejercicio de colaboración entre sociedad y gobierno, llenando esta forma [aquí](https://docs.google.com/forms/d/1Oth4c0ymvqvR3LHH0YYLuQNzxHUbJ-2DKcFBxW4riFQ/viewform?c=0&w=1).
 
+
 Conoce más sobre el Consejo Consultivo de Datos Abiertos en:
 
 * [Consejo Consultivo de Datos Abiertos](http://datos.gob.mx/avances/consejo-consultivo/)
