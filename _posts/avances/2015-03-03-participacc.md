@@ -29,6 +29,6 @@ Esta invitación estará abierta del 3 al 25 de marzo de 2015. Una vez cerrada e
 
 Conoce más sobre el Consejo Consultivo de Datos Abiertos en:
 
-[Consejo Consultivo de Datos Abiertos](http://datos.gob.mx/avances/consejo-consultivo/)
-[Tablero de Avances de Gobierno Abierto](http://tablero.gobabiertomx.org/) 
-[Plan de Acción 2015 - Gobierno Abierto](http://pa2015.mx/)  
+* [Consejo Consultivo de Datos Abiertos](http://datos.gob.mx/avances/consejo-consultivo/)
+* [Tablero de Avances de Gobierno Abierto](http://tablero.gobabiertomx.org/) 
+* [Plan de Acción 2015 - Gobierno Abierto](http://pa2015.mx/)  
