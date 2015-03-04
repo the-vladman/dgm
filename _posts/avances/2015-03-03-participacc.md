@@ -18,12 +18,12 @@ tags:
 ---
 
 
-**Propuesta de convocatoria para las expresiones de interés en formar parte del Consejo Consultivo de Datos Abiertos:**
+**Invitación para las expresiones de interés en formar parte del Consejo Consultivo de Datos Abiertos:**
 
 El Consejo Consultivo de Datos Abiertos es un mecanismo de participación multidisciplinaria y plural de la sociedad civil, academia e industria, y tiene como objetivo verificar el cumplimiento, hacer recomendaciones, e incentivar la implementación y evaluación de la política de Datos Abiertos.
 De acuerdo a las [Reglas de Operación del Consejo](http://tablero.gobabiertomx.org/files/54385ce88d4d9.pdf), se convoca a las organizaciones e interesados de todos los sectores de la sociedad a **expresar su interés en participar en el primer el primer ciclo de renovación de la membresía.** 
 
-Esta convocatoria estará abierta del 3 al 25 de marzo de 2015. Una vez cerrada esta primera etapa, se integrará el Consejo para iniciar las etapas de evaluación, selección y publicación de resultados.
+Esta invitación estará abierta del 3 al 25 de marzo de 2015. Una vez cerrada esta primera etapa, se integrará el Consejo para iniciar las etapas de evaluación, selección y publicación de resultados.
 
 #### Te invitamos a participar en este ejercicio de colaboración entre sociedad y gobierno dando click [aquí](https://docs.google.com/forms/d/1Oth4c0ymvqvR3LHH0YYLuQNzxHUbJ-2DKcFBxW4riFQ/viewform?c=0&w=1).
 
