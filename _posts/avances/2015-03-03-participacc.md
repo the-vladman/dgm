@@ -25,10 +25,10 @@ De acuerdo a las [Reglas de Operación del Consejo](http://tablero.gobabiertomx.
 
 Esta convocatoria estará abierta del 3 al 25 de marzo de 2015. Una vez cerrada esta primera etapa, se integrará el Consejo para iniciar las etapas de evaluación, selección y publicación de resultados.
 
-#### Te invitamos a participar en este ejercicio de colaboración entre sociedad y gobierno dando click [aquí](http://tablero.gobabiertomx.org/files/54385ce88d4d9.pdf).
+#### Te invitamos a participar en este ejercicio de colaboración entre sociedad y gobierno dando click [aquí](https://docs.google.com/forms/d/1Oth4c0ymvqvR3LHH0YYLuQNzxHUbJ-2DKcFBxW4riFQ/viewform?c=0&w=1).
 
 Conoce más sobre el Consejo Consultivo de Datos Abiertos en:
 
-- [Consejo Consultivo de Datos Abiertos](http://datos.gob.mx/avances/consejo-consultivo/)
-- [Tablero de Avances de Gobierno Abierto](http://tablero.gobabiertomx.org/)
-- [Plan de Acción 2015 - Gobierno Abierto](http://pa2015.mx/)  
+[Consejo Consultivo de Datos Abiertos](http://datos.gob.mx/avances/consejo-consultivo/)
+[Tablero de Avances de Gobierno Abierto](http://tablero.gobabiertomx.org/) 
+[Plan de Acción 2015 - Gobierno Abierto](http://pa2015.mx/)  
