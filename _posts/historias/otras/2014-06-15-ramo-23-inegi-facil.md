@@ -29,11 +29,11 @@ tags:
 redirect_from: /ramo-23-inegi-facil/
 ---
 
-Tras casi cinco meses trabajando en INEGI FÁCIL, necesitábamos fondos para seguir con el proyecto, por lo que inscribimos el sitio al concurso de transparencia del IFAI. Tres días después, notamos que la Secretaría de Hacienda había liberado una base de datos con la información de las asignaciones del Ramo 23 aprobados para el 2014 en la Cámara de Diputados e inmediatamente vimos la oportunidad de hacer útiles estos datos abiertos.
+Tras casi cinco meses trabajando en INEGI FÁCIL, necesitábamos fondos para seguir con el proyecto, por lo que inscribimos el sitio al concurso de transparencia del IFAI. Tres días después, notamos que la Secretaría de Hacienda había liberado una base de datos con la información de las asignaciones del Ramo 23 aprobados para el 2014 en la Cámara de Diputados e inmediatamente vimos la oportunidad de hacer útiles estos Datos Abiertos.
 
 Así fue como nació [ramo23.com](http://ramo23.com/).
 
-#### Nueva oportunidad de trabajar con datos abiertos
+#### Nueva oportunidad de trabajar con Datos Abiertos
 
 La Secretaría de Hacienda y Crédito Público presentó en marzo de 2014 la plataforma electrónica mediante la cual se dan a conocer los proyectos de los fondos del Ramo 23. El Ramo 23 asigna casi 56 mil millones de pesos a través de 4 mil 537 proyectos que serán transferidos a estados, municipios y delegaciones del Distrito Federal.
 
