@@ -26,7 +26,7 @@ tags:
 redirect_from: /prediciendo/
 ---
 
-Buscamos caracterizar la distribución de delitos en el municipio de Zapopan creando un sistema que pudiera analizar el stream de Twitter en tiempo real para encontrar sucesos clave y brindar información relevante utilizando un sistema de Google.
+Buscamos caracterizar la distribución de delitos en el municipio de Zapopan creando un sistema que pudiera analizar el *stream* de Twitter en tiempo real para encontrar sucesos clave y brindar información relevante utilizando un sistema de Google.
 
 Para estimar la densidad de delitos en Zapopan utilizamos una técnica no paramétrica similar a un histograma. Segmentamos el territorio que cubre Zapopan en celdas uniformes de 200m por 200m (aproximadamente equivalente a una manzana) para hacer el análisis por zonas de extensión equivalente, y utilizamos las georeferencias de la base de datos delitos en Zapopan, compartida para el Dataton, para contar el número de delitos por celda.
 
