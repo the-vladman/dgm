@@ -45,7 +45,6 @@ Un modelo propuesto por los autores predice un mayor efecto migratorio en hogare
 ###Resultados
 
 
-
 ![Ejidos en México]({{ site.url | append: site.baseurl }}assets/images/historias/derechos-de-propiedad-sobre-la-tierra/derechos-de-propiedad-sobre-la-tierra-03.png)
 
 ![Ejidos en México]({{ site.url | append: site.baseurl }}assets/images/historias/derechos-de-propiedad-sobre-la-tierra/derechos-de-propiedad-sobre-la-tierra-04.png)

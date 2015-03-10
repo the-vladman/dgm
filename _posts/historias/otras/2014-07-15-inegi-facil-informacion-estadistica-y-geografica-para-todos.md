@@ -51,13 +51,13 @@ La dinámica del sitio es sencilla: mediante un filtro de palabras clave o la se
 
 Una idea puede tener varias fuentes de inspiración, pero su ejecución es casi siempre por necesidad: después de dos meses sin concretar un nuevo proyecto para trabajar, surgió la idea de crear un “navegador” para la información del CENSO del 2010. No había nada mejor que hacer, y por lo menos de portafolio nos iba a servir. (O para buscar trabajo; para recibir nuevos proyectos; para inscribir la aplicación en algún concurso; para no perder práctica; para aprender un poco más.)
 
-La fuente original de INEGI fácil fueron un par de bases de datos: el Censo de población del 2010 y la lista de códigos postales de México. De estas dos, la más interesante era la del Censo: tenía la población para más de cien mil localidades, sus coordenadas, su clave (estándar) de estado, municipio y localidad, y otros datos. Esto fue clave para descifrar el funcionamiento de los servicios web del INEGI.
+La fuentes originales de INEGI fácil fueron un par de bases de datos: el Censo de población del 2010 y la lista de códigos postales de México. De estas dos, la más interesante era la del Censo: tenía la población para más de cien mil localidades, sus coordenadas, su clave (estándar) de estado, municipio y localidad, y otros datos. Esto fue clave para descifrar el funcionamiento de los servicios web del INEGI.
 
 [![Sitio INEGI]({{ site.url | append: site.baseurl }}/assets/images/historias/inegi-facil/Screen-Shot-2014-07-03-at-5.54.57-PM-1024x691.png)](http://inegifacil.com/)
 
 #### El código
 
-La base tecnológica del sitio es muy sencilla: PHP, MySQL, Javascript, Git(hub); Codeigniter, Backbone, Require, Google maps, Sass. La biblioteca con la que limpiamos la información del INEGI está disponible en Github. También incluímos un servicio RESTful que sirve para hacer consultas sin necesidad de un servidor. Pronto estará todo el código del sitio disponible. Se trata de hacerle la vida fácil a todos.
+La base tecnológica del sitio es muy sencilla: PHP, MySQL, Javascript, GitHub; Codeigniter, Backbone, Require, Google maps, Sass. La biblioteca con la que limpiamos la información del INEGI está disponible en GitHub. También incluímos un servicio RESTful que sirve para hacer consultas sin necesidad de un servidor. Pronto estará todo el código del sitio disponible. Se trata de hacerle la vida fácil a todos.
 
 #### La utilidad
 

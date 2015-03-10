@@ -29,7 +29,7 @@ tags:
 redirect_from: /ramo-23-inegi-facil/
 ---
 
-Tras casi cinco meses trabajando en INEGI FÁCIL,necesitábamos fondos para seguir con el proyecto, por lo que inscribimos el sitio al concurso de transparencia del IFAI. Tres días después, notamos que la Secretaría de Hacienda había liberado una base de datos con la información de las asignaciones del Ramo 23 aprobados para el 2014 en la Cámara de Diputados e inmediatamente vimos la oportunidad de hacer útiles estos datos abiertos.
+Tras casi cinco meses trabajando en INEGI FÁCIL, necesitábamos fondos para seguir con el proyecto, por lo que inscribimos el sitio al concurso de transparencia del IFAI. Tres días después, notamos que la Secretaría de Hacienda había liberado una base de datos con la información de las asignaciones del Ramo 23 aprobados para el 2014 en la Cámara de Diputados e inmediatamente vimos la oportunidad de hacer útiles estos datos abiertos.
 
 Así fue como nació [ramo23.com](http://ramo23.com/).
 
@@ -41,15 +41,15 @@ Tras analizar el sitio, la necesidad de un buscador se hace evidente. El princip
 
 #### Tiempo en contra
 
-A sólo dos días de que la convocatoria del IFAI se cerrara y con un objetivo claro, comencé a bocetar la interfaz y la interacción del sitio. Me enfoque en hacer legible la información y capaz de consultar desde cualquier dispositivo móvil o computadora. El sitio emplea HTML5, Javascript, Backbone, Require, GitHub, y Sass. En la fase del prototipo digital, se decidió la gama cromática, las fuentes tipográficas, y el diseño de información.  A casi 4 horas de que el concurso cerrara la convocatoria, el sitio estaba listo.
+A sólo dos días del cierre de la convocatoria del IFAI y con un objetivo claro, comenzamos a bocetar la interfaz y la interacción del sitio. Nos enfocamos en hacer legible la información y capaz de consultar desde cualquier dispositivo móvil o computadora. El sitio emplea HTML5, Javascript, Backbone, Require, GitHub, y Sass. En la fase del prototipo digital, decidimos la gama cromática, las fuentes tipográficas, y el diseño de información.  A casi 4 horas de que el concurso cerrara la convocatoria, el sitio estaba listo.
 
 #### Su utilidad
 
-Mientras trabajaba en el sitio, mostré a Boris Cuapio el diseño y la información que contenía el Ramo 23. Boris pensó que los datos del Ramo 23 podían ser usados en comunidades con poco acceso a internet mediante hojas impresas, por lo que integré una hoja de estilo que hace posible la impresión de cada resultado de búsqueda de manera legible. Para el siguiente lunes, Boris ya estaba repartiendo hojas en San Martín Texmelucan, Puebla, con la información del Ramo 23 referente a esa ciudad, donde  los ciudadanos comenzaron a preguntar con gran interés dónde, cómo y cuándo se aplicarían esos recursos.
+Mientras trabajaba en el sitio, mostré a Boris Cuapio el diseño y la información que contenía el Ramo 23. Boris pensó que los datos del Ramo 23 podían ser usados en comunidades con poco acceso a internet mediante hojas impresas, por lo que integré una hoja de estilo que hace posible la impresión de cada resultado de búsqueda de manera legible. Para el siguiente lunes, Boris ya estaba repartiendo hojas en San Martín Texmelucan, Puebla, con la información del Ramo 23 referente a esa ciudad, donde los ciudadanos comenzaron a preguntar con gran interés dónde, cómo y cuándo se aplicarían esos recursos.
 
 ![Sitio Ramo23]({{ site.url | append: site.baseurl }}/assets/images/historias/ramo-23-inegi-facil/Screen-Shot-2014-07-04-at-5.07.42-PM-1024x766.png)
 
-Esto es un ejemplo de como ramo23.com facilita el acceso a la información pública, haciéndola entendible, permitiendo que los ciudadanos conozcan como se reparten los recursos, recibiendo datos que les permiten ser parte de un ejercicio de transparencia.
+Esto es un ejemplo de como ramo23.com facilita el acceso a la información pública, haciéndola entendible, permitiendo que los ciudadanos conozcan cómo se reparten los recursos, recibiendo datos que les permiten ser parte de un ejercicio de transparencia.
 
 #### Hugo Osorio
 

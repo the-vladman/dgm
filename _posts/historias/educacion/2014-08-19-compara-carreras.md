@@ -30,13 +30,13 @@ category: educacion
 category_title: "Educación"
 ---
 
-[ComparaCarreras.org](http://imco.org.mx/comparacarreras/#!/) es una herramienta online del Instituto Mexicano para la Competitividad que ofrece información relevante sobre el posicionamiento en el mercado laboral, los ingresos y la rentabilidad de más de 60 áreas de estudio.
+[ComparaCarreras.org](http://imco.org.mx/comparacarreras/#!/) es una herramienta online del Instituto Mexicano para la Competitividad (IMCO) que ofrece información relevante sobre el posicionamiento en el mercado laboral, los ingresos y la rentabilidad de más de 60 áreas de estudio.
 
-Usualmente la decisión de qué carrera estudiar se guía por variables como los gustos, las habilidades y la tradición familiar, dejando de lado información importante –basada en datos duros– sobre las consecuencias económicas de elegir una carrera sobre otra. En parte esto se debe a que dicha información no está a la mano de los bachilleres, padres de familia y otros interesados en consultarla. Navegar entre complejas bases datos y hacer numerosas llamadas puede ser un obstáculo importante. Por esto que nos dimos a la tarea de recopilar información sobre 62 grupos de carreras diferentes y de presentarlos de una manera fácil visualizar, comparar y entender.
+Usualmente la decisión de qué carrera estudiar se guía por variables como los gustos, las habilidades y la tradición familiar, dejando de lado información importante –basada en datos duros– sobre las consecuencias económicas de elegir una carrera sobre otra. En parte, esto se debe a que dicha información no está a la mano de los bachilleres, padres de familia y otros interesados en consultarla. Navegar entre complejas bases datos y hacer numerosas llamadas puede ser un obstáculo importante. Es por esto que nos dimos a la tarea de recopilar información sobre 62 grupos de carreras diferentes y de presentarlos de una manera fácil visualizar, comparar y entender.
 
 [![Sitio Compara Carreras]({{ site.url | append: site.baseurl }}/assets/images/historias/compara-carreras/Screen-Shot-2014-08-19-at-1.15.31-PM-1024x709.png)](http://imco.org.mx/comparacarreras/)
 
-Basada en datos del INEGI y la ANUIES, ComparaCarreras.org permite conocer para cada área de estudio cuántos profesionistas existen, cuál es el nivel de desempleo e informalidad, cuánto ganan, en qué sector trabajan, cuál es el nivel de matrícula actual y, sobre todo, la rentabilidad esperada. Además, cuenta también con información sobre qué sectores demandan o demandarán mayor capital humano, así como los puestos más difíciles de cubrir en las empresas y las razones por las que las empresas rechazan a los jóvenes.
+Basada en datos del INEGI y la ANUIES, [ComparaCarreras.org](http://imco.org.mx/comparacarreras/#!/) permite conocer cuántos profesionistas existen para cada área de estudio, cuál es el nivel de desempleo e informalidad, cuánto ganan, en qué sector trabajan, cuál es el nivel de matrícula actual y, sobre todo, la rentabilidad esperada. Además, cuenta también con información sobre qué sectores demandan o demandarán mayor capital humano, así como los puestos más difíciles de cubrir en las empresas y las razones por las que las empresas rechazan a los jóvenes.
 
 Entre los principales hallazgos cabe destacar que, en promedio, un trabajador con licenciatura puede ganar casi el doble que uno que sólo terminó la prepa. Pero el panorama no es igual de alentador para todas las áreas de estudio: los profesionistas con el salario promedio más alto (Minería y extracción) ganan casi cuatro veces más que un egresado promedio de la carrera peor remunerada (Bellas artes), cuyo salario promedio es apenas superior al de un bachiller*.
 
@@ -46,6 +46,6 @@ Adicionalmente, prácticamente uno de cada tres profesionistas en México es egr
 
 Desde un punto de vista netamente financiero, la educación superior es en general una buena inversión, pero para sacar el mejor provecho de ella es necesario apuntarle a remuneraciones excepcionales y no a las promedio. Esto implica seleccionar de manera informada qué carrera estudiar, conocer sus posibilidades laborales y, obviamente, trabajar duro para sobresalir.
 
-Desde su lanzamiento en abril de 2014 a mediados de julio del mismo año, el sitio de ComparaCarreras.org ha recibido más de 132 mil visitas únicas.
+Desde su lanzamiento en abril de 2014 a mediados de julio del mismo año, el sitio [ComparaCarreras.org](http://imco.org.mx/comparacarreras/#!/) ha recibido más de 132 mil visitas únicas.
 
 *Estimaciones al cuarto trimestre de 2013.
