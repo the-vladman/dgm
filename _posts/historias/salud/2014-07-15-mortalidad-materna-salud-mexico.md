@@ -40,9 +40,9 @@ Como parte de los Objetivos de desarrollo del Milenio de la ONU, la reducción d
 
 En México, la Secretaría de Salud realiza esfuerzos para erradicar el problema mejorando la atención de embarazos y con la implementación del programa de Búsqueda Intencionada y Reclasificación de Muertes Materna que, a partir del año 2012, investiga casos sospechosos, confronta diversas fuentes y rectifica los casos sospechosos incorporando variables adicionales que incluyen información prenatal de la madre, unidad médica del fallecimiento, entre otras.
 
-####El valor de los datos abiertos.
+####El valor de los Datos Abiertos.
 
-Como parte de la primera entrega del sitio [datos.gob.mx](http://datos.gob.mx/), la Secretaría de Salud publicó bases de datos abiertos que incluyen información sobre:
+Como parte de la primera entrega del sitio [datos.gob.mx](http://datos.gob.mx/), la Secretaría de Salud publicó bases de Datos Abiertos que incluyen información sobre:
 
 <ul class="styled">
   <li>Catálogo de establecimientos de salud.</li>
