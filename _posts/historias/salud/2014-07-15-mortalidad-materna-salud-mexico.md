@@ -53,7 +53,7 @@ Como parte de la primera entrega del sitio [datos.gob.mx](http://datos.gob.mx/),
   <li>Recursos para servicios de Salud.</li>
 </ul>
 
-Además de las ventajas de formato, acceso y análisis que tienen los datos abiertos, la disponibilidad de distintas fuentes en un mismo sitio permite analizar el mismo problema desde diferentes perspectivas; por ejemplo, la relación entre el número de casos de mortalidad materna y el número de médicos en un hospital, la distancia al hospital más cercano, la relación entre nacimientos y los casos de muerte materna, entre otras.
+Además de las ventajas de formato, acceso y análisis que tienen los Datos Abiertos, la disponibilidad de distintas fuentes en un mismo sitio permite analizar el mismo problema desde diferentes perspectivas; por ejemplo, la relación entre el número de casos de mortalidad materna y el número de médicos en un hospital, la distancia al hospital más cercano, la relación entre nacimientos y los casos de muerte materna, entre otras.
 
 Conscientes de la implicación técnica que trae consigo el análisis de información, la Política Nacional de Datos Abiertos pretende mostrar el beneficio de los datos más allá de la mera publicación de conjuntos de datos.
 
