@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="35px" height="36px" viewBox="0 0 35 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>Oval 21</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Datos/instituciones/pemex/estudios" sketch:type="MSArtboardGroup" transform="translate(-915.000000, -555.000000)" fill="#979494">
-            <path d="M932.5,590.5 C942.164983,590.5 950,582.664983 950,573 C950,563.335017 942.164983,555.5 932.5,555.5 C922.835017,555.5 915,563.335017 915,573 C915,582.664983 922.835017,590.5 932.5,590.5 Z M941,572.5 L926,581.5 L926,563.5 L941,572.5 Z" id="Oval-21" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 36"
+	 enable-background="new 0 0 35 36" xml:space="preserve">
+<title>Oval 21</title>
+<desc>Created with Sketch.</desc>
+<path fill="#979494" d="M17.5,0.5C7.8,0.5,0,8.3,0,18s7.8,17.5,17.5,17.5S35,27.7,35,18S27.2,0.5,17.5,0.5z M11.8,15
+	c0.4-0.4,1-0.4,1.4,0l3.3,3.1V7.2c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V18l3.3-3.1c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4l-5,4.7
+	c-0.2,0.2-0.4,0.3-0.7,0.3s-0.5-0.1-0.7-0.3l-5-4.7C11.4,16,11.4,15.4,11.8,15z M27.4,25c0,0.6-0.4,1-1,1H8.6c-0.6,0-1-0.4-1-1v-4.3
+	c0-0.6,0.4-1,1-1s1,0.4,1,1V24h15.8v-3.3c0-0.6,0.4-1,1-1s1,0.4,1,1V25z"/>
 </svg>
