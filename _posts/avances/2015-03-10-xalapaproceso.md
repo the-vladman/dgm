@@ -18,6 +18,8 @@ tags:
   - Datos Abiertos
 ---
 
+*Por: Gerardo Pérez Gallardo*
+
 #### Experiencia, aciertos y áreas de oportunidad
 
 El 1 de enero del 2014, iniciamos con la actual administración y se planteó la necesidad de comenzar a implementar nuevos mecanismos que integren a la ciudadanía en el proceso de toma de decisiones, que fomenten su participación y que apoyen la generación de una economía digital en nuestro municipio.
@@ -62,3 +64,6 @@ De acuerdo a nuestra experiencia dentro de la Red México Abierto enlistamos los
 **Escuadrón de Datos Municipales:** Acabamos de crear nuestro Escuadrón de Datos, el cual se encargará de generar lineamientos, detección de datos, estandarización y publicación de los mismos.
 
 **Capacitación:** Llevaremos a cabo cursos y talleres de capacitación para la reutilización de los datos, enfocados a cualquier ciudadano, con el objetivo de que sean aprovechados para generar valor y demostrar su utilidad. El primer curso se llevó a cabo el día 21 de febrero y fue impartido por la Escuela de Datos. Se lanzó una convocatoria con 40 lugares, los cuales fueron cubiertos en 9 horas. Esto nos habla del interés que hay alrededor de esta iniciativa.
+
+
+*Gerardo es Director de Buen Gobierno y Proyectos Especiales del H. Ayuntamiento de Xalapa*
