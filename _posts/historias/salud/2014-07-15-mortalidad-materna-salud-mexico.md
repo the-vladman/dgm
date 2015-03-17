@@ -22,7 +22,7 @@ collaborators:
   - secretaria_salud
 
 permalink: /historias/salud/mortalidad-materna.html
-section:  historias
+section: historias
 category: salud
 category_title: Salud
 tags:
@@ -40,9 +40,9 @@ Como parte de los Objetivos de desarrollo del Milenio de la ONU, la reducción d
 
 En México, la Secretaría de Salud realiza esfuerzos para erradicar el problema mejorando la atención de embarazos y con la implementación del programa de Búsqueda Intencionada y Reclasificación de Muertes Materna que, a partir del año 2012, investiga casos sospechosos, confronta diversas fuentes y rectifica los casos sospechosos incorporando variables adicionales que incluyen información prenatal de la madre, unidad médica del fallecimiento, entre otras.
 
-El valor de los datos abiertos.
+####El valor de los Datos Abiertos.
 
-Como parte de la primera entrega del sitio [datos.gob.mx](http://datos.gob.mx/), la Secretaría de Salud publicó bases de datos abiertos que incluyen información sobre:
+Como parte de la primera entrega del sitio [datos.gob.mx](http://datos.gob.mx/), la Secretaría de Salud publicó bases de Datos Abiertos que incluyen información sobre:
 
 <ul class="styled">
   <li>Catálogo de establecimientos de salud.</li>
@@ -53,9 +53,9 @@ Como parte de la primera entrega del sitio [datos.gob.mx](http://datos.gob.mx/),
   <li>Recursos para servicios de Salud.</li>
 </ul>
 
-Además de las ventajas de formato, acceso y análisis que tienen los datos abiertos, la disponibilidad de distintas fuentes en un mismo sitio permite analizar el mismo problema desde diferentes perspectivas; por ejemplo, la relación entre el número de casos de mortalidad materna y el número de médicos en un hospital, la distancia al hospital más cercano, la relación entre nacimientos y los casos de muerte materna, entre otras.
+Además de las ventajas de formato, acceso y análisis que tienen los Datos Abiertos, la disponibilidad de distintas fuentes en un mismo sitio permite analizar el mismo problema desde diferentes perspectivas; por ejemplo, la relación entre el número de casos de mortalidad materna y el número de médicos en un hospital, la distancia al hospital más cercano, la relación entre nacimientos y los casos de muerte materna, entre otras.
 
-Conscientes de la implicación técnica que trae consigo el análisis de información, la Política Nacional de Datos Abiertos pretende mostrar el beneficio de los datos más allá de la mera publicación de bases de datos.
+Conscientes de la implicación técnica que trae consigo el análisis de información, la Política Nacional de Datos Abiertos pretende mostrar el beneficio de los datos más allá de la mera publicación de conjuntos de datos.
 
 ![salud_d4d-11.pdf-01]({{ site.url | append: site.baseurl }}/assets/images/historias/mortalidad-materna-salud-mexico/salud_d4d-11.pdf-01-1024x768.png)
 ![salud_d4d-11.pdf-02]({{ site.url | append: site.baseurl }}/assets/images/historias/mortalidad-materna-salud-mexico/salud_d4d-11.pdf-02-1024x768.png)
