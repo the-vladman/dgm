@@ -18,7 +18,8 @@ tags:
   - Datos Abiertos 
 ---
 
-El 21 de febrero entró en vigor el [Decreto que Establece la Regulación en Materia de Datos Abiertos](http://www.dof.gob.mx/nota_detalle.php?codigo=5382838&fecha=20/02/2015), el cual instruye a priorizar la publicación de Datos Abiertos con base en la demanda ciudadana. 
+El 21 de febrero entró en vigor el [Decreto que Establece la Regulación en Materia de Datos Abiertos](http://www.dof.gob.mx/nota_detalle.php?codigo=5382838&fecha=20/02/2015), que instruye a priorizar la publicación de Datos Abiertos con base en la demanda ciudadana. 
+
 Con este motivo, se creó la Infraestructura Estratégica de Datos Abiertos –la base de los conjuntos de datos de alto valor para la población, y que será la guía para la priorización de los Datos Abiertos de las dependencias y entidades de la Administración Pública Federal, que serán publicados en [datos.gob.mx](http://datos.gob.mx/).
 
 Para construir este listado de manera conjunta con la ciudadanía, publicamos las categorías y conjuntos de datos prioritarios sugeridos en el primer borrador, para recibir comentarios públicos.
