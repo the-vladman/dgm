@@ -1,13 +1,13 @@
 ---
-published: false
+published: true
+featured: true
 layout:   post
 title:    "Datos abiertos, representación política y redistritación en México"
-
 tagline:  "Conocer cómo usar datos para mejor delimitar las secciones electorales"
 author:   "Alejandro Trelles, Micah Altman, Eric Magar, Michael P. McDonald"
 date:     2015-04-15 12:09:00 -0500
-cover:    "historias/ramo-23-inegi-facil/ramo23ImgDestacada2-480x225.png"
-cover_photo: "historias/ramo-23-inegi-facil/ramo23Imgcover2-1280x400.png"
+cover:    "historias/redistritacion/redistritacion-1280x400.png"
+cover_photo: "historias/redistritacion/redistritacion-1280x400.png"
 datasets:
   -
     title: "Marco Geoestadístico Nacional"
@@ -43,7 +43,8 @@ La Plataforma Pública de Redistritación México (PPR-México) es un proyecto q
 
 ##### Figura 1. Despliegue de la cartografía electoral del Estado de México a nivel municipal en el District Builder
 
-![Figura 1]({{ site.url | append: site.baseurl }}/assets/images/historias/redistritacion/Image1.png)
+![Despliegue de la cartografía electoral del Estado de México]({{ site.url | append: site.baseurl }}assets/images/historias/redistritacion/redistritacion01.png)
+
 
 #### ¿Por qué es importante vincular los procesos de redistritación con la estrategia de gobierno abierto? 
 
@@ -57,11 +58,11 @@ La PPR-México es una plataforma digital que puede ser albergada por cualquier i
 * Genera certeza entre los distintos actores políticos al permitirles evaluar, comparar, observar y sugerir de manera sistemática distintos escenarios en un espacio público.
 * Ofrece la posibilidad de contar con más y mejores elementos para elegir el mejor escenario de acuerdo a los criterios establecidos en la ley y los que hayan sido aprobados por la autoridad encargada del trazo distrital.
 
+ 
 
-##### Figura 2. Despliegue de la cartografía electoral del Estado de México a nivel seccional en el District Builder
+####Figura 2. Despliegue de la cartografía electoral del Estado de México a nivel seccional en el District Builder
 
-![Figura 1]({{ site.url | append: site.baseurl }}/assets/images/historias/redistritacion/Image2.png)
-
+![Despliegue de la cartografía electoral del Estado de México]({{ site.url | append: site.baseurl }}assets/images/historias/redistritacion/redistritacion02.png)
 
 Para más información del proyecto puede dar [click aquí](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2591862) 		
 
