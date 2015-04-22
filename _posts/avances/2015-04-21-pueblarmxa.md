@@ -54,4 +54,4 @@ Una parte central de la estrategia es el llamado a la acción colectiva a partir
 
 Estamos convencidos de que el éxito de una Política de Datos Abiertos no radica en la generación de más aplicaciones, o en publicar más bases de datos, o en realizar diez hackatones cada año, o en tener un número considerable de infografías y de visualizaciones en un sitio web. Los Datos Abiertos son exitosos siempre y cuando logren reducir la brecha de información que existe entre ciudadanos y gobernantes. Por eso es que nuestra atención de los próximos meses se centrará en construir, desde el gobierno estatal, espacios públicos en los que se pueda ejercer y construir ciudadanía. 
 
-*Andrea Barenque es Directora de Gobierno Abierto en el Estado de Puebla*
+*Andrea Barenque es Directora de Gobierno Abierto en el Estado de Puebla.*
