@@ -7,8 +7,8 @@ title: "Avisos de ciclones tropicales en tu celular y redes sociales"
 tagline: "¿qué pasaría si los avisos de ciclones llegaran automáticamente a la gente ubicada en regiones vulnerables?"
 author: "Rodolfo Wilhelmy"
 date: 2015-06-08 18:00:00 -0500
-cover: ""
-cover_photo: ""
+cover: "historias/avisos-de-ciclones-tropicales/avisos-de-ciclones-tropicales_cover_photo-1284x460.jpg"
+cover_photo: "historias/avisos-de-ciclones-tropicales/avisos-de-ciclones-tropicales_cover_photo-1284x460.jpg"
 datasets:
   -
     title: "Avisos de ciclón tropical"
