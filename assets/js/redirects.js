@@ -33,7 +33,7 @@ var list = [
       },
       {
         name: 'catalogo',
-        url: 'http://mxabierto.github.io/ng-ckan/'
+        url: 'http://busca.datos.gob.mx/'
       }
     ],
     dependency  = pathExist( window.location.pathname );
