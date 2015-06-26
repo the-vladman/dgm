@@ -12,4 +12,4 @@ links:
 section: gov_apps
 source: App Store en iTunes
 ---
-El quiosco de informes y publicaciones le permitirá conocer a detalle las actividades y desempeño de Petróleos Mexicanos. (Fuente: App Store en iTunes)
+El quiosco de informes y publicaciones le permitirá conocer a detalle las actividades y desempeño de Petróleos Mexicanos. 
