@@ -41,19 +41,21 @@ category_info:
             {% endfor %}
           </div>
           <div class="apps-list-cards cols-12" role="list" aria-label="Apps del Gobierno de la República">
-            <div class="col col-12">
-              <h1 class="green-title">Más Apps del Gobierno de la República</h1>
-            </div>
             {% assign gov_apps_posts = site.posts | where: 'section', 'gov_apps' | where: 'published', true %}
-            {% for post in gov_apps_posts %}
-              <div class="col col-4" role="listitem">
-                <div class="col-inner">
-                  <div class="apps-list-card">
-                    {% include entity-gov-card.html post=post  %}
+            {% if gov_apps_posts.size > 0 %}
+              <div class="col col-12">
+                <h1 class="green-title">Más Apps del Gobierno de la República</h1>
+              </div>
+              {% for post in gov_apps_posts %}
+                <div class="col col-4" role="listitem">
+                  <div class="col-inner">
+                    <div class="apps-list-card">
+                      {% include entity-gov-card.html post=post  %}
+                    </div>
                   </div>
                 </div>
-              </div>
-            {% endfor %}
+              {% endfor %}
+            {% endif %}
           </div>
         </div>
       </div>
