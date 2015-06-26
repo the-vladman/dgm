@@ -113,3 +113,65 @@
     margin-bottom: 30px;
   }
 }
+
+// Government Apps
+.apps-list-cards {
+  margin: 20px 0;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .apps-list-card {
+    background-color: #eee;
+    height: 120px;
+    position: relative;
+
+    > h5 {
+      color: #0c9;
+      font-size: 12px;
+      line-height: 18px;
+      padding: 5px 10px;
+    }
+
+    > .card-links {
+      padding: 10px;
+      background-color: #e5e2e2;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      > a {
+        display: block;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        float: left;
+        text-indent: -9999px;
+        background: transparent no-repeat center center;
+      }
+
+      > .android-link {
+        background-image: url('../assets/images/icon-android.png');
+      }
+
+      > .ios-link {
+        background-image: url('../assets/images/icon-apple.png');
+      }
+
+      > .web-link {
+        background-image: url('../assets/images/icon-webapp.png');
+      }
+
+      > p {
+        text-align: right;
+        color: #999;
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+  }
+}
