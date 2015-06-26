@@ -137,7 +137,7 @@
     }
 
     > .app-description {
-      display: none;
+      visibility: hidden;
       width: 270px;
       height: auto;
       padding: 10px;
@@ -160,7 +160,7 @@
     }
 
     &:hover > .app-description {
-      display: block;
+      visibility: visible;
       opacity: 1;
     }
 
