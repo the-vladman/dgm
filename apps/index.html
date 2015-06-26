@@ -22,7 +22,7 @@ category_info:
       </div>
       <div class="col col-10">
         <div class="col-inner">
-          <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
+          <div class="entities-list-cards cols-12" role="list" aria-label="Historias con datos abiertos">
             {% assign apps_posts = site.posts | where: 'section', 'apps' | where: 'published', true %}
             {% for post in apps_posts %}
               {% if forloop.first %}
@@ -39,6 +39,23 @@ category_info:
                 </div>
               {% endif %}
             {% endfor %}
+          </div>
+          <div class="apps-list-cards cols-12" role="list" aria-label="Apps del Gobierno de la República">
+            {% assign gov_apps_posts = site.posts | where: 'section', 'gov_apps' | where: 'published', true %}
+            {% if gov_apps_posts.size > 0 %}
+              <div class="col col-12">
+                <h1 class="green-title">Más Apps del Gobierno de la República</h1>
+              </div>
+              {% for post in gov_apps_posts %}
+                <div class="col col-4" role="listitem">
+                  <div class="col-inner">
+                    <div class="apps-list-card">
+                      {% include entity-gov-card.html post=post  %}
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            {% endif %}
           </div>
         </div>
       </div>

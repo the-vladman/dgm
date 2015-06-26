@@ -1,0 +1,17 @@
+<h5>{{ post.title }}</h5>
+<div class="card-links">
+  {% if post.links.webLink %}
+    <a class="web-link" href="{{ post.links.webStore }}" alt="Web">Web</a>
+  {% endif %}
+  {% if post.links.playStore %}
+    <a class="android-link" href="{{ post.links.playStore }}" alt="PlayStore">PlayStore</a>
+  {% endif %}
+  {% if post.links.appleStore %}
+    <a class="ios-link" href="{{ post.links.appleStore }}" alt="AppleStore">AppStore</a>
+  {% endif %}
+  <p class="small">{{ post.app_author }}</p>
+</div>
+<div class="app-description">
+  {{ post.content }}
+  <p class="source">Fuente: {{ post.source }}</p>
+</div>
