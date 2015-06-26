@@ -126,6 +126,7 @@
   .apps-list-card {
     background-color: #eee;
     height: 120px;
+    margin-bottom: 20px;
     position: relative;
 
     > h5 {
@@ -136,14 +137,15 @@
     }
 
     > .app-description {
+      visibility: hidden;
       width: 270px;
       height: auto;
       padding: 10px;
       background-color: #474747;
       position: absolute;
-      left: 15px;
-      top: 45px;
-      transition: opacity .2s ease-in;
+      left: 70px;
+      bottom: 60px;
+      transition: all .2s ease-in;
       opacity: 0;
       z-index: 100;
 
@@ -158,11 +160,12 @@
     }
 
     &:hover > .app-description {
+      visibility: visible;
       opacity: 1;
     }
 
     > .app-description:after {
-      bottom: 100%;
+      top: 100%;
       left: 0;
       border: solid transparent;
       content: " ";
@@ -171,8 +174,8 @@
       position: absolute;
       pointer-events: none;
       border-color: transparent;
+      border-top-color: #474747;
       border-left-color: #474747;
-      border-bottom-color: #474747;
       border-width: 10px;
     }
 
