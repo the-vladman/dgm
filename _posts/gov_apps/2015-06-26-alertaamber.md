@@ -12,4 +12,4 @@ links:
 section: gov_apps
 source: App Store en iTunes
 ---
-Alerta AMBER México Móvil, es una herramienta diseñada para que la ciudadanía pueda solicitar la activación de una alerta al personal calificado del Programa Alerta AMBER México en los casos de no localización de niñas, niños o adolescentes. (Fuente: App Store en iTunes)
+Alerta AMBER México Móvil, es una herramienta diseñada para que la ciudadanía pueda solicitar la activación de una alerta al personal calificado del Programa Alerta AMBER México en los casos de no localización de niñas, niños o adolescentes.

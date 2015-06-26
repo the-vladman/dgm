@@ -13,4 +13,4 @@ section: gov_apps
 source: App Store en iTunes
 ---
 
-Una Aplicación de la Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros, que te permite conocer material de Educativo, Información y las Fechas de los Eventos de la Semana Nacional de Educación Financiera 2014. (Fuente: App Store en iTunes)
+Una Aplicación de la Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros, que te permite conocer material de Educativo, Información y las Fechas de los Eventos de la Semana Nacional de Educación Financiera 2014.

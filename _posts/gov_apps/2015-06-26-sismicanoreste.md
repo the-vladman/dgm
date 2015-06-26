@@ -12,4 +12,4 @@ links:
 section: gov_apps
 source: App Store en iTunes
 ---
-En esta aplicación podrás conocer la actividad sísmica que se genera en el noroeste de México, principalmente en las regiones norte de Baja California y noroeste de Sonora. (Fuente: App Store en iTunes)
+En esta aplicación podrás conocer la actividad sísmica que se genera en el noroeste de México, principalmente en las regiones norte de Baja California y noroeste de Sonora.
