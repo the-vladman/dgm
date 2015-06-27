@@ -46,6 +46,9 @@
               <li>
                 <a class="page-link" href="/catalogo/" title="Ir al conjunto de datos" aria-label="Ir al catalogo de datos">Datos</a>
               </li>
+              <li>
+                <a class="page-link" href="/guia/" title="Ir a la guía de datos" aria-label="Ir a la guía de datos">Guía</a>
+              </li>
               {% assign sorted_pages = site.pages | where:'showInNavbar',true | sort: 'weight' %}
               {% for section in sorted_pages %}
                 {% if section.title %}
