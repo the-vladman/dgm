@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 
 title: Educación Financiera
 app_author: CONDUSEF
