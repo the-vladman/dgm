@@ -13,6 +13,8 @@ screenshots:
 
 links:
   playStore: https://play.google.com/store/apps/details?id=gim.pack&hl=es_419
+  web: http://mapasims.sgm.gob.mx/GeoInfoMexDB/
+
 
 datasets:
   -
