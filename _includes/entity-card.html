@@ -12,7 +12,7 @@
         <div aria-hidden="true" class="entity-author">{{ post.author }}</div>
       {% endif %}
       <div class="entity-meta">
-        <span class="timeago" aria-hidden="true" data-timestamp="{{ post.date }}" data-timestamp-format="normal"></span>
+        <span class="timeago" aria-hidden="true" data-timestamp="{{ post.date | date_to_string }}" data-timestamp-format="normal"></span>
       </div>
     </div>
   </div>
