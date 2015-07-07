@@ -14,7 +14,7 @@ datasets:
     url: http://catalogo.datos.gob.mx/dataset/mortalidad-materna
   -
     title: "Defunciones Generales"
-    url: http://www.sinais.salud.gob.mx/basesdedatos/std_defunciones.html
+    url: http://www.dgis.salud.gob.mx/contenidos/basesdedatos/std_defunciones.html
   -
     title: "Recursos en Salud"
     url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
