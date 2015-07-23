@@ -6,7 +6,7 @@ title: Mapa Digital de México
 date: 2015-07-22
 cover: apps/mapadigital/mapadigital-cover.png
 screenshots:
-  - apps/mapadigital/mapadigital1.png
+  - apps/mapadigital/mapadigital-cover.png
   - apps/mapadigital/mapadigital2.png
   - apps/mapadigital/mapadigital3.png
   - apps/mapadigital/mapadigital4.png
