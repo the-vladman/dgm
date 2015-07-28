@@ -13,7 +13,7 @@ screenshots:
   - apps/mapadigital/mapadigital5.png
 
 links:
-  web: http://www.inegi.org.mx/geo/contenidos/MapaDigital/exe/Instalar_MapaDigital_6.1.0.exe
+  web: http://www.inegi.org.mx/geo/contenidos/mapadigital/
 
 datasets:
 
