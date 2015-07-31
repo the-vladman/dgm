@@ -6,7 +6,7 @@ title: Obra Pública Abierta
 date: 2015-06-25
 cover: apps/obraabierta/obraabierta1.png
 screenshots:
-  - apps/obraabierta/screens/obraabierta1.png
+  - apps/obraabierta/obraabierta1.png
 
 links:
   web: http://www.transparenciapresupuestaria.gob.mx/es/PTP/Obra_Publica_Abierta
