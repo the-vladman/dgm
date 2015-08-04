@@ -26,4 +26,4 @@ Para construir este listado de manera conjunta con la ciudadanía, publicamos la
 
 Este ejercicio estará abierto del **18 de marzo, al 18 de abril de 2015**, y tu opinión ayudará a definir los siguientes pasos y procesos de la iniciativa de Datos Abiertos en México.
 
-**Te invitamos a participar en esta iniciativa dando click [aquí](http://www.gob.mx/participa/docs/infraestructura-estrategica-de-datos-abiertos).**
+**Te invitamos a participar en esta iniciativa dando click [aquí](http://www.gob.mx/consulta/docs/infraestructura-estrategica-de-datos-abiertos).**
