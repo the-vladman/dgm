@@ -7,7 +7,7 @@ date: 2015-08-07
 
 links:
   playStore: N/A
-  appleStore:https://itunes.apple.com/mx/app/mural-graffiti/id501771686?mt=8
+  appleStore: https://itunes.apple.com/mx/app/mural-graffiti/id501771686?mt=8
 
 section: gov_apps
 source: App Store en iTunes
