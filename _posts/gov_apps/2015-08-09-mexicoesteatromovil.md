@@ -1,8 +1,6 @@
 ---
 published: true
-
-title: 
-México es Teatro Móvil
+title: México es Teatro Móvil
 app_author: CONACULTA
 date: 2015-08-07
 
