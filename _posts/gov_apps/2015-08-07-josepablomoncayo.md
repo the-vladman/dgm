@@ -7,7 +7,7 @@ date: 2015-08-07
 
 links:
   playStore: https://play.google.com/store/apps/details?id=com.ironbit.moncayo
-  appleStore:https://itunes.apple.com/mx/app/jose-pablo-moncayo-para-ipad/id534628755?mt=8
+  appleStore: https://itunes.apple.com/mx/app/jose-pablo-moncayo-para-ipad/id534628755?mt=8
 
 section: gov_apps
 source: App Store en iTunes
