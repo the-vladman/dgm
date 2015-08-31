@@ -3,13 +3,48 @@
 /*********************************
     GENERAL STYLES
 *********************************/
-html, body              { margin: 0; font-size: 16px; line-height: 24px; font-family: "Open Sans"; }
-a                       { cursor: pointer; }
-a:hover                 { text-decoration: none; }
+html, body                                  { margin: 0; font-size: 16px; line-height: 1.6em; font-family: "Open Sans"; }
+a                                           { cursor: pointer; font-size: 12px; }
+a:hover                                     { text-decoration: none; }
+.container-fluid                            { max-width: 1100px; }
+.btn                                        { padding: 10px; border: none; border-radius: 0; }
+.btn-default                                { background-color: #9b9b9b; color: #fff; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+
+/*********************************
+    FONTS STYLES
+*********************************/
+h3                                          { font-size: 26px; line-height: 1.6em; font-weight: 300; }
 
 /*********************************
     BANNER SECTION STYLES
 *********************************/
-#banner                 { background-color: #0c9; padding: 30px 0; text-align: center; }
-#banner p               { font-weight: 300; color: #fff; }
-#banner a               { font-size: 12px; font-weight: bold; text-transform: uppercase; color: #009c7d; }
+#banner                                     { background-color: #0c9; padding: 30px 0; text-align: center; }
+#banner p                                   { font-weight: 300; color: #fff; }
+#banner a                                   { font-size: 12px; font-weight: bold; text-transform: uppercase; color: #009c7d; }
+
+/*********************************
+    HIGHLIGHTS SECTION STYLES
+*********************************/
+#highlights                                 { padding: 50px 0; background: url(../img/bg-banner.png) no-repeat; background-size: cover; position: relative; }
+#highlights .overlay                        { width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(0,0,0,0.6); }
+#highlights h3                              { color: #fff; }
+#highlights h5                              { color: #fff; text-transform: uppercase; font-size: 12px; font-weight: 300; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #fff; }
+#highlights p                               { font-size: 12px; font-weight: 200; color: #fff; line-height: 22px; }
+#highlights a                               { font-weight: 300; color: #fff; }
+#highlights form                            { width: 100%; margin-bottom: 10px; overflow: hidden; }
+#highlights .form-group                     { width: 80%; float: left; }
+#highlights input                           { width: 100%; height: 37.15px; background-color: rgba(0,0,0,0.3); font-style: italic; font-size: 12px; font-weight: 300; color: #fff; border-radius: 0; border: none; }
+#highlights button                          { width: 20%; float: left; }
+#highlights .nav-tabs                       { border: none; margin-bottom: 10px; }
+#highlights .nav-tabs > li                  { margin-right: 15px; }
+#highlights .nav-tabs > li:last-child       { margin-right: 0; }
+#highlights .nav-tabs > li > a              { padding: 10px 0; background-color: transparent; color: #adabab; border: none; border-radius: 0; font-size: 12px; font-weight: 300; text-transform: uppercase; }
+#highlights .nav-tabs > li.active > a,
+#highlights .nav-tabs > li > a:hover        { color: #fff; }
+#highlights .tab-content ul                 { padding: 0; list-style: none; }
+#highlights .tab-content ul > li            { padding: 7px 10px; background-color: rgba(0,0,0,0.3); }
+#highlights .tab-content ul > li > a        { display: block; font-size: 11px; text-transform: uppercase; color: #fff; }
+#highlights .tool p                         { margin-bottom: 20px; }
+#highlights .tool .btn                      { margin-bottom: 20px; padding: 10px 20px; font-weight: 600; }
+#highlights .tool .btn:hover                { color: #333; }
+#highlights .tab-content ul > li:nth-child(2)   { background-color: rgba(0,0,0,0.4); }
