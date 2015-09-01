@@ -5,6 +5,7 @@
 *********************************/
 html, body                                  { margin: 0; font-size: 16px; line-height: 1.6em; font-family: "Open Sans"; }
 a                                           { cursor: pointer; font-size: 12px; }
+img                                         { width: 100%; }
 a:hover                                     { text-decoration: none; }
 a:focus, a:active                           { border: none; outline: 0; }
 .container-fluid                            { max-width: 1100px; }
@@ -74,3 +75,14 @@ h3                                          { font-size: 26px; line-height: 1.6e
 #categories #item-culture:hover             { background-image: url(../img/ic-culture-hover.png); }
 #categories #item-tourism                   { background-image: url(../img/ic-tourism.png); }
 #categories #item-tourism:hover             { background-image: url(../img/ic-tourism-hover.png); }
+
+/*********************************
+    INFO SECTION STYLES
+*********************************/
+#info                                       { padding: 100px 0; }
+#info .widget                               { text-align: center; }
+#info .widget > a                           { font-size: 16px; font-weight: 600; color: #0c9; text-transform: uppercase; }
+#info .widget > a:hover                     { font-weight: 700; }
+#info .widget > a > span                    { display: block; margin-top: 30px; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #d8d8d8; }
+#info .widget > a > img                     { width: 60%; }
+#info .widget > p                           { margin-bottom: 0; padding: 0 25px; font-size: 14px; font-weight: 300; color: #595959; }
