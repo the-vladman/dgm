@@ -86,3 +86,18 @@ h3                                          { font-size: 26px; line-height: 1.6e
 #info .widget > a > span                    { display: block; margin-top: 30px; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #d8d8d8; }
 #info .widget > a > img                     { width: 60%; }
 #info .widget > p                           { margin-bottom: 0; padding: 0 25px; font-size: 14px; font-weight: 300; color: #595959; }
+
+/*********************************
+    SLIDER SECTION STYLES
+*********************************/
+#slider                                     { margin-bottom: 100px; }
+.carousel-caption                           { padding: 20px 30px; background-color: #fff; bottom: 50%; left: 25%; right: 25%; color: #303030; text-align: left; text-shadow: none; transform: translateY(50%); }
+.carousel-caption h3                        { margin-top: 10px; margin-bottom: 30px; font-size: 26px; line-height: 40px; font-weight: 300; color: #595959; }
+.carousel-caption p                         { font-size: 16px; line-height: 28px; font-weight: 300; }
+.carousel-caption .breadcrumb               { margin-bottom: 0; padding: 0; background-color: transparent; font-size: 12px; font-weight: 600; color: #ababab; text-transform: uppercase; }
+.carousel-caption .breadcrumb > a           { color: #0c9; }
+.carousel-indicators                        { bottom: -60px; }
+.carousel-indicators li                     { width: 20px; height: 20px; margin: 0; margin-left: 10px; background-color: #d8d8d8; border: none; }
+.carousel-indicators li:first-child         { margin-left: 0; }
+.carousel-indicators .active                { width: 20px; height: 20px; margin-left: 10px; background-color: #0c9; }
+.carousel-indicators .active:first-child    { margin-left: 0; }
