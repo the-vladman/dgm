@@ -1,8 +1,8 @@
 ---
-published: true
+published: false
 layout:   post
 title:    "El tercer Informe de Gobierno en Datos Abiertos"
-
+featured: true
 tagline:  "entender lo que está funcionando, y cambiar lo que debemos"
 author:   Presidencia
 date:     2015-09-02 12:09:00 -0500
