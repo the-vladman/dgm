@@ -1,0 +1,24 @@
+{
+  "name": "dgm-footer",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dgm-footer.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1"
+  },
+  "keywords": [
+    "datos.gob.mx",
+    "dgm",
+    "dgm-footer"
+  ],
+  "homepage": "https://github.com/mxabierto/dgm-footer",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "7600a953bf88b0c7771c67dff9cfabc6a639a8e0"
+  },
+  "_source": "git://github.com/mxabierto/dgm-footer.git",
+  "_target": "^0.0.1",
+  "_originalSource": "mxabierto/dgm-footer"
+}
