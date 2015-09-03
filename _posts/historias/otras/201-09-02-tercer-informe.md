@@ -64,7 +64,7 @@ Los conjuntos de datos incluidos en el eje México en Paz, incluyen datos que no
 *Comprende delitos culposos y dolosos.*
 
 
-[Consulta los datos de México en Paz](http://busca.datos.gob.mx/#/conjuntos/mexico_en_paz--tercer-informe)
+[Consulta los datos de México en Paz](http://busca.datos.gob.mx/#/conjuntos/mexico-en-paz--tercer-informe)
 
 
 ###México Incluyente
@@ -80,7 +80,7 @@ Esto implica hacer efectivo el ejercicio de los derechos sociales de todos los m
 
 *Considera  a  2011  como  año  de  línea  base.  Resulta  de la  división  del número  de  defunciones de niños menores  de  un año de edad en un año específico, entre el total de nacidos  vivos  en  ese  mismo  año,  multiplicado  por  1,000.  Mide indirectamente la efectividad de las acciones de prevención y atención oportuna de enfermedades en los menores de un año. Para 2014 cifra estimada.*
 
-[Consulta los datos de México Incluyente](http://busca.datos.gob.mx/#/conjuntos/mexico_incluyente--tercer-informe)
+[Consulta los datos de México Incluyente](http://busca.datos.gob.mx/#/conjuntos/mexico-incluyente--tercer-informe)
 
 
 ###México con Educación de Calidad
@@ -97,7 +97,7 @@ Un México con Educación de Calidad propone implementar políticas de estado qu
 
 *Este  indicador  expresa  el  número de  alumnos  matriculados  superior,  al inicio del ciclo escolar, por cada 100 individuos, se considera la matrícula escolarizada y no escolarizada y la población de 18 a 22 años de edad.*
 
-[Consulta los datos de México con Educación de Calidad](http://busca.datos.gob.mx/#/conjuntos/mexico_con_educacion_de_calidad--tercer-informe)
+[Consulta los datos de México con Educación de Calidad](http://busca.datos.gob.mx/#/conjuntos/mexico-con-educacion-de-calidad--tercer-informe)
 
 
 ###México Próspero
@@ -109,7 +109,7 @@ Un México Próspero que detone el crecimiento sostenido de la productividad en 
 
 
 
-[Consulta los datos de México Próspero](http://busca.datos.gob.mx/#/conjuntos/mexico_prospero--tercer-informe)
+[Consulta los datos de México Próspero](http://busca.datos.gob.mx/#/conjuntos/mexico-prospero-tercer-informe)
 
 ###México con Responsabilidad Global
 
@@ -124,5 +124,5 @@ Un México con Responsabilidad Global buscará ampliar y fortalecer la presencia
 
 *Se refiere a los extranjeros que se internan temporalmente para transitar o permanecer en el país por menos de 180 días.*
 
-[Consulta los datos de México con Responsabilidad Global](http://busca.datos.gob.mx/#/conjuntos/mexico_con_responsabilidad_global--tercer-informel)
+[Consulta los datos de México con Responsabilidad Global](http://busca.datos.gob.mx/#/conjuntos/mexico-con-responsabilidad-global--tercer-informe)
 
