@@ -54,7 +54,7 @@ En México, debemos fortalecer nuestro pacto social, reforzar la confianza en el
 
 Aspiramos a una sociedad donde todas las personas puedan ejercer plenamente sus derechos, que participen activamente y cumplan sus obligaciones en el marco de una democracia plena; y que, por lo mismo, ninguna persona en México se enfrente a la falta de seguridad, a un inadecuado Sistema de Justicia Penal o a la opacidad en la rendición de cuentas.
 
-Los conjuntos de datos incluidos en el eje México en Paz, incluyen datos que nos ayudan a mejor entender la situacion nacional en indicadores como:lo
+Los conjuntos de datos incluidos en el eje México en Paz, incluyen datos que nos ayudan a mejor entender la situacion nacional en indicadores como:
 
 
 ![Homicidios]({{ site.url | append: site.baseurl }}/assets/images/historias/tercer-informe/graficas-informe-01.png)
