@@ -104,6 +104,14 @@ h3                                          { font-size: 26px; line-height: 1.6e
 .carousel-indicators .active:first-child    { margin-left: 0; }
 
 /*********************************
+    CATEGORY SECTION STYLES
+*********************************/
+#category-header h1                         { margin-bottom: 20px; margin-left: 10px; font-size: 22px; font-weight: bold; text-transform: uppercase; color: #0c9; }
+#category-header p                          { margin-left: 10px; font-size: 14px; }
+.header-icon                                { height: 110px; padding: 20px; background-color: #0c9; }
+.header-icon img                            { position: relative; top: 50%; transform: translateY(-50%); }
+
+/*********************************
     TWEETS SECTION STYLES
 *********************************/
 #tweets                                     { padding-bottom: 40px; }
