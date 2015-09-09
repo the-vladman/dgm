@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+        <title>DGM</title>
+
+        <!-- Site required Polymer components -->
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+        <link rel="import" href="bower_components/polymer/polymer.html">
+        <link rel="import" href="bower_components/dgm-navbar/dgm-navbar.html">
+        <link rel="import" href="bower_components/dgm-footer/dgm-footer.html">
+
+        <!-- Used libraries -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body unresolved>
+        <dgm-navbar></dgm-navbar>
+        <section id="subscribe">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                        <p>¿Te interesa saber más sobre <a href="#">datos.gob.mx</a>?</p>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                        <form class="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="email" placeholder="Correo electrónico">
+                            </div>
+                            <button type="submit" class="btn btn-default">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <dgm-footer></dgm-footer>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/site.js"></script>
+    </body>
+</html>
