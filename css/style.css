@@ -112,6 +112,16 @@ h3                                          { font-size: 26px; line-height: 1.6e
 .header-icon img                            { position: relative; top: 50%; transform: translateY(-50%); }
 
 /*********************************
+    CATEGORY MAP SECTION STYLES
+*********************************/
+#category-map                               { position: relative; }
+#map-description                            { width: 440px; height: auto; padding: 20px 30px; background-color: rgba(0,0,0,0.6); position: absolute; bottom: 30px; right: 30px; }
+#map-description h3                         { margin-top: 0; margin-bottom: 20px; padding-bottom: 20px; font-size: 12px; font-size: 300; color: #fff; border-bottom: 1px solid #fff; text-transform: uppercase; }
+#map-description p                          { margin-bottom: 0; color: #fff; font-weight: 300; }
+#map-description strong                     { font-weight: 600; }
+#map-description .btn-close                 { font-size: 22px; font-weight: 300; color: #fff; position: absolute; right: 35px; top: 13px; cursor: pointer; }
+
+/*********************************
     TWEETS SECTION STYLES
 *********************************/
 #tweets                                     { padding-bottom: 40px; }
