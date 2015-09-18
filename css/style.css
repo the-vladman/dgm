@@ -161,9 +161,12 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 /*********************************
     TOOLS STYLES
 *********************************/
-.tool-item                                  { margin-bottom: 50px; }
-.tool-item .inner                           { background-color: #eee; padding: 15px 20px; }
-.tool-item > .inner > h4                    { margin-top: 0; margin-bottom: 10px; font-size: 14px; font-weight: 500; color: #595959; }
+.tool-item,
+.impact-item                                { margin-bottom: 50px; }
+.tool-item > .inner,
+.impact-item > .inner                       { background-color: #eee; padding: 15px 20px; }
+.tool-item > .inner > h4,
+.impact-item > .inner > h4                  { margin-top: 0; margin-bottom: 10px; font-size: 14px; font-weight: 600; color: #595959; }
 .tool-item > .inner > a                     { display: inline-block; margin-right: 10px; }
 .tool-item > .inner > a:last-child          { margin-right: 0; }
 
