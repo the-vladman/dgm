@@ -8,7 +8,7 @@ tagline: "La respuesta a los desastres naturales de los últimos años ha dejado
 author: "Rodolfo Wilhelmy"
 date: 2015-09-17 23:00:00 -0500
 cover: "historias/tecnologia-humanitaria/tecnologia-humanitaria--1024x320.jpg"
-cover_photo: "historias/tecnologia-humanitaria/tecnologia-humanitaria--1280x400.jpg"
+cover_photo: "historias/tecnologia-humanitaria/tecnologia-humanitaria--1280x460.jpg"
 datasets:
   -
     title: "Avisos de ciclón tropical"
