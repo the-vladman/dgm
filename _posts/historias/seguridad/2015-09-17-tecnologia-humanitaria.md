@@ -32,7 +32,7 @@ La respuesta a los desastres naturales de los últimos años ha dejado claro que
 
 En la [Estrategia Digital Nacional](http://www.presidencia.gob.mx/edn/) estamos desarrollando proyectos en esta linea, que van desde la [publicación de avisos de ciclones](http://datos.gob.mx/historias/seguridad/avisos-de-ciclones-tropicales.html) en formatos abiertos, hasta la coordinación con diferentes sectores a través de herramientas digitales.
 
-Y este próximo sábado 19 de septiembre nos estaremos sumando al [#SimulacroMX organizado por Protección Civil](http://www.gob.mx/segob/articulos/sabes-que-hacer-en-el-momento-de-un-sismo-ponte-a-prueba-participa-en-simulacromx), mostrando y probando las herramientas digitales que estamos adoptando para promover una mejor respuesta a emergencias.
+Este sábado 19 de septiembre, #MéxicoDigital se suma al [#SimulacroMX organizado por Protección Civil](http://www.gob.mx/segob/articulos/sabes-que-hacer-en-el-momento-de-un-sismo-ponte-a-prueba-participa-en-simulacromx), mostrando y probando las herramientas digitales que estamos adoptando para promover una mejor respuesta a emergencias.
 
 Durante el evento:  
 
