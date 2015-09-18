@@ -7,8 +7,8 @@ title: "La tecnología humanitaria que está transformando la respuesta a desast
 tagline: "La respuesta a los desastres naturales de los últimos años ha dejado claro que la tecnología y los datos abiertos son clave para mejorar la atención a emergencias."
 author: "Rodolfo Wilhelmy"
 date: 2015-09-17 23:00:00 -0500
-cover: "historias/avisos-de-ciclones-tropicales/avisos-de-ciclones-tropicales_cover_photo-1284x460.jpg"
-cover_photo: "historias/avisos-de-ciclones-tropicales/avisos-de-ciclones-tropicales_cover_photo-1284x460.jpg"
+cover: "historias/tecnologia-humanitaria/tecnologia-humanitaria--1024x320.jpg"
+cover_photo: "historias/tecnologia-humanitaria/tecnologia-humanitaria--1280x400.jpg"
 datasets:
   -
     title: "Avisos de ciclón tropical"
@@ -41,4 +41,10 @@ Durante el evento:
 * Realizaremos un ejercicio de [Mapeo Humanitario con la comunidad de OpenStreetMap](http://wiki.openstreetmap.org/wiki/ES:Mexico_Earhquake_Drill_2015) en el cual, a través de imágenes satelitales y excursiones en campo, actualizaremos el mapa de las regiones afectadas durante el simulacro.
 
 Súmate al [#SimulacroMX](https://twitter.com/search?src=typd&q=SimulacroMX), asiste a los talleres, participa en el simulacro, y forma parte de la nueva generación de ayuda humanitaria del país.
+
+**Imágenes**
+
+Portada mostrando a Kathmandu Living Labs obtenida de [kathmandulivinglabs.org](http://kathmandulivinglabs.org/blog/wp-content/uploads/2015/04/IMG_1307-1024x768.jpg).
+
+Mapa de la Ciudad de México obtenido de [openstreetmap.org](http://www.openstreetmap.org/#map=13/19.4297/-99.1595&layers=H).
 
