@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+        <title>DGM</title>
+
+        <!-- Site required Polymer components -->
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+        <link rel="import" href="bower_components/polymer/polymer.html">
+        <link rel="import" href="bower_components/dgm-navbar/dgm-navbar.html">
+        <link rel="import" href="bower_components/dgm-footer/dgm-footer.html">
+
+        <!-- Used libraries -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body unresolved class="category">
+        <dgm-navbar></dgm-navbar>
+        <section id="category-header" class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 header-icon">
+                    <img src="img/ic-health-white.png" />
+                </div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                    <h1>Salud</h1>
+                    <p>Aquí encontrarás datos de salud.</p>
+                </div>
+            </div>
+        </section>
+        <section id="category-map">
+            <img src="img/category-map.png" />
+            <div id="map-description">
+                <span class="btn-close">x</span>
+                <h3>Herramienta</h3>
+                <p><strong>Mortalidad Materna en México</strong></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et consectetur sapien. Nunc cursus porta justo, non lobortis mauris consequat eget.</p>
+            </div>
+        </section>
+        <section id="category-data" class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h3>Datos</h3>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#tab-recents" aria-controls="tab-recents" role="tab" data-toggle="tab">Recientes</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab-downloads" aria-controls="tab-downloads" role="tab" data-toggle="tab">Más Descargados</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="tab-recents">
+                                <table class="data">
+                                    <thead>
+                                        <tr>
+                                            <th><span class="glyphicon glyphicon-chevron-down"></span>Nombre</th>
+                                            <th width="20%"><span class="glyphicon glyphicon-chevron-down"></span>Dependencia</th>
+                                            <th width="15%"><span class="glyphicon glyphicon-chevron-down"></span>Fecha</th>
+                                            <th width="10%"><span class="glyphicon glyphicon-chevron-down"></span>Formato</th>
+                                            <th width="10%"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT... POPULAR</td>
+                                            <td>Secretaría de Salud</td>
+                                            <td>25/nov/2015</td>
+                                            <td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td>
+                                            <td class="ic-dataset"><img src="img/ic-dataset.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT... POPULAR</td>
+                                            <td>Secretaría de Salud</td>
+                                            <td>25/nov/2015</td>
+                                            <td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td>
+                                            <td class="ic-dataset"><img src="img/ic-dataset.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT... POPULAR</td>
+                                            <td>Secretaría de Salud</td>
+                                            <td>25/nov/2015</td>
+                                            <td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td>
+                                            <td class="ic-dataset"><img src="img/ic-dataset.png"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a class="load-more" href="#">Ver más datos</a>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="tab-downloads">
+                                <table class="data">
+                                    <thead>
+                                        <tr>
+                                            <th><span class="glyphicon glyphicon-chevron-down"></span>Nombre</th>
+                                            <th width="20%"><span class="glyphicon glyphicon-chevron-down"></span>Dependencia</th>
+                                            <th width="15%"><span class="glyphicon glyphicon-chevron-down"></span>Fecha</th>
+                                            <th width="10%"><span class="glyphicon glyphicon-chevron-down"></span>Formato</th>
+                                            <th width="10%"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT... POPULAR</td>
+                                            <td>Secretaría de Salud</td>
+                                            <td>25/nov/2015</td>
+                                            <td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td>
+                                            <td class="ic-dataset"><img src="img/ic-dataset.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT... POPULAR</td>
+                                            <td>Secretaría de Salud</td>
+                                            <td>25/nov/2015</td>
+                                            <td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td>
+                                            <td class="ic-dataset"><img src="img/ic-dataset.png"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>EMPRESAS PRODUCTORAS DE MINERALES METÁLICOS Y NO METÁLICOS, EMBAJADAS, INSTIT... POPULAR</td>
+                                            <td>Secretaría de Salud</td>
+                                            <td>25/nov/2015</td>
+                                            <td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td>
+                                            <td class="ic-dataset"><img src="img/ic-dataset.png"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a class="load-more" href="#">Ver más datos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="category-tools" class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h3>Herramientas</h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 tool-item">
+                    <img src="img/tool-map.png" />
+                    <div class="inner">
+                        <h4>Entidades Federativas</h4>
+                        <a href="#"><span class="app-icon icon-web"></span></a>
+                        <a href="#"><span class="app-icon icon-android"></span></a>
+                        <a href="#"><span class="app-icon icon-ios"></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 tool-item">
+                    <img src="img/tool-map.png" />
+                    <div class="inner">
+                        <h4>Obra Pública Abierta</h4>
+                        <a href="#"><span class="app-icon icon-web"></span></a>
+                        <a href="#"><span class="app-icon icon-android"></span></a>
+                        <a href="#"><span class="app-icon icon-ios"></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 tool-item">
+                    <img src="img/tool-map.png" />
+                    <div class="inner">
+                        <h4>Cartografía Minera Digitalizada</h4>
+                        <a href="#"><span class="app-icon icon-web"></span></a>
+                        <a href="#"><span class="app-icon icon-android"></span></a>
+                        <a href="#"><span class="app-icon icon-ios"></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="category-impact" class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h3>Impacto</h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 impact-item">
+                    <img src="img/impact-item.png" />
+                    <div class="inner">
+                        <h4>Mortalidad Materna en México</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 impact-item">
+                    <img src="img/impact-item.png" />
+                    <div class="inner">
+                        <h4>Datos Abiertos</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 impact-item">
+                    <img src="img/impact-item.png" />
+                    <div class="inner">
+                        <h4>Enorgulleciendo a nuestras madres</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="subscribe">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                        <p>¿Te interesa saber más sobre <a href="#">datos.gob.mx</a>?</p>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                        <form class="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="email" placeholder="Correo electrónico">
+                            </div>
+                            <button type="submit" class="btn btn-default">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <dgm-footer></dgm-footer>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/site.js"></script>
+    </body>
+</html>

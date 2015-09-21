@@ -17,6 +17,44 @@ a:focus, a:active                           { border: none; outline: 0; }
     FONTS STYLES
 *********************************/
 h3                                          { font-size: 26px; line-height: 1.6em; font-weight: 300; color: #595959; }
+.label                                      { font-size: 12px; font-weight: 700; color: #fff; text-transform: uppercase; border-radius: 0; }
+.label[data-format="csv"]                   { background-color: #ffd100; }
+.label[data-format="klm"]                   { background-color: #474747; }
+a.load-more                                 { text-transform: uppercase; font-size: 12px; font-weight: 300; color: #00d2a9; }
+a.load-more:hover                           { font-weight: 600; }
+
+/*********************************
+    TABLES STYLES
+*********************************/
+table                                       { width: 100%; }
+table > thead > tr > th                     { font-size: 11px; font-weight: 700; color: #595959; }
+table > thead > tr > th > .glyphicon        { color: #d8d8d8; margin-right: 5px; position: relative; top: 2px; }
+table.data                                  { margin-top: -10px; border-spacing: 0 20px; border-collapse: separate; }
+table.data > tbody > tr > td                { padding: 10px 15px; background-color: #eee; font-size: 10px; font-weight: 300; color: #595959; }
+table.data > tbody > tr > td.ic-dataset     { background-color: #d7d7d7; text-align: center; vertical-align: bottom; }
+table.data > tbody > tr > td.ic-dataset img { width: 20px; }
+
+/*********************************
+    FONTS STYLES
+*********************************/
+.nav-tabs                                   { border: none; margin-bottom: 10px; }
+.nav-tabs > li                              { margin-right: 20px; }
+.nav-tabs > li:last-child                   { margin-right: 0; }
+.nav-tabs > li.active > a,
+.nav-tabs > li:hover > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover             { border: none; background-color: transparent; color: #00d2a9; }
+.nav-tabs > li.active > a                   { color: #00d2a9; }
+.nav-tabs > li > a                          { padding: 10px 0; background-color: transparent; font-size: 12px; font-weight: 600; color: #dfdfdf; text-transform: uppercase; border: none; border-radius: 0; }
+
+/*********************************
+    ICONS STYLES
+*********************************/
+.app-icon                                   { display: inline-block; width: 20px; height: 20px; margin-right: 10px; background-repeat: no-repeat; background-size: contain; background-position: 50% 50%; }
+.app-icon:last-child                        { margin-right: 0; }
+.icon-web                                   { background-image: url(../img/ic-web.png); }
+.icon-android                               { background-image: url(../img/ic-android.png); }
+.icon-ios                                   { background-image: url(../img/ic-ios.png); }
 
 /*********************************
     BANNER SECTION STYLES
@@ -38,10 +76,7 @@ h3                                          { font-size: 26px; line-height: 1.6e
 #highlights .form-group                     { width: 80%; float: left; }
 #highlights input                           { width: 100%; height: 37.15px; background-color: rgba(0,0,0,0.3); font-style: italic; font-size: 12px; font-weight: 300; color: #fff; border-radius: 0; border: none; }
 #highlights button                          { width: 20%; float: left; }
-#highlights .nav-tabs                       { border: none; margin-bottom: 10px; }
-#highlights .nav-tabs > li                  { margin-right: 15px; }
-#highlights .nav-tabs > li:last-child       { margin-right: 0; }
-#highlights .nav-tabs > li > a              { padding: 10px 0; background-color: transparent; color: #adabab; border: none; border-radius: 0; font-size: 12px; font-weight: 300; text-transform: uppercase; }
+#highlights .nav-tabs > li > a              { color: #adabab; font-weight: 300; }
 #highlights .nav-tabs > li.active > a,
 #highlights .nav-tabs > li > a:hover        { color: #fff; }
 #highlights .tab-content ul                 { padding: 0; list-style: none; }
@@ -102,6 +137,38 @@ h3                                          { font-size: 26px; line-height: 1.6e
 .carousel-indicators li:first-child         { margin-left: 0; }
 .carousel-indicators .active                { width: 20px; height: 20px; margin-left: 10px; background-color: #0c9; }
 .carousel-indicators .active:first-child    { margin-left: 0; }
+
+/*********************************
+    CATEGORY SECTION STYLES
+*********************************/
+#category-header h1                         { margin-bottom: 20px; margin-left: 10px; font-size: 22px; font-weight: bold; text-transform: uppercase; color: #0c9; }
+#category-header p                          { margin-left: 10px; font-size: 14px; }
+.header-icon                                { height: 110px; padding: 20px; background-color: #0c9; }
+.header-icon img                            { position: relative; top: 50%; transform: translateY(-50%); }
+
+/*********************************
+    CATEGORY MAP SECTION STYLES
+*********************************/
+.category h3                                { margin-bottom: 30px; padding-bottom: 15px; font-size: 12px; font-weight: 600; color: #00d2a9; text-transform: uppercase; border-bottom: 1px solid #d8d8d8; }
+#category-map                               { position: relative; }
+#map-description                            { width: 440px; height: auto; padding: 20px 30px; background-color: rgba(0,0,0,0.6); position: absolute; bottom: 30px; right: 30px; }
+#map-description h3                         { margin-top: 0; margin-bottom: 20px; padding-bottom: 20px; font-size: 12px; font-size: 300; color: #fff; border-bottom: 1px solid #fff; text-transform: uppercase; }
+#map-description p                          { margin-bottom: 0; color: #fff; font-weight: 300; }
+#map-description strong                     { font-weight: 600; }
+#map-description .btn-close                 { font-size: 22px; font-weight: 300; color: #fff; position: absolute; right: 35px; top: 13px; cursor: pointer; }
+#category-data                              { margin-bottom: 30px; }
+
+/*********************************
+    TOOLS STYLES
+*********************************/
+.tool-item,
+.impact-item                                { margin-bottom: 50px; }
+.tool-item > .inner,
+.impact-item > .inner                       { background-color: #eee; padding: 15px 20px; }
+.tool-item > .inner > h4,
+.impact-item > .inner > h4                  { margin-top: 0; margin-bottom: 10px; font-size: 14px; font-weight: 600; color: #595959; }
+.tool-item > .inner > a                     { display: inline-block; margin-right: 10px; }
+.tool-item > .inner > a:last-child          { margin-right: 0; }
 
 /*********************************
     TWEETS SECTION STYLES
