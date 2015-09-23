@@ -253,17 +253,17 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 .resource-item .item-hover a:first-child,
 .navigation-item .item-hover a:first-child  { color: #fff; }
 .navigation-item .item-hover p.first        { opacity: 0; }
-.section-navigation                         { margin-top: 40px; overflow: hidden; list-style: none; }
+.section-navigation                         { margin-top: 40px; margin-bottom: 0; overflow: hidden; list-style: none; }
 .section-navigation li                      { float: left; }
 .section-navigation.cols-3 li               { width: 33.3333%; }
 .section-navigation.cols-4 li               { width: 25%; height: 45px; }
-.section-navigation li a                    { display: block; height: 100%; margin: 0 10px; padding-bottom: 10px; font-size: 10px; text-transform: uppercase; color: #595959; border-bottom: 3px solid #595959; }
+.section-navigation li a                    { display: block; height: 48px; margin: 0 10px; padding-bottom: 10px; font-size: 10px; text-transform: uppercase; color: #595959; border-bottom: 3px solid #595959; }
 .section-navigation.cols-4 li a             { padding-bottom: 0; position: relative; bottom: 3px; }
 .section-navigation li:first-child a        { margin-left: 0; }
 .section-navigation li:last-child a         { margin-right: 0; }
 .section-navigation li:hover a,
 .section-navigation li.active a             { border-bottom-color: #0c9; }
-.section-navigation li span                 { display: block; }
+.section-navigation li span                 { display: block; line-height: 14px; }
 .section-navigation li .highlight           { font-weight: bold; text-transform: none; }
 .section-navigation li:hover .highlight,
 .section-navigation li.active .highlight    { color: #0c9; }
