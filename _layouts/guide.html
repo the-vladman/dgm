@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<main id="main-content" class="guide" tabindex="-1" role="main" aria-label="Contenido principal">
+    <div class="container-fluid">
+        {% include guide-breadcrumb.html %}
+        <div class="row">
+            {% include guide-sidebar.html %}
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</main>
