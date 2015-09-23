@@ -15,15 +15,13 @@ active: all
 intro_category: true
 ---
 
-<div class="col-inner">
-    {% assign posts = site.posts | where: 'section', 'intro' | where: 'published', true %}
-    {% for post in posts %}
-        <h3>{{ post.title }}</h3>
-        <div class="intro section-content">
-            {{ post.content }}
-        </div>
-        <div class="section-links">
-            <a href="{{ "/planea" | prepend: site.baseurl }}" class="btn highlight">Siguiente</a>
-        </div>
-    {% endfor %}
-</div>
+{% assign posts = site.posts | where: 'category', 'intro' | where: 'published', true %}
+{% for post in posts %}
+    <h3>{{ post.title }}</h3>
+    <div class="intro section-content">
+        {{ post.content }}
+    </div>
+    <div class="section-links">
+        <a href="{{ "/guia/planea" | prepend: site.baseurl }}" class="btn highlight">Siguiente</a>
+    </div>
+{% endfor %}
