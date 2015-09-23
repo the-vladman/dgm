@@ -221,6 +221,7 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 .guide h4, h5                               { font-size: 14px; font-weight: bold; color: #333; }
 .guide h5                                   { color: #595959; }
 .guide .btn                                 { color: #fff; }
+.guide .btn-download                        { color: #595959; }
 
 /***********************
     Title Section
