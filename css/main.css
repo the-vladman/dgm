@@ -52,9 +52,9 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 *********************************/
 .app-icon                                   { display: inline-block; width: 20px; height: 20px; margin-right: 10px; background-repeat: no-repeat; background-size: contain; background-position: 50% 50%; }
 .app-icon:last-child                        { margin-right: 0; }
-.icon-web                                   { background-image: url(../img/ic-web.png); }
-.icon-android                               { background-image: url(../img/ic-android.png); }
-.icon-ios                                   { background-image: url(../img/ic-ios.png); }
+.icon-web                                   { background-image: url(../assets/img/ic-web.png); }
+.icon-android                               { background-image: url(../assets/img/ic-android.png); }
+.icon-ios                                   { background-image: url(../assets/img/ic-ios.png); }
 
 /*********************************
     BANNER SECTION STYLES
@@ -66,7 +66,7 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 /*********************************
     HIGHLIGHTS SECTION STYLES
 *********************************/
-#highlights                                 { padding: 50px 0; background: url(../img/bg-banner.png) no-repeat; background-size: cover; position: relative; }
+#highlights                                 { padding: 50px 0; background: url(../assets/img/bg-banner.png) no-repeat; background-size: cover; position: relative; }
 #highlights .overlay                        { width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(0,0,0,0.6); }
 #highlights h3                              { color: #fff; }
 #highlights h5                              { color: #fff; text-transform: uppercase; font-size: 12px; font-weight: 300; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #fff; }
@@ -95,22 +95,22 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 #categories ul > li                         { display: block; width: 12.5%; height: 73px; float: left; text-align: center; }
 #categories li > a                          { display: block; width: 100%; height: 20px; padding-top: 50px; font-size: 12px; color: #595959; text-align: center; background-repeat: no-repeat; background-size: 30%; background-position: 50% 0; }
 #categories li > a:hover                    { color: #0c9; }
-#categories #item-health                    { background-image: url(../img/ic-health.png); }
-#categories #item-health:hover              { background-image: url(../img/ic-health-hover.png); }
-#categories #item-geography                 { background-image: url(../img/ic-geography.png); }
-#categories #item-geography:hover           { background-image: url(../img/ic-geography-hover.png); }
-#categories #item-security                  { background-image: url(../img/ic-security.png); }
-#categories #item-security:hover            { background-image: url(../img/ic-security-hover.png); }
-#categories #item-environment               { background-image: url(../img/ic-environment.png); }
-#categories #item-environment:hover         { background-image: url(../img/ic-environment-hover.png); }
-#categories #item-education                 { background-image: url(../img/ic-education.png); }
-#categories #item-education:hover           { background-image: url(../img/ic-education-hover.png); }
-#categories #item-economy                   { background-image: url(../img/ic-economy.png); }
-#categories #item-economy:hover             { background-image: url(../img/ic-economy-hover.png); }
-#categories #item-culture                   { background-image: url(../img/ic-culture.png); }
-#categories #item-culture:hover             { background-image: url(../img/ic-culture-hover.png); }
-#categories #item-tourism                   { background-image: url(../img/ic-tourism.png); }
-#categories #item-tourism:hover             { background-image: url(../img/ic-tourism-hover.png); }
+#categories #item-health                    { background-image: url(../assets/img/ic-health.png); }
+#categories #item-health:hover              { background-image: url(../assets/img/ic-health-hover.png); }
+#categories #item-geography                 { background-image: url(../assets/img/ic-geography.png); }
+#categories #item-geography:hover           { background-image: url(../assets/img/ic-geography-hover.png); }
+#categories #item-security                  { background-image: url(../assets/img/ic-security.png); }
+#categories #item-security:hover            { background-image: url(../assets/img/ic-security-hover.png); }
+#categories #item-environment               { background-image: url(../assets/img/ic-environment.png); }
+#categories #item-environment:hover         { background-image: url(../assets/img/ic-environment-hover.png); }
+#categories #item-education                 { background-image: url(../assets/img/ic-education.png); }
+#categories #item-education:hover           { background-image: url(../assets/img/ic-education-hover.png); }
+#categories #item-economy                   { background-image: url(../assets/img/ic-economy.png); }
+#categories #item-economy:hover             { background-image: url(../assets/img/ic-economy-hover.png); }
+#categories #item-culture                   { background-image: url(../assets/img/ic-culture.png); }
+#categories #item-culture:hover             { background-image: url(../assets/img/ic-culture-hover.png); }
+#categories #item-tourism                   { background-image: url(../assets/img/ic-tourism.png); }
+#categories #item-tourism:hover             { background-image: url(../assets/img/ic-tourism-hover.png); }
 
 /*********************************
     INFO SECTION STYLES
