@@ -268,7 +268,8 @@ section#about-video                         { margin-bottom: 50px; padding-top: 
 .post-item .inner,
 .tools-item .inner                          { padding-left: 15px; padding-right: 15px; }
 .post-item h5,
-.tools-item h5                              { margin-top: 30px; margin-bottom: 0; font-size: 14px; font-weight: 600; line-height: 20px; color: #474747; }
+.tools-item h5                              { margin-top: 30px; margin-bottom: 0; font-size: 14px; font-weight: 600; line-height: 20px; }
+.post-item h5 > a                           { color: #474747; }
 .post-item h6                               { margin-top: 20px; font-size: 12px; font-weight: 700; color: #aaa; text-transform: uppercase; }
 .post-item p                                { font-size: 12px; font-weight: 300; color: #474747; }
 .post-item p.small                          { font-size: 11px; }
