@@ -1,6 +1,6 @@
 ---
 published: true
-layout: "post-progress"
+layout: post
 title: 'La participación ciudadana en la Política Nacional de Datos Abiertos'
 excerpt: "La participación de los ciudadanos en la vida pública es una de las características definitorias de una democracia cercana y moderna. La co-creación y la co-responsabilidad entre sociedad y gobierno son necesarias."
 date: 2014-04-15

@@ -1,6 +1,6 @@
 ---
 published: true
-layout: "post-progress"
+layout: post
 title: 'LabConDatos: Laboratorio de visualización en ConDatos | MX 2014'
 excerpt: "La Presidencia de la República, Data4 y APPlícate convocaron a siete programadores, siete diseñadores y siete analistas de datos que analizaron y generaron visualizaciones interactivas con Datos Abiertos."
 date: 2014-10-02

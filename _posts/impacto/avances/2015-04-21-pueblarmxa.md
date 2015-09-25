@@ -1,5 +1,5 @@
 ---
-layout: "post-progress"
+layout: post
 published: true
 featured: true
 featured_tagline: 'Avance:'
@@ -8,7 +8,7 @@ excerpt: "En el caso de Puebla, la experiencia en la apertura de datos públicos
 date: 2015-04-20
 cover: "avances/pueblarmxa/pueblarmxa-cover_photo.png"
 cover_photo: "avances/pueblarmxa/pueblarmxa-cover_photo.png"
-permalink: "avances/pueblarmxa.html"
+permalink: "/avances/pueblarmxa.html"
 section: impacto
 sub_section: avances
 category: redmxabierto

@@ -1,5 +1,5 @@
 ---
-layout: "post-progress"
+layout: post
 published: true
 featured: false
 featured_tagline: 'Avance:'
@@ -8,7 +8,7 @@ excerpt: "El día de hoy, con motivo de la publicación Decreto de Datos Abierto
 date: 2015-02-20
 cover: "avances/impulsando/impulsando-cover.png"
 cover_photo: "avances/impulsando/impulsando-cover.png"
-permalink: "avances/impulsa.html"
+permalink: "/avances/impulsa.html"
 section: impacto
 sub_section: avances
 category: noticias

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<section>
+    <p class="cover-image">
+        <img src="{{ "/assets/img/" | append: page.section | append: '/' | append: page.cover | prepend: site.baseurl }}">
+    </p>
+</section>
+<div class="container-fluid fixed post">
+    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+        <h1>{{ page.title }}</h1>
+        <p class="small">{{ page.date | date: '%d %B, %Y' }}</p>
+        {{ content }}
+    </div>
+    {% if page.datasets %}
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 post-datasets">
+            <h5>Conjuntos de datos utilizados</h5>
+            <ul class="datasets-list">
+                {% for dataset in page.datasets %}
+                    <li><a href="{{ dataset.url }}">{{ dataset.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</div>

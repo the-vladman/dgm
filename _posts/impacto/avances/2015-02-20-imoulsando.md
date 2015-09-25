@@ -1,12 +1,12 @@
 ---
 published: false
-layout: "post-progress"
+layout: post
 title: 'Datos.gob.mx: Impulsando los Datos Abiertos en Mexico'
 excerpt: "El día de hoy, con motivo de la publicación Decreto de Datos Abiertos, el Gobierno de la República presenta la Versión 2.0 de la plataforma datos.gob.mx. Esta nueva versión inicia con Datos Abiertos de 29 instituciones, incluyendo dependencias y entidades de la Administración Pública Federal (APF), estados y municipios."
 date: 2015-02-20
 cover: "avances/impulsando/impulsando-cover.png"
 cover_photo: "avances/impulsando-xalapa/impulsando-cover.png"
-permalink: "avances/impulsando.html"
+permalink: "/avances/impulsando.html"
 section: impacto
 sub_section: avances
 category: noticias

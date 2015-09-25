@@ -1,5 +1,5 @@
 ---
-layout: "post-progress"
+layout: post
 published: true
 featured: true
 featured_tagline: 'Avance:'
@@ -8,7 +8,7 @@ excerpt: "El día de hoy, con motivo de la publicación Decreto de Datos Abierto
 date: 2015-03-04
 cover: "avances/participacc/participacc-cover.png"
 cover_photo: "avances/participacc/participacc-cover_photo.png"
-permalink: "avances/participacc.html"
+permalink: "/avances/participacc.html"
 section: impacto
 sub_section: avances
 category: noticias

@@ -1,5 +1,5 @@
 ---
-layout: "post-progress"
+layout: post
 published: true
 featured: true
 featured_tagline: 'Avance:'
@@ -8,7 +8,7 @@ excerpt: "Nos dimos a la tarea de iniciar el proceso de Xalapa Abierta, que dio 
 date: 2015-03-11
 cover: "avances/xalapaproceso/xalapaproceso-cover_photo.jpg"
 cover_photo: "avances/xalapaproceso/xalapaproceso-cover_photo.jpg"
-permalink: "avances/xalapaproceso.html"
+permalink: "/avances/xalapaproceso.html"
 section: impacto
 sub_section: avances
 category: redmxabierto

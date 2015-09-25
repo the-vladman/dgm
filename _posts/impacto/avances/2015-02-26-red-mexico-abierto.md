@@ -1,5 +1,5 @@
 ---
-layout: "post-progress"
+layout: post
 published: true
 featured: false
 featured_tagline: 'Avance:'
@@ -8,7 +8,7 @@ excerpt: "Se se impulsó la creación de la Red México Abierto, una plataforma 
 date: 2015-02-26
 cover: "avances/red-mexico-abierto/red-mexico-abierto-cover.png"
 cover_photo: "avances/red-mexico-abierto/red-mexico-abierto-cover_photo.png"
-permalink: "avances/red-mexico-abierto.html"
+permalink: "/avances/red-mexico-abierto.html"
 section: impacto
 sub_section: avances
 category: noticias

@@ -1,5 +1,5 @@
 ---
-layout: "post-progress"
+layout: post
 published: false
 featured: true
 featured_tagline: 'Avance:'
@@ -8,7 +8,7 @@ excerpt: "Participa en la Infraestructura Estratégica de Datos Abiertos –la b
 date: 2015-03-03
 cover: "avances/infraestructura/infraestructura-cover.png"
 cover_photo: "avances/infraestructura/infraestructura-cover_photo.png"
-permalink: "avances/infraestructura.html"
+permalink: "/avances/infraestructura.html"
 section: impacto
 sub_section: avances
 category: noticias
