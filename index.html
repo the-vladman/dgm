@@ -1,268 +1,247 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-        <title>DGM</title>
+---
+layout: default
+title: datos.gob.mx
+---
 
-        <!-- Site required Polymer components -->
-        <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-        <link rel="import" href="bower_components/polymer/polymer.html">
-        <link rel="import" href="bower_components/dgm-navbar/dgm-navbar.html">
-        <link rel="import" href="bower_components/dgm-footer/dgm-footer.html">
-
-        <!-- Used libraries -->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body unresolved>
-        <dgm-navbar></dgm-navbar>
-        <section id="banner">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">
-                        <p>Genera <u>impacto</u> usando <u>datos</u> y <u>herramientas</u> para detonar innovación y conocimiento</p>
-                        <a>Conoce Más</a>
-                    </div>
-                </div>
+<section id="banner">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">
+                <p>Genera <u>impacto</u> usando <u>datos</u> y <u>herramientas</u> para detonar innovación y conocimiento</p>
+                <a href="#">Conoce Más</a>
             </div>
-        </section>
-        <section id="highlights">
-            <div class="overlay"></div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <h5>Datos</h5>
-                        <p>Descarga Datos Abiertos de</p>
-                        <form class="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="keyword" placeholder="ej. Licitaciones petroleras">
-                            </div>
-                            <button type="submit" class="btn btn-default">Buscar</button>
-                        </form>
-                        <div>
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a href="#tab-recents" aria-controls="tab-recents" role="tab" data-toggle="tab">Más Recientes</a>
+        </div>
+    </div>
+</section>
+<section id="highlights">
+    <div class="overlay"></div>
+    <div class="container-fluid fixed">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <h5>Datos</h5>
+                <p>Descarga Datos Abiertos de</p>
+                <form class="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="keyword" placeholder="ej. Licitaciones petroleras">
+                    </div>
+                    <button type="submit" class="btn btn-default">Buscar</button>
+                </form>
+                <div>
+                    <ul class="nav nav-tabs tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#tab-recents" aria-controls="tab-recents" role="tab" data-toggle="tab">Más Recientes</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#tab-downloads" aria-controls="tab-downloads" role="tab" data-toggle="tab">Más Descargados</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="tab-recents">
+                            <ul>
+                                <li>
+                                    <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
                                 </li>
-                                <li role="presentation">
-                                    <a href="#tab-downloads" aria-controls="tab-downloads" role="tab" data-toggle="tab">Más Descargados</a>
+                                <li>
+                                    <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
                                 </li>
                             </ul>
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="tab-recents">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="tab-downloads">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <h5>Herramientas</h5>
-                        <div class="tool">
-                            <h3>Hacia la inclusión Social</h3>
-                            <p>Lorem ipsum dolor sit amet secularum infinitum mobilum terra.</p>
-                            <a href="#" class="btn btn-default">Conoce la herramienta</a>
-                        </div>
-                        <h5>Impacto</h5>
-                        <div class="news">
-                            <h3>Aviso de ciclones tropicales en tu celular o en redes sociales</h3>
-                            <a>leer más</a>
+                        <div role="tabpanel" class="tab-pane" id="tab-downloads">
+                            <ul>
+                                <li>
+                                    <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Empresas productoras de minerales metálicos y no metálicos</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="categories">
-            <div class="container-fluid">
-                <ul>
-                    <li>
-                        <a href="category.html" id="item-health">Salud</a>
-                    </li>
-                    <li>
-                        <a href="category.html" id="item-geography">Geografía</a>
-                    </li>
-                    <li>
-                        <a href="category.html" id="item-security">Seguridad</a>
-                    </li>
-                    <li>
-                        <a href="category.html" id="item-environment">Medio Ambiente</a>
-                    </li>
-                    <li>
-                        <a href="category.html" id="item-education">Educación</a>
-                    </li>
-                    <li>
-                        <a href="category.html" id="item-economy">Economía</a>
-                    </li>
-                    <li>
-                        <a href="category.html" id="item-culture">Cultura</a>
-                    </li>
-                    <li>
-                        <a href="category.html" id="item-tourism">Turismo</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section id="info" class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 widget">
-                    <a href="#">
-                        <img src="img/ic-data.png" alt="Datos">
-                        <span>Datos</span>
-                    </a>
-                    <p>Explora, descarga y utiliza información del gobierno en formatos abiertos y legibles por máquinas.</p>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <h5>Herramientas</h5>
+                <div class="tool">
+                    {% assign posts = site.posts | where: 'section', 'herramientas' | where: 'published', true | sort: 'date' %}
+                    {% for post in posts reversed limit:1 %}
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ post.permalink }}" class="btn btn-default">Conoce la herramienta</a>
+                    {% endfor %}
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 widget">
-                    <a href="#">
-                        <img src="img/ic-tools.png" alt="Herramientas">
-                        <span>Herramientas</span>
-                    </a>
-                    <p>Utiliza estas aplicaciones para visualizar el potencial de los datos abiertos. Open data in the wild.</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 widget">
-                    <a href="#">
-                        <img src="img/ic-impact.png" alt="Impacto">
-                        <span>Impacto</span>
-                    </a>
-                    <p>Descubre cómo otros utilizan los Datos Abiertos para crecer su negocio, investigaciones o para tomar decisiones.</p>
+                <h5>Impacto</h5>
+                <div class="news">
+                    {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true | sort: 'date' %}
+                    {% for post in posts reversed limit:1 %}
+                        <h3>{{ post.title }}</h3>
+                        <a href="{{ post.permalink }}">leer más</a>
+                    {% endfor %}
                 </div>
             </div>
-        </section>
-        <section id="slider" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#slider" data-slide-to="0" class="active"></li>
-                <li data-target="#slider" data-slide-to="1"></li>
-                <li data-target="#slider" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="img/slide.png" alt="...">
-                    <div class="carousel-caption">
-                        <p class="breadcrumb"><a href="#">Impacto</a> / <span>Caso de uso</span></p>
-                        <h3>Avisos de ciclones tropicales en tu celular y redes sociales</h3>
-                        <p>Nuestra región es una de las más activas en el mundo en la formación de ciclones tropicales. Y a pesar de que año tras año el país es azotado por estos fenómenos naturales.</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="img/slide.png" alt="...">
-                    <div class="carousel-caption">
-                        <p class="breadcrumb"><a href="#">Impacto</a> / <span>Caso de uso</span></p>
-                        <h3>Avisos de ciclones tropicales en tu celular y redes sociales</h3>
-                        <p>Nuestra región es una de las más activas en el mundo en la formación de ciclones tropicales. Y a pesar de que año tras año el país es azotado por estos fenómenos naturales.</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="img/slide.png" alt="...">
-                    <div class="carousel-caption">
-                        <p class="breadcrumb"><a href="#">Impacto</a> / <span>Caso de uso</span></p>
-                        <h3>Avisos de ciclones tropicales en tu celular y redes sociales</h3>
-                        <p>Nuestra región es una de las más activas en el mundo en la formación de ciclones tropicales. Y a pesar de que año tras año el país es azotado por estos fenómenos naturales.</p>
-                    </div>
-                </div>
-            </div>
-            <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+        </div>
+    </div>
+</section>
+<section id="categories">
+    <ul>
+        <li>
+            <a href="/salud" id="item-health">Salud</a>
+        </li>
+        <li>
+            <a href="/geoespacial" id="item-geospatial">Geoespacial</a>
+        </li>
+        <li>
+            <a href="/seguridad-justicia" id="item-security">Seguridad y justicia</a>
+        </li>
+        <li>
+            <a href="/energia-medio-ambiente" id="item-energy">Energia y Medio Ambiente</a>
+        </li>
+        <li>
+            <a href="/educacion" id="item-education">Educación</a>
+        </li>
+        <li>
+            <a href="/economia" id="item-economy">Economía</a>
+        </li>
+        <li>
+            <a href="/cultura" id="item-culture">Cultura y turismo</a>
+        </li>
+        <li>
+            <a href="/finanzas-contrataciones" id="item-finance">Finanzas y contrataciones</a>
+        </li>
+        <li>
+            <a href="/infraestructura" id="item-infrastructure">Infraestructura</a>
+        </li>
+        <li>
+            <a href="/desarrollo-sostenible" id="item-development">Desarrollo Sostenible</a>
+        </li>
+        <li>
+            <a href="/gobiernos-locales" id="item-government">Gobiernos Locales</a>
+        </li>
+    </ul>
+</section>
+<section id="info" class="container-fluid fixed">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 widget">
+            <a href="http://busca.datos.gob.mx">
+                <img src="assets/img/ic-data.png" alt="Datos">
+                <span>Datos</span>
             </a>
-            <a class="right carousel-control" href="#slider" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+            <p>Explora, descarga y utiliza información del gobierno en formatos abiertos y legibles por máquinas.</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 widget">
+            <a href="/herramientas">
+                <img src="assets/img/ic-tools.png" alt="Herramientas">
+                <span>Herramientas</span>
             </a>
-        </section>
-        <section id="tweets" class="container-fluid">
-            <h3>#DatosAbiertosMX</h3>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet">
-                    <div class="inner">
-                        <p>Todas las dependencias del <a href="#">@GobRep</a> debemos implementar la política de <a href="#">#DatosAbiertos</a> <a href="#">http://bit.ly/1MOkJ08</a> <a href="#">#OpenGov</a></p>
-                        <p class="small">Hace 3 días</p>
-                        <div class="author">
-                            <div class="pull-left avatar">
-                                <img src="img/ic-tweet.png">
-                            </div>
-                            <div class="pull-left">
-                                <p>SEGOB México</p>
-                                <a>@SEGOB_mx</a>
-                            </div>
-                        </div>
-                    </div>
+            <p>Utiliza estas aplicaciones para visualizar el potencial de los datos abiertos. Open data in the wild.</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 widget">
+            <a href="/impacto">
+                <img src="assets/img/ic-impact.png" alt="Impacto">
+                <span>Impacto</span>
+            </a>
+            <p>Descubre cómo otros utilizan los Datos Abiertos para crecer su negocio, investigaciones o para tomar decisiones.</p>
+        </div>
+    </div>
+</section>
+<section id="slider" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#slider" data-slide-to="0" class="active"></li>
+        <li data-target="#slider" data-slide-to="1"></li>
+        <li data-target="#slider" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true | sort: 'date' %}
+        {% for post in posts reversed limit:3 %}
+            <div class="item {% if forloop.first %}active{% endif %}">
+                <img src="{{ "/assets/img/impacto/" | append: post.cover | prepend: site.baseurl | prepend: site.url }}" alt="{{ `post.title }}">
+                <div class="carousel-caption">
+                    <p class="breadcrumb"><a href="#">Impacto</a> / <span>{{ post.category_title }}</span></p>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet">
-                    <div class="inner">
-                        <p>Todas las dependencias del <a href="#">@GobRep</a> debemos implementar la política de <a href="#">#DatosAbiertos</a> <a href="#">http://bit.ly/1MOkJ08</a> <a href="#">#OpenGov</a></p>
-                        <p class="small">Hace 3 días</p>
-                        <div class="author">
-                            <div class="pull-left avatar">
-                                <img src="img/ic-tweet.png">
-                            </div>
-                            <div class="pull-left">
-                                <p>SEGOB México</p>
-                                <a>@SEGOB_mx</a>
-                            </div>
-                        </div>
+            </div>
+        {% endfor %}
+    </div>
+    <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</section>
+<section id="tweets" class="container-fluid fixed">
+    <h3>#DatosAbiertosMX</h3>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet">
+            <div class="inner">
+                <p>Todas las dependencias del <a href="#">@GobRep</a> debemos implementar la política de <a href="#">#DatosAbiertos</a> <a href="#">http://bit.ly/1MOkJ08</a> <a href="#">#OpenGov</a></p>
+                <p class="small">Hace 3 días</p>
+                <div class="author">
+                    <div class="pull-left avatar">
+                        <img src="assets/img/ic-tweet.png">
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet">
-                    <div class="inner">
-                        <p>Todas las dependencias del <a href="#">@GobRep</a> debemos implementar la política de <a href="#">#DatosAbiertos</a> <a href="#">http://bit.ly/1MOkJ08</a> <a href="#">#OpenGov</a></p>
-                        <p class="small">Hace 3 días</p>
-                        <div class="author">
-                            <div class="pull-left avatar">
-                                <img src="img/ic-tweet.png">
-                            </div>
-                            <div class="pull-left">
-                                <p>SEGOB México</p>
-                                <a>@SEGOB_mx</a>
-                            </div>
-                        </div>
+                    <div class="pull-left">
+                        <p>SEGOB México</p>
+                        <a>@SEGOB_mx</a>
                     </div>
                 </div>
             </div>
-            <p class="load-more"><a href="#">Ver más tweets</a></p>
-        </section>
-        <section id="subscribe">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-                        <p>¿Te interesa saber más sobre <a href="#">datos.gob.mx</a>?</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet">
+            <div class="inner">
+                <p>Todas las dependencias del <a href="#">@GobRep</a> debemos implementar la política de <a href="#">#DatosAbiertos</a> <a href="#">http://bit.ly/1MOkJ08</a> <a href="#">#OpenGov</a></p>
+                <p class="small">Hace 3 días</p>
+                <div class="author">
+                    <div class="pull-left avatar">
+                        <img src="assets/img/ic-tweet.png">
                     </div>
-                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                        <form class="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="email" placeholder="Correo electrónico">
-                            </div>
-                            <button type="submit" class="btn btn-default">Enviar</button>
-                        </form>
+                    <div class="pull-left">
+                        <p>SEGOB México</p>
+                        <a>@SEGOB_mx</a>
                     </div>
                 </div>
             </div>
-        </section>
-        <dgm-footer></dgm-footer>
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="js/site.js"></script>
-    </body>
-</html>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet">
+            <div class="inner">
+                <p>Todas las dependencias del <a href="#">@GobRep</a> debemos implementar la política de <a href="#">#DatosAbiertos</a> <a href="#">http://bit.ly/1MOkJ08</a> <a href="#">#OpenGov</a></p>
+                <p class="small">Hace 3 días</p>
+                <div class="author">
+                    <div class="pull-left avatar">
+                        <img src="assets/img/ic-tweet.png">
+                    </div>
+                    <div class="pull-left">
+                        <p>SEGOB México</p>
+                        <a>@SEGOB_mx</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="load-more"><a href="#">Ver más tweets</a></p>
+</section>
+<section id="subscribe">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                <p>¿Te interesa saber más sobre <a href="#">datos.gob.mx</a>?</p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                <form class="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="email" placeholder="Correo electrónico">
+                    </div>
+                    <button type="submit" class="btn btn-default">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
