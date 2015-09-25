@@ -6,16 +6,16 @@
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <!-- Site required Polymer components -->
-    <script src="{{ "bower_components/webcomponentsjs/webcomponents-lite.js" | prepend: site.url }}"></script>
-    <link rel="shortcut icon" href="{{ "assets/img/favicon.ico" | prepend: site.url }}">
-    <link rel="import" href="{{ "bower_components/polymer/polymer.html" | prepend: site.url }}">
-    <link rel="import" href="{{ "bower_components/dgm-navbar/dgm-navbar.html" | prepend: site.url }}">
-    <link rel="import" href="{{ "bower_components/dgm-footer/dgm-footer.html" | prepend: site.url }}">
+    <script src="{{ "bower_components/webcomponentsjs/webcomponents-lite.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+    <link rel="shortcut icon" href="{{ "assets/img/favicon.ico" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="import" href="{{ "bower_components/polymer/polymer.html" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="import" href="{{ "bower_components/dgm-navbar/dgm-navbar.html" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="import" href="{{ "bower_components/dgm-footer/dgm-footer.html" | prepend: site.baseurl | prepend: site.url }}">
 
     <!-- Used libraries -->
-    <link rel="stylesheet" href="{{ "bower_components/bootstrap/dist/css/bootstrap.min.css" | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "bower_components/bootstrap/dist/css/bootstrap.min.css" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 </head>

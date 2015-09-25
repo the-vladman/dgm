@@ -4,7 +4,7 @@ layout: default
 
 <section>
     <p class="cover-image">
-        <img src="{{ "/assets/img/" | append: page.section | append: '/' | append: page.cover | prepend: site.baseurl }}">
+        <img src="{{ "/assets/img/" | append: page.section | append: '/' | append: page.cover | prepend: site.baseurl | prepend: site.url }}">
     </p>
 </section>
 <div class="container-fluid fixed post">

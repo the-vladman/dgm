@@ -21,7 +21,7 @@ layout: default
                             <div class="carousel-inner" role="listbox">
                                 {% for image in page.screenshots %}
                                     <div class="item {% if forloop.first %}active{% endif %}">
-                                        <img src="{{ "/assets/img/" | append: page.section | append: '/' | append: image | prepend: site.baseurl }}">
+                                        <img src="{{ "/assets/img/" | append: page.section | append: '/' | append: image | prepend: site.baseurl | prepend: site.url }}">
                                     </div>
                                 {% endfor %}
                             </div>
@@ -73,7 +73,7 @@ layout: default
                                 {% assign i = i | plus: 1 %}
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 app-item">
                                     <div class="inner">
-                                        <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: post.section | append: '/' | append: post.cover | prepend: site.baseurl }}"></a>
+                                        <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: post.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
                                         <div class="info">
                                             <h5>{{ post.title }}</h5>
                                             <div class="links-container">
