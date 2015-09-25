@@ -35,7 +35,7 @@ var Site    = {
     },
 
     _setTabs    : function () {
-        $( '.nav-tabs a' ).click( function ( e ) {
+        $( '.tabs a' ).click( function ( e ) {
             e.preventDefault()
             $( this ).tab( 'show' )
         });
