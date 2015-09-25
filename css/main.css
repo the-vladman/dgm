@@ -255,6 +255,7 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 .posts-container                            { padding-top: 50px; padding-bottom: 50px; }
 .post-item,
 .tools-item                                 { width: 40%; margin-left: 6.5%; margin-bottom: 50px; padding-bottom: 20px; background-color: #eee; float: left; position: relative; }
+.tools-item.first                           { width: 86.5%; }
 .post-item .inner,
 .tools-item .inner                          { padding-left: 15px; padding-right: 15px; }
 .post-item h5,
