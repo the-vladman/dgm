@@ -1,15 +1,16 @@
 ---
 layout: default
-title: Impacto
+title: Impacto - Avances
+permalink: /impacto/avances/
 ---
 
 <header class="container-fluid">
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-8 col-md-offset-8 col-sm-offset-6">
             <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="/impacto">Todos</a></li>
+                <li role="presentation"><a href="/impacto">Todos</a></li>
                 <li role="presentation"><a href="/impacto/historias">Historias</a></li>
-                <li role="presentation"><a href="/impacto/avances">Avances</a></li>
+                <li role="presentation" class="active"><a href="/impacto/avances">Avances</a></li>
             </ul>
         </div>
     </div>
@@ -33,7 +34,7 @@ title: Impacto
             {% include sidebar.html highlight='all' %}
         </div>
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 posts-container">
-            {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true | sort: 'date' %}
+            {% assign posts = site.posts | where: 'sub_section', 'avances' | where: 'published', true | sort: 'date' %}
             {% include posts_container.html posts=posts section='impacto' %}
         </div>
     </div>
