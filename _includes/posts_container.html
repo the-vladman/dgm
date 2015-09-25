@@ -3,7 +3,7 @@
     {% for post in include.posts %}
         {% assign i = i | plus: 1 %}
         <div class="post-item">
-            <img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover_photo | prepend: site.baseurl }}">
+            <img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl }}">
             <div class="inner">
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
