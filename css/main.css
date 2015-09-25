@@ -10,9 +10,9 @@ img                                         { max-width: 100%; }
 ul, ol                                      { padding-left: 0; }
 a:hover                                     { text-decoration: none; }
 a:focus, a:active                           { border: none; outline: 0; }
-.container-fluid                            { max-width: 1100px; }
 .btn                                        { padding: 10px; border: none; border-radius: 0; }
 .btn-default                                { background-color: #9b9b9b; color: #fff; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+.equal-height                               { display : -webkit-box; display : -webkit-flex; display : -ms-flexbox; display :flex; }
 
 /*********************************
     FONTS STYLES
@@ -23,6 +23,23 @@ h3                                          { font-size: 26px; line-height: 1.6e
 .label[data-format="klm"]                   { background-color: #474747; }
 a.load-more                                 { text-transform: uppercase; font-size: 12px; font-weight: 300; color: #00d2a9; }
 a.load-more:hover                           { font-weight: 600; }
+#section-title                              { padding-top: 30px; padding-bottom: 30px; background-color: #eee; }
+#section-title h1                           { margin-top: 0; margin-bottom: 20px; font-size: 24px; font-weight: 700; color: #595959; }
+#section-title p                            { font-size: 14px; font-weight: 300; margin-bottom: 0; }
+
+/*********************************
+    TABS STYLES
+*********************************/
+header                                      { padding-top: 20px; }
+header .nav-tabs                            { margin-bottom: 0; border: none; }
+header .nav-tabs > li                       { margin-bottom: 0; margin-right: 0; border-bottom: 5px solid #474747; }
+header .nav-tabs > li.active,
+header .nav-tabs > li:hover                 { border-bottom-color: #00d2a9; }
+header .nav-tabs > li > a                   { font-size: 14px; font-weight: 700; color: #595959; border: none; border-radius: 0; padding-left: 15px; padding-right: 15px; text-transform: none; }
+header .nav-tabs > li:hover > a,
+header .nav-tabs > li.active > a,
+header .nav-tabs > li.active > a:hover,
+header .nav-tabs > li.active > a:focus      { color: #00d2a9; border: none; background-color: transparent; }
 
 /*********************************
     TABLES STYLES
@@ -56,6 +73,34 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 .icon-web                                   { background-image: url(../assets/img/ic-web.png); }
 .icon-android                               { background-image: url(../assets/img/ic-android.png); }
 .icon-ios                                   { background-image: url(../assets/img/ic-ios.png); }
+
+/*********************************
+    SIDEBAR STYLES
+*********************************/
+#dgm-sidebar                                { padding-top: 20px; padding-bottom: 20px; background-color: #474747; }
+#dgm-sidebar > h3,
+#dgm-sidebar > h4                           { margin-top: 0; margin-bottom: 10px; font-size: 13px; text-transform: uppercase; color: #7c7c7c; }
+#dgm-sidebar > h3                           { font-weight: 700; }
+#dgm-sidebar > h4                           { margin-bottom: 30px; font-weight: 400; }
+#dgm-sidebar ul                             { margin-bottom: 30px; list-style: none; padding-left: 0; }
+#dgm-sidebar ul > li                        { height: auto; line-height: 18px; padding-top: 6px; padding-bottom: 6px; }
+#dgm-sidebar ul > li.icon-item              { margin: 15px 0; padding-left: 50px; background-size: 21px; background-position: 5px 50%; background-repeat: no-repeat; }
+#dgm-sidebar ul > li > a                    { font-size: 13px; font-weight: 400; color: #7c7c7c; line-height: 18px; }
+#dgm-sidebar ul > li.active > a,
+#dgm-sidebar ul > li:hover > a              { color: #00d2a9; }
+#dgm-sidebar ul > li.filter-all             { background-image: url(../assets/img/categories/ic-all.png); }
+#dgm-sidebar ul > li.filter-health          { background-image: url(../assets/img/categories/ic-health-hover.png); }
+#dgm-sidebar ul > li.filter-geospatial      { background-image: url(../assets/img/categories/ic-geospatial-hover.png); }
+#dgm-sidebar ul > li.filter-security        { background-image: url(../assets/img/categories/ic-security-hover.png); }
+#dgm-sidebar ul > li.filter-energy          { background-image: url(../assets/img/categories/ic-energy-hover.png); }
+#dgm-sidebar ul > li.filter-education       { background-image: url(../assets/img/categories/ic-education-hover.png); }
+#dgm-sidebar ul > li.filter-economy         { background-image: url(../assets/img/categories/ic-economy-hover.png); }
+#dgm-sidebar ul > li.filter-culture         { background-image: url(../assets/img/categories/ic-culture-hover.png); }
+#dgm-sidebar ul > li.filter-finance         { background-image: url(../assets/img/categories/ic-finance-hover.png); }
+#dgm-sidebar ul > li.filter-infrastructure  { background-image: url(../assets/img/categories/ic-infrastructure-hover.png); }
+#dgm-sidebar ul > li.filter-development     { background-image: url(../assets/img/categories/ic-development-hover.png); }
+#dgm-sidebar ul > li.filter-government      { background-image: url(../assets/img/categories/ic-government-hover.png); }
+#dgm-sidebar ul > li.filter-others          { background-image: url(../assets/img/categories/ic-others.png); }
 
 /*********************************
     BANNER SECTION STYLES
@@ -202,6 +247,17 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 #subscribe .form > .form-group              { width: 80%; margin-bottom: 0; float: left; }
 #subscribe .form > .form-group > input      { height: 37.15px; font-size: 14px; font-weight: 300; color: #ababab; border-radius: 0; border: none; }
 #subscribe .form > button                   { float: left; width: 20%; }
+
+/*********************************
+    POSTS STYLES
+*********************************/
+.posts-container                            { padding-top: 50px; padding-bottom: 50px; }
+.post-item                                  { width: 40%; margin-left: 6.5%; margin-bottom: 50px; padding-bottom: 20px; background-color: #eee; float: left; position: relative; }
+.post-item .inner                           { padding-left: 15px; padding-right: 15px; }
+.post-item h5                               { margin-top: 30px; margin-bottom: 0; font-size: 18px; font-weight: 600; line-height: 24px; color: #474747; }
+.post-item h6                               { margin-top: 20px; font-size: 12px; font-weight: 700; color: #aaa; text-transform: uppercase; }
+.post-item p                                { font-size: 12px; font-weight: 300; color: #474747; }
+.post-item p.small                          { font-size: 11px; }
 
 /***********************
     GUIA STYLES

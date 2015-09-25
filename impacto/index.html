@@ -1,0 +1,62 @@
+---
+layout: default
+title: Impacto
+---
+
+<header class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-8 col-md-offset-8 col-sm-offset-6">
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">Todos</a></li>
+                <li role="presentation"><a href="#">Noticias</a></li>
+                <li role="presentation"><a href="#">Avances</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section id="section-title">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <h1>Impacto</h1>
+                <p>Noticias</p>
+                <p>Avances</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container-fluid">
+    <div class="row equal-height">
+        <div id="dgm-sidebar" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            {% include sidebar.html %}
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 posts-container">
+            <div class="row equal-height">
+                {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true | sort: 'date' %}
+                {% assign i = 0 %}
+                {% for post in posts %}
+                    {% assign i = i | plus: 1 %}
+                    <div class="post-item">
+                        <img src="{{ "/assets/img/impacto/" | append: post.cover_photo | prepend: site.baseurl }}">
+                        <div class="inner">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                    <h5>{{ post.title }}</h5>
+                                    <p class="small">{{ post.date | date: '%d %B, %Y' }}</p>
+                                    <p>{{ post.excerpt }}</p>
+                                    <h6>{{ post.category_title }}</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% if i == 2 %}
+                        {% assign i = 0 %}
+                        </div>
+                        <div class="row equal-height">
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
