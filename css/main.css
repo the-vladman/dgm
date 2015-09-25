@@ -253,9 +253,12 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
     POSTS STYLES
 *********************************/
 .posts-container                            { padding-top: 50px; padding-bottom: 50px; }
-.post-item                                  { width: 40%; margin-left: 6.5%; margin-bottom: 50px; padding-bottom: 20px; background-color: #eee; float: left; position: relative; }
-.post-item .inner                           { padding-left: 15px; padding-right: 15px; }
-.post-item h5                               { margin-top: 30px; margin-bottom: 0; font-size: 18px; font-weight: 600; line-height: 24px; color: #474747; }
+.post-item,
+.tools-item                                 { width: 40%; margin-left: 6.5%; margin-bottom: 50px; padding-bottom: 20px; background-color: #eee; float: left; position: relative; }
+.post-item .inner,
+.tools-item .inner                          { padding-left: 15px; padding-right: 15px; }
+.post-item h5,
+.tools-item h5                              { margin-top: 30px; margin-bottom: 0; font-size: 14px; font-weight: 600; line-height: 20px; color: #474747; }
 .post-item h6                               { margin-top: 20px; font-size: 12px; font-weight: 700; color: #aaa; text-transform: uppercase; }
 .post-item p                                { font-size: 12px; font-weight: 300; color: #474747; }
 .post-item p.small                          { font-size: 11px; }

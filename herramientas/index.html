@@ -34,7 +34,7 @@ title: Herramientas
         </div>
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 posts-container">
             {% assign posts = site.posts | where: 'section', 'herramientas' | where: 'published', true | sort: 'date' %}
-            {% include posts_container.html posts=posts section='herramientas' %}
+            {% include tools_container.html posts=posts section='herramientas' %}
         </div>
     </div>
 </div>
