@@ -22,7 +22,8 @@ collaborators:
   - imco
   
 permalink: /historias/salud/2015-01-11-labcondatos-imss.html
-section:  impacto
+section: impacto
+sub_section: historias
 category: salud
 category_title: Salud
 tags:

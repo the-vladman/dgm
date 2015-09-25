@@ -10,6 +10,7 @@ cover: "avances/xalapaproceso/xalapaproceso-cover_photo.jpg"
 cover_photo: "avances/xalapaproceso/xalapaproceso-cover_photo.jpg"
 permalink: "avances/xalapaproceso.html"
 section: impacto
+sub_section: avances
 category: redmxabierto
 category_title: Red México Abierto
 tags: 

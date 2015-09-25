@@ -8,7 +8,8 @@ date:     2014-07-15 18:09:00 -0500
 cover:    "historias/zapopan-como-sistema-complejo/zapopan-como-sistema-complejo-cover.jpg"
 cover_photo: "historias/zapopan-como-sistema-complejo/zapopan-como-sistema-complejo-cover_photo.jpg"
 permalink: /historias/otros/zapopan-como-sistema-complejo.html
-section:  impacto
+section: impacto
+sub_section: historias
 category: seguridad
 category_title: Seguridad
 tags:

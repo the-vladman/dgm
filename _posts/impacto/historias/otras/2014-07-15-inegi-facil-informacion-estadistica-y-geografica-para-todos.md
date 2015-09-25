@@ -31,7 +31,8 @@ collaborators:
   - inegi_facil
 
 permalink: /historias/otras/inegi-facil.html
-section:  impacto
+section: impacto
+sub_section: historias
 category: otras
 category_title: "Otras"
 tags:

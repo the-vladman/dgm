@@ -8,6 +8,7 @@ cover: "avances/impulsando/impulsando-cover.png"
 cover_photo: "avances/impulsando-xalapa/impulsando-cover.png"
 permalink: "avances/impulsando.html"
 section: impacto
+sub_section: avances
 category: noticias
 category_title: Noticias
 tags: 

@@ -25,6 +25,7 @@ collaborators:
 
 permalink: /historias/educacion/compara-carreras.html
 section:  impacto
+sub_section: historias
 category: educacion
 category_title: "Educación"
 excerpt_separator: <!--more-->

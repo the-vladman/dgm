@@ -8,6 +8,7 @@ cover: "avances/datatron-pnda/datatron-pnda01.png"
 cover_photo: "avances/datatron-pnda/datatron-pnda01.png"
 permalink: "/avances/datatron-pnda.html"
 section: impacto
+sub_section: avances
 category: politica
 category_title: Politica
 tags: 

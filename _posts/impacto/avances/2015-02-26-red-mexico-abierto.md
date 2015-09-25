@@ -10,6 +10,7 @@ cover: "avances/red-mexico-abierto/red-mexico-abierto-cover.png"
 cover_photo: "avances/red-mexico-abierto/red-mexico-abierto-cover_photo.png"
 permalink: "avances/red-mexico-abierto.html"
 section: impacto
+sub_section: avances
 category: noticias
 category_title: Noticias
 tags: 

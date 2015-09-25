@@ -8,6 +8,7 @@ cover: "avances/escuadron-g1/escuadron-g1-cover.jpg"
 cover_photo: "avances/escuadron-g1/escuadron-g1-cover.jpg"
 permalink: "/avances/escuadron-g1.html"
 section: impacto
+sub_section: avances
 category: politica
 category_title: Política
 tags: 

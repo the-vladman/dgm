@@ -37,7 +37,8 @@ collaborators:
   - cartografica
 
 permalink: /historias/otras/atlas-marginacion.html
-section:  impacto
+section: impacto
+sub_section: historias
 category: otras
 category_title: "Otras"
 tags:

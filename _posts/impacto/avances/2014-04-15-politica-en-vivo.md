@@ -8,6 +8,7 @@ cover: "avances/politica-en-vivo/politica-en-vivo-cover.png"
 cover_photo: "avances/politica-en-vivo/politica-en-vivo-cover.png"
 permalink: "/avances/politica-en-vivo.html"
 section: impacto
+sub_section: avances
 category: politica
 category_title: Politica
 tags: 

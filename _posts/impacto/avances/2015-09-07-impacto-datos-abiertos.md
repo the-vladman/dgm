@@ -9,6 +9,7 @@ cover: "avances/impacto-datos-abiertos/impacto-datos-cover_photo.png"
 cover_photo: "avances/impacto-datos-abiertos/impacto-datos-cover_photo.png"
 permalink: "avances/impacto-datos-abiertos.html"
 section: impacto
+sub_section: avances
 category: noticias
 category_title: Noticias
 tags: 

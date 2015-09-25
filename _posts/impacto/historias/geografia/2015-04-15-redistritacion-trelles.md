@@ -22,7 +22,8 @@ datasets:
 
 
 permalink: /historias/geografica/redistritacion.html
-section:  impacto
+section: impacto
+sub_section: historias
 category: geografia
 category_title: "Geografia"
 tags:

@@ -22,7 +22,8 @@ datasets:
     url: http://www.snie.sep.gob.mx/
 
 permalink: /historias/educacion/mejora-tu-escuela.html
-section:  impacto
+section: impacto
+sub_section: historias
 category: educacion
 category_title: "Educación"
 tags:

@@ -17,7 +17,8 @@ collaborators:
 
 
 permalink: /historias/otras/tercer-informe.html
-section:  impacto
+section: impacto
+sub_section: historias
 category: otras
 category_title: "Otras"
 tags:

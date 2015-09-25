@@ -19,7 +19,8 @@ collaborators:
   - data4
 
 permalink: /historias/seguridad/homicidios-frontera-armas-eeuu.html
-section:  impacto
+section: impacto
+sub_section: historias
 category: seguridad
 category_title: Seguridad
 tags:

@@ -10,6 +10,7 @@ cover: "avances/pueblarmxa/pueblarmxa-cover_photo.png"
 cover_photo: "avances/pueblarmxa/pueblarmxa-cover_photo.png"
 permalink: "avances/pueblarmxa.html"
 section: impacto
+sub_section: avances
 category: redmxabierto
 category_title: Red México Abierto
 tags: 

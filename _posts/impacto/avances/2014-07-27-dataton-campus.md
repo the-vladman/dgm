@@ -8,6 +8,7 @@ cover: "avances/dataton-campus/dataton-campus-cover.jpg"
 cover_photo: "avances/dataton-campus/dataton-campus-cover_photo.jpg"
 permalink: "/avances/dataton-campus.html"
 section: impacto
+sub_section: avances
 category: eventos
 category_title: Eventos
 tags: 

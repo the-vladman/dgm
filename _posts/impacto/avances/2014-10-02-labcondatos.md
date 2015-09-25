@@ -8,6 +8,7 @@ cover: "avances/labcondatos/labcondatos-cover.jpg"
 cover_photo: "avances/labcondatos/labcondatos-cover_photo.jpg"
 permalink: "/avances/labcondatos.html"
 section: impacto
+sub_section: avances
 category: eventos
 category_title: Eventos
 tags: 

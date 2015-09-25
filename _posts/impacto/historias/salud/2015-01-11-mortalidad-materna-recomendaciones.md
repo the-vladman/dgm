@@ -20,7 +20,8 @@ datasets:
 collaborators:
   - secretaria_salud
 
-section:  impacto
+section: impacto
+sub_section: historias
 category: salud
 category_title: Salud
 tags:
