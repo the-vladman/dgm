@@ -1,6 +1,6 @@
 <div class="row equal-height">
     {% assign i = 0 %}
-    {% for post in include.posts %}
+    {% for post in include.posts reversed %}
         {% assign i = i | plus: 1 %}
         <div class="post-item">
             <img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl }}">
