@@ -68,14 +68,20 @@ title: datos.gob.mx
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <h5>Herramientas</h5>
                 <div class="tool">
-                    <h3>Hacia la inclusión Social</h3>
-                    <p>Lorem ipsum dolor sit amet secularum infinitum mobilum terra.</p>
-                    <a href="#" class="btn btn-default">Conoce la herramienta</a>
+                    {% assign posts = site.posts | where: 'section', 'herramientas' | where: 'published', true | sort: 'date' %}
+                    {% for post in posts reversed limit:1 %}
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ post.permalink }}" class="btn btn-default">Conoce la herramienta</a>
+                    {% endfor %}
                 </div>
                 <h5>Impacto</h5>
                 <div class="news">
-                    <h3>Aviso de ciclones tropicales en tu celular o en redes sociales</h3>
-                    <a>leer más</a>
+                    {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true | sort: 'date' %}
+                    {% for post in posts reversed limit:1 %}
+                        <h3>{{ post.title }}</h3>
+                        <a href="{{ post.permalink }}">leer más</a>
+                    {% endfor %}
                 </div>
             </div>
         </div>
