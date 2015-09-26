@@ -10,6 +10,11 @@ layout: default
 <div class="container-fluid fixed post">
     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
         <h1>{{ page.title }}</h1>
+        {% if page.author %}
+            <p><i>{{ page.author }}</i></p>
+        {% else %}
+            <p><i>Presidencia</i></p>
+        {% endif %}
         <p class="small">{{ page.date | date: '%d %B, %Y' }}</p>
         {{ content }}
     </div>
