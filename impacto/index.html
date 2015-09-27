@@ -3,30 +3,7 @@ layout: default
 title: Impacto
 ---
 
-<header class="container-fluid">
-    <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-5 col-xs-11 col-lg-offset-8 col-md-offset-8 col-sm-offset-6">
-            <ul class="nav nav-tabs pull-right">
-                <li role="presentation" class="active"><a href="/impacto">Todos</a></li>
-                <li role="presentation"><a href="/impacto/historias">Historias</a></li>
-                <li role="presentation"><a href="/impacto/avances">Avances</a></li>
-            </ul>
-        </div>
-    </div>
-</header>
-<section id="section-title">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
-                {% assign avances = site.posts | where: 'sub_section', 'avances' | where: 'published', true %}
-                {% assign historias = site.posts | where: 'sub_section', 'historias' | where: 'published', true %}
-                <h1>Impacto</h1>
-                <p>{{ historias.size }} Historias</p>
-                <p>{{ avances.size }} Avances</p>
-            </div>
-        </div>
-    </div>
-</section>
+{% include impact_header.html highlight='all' %}
 <div class="container-fluid">
     <div class="row equal-height">
         <div id="dgm-sidebar" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">

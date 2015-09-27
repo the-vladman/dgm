@@ -36,6 +36,14 @@ p.small                                     { font-size: 11px; }
 .social-buttons .button-item.tw             { position: relative; top: 6px; }
 
 /*********************************
+    BREADCRUMB STYLES
+*********************************/
+.breadcrumb                                 { height: 40px; margin: 0; padding: 0; background-color: transparent; }
+.breadcrumb a                               { font-size: 12px; position: relative; top: -14px; }
+.breadcrumb a span                          { text-transform: capitalize; }
+.breadcrumb .home-item                      { display: inline-block; width: 15px; height: 100%; margin-right: 5px; background: url(../assets/img/ic-home.png) no-repeat 50% 50%; background-size: contain; top: 0; }
+
+/*********************************
     FONTS STYLES
 *********************************/
 h3                                          { font-size: 26px; line-height: 1.6em; font-weight: 300; color: #595959; }
@@ -338,9 +346,6 @@ p.cover-image                               { text-align: center; }
 #title-section                              { margin-bottom: 20px; }
 #title-section h1                           { margin: 0; }
 .info-title                                 { font-size: 24px; font-weight: 600; color: #595959; }
-.breadcrumb                                 { height: 50px; margin: 0; padding: 0; background-color: transparent; }
-.breadcrumb a                               { line-height: 60px; }
-.breadcrumb a span                          { text-transform: capitalize; }
 
 /***********************
     Main Content
