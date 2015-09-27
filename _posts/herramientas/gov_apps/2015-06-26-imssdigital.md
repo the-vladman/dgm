@@ -2,7 +2,7 @@
 published: true
 
 title: IMSS Digital
-app_author: IMSS
+author: IMSS
 date: 2015-06-26
 
 links:

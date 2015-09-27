@@ -1,8 +1,8 @@
 ---
 published: true
 
-title: Mecha Creativa 
-app_author: CONACULTA
+title: Mecha Creativa
+author: CONACULTA
 date: 2015-08-07
 
 links:
@@ -12,4 +12,4 @@ links:
 section: gov_apps
 source: App Store en iTunes
 ---
-Aplicación dirigida a jóvenes de 14 años en adelante que busca ampliar su imaginario literario y visual a partir de frases de la literatura juvenil y universal y de imágenes de artistas mexicanos que serán detonantes para la creación e inspiración de obras propias y asociaciones genuinas. 
+Aplicación dirigida a jóvenes de 14 años en adelante que busca ampliar su imaginario literario y visual a partir de frases de la literatura juvenil y universal y de imágenes de artistas mexicanos que serán detonantes para la creación e inspiración de obras propias y asociaciones genuinas.

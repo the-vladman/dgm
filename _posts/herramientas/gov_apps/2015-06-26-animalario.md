@@ -2,11 +2,11 @@
 published: true
 
 title: Animalario Universal
-app_author: FCE
+author: FCE
 date: 2015-06-26
 
 links:
-  playStore: 
+  playStore:
   appleStore: https://itunes.apple.com/mx/app/animalario-universal/id490661986?mt=8
 
 section: gov_apps

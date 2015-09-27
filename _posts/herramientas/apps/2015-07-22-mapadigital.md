@@ -4,7 +4,7 @@ layout: app
 
 title: Mapa Digital de México
 date: 2015-07-22
-cover: apps/mapadigital/mapadigital-cover.png
+cover: apps/mapadigital/mapadigital-cover.jpg
 screenshots:
   - apps/mapadigital/mapadigital-cover.png
   - apps/mapadigital/mapadigital2.png
@@ -17,11 +17,13 @@ links:
 
 datasets:
 
-app_author: Instituto Nacional de Estadística y Geografía
-permalink: "/apps/mapadigital.html"
+author: Instituto Nacional de Estadística y Geografía
+permalink: "/herramientas/web/mapadigital.html"
 section: herramientas
 sub_section: apps
-category: web
+category:
+  - web
+  - desarrollo sostenible
 category_title: Web
 tags:
   - DENUE

@@ -4,7 +4,7 @@ layout: app
 
 title: Datos Abiertos SAT
 date: 2015-02-10
-cover: apps/datosabiertossat/datosabiertossat-cover.png
+cover: apps/datosabiertossat/datosabiertossat-cover.jpg
 screenshots:
   - apps/datosabiertossat/screens/datosabiertossat1.png
   - apps/datosabiertossat/screens/datosabiertossat1a.png
@@ -27,12 +27,14 @@ datasets:
   -
     title: Clima CONAGUA
 
-app_author: Servicio de Administración Tributaria
+author: Servicio de Administración Tributaria
 
-permalink: "/apps/datosabiertossat.html"
+permalink: "/herramientas/web/datosabiertossat.html"
 section: herramientas
 sub_section: apps
-category: web
+category:
+  - web
+  - economia
 category_title: Web
 tags:
   - Datos Abiertos

@@ -1,12 +1,12 @@
 ---
 published: true
 
-title: Seducciones de Sor Juana 
-app_author: CONACULTA
+title: Seducciones de Sor Juana
+author: CONACULTA
 date: 2015-08-07
 
 links:
-  playStore: NA 
+  playStore: NA
   appleStore: https://itunes.apple.com/mx/app/seducciones-de-sor-juana/id630253735?l=en&mt=8
 
 section: gov_apps

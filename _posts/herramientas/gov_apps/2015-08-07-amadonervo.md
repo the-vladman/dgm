@@ -2,7 +2,7 @@
 published: true
 
 title: Amado Nervo
-app_author: CONACULTA
+author: CONACULTA
 date: 2015-08-07
 
 links:
@@ -12,4 +12,4 @@ links:
 section: gov_apps
 source: App Store en iTunes
 ---
-La aplicación de Amado Nervo continúa y enriquece la línea trazada desde “Blanco”, de Octavio Paz, pasando por “Muerte sin fin”, de José Gorostiza. La comunión de palabra, sonido e imagen se sublima en la aplicación de Amado Nervo. En esta ocasión se optó por mostrar algunas de las facetas más desconocidas del poeta. 
+La aplicación de Amado Nervo continúa y enriquece la línea trazada desde “Blanco”, de Octavio Paz, pasando por “Muerte sin fin”, de José Gorostiza. La comunión de palabra, sonido e imagen se sublima en la aplicación de Amado Nervo. En esta ocasión se optó por mostrar algunas de las facetas más desconocidas del poeta.

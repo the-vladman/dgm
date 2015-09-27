@@ -3,16 +3,17 @@ published: true
 layout: post
 title: 'El impacto de los Datos Abiertos en México'
 excerpt: "¿Cómo ha evolucionado la política nacional de Datos Abiertos y de qué manera está impactando el desarrollo en México? Ania Calderón, Directora General de Datos Abiertos de la Presidencia de la República, habla sobre el tema en esta entrevista."
-tagline:  "El impacto de los Datos Abiertos en México: Entrevista con Ania Calderón" 
+tagline:  "El impacto de los Datos Abiertos en México: Entrevista con Ania Calderón"
 date: 2015-09-07
-cover: "avances/impacto-datos-abiertos/impacto-datos-cover_photo.png"
+author: "Equipo de Datos Abiertos"
+cover: "avances/impacto-datos-abiertos/impacto-datos-cover.jpg"
 cover_photo: "avances/impacto-datos-abiertos/impacto-datos-cover_photo.png"
-permalink: "/avances/impacto-datos-abiertos.html"
+permalink: "/impacto/avances/impacto-datos-abiertos.html"
 section: impacto
 sub_section: avances
 category: noticias
 category_title: Noticias
-tags: 
+tags:
   - Datos Abiertos
   - Conferencia Internacional de Datos Abiertos
 excerpt_separator: <!--more-->
@@ -41,45 +42,45 @@ En ese sentido, en realidad estamos hablando de cuestiones técnicas, en términ
 Me parece que a dos años, por lo menos desde nuestra perspectiva, la estrategia se desplazó de pensar sólo en la ejecución, a pensar en cómo generar impacto. Ésta es una manera fundamental de cómo estamos estructurando la política de Datos Abiertos en México. Los datos que liberamos tienen que estar fuertemente vinculados a la demanda ciudadana. Hay que poner esos datos en uso, pero también hay programas de prioridad nacional en nuestro país en los que los gobiernos están demandando datos.
 
 No sólo la sociedad debe conocer el impacto en el uso de datos, sino también el gobierno. Debe ser la herramienta más importante en nuestro proceso diario de toma de decisiones, y en algunas ocasiones esto no está sucediendo.
- 
+
 ***Alexander Howard:***
 
 ¿Cuáles son los usos o impacto al que te refieres en términos de resultados para los ciudadanos en México?
- 
+
 ***Ania Calderón:***
 
 La cuestión de resultados es muy importante. Hay algo que sucede con muchos programas de políticas públicas y la forma en la que se evalúan desde el comienzo. La mayoría de las veces establecemos indicadores para medir si el impacto del programa logró lo que se propuso, en vez de plantear si lo que estamos haciendo es importante para alguien.
 
 Me parece que la conversación tiene que estar más orientada a los ciudadanos en ese sentido, construir puentes o espacios de colaboración con la ciudadanía para ver cómo podemos conectar mejor el suministro de datos y la forma en la que estamos conectando esos datos a casos de uso. Hay muchos ejemplos diferentes. Como sabes, los datos abiertos atraviesan distintos sectores, pero es esencial considerar el uso final y el resultado que estamos buscando.
- 
+
 ***Alexander Howard:***
 
 Uno de los usos sobre los que escuchamos mucho es el de desarrollo: publicar datos, liberar datos, aplicar datos para usos vinculados al desarrollo. ¿Puedes decirnos cómo está sucediendo esto donde estás tú?
- 
+
 ***Ania Calderón:***
 
 El diálogo ha estado desembocando este año en particular alrededor del discurso y conversaciones globales sobre la Agenda de Desarrollo Post 2015, que me parece muy relevante y le da una nueva energía al movimiento de Datos Abiertos, porque también nos ayuda a entender una cuestión de la que estaba hablando hace un momento, que es para qué hacemos Datos Abiertos. En septiembre, los países se reunirán para suscribir 17 temas urgentes y objetivos que nos vamos a comprometer a lograr, y los Datos Abiertos van a ser una pieza clave.
 
 Creo que se aprendió mucho del proceso de los Objetivos de Desarrollo del Milenio (MDGs). Una vez que los objetivos quedaron establecidos, era demasiado tarde en la conversación para empezar a pensar en los ejes de los datos, si había brechas, cuál es la línea base, cómo podemos apalancarnos en los Datos Abiertos no sólo para encontrar dónde están estas brechas en los datos recolectados, sino también para mejorar la calidad de los datos una vez que logramos que se empiecen a utilizar, así como fomentar la innovación para co-crear soluciones a necesidades apremiantes. Así que me parece que hay una intersección muy relevante entre los Datos Abiertos y los objetivos de desarrollo.
 
-Una de las cuestiones en la que estamos trabajando en México sobre este tema está relacionada a mortalidad materna, que como sabes es uno de los Objetivos de Desarrollo del Milenio, y es el único que México no logrará completar. Es un problema urgente no sólo en México, sino a nivel global, y nos propusimos el reto de averiguar qué está sucediendo alrededor de este tema. No es un problema nuevo, hay muchos recursos que se están avocando para tratar de abordarlo. 
+Una de las cuestiones en la que estamos trabajando en México sobre este tema está relacionada a mortalidad materna, que como sabes es uno de los Objetivos de Desarrollo del Milenio, y es el único que México no logrará completar. Es un problema urgente no sólo en México, sino a nivel global, y nos propusimos el reto de averiguar qué está sucediendo alrededor de este tema. No es un problema nuevo, hay muchos recursos que se están avocando para tratar de abordarlo.
 
 Así que fuimos a la Secretaría de Salud y nos impresionó mucho la cantidad y riqueza de la información que están generando, y parte de esa información no se había utilizado para tratar de entender este tema a un nivel granular. Su sistema publica información a la unidad de la clínica: qué tipo de infraestructura hay, qué procedimientos se están llevando a cabo casi a diario, registros de nacimientos y defunciones, qué nivel educativo tenía la madre, cuántas veces asistió a consultas prenatales. Así que empezamos a colaborar con científicos de datos y académicos para usar los datos y entender más sobre esta cuestión y cómo podemos abordar el problema de forma más efectiva y focalizada.
 
 Puedo decir que los hallazgos que obtuvimos a partir de este ejercicio quizá no son una ciencia compleja. Por ejemplo, el cuidado prenatal es vital en esta situación, pero fuimos capaces de calcular qué tan importante es y para qué nivel demográfico de la población. Así que sabemos, por ejemplo, que a cierto nivel en la población marginada las mujeres que asisten a más de cinco consultas prenatales disminuyen la tasa de mortalidad materna a un tercio.
- 
+
 ***Alexander Howard:***
 
 Así que en otras palabras, es realizar intervenciones dirigidas a personas que no están teniendo suficientemente ese espacio y asegurarse de que se les está monitoreando más específicamente. Esa sería la aplicación del conocimiento que obtuvieron de los datos.
- 
+
 ***Ania Calderón:***
 
 Sí.
- 
+
 ***Alexander Howard:***
 
 ¿Cuáles han sido los aprendizajes sobre la forma de liberar datos para que mejore el potencial de obtener resultados positivos y disminuya el riesgo de resultados negativos? En términos de la manera en la que se liberan o el enfoque en cómo la utilizan los usuarios.
- 
+
 **Ania Calderón:**
 
 Definitivamente hay una conversación que es un tema coyuntural alrededor de cuestiones de privacidad. Aquí tenemos que luchar con la curva de utilidad entre, por ejemplo, qué tan granulados podemos lograr que queden los datos para que sean abiertos - lo que probablemente tendría un mucho mayor impacto positivo para su uso y para fines de investigación-, pero hasta qué punto estamos entrando en áreas en las que podríamos identificar a individuos.

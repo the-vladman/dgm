@@ -2,7 +2,7 @@
 published: true
 
 title: Marea de colores
-app_author: CONACULTA
+author: CONACULTA
 date: 2015-08-07
 
 links:

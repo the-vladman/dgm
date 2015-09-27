@@ -7,11 +7,11 @@ author:   ""
 date:     2014-07-15 18:09:00 -0500
 cover:    "historias/zapopan-como-sistema-complejo/zapopan-como-sistema-complejo-cover.jpg"
 cover_photo: "historias/zapopan-como-sistema-complejo/zapopan-como-sistema-complejo-cover_photo.jpg"
-permalink: /historias/otros/zapopan-como-sistema-complejo.html
+permalink: /impacto/historias/zapopan-como-sistema-complejo.html
 section: impacto
 sub_section: historias
-category: seguridad
-category_title: Seguridad
+category: infraestructura
+category_title: Infraestructura
 tags:
 - Dataton
 redirect_from: /zapopan-como-sistema-complejo/
@@ -55,5 +55,3 @@ Usando esta representación de grafos es posible asociar cada uno de los delitos
 El expresar la ciudad en términos de una red nos permite representarla de forma abstracta y por lo tanto calcular algunas cantidades interesantes. Por ejemplo, la propiedad llamada grado, definido como el número de enlaces que llegan a cada nodo, representa el número de intersecciones de una vía con otra. De esta forma obtenemos la distribución de enlaces con respecto a todos los nodos (distribución de grado).
 
 Debido a que cada nodo tiene un valor de grado asociado podemos graficar las vías de comunicación en términos de su grado, donde el grueso de la línea representa el grado asociado a esta vía, de tal manera que líneas gruesas representan calles con un mayor grado, por ende un mayor número de intersecciones. Es interesante observar que el grado de las vías esta correlacionado con la cantidad de delitos asociados a cada vía, por lo tanto es posible utilizar el grado de cada nodo para estimar un índice delictivo a nivel de calle. Esta información puede ser util para definir calles con un alto índice delictivo y calles donde la probabilidad de tener delitos es alta, sobre estas calles es importante definir las rutas de patrullaje de la policía.
-
-

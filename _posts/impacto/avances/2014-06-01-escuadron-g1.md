@@ -4,15 +4,16 @@ layout: post
 title: 'La primera generación del escuadrón de datos'
 excerpt: "Después de más de 60 reuniones, 700km recorridos, 100 tazas de café, logramos liberar los primeros 100 conjuntos de datos de esta iniciativa."
 date:   2014-06-01
+author: "Equipo de Datos Abiertos"
 cover: "avances/escuadron-g1/escuadron-g1-cover.jpg"
 cover_photo: "avances/escuadron-g1/escuadron-g1-cover.jpg"
-permalink: "/avances/escuadron-g1.html"
+permalink: "/impacto/avances/escuadron-g1.html"
 section: impacto
 sub_section: avances
 category: politica
 category_title: Política
-tags: 
-  - escuadron de datos 
+tags:
+  - escuadron de datos
   - datos abiertos
 excerpt_separator: <!--more-->
 ---

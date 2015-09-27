@@ -4,7 +4,7 @@ layout: app
 
 title: Obra Pública Abierta
 date: 2015-06-25
-cover: apps/obraabierta/obraabierta_cover.png
+cover: apps/obraabierta/obraabierta_cover.jpg
 screenshots:
   - apps/obraabierta/obraabierta_1.png
   - apps/obraabierta/obraabierta_2.png
@@ -24,12 +24,15 @@ datasets:
     title: "Pidiregas"
     url:  http://transparenciapresupuestaria.gob.mx/work/models/PTP/OPA/Proyectos_Pidiregas.csv
 
-app_author: Secretaría de Hacienda y Crédito Público
+author: Secretaría de Hacienda y Crédito Público
 
-permalink: "/apps/obraabierta.html"
+permalink: "/herramientas/web/obraabierta.html"
 section: herramientas
 sub_section: apps
-category: web
+category:
+  - web
+  - infraestructura
+
 category_title: Web
 tags:
   - Obra Pública Abierta

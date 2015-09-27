@@ -6,21 +6,22 @@ featured_tagline: 'Avance:'
 title: 'Apertura de la Infraestructura Estratégica de Datos Abiertos a comentarios públicos'
 excerpt: "Participa en la Infraestructura Estratégica de Datos Abiertos –la base de los conjuntos de datos de alto valor para la población, que ayudarán a determinar el desarrollo económico y social, y que son necesarios para impulsar la innovación, detonar mayor eficiencia gubernamental e incrementar la transparencia y rendición de cuentas en nuestro país."
 date: 2015-03-18
-cover: "avances/infraestructura-de-datos/infraestructura-de-datos.png"
+author: "Equipo de Datos Abiertos"
+cover: "avances/infraestructura-de-datos/infraestructura-de-datos-cover.jpg"
 cover_photo: "avances/infraestructura-de-datos/infraestructura-de-datos.png"
-permalink: "/avances/infraestructura-de-datos.html"
+permalink: "/impacto/avances/infraestructura-de-datos.html"
 section: impacto
 sub_section: avances
 category: noticias
 category_title: Noticias
-tags: 
+tags:
   - Infraestructura Estratégica
   - Participación
   - Datos Abiertos
 excerpt_separator: <!--more-->
 ---
 
-El 21 de febrero entró en vigor el [Decreto que Establece la Regulación en Materia de Datos Abiertos](http://www.dof.gob.mx/nota_detalle.php?codigo=5382838&fecha=20/02/2015), que instruye a priorizar la publicación de Datos Abiertos con base en la demanda ciudadana. 
+El 21 de febrero entró en vigor el [Decreto que Establece la Regulación en Materia de Datos Abiertos](http://www.dof.gob.mx/nota_detalle.php?codigo=5382838&fecha=20/02/2015), que instruye a priorizar la publicación de Datos Abiertos con base en la demanda ciudadana.
 
 <!--more-->
 

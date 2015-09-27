@@ -1,9 +1,8 @@
-
 ---
 published: false
 
-title: MiConsulmex 
-app_author: SRE
+title: MiConsulmex
+author: SRE
 date: 2015-08-07
 
 links:
@@ -14,4 +13,3 @@ section: gov_apps
 source: App Store en iTunes
 ---
 MiConsulmex es una aplicación telefónica multiplataforma para la comunidad mexicana en el mundo. Facilita el acceso a la información sobre servicios, protección, asistencia y actividades consulares que ofrece el Gobierno de México a través de su red consular.
-

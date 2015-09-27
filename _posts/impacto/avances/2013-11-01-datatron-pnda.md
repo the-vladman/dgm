@@ -4,14 +4,15 @@ layout: post
 title: 'Datatrón e Iniciativa de Datos Abiertos'
 excerpt: "La Iniciativa de Datos Abiertos es un plan de acción amplio e integral, para crear un ecosistema de innovación, participación ciudadana y desarrollo mediante los Datos Abiertos. Como uno de los primeros pasos para identificar las necesidades e intereses de datos de la ciudadanía, la oficina de Presidencia lanzó un Datatrón."
 date: 2013-11-01
-cover: "avances/datatron-pnda/datatron-pnda01.png"
+author: "Equipo de Datos Abiertos"
+cover: "avances/datatron-pnda/datatron-pnda-cover.jpg"
 cover_photo: "avances/datatron-pnda/datatron-pnda01.png"
-permalink: "/avances/datatron-pnda.html"
+permalink: "/impacto/avances/datatron-pnda.html"
 section: impacto
 sub_section: avances
 category: politica
 category_title: Politica
-tags: 
+tags:
   - datatron
   - datos abiertos
 excerpt_separator: <!--more-->
@@ -25,7 +26,7 @@ Los Datos Abiertos permiten maximizar el valor de la información pública. Por 
 
 ### Datatrón
 
-Como uno de los primeros pasos para identificar las necesidades e intereses de datos de la ciudadanía, la oficina de Presidencia lanzó un [Datatrón](http://datatron.herokuapp.com/ "Title"). Se trata de una encuesta digital en el portal datos.gob.mx, con el propósito de conocer las preferencias de la población en materia de Datos Abiertos, desarrollar un plan de acción con la demanda como eje rector y abrir el proceso a una mayor participación. 
+Como uno de los primeros pasos para identificar las necesidades e intereses de datos de la ciudadanía, la oficina de Presidencia lanzó un [Datatrón](http://datatron.herokuapp.com/ "Title"). Se trata de una encuesta digital en el portal datos.gob.mx, con el propósito de conocer las preferencias de la población en materia de Datos Abiertos, desarrollar un plan de acción con la demanda como eje rector y abrir el proceso a una mayor participación.
 
 Los temas tomados a consideración en la encuesta fueron:
 
@@ -39,7 +40,7 @@ Los temas tomados a consideración en la encuesta fueron:
 * Salud
 * Transporte e infraestructura
 
-En primera instancia, se seleccionaban aleatoriamente dos temas, de los cuales el encuestado debía elegir cuál le interesaba más. Posteriormente, se desglosaban un par de preguntas más específicas sobre el tema elegido. 
+En primera instancia, se seleccionaban aleatoriamente dos temas, de los cuales el encuestado debía elegir cuál le interesaba más. Posteriormente, se desglosaban un par de preguntas más específicas sobre el tema elegido.
 
 
 ![Resultados Datatrón]({{ site.url | append: site.baseurl }}assets/images/avances/datatron-pnda/datatron-pnda02.png)
@@ -50,4 +51,3 @@ Este ejercicio demostró que el tema preferido por la mayoría de los encuestado
 Más información sobre el Datatrón [aquí](http://datatron.herokuapp.com/ "Title").
 
 Consulta la metodología [aquí](https://docs.google.com/document/d/1o9OK54l2L1bFvS0jS1RUoyqV1qnCot4klRcmBVMGQHc/edit?usp=sharing "Title").
- 

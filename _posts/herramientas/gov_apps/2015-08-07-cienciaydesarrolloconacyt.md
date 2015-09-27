@@ -2,7 +2,7 @@
 published: true
 
 title: Ciencia y Desarrollo CONACYT
-app_author: CONCACYT
+author: CONCACYT
 date: 2015-08-07
 
 links:

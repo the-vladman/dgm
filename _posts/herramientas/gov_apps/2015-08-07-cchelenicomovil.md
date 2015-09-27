@@ -2,7 +2,7 @@
 published: true
 
 title: CC Helenico Movil
-app_author: CONACULTA
+author: CONACULTA
 date: 2015-08-07
 
 links:
@@ -13,4 +13,3 @@ section: gov_apps
 source: App Store en iTunes
 ---
 Con esta aplicación, conoce más sobre la cartelera y detalles acerca de los actores que presentan sus espectáculos en el Centro Cultural Helénico.
-

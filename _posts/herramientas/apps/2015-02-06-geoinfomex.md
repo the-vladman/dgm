@@ -4,7 +4,7 @@ layout: app
 
 title: GeoInfoMex
 date: 2015-02-04
-cover: apps/geoinfomx/geoinfomx-cover.png
+cover: apps/geoinfomx/geoinfomx-cover.jpg
 screenshots:
   - apps/geoinfomx/screens/geoinfomx1.png
   - apps/geoinfomx/screens/geoinfomx1a.png
@@ -21,13 +21,15 @@ datasets:
     title:  Empresas productoras de minerales metálicos y no metálicos
     url:   http://catalogo.datos.gob.mx/dataset/empresas-productoras-de-minerales-metalicos-y-no-metalicos-embajadas-instituciones-superiores-s
 
- 
-app_author: Servicio Geológico Mexicano
 
-permalink: "/apps/geoinfomx.html"
+author: Servicio Geológico Mexicano
+
+permalink: "/herramientas/movil/geoinfomx.html"
 section: herramientas
 sub_section: apps
-category: movil
+category:
+  - movil
+  - geoespacial
 category_title: Móvil
 tags:
   - minería
@@ -35,4 +37,4 @@ tags:
   - recursos naturales
 ---
 
-GeoInfoMex es una poderosa herramienta que permite a los usuarios obtener información generada por más de 7 décadas de exploración minera en México, simplificando la planeación estratégica de exploración en cualquier parte del Territorio Nacional. 
+GeoInfoMex es una poderosa herramienta que permite a los usuarios obtener información generada por más de 7 décadas de exploración minera en México, simplificando la planeación estratégica de exploración en cualquier parte del Territorio Nacional.

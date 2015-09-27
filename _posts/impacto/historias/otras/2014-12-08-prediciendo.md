@@ -5,7 +5,7 @@ title:    "Datos abiertos para predecir delitos en tiempo real"
 tagline:  "Datos abiertos para predecir delitos en tiempo real."
 author:   "Luis Román García | Omar Trejo"
 date:     2014-12-08 13:09:00 -0500
-cover:    "historias/prediciendo/prediciendo_cover_photo-1284x460.jpg"
+cover:    "historias/prediciendo/prediciendo-cover.jpg"
 cover_photo: "historias/prediciendo/prediciendo_cover_photo-1284x460.jpg"
 datasets:
   -
@@ -17,7 +17,7 @@ datasets:
   -
     title: "Tweets georeferenciados Zapopán"
     url: https://www.dropbox.com/sh/skv5nl9t5mdxr4n/AADqqEU5bx2gTZdMldjdvLfVa
-permalink: /historias/otros/2014-12-08-prediciendo.html
+permalink: /impacto/historias/2014-12-08-prediciendo.html
 section: impacto
 sub_section: historias
 category: otras
@@ -36,7 +36,7 @@ Para estimar la densidad de delitos en Zapopan utilizamos una técnica no param�
 
 Se integraron varias [bases de datos](http://dataton.datos.gob.mx "Página del Datatón en datos.gob.mx"), donde cada una agrega varias variables que son utilizadas para predecir delitos. Sabiendo el tipo de lugares y servicios que hay en cada celda y si han habido o no delitos, se entrenó el algoritmo Stochastic Gradient Boosting para predecir futuras ocurrencias de delitos.
 
-- Se utilizó el 70% de los datos para entrenamiento del algoritmo y 30% para la validación. 
+- Se utilizó el 70% de los datos para entrenamiento del algoritmo y 30% para la validación.
 
 - Se utilizaron 7,501 muestras bootstrap para estimar el error de predicción.
 
@@ -56,20 +56,20 @@ Como resultado la base de datos utilizada contiene delitos en 90% de las celdas.
 ####Fig. 4: Tasa de error de predicción
 ![Tasa de error de predicción]({{ site.url | append: site.baseurl }}assets/images/historias/prediciendo/prediciendo04.jpg)
 
-Los resultados muestran que es posible asignar de manera precisa una medida de probabilidad de incidencia delictiva a cada segmento del territorio, permitiéndonos identificar las características que comparten las regiones con baja y alta incidencia delictiva. 
+Los resultados muestran que es posible asignar de manera precisa una medida de probabilidad de incidencia delictiva a cada segmento del territorio, permitiéndonos identificar las características que comparten las regiones con baja y alta incidencia delictiva.
 
-El siguiente paso fue cruzar este análisis con datos obtenidos de redes sociales para optimizar el proceso de detección y prevención del crimen. Utilizando la [API REST de Twitter](https://dev.twitter.com "Sitio para Desarrolladores de Twitter") y la [API Directions de Google](https://developers.google.com/maps/documentation/directions/ "Sitio de Direcciones de APIs de Google") logramos capturar tweets que informan sobre sucesos que ocurren en tiempo real, como robos, asesinatos, disparos, peleas, asaltos, entre otros. 
+El siguiente paso fue cruzar este análisis con datos obtenidos de redes sociales para optimizar el proceso de detección y prevención del crimen. Utilizando la [API REST de Twitter](https://dev.twitter.com "Sitio para Desarrolladores de Twitter") y la [API Directions de Google](https://developers.google.com/maps/documentation/directions/ "Sitio de Direcciones de APIs de Google") logramos capturar tweets que informan sobre sucesos que ocurren en tiempo real, como robos, asesinatos, disparos, peleas, asaltos, entre otros.
 
 ####Fig. 4: Resultados de tweets recientes en Zapopan con densidad estimada  (líneas rojas)
 ![Resultados de tweets recientes en Zapopan con densidad estimada]({{ site.url | append: site.baseurl }}assets/images/historias/prediciendo/prediciendo05.jpg)
 
-Como resultado de este paso: 
+Como resultado de este paso:
 
 - Generamos una respuesta con información relevante, en este caso el hospital más cercano, el tiempo que se tomará en llegar (tomando en cuenta el tráfico) y las instrucciones para hacerlo.
 
 - Exploramos la posibilidad de avisar al hospital del hecho a través de un correo electrónico monitoreado o un mensaje directo en Twitter a cuenta para monitoreo de sucesos.
 
-- Nos dimos cuenta de que podemos ir más allá y enviar patrullas o bomberos a lugares donde están ocurriendo estos acontecimientos. 
+- Nos dimos cuenta de que podemos ir más allá y enviar patrullas o bomberos a lugares donde están ocurriendo estos acontecimientos.
 
 Figura 6: Resultado con instrucciones para el hospital más cercano  
 
@@ -78,7 +78,7 @@ Figura 6: Resultado con instrucciones para el hospital más cercano
 
 
 Iterando el proceso nos damos cuenta de que con las publicaciones en Twitter podemos de una forma automatizada, analizar muchos tipos de fenómenos sociales, económicos y naturales.
- 
+
 Aprovechando esto podemos responder con información o ayuda relevante que tiene el potencial de salvar vidas.
 
 #####Referencias

@@ -2,7 +2,7 @@
 published: true
 
 title: Presupuesto Familiar
-app_author: CONDUSEF
+author: CONDUSEF
 date: 2015-06-26
 
 links:

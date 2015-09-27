@@ -1,8 +1,8 @@
 ---
 published: true
 
-title: Autoselfie 
-app_author: CONACULTA
+title: Autoselfie
+author: CONACULTA
 date: 2015-08-07
 
 links:
@@ -12,4 +12,4 @@ links:
 section: gov_apps
 source: App Store en iTunes
 ---
-¿Te gustan las selfies? Te has dado cuenta que casi todos los artistas plásticos en algún momento de su vida hacen una selfie. 
+¿Te gustan las selfies? Te has dado cuenta que casi todos los artistas plásticos en algún momento de su vida hacen una selfie.

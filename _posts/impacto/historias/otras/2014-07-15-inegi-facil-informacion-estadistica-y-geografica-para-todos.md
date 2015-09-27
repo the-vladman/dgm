@@ -6,7 +6,7 @@ title:    "INEGI Fácil: información estadística y geográfica para todos"
 tagline:  "Mejorar la manera en que accedemos información oficial"
 author:   "Boris Cuapio Morales | INEGI fácil"
 date:     2014-07-15 12:09:00 -0500
-cover:    "historias/inegi-facil/Screen-Shot-2014-07-03-at-5.41.50-PM-480x225.png"
+cover:    "historias/inegi-facil/inegi-facil-cover.jpg"
 cover_photo: "historias/inegi-facil/Screen-Shot-2014-07-03-at-5.41.50-PM.png"
 datasets:
   -
@@ -30,7 +30,7 @@ datasets:
 collaborators:
   - inegi_facil
 
-permalink: /historias/otras/inegi-facil.html
+permalink: /impacto/historias/inegi-facil.html
 section: impacto
 sub_section: historias
 category: otras

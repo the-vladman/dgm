@@ -2,11 +2,11 @@
 published: true
 
 title: Le Monde Maya
-app_author: CPTM
+author: CPTM
 date: 2015-06-26
 
 links:
-  playStore: 
+  playStore:
   appleStore: https://itunes.apple.com/mx/app/le-monde-maya/id586436357?mt=8
 
 section: gov_apps

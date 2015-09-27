@@ -2,7 +2,7 @@
 published: true
 
 title: Banjecel
-app_author: BANJERCITO
+author: BANJERCITO
 date: 2015-06-26
 
 links:

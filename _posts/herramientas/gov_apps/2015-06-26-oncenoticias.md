@@ -2,7 +2,7 @@
 published: true
 
 title: Once Noticias
-app_author: Canal Once 
+author: Canal Once 
 date: 2015-06-26
 
 links:

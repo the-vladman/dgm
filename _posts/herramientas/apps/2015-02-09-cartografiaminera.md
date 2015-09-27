@@ -4,7 +4,7 @@ layout: app
 
 title: Consulta de la Cartografía Minera Digitalizada
 date: 2015-02-09
-cover: apps/cartografiaminera/cartografiaminera-cover.png
+cover: apps/cartografiaminera/cartografiaminera-cover.jpg
 screenshots:
   - apps/cartografiaminera/screens/cartografiaminera1a.png
   - apps/cartografiaminera/screens/cartografiaminera2a.png
@@ -16,12 +16,14 @@ datasets:
     title: "siam.economia.gob.mx"
     url: http://www.siam.economia.gob.mx/work/models/siam/Resource/Avisos/opendata.csv
 
-app_author: Secretaría de Economía | Dirección General de Regulación Minera
+author: Secretaría de Economía | Dirección General de Regulación Minera
 
-permalink: "/apps/cartografiaminera.html"
+permalink: "/herramientas/web/cartografiaminera.html"
 section: herramientas
 sub_section: apps
-category: web
+category:
+  - web
+  - geoespacial
 category_title: Web
 tags:
   - concesión

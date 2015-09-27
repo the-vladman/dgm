@@ -2,7 +2,7 @@
 published: true
 
 title: Archivo Abierto. 80 años del Fondo de Cultura Económica.
-app_author: FCE
+author: FCE
 date: 2015-06-26
 
 links:

@@ -2,7 +2,7 @@
 published: true
 
 title: Bellas Artes 80 años
-app_author: INBA
+author: INBA
 date: 2015-08-07
 
 links:
@@ -19,4 +19,3 @@ En esta App podrás encontrar una línea de tiempo con algunos de los momentos m
 Además, a través de la realidad aumentada, descubrir la placa virtual por los 80 años del palacio, con videos que recopilan los aspectos más relevantes de las diferentes facetas de la institución.
 
 Escanea con la cámara RA cualquier logotipo de los 80 años del Palacio de Bellas Artes para experimentar la realidad aumentada en tu dispositivo móvil o tableta.
-

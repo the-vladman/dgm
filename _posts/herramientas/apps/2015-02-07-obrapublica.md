@@ -4,7 +4,7 @@ layout: app
 
 title: Obra Pública e Infraestructura SCT
 date: 2015-02-04
-cover: apps/obrapublica/obrapublica-cover.png
+cover: apps/obrapublica/obrapublica-cover.jpg
 screenshots:
   - apps/obrapublica/screens/obrapublica1.png
   - apps/obrapublica/screens/obrapublica1a.png
@@ -22,11 +22,13 @@ datasets:
     title:  Alianza de Gobierno Abierto
     url:   https://www.datossct.gob.mx/dataset/BD-AGA-Alianza-de-Gobierno-Abierto/923j-z7wv
 
-app_author: Secretaria de Comunicaciones y Transportes
-permalink: "/apps/obrapublica.html"
+author: Secretaria de Comunicaciones y Transportes
+permalink: "/herramientas/web/obrapublica.html"
 section: herramientas
 sub_section: apps
-category: web
+category:
+  - web
+  - infraestructura
 category_title: Web
 tags:
   - infraestructura
@@ -44,4 +46,3 @@ Información relevante en materia de Obra Pública e Infraestructura para ser co
 Permite ubicar los proyectos por tipo de infraestructura: Carretera, Aeroportuaria, Marítima, Ferroviaria y de Telecomunicaciones.
 
 La SCT está comprometida con el postulado que sostiene que los temas de gobierno y administración deben ser abiertos a todos los niveles en cuanto a transparencia, participación y rendición de cuentas.
-

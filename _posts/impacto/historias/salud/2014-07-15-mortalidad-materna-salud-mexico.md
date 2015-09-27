@@ -6,7 +6,7 @@ title:    "Mortalidad materna y salud en México"
 tagline:  "Entender la mortalidad materna en México"
 author:   "Carlos Castro Correa | CEDN"
 date:     2014-07-15 12:00:00 -0500
-cover:    "historias/mortalidad-materna-salud-mexico/salud_d4d-07-480x225.png"
+cover:    "historias/mortalidad-materna-salud-mexico/mortalidad-materna-salud-mexico-cover.jpg"
 cover_photo: "historias/mortalidad-materna-salud-mexico/salud_d4d-07-1027x400.png"
 datasets:
   -
@@ -21,7 +21,7 @@ datasets:
 collaborators:
   - secretaria_salud
 
-permalink: /historias/salud/mortalidad-materna.html
+permalink: /impacto/historias/mortalidad-materna.html
 section: impacto
 sub_section: historias
 category: salud

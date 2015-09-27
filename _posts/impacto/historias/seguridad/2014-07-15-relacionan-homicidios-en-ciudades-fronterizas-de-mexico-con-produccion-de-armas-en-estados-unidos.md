@@ -6,7 +6,7 @@ title:    "Relación entre los homicidios en la frontera de México y la producc
 tagline:  "Entender la seguridad en la frontera"
 author:   "Data4"
 date:     2014-07-15 18:09:00 -0500
-cover:    "historias/relacion-de-homicidios-en-frontera/5-480x225.jpg"
+cover:    "historias/relacion-de-homicidios-en-frontera/relacion-de-homicidios-en-frontera-cover.jpg"
 cover_photo: "historias/relacion-de-homicidios-en-frontera/5-1280x400.jpg"
 datasets:
   -
@@ -18,11 +18,11 @@ datasets:
 collaborators:
   - data4
 
-permalink: /historias/seguridad/homicidios-frontera-armas-eeuu.html
+permalink: /impacto/historias/homicidios-frontera-armas-eeuu.html
 section: impacto
 sub_section: historias
-category: seguridad
-category_title: Seguridad
+category: seguridad y justicia
+category_title: Seguridad y justicia
 tags:
   - Armas
   - Frontera
@@ -147,7 +147,3 @@ por armas, y la facilidad de adquirirlas y transportarlas aumenta aún más la v
 convirtiendo el fenómeno en un mortal y horrendo circulo vicioso”.
 
 ##### Nota: Esta visualización se publicó originalmente en Univision Noticias.
-
-
-
-

@@ -2,7 +2,7 @@
 published: true
 
 title: Espacios Culturales
-app_author: CONACULTA
+author: CONACULTA
 date: 2015-08-07
 
 links:

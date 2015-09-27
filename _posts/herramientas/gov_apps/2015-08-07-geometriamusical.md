@@ -2,7 +2,7 @@
 published: true
 
 title: Geometría musical
-app_author: CONACULTA
+author: CONACULTA
 date: 2015-08-07
 
 links:

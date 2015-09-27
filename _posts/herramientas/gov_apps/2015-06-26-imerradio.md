@@ -2,7 +2,7 @@
 published: true
 
 title: IMER Radio
-app_author: IMER
+author: IMER
 date: 2015-06-26
 
 links:

@@ -2,7 +2,7 @@
 published: true
 
 title: Hombre de letras
-app_author: CONACULTA
+author: CONACULTA
 date: 2015-08-07
 
 links:
@@ -13,4 +13,3 @@ section: gov_apps
 source: App Store en iTunes
 ---
 Conviértete en el hombre de letras, ve palabras en donde no las hay y diviértete jugando con éstas, ¡creando frases extrañas, locas, simpáticas, interesantes o lo que más te guste!
-

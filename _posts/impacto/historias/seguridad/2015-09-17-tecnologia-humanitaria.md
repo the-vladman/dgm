@@ -13,11 +13,11 @@ datasets:
   -
     title: "Avisos de ciclón tropical"
     url: http://catalogo.datos.gob.mx/dataset/avisos-de-ciclon-tropical
-permalink: /historias/seguridad/tecnologia-humanitaria.html
+permalink: /impacto/historias/tecnologia-humanitaria.html
 section: impacto
 sub_section: historias
-category: seguridad
-category_title: Seguridad
+category: seguridad y justicia
+category_title: Seguridad y justicia
 tags:
   - Ayuda humanitaria
   - Desastres naturales
@@ -51,4 +51,3 @@ Súmate al [#SimulacroMX](https://twitter.com/search?src=typd&q=SimulacroMX), as
 Portada mostrando a Kathmandu Living Labs obtenida de [kathmandulivinglabs.org](http://kathmandulivinglabs.org/blog/wp-content/uploads/2015/04/IMG_1307-1024x768.jpg).
 
 Mapa de la Ciudad de México obtenido de [openstreetmap.org](http://www.openstreetmap.org/#map=13/19.4297/-99.1595&layers=H).
-

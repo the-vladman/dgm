@@ -5,7 +5,7 @@ featured_tagline: 'Datos Abiertos para:'
 title:    "Datos Abiertos para prevenir la Mortalidad Materna: Recomendaciones"
 author:   "Nick Eng | DSSG"
 date:     2015-01-13 13:09:00 -0500
-cover:    "historias/mortalidad-materna-recomendaciones/mortalidad-materna-recomendaciones_cover_photo-1284x460.jpg"
+cover:    "historias/mortalidad-materna-recomendaciones/mortalidad-materna-recomendaciones-cover.jpg"
 cover_photo: "historias/mortalidad-materna-recomendaciones/mortalidad-materna-recomendaciones_cover_photo-1284x460.jpg"
 datasets:
   -
@@ -19,7 +19,7 @@ datasets:
     url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
 collaborators:
   - secretaria_salud
-permalink: /historias/salud/mortalidad-materna.html
+permalink: /impacto/historias/mortalidad-materna.html
 section: impacto
 sub_section: historias
 category: salud
@@ -37,19 +37,19 @@ excerpt_separator: <!--more-->
 
 <!--more-->
 
-Por esta razón la Oficina de la Presidencia de la República, en alianza con la Secretaría de Salud, pidió a *Data Science for Social Good Fellowship* de la Universidad Chicago ayudar a encontrar nuevas estrategias que podrían reducir la mortalidad materna que trabajen de la mano con las políticas públicas que están siendo implementadas en el presente para reducir esta problemática. 
+Por esta razón la Oficina de la Presidencia de la República, en alianza con la Secretaría de Salud, pidió a *Data Science for Social Good Fellowship* de la Universidad Chicago ayudar a encontrar nuevas estrategias que podrían reducir la mortalidad materna que trabajen de la mano con las políticas públicas que están siendo implementadas en el presente para reducir esta problemática.
 
 
-En esta entrada vamos a entrar al proceso de desarrollo de recomendaciones que finalmente enviamos a México, en particular haciendo énfasis en cómo éstas serán tomadas en cuenta por nuestros socios en la Oficina de la Presidencia de la República en México. 
+En esta entrada vamos a entrar al proceso de desarrollo de recomendaciones que finalmente enviamos a México, en particular haciendo énfasis en cómo éstas serán tomadas en cuenta por nuestros socios en la Oficina de la Presidencia de la República en México.
 
 
 ##El trabajo de limpieza
 
 **Al principio del programa recibimos de parte de la Secretaría de Salud una serie de datos, incluyendo los registros de nacimiento y defunción, registros de altas de pacientes, información de todas las clínicas de salud, e información censal**, todo con información desde al menos 1990. Teníamos mucha información para trabajar. Sin embargo, convertir toda esta información en algo útil siempre es un reto interesante para los científicos de datos.
 
-[Un articulo](http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html) en el *New York Times* del año pasado describio al trabajo de limipieza como el principal obstaculo para el trabajo de los cientificos de datos. Podemos corroborar esto con toda nuestra experiencia usando datos. En el caso de este proyecto la problemática no fue terrible, sin embargo si se requirió una cantidad considerable de trabajo preliminar para poner los datos en formatos útiles para nuestros propósitos. 
+[Un articulo](http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html) en el *New York Times* del año pasado describio al trabajo de limipieza como el principal obstaculo para el trabajo de los cientificos de datos. Podemos corroborar esto con toda nuestra experiencia usando datos. En el caso de este proyecto la problemática no fue terrible, sin embargo si se requirió una cantidad considerable de trabajo preliminar para poner los datos en formatos útiles para nuestros propósitos.
 
-Los datos que recibimos, alrededor de 400, venían en una variedad de formatos diferentes: bases de datos de Microsoft Access, Excel y CSV. Así que había un poco de secuencias de comandos iniciales involucrados sólo para convertir y cargar todo en una base de datos. A partir de ahí teníamos que escribir *scripts* adicionales para limpiar los datos y cosas como fechas mal codificadas. Además para una misma base de datos un valor exactamente igual podía significar cosas completamente diferentes de un año a otro, lo cual representa serios problemas para el análisis que se haría más adelante. 
+Los datos que recibimos, alrededor de 400, venían en una variedad de formatos diferentes: bases de datos de Microsoft Access, Excel y CSV. Así que había un poco de secuencias de comandos iniciales involucrados sólo para convertir y cargar todo en una base de datos. A partir de ahí teníamos que escribir *scripts* adicionales para limpiar los datos y cosas como fechas mal codificadas. Además para una misma base de datos un valor exactamente igual podía significar cosas completamente diferentes de un año a otro, lo cual representa serios problemas para el análisis que se haría más adelante.
 
 **Sólo este paso inicial de limpieza y transformación representa valor para México**, ya que resultó que nunca se había creado un conjunto de datos único consolidado y limpio sobre mortalidad materna que incluye tanto las muertes como características municipales y sociodemográficas de los municipios.
 
@@ -69,11 +69,11 @@ Por esta razón, **modificamos nuestro enfoque inicial y desarrollamos un modelo
 
 ##Desarrollando la tubería
 
-Aunque teóricamente este enfoque era bueno también planteaba una serie de retos. Por ejemplo, algunos municipios rurales podrían ser muy pequeños y durante el periodo de cuatro años que utilizamos para los datos (cuando la tasa de mortalidad parecía más estable y sin cambios por diversas iniciativas implementadas) podrían no haberse observado muertes maternas en ese lugar. Por lo tanto aquellos municipios que parecían que tenían una razón de mortalidad materna de 0 en realidad no eran áreas que fuera libres de riesgo. Asimismo, en los municipios pequeños, una sola muerte materna podría alcanzar el nivel más alto de la tasa de mortalidad ya que la población era pequeña y el número de nacimientos era alto. 
+Aunque teóricamente este enfoque era bueno también planteaba una serie de retos. Por ejemplo, algunos municipios rurales podrían ser muy pequeños y durante el periodo de cuatro años que utilizamos para los datos (cuando la tasa de mortalidad parecía más estable y sin cambios por diversas iniciativas implementadas) podrían no haberse observado muertes maternas en ese lugar. Por lo tanto aquellos municipios que parecían que tenían una razón de mortalidad materna de 0 en realidad no eran áreas que fuera libres de riesgo. Asimismo, en los municipios pequeños, una sola muerte materna podría alcanzar el nivel más alto de la tasa de mortalidad ya que la población era pequeña y el número de nacimientos era alto.
 
 ¿Cómo aseguramos de que esos factores no afectarán nuestro modelo? ¿Nos fijamos únicamente en los municipios con un cierto tamaño de la población? ¿O en aquellos con al menos una muerte? ¿No deberíamos modelar la razón de mortalidad materna, sino una característica específica como por ejemplo, si una muerte materna ocurrió, o si la razón estaba por encima de un cierto valor?
 
-Por otra parte, llegamos a otras preguntas críticas. ¿Deberíamos de pesar el modelo a partir de la población de los municipios? Esto podría restar importancia a los pequeños municipios donde el problema es grave, pero podría ser más representativo del país en su conjunto. Además, ¿cómo debemos tratar con variables correlacionadas o factores que no son independientes pero están relacionados de alguna manera? Estas variables representan un problema para algunas técnicas de modelado, y hay varias formas de mitigar los efectos adversos de su impacto. Sin buenas respuestas a cualquiera de estas preguntas, hemos decidido que la ciencia de datos resuelva las preguntas por nosotros. 
+Por otra parte, llegamos a otras preguntas críticas. ¿Deberíamos de pesar el modelo a partir de la población de los municipios? Esto podría restar importancia a los pequeños municipios donde el problema es grave, pero podría ser más representativo del país en su conjunto. Además, ¿cómo debemos tratar con variables correlacionadas o factores que no son independientes pero están relacionados de alguna manera? Estas variables representan un problema para algunas técnicas de modelado, y hay varias formas de mitigar los efectos adversos de su impacto. Sin buenas respuestas a cualquiera de estas preguntas, hemos decidido que la ciencia de datos resuelva las preguntas por nosotros.
 
 Desarrollamos una tubería para nuestro análisis en el que se ejecutan todas las diferentes variables y posibilidades y generando un reporte para cada una de ellas. Esta tubería también genera diferentes modelos de cada variable, ya sea de regresión logística, árbol de decisión, o bosque al azar, para ver cuál se ajusta mejor a los datos y considera si existen variables con igualdad de importancia y diferente enfoque. A partir de ahí, podríamos mirar las variables importantes producto de cada variación y entender cuáles son consistentes, cuáles no y finalmente, elaborar una lista de 5 a 10 factores clave que podríamos considerar para formular recomendaciones para el desarrollo de  políticas públicas.
 
@@ -93,7 +93,7 @@ Para 1), se encontró que las consultas prenatales tienen una fuerte relación i
 
 De hecho, ya existen este tipo de programas de incentivos para ciertas poblaciones, madres aseguradas, por ejemplo aquellas derechohabientes del IMSS reciben prestaciones de maternidad sólo si cumplen con ciertos requisitos prenatales. Como resultado, un 15-20% más madres aseguradas por el IMSS reciben atención prenatal en el primer trimestre frente a la población que cuenta con Seguro Popular, y en promedio realizan 2 visitas prenatales más durante el transcurso de su embarazo. Tal programa de incentivos también tendría un impacto mucho mayor en poblaciones muy pobres que son 30% menos propensas a recibir atención prenatal en el primer trimestre y realizan en promedio solamente 2 consultas prenatales durante un embarazo.
 
-Para los puntos 2 y 3, encontramos que, dada la misma población, las madres que dan a luz por cesárea en los hospitales de la Secretaría de Salud tienen una razón de mortalidad mucho más alta que los que están en los hospitales del Sector Salud. Además, las madres del Seguro Popular que asisten los hospitales del Sector Salud (y por lo tanto tienen un desfase de seguros) tienen mucho más alta razón de mortalidad que aquellos que sí son beneficiarios, dada la misma población. 
+Para los puntos 2 y 3, encontramos que, dada la misma población, las madres que dan a luz por cesárea en los hospitales de la Secretaría de Salud tienen una razón de mortalidad mucho más alta que los que están en los hospitales del Sector Salud. Además, las madres del Seguro Popular que asisten los hospitales del Sector Salud (y por lo tanto tienen un desfase de seguros) tienen mucho más alta razón de mortalidad que aquellos que sí son beneficiarios, dada la misma población.
 
 **Si bien no hemos podido determinar la causa exacta de estas relaciones a partir de los datos, alentamos al gobierno mexicano a investigar más a fondo estos efectos, ya que puede haber cambios operacionales que podrían reducir el número de estas muertes.**
 
@@ -110,8 +110,4 @@ Una de nuestras recomendaciones ha ganado algo de tracción. Nuestros hallazgos 
 
 ##Reflexión
 
-Este verano nuestro equipo asumió un problema verdaderamente interesante y con alto potencial de impacto para ayudar a México a encontrar nuevas formas de reducir la mortalidad materna. Para nosotros, trabajar en un problema con un amplio alcance y con un objetivo tan significativo fue algo que nunca habíamos hecho antes. Todo fue muy rápido, ya que no sólo teníamos que apurarnos con los datos, sino también con temas relacionados con la mortalidad materna en países en desarrollo, especialmente en el contexto de México. Y, afortunadamente, con estos datos hemos sido capaces de generar acciones concretas los resultados que han dado lugar a iniciativas de verdad. El programa fue una experiencia increíble en la que disfrutamos hacer trabajo de alto impacto y aprendimos mucho. 
-
-
-
-
+Este verano nuestro equipo asumió un problema verdaderamente interesante y con alto potencial de impacto para ayudar a México a encontrar nuevas formas de reducir la mortalidad materna. Para nosotros, trabajar en un problema con un amplio alcance y con un objetivo tan significativo fue algo que nunca habíamos hecho antes. Todo fue muy rápido, ya que no sólo teníamos que apurarnos con los datos, sino también con temas relacionados con la mortalidad materna en países en desarrollo, especialmente en el contexto de México. Y, afortunadamente, con estos datos hemos sido capaces de generar acciones concretas los resultados que han dado lugar a iniciativas de verdad. El programa fue una experiencia increíble en la que disfrutamos hacer trabajo de alto impacto y aprendimos mucho.

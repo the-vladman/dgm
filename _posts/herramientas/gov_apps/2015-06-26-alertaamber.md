@@ -2,7 +2,7 @@
 published: true
 
 title: Alerta AMBER México
-app_author: Policía Federal
+author: Policía Federal
 date: 2015-06-26
 
 links:

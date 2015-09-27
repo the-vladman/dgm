@@ -2,7 +2,7 @@
 published: true
 
 title: Red Sísmica del Noroeste de México
-app_author: CICESE
+author: CICESE
 date: 2015-06-26
 
 links:

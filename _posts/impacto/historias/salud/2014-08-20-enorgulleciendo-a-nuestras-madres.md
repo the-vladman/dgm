@@ -5,7 +5,7 @@ title:    "Enorgulleciendo a nuestras madres: Reduciendo la mortalidad materna e
 tagline:  "Reducir la mortalidad materna"
 author:   "Nick Eng | DSSG"
 date:     2014-07-15 18:09:00 -0500
-cover:    "historias/enorgulleciendo-a-nuestras-madres/MMRate-Map2-SP-1024x593.png"
+cover:    "historias/enorgulleciendo-a-nuestras-madres/enorgulleciendo-a-nuestras-madres-cover.jpg"
 cover_photo: "historias/enorgulleciendo-a-nuestras-madres/MMRate-Map2-SP-copy-1280x400.png"
 datasets:
   -
@@ -14,7 +14,7 @@ datasets:
   -
     title: "Recursos en salud"
     url: http://catalogo.datos.gob.mx/dataset/recursos-en-salud
-permalink: /historias/salud/reduciendo-mortalidad-materna.html
+permalink: /impacto/historias/reduciendo-mortalidad-materna.html
 section: impacto
 sub_section: historias
 category: salud
@@ -85,4 +85,3 @@ Durante tres meses en Chicago ellos aplican su conocimiento en sistemas de cómp
 
 
 ![Equipo de DSSG]({{ site.url | append: site.baseurl }}/assets/images/dssg-team.png)
-

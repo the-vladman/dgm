@@ -6,7 +6,7 @@ title:    "Ramo 23: Conoce cómo se gastan las provisiones salariales y económi
 tagline:  "Conocer cómo se asigna presupuesto federal a los estados"
 author:   "Hugo Osorio | INEGI Fácil"
 date:     2014-06-15 12:09:00 -0500
-cover:    "historias/ramo-23-inegi-facil/ramo23ImgDestacada2-480x225.png"
+cover:    "historias/ramo-23-inegi-facil/ramo-23-inegi-facil-cover.jpg"
 cover_photo: "historias/ramo-23-inegi-facil/ramo23Imgcover2-1280x400.png"
 datasets:
   -
@@ -16,7 +16,7 @@ datasets:
     title: "Infraestructura Carretera"
     url: http://catalogo.datos.gob.mx/dataset/infraestructura-carretera
 
-permalink: /historias/otras/ramo-23.html
+permalink: /impacto/historias/ramo-23.html
 section: impacto
 sub_section: historias
 category: otras

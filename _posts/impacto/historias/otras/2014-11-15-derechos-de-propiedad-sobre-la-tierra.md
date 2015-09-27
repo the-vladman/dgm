@@ -7,7 +7,7 @@ author:   "Qué Funciona para el Desarrollo"
 date:     2014-11-15 18:09:00 -0500
 cover:    "historias/derechos-de-propiedad-sobre-la-tierra/derechos-de-propiedad-sobre-la-tierra-cover.jpg"
 cover_photo: "historias/derechos-de-propiedad-sobre-la-tierra/derechos-de-propiedad-sobre-la-tierra-cover.jpg"
-permalink: /historias/otros/derechos-de-propiedad-sobre-la-tierra.html
+permalink: /impacto/historias/derechos-de-propiedad-sobre-la-tierra.html
 section: impacto
 sub_section: historias
 category: otras
@@ -25,7 +25,7 @@ excerpt_separator: <!--more-->
 
 En México la brecha salarial entre el sector rural y el urbano, ajustado por educación, es alrededor de 2.5. Esto quiere decir que un individuo en un contexto urbano gana 2.5 veces más por hora que un individuo equivalente en el sector rural. ¿Por qué hay tanta gente en el sector rural en México, siendo que el ingreso es tan bajo?
 
-En parte, este exceso de fuerza laboral en el campo se generó con la Reforma Agraria de 1917-1992, en la cual se repartió gradualmente la mitad del territorio Mexicano en ejidos. En el ejido se daba el derecho de uso de parcelas agrícolas individuales a familias sin tierra, bajo la condición permanente de que el campesino la trabajara (se prohibía la contratación de trabajadores, la aparcería, la renta y venta de la tierra). 
+En parte, este exceso de fuerza laboral en el campo se generó con la Reforma Agraria de 1917-1992, en la cual se repartió gradualmente la mitad del territorio Mexicano en ejidos. En el ejido se daba el derecho de uso de parcelas agrícolas individuales a familias sin tierra, bajo la condición permanente de que el campesino la trabajara (se prohibía la contratación de trabajadores, la aparcería, la renta y venta de la tierra).
 
 La ley establece que, tras dos años sin labrarse la tierra, sería reasignada a otra familia del ejido. Bajo este esquema, la primera obligación del ejidatario era con su tierra, independientemente del retorno a la misma y de oportunidades laborales alternativas. Incluso la migración se volvió una opción muy costosa ya que implicaba la pérdida de la parcela, de la residencia y del derecho de uso de áreas comunes. No es de sorprender que los ejidatarios decidieron quedarse en el campo, a pesar de que las oportunidades en las ciudades fueran superiores.
 

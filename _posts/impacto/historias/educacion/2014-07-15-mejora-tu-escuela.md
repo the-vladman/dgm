@@ -2,10 +2,10 @@
 published: true
 layout:   post
 title:    "MejoraTuEscuela.org"
-tagline:  "Mejorar nuestras escuelas" 
+tagline:  "Mejorar nuestras escuelas"
 author:   "Ariadna Camargo y Alexandra Zapata | IMCO | Omidyar Network"
 date:     2014-07-15
-cover:    "historias/mejora-tu-escuela/mejora-screenshot.png"
+cover:    "historias/mejora-tu-escuela/mejora-tu-escuela-cover.jpg"
 cover_photo: "historias/mejora-tu-escuela/Screen-Shot-2014-07-15-at-12.51.37-PM-1214x400.png"
 datasets:
   -
@@ -21,7 +21,7 @@ datasets:
     title: "Sistema Nacional de Información Estadística Educativa, SEP"
     url: http://www.snie.sep.gob.mx/
 
-permalink: /historias/educacion/mejora-tu-escuela.html
+permalink: /impacto/historias/mejora-tu-escuela.html
 section: impacto
 sub_section: historias
 category: educacion

@@ -7,17 +7,17 @@ title: "Avisos de ciclones tropicales en tu celular y redes sociales"
 tagline: "¿qué pasaría si los avisos de ciclones llegaran automáticamente a la gente ubicada en regiones vulnerables?"
 author: "Rodolfo Wilhelmy"
 date: 2015-06-08 18:00:00 -0500
-cover: "historias/avisos-de-ciclones-tropicales/avisos-de-ciclones-tropicales_cover_photo-1284x460.jpg"
+cover: "historias/avisos-de-ciclones-tropicales/avisos-de-ciclones-tropicales-cover.jpg"
 cover_photo: "historias/avisos-de-ciclones-tropicales/avisos-de-ciclones-tropicales_cover_photo-1284x460.jpg"
 datasets:
   -
     title: "Avisos de ciclón tropical"
     url: http://catalogo.datos.gob.mx/dataset/avisos-de-ciclon-tropical
-permalink: /historias/seguridad/avisos-de-ciclones-tropicales.html
+permalink: /impacto/historias/avisos-de-ciclones-tropicales.html
 section: impacto
 sub_section: historias
-category: seguridad
-category_title: Seguridad
+category: seguridad y justicia
+category_title: Seguridad y justicia
 tags:
   - Ciclones tropicales
   - Huracanes
@@ -61,5 +61,3 @@ Rodolfo Wilhelmy, [@rodowi](https://twitter.com/rodowi)
 
 **Notas:**  
 [1] Bajo el entendido de que aún existen [poblaciones desconectadas digitalmente](http://mexicoconectado.gob.mx).
-
-

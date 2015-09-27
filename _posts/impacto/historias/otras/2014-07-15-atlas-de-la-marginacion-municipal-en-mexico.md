@@ -36,7 +36,7 @@ datasets:
 collaborators:
   - cartografica
 
-permalink: /historias/otras/atlas-marginacion.html
+permalink: /impacto/historias/atlas-marginacion.html
 section: impacto
 sub_section: historias
 category: otras
@@ -64,4 +64,3 @@ Al comenzar a elaborar el Atlas de la Marginación Municipal en México sabíamo
 Este mapa interactivo muestra la distribución geográfica de los datos del índice de marginación municipal de 2010, elaborado por el Consejo Nacional de Población (CONAPO). El usuario puede consultar los valores del índice, así como de los nueve indicadores que lo componen. El mapa permite representar hasta dos indicadores de forma simultánea.
 
 Lo que descubrimos al publicar este mapa interactivo es que los datos abiertos tienen un potencial mucho mayor. Gracias a los comentarios de diversos usuarios, entendimos que, dependiendo de cómo se visualice, la información pública puede ofrecer un mecanismo útil para comparar la situación del municipio o delegación donde vivimos con el resto del país. De esta forma, los datos abiertos pueden ser un catalizador para entender la complejidad de nuestro país, así como abrir el diálogo a distintas perspectivas que permitan entender de mejor manera dicha complejidad.
-

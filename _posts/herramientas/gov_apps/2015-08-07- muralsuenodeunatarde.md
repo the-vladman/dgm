@@ -1,8 +1,8 @@
 ---
 published: true
 
-title: Mural Sueño de una tarde dominical en la Alameda 
-app_author: CONACULTA
+title: Mural Sueño de una tarde dominical en la Alameda
+author: CONACULTA
 date: 2015-08-07
 
 links:

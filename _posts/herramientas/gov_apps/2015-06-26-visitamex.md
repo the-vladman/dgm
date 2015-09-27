@@ -2,11 +2,11 @@
 published: true
 
 title: Visita México
-app_author: CPTM
+author: CPTM
 date: 2015-06-26
 
 links:
-  playStore: 
+  playStore:
   appleStore: https://itunes.apple.com/mx/app/visita-mexico/id549991200?mt=8
 
 section: gov_apps

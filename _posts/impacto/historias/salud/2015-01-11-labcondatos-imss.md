@@ -6,7 +6,7 @@ title:    "LabConDatos: Atención en unidades médicas del IMSS en el 2013."
 tagline:  "Mostrar la relación entre la presencia de centros del IMSS con el grado de marginación."
 author:   "Mariana Ruiz | Rubén López | Orlando García | José Rodrigo Patiño | Luis Mauricio Torres"
 date:     2015-01-11 13:09:00 -0500
-cover:    "historias/labcondatos-imss/labcondatos-imss_cover_photo-1284x460.jpg"
+cover:    "historias/labcondatos-imss/labcondatos-imss-cover.jpg"
 cover_photo: "historias/labcondatos-imss/labcondatos-imss_cover_photo-1284x460.jpg"
 datasets:
 
@@ -16,19 +16,19 @@ datasets:
   -
     title: "Base de datos Zapopan-Datatón"
     url: http://www.conapo.gob.mx/en/CONAPO/Indices_de_Marginacion_Publicaciones
-  
-    
+
+
 collaborators:
   - imco
-  
-permalink: /historias/salud/2015-01-11-labcondatos-imss.html
+
+permalink: /impacto/historias/2015-01-11-labcondatos-imss.html
 section: impacto
 sub_section: historias
 category: salud
 category_title: Salud
 tags:
   - salud
-  - labcondatos 
+  - labcondatos
 redirect_from: /labcondatos-imss/
 published: true
 excerpt_separator: <!--more-->
@@ -46,7 +46,7 @@ Las Unidades Médicas se localizan en los municipios y localidades más densamen
 
 ![Percepción nacional del servicio del IMSS]({{ site.url | append: site.baseurl }}/assets/images/historias/labcondatos-imss/labcondatos-imss_01.jpg)
 
-Un dato interesante es que en la mayoría de las UMF, las personas encuestadas eran mujeres generalmente. Este dato tal vez parezca de poca utilidad para el diseño de políticas públicas, sin embargo nos dice algo: no necesariamente las mujeres demandan más atención médica que los hombres, pero esto muestra que probablemente son mujeres las que se encargan de los cuidados de la salud de miembros dependientes en el hogar (niños y adultos mayores). 
+Un dato interesante es que en la mayoría de las UMF, las personas encuestadas eran mujeres generalmente. Este dato tal vez parezca de poca utilidad para el diseño de políticas públicas, sin embargo nos dice algo: no necesariamente las mujeres demandan más atención médica que los hombres, pero esto muestra que probablemente son mujeres las que se encargan de los cuidados de la salud de miembros dependientes en el hogar (niños y adultos mayores).
 
 Las UMF se geolocalizaron utilizando los datos del directorio de UMF y las respuestas de satisfacción provienen de la Encuesta Nacional de Satisfacción a Usuarios de Servicios Médicos del IMSS (ENSat) 2013. Para el análisis de los datos se utilizó el programa estadístico SPSS y Stata.
 
