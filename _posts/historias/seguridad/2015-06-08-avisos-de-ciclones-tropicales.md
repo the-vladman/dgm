@@ -1,6 +1,5 @@
 ---
 published: true
-featured: true
 layout: post
 title: "Avisos de ciclones tropicales en tu celular y redes sociales"
 
