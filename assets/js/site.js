@@ -7,6 +7,35 @@ var Site    = {
     },
 
     _setData        : function () {
+        if ( $( '#tab-recents' ).length > 0 ) {
+            $.get( 'http://catalogo.datos.gob.mx/api/3/action/package_search', {
+                    rows    : 3,
+                    start   : 0
+                }, function ( data ) {
+                    var results = data.result.results,
+                        list    = $( '#tab-recents ul' );
+
+                    for ( var i = 0; i < results.length; i++ ) {
+                        list.append( $('<li><a href="http://busca.datos.gob.mx/#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></li>') );
+                    }
+                });
+        }
+
+        if ( $( '#tab-downloads' ).length > 0 ) {
+            $.get( 'http://catalogo.datos.gob.mx/api/3/action/package_search', {
+                    rows    : 3,
+                    start   : 0,
+                    sort    : 'views_recent desc'
+                }, function ( data ) {
+                    var results = data.result.results,
+                        list    = $( '#tab-downloads ul' );
+
+                    for ( var i = 0; i < results.length; i++ ) {
+                        list.append( $('<li><a href="http://busca.datos.gob.mx/#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></li>') );
+                    }
+                });
+        }
+
         if ( $( '#data-tab-recents' ).length > 0 ) {
             var section     = $( '#data-tab-recents' ).attr( 'data-tag' );
             $.get( 'http://catalogo.datos.gob.mx/api/3/action/package_search', {
