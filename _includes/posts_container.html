@@ -5,8 +5,10 @@
             <div class="post-item first">
                 <a class="text-center" href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
                 <div class="inner">
-                    <div class="row">
-                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                    <div class="row equal-height">
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                            <span class="category-icon icon-{{ post.category }}"></span>
+                        </div>
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                             <h5><a href="{{ post.permalink }}">{{ post.title }}</a></h5>
                             <p class="small">{{ post.date | date: '%d %B, %Y' }}</p>
@@ -24,8 +26,10 @@
             <div class="post-item">
                 <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl }}"></a>
                 <div class="inner">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                    <div class="row equal-height">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <span class="category-icon icon-{{ post.category }}"></span>
+                        </div>
                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                             <h5><a href="{{ post.permalink }}">{{ post.title }}</a></h5>
                             <p class="small">{{ post.date | date: '%d %B, %Y' }}</p>
@@ -47,8 +51,10 @@
                 <div class="post-item first">
                     <a class="text-center" href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
                     <div class="inner">
-                        <div class="row">
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                        <div class="row equal-height">
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                <span class="category-icon icon-{{ post.category }}"></span>
+                            </div>
                             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                                 <h5><a href="{{ post.permalink }}">{{ post.title }}</a></h5>
                                 <p class="small">{{ post.date | date: '%d %B, %Y' }}</p>
@@ -65,8 +71,10 @@
                 <div class="post-item">
                     <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl }}"></a>
                     <div class="inner">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                        <div class="row equal-height">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <span class="category-icon icon-{{ post.category }}"></span>
+                            </div>
                             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                                 <h5><a href="{{ post.permalink }}">{{ post.title }}</a></h5>
                                 <p class="small">{{ post.date | date: '%d %B, %Y' }}</p>
