@@ -73,3 +73,6 @@
 // Forms
 @import "forms/skeleton";
 @import "forms/skin";
+
+.tool-link          { padding: 50px 30px; text-align: center; }
+.tool-link .btn     { font-size: 18px; text-transform: uppercase; padding: 5px 30px; }
