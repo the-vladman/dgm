@@ -1,7 +1,6 @@
 ---
 layout: "post-progress"
 published: true
-featured: true
 featured_tagline: 'Avance:'
 title: 'Puebla: La colaboración como clave para la apertura'
 excerpt: "En el caso de Puebla, la experiencia en la apertura de datos públicos ha tenido éxito gracias a la colaboración entre distintos actores."
