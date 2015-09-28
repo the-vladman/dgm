@@ -18,6 +18,10 @@ var Site    = {
                     var results = data.result.results,
                         table   = $( '#data-tab-recents table tbody' );
 
+                    if ( results.length > 0 ) {
+                        $( '#category-data' ).fadeIn();
+                    }
+
                     for ( var i = 0; i < results.length; i++ ) {
                         table.append( $('<tr><td>' + results[i].title + '</td><td>' + results[i].organization.title + '</td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td><td class="ic-dataset"><img src="/assets/img/ic-dataset.png"></td></tr>'));
                     }
