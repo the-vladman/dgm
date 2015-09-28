@@ -20,7 +20,7 @@ datasets:
 
 
 
-permalink: /historias/geografica/redistritacion.html
+permalink: /historias/geografia/redistritacion.html
 section:  historias
 category: geografia
 category_title: "Geografia"
