@@ -1,9 +1,49 @@
 var Site    = {
 
-    init        : function () {
+    init            : function () {
+        Site._setData();
         Site._setTabs();
         Site._setHovers();
         Site._setResources();
+    },
+
+    _setData        : function () {
+        if ( $( '#data-tab-recents' ).length > 0 ) {
+            var section     = $( '#data-tab-recents' ).attr( 'data-tag' );
+            $.get( 'http://catalogo.datos.gob.mx/api/3/action/package_search', {
+                    q       : 'tags:' + section,
+                    rows    : 3,
+                    start   : 0
+                }, function ( data ) {
+                    var results = data.result.results,
+                        table   = $( '#data-tab-recents table tbody' );
+
+                    if ( results.length > 0 ) {
+                        $( '#category-data' ).removeClass( 'hidden' );
+                    }
+
+                    for ( var i = 0; i < results.length; i++ ) {
+                        table.append( $('<tr><td>' + results[i].title + '</td><td>' + results[i].organization.title + '</td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td><td class="ic-dataset"><img src="/assets/img/ic-dataset.png"></td></tr>'));
+                    }
+                });
+        }
+
+        if ( $( '#data-tab-downloads' ).length > 0 ) {
+            var section     = $( '#data-tab-downloads' ).attr( 'data-tag' );
+            $.get( 'http://catalogo.datos.gob.mx/api/3/action/package_search', {
+                    q       : 'tags:' + section,
+                    rows    : 3,
+                    start   : 0,
+                    sort    : 'views_recent desc'
+                }, function ( data ) {
+                    var results = data.result.results,
+                        table   = $( '#data-tab-downloads table tbody' );
+
+                    for ( var i = 0; i < results.length; i++ ) {
+                        table.append( $('<tr><td>' + results[i].title + '</td><td>' + results[i].organization.title + '</td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td><td class="ic-dataset"><img src="/assets/img/ic-dataset.png"></td></tr>'));
+                    }
+                });
+        }
     },
 
     _setHovers      : function () {
@@ -34,7 +74,7 @@ var Site    = {
         });
     },
 
-    _setTabs    : function () {
+    _setTabs        : function () {
         $( '.tabs a' ).click( function ( e ) {
             e.preventDefault()
             $( this ).tab( 'show' )
