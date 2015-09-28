@@ -1,7 +1,7 @@
 <div class="row equal-height">
     {% assign i = 0 %}
-    {% for post in include.posts reversed %}
-        {% if forloop.first %}
+    {% if include.featured %}
+        {% for post in include.featured %}
             <div class="post-item first">
                 <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
                 <div class="inner">
@@ -18,7 +18,8 @@
             </div>
             </div>
             <div class="row equal-height">
-        {% else %}
+        {% endfor %}
+        {% for post in include.posts reversed %}
             {% assign i = i | plus: 1 %}
             <div class="post-item">
                 <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl }}"></a>
@@ -39,6 +40,48 @@
                 </div>
                 <div class="row equal-height">
             {% endif %}
-        {% endif %}
-    {% endfor %}
+        {% endfor %}
+    {% else %}
+        {% for post in include.posts reversed %}
+            {% if forloop.first %}
+                <div class="post-item first">
+                    <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
+                    <div class="inner">
+                        <div class="row">
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                <h5><a href="{{ post.permalink }}">{{ post.title }}</a></h5>
+                                <p class="small">{{ post.date | date: '%d %B, %Y' }}</p>
+                                <p>{{ post.excerpt }}</p>
+                                <h6>{{ post.category_title }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="row equal-height">
+            {% else %}
+                {% assign i = i | plus: 1 %}
+                <div class="post-item">
+                    <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl }}"></a>
+                    <div class="inner">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                <h5><a href="{{ post.permalink }}">{{ post.title }}</a></h5>
+                                <p class="small">{{ post.date | date: '%d %B, %Y' }}</p>
+                                <p>{{ post.excerpt }}</p>
+                                <h6>{{ post.category_title }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if i == 2 %}
+                    {% assign i = 0 %}
+                    </div>
+                    <div class="row equal-height">
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
 </div>
