@@ -19,7 +19,7 @@ var Site    = {
                         table   = $( '#data-tab-recents table tbody' );
 
                     if ( results.length > 0 ) {
-                        $( '#category-data' ).fadeIn();
+                        $( '#category-data' ).removeClass( 'hidden' );
                     }
 
                     for ( var i = 0; i < results.length; i++ ) {
