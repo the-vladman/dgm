@@ -4,7 +4,7 @@ layout: app
 
 title: Atlas Turístico de México
 date: 2015-09-17
-cover: apps/atlasturistico/atlasturistico-cover.png
+cover: apps/atlasturistico/atlasturistico-cover.jpg
 screenshots:
   - apps/atlasturistico/screens/atlasturistico01.png
   - apps/atlasturistico/screens/atlasturistico02.png
