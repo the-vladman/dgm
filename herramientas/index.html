@@ -10,8 +10,9 @@ title: Herramientas
             {% include sidebar.html highlight='all' %}
         </div>
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 posts-container">
-            {% assign posts = site.posts | where: 'section', 'herramientas' | where: 'published', true | sort: 'date' %}
-            {% include tools_container.html posts=posts section='herramientas' %}
+            {% assign featured = site.posts | where: 'section', 'herramientas' | where: 'featured', true | where: 'published', true | sort: 'date' %}
+            {% assign posts = site.posts | where: 'section', 'herramientas' | where: 'featured', false | where: 'published', true | sort: 'date' %}
+            {% include tools_container.html featured=featured posts=posts section='herramientas' %}
         </div>
     </div>
 </div>
