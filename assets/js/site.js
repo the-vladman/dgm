@@ -2,7 +2,6 @@ var Site    = {
 
     init            : function () {
         Site._setData();
-        Site._setTabs();
         Site._setHovers();
         Site._setResources();
     },
@@ -71,13 +70,6 @@ var Site    = {
 
         $( '.resource-item .item-hover' ).click( function ( e ) {
             window.location.href    = $( 'a', $( e.currentTarget ) ).attr( 'href' );
-        });
-    },
-
-    _setTabs        : function () {
-        $( '.tabs a' ).click( function ( e ) {
-            e.preventDefault()
-            $( this ).tab( 'show' )
         });
     },
 
