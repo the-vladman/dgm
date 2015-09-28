@@ -298,6 +298,8 @@ section#about-video                         { margin-bottom: 50px; padding-top: 
 .tools-item                                 { width: 40%; margin-left: 6.5%; margin-bottom: 50px; padding-bottom: 20px; background-color: #eee; float: left; position: relative; }
 .post-item.first,
 .tools-item.first                           { width: 86.5%; }
+.post-item a,
+.tools-item a                               { display: block; }
 .post-item .inner,
 .tools-item .inner                          { padding-left: 15px; padding-right: 15px; }
 .post-item h5,

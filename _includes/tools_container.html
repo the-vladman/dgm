@@ -3,7 +3,7 @@
     {% if include.featured %}
         {% for post in include.featured %}
             <div class="tools-item first">
-                <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
+                <a class="text-center" href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
                 <div class="inner">
                     <div class="row">
                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
@@ -39,7 +39,7 @@
         {% for post in include.posts reversed %}
             {% if forloop.first %}
                 <div class="tools-item first">
-                    <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
+                    <a class="text-center" href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
                     <div class="inner">
                         <div class="row">
                             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
