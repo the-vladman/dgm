@@ -2,6 +2,7 @@ var Site    = {
 
     init            : function () {
         Site._setData();
+        Site._setForm();
         Site._setHovers();
         Site._setResources();
     },
@@ -72,6 +73,15 @@ var Site    = {
                     }
                 });
         }
+    },
+
+    _setForm        : function () {
+        $( '#search-form' ).submit( function ( e ) {
+            e.preventDefault();
+
+            window.open( 'http://busca.datos.gob.mx/#/conjuntos?search=' + $( '#search-keyword' ).val(), '_blank' );
+            $( '#search-keyword' ).val( '' );
+        });
     },
 
     _setHovers      : function () {
