@@ -7,7 +7,7 @@ author: 'Equipo de Datos Abiertos'
 featured: false
 date: 2015-09-29
 cover: "avances/odc/odc-01.jpg"
-cover_photo: "avances/odc/odc-cover.jpg"
+cover_photo: "avances/odc/odc-cover.png"
 permalink: "/avances/open-data-charter.html"
 section: avances
 category: politica
@@ -17,7 +17,7 @@ tags:
   - datos abiertos
 ---
 
-"La Carta Internacional de Datos Abiertos tiene el potencial de acelerar el progreso al poner datos accionables en manos de las personas." Sir Tim Berners-Lee, Inventor de la World Wide Web
+*"La Carta Internacional de Datos Abiertos tiene el potencial de acelerar el progreso al poner datos accionables en manos de las personas." Sir Tim Berners-Lee, Inventor de la World Wide Web*
 
 En un momento histórico en el que el mundo está por adoptar la Agenda 2030 para el Desarrollo Sostenible, los Datos Abiertos se encuentran en el corazón de un movimiento global que aprovecha el potencial de las nuevas tecnologías impulsadas por la revolución de datos para generar un impacto positivo en el desarrollo económico y social a nivel global.
 
@@ -27,14 +27,14 @@ Al acordar principios en común para la liberación y uso de datos, la Carta Int
 
 La Carta Internacional de Datos Abiertos es una iniciativa multilateral apoyada por gobiernos, organizaciones de la sociedad civil, sector privado y expertos en la materia. El documento determina en 6 principios que los datos deben ser:
 
-1. Abiertos por Defecto
-2. Oportunos y Completos
-3. Accesibles y Utilizables
-4. Comparables e Interoperables
-5. Para mejorar la Gobernanza y la Participación Ciudadana
-6. Para el Desarrollo y la Innovación Incluyente
+- Abiertos por Defecto
+- Oportunos y Completos
+- Accesibles y Utilizables
+- Comparables e Interoperables
+- Para mejorar la Gobernanza y la Participación Ciudadana
+- Para el Desarrollo y la Innovación Incluyente
 
-"Como líderes de esta iniciativa, hacemos un llamado a otros gobiernos para adoptar estos principios, con el objetivo de colaborar y dar seguimiento al diseño y progreso de políticas públicas dirigidas a alcanzar los Objetivos de Desarrollo Sostenible." Enrique Peña Nieto, Presidente de México
+*“Como líderes de esta iniciativa, hacemos un llamado a otros gobiernos para adoptar estos principios, con el objetivo de colaborar y dar seguimiento al diseño y progreso de políticas públicas dirigidas a alcanzar los Objetivos de Desarrollo Sostenible.” Enrique Peña Nieto, Presidente de México*
 
 El objetivo principal de este esfuerzo colaborativo es fomentar una mayor coherencia, adopción e implementación de los principios de Datos Abiertos, estableciendo estándares y buenas prácticas en distintos sectores alrededor del mundo.
 
