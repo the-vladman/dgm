@@ -294,6 +294,18 @@ section#about-video                         { margin-bottom: 50px; padding-top: 
 /*********************************
     POSTS STYLES
 *********************************/
+.category-icon                              { display: block; width: 100%; height: 100%; background-size: contain; background-repeat: no-repeat; background-position: 50% 30px; }
+.icon-salud                                 { background-image: url(../assets/img/categories/ic-health-hover.png); }
+.icon-geoespacial                           { background-image: url(../assets/img/categories/ic-geospatial-hover.png); }
+.icon-seguridad-y-justicia                  { background-image: url(../assets/img/categories/ic-security-hover.png); }
+.icon-energia-y-medio-ambiente              { background-image: url(../assets/img/categories/ic-energy-hover.png); }
+.icon-educacion                             { background-image: url(../assets/img/categories/ic-education-hover.png); }
+.icon-economia                              { background-image: url(../assets/img/categories/ic-economy-hover.png); }
+.icon-cultura-y-turismo                     { background-image: url(../assets/img/categories/ic-culture-hover.png); }
+.icon-finanzas-y-contrataciones             { background-image: url(../assets/img/categories/ic-finance-hover.png); }
+.icon-infraestructura                       { background-image: url(../assets/img/categories/ic-infrastructure-hover.png); }
+.icon-desarrollo-sostenible                 { background-image: url(../assets/img/categories/ic-development-hover.png); }
+.icon-gobiernos-locales                     { background-image: url(../assets/img/categories/ic-government-hover.png); }
 .posts-container                            { padding-top: 50px; padding-bottom: 50px; }
 .post-item,
 .tools-item                                 { width: 40%; margin-left: 6.5%; margin-bottom: 50px; padding-bottom: 20px; background-color: #eee; float: left; position: relative; }
