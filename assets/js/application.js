@@ -12,7 +12,7 @@ $(function() {
     autoHover: true,
     pager: false,
     controls: true,
-    auto: false,
+    auto: true,
     pause: 4000,
     pager: false,
     nextText: '',
