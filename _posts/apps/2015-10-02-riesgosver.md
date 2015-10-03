@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: app
 
 title: Atlas de Riesgos del Estado de Veracruz
