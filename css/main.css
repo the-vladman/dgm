@@ -226,7 +226,7 @@ section#about-video                         { margin-bottom: 50px; padding-top: 
 .carousel-caption h3                        { margin-top: 10px; margin-bottom: 30px; }
 .carousel-caption p                         { font-size: 16px; line-height: 28px; font-weight: 300; }
 .carousel-caption .breadcrumb               { margin-bottom: 0; padding: 0; background-color: transparent; font-size: 12px; font-weight: 600; color: #ababab; text-transform: uppercase; }
-.carousel-caption .breadcrumb > a           { color: #0c9; }
+.carousel-caption .breadcrumb > a           { color: #0c9; top: 0; }
 .carousel-indicators                        { bottom: -60px; }
 .carousel-indicators li                     { width: 20px; height: 20px; margin: 0; margin-left: 10px; background-color: #d8d8d8; border: none; }
 .carousel-indicators li:first-child         { margin-left: 0; }
