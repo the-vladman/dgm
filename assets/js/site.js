@@ -5,6 +5,7 @@ var Site    = {
         Site._setForm();
         Site._setHovers();
         Site._setResources();
+        Site._setVideo();
     },
 
     _setData        : function () {
@@ -118,6 +119,14 @@ var Site    = {
 
         $( '.resource-item' ).hover( function ( e ) {
             $( '.item-hover', e.currentTarget ).slideToggle();
+        });
+    },
+
+    _setVideo       : function () {
+        $( '#toggle-video' ).click( function ( e ) {
+            e.preventDefault();
+
+            $( '#home-video' ).slideToggle();
         });
     }
 }
