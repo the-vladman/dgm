@@ -14,10 +14,10 @@ var Site    = {
                     start   : 0
                 }, function ( data ) {
                     var results = data.result.results,
-                        list    = $( '#tab-recents ul' );
+                        list    = $( '#tab-recents tbody' );
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        list.append( $('<li><a href="http://busca.datos.gob.mx/#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></li>') );
+                        list.append( $('<tr><td><a href="http://busca.datos.gob.mx/#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td></tr>') );
                     }
                 });
         }
@@ -29,10 +29,10 @@ var Site    = {
                     sort    : 'views_recent desc'
                 }, function ( data ) {
                     var results = data.result.results,
-                        list    = $( '#tab-downloads ul' );
+                        list    = $( '#tab-downloads tbody' );
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        list.append( $('<li><a href="http://busca.datos.gob.mx/#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></li>') );
+                        list.append( $('<tr><td><a href="http://busca.datos.gob.mx/#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td></tr>') );
                     }
                 });
         }
