@@ -80,7 +80,7 @@ var Site    = {
         $( '#search-form' ).submit( function ( e ) {
             e.preventDefault();
 
-            window.open( 'http://busca.datos.gob.mx/#/conjuntos?search=' + $( '#search-keyword' ).val(), '_blank' );
+            window.open( 'http://busca.datos.gob.mx/#/conjuntos?q=' + $( '#search-keyword' ).val(), '_blank' );
             $( '#search-keyword' ).val( '' );
         });
     },
