@@ -157,12 +157,13 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 #highlights .nav-tabs > li.active > a,
 #highlights .nav-tabs > li > a:hover        { color: #fff; }
 #highlights .tab-content ul                 { padding: 0; list-style: none; }
-#highlights .tab-content ul > li            { padding: 7px 10px; background-color: rgba(0,0,0,0.3); }
-#highlights .tab-content ul > li > a        { display: block; font-size: 11px; text-transform: uppercase; color: #fff; }
+#highlights .tab-content tr                 { background-color: rgba(0,0,0,0.3); }
+#highlights .tab-content tr > td            { padding: 7px 10px; vertical-align: middle; font-size: 11px; color: #fff; }
+#highlights .tab-content tr > td > a        { display: block; font-size: 11px; text-transform: uppercase; }
 #highlights .tool p                         { margin-bottom: 20px; }
 #highlights .tool .btn                      { margin-bottom: 20px; padding: 10px 20px; font-weight: 600; }
 #highlights .tool .btn:hover                { color: #333; }
-#highlights .tab-content ul > li:nth-child(2)   { background-color: rgba(0,0,0,0.4); }
+#highlights .tab-content tr:nth-child(2)    { background-color: rgba(0,0,0,0.4); }
 
 /*********************************
     ABOUT SECTION STYLES
