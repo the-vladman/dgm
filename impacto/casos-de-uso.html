@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Impacto - Historias
-permalink: /impacto/historias/
+title: Casos de uso
+permalink: /impacto/casos-de-uso/
 ---
 
-{% include impact_header.html highlight='histories' %}
+{% include impact_header.html highlight='cases' %}
 <div class="container-fluid">
     <div class="row equal-height">
         <div id="dgm-sidebar" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
             {% include sidebar.html highlight='all' %}
         </div>
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 posts-container">
-            {% assign posts = site.posts | where: 'sub_section', 'historias' | where: 'published', true | sort: 'date' %}
+            {% assign posts = site.posts | where: 'sub_section', 'casos-de-uso' | where: 'published', true | sort: 'date' %}
             {% include posts_container.html posts=posts section='impacto' %}
         </div>
     </div>
