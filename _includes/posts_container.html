@@ -1,6 +1,6 @@
 <div class="row equal-height">
     {% assign i = 0 %}
-    {% if include.featured %}
+    {% if include.featured.size > 0 %}
         {% for post in include.featured %}
             <div class="post-item first">
                 <a class="text-center" href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
