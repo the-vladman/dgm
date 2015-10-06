@@ -52,6 +52,9 @@ layout: default
                         </div>
                     </div>
                     <div class="app-buttons">
+						{% if page.links.web %}
+                            <a href="{{ page.links.web }}" class="app-link web">Disponible en<span>Aplicación Web</span></a>
+                        {% endif %}													
                         {% if page.links.appleStore %}
                             <a href="{{ page.links.appleStore }}" class="app-link apple">Disponible en<span>App Store</span></a>
                         {% endif %}
