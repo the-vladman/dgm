@@ -1,11 +1,22 @@
 var Site    = {
 
     init            : function () {
+        Site._loadTweets();
         Site._setData();
         Site._setForm();
         Site._setHovers();
         Site._setResources();
         Site._setVideo();
+    },
+
+    _loadTweets     : function () {
+        $.get( 'tweets.json',
+            function ( data ) {
+                for ( var i = 0; i < data.length; i++ ) {
+                    var element = $( '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet"><div class="inner"><p>' + data[i].content + '</p><p class="small">' + data[i].date + '</p><div class="author"><div class="pull-left avatar"><img src="' + data[i].avatar + '"></div><div class="pull-left"><p>' + data[i].author + '</p><a href="https://twitter.com/' +data[i].author_handler + '" target="_blank">@' + data[i].author_handler + '</a></div></div></div></div>' );
+                    $( '#tweets-container' ).append( element );
+                }
+            });
     },
 
     _setData        : function () {
