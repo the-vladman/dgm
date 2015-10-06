@@ -8,7 +8,7 @@ permalink: /impacto/avances/
 <div class="container-fluid">
     <div class="row equal-height">
         <div id="dgm-sidebar" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-            {% include sidebar.html highlight='all' %}
+            {% include sidebar.html highlight='all' section='impacto' %}
         </div>
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 posts-container">
             {% assign posts = site.posts | where: 'sub_section', 'avances' | where: 'published', true | sort: 'date' %}
