@@ -1,0 +1,18 @@
+---
+layout: default
+title: Finanzas y Contrataciones
+permalink: /impacto/finanzas-y-contrataciones/
+---
+
+{% include apps_header.html highlight='all' %}
+<div class="container-fluid">
+    <div class="row equal-height">
+        <div id="dgm-sidebar" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            {% include sidebar.html highlight='finance' section='impacto' %}
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 posts-container">
+            {% assign posts = site.posts | where: 'section', 'impacto' | where: 'category', 'finanzas-y-contrataciones' | where: 'published', true | sort: 'date' %}
+            {% include posts_container.html posts=posts section='impacto' %}
+        </div>
+    </div>
+</div>
