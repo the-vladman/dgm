@@ -1,0 +1,32 @@
+<div class="row equal-height">
+    {% assign i = 0 %}
+    {% for post in include.posts reversed %}
+        {% assign i = i | plus: 1 %}
+        <div class="gov-app-item col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <div class="inner">
+                <div class="row equal-height">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h5>{{ post.title }}</h5>
+                        <p><i>{{ post.author }}</i></p>
+                        <div class="links-container">
+                            {% if post.links.webLink %}
+                                <a href="{{ post.links.webLink }}" class="app-links web" alt="Web">Web</a>
+                            {% endif %}
+                            {% if post.links.appleStore %}
+                                <a href="{{ post.links.appleStore }}" class="app-links apple"></a>
+                            {% endif %}
+                            {% if post.links.appleStore %}
+                                <a href="{{ post.links.playStore }}" class="app-links android"></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if i == 4 %}
+            {% assign i = 0 %}
+            </div>
+            <div class="row equal-height">
+        {% endif %}
+    {% endfor %}
+</div>
