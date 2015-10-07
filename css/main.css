@@ -242,6 +242,7 @@ section#about-video                         { margin-bottom: 50px; padding-top: 
 *********************************/
 #category-header h1                         { margin-bottom: 20px; margin-left: 10px; font-size: 22px; font-weight: bold; text-transform: uppercase; color: #0c9; }
 #category-header p                          { margin-left: 10px; font-size: 14px; }
+#category-image                             { width: 100%; margin-bottom: 20px; text-align: center; }
 .header-icon                                { height: 110px; padding: 20px; background-color: #0c9; }
 .header-icon img                            { position: relative; top: 50%; transform: translateY(-50%); }
 
