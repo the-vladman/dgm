@@ -185,8 +185,8 @@ section#about-video                         { margin-bottom: 50px; padding-top: 
 *********************************/
 #categories                                 { background-color: #eee; height: auto; padding: 30px 0 27px; }
 #categories ul                              { width: 90%; margin: 0 auto; padding: 0; overflow: hidden; list-style: none; }
-#categories ul > li                         { display: block; width: 9.09%; height: 110px; float: left; text-align: center; }
-#categories li > a                          { display: block; height: 10px; padding: 50px 10px 0; font-size: 12px; color: #595959; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 50% 0; }
+#categories ul > li                         { display: block; width: 9.09%; height: auto; float: left; text-align: center; }
+#categories li > a                          { display: inline-block; height: 10px; padding: 60px 10px 0; font-size: 12px; line-height: 18px; color: #595959; text-align: center; background-repeat: no-repeat; background-size: contain; background-position: 50% 50%; }
 #categories li > a:hover                    { color: #0c9; }
 #categories #item-health                    { background-image: url(../assets/img/categories/ic-health.png); }
 #categories #item-health:hover              { background-image: url(../assets/img/categories/ic-health-hover.png); }
