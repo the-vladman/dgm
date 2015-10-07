@@ -9,3 +9,8 @@
         </div>
     </div>
 </section>
+{% if include.image %}
+    <section id="category-image">
+        <img src="{{ "/assets/img/sections/" | append: include.image | append: '.jpg' | prepend: site.baseurl }}">
+    </section>
+{% endif %}
