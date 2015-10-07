@@ -17,16 +17,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                <h1>Impacto</h1>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-6 col-xs-12">
                 {% assign avances = site.posts | where: 'sub_section', 'avances' | where: 'published', true %}
                 {% assign cases = site.posts | where: 'sub_section', 'casos-de-uso' | where: 'published', true %}
                 {% assign news = site.posts | where: 'sub_section', 'noticias' | where: 'published', true %}
-                <h1>Impacto</h1>
-                <p>{{ cases.size }} Casos de uso</p>
-                <p>{{ news.size }} Noticias</p>
-                <p>{{ avances.size }} Avances</p>
-            </div>
-            <div class="col-lg-10 col-md-10 col-sm-6 col-xs-12">
                 <p>Descubre cómo los datos abiertos generan valor con historias de uso, noticias y eventos.</p>
+                <p><a href="/impacto/casos-de-uso">{{ cases.size }} Casos de uso</a> | <a href="/impacto/noticias">{{ news.size }} Noticias</a> | <a href="/impacto/avances">{{ avances.size }} Avances</a></p>
             </div>
         </div>
     </div>
