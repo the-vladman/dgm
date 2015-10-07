@@ -24,6 +24,7 @@ p.small                                     { font-size: 11px; }
 .app-link:last-child                        { margin-bottom: 0; }
 .app-link.apple                             { background-image: url(../assets/img/ic-apple.svg); }
 .app-link.android                           { background-image: url(../assets/img/ic-android.svg); }
+.app-link.web                               { background-image: url(../assets/img/ic-web.svg); }
 .app-links                                  { display: block; width: 20px; height: 20px; margin-right: 10px; float: left; text-indent: -9999px; background: transparent no-repeat center center; background-size: contain; }
 .app-links.android                          { background-image: url(../assets/img/ic-android.png); }
 .app-links.apple                            { background-image: url(../assets/img/ic-ios.png); }
