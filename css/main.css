@@ -312,6 +312,7 @@ section#about-video                         { margin-bottom: 50px; padding-top: 
 .icon-infraestructura                       { background-image: url(../assets/img/categories/ic-infrastructure-hover.png); }
 .icon-desarrollo-sostenible                 { background-image: url(../assets/img/categories/ic-development-hover.png); }
 .icon-gobiernos-locales                     { background-image: url(../assets/img/categories/ic-government-hover.png); }
+.icon-otros                                 { background-image: url(../assets/img/categories/ic-others.png); }
 .posts-container                            { padding-top: 50px; padding-bottom: 50px; }
 .post-item,
 .tools-item                                 { width: 40%; margin-left: 6.5%; margin-bottom: 50px; padding-bottom: 20px; background-color: #eee; float: left; position: relative; }
