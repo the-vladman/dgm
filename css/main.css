@@ -36,6 +36,7 @@ p.small                                     { font-size: 11px; }
     SHARE STYLES
 *********************************/
 .share-section                              { margin-bottom: 30px; }
+.social-buttons                             { overflow: hidden; }
 .social-buttons .button-item                { display: inline; float: left; margin-right: 10px; }
 
 /*********************************
