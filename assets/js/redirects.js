@@ -37,7 +37,7 @@ var list = [
       },
       {
         name: 'agenda2030',
-        url: 'http://pnud.carto.mx/'
+        url: 'http://agenda2030.datos.gob.mx/'
       }
     ],
     dependency  = pathExist( window.location.pathname );
