@@ -7,6 +7,25 @@ function addAriaHiddenAttrs(iframe) {
 
 $(function() {
 
+  var path    = window.location.pathname,
+      loc     = null;
+
+  path        = path.substring( 1 );
+
+  if ( path.charAt( path.length - 1 ) == '/' ) {
+    path   = path.substring( 0, path.length - 1 );
+  } else {
+    path    = path.replace( '.html', '' );
+  }
+
+  if ( path == '' ) {
+    loc     = 'datos.landing';
+  } else {
+    loc     = 'datos.' + path.replace( /\//g, '.' );
+  }
+
+  udm_( 'http://b.scorecardresearch.com/b?c1=2&c2=17183199&ns_site=gobmx&name=' + loc );
+
 
   $('.slider').bxSlider({
     autoHover: true,
