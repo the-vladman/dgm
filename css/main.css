@@ -42,7 +42,7 @@ p.small                                     { font-size: 11px; }
 /*************************
     Notifications Styles
 *************************/
-#system-notification                        { width: 710px; height: 51px; position: fixed; top: 0; left: 50%; z-index: 10000; transform: translateX(-50%); }
+#system-notification                        { display: none; width: 710px; height: 51px; position: fixed; top: 0; left: 50%; z-index: 10000; transform: translateX(-50%); }
 .notification-container                     { width: 710px; height: 51px; display: none; }
 .notification                               { width: 690px; height: 50px; padding: 0 10px; border-radius: 0 0 5px 5px; border: 1px solid; border-top: none; overflow: hidden; }
 .notification p                             { height: 50px; line-height: 50px; margin-bottom: 0; float: left; }

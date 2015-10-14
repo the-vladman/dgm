@@ -13,6 +13,7 @@ var Site    = {
     },
 
     _alert          : function ( msg, type ) {
+        $( '#system-notification' ).css( 'display', 'block' );
         $( '#system-notification .notification' ).addClass( type );
         $( '#system-notification p' ).html( msg );
         $( '#system-notification .notification-container' ).slideDown();
@@ -21,12 +22,14 @@ var Site    = {
             $( '#system-notification .notification-container' ).slideUp();
             $( '#system-notification .notification' ).removeClass( type );
             $( '#system-notification p' ).html( '' );
+            $( '#system-notification' ).css( 'display', 'none' );
         }, 3500 );
 
         $( '#system-notification .glyphicon-remove' ).click( function () {
             $( '#system-notification .notification-container' ).slideUp();
             $( '#system-notification .notification' ).removeClass( type );
             $( '#system-notification p' ).html( '' );
+            $( '#system-notification' ).css( 'display', 'none' );
             clearTimeout( timer );
         });
     },
