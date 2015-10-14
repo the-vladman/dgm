@@ -351,6 +351,12 @@ p.cover-image                               { text-align: center; }
 .posts-container .carousel-control          { background-image: none; }
 
 /***********************
+    POSTS STYLES
+***********************/
+@media (max-width: 767px)                           { .posts-container .row { display: block; width: 110%; } .tools-item { width: 86.5%; float: none; } }
+@media (min-width: 768px) and (max-width: 991px)    { .posts-container .row { display: block; width: 110%; } .tools-item { width: 86.5%; float: none; } }
+
+/***********************
     APPS STYLES
 ***********************/
 #app-header                                 { min-height: 300px; margin-bottom: 30px; background-color: #eee; position: relative; }
