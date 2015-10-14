@@ -10,6 +10,23 @@ var Site    = {
         Site._setVideo();
     },
 
+    _alert          : function ( msg, type ) {
+        $( '#system-notification .notification' ).addClass( type );
+        $( '#system-notification p' ).html( msg );
+        $( '#system-notification .notification-container' ).slideDown();
+
+        var timer   = setTimeout( function () {
+            $( '#system-notification .notification-container' ).slideUp();
+            $( '#system-notification p' ).html( '' );
+        }, 3500 );
+
+        $( '#system-notification .glyphicon-remove' ).click( function () {
+            $( '#system-notification .notification-container' ).slideUp();
+            $( '#system-notification p' ).html( '' );
+            clearTimeout( timer );
+        });
+    },
+
     _loadTweets     : function () {
         $.get( 'tweets.json',
             function ( data ) {
