@@ -8,7 +8,27 @@ var Site    = {
         Site._setForm();
         Site._setHovers();
         Site._setResources();
+        Site._setSubscribe();
         Site._setVideo();
+    },
+
+    _alert          : function ( msg, type ) {
+        $( '#system-notification .notification' ).addClass( type );
+        $( '#system-notification p' ).html( msg );
+        $( '#system-notification .notification-container' ).slideDown();
+
+        var timer   = setTimeout( function () {
+            $( '#system-notification .notification-container' ).slideUp();
+            $( '#system-notification .notification' ).removeClass( type );
+            $( '#system-notification p' ).html( '' );
+        }, 3500 );
+
+        $( '#system-notification .glyphicon-remove' ).click( function () {
+            $( '#system-notification .notification-container' ).slideUp();
+            $( '#system-notification .notification' ).removeClass( type );
+            $( '#system-notification p' ).html( '' );
+            clearTimeout( timer );
+        });
     },
 
     _loadTweets     : function () {
@@ -160,6 +180,42 @@ var Site    = {
 
         $( '.resource-item' ).hover( function ( e ) {
             $( '.item-hover', e.currentTarget ).slideToggle();
+        });
+    },
+
+    _setSubscribe   : function () {
+        $( '#subscribe-form' ).submit( function ( e ) {
+            e.preventDefault();
+
+            var form    = $( this ),
+                email   = form.find( '.form-control' );
+
+            if ( email.val() == '' ) {
+                Site._alert( 'Por favor ingrese una dirección de correo', 'error' );
+                email.focus();
+            } else {
+                $.ajax({
+                    type        : form.attr( 'method' ),
+                    url         : form.attr( 'action' ),
+                    data        : form.serialize(),
+                    cache       : false,
+                    dataType    : 'json',
+                    contentType : "application/json; charset=utf-8",
+                    error       : function( err ) {
+                        Site._alert( 'Uups, algo paso que no pudimos registrate, intenta más tarde.', 'error' );
+                        email.focus();
+                    },
+                    success     : function( data ) {
+                        if ( data.result != "success" ) {
+                            Site._alert( 'Al parecer el correo electrónico que ingresaste no existe o es invalido.', 'error' );
+                            email.focus();
+                        } else {
+                            Site._alert( 'Para completar tu registro verifica tu correo electrónico.', 'info' );
+                            email.val( '' );
+                        }
+                    }
+                });
+            }
         });
     },
 
