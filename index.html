@@ -82,39 +82,83 @@ title: datos.gob.mx
 </section>
 <section id="categories">
     <ul>
-        <li>
-            <a href="/salud" id="item-health">Salud</a>
-        </li>
-        <li>
-            <a href="/geoespacial" id="item-geospatial">Geoespacial</a>
-        </li>
-        <li>
-            <a href="/seguridad-y-justicia" id="item-security">Seguridad y justicia</a>
-        </li>
-        <li>
-            <a href="/energia-y-medio-ambiente" id="item-energy">Energia y Medio Ambiente</a>
-        </li>
-        <li>
-            <a href="/educacion" id="item-education">Educación</a>
-        </li>
-        <li>
-            <a href="/economia" id="item-economy">Economía</a>
-        </li>
-        <li>
-            <a href="/cultura-y-turismo" id="item-culture">Cultura y turismo</a>
-        </li>
-        <li>
-            <a href="/finanzas-y-contrataciones" id="item-finance">Finanzas y contrataciones</a>
-        </li>
-        <li>
-            <a href="/infraestructura" id="item-infrastructure">Infraestructura</a>
-        </li>
-        <li>
-            <a href="/desarrollo-sostenible" id="item-development">Desarrollo Sostenible</a>
-        </li>
-        <li>
-            <a href="/gobiernos-locales" id="item-government">Gobiernos Locales</a>
-        </li>
+        {% assign tools = site.posts | where: 'section', 'herramientas' | where: 'category', 'salud' | where: 'published', true %}
+        {% assign impact = site.posts | where: 'section', 'impacto' | where: 'category', 'salud' | where: 'published', true %}
+        {% if tools.size > 0 or impact.size > 0  %}
+            <li>
+                <a href="/salud" id="item-health">Salud</a>
+            </li>
+        {% endif %}
+        {% assign tools = site.posts | where: 'section', 'herramientas' | where: 'category', 'geoespacial' | where: 'published', true %}
+        {% assign impact = site.posts | where: 'section', 'impacto' | where: 'category', 'geoespacial' | where: 'published', true %}
+        {% if tools.size > 0 or impact.size > 0  %}
+            <li>
+                <a href="/geoespacial" id="item-geospatial">Geoespacial</a>
+            </li>
+        {% endif %}
+        {% assign tools = site.posts | where: 'section', 'herramientas' | where: 'category', 'seguridad-y-justicia' | where: 'published', true %}
+        {% assign impact = site.posts | where: 'section', 'impacto' | where: 'category', 'seguridad-y-justicia' | where: 'published', true %}
+        {% if tools.size > 0 or impact.size > 0  %}
+            <li>
+                <a href="/seguridad-y-justicia" id="item-security">Seguridad y justicia</a>
+            </li>
+        {% endif %}
+        {% assign tools = site.posts | where: 'section', 'herramientas' | where: 'category', 'energia-y-medio-ambiente' | where: 'published', true %}
+        {% assign impact = site.posts | where: 'section', 'impacto' | where: 'category', 'energia-y-medio-ambiente' | where: 'published', true %}
+        {% if tools.size > 0 or impact.size > 0  %}
+            <li>
+                <a href="/energia-y-medio-ambiente" id="item-energy">Energia y Medio Ambiente</a>
+            </li>
+        {% endif %}
+        {% assign tools = site.posts | where: 'section', 'herramientas' | where: 'category', 'educacion' | where: 'published', true %}
+        {% assign impact = site.posts | where: 'section', 'impacto' | where: 'category', 'educacion' | where: 'published', true %}
+        {% if tools.size > 0 or impact.size > 0  %}
+            <li>
+                <a href="/educacion" id="item-education">Educación</a>
+            </li>
+        {% endif %}
+        {% assign tools = site.posts | where: 'section', 'herramientas' | where: 'category', 'economia' | where: 'published', true %}
+        {% assign impact = site.posts | where: 'section', 'impacto' | where: 'category', 'economia' | where: 'published', true %}
+        {% if tools.size > 0 or impact.size > 0  %}
+            <li>
+                <a href="/economia" id="item-economy">Economía</a>
+            </li>
+        {% endif %}
+        {% assign tools = site.posts | where: 'section', 'herramientas' | where: 'category', 'cultura-y-turismo' | where: 'published', true %}
+        {% assign impact = site.posts | where: 'section', 'impacto' | where: 'category', 'cultura-y-turismo' | where: 'published', true %}
+        {% if tools.size > 0 or impact.size > 0  %}
+            <li>
+                <a href="/cultura-y-turismo" id="item-culture">Cultura y turismo</a>
+            </li>
+        {% endif %}
+        {% assign tools = site.posts | where: 'section', 'herramientas' | where: 'category', 'finanzas-y-contrataciones' | where: 'published', true %}
+        {% assign impact = site.posts | where: 'section', 'impacto' | where: 'category', 'finanzas-y-contrataciones' | where: 'published', true %}
+        {% if tools.size > 0 or impact.size > 0  %}
+            <li>
+                <a href="/finanzas-y-contrataciones" id="item-finance">Finanzas y contrataciones</a>
+            </li>
+        {% endif %}
+        {% assign tools = site.posts | where: 'section', 'herramientas' | where: 'category', 'infraestructura' | where: 'published', true %}
+        {% assign impact = site.posts | where: 'section', 'impacto' | where: 'category', 'infraestructura' | where: 'published', true %}
+        {% if tools.size > 0 or impact.size > 0  %}
+            <li>
+                <a href="/infraestructura" id="item-infrastructure">Infraestructura</a>
+            </li>
+        {% endif %}
+        {% assign tools = site.posts | where: 'section', 'herramientas' | where: 'category', 'desarrollo-sostenible' | where: 'published', true %}
+        {% assign impact = site.posts | where: 'section', 'impacto' | where: 'category', 'desarrollo-sostenible' | where: 'published', true %}
+        {% if tools.size > 0 or impact.size > 0  %}
+            <li>
+                <a href="/desarrollo-sostenible" id="item-development">Desarrollo Sostenible</a>
+            </li>
+        {% endif %}
+        {% assign tools = site.posts | where: 'section', 'herramientas' | where: 'category', 'gobiernos-locales' | where: 'published', true %}
+        {% assign impact = site.posts | where: 'section', 'impacto' | where: 'category', 'gobiernos-locales' | where: 'published', true %}
+        {% if tools.size > 0 or impact.size > 0  %}
+            <li>
+                <a href="/gobiernos-locales" id="item-government">Gobiernos Locales</a>
+            </li>
+        {% endif %}
     </ul>
 </section>
 <section id="info" class="container-fluid fixed">

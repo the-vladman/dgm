@@ -3,6 +3,7 @@ var Site    = {
     init            : function () {
         Site._loadTweets();
         Site._pageViews();
+        Site._setCategories();
         Site._setData();
         Site._setForm();
         Site._setHovers();
@@ -39,6 +40,13 @@ var Site    = {
         }
 
         udm_( 'http://b.scorecardresearch.com/b?c1=2&c2=17183199&ns_site=gobmx&name=' + loc );
+    },
+
+    _setCategories  : function () {
+        var el      = $( '#categories ul li' ),
+            width   = el.length * el.width();
+
+        $( '#categories ul' ).width( width );
     },
 
     _setData        : function () {
