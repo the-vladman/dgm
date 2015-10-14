@@ -348,6 +348,7 @@ p.cover-image                               { text-align: center; }
 .datasets-list > li                         { padding: 10px; margin-bottom: 10px; background-color: #eee; font-size: 12px; font-weight: 300; }
 .datasets-list > li > a                     { display: block; color: #474747; }
 .post-section.comments                      { margin-top: 30px; }
+.posts-container .carousel-control          { background-image: none; }
 
 /***********************
     APPS STYLES
