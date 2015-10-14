@@ -6,8 +6,8 @@ app_author: CONACULTA
 date: 2015-08-07
 
 links:
-  playStore:https://play.google.com/store/apps/details?id=air.com.conaculta.marea
-  appleStore:https://itunes.apple.com/mx/app/marea-de-colores/id731699441?mt=8
+  playStore: https://play.google.com/store/apps/details?id=air.com.conaculta.marea
+  appleStore: https://itunes.apple.com/mx/app/marea-de-colores/id731699441?mt=8
 
 section: gov_apps
 source: App Store en iTunes
