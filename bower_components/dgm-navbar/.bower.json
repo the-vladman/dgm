@@ -1,6 +1,6 @@
 {
   "name": "dgm-navbar",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "main": "dgm-navbar.html",
   "dependencies": {
@@ -12,13 +12,13 @@
     "dgm-navbar"
   ],
   "homepage": "https://github.com/mxabierto/dgm-navbar",
-  "_release": "0.0.4",
+  "_release": "0.0.5",
   "_resolution": {
     "type": "version",
-    "tag": "v0.0.4",
-    "commit": "be5df385b7b77f3991c05e8ffe124c303b878da8"
+    "tag": "v0.0.5",
+    "commit": "5093ef695822d37b37f44f2db061b9d5ca9f3126"
   },
   "_source": "git://github.com/mxabierto/dgm-navbar.git",
-  "_target": "^0.0.4",
+  "_target": "^0.0.5",
   "_originalSource": "mxabierto/dgm-navbar"
 }
