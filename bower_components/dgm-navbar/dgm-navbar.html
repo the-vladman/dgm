@@ -30,6 +30,7 @@ Example:
         .navbar-default ul.navbar-nav > li > a                              { display: block; padding: 14px 20px; color: #fff; font-size: 12px; text-decoration: none; font-family: "Open Sans"; transition: all 0.1s ease-in-out 0s; }
         .navbar-default ul.navbar-nav > li > a:hover,
         .navbar-default ul.navbar-nav > li > a.active                       { background-color: #545454; color: #adadad; }
+        @media (max-width: 991px)                                           { .navbar-collapse { display: none; } }
     </style>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <template>
@@ -91,7 +92,7 @@ Example:
                         </svg>
                     </a>
                 </div>
-                <div class="collapse navbar-collapse hidden-xs hidden-sm hidden-md">
+                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right social-navigation" role="navigation" aria-label="Navegación social">
                         <li class="item-github"><a href="//github.com/mxabierto" target="_blank">Github</a></li>
                     </ul>
