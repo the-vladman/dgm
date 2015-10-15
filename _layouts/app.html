@@ -4,7 +4,7 @@ layout: default
 
 {% include apps_header.html highlight='all' %}
 {% if page.iframe_src %}
-    <iframe class="tool-iframe" src="{{ page.iframe_src }}"></iframe>
+    <iframe class="tool-iframe hidden-sm hidden-xs" src="{{ page.iframe_src }}"></iframe>
 {% endif %}
 <div class="container-fluid app-item">
     <div class="row equal-height">
@@ -82,16 +82,16 @@ layout: default
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
+            <div class="container-fluid hidden-sm hidden-xs">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-12 col-md-12">
                         <h5 class="app-subtitle">Más herramientas</h5>
                         {% assign posts = site.posts | where: 'sub_section', 'apps' | where: 'published', true | sort: 'date' %}
                         {% assign i = 0 %}
                         <div class="row equal-height">
                             {% for post in posts limit:4 %}
                                 {% assign i = i | plus: 1 %}
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 app-item">
+                                <div class="col-lg-6 col-md-6 app-item">
                                     <div class="inner">
                                         <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: post.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
                                         <div class="info">
@@ -118,7 +118,7 @@ layout: default
                             {% endfor %}
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-12 col-md-12">
                         {% include disqus_comments.html %}
                     </div>
                 </div>
