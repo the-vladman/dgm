@@ -19,7 +19,9 @@ layout: default
         {% endif %}
         <p class="small">{{ page.date | date: '%d %B, %Y' }}</p>
         {{ content }}
-        {% include disqus_comments.html %}
+        <div class="hidden-sm hidden-xs">
+            {% include disqus_comments.html %}
+        </div>
     </div>
     {% if page.datasets %}
         <div class="col-lg-4 col-md-4 col-lg-offset-1 col-md-offset-1 hidden-sm hidden-xs post-datasets">
