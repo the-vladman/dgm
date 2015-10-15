@@ -8,10 +8,10 @@ layout: default
 {% endif %}
 <div class="container-fluid app-item">
     <div class="row equal-height">
-        <div id="dgm-sidebar" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        <div id="dgm-sidebar" class="col-lg-2 col-md-2 hidden-sm hidden-xs">
             {% include sidebar.html highlight='all' %}
         </div>
-        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 posts-container">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 posts-container">
             {% if page.iframe_src %}
                 <div class="container-fluid">
                     <div class="row">
