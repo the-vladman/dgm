@@ -35,9 +35,10 @@ Este sábado 19 de septiembre, #MéxicoDigital se suma al [#SimulacroMX organiza
 
 Durante el evento:  
 
-* Daremos talleres sobre herramientas utilizadas durante emergencias, como lo son OpenStreetMap, Mapillary, Facebook Safety Check, Google Person Finder, entre otras.
+* Daremos talleres sobre plataformas comunitarias de datos abiertos utilizadas durante emergencias, como lo son [OpenStreetMap](http://openstreetmap.org/) y [Mapillary](http://www.mapillary.com/).
 * Hablaremos de cómo podemos aplicar el Protocolo de Alertamiento Común (CAP) para [emitir avisos de fenómenos naturales que puedan ser replicados](http://datos.gob.mx/historias/seguridad/avisos-de-ciclones-tropicales.html) en múltiples plataformas digitales.
 * Realizaremos un ejercicio de [Mapeo Humanitario con la comunidad de OpenStreetMap](http://wiki.openstreetmap.org/wiki/ES:Mexico_Earhquake_Drill_2015) en el cual, a través de imágenes satelitales y excursiones en campo, actualizaremos el mapa de las regiones afectadas durante el simulacro.
+* Las empresas Facebook y Google presentarán sus herramientas disponibles al público, como son Facebook Safety Check y Google Person Finder.
 
 Súmate al [#SimulacroMX](https://twitter.com/search?src=typd&q=SimulacroMX), asiste a los talleres, participa en el simulacro, y forma parte de la nueva generación de ayuda humanitaria del país.
 
