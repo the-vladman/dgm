@@ -73,6 +73,8 @@ var Site    = {
     },
 
     _setData        : function () {
+        var link    = 'http://ng-ckan.bitslice.net/';
+
         if ( $( '#tab-recents' ).length > 0 ) {
             $.get( 'http://catalogo.datos.gob.mx/api/3/action/package_search', {
                     rows    : 3,
@@ -117,7 +119,7 @@ var Site    = {
                     }
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        table.append( $('<tr><td>' + results[i].title + '</td><td>' + results[i].organization.title + '</td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td><td class="ic-dataset"><img src="/assets/img/ic-dataset.png"></td></tr>'));
+                        table.append( $('<tr><td><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td>' + results[i].organization.title + '</td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td><td class="ic-dataset"><img src="/assets/img/ic-dataset.png"></td></tr>'));
                     }
                 });
         }
@@ -134,7 +136,7 @@ var Site    = {
                         table   = $( '#data-tab-downloads table tbody' );
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        table.append( $('<tr><td>' + results[i].title + '</td><td>' + results[i].organization.title + '</td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td><td class="ic-dataset"><img src="/assets/img/ic-dataset.png"></td></tr>'));
+                        table.append( $('<tr><td><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td>' + results[i].organization.title + '</td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td><td class="ic-dataset"><img src="/assets/img/ic-dataset.png"></td></tr>'));
                     }
                 });
         }
