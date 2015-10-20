@@ -10,7 +10,15 @@
     </div>
 </section>
 {% if include.image %}
-    <section id="category-image">
-        <img src="{{ "/assets/img/sections/" | append: include.image | append: '.jpg' | prepend: site.baseurl }}">
-    </section>
+    {% assign posts = site.posts | where: 'category', include.category | where: 'category_featured', true | where: 'published', true | sort: 'date' %}
+    {% for post in posts limit:1 %}
+        <section id="category-map">
+            <img src="{{ "/assets/img/herramientas/" | append: post.featured_cover | prepend: site.baseurl | prepend: site.url }}">
+            <div id="map-description">
+                <h3>Herramienta</h3>
+                <p><strong>{{ post.title }}</strong></p>
+                <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
+            </div>
+        </section>
+    {% endfor %}
 {% endif %}
