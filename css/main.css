@@ -363,6 +363,7 @@ p.cover-image                               { text-align: center; }
 #app-slider                                 { margin-right: -15px; }
 #app-slider .carousel-inner                 { max-height: 300px; }
 #app-slider .carousel-inner .item > img     { margin: 0 auto; max-width: 100%; max-height: 300px; }
+#slider .carousel-control                   { background-image: none; }
 .app-subtitle                               { margin-top: 60px; margin-bottom: 30px; }
 .app-item .inner                            { margin: 10px; background-color: #eee; }
 .app-item .info                             { padding: 10px 20px; }
