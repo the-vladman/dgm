@@ -65,17 +65,17 @@ title: datos.gob.mx
                         <a href="{{ post.permalink }}" class="btn btn-default">Conoce la herramienta</a>
                     {% endfor %}
                 </div>
-                <h5>Impacto</h5>
-                <div class="news">
-                    {% assign posts = site.posts | where: 'section', 'impacto' | where: 'featured' , true | where: 'published', true %}
-                    {% if posts.size == 0 %}
-                        {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true %}
-                    {% endif %}
-                    {% for post in posts limit:1 %}
-                        <h3>{{ post.title }}</h3>
+                {% assign posts = site.posts | where: 'section', 'impacto' | where: 'featured' , true | where: 'published', true %}
+                {% if posts.size == 0 %}
+                    {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true %}
+                {% endif %}
+                {% for post in posts limit:1 %}
+                    <h5>Impacto / {{ post.category_title }}</h5>
+                    <div class="news">
+                        <h3><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.title }}</a></h3>
                         <a href="{{ post.permalink }}">leer más</a>
-                    {% endfor %}
-                </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
