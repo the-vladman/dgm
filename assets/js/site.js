@@ -84,7 +84,11 @@ var Site    = {
                         list    = $( '#tab-recents tbody' );
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        list.append( $('<tr><td><a href="http://busca.datos.gob.mx/#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td width="20%">' + results[i].organization.title + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>') );
+                        var el  = $('<tr data-link="http://busca.datos.gob.mx/#/conjuntos/' + results[i].name + '"><td>' + results[i].title + '</td><td width="20%">' + results[i].organization.title + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>');
+                        list.append( el );
+                        el.click( function ( e ) {
+                            window.open( el.attr( 'data-link' ), '_blank' );
+                        });
                     }
                 });
         }
@@ -99,7 +103,11 @@ var Site    = {
                         list    = $( '#tab-downloads tbody' );
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        list.append( $('<tr><td><a href="http://busca.datos.gob.mx/#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td width="20%">' + results[i].organization.title + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>') );
+                        var el  = $('<tr data-link="http://busca.datos.gob.mx/#/conjuntos/' + results[i].name + '"><td>' + results[i].title + '</td><td width="20%">' + results[i].organization.title + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>');
+                        list.append( el );
+                        el.click( function ( e ) {
+                            window.open( el.attr( 'data-link' ), '_blank' );
+                        });
                     }
                 });
         }

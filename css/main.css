@@ -176,7 +176,7 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 #highlights .nav-tabs > li > a:hover        { color: #fff; }
 #highlights .tool-tabs                      { margin-bottom: -10px; }
 #highlights .tab-content ul                 { padding: 0; list-style: none; }
-#highlights .tab-content tr                 { background-color: rgba(0,0,0,0.3); }
+#highlights .tab-content tr                 { background-color: rgba(0,0,0,0.3); cursor: pointer; }
 #highlights .tab-content tr > td            { padding: 7px 10px; vertical-align: middle; font-size: 11px; color: #fff; }
 #highlights .tab-content tr > td > a        { display: block; font-size: 11px; text-transform: uppercase; }
 #highlights .tool p                         { margin-bottom: 20px; }
