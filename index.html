@@ -191,16 +191,19 @@ title: datos.gob.mx
         <li data-target="#slider" data-slide-to="0" class="active"></li>
         <li data-target="#slider" data-slide-to="1"></li>
         <li data-target="#slider" data-slide-to="2"></li>
+        <li data-target="#slider" data-slide-to="3"></li>
+        <li data-target="#slider" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
         {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true %}
-        {% for post in posts limit:3 %}
+        {% for post in posts limit:5 %}
             <div class="item {% if forloop.first %}active{% endif %}">
                 <img src="{{ "/assets/img/impacto/" | append: post.cover_photo | prepend: site.baseurl | prepend: site.url }}" alt="{{ post.title }}">
                 <div class="carousel-caption">
                     <p class="breadcrumb"><a href="#">Impacto</a> / <span>{{ post.category_title }}</span></p>
+                    <p><small>{{ post.author }}</small></p>
                     <h3>{{ post.title }}</h3>
-                    <p>{{ post.excerpt }}</p>
+                    <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
                 </div>
             </div>
         {% endfor %}
