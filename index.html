@@ -75,7 +75,7 @@ title: datos.gob.mx
                             {% endfor %}
                         </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane active" id="tab-mobile">
+                    <div role="tabpanel" class="tab-pane" id="tab-mobile">
                         <div class="tool">
                             {% assign app = site.posts | where: 'sub_section', 'apps' | where: 'featured', true | where: 'published', true %}
                             {% if app.size == 0 %}
