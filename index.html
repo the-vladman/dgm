@@ -54,16 +54,39 @@ title: datos.gob.mx
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <h5>Herramientas</h5>
-                <div class="tool">
-                    {% assign posts = site.posts | where: 'section', 'herramientas' | where: 'featured', true | where: 'published', true %}
-                    {% if posts.size == 0 %}
-                        {% assign posts = site.posts | where: 'section', 'herramientas' | where: 'published', true %}
-                    {% endif %}
-                    {% for post in posts limit:1 %}
-                        <h3>{{ post.title }}</h3>
-                        <p>{{ post.excerpt }}</p>
-                        <a href="{{ post.permalink }}" class="btn btn-default">Conoce la herramienta</a>
-                    {% endfor %}
+                <ul class="nav nav-tabs tool-tabs tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#tab-web" aria-controls="tab-web" data-toggle="tab">Web</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#tab-mobile" aria-controls="tab-mobile" data-toggle="tab">Apps</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="tab-web">
+                        <div class="tool">
+                            {% assign web_tool = site.posts | where: 'sub_section', 'herramientas' | where: 'featured', true | where: 'published', true %}
+                            {% if web_tool.size == 0 %}
+                                {% assign web_tool = site.posts | where: 'sub_section', 'herramientas' | where: 'published', true %}
+                            {% endif %}
+                            {% for post in web_tool limit:1 %}
+                                <h3><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.title }}</a></h3>
+                                <a href="{{ post.permalink }}" class="btn btn-default">Conoce la herramienta</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="tab-mobile">
+                        <div class="tool">
+                            {% assign app = site.posts | where: 'sub_section', 'apps' | where: 'featured', true | where: 'published', true %}
+                            {% if app.size == 0 %}
+                                {% assign app = site.posts | where: 'sub_section', 'apps' | where: 'published', true %}
+                            {% endif %}
+                            {% for post in app limit:1 %}
+                                <h3><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.title }}</a></h3>
+                                <a href="{{ post.permalink }}" class="btn btn-default">Conoce la herramienta</a>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
                 {% assign posts = site.posts | where: 'section', 'impacto' | where: 'featured' , true | where: 'published', true %}
                 {% if posts.size == 0 %}
