@@ -336,16 +336,18 @@ section#about-video .video                  { margin: 0 -15px; }
 .icon-otros                                 { background-image: url(../assets/img/categories/ic-others.png); }
 .posts-container                            { padding-top: 50px; padding-bottom: 50px; }
 .post-item,
-.tools-item                                 { width: 40%; margin-left: 6.5%; margin-bottom: 50px; padding-bottom: 20px; background-color: #eee; float: left; position: relative; }
+.tools-item                                 { width: 40%; margin-left: 6.5%; margin-bottom: 50px; background-color: #eee; float: left; position: relative; }
 .post-item.first,
 .tools-item.first                           { width: 86.5%; }
 .post-item a,
 .tools-item a                               { display: block; }
-.gov-app-item .inner                        { margin: 10px;padding: 15px; background-color: #eee; }
+.gov-app-item .inner                        { margin: 10px; padding: 15px; background-color: #eee; }
 .post-item .inner,
-.tools-item .inner                          { padding-left: 15px; padding-right: 15px; }
+.tools-item .inner                          { padding: 0 20px; background-color: rgba(0,0,0,0.3); position: absolute; bottom: 0; left: 0; right: 0; }
 .post-item h5,
-.tools-item h5                              { margin-top: 30px; margin-bottom: 0; font-size: 14px; font-weight: 600; line-height: 20px; }
+.tools-item h5                              { margin-top: 10px; margin-bottom: 0; font-size: 14px; font-weight: 600; line-height: 20px; color: #fff; }
+.post-item p,
+.tools-item p                               { color: #ccc; }
 .post-item h5 > a                           { color: #474747; }
 .post-item h6                               { margin-top: 20px; font-size: 12px; font-weight: 700; color: #aaa; text-transform: uppercase; }
 .post-item p                                { font-size: 12px; font-weight: 300; color: #474747; }
