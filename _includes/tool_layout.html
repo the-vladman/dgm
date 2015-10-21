@@ -17,8 +17,8 @@
                 <a href="{{ include.post.permalink }}"><h5>{{ include.post.title }}</h5></a>
                 <p><i>{{ include.post.author }}</i></p>
                 <div class="links-container">
-                    {% if include.post.links.webLink %}
-                        <a href="{{ include.post.links.webLink }}" class="app-links web" alt="Web">Web</a>
+                    {% if include.post.links.web %}
+                        <a href="{{ include.post.links.web }}" class="app-links web" alt="Web">Web</a>
                     {% endif %}
                     {% if include.post.links.appleStore %}
                         <a href="{{ include.post.links.appleStore }}" class="app-links apple"></a>
