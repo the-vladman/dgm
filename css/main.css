@@ -343,7 +343,7 @@ section#about-video .video                  { margin: 0 -15px; }
 .tools-item a                               { display: block; }
 .gov-app-item .inner                        { margin: 10px; padding: 15px; background-color: #eee; }
 .post-item .inner,
-.tools-item .inner                          { padding: 0 20px; background-color: rgba(0,0,0,0.3); position: absolute; bottom: 0; left: 0; right: 0; }
+.tools-item .inner                          { padding: 0 20px 15px; background-color: rgba(0,0,0,0.3); position: absolute; bottom: 0; left: 0; right: 0; }
 .post-item h5,
 .tools-item h5                              { margin-top: 10px; margin-bottom: 0; font-size: 14px; font-weight: 600; line-height: 20px; color: #fff; }
 .post-item p,
