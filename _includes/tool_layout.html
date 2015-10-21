@@ -19,6 +19,10 @@
                 <div class="links-container">
                     {% if include.post.links.web %}
                         <a href="{{ include.post.links.web }}" class="app-links web" alt="Web">Web</a>
+                    {% else %}
+                        {% if include.post.iframe_src %}
+                            <a href="{{ include.post.iframe_src }}" class="app-links web" alt="Web">Web</a>
+                        {% endif %}
                     {% endif %}
                     {% if include.post.links.appleStore %}
                         <a href="{{ include.post.links.appleStore }}" class="app-links apple"></a>
