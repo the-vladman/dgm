@@ -2,61 +2,13 @@
     {% assign i = 0 %}
     {% if include.featured.size > 0 %}
         {% for post in include.featured %}
-            <div class="tools-item first">
-                <a class="text-center" href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
-                <div class="inner">
-                    <div class="row">
-                        <div class="col-lg-1 col-md-1 col-sm-3 col-xs-3 icon-container">
-                            <span class="category-icon icon-{{ post.category }}"></span>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
-                            <a href="{{ post.permalink }}"><h5>{{ post.title }}</h5></a>
-                            <p><i>{{ post.author }}</i></p>
-                            <div class="links-container">
-                                {% if post.links.webLink %}
-                                    <a href="{{ post.links.webLink }}" class="app-links web" alt="Web">Web</a>
-                                {% endif %}
-                                {% if post.links.appleStore %}
-                                    <a href="{{ post.links.appleStore }}" class="app-links apple"></a>
-                                {% endif %}
-                                {% if post.links.appleStore %}
-                                    <a href="{{ post.links.playStore }}" class="app-links android"></a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% include tool_layout.html post=post class='first' section=include.section %}
         </div>
         <div class="row equal-height">
         {% endfor %}
         {% for post in include.posts reversed %}
             {% assign i = i | plus: 1 %}
-            <div class="tools-item">
-                <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
-                <div class="inner">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 icon-container">
-                            <span class="category-icon icon-{{ post.category }}"></span>
-                        </div>
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                            <a href="{{ post.permalink }}"><h5>{{ post.title }}</h5></a>
-                            <p><i>{{ post.author }}</i></p>
-                            <div class="links-container">
-                                {% if post.links.webLink %}
-                                    <a href="{{ post.links.webLink }}" class="app-links web" alt="Web">Web</a>
-                                {% endif %}
-                                {% if post.links.appleStore %}
-                                    <a href="{{ post.links.appleStore }}" class="app-links apple"></a>
-                                {% endif %}
-                                {% if post.links.appleStore %}
-                                    <a href="{{ post.links.playStore }}" class="app-links android"></a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% include tool_layout.html post=post class='' section=include.section %}
             {% if i == 2 %}
                 {% assign i = 0 %}
                 </div>
@@ -66,60 +18,12 @@
     {% else %}
         {% for post in include.posts reversed %}
             {% if forloop.first %}
-                <div class="tools-item first">
-                    <a class="text-center" href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
-                    <div class="inner">
-                        <div class="row">
-                            <div class="col-lg-1 col-md-1 col-sm-3 col-xs-3 icon-container">
-                                <span class="category-icon icon-{{ post.category }}"></span>
-                            </div>
-                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
-                                <a href="{{ post.permalink }}"><h5>{{ post.title }}</h5></a>
-                                <p><i>{{ post.author }}</i></p>
-                                <div class="links-container">
-                                    {% if post.links.webLink %}
-                                        <a href="{{ post.links.webLink }}" class="app-links web" alt="Web">Web</a>
-                                    {% endif %}
-                                    {% if post.links.appleStore %}
-                                        <a href="{{ post.links.appleStore }}" class="app-links apple"></a>
-                                    {% endif %}
-                                    {% if post.links.appleStore %}
-                                        <a href="{{ post.links.playStore }}" class="app-links android"></a>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% include tool_layout.html post=post class='first' section=include.section %}
             </div>
             <div class="row equal-height">
             {% else %}
                 {% assign i = i | plus: 1 %}
-                <div class="tools-item">
-                    <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
-                    <div class="inner">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 icon-container">
-                                <span class="category-icon icon-{{ post.category }}"></span>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                                <a href="{{ post.permalink }}"><h5>{{ post.title }}</h5></a>
-                                <p><i>{{ post.author }}</i></p>
-                                <div class="links-container">
-                                    {% if post.links.webLink %}
-                                        <a href="{{ post.links.webLink }}" class="app-links web" alt="Web">Web</a>
-                                    {% endif %}
-                                    {% if post.links.appleStore %}
-                                        <a href="{{ post.links.appleStore }}" class="app-links apple"></a>
-                                    {% endif %}
-                                    {% if post.links.appleStore %}
-                                        <a href="{{ post.links.playStore }}" class="app-links android"></a>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% include tool_layout.html post=post class='' section=include.section %}
                 {% if i == 2 %}
                     {% assign i = 0 %}
                     </div>
