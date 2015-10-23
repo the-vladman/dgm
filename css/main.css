@@ -282,10 +282,10 @@ section#about-video .video                  { margin: 0 -15px; }
     TOOLS STYLES
 *********************************/
 .tool-item                                  { margin-bottom: 50px; }
-.tool-item > .inner                         { height: 100%; background-color: #eee; }
-.tool-item > .inner > .item-info            { padding: 15px 20px; }
-.tool-item > .inner h4                      { margin-top: 0; margin-bottom: 10px; font-weight: 600; color: #595959; }
-.tool-item > .inner h4 > a                  { font-size: 14px; line-height: 22px; color: #595959; }
+.tool-item > .inner                         { height: 100%; background-color: #fff; position: relative; }
+.tool-item > .inner > .item-info            { background-color: rgba(0,0,0,0.6); padding: 15px 20px; position: absolute; bottom: 0; left: 0; right: 0; }
+.tool-item > .inner h4                      { margin-top: 0; margin-bottom: 10px; font-weight: 600; color: #fff; }
+.tool-item > .inner h4 > a                  { font-size: 14px; line-height: 22px; color: #fff; }
 .tool-item > .inner a                       { display: inline-block; margin-right: 10px; }
 .tool-item .img-link                        { width: 100%; }
 .tool-item > .inner a:last-child            { margin-right: 0; }
