@@ -9,7 +9,7 @@ layout: default
 <div class="container-fluid app-item">
     <div class="row equal-height">
         <div id="dgm-sidebar" class="col-lg-2 col-md-2 hidden-sm hidden-xs">
-            {% include sidebar.html highlight='all' %}
+            {% include sidebar.html highlight='all' section='herramientas' %}
         </div>
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 posts-container">
             {% if page.iframe_src %}
@@ -85,11 +85,9 @@ layout: default
             {% endif %}
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 share-section">
-                        {% include share_buttons.html %}
-                    </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         {{ content }}
+                        {% include share_buttons.html %}
                         {% if page.datasets %}
                         <h5 class="app-subtitle">Conjuntos de datos utilizados</h5>
                         <ul class="datasets-list">
@@ -115,6 +113,7 @@ layout: default
                                         <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: post.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
                                         <div class="info">
                                             <h5>{{ post.title }}</h5>
+                                            <p><i>{{ post.author }}</i></p>
                                             <div class="links-container">
                                                 {% if post.links.web %}
                                                     <a href="{{ post.links.web }}" class="app-links web" alt="Web">Web</a>
