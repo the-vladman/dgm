@@ -113,6 +113,7 @@ layout: default
                                         <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: post.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
                                         <div class="info">
                                             <h5>{{ post.title }}</h5>
+                                            <p><i>{{ post.author }}</i></p>
                                             <div class="links-container">
                                                 {% if post.links.web %}
                                                     <a href="{{ post.links.web }}" class="app-links web" alt="Web">Web</a>

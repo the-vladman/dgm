@@ -371,8 +371,10 @@ p.cover-image                               { text-align: center; }
 #app-slider .carousel-inner                 { max-height: 300px; }
 #app-slider .carousel-inner .item > img     { margin: 0 auto; max-width: 100%; max-height: 300px; }
 .app-subtitle                               { margin-top: 60px; margin-bottom: 30px; }
-.app-item .inner                            { margin: 10px; background-color: #eee; }
-.app-item .info                             { padding: 10px 20px; }
+.app-item .inner                            { margin: 10px; background-color: #eee; position: relative; }
+.app-item .info                             { background-color: rgba(0,0,0,0.6); padding: 10px 20px; position: absolute; bottom: 0; left: 0; right: 0; }
+.app-item .info h5                          { color: #fff; margin-top: 0; }
+.app-item .info p                           { color: #ccc; }
 
 /***********************
     GUIA STYLES
