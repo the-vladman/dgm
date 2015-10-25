@@ -38,6 +38,7 @@ p.small                                     { font-size: 11px; }
 .share-section                              { margin-bottom: 30px; }
 .social-buttons                             { overflow: hidden; }
 .social-buttons .button-item                { display: inline; float: left; margin-right: 10px; }
+.social-buttons .button-item.tw             { position: relative; top: 5px; }
 
 /*************************
     Notifications Styles
@@ -282,10 +283,10 @@ section#about-video .video                  { margin: 0 -15px; }
     TOOLS STYLES
 *********************************/
 .tool-item                                  { margin-bottom: 50px; }
-.tool-item > .inner                         { height: 100%; background-color: #eee; }
-.tool-item > .inner > .item-info            { padding: 15px 20px; }
-.tool-item > .inner h4                      { margin-top: 0; margin-bottom: 10px; font-weight: 600; color: #595959; }
-.tool-item > .inner h4 > a                  { font-size: 14px; line-height: 22px; color: #595959; }
+.tool-item > .inner                         { height: 100%; background-color: #fff; position: relative; }
+.tool-item > .inner > .item-info            { background-color: rgba(0,0,0,0.6); padding: 15px 20px; position: absolute; bottom: 0; left: 0; right: 0; }
+.tool-item > .inner h4                      { margin-top: 0; margin-bottom: 10px; font-weight: 600; color: #fff; }
+.tool-item > .inner h4 > a                  { font-size: 14px; line-height: 22px; color: #fff; }
 .tool-item > .inner a                       { display: inline-block; margin-right: 10px; }
 .tool-item .img-link                        { width: 100%; }
 .tool-item > .inner a:last-child            { margin-right: 0; }
@@ -343,7 +344,7 @@ section#about-video .video                  { margin: 0 -15px; }
 .tools-item a                               { display: block; }
 .gov-app-item .inner                        { margin: 10px; padding: 15px; background-color: #eee; }
 .post-item .inner,
-.tools-item .inner                          { padding: 0 20px 15px; background-color: rgba(0,0,0,0.3); position: absolute; bottom: 0; left: 0; right: 0; }
+.tools-item .inner                          { padding: 0 20px 15px; background-color: rgba(0,0,0,0.6); position: absolute; bottom: 0; left: 0; right: 0; }
 .post-item h5,
 .tools-item h5                              { margin-top: 10px; margin-bottom: 0; font-size: 14px; font-weight: 600; line-height: 20px; color: #fff; }
 .post-item p,
@@ -370,8 +371,10 @@ p.cover-image                               { text-align: center; }
 #app-slider .carousel-inner                 { max-height: 300px; }
 #app-slider .carousel-inner .item > img     { margin: 0 auto; max-width: 100%; max-height: 300px; }
 .app-subtitle                               { margin-top: 60px; margin-bottom: 30px; }
-.app-item .inner                            { margin: 10px; background-color: #eee; }
-.app-item .info                             { padding: 10px 20px; }
+.app-item .inner                            { margin: 10px; background-color: #eee; position: relative; }
+.app-item .info                             { background-color: rgba(0,0,0,0.6); padding: 10px 20px; position: absolute; bottom: 0; left: 0; right: 0; }
+.app-item .info h5                          { color: #fff; margin-top: 0; }
+.app-item .info p                           { color: #ccc; }
 
 /***********************
     GUIA STYLES
