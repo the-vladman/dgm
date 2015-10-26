@@ -11,7 +11,6 @@ layout: default
     <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
         {% include breadcrumb.html %}
         <h1>{{ page.title }}</h1>
-        {% include share_buttons.html %}
         <p class="small">{{ page.date | date: '%d %B, %Y' }}</p>
         {% if page.author %}
             <p class="author"><i>{{ page.author }}</i></p>
@@ -19,6 +18,7 @@ layout: default
             <p class="author"><i>Presidencia</i></p>
         {% endif %}
         {{ content }}
+        {% include share_buttons.html %}
         <div class="hidden-sm hidden-xs">
             {% include disqus_comments.html %}
         </div>
