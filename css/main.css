@@ -261,6 +261,7 @@ section#about-video .video                  { margin: 0 -15px; }
 .carousel-indicators li:first-child         { margin-left: 0; }
 .carousel-indicators .active                { width: 20px; height: 20px; margin-left: 10px; background-color: #0c9; }
 .carousel-indicators .active:first-child    { margin-left: 0; }
+@media (max-width: 991px)                   { #slider .item img { height: 260px; } .carousel-caption { padding: 10px; left: 10%; right: 10%; } .carousel-caption .breadcrumb, .carousel-caption .breadcrumb a { font-size: 10px; } .carousel-caption h3 { margin-bottom: 10px; font-size: 14px; } .carousel-caption p { font-size: 11px; line-height: 18px; } }
 
 /*********************************
     CATEGORY SECTION STYLES
