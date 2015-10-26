@@ -1,0 +1,23 @@
+<div class="post-item {{ include.class }}">
+    <a class="text-center" href="{{ include.post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: include.post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
+    <div class="inner">
+        <div class="row">
+            {% if include.class == 'first' %}
+                <div class="col-lg-1 col-md-1 col-sm-3 col-xs-3 icon-container">
+            {% else %}
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 icon-container">
+            {% endif %}
+                <span class="category-icon icon-{{ include.post.category }}"></span>
+            </div>
+            {% if include.class == 'first' %}
+                <div class="col-lg-11 col-md-11 col-sm-9 col-xs-9 icon-container">
+            {% else %}
+                <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9 icon-container">
+            {% endif %}
+                <h5><a href="{{ include.post.permalink }}">{{ include.post.title }}</a></h5>
+                <p class="small">{{ include.post.date | date: '%d %B, %Y' }}</p>
+                <h6>{{ include.post.category_title }}</h6>
+            </div>
+        </div>
+    </div>
+</div>
