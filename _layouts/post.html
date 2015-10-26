@@ -12,12 +12,12 @@ layout: default
         {% include breadcrumb.html %}
         <h1>{{ page.title }}</h1>
         {% include share_buttons.html %}
-        {% if page.author %}
-            <p><i>{{ page.author }}</i></p>
-        {% else %}
-            <p><i>Presidencia</i></p>
-        {% endif %}
         <p class="small">{{ page.date | date: '%d %B, %Y' }}</p>
+        {% if page.author %}
+            <p class="author"><i>{{ page.author }}</i></p>
+        {% else %}
+            <p class="author"><i>Presidencia</i></p>
+        {% endif %}
         {{ content }}
         <div class="hidden-sm hidden-xs">
             {% include disqus_comments.html %}
