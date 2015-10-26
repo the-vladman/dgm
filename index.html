@@ -230,7 +230,7 @@ title: datos.gob.mx
                     <p class="breadcrumb"><a href="#">Impacto</a> / <span>{{ post.category_title }}</span></p>
                     <p><small>{{ post.author }}</small></p>
                     <h3><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.title }}</a></h3>
-                    <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
+                    <p><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.content | strip_html | truncatewords: 30 }}</a></p>
                 </div>
             </div>
         {% endfor %}
