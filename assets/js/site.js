@@ -183,6 +183,9 @@ var Site    = {
 
         $( '.post-item' ).hover( function ( e ) {
             $( '.post-overlay', e.currentTarget ).stop().slideToggle();
+            $( '.post-overlay', e.currentTarget ).unbind( 'click' ).click( function ( e ) {
+                window.location.href    = $( e.currentTarget ).attr( 'data-link' );
+            });
         });
 
         $( '.navigation-item .item-hover' ).click( function ( e ) {
