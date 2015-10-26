@@ -84,7 +84,9 @@ var Site    = {
                         list    = $( '#tab-recents tbody' );
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        var el  = $('<tr data-link="' + link + '#/conjuntos/' + results[i].name + '"><td>' + results[i].title + '</td><td width="20%">' + results[i].organization.title + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>');
+                        var organization    = ( results[i].organization ) ? results[i].organization.title : ( results[i].groups && ( results[i].groups.length > 0 ) ) ? results[i].groups[0].display_name : '',
+                            el              = $('<tr data-link="' + link + '#/conjuntos/' + results[i].name + '"><td>' + results[i].title + '</td><td width="20%">' + organization + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>');
+
                         list.append( el );
                         el.click( function ( e ) {
                             window.open( el.attr( 'data-link' ), '_blank' );
@@ -103,7 +105,8 @@ var Site    = {
                         list    = $( '#tab-downloads tbody' );
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        var el  = $('<tr data-link="' + link + '#/conjuntos/' + results[i].name + '"><td>' + results[i].title + '</td><td width="20%">' + results[i].organization.title + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>');
+                        var organization    = ( results[i].organization ) ? results[i].organization.title : ( results[i].groups && ( results[i].groups.length > 0 ) ) ? results[i].groups[0].display_name : '',
+                            el              = $('<tr data-link="' + link + '#/conjuntos/' + results[i].name + '"><td>' + results[i].title + '</td><td width="20%">' + results[i].organization.title + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>');
                         list.append( el );
                         el.click( function ( e ) {
                             window.open( el.attr( 'data-link' ), '_blank' );
