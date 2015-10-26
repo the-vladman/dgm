@@ -22,84 +22,87 @@ title: datos.gob.mx
     </div>
 </section>
 <section id="highlights">
-    <div class="overlay"></div>
-    <div class="container-fluid fixed">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <h5>Datos</h5>
-                <p>Descarga Datos Abiertos de</p>
-                <form class="form" id="search-form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="keyword" id="search-keyword" placeholder="ej. Encuesta nacional">
+    <div class="background-image"></div>
+    <div class="content">
+        <div class="overlay"></div>
+        <div class="container-fluid fixed">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h5>Datos</h5>
+                    <p>Descarga Datos Abiertos de</p>
+                    <form class="form" id="search-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="keyword" id="search-keyword" placeholder="ej. Encuesta nacional">
+                        </div>
+                        <button type="submit" class="btn btn-default">Buscar</button>
+                    </form>
+                    <div class="hidden-xs hidden-sm">
+                        <ul class="nav nav-tabs tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#tab-recents" aria-controls="tab-recents" role="tab" data-toggle="tab">Recientes</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab-downloads" aria-controls="tab-downloads" role="tab" data-toggle="tab">Más Descargados</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="tab-recents">
+                                <table><tbody></tbody></table>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="tab-downloads">
+                                <table><tbody></tbody></table>
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-default">Buscar</button>
-                </form>
-                <div class="hidden-xs hidden-sm">
-                    <ul class="nav nav-tabs tabs" role="tablist">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h5>Herramientas</h5>
+                    <ul class="nav nav-tabs tool-tabs tabs" role="tablist">
                         <li role="presentation" class="active">
-                            <a href="#tab-recents" aria-controls="tab-recents" role="tab" data-toggle="tab">Recientes</a>
+                            <a href="#tab-web" aria-controls="tab-web" data-toggle="tab">Web</a>
                         </li>
                         <li role="presentation">
-                            <a href="#tab-downloads" aria-controls="tab-downloads" role="tab" data-toggle="tab">Más Descargados</a>
+                            <a href="#tab-mobile" aria-controls="tab-mobile" data-toggle="tab">Apps</a>
                         </li>
                     </ul>
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="tab-recents">
-                            <table><tbody></tbody></table>
+                        <div role="tabpanel" class="tab-pane active" id="tab-web">
+                            <div class="tool">
+                                {% assign web_tool = site.posts | where: 'sub_section', 'herramientas' | where: 'featured', true | where: 'published', true %}
+                                {% if web_tool.size == 0 %}
+                                    {% assign web_tool = site.posts | where: 'sub_section', 'herramientas' | where: 'published', true %}
+                                {% endif %}
+                                {% for post in web_tool limit:1 %}
+                                    <h3><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.title }}</a></h3>
+                                    <a href="{{ post.permalink }}" class="btn btn-default">Conoce la herramienta</a>
+                                {% endfor %}
+                            </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="tab-downloads">
-                            <table><tbody></tbody></table>
+                        <div role="tabpanel" class="tab-pane" id="tab-mobile">
+                            <div class="tool">
+                                {% assign app = site.posts | where: 'sub_section', 'apps' | where: 'featured', true | where: 'published', true %}
+                                {% if app.size == 0 %}
+                                    {% assign app = site.posts | where: 'sub_section', 'apps' | where: 'published', true %}
+                                {% endif %}
+                                {% for post in app limit:1 %}
+                                    <h3><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.title }}</a></h3>
+                                    <a href="{{ post.permalink }}" class="btn btn-default">Conoce la herramienta</a>
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
+                    {% assign posts = site.posts | where: 'section', 'impacto' | where: 'featured' , true | where: 'published', true %}
+                    {% if posts.size == 0 %}
+                        {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true %}
+                    {% endif %}
+                    {% for post in posts limit:1 %}
+                        <h5>Impacto / {{ post.category_title }}</h5>
+                        <div class="news">
+                            <h3><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.title }}</a></h3>
+                            <a href="{{ post.permalink }}">leer más</a>
+                        </div>
+                    {% endfor %}
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <h5>Herramientas</h5>
-                <ul class="nav nav-tabs tool-tabs tabs" role="tablist">
-                    <li role="presentation" class="active">
-                        <a href="#tab-web" aria-controls="tab-web" data-toggle="tab">Web</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#tab-mobile" aria-controls="tab-mobile" data-toggle="tab">Apps</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="tab-web">
-                        <div class="tool">
-                            {% assign web_tool = site.posts | where: 'sub_section', 'herramientas' | where: 'featured', true | where: 'published', true %}
-                            {% if web_tool.size == 0 %}
-                                {% assign web_tool = site.posts | where: 'sub_section', 'herramientas' | where: 'published', true %}
-                            {% endif %}
-                            {% for post in web_tool limit:1 %}
-                                <h3><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.title }}</a></h3>
-                                <a href="{{ post.permalink }}" class="btn btn-default">Conoce la herramienta</a>
-                            {% endfor %}
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="tab-mobile">
-                        <div class="tool">
-                            {% assign app = site.posts | where: 'sub_section', 'apps' | where: 'featured', true | where: 'published', true %}
-                            {% if app.size == 0 %}
-                                {% assign app = site.posts | where: 'sub_section', 'apps' | where: 'published', true %}
-                            {% endif %}
-                            {% for post in app limit:1 %}
-                                <h3><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.title }}</a></h3>
-                                <a href="{{ post.permalink }}" class="btn btn-default">Conoce la herramienta</a>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-                {% assign posts = site.posts | where: 'section', 'impacto' | where: 'featured' , true | where: 'published', true %}
-                {% if posts.size == 0 %}
-                    {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true %}
-                {% endif %}
-                {% for post in posts limit:1 %}
-                    <h5>Impacto / {{ post.category_title }}</h5>
-                    <div class="news">
-                        <h3><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.title }}</a></h3>
-                        <a href="{{ post.permalink }}">leer más</a>
-                    </div>
-                {% endfor %}
             </div>
         </div>
     </div>
