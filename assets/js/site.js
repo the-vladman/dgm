@@ -178,6 +178,10 @@ var Site    = {
             });
         });
 
+        $( '.post-item' ).hover( function ( e ) {
+            $( '.post-overlay', e.currentTarget ).stop().slideToggle();
+        });
+
         $( '.navigation-item .item-hover' ).click( function ( e ) {
             window.location.href    = $( 'a', $( e.currentTarget ).parent().next() ).attr( 'href' );
         });
