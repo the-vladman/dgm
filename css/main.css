@@ -197,7 +197,8 @@ section#about-video .video                  { margin: 0 -15px; }
 .container-fluid.post h1                    { margin-bottom: 30px; }
 .container-fluid.about p
 .container-fluid.post p                     { margin-bottom: 20px; }
-.container-fluid.post p.small               { margin-bottom: 40px; }
+.container-fluid.post p.small               { margin-bottom: 0px; }
+.container-fluid.post p.author              { margin-bottom: 30px; font-size: 12px; }
 @media (max-width: 991px)                   { .post h1 { margin-top: 30px; font-size: 20px; } section#about-video { padding-top: 0; padding-bottom: 0; } }
 
 /*********************************
