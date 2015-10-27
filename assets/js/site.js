@@ -77,7 +77,7 @@ var Site    = {
 
         if ( $( '#tab-recents' ).length > 0 ) {
             $.get( 'http://catalogo.datos.gob.mx/api/3/action/package_search', {
-                    rows    : 3,
+                    rows    : 4,
                     start   : 0
                 }, function ( data ) {
                     var results = data.result.results,
@@ -97,7 +97,7 @@ var Site    = {
 
         if ( $( '#tab-downloads' ).length > 0 ) {
             $.get( 'http://catalogo.datos.gob.mx/api/3/action/package_search', {
-                    rows    : 3,
+                    rows    : 4,
                     start   : 0,
                     sort    : 'views_recent desc'
                 }, function ( data ) {
