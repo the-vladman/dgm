@@ -153,7 +153,7 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 /*********************************
     BANNER SECTION STYLES
 *********************************/
-#banner                                     { background-color: #0c9; padding: 30px 0; text-align: center; }
+#banner                                     { background-color: #0c9; padding: 20px 0; text-align: center; }
 #banner p                                   { font-weight: 300; color: #fff; }
 #banner p a                                 { color: #fff; }
 #banner .more-link                          { font-size: 12px; font-weight: bold; text-transform: uppercase; color: #009c7d; }
@@ -161,7 +161,7 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 /*********************************
     HIGHLIGHTS SECTION STYLES
 *********************************/
-#highlights                                 { padding: 50px 0; position: relative; }
+#highlights                                 { padding: 30px 0; position: relative; }
 #highlights .background-image               { width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../assets/img/bg-banner.gif) no-repeat; background-size: cover; filter: blur(5px); }
 #highlights .overlay                        { width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(0,0,0,0.6); }
 #highlights h3                              { color: #fff; }
