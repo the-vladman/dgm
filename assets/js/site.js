@@ -73,7 +73,7 @@ var Site    = {
     },
 
     _setData        : function () {
-        var link    = 'http://ng-ckan.bitslice.net/';
+        var link    = 'http://busca.datos.gob.mx/';
 
         if ( $( '#tab-recents' ).length > 0 ) {
             $.get( 'http://catalogo.datos.gob.mx/api/3/action/package_search', {
@@ -157,7 +157,7 @@ var Site    = {
         $( '#search-form' ).submit( function ( e ) {
             e.preventDefault();
 
-            window.open( 'http://ng-ckan.bitslice.net/#/conjuntos?q=' + $( '#search-keyword' ).val(), '_blank' );
+            window.open( 'http://busca.datos.gob.mx/#/conjuntos?q=' + $( '#search-keyword' ).val(), '_blank' );
             $( '#search-keyword' ).val( '' );
         });
     },
