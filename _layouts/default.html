@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html class="dgm-site">
-  {% include head.html %}
-  <body>
-    {% include header.html %}
-    <main id="main-content" tabindex="-1" role="main" aria-label="Contenido principal">
-      {{ content }}
-    </main>
-    {% include subscribe.html %}
-    {% include footer.html %}
-    {% include analytics.html %}
-    {% include social-scripts.html %}
-    {% include comscore.html %}
-  </body>
+<html lang="es">
+    {% include head.html %}
+    <body>
+        {% include alert.html %}
+        <dgm-navbar></dgm-navbar>
+        {{ content }}
+        <dgm-footer></dgm-footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="{{ "bower_components/bootstrap/dist/js/bootstrap.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+        <script src="{{ "assets/js/site.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+        {% include social_scripts.html %}
+        {% include comscore.html %}
+    </body>
 </html>

@@ -1,46 +1,18 @@
 ---
 layout: default
-title: Otras · Herramientas
-permalink: /herramientas/otras/
-
-active: otras
-tools_category: true
-order: 8
-category_info:
-  name: otras
-  title: Otras
+title: Otros
+permalink: /herramientas/otros/
 ---
 
-<section class="stories-content">
-  <div class="main-container">
-    <div class="cols-12">
-      <div class="col col-2">
-        <div class="col-inner">
-          {% include tools-sidebar.html %}
+{% include apps_header.html highlight='all' %}
+<div class="container-fluid">
+    <div class="row equal-height">
+        <div id="dgm-sidebar" class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+            {% include sidebar.html highlight='others' section='herramientas' %}
         </div>
-      </div>
-      <div class="col col-10">
-        <div class="col-inner">
-          <div class="entities-list-cards" role="list" aria-label="Historias en medio ambiente con datos abiertos">
-            {% assign tools = site.posts | where:'section', 'herramientas' | where: 'category', 'otras' %}
-            {% for post in tools %}
-              {% if forloop.first %}
-                <div class="col col-12" role="listitem">
-                  <div class="col-inner">
-                    {% include entity-card.html post=post size="lg" showAuthor=true showCategory=true %}
-                  </div>
-                </div>
-              {% else %}
-                <div class="col col-6" role="listitem">
-                  <div class="col-inner">
-                    {% include entity-card.html post=post showAuthor=true showCategory=true %}
-                  </div>
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 posts-container">
+            {% assign posts = site.posts | where: 'section', 'herramientas' | where: 'category', 'otros' | where: 'published', true | sort: 'date' %}
+            {% include tools_container.html posts=posts section='herramientas' %}
         </div>
-      </div>
     </div>
-  </div>
-</section>
+</div>

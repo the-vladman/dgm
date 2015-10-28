@@ -1,46 +1,18 @@
 ---
 layout: default
 title: Herramientas
-permalink: /herramientas/
-weight: 3
-showInNavbar: true
-active: all
-tools_category: true
-category_info:
-  name: all
-  title: Todas
 ---
 
-<section class="stories-content">
-  <div class="main-container">
-    <div class="cols-12">
-      <div class="col col-2">
-        <div class="col-inner">
-          {% include tools-sidebar.html %}
+{% include apps_header.html highlight='all' %}
+<div class="container-fluid">
+    <div class="row equal-height">
+        <div id="dgm-sidebar" class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+            {% include sidebar.html highlight='all' section='herramientas' %}
         </div>
-      </div>
-      <div class="col col-10">
-        <div class="col-inner">
-          <div class="entities-list-cards" role="list" aria-label="Historias con datos abiertos">
-            {% assign tools = site.posts | where:'section', 'herramientas' %}
-            {% for post in tools %}
-              {% if forloop.first %}
-                <div class="col col-12" role="listitem">
-                  <div class="col-inner">
-                    {% include entity-card.html post=post size="lg" showAuthor=false showCategory=true %}
-                  </div>
-                </div>
-              {% else %}
-                <div class="col col-6" role="listitem">
-                  <div class="col-inner">
-                    {% include entity-card.html post=post showAuthor=false showCategory=true %}
-                  </div>
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 posts-container">
+            {% assign featured = site.posts | where: 'section', 'herramientas' | where: 'featured', true | where: 'published', true | sort: 'date' %}
+            {% assign posts = site.posts | where: 'section', 'herramientas' | where: 'featured', false | where: 'published', true | sort: 'date' %}
+            {% include tools_container.html featured=featured posts=posts section='herramientas' %}
         </div>
-      </div>
     </div>
-  </div>
-</section>
+</div>

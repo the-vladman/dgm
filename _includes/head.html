@@ -1,24 +1,21 @@
 <head>
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="{{ site.description }}">
-    {% include social-metatags.html %}
-    <link rel="shortcut icon" href="{{ "/assets/images/bg/favicon.ico" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <!-- Site required Polymer components -->
+    <script src="{{ "bower_components/webcomponentsjs/webcomponents-lite.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+    <link rel="shortcut icon" href="{{ "assets/img/favicon.ico" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="import" href="{{ "bower_components/polymer/polymer.html" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="import" href="{{ "bower_components/dgm-navbar/dgm-navbar.html" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="import" href="{{ "bower_components/dgm-footer/dgm-footer.html" | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Used libraries -->
+    <link rel="stylesheet" href="{{ "bower_components/bootstrap/dist/css/bootstrap.min.css" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="{{ "/assets/js/vendor/jquery.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ "/assets/js/vendor/underscore.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ "/assets/js/vendor/jquery.bxslider.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ "/assets/js/vendor/tap.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ "/assets/js/vendor/moment.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ "/assets/js/vendor/moment.locale.es.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ "/assets/js/application.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ "/assets/js/search-data.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ "/assets/js/subscribe.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ "/assets/js/sharer.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-    <script src="{{ "/assets/js/skip-content.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 </head>

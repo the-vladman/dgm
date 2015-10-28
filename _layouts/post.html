@@ -2,42 +2,35 @@
 layout: default
 ---
 
-<article class="post {{ page.category }}">
-  <div class="post-cover-photo" style="background-image: url('{{ site.url | append: site.baseurl }}/assets/images/{{ page.cover_photo }}');"></div>
-
-  <div class="post-main">
-    <div class="main-container">
-      <div class="cols-12">
-        <div class="col col-8">
-          <div class="col-inner">
-            <div class="post-main-inner">
-              <div class="breadcrumbs" role="presentation" aria-hidden="true">
-                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}" tabindex="-1">{{ page.section }}</a> /
-                <a href="{{ site.url | append: site.baseurl }}{{ page.section }}/{{ page.category }}" tabindex="-1">{{ page.category }}</a>
-              </div>
-              <header>
-                <h1 class="post-title">{{ page.title }}</h1>
-                <P class="post-author" >Autor: {{ page.author }}</P>
-                {% include post-tags.html %}
-              </header>
-              {{ content }}
-            </div>
-          </div>
+<section>
+    <p class="cover-image">
+        <img src="{{ "/assets/img/" | append: page.section | append: '/' | append: page.cover_photo | prepend: site.baseurl | prepend: site.url }}">
+    </p>
+</section>
+<div class="container-fluid fixed post">
+    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+        {% include breadcrumb.html %}
+        <h1>{{ page.title }}</h1>
+        <p class="small">{% include es_date.html date=page.date %}</p>
+        {% if page.author %}
+            <p class="author"><i>{{ page.author }}</i></p>
+        {% else %}
+            <p class="author"><i>Presidencia</i></p>
+        {% endif %}
+        {{ content }}
+        {% include share_buttons.html %}
+        <div class="hidden-sm hidden-xs">
+            {% include disqus_comments.html %}
         </div>
-        <div class="col col-4">
-          <div class="col-inner">
-            {% include post-sidebar.html aria-label="la historia" %}
-          </div>
-        </div>
-      </div>
-      <div class="cols-12">
-        <div class="col col-8">
-          <div class="col-inner">
-            {% include share-buttons.html %}
-            {% include disqus-comments.html %}
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</article>
+    {% if page.datasets %}
+        <div class="col-lg-4 col-md-4 col-lg-offset-1 col-md-offset-1 hidden-sm hidden-xs post-datasets">
+            <h5>Conjuntos de datos utilizados</h5>
+            <ul class="datasets-list">
+                {% for dataset in page.datasets %}
+                    <li><a href="{{ dataset.url }}">{{ dataset.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</div>

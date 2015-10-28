@@ -1,0 +1,24 @@
+<section id="category-header" class="container-fluid">
+    <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 header-icon">
+            <img src="{{ "/assets/img/categories/" | append: include.icon | append: '.png' | prepend: site.baseurl }}">
+        </div>
+        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+            <h1>{{ page.title }}</h1>
+            <p>{{ include.title }}</p>
+        </div>
+    </div>
+</section>
+{% if include.image %}
+    {% assign posts = site.posts | where: 'category', include.category | where: 'category_featured', true | where: 'published', true | sort: 'date' %}
+    {% for post in posts limit:1 %}
+        <section id="category-map">
+            <img src="{{ "/assets/img/herramientas/" | append: post.featured_cover | prepend: site.baseurl | prepend: site.url }}">
+            <div id="map-description">
+                <h3>Herramienta</h3>
+                <p><strong><a href="{{ post.permalink }}">{{ post.title }}</a></strong></p>
+                <p><a href="{{ post.permalink }}">{{ post.content | strip_html | truncatewords: 30 }}</a></p>
+            </div>
+        </section>
+    {% endfor %}
+{% endif %}
