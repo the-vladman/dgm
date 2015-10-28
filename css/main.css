@@ -162,7 +162,7 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
     HIGHLIGHTS SECTION STYLES
 *********************************/
 #highlights                                 { padding: 15px 0; position: relative; }
-#highlights .background-image               { width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../assets/img/bg-banner.gif) no-repeat; background-size: cover; filter: blur(5px); }
+#highlights .background-image               { width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../assets/img/bg-banner.gif) no-repeat; background-size: cover; }
 #highlights .overlay                        { width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(0,0,0,0.6); }
 #highlights h3                              { color: #fff; }
 #highlights h3 a                            { font-size: 21px; }
