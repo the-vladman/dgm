@@ -96,7 +96,7 @@ title: datos.gob.mx
                         {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true %}
                     {% endif %}
                     {% for post in posts limit:1 %}
-                        <h5>Impacto / {{ post.category_title }}</h5>
+                        <h5>Impacto</h5>
                         <div class="news">
                             <h3><a href="{{ post.permalink }}" alt="{{ post.title }}">{{ post.title }}</a></h3>
                             <a href="{{ post.permalink }}">leer más</a>
