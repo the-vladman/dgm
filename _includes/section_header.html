@@ -16,8 +16,8 @@
             <img src="{{ "/assets/img/herramientas/" | append: post.featured_cover | prepend: site.baseurl | prepend: site.url }}">
             <div id="map-description">
                 <h3>Herramienta</h3>
-                <p><strong>{{ post.title }}</strong></p>
-                <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
+                <p><strong><a href="{{ post.permalink }}">{{ post.title }}</a></strong></p>
+                <p><a href="{{ post.permalink }}">{{ post.content | strip_html | truncatewords: 30 }}</a></p>
             </div>
         </section>
     {% endfor %}
