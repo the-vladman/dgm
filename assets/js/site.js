@@ -130,7 +130,7 @@ var Site    = {
                     }
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        table.append( $('<tr><td><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td><a href="' + link + '#/instituciones/' + results[i].organization.name + '" target="_blank">' + results[i].organization.title + '</a></td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td><td class="ic-dataset"><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank"><img src="/assets/img/ic-dataset.png"></a></td></tr>'));
+                        table.append( $('<tr><td><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td><a href="' + link + '#/instituciones/' + results[i].organization.name + '" target="_blank">' + results[i].organization.title + '</a></td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="' + results[i].resources[0].format.replace( / /g, '' ) + '">' + results[i].resources[0].format + '</span></td><td class="ic-dataset"><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank"><img src="/assets/img/ic-dataset.png"></a></td></tr>'));
                     }
                 });
         }
@@ -147,7 +147,7 @@ var Site    = {
                         table   = $( '#data-tab-downloads table tbody' );
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        table.append( $('<tr><td><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td><a href="' + link + '#/instituciones/' + results[i].organization.name + '" target="_blank">' + results[i].organization.title + '</a></td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="csv">CSV</span><span class="label" data-format="klm">KLM</span></td><td class="ic-dataset"><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank"><img src="/assets/img/ic-dataset.png"></a></td></tr>'));
+                        table.append( $('<tr><td><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td><a href="' + link + '#/instituciones/' + results[i].organization.name + '" target="_blank">' + results[i].organization.title + '</a></td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="' + results[i].resources[0].format.replace( / /g, '' ) + '">' + results[i].resources[0].format + '</span></td><td class="ic-dataset"><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank"><img src="/assets/img/ic-dataset.png"></a></td></tr>'));
                     }
                 });
         }
