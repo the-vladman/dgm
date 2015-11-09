@@ -1,6 +1,14 @@
 var Site    = {
 
+    _redirects      : [
+        {
+            name    : 'regionalizacion',
+            url     : 'http://datos.gob.mx/herramientas/regionalizacion-funcional.html'
+        }
+    ],
+
     init            : function () {
+        Site._setRedirects();
         Site._loadTweets();
         Site._pageViews();
         Site._setCategories();
@@ -195,6 +203,29 @@ var Site    = {
         $( '.resource-item .item-hover' ).click( function ( e ) {
             window.location.href    = $( 'a', $( e.currentTarget ) ).attr( 'href' );
         });
+    },
+
+    _setRedirects   : function () {
+        var pathExist   = function ( name ) {
+                for ( var i = Site._redirects.length - 1; i >= 0; i-- ) {
+                    var item            = Site._redirects[i],
+                        posibleNames    = [ '/' + item.name, '/' + item.name + '/' ];
+
+                    if ( _.contains( posibleNames, name ) )
+                        return item;
+                }
+
+                return false;
+            },
+            dependency  = pathExist( window.location.pathname );
+
+        if ( dependency ) {
+            $( '#redirect-message' ).show();
+            document.title          = "Redireccionando...";
+            window.location.href    = dependency.url;
+        } else {
+            $('#error-content').show();
+        };
     },
 
     _setResources   : function () {
