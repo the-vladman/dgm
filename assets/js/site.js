@@ -7,7 +7,7 @@ var Site    = {
         },
         {
             name    : 'san-luis-potosi',
-            url     : 'http://busca.datos.gob.mx/#/instituciones/ayuntamiento-de-san-luis-potosi/'
+            url     : 'http://busca.datos.gob.mx/#/instituciones/ayuntamiento-de-san-luis-potosi'
         },
         {
             name    : 'xalapa',
