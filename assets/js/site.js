@@ -1,6 +1,38 @@
 var Site    = {
 
+    _redirects      : [
+        {
+            name    : 'regionalizacion',
+            url     : 'http://datos.gob.mx/herramientas/regionalizacion-funcional.html'
+        },
+        {
+            name    : 'san-luis-potosi',
+            url     : 'http://busca.datos.gob.mx/#/instituciones/ayuntamiento-de-san-luis-potosi'
+        },
+        {
+            name    : 'xalapa',
+            url     : 'http://busca.datos.gob.mx/#/instituciones/ayuntamiento-de-xalapa'
+        },
+        {
+            name    : 'presidencia',
+            url     : 'http://busca.datos.gob.mx/#/instituciones/presidencia'
+        },
+        {
+            name    : 'datatron',
+            url     : 'http://datatron.herokuapp.com/'
+        },
+        {
+            name    : 'catalogo',
+            url     : 'http://busca.datos.gob.mx/'
+        },
+        {
+            name    : 'agenda2030',
+            url     : 'http://pnud.carto.mx/'
+        }
+    ],
+
     init            : function () {
+        Site._setRedirects();
         Site._loadTweets();
         Site._pageViews();
         Site._setCategories();
@@ -206,6 +238,29 @@ var Site    = {
         $( '.resource-item .item-hover' ).click( function ( e ) {
             window.location.href    = $( 'a', $( e.currentTarget ) ).attr( 'href' );
         });
+    },
+
+    _setRedirects   : function () {
+        var pathExist   = function ( name ) {
+                for ( var i = Site._redirects.length - 1; i >= 0; i-- ) {
+                    var item            = Site._redirects[i],
+                        posibleNames    = [ '/' + item.name, '/' + item.name + '/' ];
+
+                    if ( _.contains( posibleNames, name ) )
+                        return item;
+                }
+
+                return false;
+            },
+            dependency  = pathExist( window.location.pathname );
+
+        if ( dependency ) {
+            $( '#redirect-message' ).show();
+            document.title          = "Redireccionando...";
+            window.location.href    = dependency.url;
+        } else {
+            $('#error-content').show();
+        };
     },
 
     _setResources   : function () {
