@@ -4,6 +4,30 @@ var Site    = {
         {
             name    : 'regionalizacion',
             url     : 'http://datos.gob.mx/herramientas/regionalizacion-funcional.html'
+        },
+        {
+            name    : 'san-luis-potosi',
+            url     : 'http://busca.datos.gob.mx/#/instituciones/ayuntamiento-de-san-luis-potosi/'
+        },
+        {
+            name    : 'xalapa',
+            url     : 'http://busca.datos.gob.mx/#/instituciones/ayuntamiento-de-xalapa'
+        },
+        {
+            name    : 'presidencia',
+            url     : 'http://busca.datos.gob.mx/#/instituciones/presidencia'
+        },
+        {
+            name    : 'datatron',
+            url     : 'http://datatron.herokuapp.com/'
+        },
+        {
+            name    : 'catalogo',
+            url     : 'http://busca.datos.gob.mx/'
+        },
+        {
+            name    : 'agenda2030',
+            url     : 'http://pnud.carto.mx/'
         }
     ],
 
