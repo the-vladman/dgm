@@ -6,6 +6,7 @@ var Site    = {
         Site._setCategories();
         Site._setData();
         Site._setForm();
+        Site._setScrolling();
         Site._setHovers();
         Site._setResources();
         Site._setSubscribe();
@@ -159,6 +160,16 @@ var Site    = {
 
             window.open( 'http://busca.datos.gob.mx/#/conjuntos?q=' + $( '#search-keyword' ).val(), '_blank' );
             $( '#search-keyword' ).val( '' );
+        });
+    },
+
+    _setScrolling   : function () {
+        $( '#iframe-container' ).click( function () {
+            $( '.tool-iframe' ).removeClass( 'scrolloff' );
+        });
+
+        $( '.tool-iframe' ).mouseleave( function () {
+            $( this ).addClass( 'scrolloff' );
         });
     },
 

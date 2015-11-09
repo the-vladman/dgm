@@ -31,6 +31,7 @@ p.small                                     { font-size: 11px; }
 .app-links.web                              { background-image: url(../assets/img/ic-web.png); }
 #home-video                                 { display: none; margin-top: 20px; }
 .tool-iframe                                { width: 100%; height: 650px; overflow: hidden; border: none; }
+.scrolloff                                  { pointer-events: none; }
 
 /*********************************
     SHARE STYLES
