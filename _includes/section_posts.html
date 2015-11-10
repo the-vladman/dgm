@@ -10,7 +10,7 @@
             {% for post in posts reversed limit:3 %}
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 tool-item">
                     <div class="inner">
-                        <a href="{{ post.permalink }}" class="img-link"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
+                        <a href="{{ post.permalink }}" class="img-link"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: post.grid_img | prepend: site.baseurl | prepend: site.url }}"></a>
                         <div class="item-info">
                             <h4><a href="{{ post.permalink }}">{{ post.title }}</a></h4>
                             <div class="links-container">

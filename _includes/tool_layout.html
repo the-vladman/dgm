@@ -1,5 +1,9 @@
 <div class="tools-item {{ include.class }}">
-    <a class="text-center" href="{{ include.post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: include.post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
+    {% if include.class == 'first' %}
+        <a class="text-center" href="{{ include.post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: include.post.featured_img | prepend: site.baseurl | prepend: site.url }}"></a>
+    {% else %}
+        <a class="text-center" href="{{ include.post.permalink }}"><img src="{{ "/assets/img/" | append: include.section | append: '/' | append: include.post.grid_img | prepend: site.baseurl | prepend: site.url }}"></a>
+    {% endif %}
     <div class="inner">
         <div class="row">
             {% if include.class == 'first' %}
