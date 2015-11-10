@@ -9,16 +9,3 @@
         </div>
     </div>
 </section>
-{% if include.image %}
-    {% assign posts = site.posts | where: 'category', include.category | where: 'category_featured', true | where: 'published', true | sort: 'date' %}
-    {% for post in posts limit:1 %}
-        <section id="category-map">
-            <img src="{{ "/assets/img/herramientas/" | append: post.featured_cover | prepend: site.baseurl | prepend: site.url }}">
-            <div id="map-description">
-                <h3>Herramienta</h3>
-                <p><strong><a href="{{ post.permalink }}">{{ post.title }}</a></strong></p>
-                <p><a href="{{ post.permalink }}">{{ post.content | strip_html | truncatewords: 30 }}</a></p>
-            </div>
-        </section>
-    {% endfor %}
-{% endif %}
