@@ -224,7 +224,7 @@ title: datos.gob.mx
         {% assign posts = site.posts | where: 'section', 'impacto' | where: 'published', true %}
         {% for post in posts limit:4 %}
             <div class="item {% if forloop.first %}active{% endif %}">
-                <a href="{{ post.permalink }}" alt="{{ post.title }}"><img src="{{ "/assets/img/impacto/" | append: post.cover_photo | prepend: site.baseurl | prepend: site.url }}" alt="{{ post.title }}"></a>
+                <a href="{{ post.permalink }}" alt="{{ post.title }}"><img src="{{ "/assets/img/impacto/" | append: post.featured_img | prepend: site.baseurl | prepend: site.url }}" alt="{{ post.title }}"></a>
                 <div class="carousel-caption">
                     <p class="breadcrumb"><a href="/impacto">Impacto</a> / <span>{{ post.sub_section }}</span></p>
                     <p><small>{{ post.author }}</small></p>
