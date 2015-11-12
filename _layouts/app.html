@@ -118,7 +118,7 @@ layout: default
                                 {% assign i = i | plus: 1 %}
                                 <div class="col-lg-6 col-md-6 app-item">
                                     <div class="inner">
-                                        <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: post.section | append: '/' | append: post.cover | prepend: site.baseurl | prepend: site.url }}"></a>
+                                        <a href="{{ post.permalink }}"><img src="{{ "/assets/img/" | append: post.section | append: '/' | append: post.grid_img | prepend: site.baseurl | prepend: site.url }}"></a>
                                         <div class="info">
                                             <h5>{{ post.title }}</h5>
                                             <p><i>{{ post.author }}</i></p>
