@@ -70,8 +70,25 @@ var Site    = {
     _loadTweets     : function () {
         $.get( 'tweets.json',
             function ( data ) {
-                for ( var i = 0; i < data.length; i++ ) {
-                    var element = $( '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet"><div class="inner"><p>' + data[i].content + '</p><p class="small">' + data[i].date + '</p><div class="author"><div class="pull-left avatar"><img src="' + data[i].avatar + '"></div><div class="pull-left"><p>' + data[i].author + '</p><a href="https://twitter.com/' +data[i].author_handler + '" target="_blank">@' + data[i].author_handler + '</a></div></div></div></div>' );
+                var displayed   = 3,
+                    total       = data.length,
+                    used        = [],
+                    randomize   = function ( above, below, used ) {
+                        var generated   = Math.floor( Math.random() * below ) + above;
+
+                        if ( used.indexOf( generated ) > -1 ) {
+                            return randomize( above, below, used );
+                        } else {
+                            return generated;
+                        }
+                    };
+
+                for ( var i = 0; i < displayed; i++ ) {
+                    var index   = randomize( 0, total, used ),
+                        tweet   = data[index];
+                    used.push( index );
+
+                    var element = $( '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet"><div class="inner"><p>' + tweet.content + '</p><p class="small">' + tweet.date + '</p><div class="author"><div class="pull-left avatar"><img src="' + tweet.avatar + '"></div><div class="pull-left"><p>' + tweet.author + '</p><a href="https://twitter.com/' +tweet.author_handler + '" target="_blank">@' + tweet.author_handler + '</a></div></div></div></div>' );
                     $( '#tweets-container' ).append( element );
                 }
             });
