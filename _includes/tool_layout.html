@@ -19,7 +19,7 @@
                 <div class="col-lg-19 col-md-10 col-sm-9 col-xs-9 icon-container">
             {% endif %}
                 <a href="{{ include.post.permalink }}"><h5>{{ include.post.title }}</h5></a>
-                <p><i>{{ include.post.author }}</i></p>
+                <p><i>{{ include.post.author | truncatewords: 8 }}</i></p>
                 <div class="links-container">
                     {% if include.post.links.web %}
                         <a href="{{ include.post.links.web }}" class="app-links web" alt="Web">Web</a>
