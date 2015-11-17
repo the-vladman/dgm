@@ -41,6 +41,7 @@ var Site    = {
         Site._setScrolling();
         Site._setHovers();
         Site._setResources();
+        Site._setSidebar();
         Site._setSubscribe();
         Site._setVideo();
     },
@@ -287,6 +288,17 @@ var Site    = {
         $( '.resource-item' ).hover( function ( e ) {
             $( '.item-hover', e.currentTarget ).slideToggle();
         });
+    },
+
+    _setSidebar     : function () {
+        if ( $( '.bg-container' ).length > 0 ) {
+            var sidebar     = $( '#dgm-sidebar' ),
+                bg          = $( '.bg-container > .bg' );
+
+            bg.css({
+                right   : $( window ).width() - ( sidebar.width() + sidebar.position().left + 30 )
+            });
+        }
     },
 
     _setSubscribe   : function () {
