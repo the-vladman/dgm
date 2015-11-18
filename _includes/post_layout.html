@@ -18,9 +18,9 @@
                     <p><i>{{ include.post.author }}</i></p>
                     <p class="small">{% include es_date.html date=include.post.date %}</p>
                     {% if include.class == 'first' %}
-                        <p>{{ include.post.content | strip_html | truncatewords: 60 }}</p>
+                        <p>{{ include.post.content | strip_html | truncatewords: 50 }}</p>
                     {% else %}
-                        <p>{{ include.post.content | strip_html | truncatewords: 30 }}</p>
+                        <p>{{ include.post.content | strip_html | truncatewords: 15 }}</p>
                     {% endif %}
                     <h6>{{ include.post.category_title }}</h6>
                 </div>
