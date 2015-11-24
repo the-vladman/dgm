@@ -414,6 +414,7 @@ p.cover-image                               { margin-top: 30px; text-align: cent
 .app-item .info                             { background-color: rgba(0,0,0,0.6); padding: 10px 20px; position: absolute; bottom: 0; left: 0; right: 0; }
 .app-item .info h5                          { color: #fff; margin-top: 0; }
 .app-item .info p                           { color: #ccc; }
+.app-item table.data                        { display: none; }
 
 /***********************
     GUIA STYLES

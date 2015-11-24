@@ -43,6 +43,7 @@ var Site    = {
         Site._setResources();
         Site._setSidebar();
         Site._setSubscribe();
+        Site._setToolData();
         Site._setVideo();
     },
 
@@ -335,6 +336,27 @@ var Site    = {
                 });
             }
         });
+    },
+
+    _setToolData    : function () {
+        if ( $( '#tool-datasets' ).length > 0 ) {
+            $.each( $( '#tool-datasets li' ), function ( i, el ) {
+                var $el     = $( el ),
+                    list    = $( '#tool-datasets' ),
+                    table   = $( 'table.data' ),
+                    link    = 'http://busca.datos.gob.mx/';
+
+                $.get( 'http://catalogo.datos.gob.mx/api/3/action/package_show', {
+                    id  : $el.html()
+                }, function ( data ) {
+                    var result  = data.result;
+
+                    table.append( $('<tr><td><a href="' + link + '#/conjuntos/' + result.name + '" target="_blank">' + result.title + '</a></td><td><a href="' + link + '#/instituciones/' + result.organization.name + '" target="_blank">' + result.organization.title + '</a></td><td>' + result.metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="' + result.resources[0].format.replace( / /g, '' ) + '">' + result.resources[0].format + '</span></td><td class="ic-dataset"><a href="' + link + '#/conjuntos/' + result.name + '" target="_blank"><img src="/assets/img/ic-dataset.png"></a></td></tr>'));
+                    table.css( 'display', 'block' );
+                    list.css( 'display', 'none' );
+                });
+            });
+        }
     },
 
     _setVideo       : function () {
