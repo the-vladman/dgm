@@ -446,7 +446,8 @@ p.cover-image                               { margin-top: 30px; text-align: cent
 /***********************
     Main Content
 ***********************/
-#main-content                               { margin-top: 10px; margin-bottom: 40px; }
+#guide-content                              { margin: 40px 0; }
+#guide-content > h3                         { margin-top: 0; }
 .navigation-item,
 .resource-item                              { margin-bottom: 30px; }
 .resource-item .item                        { width: 100%; height: 100%; margin-bottom: 10px; background-color: #0c9; position: relative; }
@@ -508,19 +509,19 @@ p.cover-image                               { margin-top: 30px; text-align: cent
     Aside Section
 ***********************/
 .guide-navigation                           { margin-top: 30px; }
-.guide-navigation ul                        { list-style: none; }
-.guide-navigation li                        { margin-bottom: 20px; padding-left: 30px; height: 20px; background: url("../assets/img/guide/navigation_icons.png") no-repeat; }
-.guide-navigation li a                      { color: #595959; font-size: 14px; font-weight: 300; line-height: 20px; font-weight: bold; }
-.guide-navigation li.active a,
-.guide-navigation li:hover a                { color: #0c9; }
-.guide-navigation .item-intro               { background: none; }
-.guide-navigation .item-plan                { background-position: 0 0; }
-.guide-navigation .item-publish             { background-position: 0 -20px; }
-.guide-navigation .item-perfect             { background-position: 0 -40px; }
-.guide-navigation .item-promote             { background-position: 0 -60px; }
-.guide-navigation .item-templates           { background-position: 0 -80px; }
-.guide-navigation .item-resources           { background-position: 0 -80px; }
-.guide-navigation .item-intro a,
-.guide-navigation .item-templates a,
-.guide-navigation .item-resources a         { font-weight: normal; }
-.guide-navigation li:last-child             { margin-bottom: 0; }
+.guide #dgm-sidebar .guide-navigation ul    { list-style: none; }
+.guide #dgm-sidebar .guide-navigation li    { margin-bottom: 20px; padding-top: 0; padding-bottom: 0; padding-left: 30px; height: 20px; background: url("../assets/img/guide/navigation_icons.png") no-repeat; }
+.guide #dgm-sidebar .guide-navigation li a  { color: #595959; font-size: 14px; font-weight: 300; line-height: 20px; font-weight: bold; }
+.guide #dgm-sidebar .guide-navigation li.active a,
+.guide #dgm-sidebar .guide-navigation li:hover a            { color: #0c9; }
+.guide #dgm-sidebar .guide-navigation .item-intro           { background: none; }
+.guide #dgm-sidebar .guide-navigation .item-plan            { background-position: 0 0; }
+.guide #dgm-sidebar .guide-navigation .item-publish         { background-position: 0 -20px; }
+.guide #dgm-sidebar .guide-navigation .item-perfect         { background-position: 0 -40px; }
+.guide #dgm-sidebar .guide-navigation .item-promote         { background-position: 0 -60px; }
+.guide #dgm-sidebar .guide-navigation .item-templates       { background-position: 0 -80px; }
+.guide #dgm-sidebar .guide-navigation .item-resources       { background-position: 0 -80px; }
+.guide #dgm-sidebar .guide-navigation .item-intro a,
+.guide #dgm-sidebar .guide-navigation .item-templates a,
+.guide #dgm-sidebar .guide-navigation .item-resources a     { font-weight: normal; }
+.guide #dgm-sidebar .guide-navigation li:last-child         { margin-bottom: 0; }
