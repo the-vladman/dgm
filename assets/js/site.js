@@ -28,6 +28,10 @@ var Site    = {
         {
             name    : 'agenda2030',
             url     : 'http://pnud.carto.mx/'
+        },
+        {
+            name    : 'salud',
+            url     : 'http://busca.datos.gob.mx/#/conjuntos/recursos-en-salud'
         }
     ],
 
