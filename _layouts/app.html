@@ -106,6 +106,14 @@ layout: default
                                     {% endfor %}
                                 </ul>
                                 {% endif %}
+                                {% if page.external_datasets %}
+                                <h5 class="app-subtitle">Conjuntos de datos externos utilizados</h5>
+                                <ul class="datasets-list">
+                                    {% for dataset in page.external_datasets %}
+                                        <li><a href="{{ dataset.url }}">{{ dataset.title }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
