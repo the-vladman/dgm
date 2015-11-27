@@ -234,7 +234,9 @@ var Site    = {
         var item    = $( '.navigation-item .item-img' ),
             img     = $( '.navigation-item img' ),
             link;
-        item.height( img.height() );
+
+        item.height( item.width() * 1.22727273 );
+
         $( '.navigation-item .link-center' ).css({
             bottom  : ( img.height() ) / 2
         });
