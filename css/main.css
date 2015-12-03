@@ -436,6 +436,8 @@ p.cover-image                               { margin-top: 30px; text-align: cent
 .guide h5                                   { color: #595959; }
 .guide .btn                                 { color: #fff; }
 .guide .btn-download                        { color: #595959; }
+.guide li                                   { margin-left: 20px; padding: 10px 0px; }
+
 
 /***********************
     Title Section
