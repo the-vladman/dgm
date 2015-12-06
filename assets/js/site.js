@@ -32,6 +32,10 @@ var Site    = {
         {
             name    : 'salud',
             url     : 'http://busca.datos.gob.mx/#/conjuntos/recursos-en-salud'
+        },
+        {
+            name    : 'cambioclimatico',
+            url     : 'http://cambioclimatico.datos.gob.mx/'
         }
     ],
 
