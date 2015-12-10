@@ -7,7 +7,7 @@ html, body                                  { margin: 0; font-size: 16px; line-h
 a                                           { color: #0c9; cursor: pointer; }
 p                                           { color: #595959; font-weight: 300; }
 img                                         { max-width: 100%; }
-ul, ol                                      { padding-left: 0; }
+ul, ol                                      { margin-left: 20px; padding-left: 10px; }
 a:hover                                     { text-decoration: none; }
 a:focus, a:active                           { border: none; outline: 0; }
 .container-fluid                            { max-width: 1100px; }
