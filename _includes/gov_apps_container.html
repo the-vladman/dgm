@@ -10,13 +10,13 @@
                         <p><i>{{ post.author }}</i></p>
                         <div class="links-container">
                             {% if post.links.webLink %}
-                                <a href="{{ post.links.webLink }}" class="app-links web" alt="Web">Web</a>
+                                <a href="{{ post.links.webLink }}" target="_blank" class="app-links web" alt="Web">Web</a>
                             {% endif %}
                             {% if post.links.appleStore %}
-                                <a href="{{ post.links.appleStore }}" class="app-links apple"></a>
+                                <a href="{{ post.links.appleStore }}" target="_blank" class="app-links apple"></a>
                             {% endif %}
                             {% if post.links.appleStore %}
-                                <a href="{{ post.links.playStore }}" class="app-links android"></a>
+                                <a href="{{ post.links.playStore }}" target="_blank" class="app-links android"></a>
                             {% endif %}
                         </div>
                     </div>
