@@ -147,7 +147,7 @@ var Site    = {
 
                     for ( var i = 0; i < results.length; i++ ) {
                         var organization    = ( results[i].organization ) ? results[i].organization.title : ( results[i].groups && ( results[i].groups.length > 0 ) ) ? results[i].groups[0].display_name : '',
-                            el              = $('<tr data-link="' + link + '#/conjuntos/' + results[i].name + '"><td>' + results[i].title + '</td><td width="20%">' + organization.substring( 0, 20 ) + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>');
+                            el              = $('<tr data-link="' + link + '#!/conjuntos/' + results[i].name + '"><td>' + results[i].title + '</td><td width="20%">' + organization.substring( 0, 20 ) + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>');
 
                         list.append( el );
                         el.click( function ( e ) {
@@ -168,7 +168,7 @@ var Site    = {
 
                     for ( var i = 0; i < results.length; i++ ) {
                         var organization    = ( results[i].organization ) ? results[i].organization.title : ( results[i].groups && ( results[i].groups.length > 0 ) ) ? results[i].groups[0].display_name : '',
-                            el              = $('<tr data-link="' + link + '#/conjuntos/' + results[i].name + '"><td>' + results[i].title + '</td><td width="20%">' + organization.substring( 0, 20 ) + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>');
+                            el              = $('<tr data-link="' + link + '#!/conjuntos/' + results[i].name + '"><td>' + results[i].title + '</td><td width="20%">' + organization.substring( 0, 20 ) + '</td><td width="20%">' + results[i].metadata_modified.substring( 0, 10 ) + '</td></tr>');
                         list.append( el );
                         el.click( function ( e ) {
                             window.open( $( e.currentTarget ).attr( 'data-link' ), '_blank' );
@@ -192,7 +192,7 @@ var Site    = {
                     }
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        table.append( $('<tr><td><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td><a href="' + link + '#/instituciones/' + results[i].organization.name + '" target="_blank">' + results[i].organization.title + '</a></td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="' + results[i].resources[0].format.replace( / /g, '' ) + '">' + results[i].resources[0].format + '</span></td><td class="ic-dataset"><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank"><img src="/assets/img/ic-dataset.png"></a></td></tr>'));
+                        table.append( $('<tr><td><a href="' + link + '#!/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td><a href="' + link + '#/instituciones/' + results[i].organization.name + '" target="_blank">' + results[i].organization.title + '</a></td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="' + results[i].resources[0].format.replace( / /g, '' ) + '">' + results[i].resources[0].format + '</span></td><td class="ic-dataset"><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank"><img src="/assets/img/ic-dataset.png"></a></td></tr>'));
                     }
                 });
         }
@@ -209,7 +209,7 @@ var Site    = {
                         table   = $( '#data-tab-downloads table tbody' );
 
                     for ( var i = 0; i < results.length; i++ ) {
-                        table.append( $('<tr><td><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td><a href="' + link + '#/instituciones/' + results[i].organization.name + '" target="_blank">' + results[i].organization.title + '</a></td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="' + results[i].resources[0].format.replace( / /g, '' ) + '">' + results[i].resources[0].format + '</span></td><td class="ic-dataset"><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank"><img src="/assets/img/ic-dataset.png"></a></td></tr>'));
+                        table.append( $('<tr><td><a href="' + link + '#!/conjuntos/' + results[i].name + '" target="_blank">' + results[i].title + '</a></td><td><a href="' + link + '#/instituciones/' + results[i].organization.name + '" target="_blank">' + results[i].organization.title + '</a></td><td>' + results[i].metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="' + results[i].resources[0].format.replace( / /g, '' ) + '">' + results[i].resources[0].format + '</span></td><td class="ic-dataset"><a href="' + link + '#/conjuntos/' + results[i].name + '" target="_blank"><img src="/assets/img/ic-dataset.png"></a></td></tr>'));
                     }
                 });
         }
@@ -219,7 +219,7 @@ var Site    = {
         $( '#search-form' ).submit( function ( e ) {
             e.preventDefault();
 
-            window.open( 'http://busca.datos.gob.mx/#/conjuntos?q=' + $( '#search-keyword' ).val(), '_blank' );
+            window.open( 'http://busca.datos.gob.mx/#!/conjuntos?q=' + $( '#search-keyword' ).val(), '_blank' );
             $( '#search-keyword' ).val( '' );
         });
     },
@@ -363,7 +363,7 @@ var Site    = {
                 }, function ( data ) {
                     var result  = data.result;
 
-                    table.append( $('<tr><td><a href="' + link + '#/conjuntos/' + result.name + '" target="_blank">' + result.title + '</a></td><td><a href="' + link + '#/instituciones/' + result.organization.name + '" target="_blank">' + result.organization.title + '</a></td><td>' + result.metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="' + result.resources[0].format.replace( / /g, '' ) + '">' + result.resources[0].format + '</span></td><td class="ic-dataset"><a href="' + link + '#/conjuntos/' + result.name + '" target="_blank"><img src="/assets/img/ic-dataset.png"></a></td></tr>'));
+                    table.append( $('<tr><td><a href="' + link + '#!/conjuntos/' + result.name + '" target="_blank">' + result.title + '</a></td><td><a href="' + link + '#!/instituciones/' + result.organization.name + '" target="_blank">' + result.organization.title + '</a></td><td>' + result.metadata_modified.substring( 0, 10 ) + '</td><td><span class="label" data-format="' + result.resources[0].format.replace( / /g, '' ) + '">' + result.resources[0].format + '</span></td><td class="ic-dataset"><a href="' + link + '#/conjuntos/' + result.name + '" target="_blank"><img src="/assets/img/ic-dataset.png"></a></td></tr>'));
                     table.css( 'display', 'block' );
                     list.css( 'display', 'none' );
                 });
