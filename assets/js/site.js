@@ -99,7 +99,7 @@ var Site    = {
                             tweet   = data[index];
                         used.push( index );
 
-                        var element = $( '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet"><div class="inner"><p>' + tweet.content + '</p><p class="small">' + tweet.date + '</p><div class="author"><div class="pull-left avatar"><img src="' + tweet.avatar + '"></div><div class="pull-left"><p>' + tweet.author + '</p><a href="https://twitter.com/' +tweet.author_handler + '" target="_blank">@' + tweet.author_handler + '</a></div></div></div></div>' );
+                        var element = $( '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet"><div class="inner"><p>' + tweet.content + '</p><p class="small">' + tweet.date + '</p><div class="author"><div class="pull-left"><p>' + tweet.author + '</p><a href="https://twitter.com/' +tweet.author_handler + '" target="_blank">@' + tweet.author_handler + '</a></div></div></div></div>' );
                         $( '#tweets-container' ).append( element );
                     }
                 });
