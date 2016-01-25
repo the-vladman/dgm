@@ -46,9 +46,10 @@ p.small                                     { font-size: 11px; }
 /*********************************
     POLL STYLES
 *********************************/
-#poll-btn                                   { width: 50px; height: 150px; background-color: #0c9; position: fixed; top: 50%; right: 0; transform: translateY(-50%); }
-#poll-btn .btn                              { display: block; width: 150px; height: 50px; padding: 0; font-size: 16px; line-height: 45px; font-weight: 600; color: #fff; text-transform: uppercase; position: absolute; top: 50px; left: -50px; transform: rotate(90deg); }
-#poll-btn .btn:hover                        { background-color: #00b386; }
+#poll                                       { background-color: #3d3d3d; }
+#poll p                                     { margin-bottom: 0; line-height: 100px; color: #fff; }
+#poll .btn                                  { margin-left: 20px; background-color: #0c9; font-weight: 300; padding: 10px 20px; color: #fff; }
+#poll .btn:hover                            { background-color: #00b386; }
 
 /*************************
     Notifications Styles
