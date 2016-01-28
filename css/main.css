@@ -105,6 +105,16 @@ a.load-more:hover                           { font-weight: 600; }
 @media (max-width: 991px)                   { h1 { font-size: 20px; } p { font-size: 12px; } }
 
 /*********************************
+    LANDING STYLES
+*********************************/
+#landing-title                              { padding: 20px 0; background-color: #0c9; }
+#landing-title h1                           { margin: 0; font-size: 18px; font-weight: 300; color: #fff; }
+#landing-body                               { padding: 50px 0 70px; background-color: rgba( 71, 71, 71, 0.8 ); }
+#landing-body h2                            { margin: 0 0 30px; font-size: 24px; font-weight: bold; color: #fff; }
+#landing-body p                             { margin-bottom: 20px; color: #fff; }
+#landing-body a                             { font-weight: bold; color: #fff; }
+
+/*********************************
     TABS STYLES
 *********************************/
 header                                      { padding-top: 20px; }
