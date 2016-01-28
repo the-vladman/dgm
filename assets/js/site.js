@@ -50,6 +50,7 @@ var Site    = {
         Site._setCategories();
         Site._setData();
         Site._setForm();
+        Site._setPoll();
         Site._setScrolling();
         Site._setHovers();
         Site._setResources();
@@ -226,6 +227,24 @@ var Site    = {
             window.open( 'http://busca.datos.gob.mx/#!/conjuntos?q=' + $( '#search-keyword' ).val(), '_blank' );
             $( '#search-keyword' ).val( '' );
         });
+    },
+
+    _setPoll        : function () {
+        if ( $( '#btn-close-poll' ).length > 0 ) {
+            $( '#btn-close-poll' ).click( function ( e ) {
+                e.preventDefault();
+
+                $( '#poll' ).fadeOut();
+            });
+        }
+
+        if ( $( '#btn-close-poll-side' ).length > 0 ) {
+            $( '#btn-close-poll-side' ).click( function ( e ) {
+                e.preventDefault();
+
+                $( '#poll-btn' ).fadeOut();
+            });
+        }
     },
 
     _setScrolling   : function () {
