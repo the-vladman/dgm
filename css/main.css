@@ -240,7 +240,7 @@ table.data > tbody > tr > td.ic-dataset img { width: 20px; }
 #highlights .tool p                         { margin-bottom: 20px; }
 #highlights .tool .btn                      { margin-bottom: 20px; padding: 10px 20px; font-weight: 600; }
 #highlights .tool .btn:hover                { color: #333; }
-#highlights .tab-content tr:nth-child(2)    { background-color: rgba(0,0,0,0.4); }
+#highlights .tab-content tr:nth-child(even) { background-color: rgba(0,0,0,0.4); }
 
 /*********************************
     ABOUT SECTION STYLES
