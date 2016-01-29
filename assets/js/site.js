@@ -230,11 +230,28 @@ var Site    = {
     },
 
     _setPoll        : function () {
+        var dismissed   = Cookies.get( 'dgm.poll.dismissed' ),
+            setCookie   = function () {
+                var date        = new Date(),
+                    minutes     = 10;
+                date.setTime( date.getTime() + ( minutes * 60 * 1000 ) );
+
+                Cookies.set( 'dgm.poll.dismissed', 'dismissed', {
+                    expires : date
+                });
+            };
+
+        if ( dismissed !== undefined && dismissed == "dismissed" ) {
+            $( '#poll' ).css({ display : 'none' });
+            $( '#poll-btn' ).css({ display : 'none' });
+        }
+
         if ( $( '#btn-close-poll' ).length > 0 ) {
             $( '#btn-close-poll' ).click( function ( e ) {
                 e.preventDefault();
 
                 $( '#poll' ).fadeOut();
+                setCookie();
             });
         }
 
@@ -243,6 +260,7 @@ var Site    = {
                 e.preventDefault();
 
                 $( '#poll-btn' ).fadeOut();
+                setCookie();
             });
         }
     },
