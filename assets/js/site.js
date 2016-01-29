@@ -36,6 +36,10 @@ var Site    = {
         {
             name    : 'cambioclimatico',
             url     : 'http://cambioclimatico.datos.gob.mx/'
+        },
+        {
+            name    : 'encuesta',
+            url     : 'https://docs.google.com/forms/d/1ckzu8nuDpkXGs1pys1ULFFW50Pcoqj4MamfNdqrBK4Q/viewform'
         }
     ],
 
@@ -46,6 +50,7 @@ var Site    = {
         Site._setCategories();
         Site._setData();
         Site._setForm();
+        Site._setPoll();
         Site._setScrolling();
         Site._setHovers();
         Site._setResources();
@@ -222,6 +227,42 @@ var Site    = {
             window.open( 'http://busca.datos.gob.mx/#!/conjuntos?q=' + $( '#search-keyword' ).val(), '_blank' );
             $( '#search-keyword' ).val( '' );
         });
+    },
+
+    _setPoll        : function () {
+        var dismissed   = Cookies.get( 'dgm.poll.dismissed' ),
+            setCookie   = function () {
+                var date        = new Date(),
+                    minutes     = 10;
+                date.setTime( date.getTime() + ( minutes * 60 * 1000 ) );
+
+                Cookies.set( 'dgm.poll.dismissed', 'dismissed', {
+                    expires : date
+                });
+            };
+
+        if ( dismissed !== undefined && dismissed == "dismissed" ) {
+            $( '#poll' ).css({ display : 'none' });
+            $( '#poll-btn' ).css({ display : 'none' });
+        }
+
+        if ( $( '#btn-close-poll' ).length > 0 ) {
+            $( '#btn-close-poll' ).click( function ( e ) {
+                e.preventDefault();
+
+                $( '#poll' ).fadeOut();
+                setCookie();
+            });
+        }
+
+        if ( $( '#btn-close-poll-side' ).length > 0 ) {
+            $( '#btn-close-poll-side' ).click( function ( e ) {
+                e.preventDefault();
+
+                $( '#poll-btn' ).fadeOut();
+                setCookie();
+            });
+        }
     },
 
     _setScrolling   : function () {
