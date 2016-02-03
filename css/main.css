@@ -463,7 +463,8 @@ p.cover-image                               { margin-top: 30px; text-align: cent
 .guide h5                                   { color: #595959; }
 .guide .btn                                 { color: #fff; }
 .guide .btn-download                        { color: #595959; }
-.guide li                                   { margin-left: 20px; padding: 10px 0px; }
+#guide-content .section-navigation          { margin-left: 0; padding: 0; }
+.guide li                                   { margin-left: 0; padding: 0 0 10px; }
 
 
 /***********************
