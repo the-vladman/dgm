@@ -44,6 +44,10 @@ var Site    = {
         {
             name    : 'papa-en-mexico',
             url     : 'http://busca.datos.gob.mx/#!/grupos/papaenmex'
+        },
+        {
+            name    : 'inecc',
+            url     : 'http://busca.datos.gob.mx/#!/grupos/calidad-del-aire'
         }
     ],
 
