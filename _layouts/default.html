@@ -5,11 +5,6 @@
         {% include alert.html %}
         <dgm-navbar></dgm-navbar>
         {{ content }}
-        {% if page.url != '/index.html' %}
-            <div id="poll-btn">
-                <p class="btn"><a href="https://docs.google.com/forms/d/1ckzu8nuDpkXGs1pys1ULFFW50Pcoqj4MamfNdqrBK4Q/viewform" target="_blank" title="Encuesta">&iquest;Cómo mejoramos datos.gob.mx?</a><span id="btn-close-poll-side">X</span></p>
-            </div>
-        {% endif %}
         <dgm-footer></dgm-footer>
         <script src="{{ "bower_components/js-cookie/src/js.cookie.js" | prepend: site.baseurl | prepend: site.url }}"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" type="text/javascript"></script>

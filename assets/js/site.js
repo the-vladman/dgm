@@ -38,10 +38,6 @@ var Site    = {
             url     : 'http://cambioclimatico.datos.gob.mx/'
         },
         {
-            name    : 'encuesta',
-            url     : 'https://docs.google.com/forms/d/1ckzu8nuDpkXGs1pys1ULFFW50Pcoqj4MamfNdqrBK4Q/viewform'
-        },
-        {
             name    : 'papa-en-mexico',
             url     : 'http://busca.datos.gob.mx/#!/grupos/papaenmex'
         },
