@@ -48,6 +48,10 @@ var Site    = {
         {
             name    : 'inecc',
             url     : 'http://busca.datos.gob.mx/#!/grupos/calidad-del-aire'
+        },
+        {
+            name    : 'INECC',
+            url     : 'http://busca.datos.gob.mx/#!/grupos/calidad-del-aire'
         }
     ],
 
