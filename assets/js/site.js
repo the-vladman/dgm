@@ -48,6 +48,14 @@ var Site    = {
         {
             name    : 'INECC',
             url     : 'http://busca.datos.gob.mx/#!/grupos/calidad-del-aire'
+        },
+        {
+            name    : 'inifed',
+            url     : 'http://busca.datos.gob.mx/#!/instituciones/inifed'
+        },
+        {
+            name    : 'INIFED',
+            url     : 'http://busca.datos.gob.mx/#!/instituciones/inifed'
         }
     ],
 
