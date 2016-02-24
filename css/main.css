@@ -259,6 +259,13 @@ section#about-video .video                  { margin: 0 -15px; }
 @media (max-width: 991px)                   { .post h1 { margin-top: 30px; font-size: 20px; } section#about-video { padding-top: 0; padding-bottom: 0; } }
 
 /*********************************
+    POLL SECTION STYLES
+*********************************/
+section#poll-container                      { padding: 100px 0 200px; background-color: #0c9; text-align: center; color: #fff; }
+section#poll-container h1                   { margin-bottom: 20px; font-weight: 300; }
+section#poll-container p                    { color: #fff; }
+
+/*********************************
     CATEGORIES SECTION STYLES
 *********************************/
 #categories                                 { background-color: #eee; height: auto; padding: 20px 0; }
