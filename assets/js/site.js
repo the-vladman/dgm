@@ -100,7 +100,7 @@ var Site    = {
 
     _loadTweets     : function () {
         if ( $( '#tweets' ).length > 0 ) {
-            $.get( 'tweets.json',
+            $.get( 'http://dgm-tweets.bitslice.net/tweets.json',
                 function ( data ) {
                     var displayed   = 3,
                         total       = data.length,
@@ -117,10 +117,11 @@ var Site    = {
 
                     for ( var i = 0; i < displayed; i++ ) {
                         var index   = randomize( 0, total, used ),
-                            tweet   = data[index];
+                            tweet   = data[index],
+                            date    = moment( tweet.date );
                         used.push( index );
 
-                        var element = $( '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet"><div class="inner"><p><a href="' + tweet.content_url + '" target="_blank" class="tweet-content">' + tweet.content + '</a></p><p class="small">' + tweet.date + '</p><div class="author"><div class="pull-left"><p>' + tweet.author + '</p><a href="https://twitter.com/' +tweet.author_handler + '" target="_blank">@' + tweet.author_handler + '</a></div></div></div></div>' );
+                        var element = $( '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tweet"><div class="inner"><p><a href="' + tweet.content_url + '" target="_blank" class="tweet-content">' + tweet.content + '</a></p><p class="small">' + date.format( 'HH:mm A - D MMM YYYY' ) + '</p><div class="author"><div class="pull-left"><p>' + tweet.author + '</p><a href="https://twitter.com/' +tweet.author_handler + '" target="_blank">@' + tweet.author_handler + '</a></div></div></div></div>' );
                         $( '#tweets-container' ).append( element );
                     }
                 });
