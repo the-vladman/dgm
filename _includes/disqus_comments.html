@@ -1,9 +1,12 @@
 <section class="post-section comments">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-        var disqus_shortname    = 'blog-datos-mx';
+        var disqus_shortname    = 'datosgobmx';
         var disqus_config       = function () {
-            this.language       = "es_MX";
+            this.language           = "es_MX";
+            this.page.url           = '{{ site.url }}';
+            this.page.identifier    = '{{ page.url }}';
+            this.page.title         = '{{ page.title }}';
             this.callbacks.onReady.push(function() {
                 addAriaHiddenAttrs( $('#disqus_thread iframe') );
             });
