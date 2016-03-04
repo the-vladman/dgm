@@ -1,6 +1,6 @@
 {
   "name": "dgm-footer",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "license": "MIT",
   "main": "dgm-footer.html",
   "dependencies": {
@@ -12,13 +12,13 @@
     "dgm-footer"
   ],
   "homepage": "https://github.com/mxabierto/dgm-footer",
-  "_release": "0.0.5",
+  "_release": "0.0.8",
   "_resolution": {
     "type": "version",
-    "tag": "v0.0.5",
-    "commit": "957b379c4753278c60252b9e29f0bbfc146e4df0"
+    "tag": "v0.0.8",
+    "commit": "239e835e243c962ee139e9907ecd7850da3d7e59"
   },
   "_source": "git://github.com/mxabierto/dgm-footer.git",
-  "_target": "^0.0.5",
+  "_target": "^0.0.8",
   "_originalSource": "mxabierto/dgm-footer"
 }
