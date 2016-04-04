@@ -56,7 +56,11 @@ var Site    = {
         {
             name    : 'INIFED',
             url     : 'http://busca.datos.gob.mx/#!/instituciones/inifed'
-        }
+        },
+	{
+	    name    : 'sedena',
+	    url     : 'http://busca.datos.gob.mx/#!/instituciones/sedena'
+	}
     ],
 
     init            : function () {
