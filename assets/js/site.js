@@ -14,10 +14,6 @@ var Site    = {
             url     : 'http://busca.datos.gob.mx/#/instituciones/ayuntamiento-de-xalapa'
         },
         {
-            name    : 'presidencia',
-            url     : 'http://busca.datos.gob.mx/#/instituciones/presidencia'
-        },
-        {
             name    : 'datatron',
             url     : 'http://datatron.herokuapp.com/'
         },
@@ -48,19 +44,7 @@ var Site    = {
         {
             name    : 'INECC',
             url     : 'http://busca.datos.gob.mx/#!/grupos/calidad-del-aire'
-        },
-        {
-            name    : 'inifed',
-            url     : 'http://busca.datos.gob.mx/#!/instituciones/inifed'
-        },
-        {
-            name    : 'INIFED',
-            url     : 'http://busca.datos.gob.mx/#!/instituciones/inifed'
-        },
-	{
-	    name    : 'sedena',
-	    url     : 'http://busca.datos.gob.mx/#!/instituciones/sedena'
-	}
+        }
     ],
 
     init            : function () {
@@ -352,7 +336,18 @@ var Site    = {
             document.title          = "Redireccionando...";
             window.location.href    = dependency.url;
         } else {
-            $('#error-content').show();
+            $.get( 'http://catalogo.datos.gob.mx/api/3/action/organization_list', function ( data ) {
+                var results = data.result;
+                dependency  = window.location.pathname.replace( '/', '' ).toLowerCase();
+
+                if ( results.indexOf( dependency ) != -1 ) {
+                    $( '#redirect-message' ).show();
+                    document.title          = "Redireccionando...";
+                    window.location.href    = 'http://busca.datos.gob.mx/#!/instituciones/' + dependency + '/';
+                } else {
+                    $('#error-content').show();
+                }
+            });
         };
     },
 
