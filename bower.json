@@ -1,0 +1,22 @@
+{
+    "name"          : "dgm",
+    "description"   : "CMS for the blog datos.gob.mx",
+    "main"          : "index.js",
+    "authors"       : [
+        "Carlos Cessa"
+    ],
+    "license"       : "MIT",
+    "homepage"      : "https://github.com/chuckcfs/dgm",
+    "ignore"        : [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies"  : {
+        "angular"   : "1.5.5",
+        "requirejs" : "2.2.0",
+        "ui-router" : "0.2.18"
+    }
+}
