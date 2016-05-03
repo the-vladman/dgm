@@ -12,8 +12,10 @@ app.settings.env    = app.get( 'env' );
 start.launch( app );
 
 // Set the CMS server routes
-var front       = require( './routers/front' );
+var api         = require( './routers/api' ),
+    front       = require( './routers/front' );
 
+app.use( '/api', api );
 app.use( '/', front );
 
 if ( app.get( 'env' ) == 'development' ) {
