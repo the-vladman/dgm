@@ -24,6 +24,7 @@
         "jade"              : "1.10.0",
         "less"              : "2.6.1",
         "method-override"   : "2.3.5",
-        "morgan"            : "1.7.0"
+        "morgan"            : "1.7.0",
+        "node-watch"        : "0.3.5"
     }
 }
