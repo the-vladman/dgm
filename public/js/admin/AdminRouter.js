@@ -3,12 +3,12 @@
 define( function () {
     return function ( $stateProvider ) {
         $stateProvider
-            .state( 'home', {
-                url     : '/',
+            .state( 'admin-login', {
+                url     : '/admin',
                 views   : {
                     application     : {
-                        templateUrl : 'partials/front/home.jade',
-                        controller  : 'FrontCtrl'
+                        templateUrl : 'partials/admin/login',
+                        controller  : 'AdminCtrl'
                     }
                 }
             });

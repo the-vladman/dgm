@@ -1,10 +1,12 @@
 'use strict';
 
 define( function ( require ) {
+    require( 'admin/AdminModule' );
     require( 'front/FrontModule' );
 
     var app     = angular.module( 'dgm', [
             'ui.router',
+            'AdminModule',
             'FrontModule'
         ]);
 
