@@ -15,8 +15,10 @@
         "tests"
     ],
     "dependencies"  : {
-        "angular"   : "1.5.5",
-        "requirejs" : "2.2.0",
-        "ui-router" : "0.2.18"
+        "angular"       : "1.5.5",
+        "dgm-footer"    : "mxabierto/dgm-footer#^0.0.8",
+        "dgm-navbar"    : "mxabierto/dgm-navbar#^0.0.8",
+        "requirejs"     : "2.2.0",
+        "ui-router"     : "0.2.18"
     }
 }
