@@ -1,8 +1,11 @@
 'use strict';
 
-define( function () {
+define( function ( require ) {
+    require( 'front/FrontModule' );
+
     var app     = angular.module( 'dgm', [
-            'ui.router'
+            'ui.router',
+            'FrontModule'
         ]);
 
     app.config( [ '$locationProvider', function ( $locationProvider ) {
