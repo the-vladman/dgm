@@ -9,5 +9,8 @@ html
         link( rel="import" href="bower_components/dgm-footer/dgm-footer.html" )
 
         link( rel="stylesheet" href="css/style.css" )
+
+        if settings.env == 'development'
+            script( src="http://localhost:35729/livereload.js?snipver=1" )
     body
         block body
