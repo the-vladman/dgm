@@ -2,6 +2,7 @@ var express     = require( 'express' ),
     debug       = require( 'debug' )( 'app' ),
     app         = express(),
     livereload  = require( 'livereload' ),
+    error       = require( './lib/error' ),
     start       = require( './lib/start' );
 
 // Set the PORT and ENV variables and start the server
@@ -17,6 +18,9 @@ var api         = require( './routers/api' ),
 
 app.use( '/api', api );
 app.use( '/', front );
+
+app.use( error.notFound );
+app.use( error.handler );
 
 if ( app.get( 'env' ) == 'development' ) {
     var liveServer  = livereload.createServer();
