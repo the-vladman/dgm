@@ -18,6 +18,7 @@
     },
     "homepage"      : "https://github.com/mxabierto/dgm#readme",
     "dependencies"  : {
+        "bcrypt"            : "0.8.6",
         "body-parser"       : "1.15.0",
         "debug"             : "2.2.0",
         "express"           : "4.13.4",
