@@ -2,6 +2,7 @@ var express     = require( 'express' ),
     debug       = require( 'debug' )( 'app' ),
     app         = express(),
     livereload  = require( 'livereload' ),
+    error       = require( './lib/error' ),
     start       = require( './lib/start' );
 
 // Set the PORT and ENV variables and start the server
@@ -12,9 +13,14 @@ app.settings.env    = app.get( 'env' );
 start.launch( app );
 
 // Set the CMS server routes
-var front       = require( './routers/front' );
+var api         = require( './routers/api' ),
+    front       = require( './routers/front' );
 
+app.use( '/api', api );
 app.use( '/', front );
+
+app.use( error.notFound );
+app.use( error.handler );
 
 if ( app.get( 'env' ) == 'development' ) {
     var liveServer  = livereload.createServer();
