@@ -1,6 +1,4 @@
-_site/
-.sass-cache/
 .DS_Store
-*~
+.tmp
 npm-debug.log
-.jekyll-metadata
+node_modules/
