@@ -8,6 +8,12 @@ html
         link( rel="import" href="bower_components/dgm-navbar/dgm-navbar.html" )
         link( rel="import" href="bower_components/dgm-footer/dgm-footer.html" )
 
+        // bower:css
+        // endbower
+
         link( rel="stylesheet" href="css/style.css" )
+
+        if settings.env == 'development'
+            script( src="http://localhost:35729/livereload.js?snipver=1" )
     body
         block body
