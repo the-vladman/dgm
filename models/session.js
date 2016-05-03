@@ -5,7 +5,7 @@ var mongoose        = require( 'mongoose' ),
             required    : true
         },
         ip_address      : {
-            type        : Number,
+            type        : String,
             required    : true
         },
         last_activity   : {
