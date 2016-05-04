@@ -21,6 +21,15 @@ define( function () {
                         controller  : 'SessionsStartCtrl'
                     }
                 }
+            })
+            .state( 'admin-logout', {
+                url     : '/logout',
+                views   : {
+                    application     : {
+                        template    : '',
+                        controller  : 'SessionsEndCtrl'
+                    }
+                }
             });
     };
 });
