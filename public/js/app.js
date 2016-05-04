@@ -1,13 +1,19 @@
 'use strict';
 
 define( function ( require ) {
+    require( 'events' );
     require( 'admin/AdminModule' );
     require( 'front/FrontModule' );
+    require( 'sessions/SessionsModule' );
 
     var app     = angular.module( 'dgm', [
+            'events',
+            'ngCookies',
+            'ngResource',
             'ui.router',
             'AdminModule',
-            'FrontModule'
+            'FrontModule',
+            'SessionsModule'
         ]);
 
     app.config( [ '$locationProvider', function ( $locationProvider ) {
