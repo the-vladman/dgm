@@ -1,9 +1,9 @@
 #login-form.col-md-4.col-md-offset-4
-    form
+    form( ng-submit="login()" )
         .form-group
             label( for="email" ) Correo Electrónico
-            input( type="email" name="email" placeholder="Correo electrónico" ).form-control
+            input( type="email" name="email" placeholder="Correo electrónico" ng-model="session.email" ).form-control
         .form-group
             label( for="pass" ) Contraseña
-            input( type="password" name="pass" placeholder="Contraseña" ).form-control
-        button.btn.btn-primary.pull-right Iniciar Sesión
+            input( type="password" name="pass" placeholder="Contraseña" ng-model="session.pass" ).form-control
+        button.btn.btn-primary.pull-right( type="submit" ) Iniciar Sesión

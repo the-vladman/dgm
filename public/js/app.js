@@ -20,5 +20,9 @@ define( function ( require ) {
         $locationProvider.html5Mode( true );
     }]);
 
+    app.run([ '$rootScope', '$state', function ( $rootScope, $state ) {
+        $rootScope.$state   = $state;
+    }]);
+
     return app;
 });
