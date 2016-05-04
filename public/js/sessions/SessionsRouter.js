@@ -4,7 +4,7 @@ define( function () {
     return function ( $stateProvider ) {
         $stateProvider
             .state( 'admin-login', {
-                url     : 'login',
+                url     : '/login',
                 views   : {
                     application     : {
                         templateUrl : 'partials/admin/login',
