@@ -9,7 +9,8 @@ define( function () {
                 url         : '/users',
                 views       : {
                     'admin-main'    : {
-                        templateUrl : 'partials/users/base'
+                        templateUrl : 'partials/users/base',
+                        controller  : 'UsersBaseCtrl'
                     }
                 }
             })

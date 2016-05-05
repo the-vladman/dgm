@@ -5,6 +5,7 @@
         h3( ng-if="$state.is( 'users.details' )" ) Detalles Usuario
     div.col-md-4.view-controls
         a.btn.btn-success.pull-right( ui-sref="users.create" ng-if="$state.is( 'users.list' )" ) Crear Usuario
-        a.btn.btn-danger.pull-right( ui-sref="users.remove" ng-if="$state.is( 'users.details' )" ) Eliminar
+        button.btn.btn-info.pull-right( ng-click="update()" ng-if="$state.is( 'users.details' )" ) Guardar
+        button.btn.btn-danger.pull-right( ng-click="remove()" ng-if="$state.is( 'users.details' )" ) Eliminar
         a.btn.btn-default.pull-right( ui-sref="users.list" ng-if="$state.is( 'users.details' )" ) Atras
 div( ui-view="users-main" )
