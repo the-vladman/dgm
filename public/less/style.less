@@ -14,12 +14,36 @@ a, a:focus, a:active, a:focus   { outline: 0; }
 #login-form                     { margin-top: 200px; padding: 30px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 0 1px rgba(0,0,0,0.15), 0 1px 15px rgba(0,0,0,0.3); }
 
 /********************************
+    Admin Form Styles
+********************************/
+.search-form                    { margin-bottom: 20px; position: relative; }
+.search-form > input            { width: 100%; padding: 8px 30px 8px 12px; font-size: 12px; color: #666; border: 1px solid #dfe1e3; border-radius: 4px; }
+.search-form .glyphicon         { position: absolute; right: 15px; top: 11px; color: #ccc; }
+
+/********************************
+    Admin Tables Styles
+********************************/
+.table-header                   { margin-top: 20px; }
+.table > tbody > tr > td        { height: 45px; line-height: 29px; color: #666; }
+.table > tbody > tr > td > img  { margin-right: 10px; }
+.btn                            { padding: 9px 15px; font-size: 11px; font-weight: 300; text-transform: uppercase; }
+
+/********************************
     Admin Header Styles
 ********************************/
-.navbar                         { min-height: 55px; border: none; border-radius: 0; }
+.navbar                         { min-height: 55px; border: none; border-bottom: 1px solid rgba(0,0,0,0.05); border-radius: 0; }
 .navbar-default                 { background-color: #f2f2f2; }
 .navbar-brand                   { height: 55px; line-height: 25px; }
 .navbar-brand img               { max-width: 100%; max-height: 100%; }
 .navbar-nav > li > a            { height: 55px; line-height: 25px; }
 .menu-avatar                    { margin-right: 5px; position: relative; top: -2px; }
-.admin h3                       { margin: 0; margin-bottom: 15px; font-size: 14px; font-weight: 400; color: #a1a1a1; }
+.admin h3                       { margin: 0; margin-bottom: 15px; font-size: 16px; font-weight: 600; color: #a1a1a1; }
+
+/********************************
+    Admin Users Styles
+********************************/
+span.user-label                 { padding: 6px 8px; background-color: #eee; font-size: 10px; font-weight: 400; line-height: 1; text-transform: uppercase; color: rgba(255,255,255,0.8); }
+span.label-super                { background-color: #242628; }
+span.label-admin                { background-color: #5ba4e5; }
+span.label-editor               { background-color: #5be5aa; }
+span.label-author               { background-color: #e55b5b; }
