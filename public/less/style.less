@@ -3,18 +3,58 @@
 /********************************
     General Styles
 ********************************/
-body                            { margin: 0; }
+body                                        { margin: 0; }
+body.admin                                  { padding-top: 75px; background-color: #f5f7f8; font-size: 13px; }
+img                                         { max-width: 100%; max-height: 100%; }
+a, a:focus, a:active, a:focus               { outline: 0; }
 
 /********************************
     Admin Login Styles
 ********************************/
-#login-form                     { margin-top: 200px; padding: 30px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 0 1px rgba(0,0,0,0.15), 0 1px 15px rgba(0,0,0,0.3); }
+#login-form                                 { margin-top: 200px; padding: 30px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 0 1px rgba(0,0,0,0.15), 0 1px 15px rgba(0,0,0,0.3); }
+
+/********************************
+    Admin Form Styles
+********************************/
+form                                        { overflow: hidden; }
+.admin .form-control,
+.admin input                                { height: 40px; padding: 10px 30px 10px 14px; font-size: 12px; color: #666; border: 1px solid #dfe1e3; border-radius: 4px; }
+.form-group                                 { margin-bottom: 20px; }
+.form-group > label                         { margin-bottom: 15px; }
+.search-form                                { margin-bottom: 20px; position: relative; }
+.search-form .glyphicon                     { position: absolute; right: 15px; top: 11px; color: #ccc; }
+
+/********************************
+    Admin Tables Styles
+********************************/
+.table-header                               { margin-top: 20px; }
+.table > tbody > tr > td                    { height: 45px; line-height: 29px; color: #666; }
+.table > tbody > tr > td img                { margin-right: 10px; }
+.table > tbody > tr > td > a                { display: block; height: 29px; font-weight: 500; color: #666; }
+.btn                                        { margin-left: 10px; padding: 9px 15px; font-size: 11px; font-weight: 300; text-transform: uppercase; }
+.btn:first-child                            { margin-left: 0; }
 
 /********************************
     Admin Header Styles
 ********************************/
-.navbar                         { min-height: 55px; border: none; border-radius: 0; }
-.navbar-inverse                 { background-color: #474747; }
-.navbar-brand                   { height: 55px; line-height: 25px; }
-.navbar-brand img               { max-width: 100%; max-height: 100%; }
-.navbar-nav > li > a            { line-height: 25px; }
+.navbar                                     { min-height: 55px; border: none; border-bottom: 1px solid rgba(0,0,0,0.05); border-radius: 0; }
+.navbar-default                             { background-color: #f2f2f2; }
+.navbar-brand                               { height: 55px; line-height: 25px; }
+.navbar-brand img                           { max-width: 100%; max-height: 100%; }
+.navbar-nav > li > a                        { height: 55px; line-height: 25px; }
+.menu-avatar                                { margin-right: 5px; position: relative; top: -2px; }
+.admin h3                                   { margin: 0; margin-bottom: 15px; font-size: 16px; font-weight: 600; color: #a1a1a1; }
+.view-controls > .btn                       { margin-left: 10px; }
+
+/********************************
+    Admin Users Styles
+********************************/
+span.user-label                             { padding: 6px 8px; background-color: #eee; font-size: 10px; font-weight: 400; line-height: 1; text-transform: uppercase; color: rgba(255,255,255,0.8); }
+span.label-super                            { background-color: #242628; }
+span.label-admin                            { background-color: #5ba4e5; }
+span.label-editor                           { background-color: #5be5aa; }
+span.label-author                           { background-color: #e55b5b; }
+.profile-container                          { margin-top: 20px; background-color: #fff; }
+.profile-container .user-avatar             { width: 20%; position: relative; left: 30px; top: -100px; }
+.profile-container .password-form           { margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.1); }
+.profile-container .details-container       { position: relative; top: -90px; }
