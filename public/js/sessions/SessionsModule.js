@@ -14,5 +14,5 @@ define( function ( require ) {
 
     SessionsModule.controller( 'SessionsStartCtrl', [ '$scope', 'events', 'SessionsService', SessionsStartCtrl ]);
 
-    SessionsModule.factory( 'SessionsService', [ '$rootScope', '$resource', '$cookies', 'events', SessionsService ] );
+    SessionsModule.factory( 'SessionsService', [ '$rootScope', '$resource', '$cookies', 'events', 'UsersService', SessionsService ] );
 });

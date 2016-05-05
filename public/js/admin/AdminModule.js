@@ -8,5 +8,5 @@ define( function ( require ) {
 
     AdminModule.config([ '$stateProvider', AdminRouter ]);
 
-    AdminModule.controller( 'AdminCtrl', [ AdminController ] );
+    AdminModule.controller( 'AdminCtrl', [ '$rootScope', 'SessionsService', AdminController ] );
 });

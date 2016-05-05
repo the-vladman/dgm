@@ -1,7 +1,7 @@
 'use strict';
 
 define( function () {
-    return function ( $rootScope, $resource, $cookies, events ) {
+    return function ( $rootScope, $resource, $cookies, events, Users ) {
         return {
             _user       : null,
 
@@ -59,8 +59,7 @@ define( function () {
                             level   : data.access_level
                         });
 
-                        //that._getUser( true );
-                        $rootScope.$broadcast( events.LOGIN_SUCCESS );
+                        that._getUser( true );
                     },
                     function () {
                         $rootScope.$broadcast( events.LOGIN_ERROR );
