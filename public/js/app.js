@@ -3,6 +3,7 @@
 define( function ( require ) {
     require( 'events' );
     require( 'admin/AdminModule' );
+    require( 'common/CommonModule' );
     require( 'front/FrontModule' );
     require( 'sessions/SessionsModule' );
 
@@ -12,6 +13,7 @@ define( function ( require ) {
             'ngResource',
             'ui.router',
             'AdminModule',
+            'CommonModule',
             'FrontModule',
             'SessionsModule'
         ]);
