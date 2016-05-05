@@ -2,7 +2,7 @@ var express     = require( 'express' ),
     router      = express.Router();
 
 router.get( '/', function ( req, res ) {
-    res.render( 'home' );
+    res.render( 'index' );
 });
 
 router.get( '/partials/:module/:view', function ( req, res ) {
@@ -10,7 +10,7 @@ router.get( '/partials/:module/:view', function ( req, res ) {
 });
 
 router.get( '*', function ( req, res ) {
-    res.render( 'home' );
+    res.render( 'index' );
 });
 
 module.exports  = router;
