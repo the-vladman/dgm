@@ -13,7 +13,8 @@ nav.navbar.navbar-inverse
                     a( ui-sref="admin" ) Inicio
             ul.nav.navbar-nav.navbar-right
                 li.dropdown
-                    a.dropdown-toggle( href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ) Dropdown
+                    a.dropdown-toggle( href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ) {{ user.name }} 
+                        span.caret
                         ul.dropdown-menu
                             li
                                 a( ui-sref="admin-logout" ) Cerrar Sesión
