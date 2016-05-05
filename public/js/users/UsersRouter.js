@@ -6,6 +6,7 @@ define( function () {
             .state( 'users', {
                 abstract    : true,
                 parent      : 'admin',
+                url         : '/users',
                 views       : {
                     'admin-main'    : {
                         templateUrl : 'partials/users/base'
@@ -13,11 +14,20 @@ define( function () {
                 }
             })
             .state( 'users.list', {
-                url         : '/users',
+                url         : '/list',
                 views       : {
                     'users-main'    : {
                         templateUrl : 'partials/users/list',
                         controller  : 'UsersAdminCtrl'
+                    }
+                }
+            })
+            .state( 'users.create', {
+                url         : '/create',
+                views       : {
+                    'users-main'    : {
+                        templateUrl : 'partials/users/create',
+                        controller  : 'UsersCreateCtrl'
                     }
                 }
             });

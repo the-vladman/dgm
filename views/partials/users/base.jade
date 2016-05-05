@@ -1,6 +1,7 @@
 .row
     div.col-md-8
-        h3 Usuarios
+        h3( ng-if="$state.is( 'users.list' )" ) Usuarios
+        h3( ng-if="$state.is( 'users.create' )" ) Crear Usuario
     div.col-md-4
-        a.btn.btn-success.pull-right( ui-sref="users.create" ) Crear Usuario
+        a.btn.btn-success.pull-right( ui-sref="users.create" ng-if="$state.is( 'users.list' )" ) Crear Usuario
 div( ui-view="users-main" )
