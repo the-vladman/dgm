@@ -13,4 +13,3 @@ layout: null
     "avances": "{{ site.posts | where: 'sub_section', 'avances' | where: 'published', true | size }}"
   }
 }
-
