@@ -5,7 +5,7 @@
                 form.search-form
                     input.form-control( type="text" placeholder="Buscar" )
                     i.glyphicon.glyphicon-search
-        table.table
+        table.table.table-striped
             thead
                 tr
                     th Usuario
@@ -15,8 +15,9 @@
             tbody
                 tr( ng-repeat="user in users" )
                     td
-                        img( src="img/ic_avatar.png" alt="{{ user.name }}" )
-                        | {{ user.name }}
+                        a( ui-sref="users.details({ id : user._id })" alt="{{ user.name }}" )
+                            img( src="img/ic_avatar.png" alt="{{ user.name }}" )
+                            | {{ user.name }}
                     td {{ user.email }}
                     td {{ user.creation_date | date : 'dd-MM-yyyy' }}
                     td.text-center

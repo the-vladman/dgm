@@ -13,6 +13,15 @@ define( function () {
                     }
                 }
             })
+            .state( 'users.details', {
+                url         : '/details/:id',
+                views       : {
+                    'users-main'    : {
+                        templateUrl : 'partials/users/details',
+                        controller  : 'UsersDetailsCtrl'
+                    }
+                }
+            })
             .state( 'users.list', {
                 url         : '/list',
                 views       : {
