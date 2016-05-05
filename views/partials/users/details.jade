@@ -1,0 +1,29 @@
+.row
+    .col-md-12
+        .row
+            .col-md-8.col-md-offset-2
+                .profile-container
+                    img( src="img/user_cover.png" )
+                    .row
+                        .col-md-8
+                            img.user-avatar( src="img/ic_avatar.png" )
+                            .row.details-container
+                                .col-md-9.col-md-offset-3
+                                    form( ng-submit="save()" )
+                                        .form-group
+                                            label( for="name" ) Nombre
+                                            input.form-control( type="text" name="name" placeholder="Nombre" ng-model="current.name" )
+                                        .form-group
+                                            label( for="email" ) Correo electrónico
+                                            input.form-control( type="email" name="email" placeholder="Correo electrónico" ng-model="current.email" )
+                                    form.password-form
+                                        .form-group
+                                            label( for="pass" ) Contraseña actual
+                                            input.form-control( type="pass" name="pass" ng-model="change.pass" )
+                                        .form-group
+                                            label( for="new_pass" ) Nueva contraseña
+                                            input.form-control( type="pass" name="new_pass" ng-model="change.new_pass" )
+                                        .form-group
+                                            label( for="verify_pass" ) Verifique contraseña
+                                            input.form-control( type="pass" name="verify_pass" ng-model="change.verify_pass" )
+                                        button.btn.btn-danger.pull-right( type="submit" ) Cambiar contraseña
