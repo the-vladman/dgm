@@ -6,11 +6,14 @@ nav.navbar.navbar-inverse
                 span.icon-bar
                 span.icon-bar
                 span.icon-bar
-            a.navbar-brand( ui-sref="admin" ) DGM
+            a.navbar-brand( ui-sref="admin" )
+                img( src="img/ic_logo.png" )
         div#admin-menu.collapse.navbar-collapse
             ul.nav.navbar-nav
                 li
-                    a( ui-sref="admin" ) Inicio
+                    a( ui-sref="admin" )
+                        i.glyphicon.glyphicon-home
+                        |  Inicio
             ul.nav.navbar-nav.navbar-right
                 li.dropdown
                     a.dropdown-toggle( href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ) {{ user.name }} 
