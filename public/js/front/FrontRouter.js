@@ -32,6 +32,9 @@ define( function () {
                     'landing-data'      : {
                         templateUrl     : 'partials/front/landingData',
                         controller      : 'LandingDataCtrl'
+                    },
+                    'landing-tools'     : {
+                        templateUrl     : 'partials/front/landingTools'
                     }
                 }
             });
