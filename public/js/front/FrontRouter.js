@@ -35,6 +35,9 @@ define( function () {
                     },
                     'landing-tools'     : {
                         templateUrl     : 'partials/front/landingTools'
+                    },
+                    'landing-blog'      : {
+                        templateUrl     : 'partials/front/landingBlog'
                     }
                 }
             });
