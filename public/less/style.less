@@ -4,7 +4,7 @@
 /********************************
     General Styles
 ********************************/
-body                                        { margin: 0; font-family: "Open Sans"; font-size: 16px; font-weight: 300; }
+body                                        { margin: 0; font-family: "Open Sans"; font-size: 16px; font-weight: 300; color: #474747; }
 body.admin                                  { padding-top: 75px; background-color: #f5f7f8; font-size: 13px; }
 img                                         { max-width: 100%; max-height: 100%; }
 a, a:focus, a:active, a:focus               { outline: 0; text-decoration: none; }
@@ -21,8 +21,40 @@ dgm-footer                                  { width: 100%; height: 432px; positi
 /********************************
     Fonts Styles
 ********************************/
+h2                                          { font-size: 24px; font-weight: 600; color: #545454; }
 h3                                          { font-family: "Open Sans"; font-size: 24px; font-weight: 300; }
 strong                                      { font-weight: 400; }
+.dataset-format                             { font-size: 12px; font-weight: 700; color: #fff; text-transform: uppercase; border-radius: 0; padding: 3px 5px; }
+.dataset-format[data-format="csv"],
+.dataset-format[data-format="CSV"]          { background-color: #ffd100; }
+.dataset-format[data-format="kml"],
+.dataset-format[data-format="KML"]          { background-color: #474747; }
+.dataset-format[data-format="geojson"],
+.dataset-format[data-format="GEOJSON"],
+.dataset-format[data-format="json"],
+.dataset-format[data-format="JSON"]         { background-color: #33ffd1; }
+.dataset-format[data-format="pdf"],
+.dataset-format[data-format="PDF"]          { background-color: #ff2200; }
+.dataset-format[data-format="arcgis"],
+.dataset-format[data-format="ARCGIS"]       { background-color: #d100FF; }
+.dataset-format[data-format="xlsx"],
+.dataset-format[data-format="xls"],
+.dataset-format[data-format="excel"],
+.dataset-format[data-format="vnd.ms-excel"],
+.dataset-format[data-format="EXCEL"],
+.dataset-format[data-format="VND.MS-EXCEL"],
+.dataset-format[data-format="XLS"],
+.dataset-format[data-format="XLSX"]         { background-color: #00d100; }
+.dataset-format[data-format="xml"],
+.dataset-format[data-format="XML"]          { background-color: #0000d1; }
+.dataset-format[data-format="oracle"],
+.dataset-format[data-format="ORACLE"]       { background-color: #55bada; }
+.dataset-format[data-format="shp"],
+.dataset-format[data-format="SHP"]          { background-color: #bada55; }
+.dataset-format[data-format="kmz"],
+.dataset-format[data-format="KMZ"]          { background-color: #55adab; }
+.dataset-format[data-format="zip"],
+.dataset-format[data-format="ZIP"]          { background-color: #001dff; }
 
 /********************************
     Form Styles
@@ -47,6 +79,9 @@ strong                                      { font-weight: 400; }
 /********************************
     Landing Styles
 ********************************/
+section                                     { margin-bottom: 20px; }
+.front h2                                   { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #d8d8d8; position: relative; }
+.front h2:after                             { content: ''; width: 40px; position: absolute; bottom: -6px; left: 0; border-bottom: solid 5px #0c9; }
 #landing-search                             { padding-top: 40px; padding-bottom: 30px; background-color: #0c9; text-align: center; color: rgba(255,255,255,0.9); }
 #landing-search h3                          { margin-bottom: 20px; }
 #landing-search .tags-list                  { margin-top: 30px; margin-bottom: 50px; padding: 0; list-style: none; }
@@ -58,6 +93,15 @@ strong                                      { font-weight: 400; }
 #landing-search .categories-list            { padding: 0; list-style: none; }
 #landing-search .categories-list li         { display: inline-block; margin-right: 60px; }
 #landing-search .categories-list li:last-child          { margin-right: 0; }
+#landing-data .data-list                    { margin-bottom: 40px; padding: 0; list-style: none; }
+#landing-data .data-list li                 { display: inline-block; margin-right: 20px; padding: 10px 35px; border-radius: 4px; background-color: #efefef; font-size: 18px; cursor: pointer; }
+#landing-data .data-list li:hover,
+#landing-data .data-list li.active          { background-color: #0c9; color: #fff; }
+#landing-data .data-list li:last-child      { margin-right: 0; }
+#landing-data .data-table                   { padding: 30px 20px; background-color: #efefef; border-radius: 4px; }
+#landing-data .data-table .table            { margin-bottom: 0; }
+#landing-data .data-table table > tbody > tr            { cursor: pointer; }
+#landing-data .data-table table > tbody > tr > td       { padding-bottom: 20px; font-size: 18px; border-top-color: #d8d8d8; }
 
 /********************************
     Admin Login Styles

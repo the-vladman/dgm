@@ -28,6 +28,10 @@ define( function () {
                     'landing-search'    : {
                         templateUrl     : 'partials/front/landingSearch',
                         controller      : 'LandingSearchCtrl'
+                    },
+                    'landing-data'      : {
+                        templateUrl     : 'partials/front/landingData',
+                        controller      : 'LandingDataCtrl'
                     }
                 }
             });
