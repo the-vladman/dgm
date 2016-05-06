@@ -5,7 +5,7 @@ define( function () {
         Sessions.terminate( Sessions.getToken() );
 
         $scope.$on( events.LOGOUT_SUCCESS, function () {
-            $scope.$state.go( 'home' );
+            $scope.$state.go( 'landing' );
         });
     };
 });
