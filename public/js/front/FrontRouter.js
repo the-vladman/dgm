@@ -6,17 +6,26 @@ define( function () {
             .state( 'front', {
                 abstract    : true,
                 views       : {
-                    application     : {
-                        templateUrl : 'partials/front/home',
-                        controller  : 'FrontCtrl'
+                    application         : {
+                        templateUrl     : 'partials/front/base',
+                        controller      : 'FrontCtrl'
+                    }
+                }
+            })
+            .state( 'home', {
+                abstract    : true,
+                parent      : 'front',
+                views       : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/front/home'
                     }
                 }
             })
             .state( 'landing', {
-                parent      : 'front',
+                parent      : 'home',
                 url         : '/',
                 views       : {
-                    'front-container'   : {
+                    'landing-data'      : {
                         templateUrl     : 'partials/front/landing'
                     }
                 }

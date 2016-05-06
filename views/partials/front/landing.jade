@@ -1,0 +1,24 @@
+.container-fluid
+    .row
+        .col-md-12
+            h3 Descubre <strong>Datos Abiertos</strong> de tu gobierno.
+            p Más de 2,000 bases de datos, de 11 categorías y de 300 instituciones
+            .row
+                .col-md-6.col-md-offset-3
+                    form.data-form.form-inline
+                        input.form-control( type="text" name="keyword" placeholder="Ej. Licitaciones Petroleras" )
+                        select.form-control( name="category" )
+                            option( value="" ) Todas las categorias
+                            option( value="salud" ) Salud
+                            option( value="geoespacial" ) Geoespacial
+                            option( value="seguridad-y-justicia" ) Seguridad y justicia
+                            option( value="energia-y-medio-ambiente" ) Energía y medio ambiente
+                            option( value="educacion" ) Educación
+                            option( value="economia" ) Economía
+                            option( value="cultura-y-turismo" ) Cultura y turismo
+                            option( value="finanzas-y-contrataciones" ) Finanzas y contrataciones
+                            option( value="infraestructura" ) Infraestructura
+                            option( value="desarrollo-sostenible" ) Desarrollo sostenible
+                            option( value="gobiernos-locales" ) Gobiernos locales
+                            option( value="otros" ) Otros
+                        button.btn.btn-primary( type="submit" ) Buscar
