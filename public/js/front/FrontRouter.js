@@ -27,7 +27,7 @@ define( function () {
                 views       : {
                     'landing-search'    : {
                         templateUrl     : 'partials/front/landingSearch',
-                        controller      : 'LandingDataSearchCtrl'
+                        controller      : 'LandingSearchCtrl'
                     }
                 }
             });

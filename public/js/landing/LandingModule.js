@@ -1,9 +1,9 @@
 'use strict';
 
 define( function ( require ) {
-    var LandingDataSearchCtrl   = require( 'landing/LandingDataSearchCtrl' );
+    var LandingSearchCtrl   = require( 'landing/LandingSearchCtrl' );
 
-    var LandingModule           = angular.module( 'LandingModule', []);
+    var LandingModule       = angular.module( 'LandingModule', []);
 
-    LandingModule.controller( 'LandingDataSearchCtrl', [ '$scope', LandingDataSearchCtrl ]);
+    LandingModule.controller( 'LandingSearchCtrl', [ '$scope', LandingSearchCtrl ]);
 });
