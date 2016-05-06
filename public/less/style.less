@@ -1,12 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 @import url( 'bower_components/bootstrap/less/bootstrap.less' );
 
 /********************************
     General Styles
 ********************************/
-body                                        { margin: 0; }
+body                                        { margin: 0; font-family: "Open Sans"; font-size: 16px; font-weight: 300; }
 body.admin                                  { padding-top: 75px; background-color: #f5f7f8; font-size: 13px; }
 img                                         { max-width: 100%; max-height: 100%; }
-a, a:focus, a:active, a:focus               { outline: 0; }
+a, a:focus, a:active, a:focus               { outline: 0; text-decoration: none; }
+.container-fluid                            { max-width: 1100px; }
+body.admin .container-fluid                 { max-width: none; }
+
+/********************************
+    Sticky Footer Styles
+********************************/
+html                                        { position: relative; min-height: 100%; }
+body                                        { margin: 0 0 432px; }
+dgm-footer                                  { width: 100%; height: 432px; position: absolute; left: 0; bottom: 0; }
+
+/********************************
+    Fonts Styles
+********************************/
+h3                                          { font-family: "Open Sans"; font-size: 24px; font-weight: 300; }
+strong                                      { font-weight: 400; }
+
+/********************************
+    Form Styles
+********************************/
+.front .form-control                        { height: 42px; padding: 10px 12px; border: none; }
+.front .btn                                 { font-size: 13px; }
+.front .btn-primary                         { height: 42px; background-color: #4a4a4a; border: none; }
+.front .btn-primary:active                  { background-color: #333; }
+.custom-select                              { height: 42px; padding: 0; margin: 0; background: #fff url("../img/ic_arrow_down.png") no-repeat 95% 50%; }
+.custom-select select                       { border: none; box-shadow: none; background-color: transparent; color: #9b9b9b; background-image: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+.custom-select select:focus,
+.custom-select select:active                { outline: none; }
+.form-inline .btn                           { margin-left: 0; }
+.form-inline .custom-select                 { display: inline-block; border-left: 1px solid #ccc; }
+.form-inline .custom-select select          { width: 100%; }
+.data-form                                  { margin-top: 20px; margin-bottom: 30px; }
+.data-form input[type="text"]               { width: 50%; border-radius: 4px 0 0 4px; }
+.data-form select.form-control              { border-radius: 0; }
+.data-form .custom-select                   { width: 34%; }
+.data-form .btn                             { border-radius: 0 4px 4px 0; }
+
+/********************************
+    Landing Styles
+********************************/
+#data-search                                { padding-top: 40px; padding-bottom: 30px; background-color: #0c9; text-align: center; color: rgba(255,255,255,0.9); }
+#data-search h3                             { margin-bottom: 20px; }
+#data-search .tags-list                     { margin-top: 30px; margin-bottom: 50px; padding: 0; list-style: none; }
+#data-search .tags-list li                  { display: inline-block; margin-right: 10px; padding: 5px 10px; background-color: rgba(84,84,84,0.5); border-radius: 4px; font-size: 13px; }
+#data-search .tags-list li:hover            { background-color: rgba(84,84,84,0.6); }
+#data-search .tags-list li a                { display: block; color: #fff; }
+#data-search .tags-list li a:hover          { text-decoration: none; }
+#data-search .tags-list li:last-child       { margin-right: 0; }
+#data-search .categories-list               { padding: 0; list-style: none; }
+#data-search .categories-list li            { display: inline-block; margin-right: 60px; }
+#data-search .categories-list li:last-child { margin-right: 0; }
 
 /********************************
     Admin Login Styles

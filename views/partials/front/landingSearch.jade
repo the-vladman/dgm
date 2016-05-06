@@ -1,0 +1,70 @@
+.container-fluid
+    .row
+        .col-md-12
+            h3 Descubre <strong>Datos Abiertos</strong> de tu gobierno.
+            p Más de 2,000 bases de datos, de 11 categorías y de 300 instituciones
+            .row
+                .col-md-6.col-md-offset-3
+                    form.data-form.form-inline( ng-submit="search()" )
+                        input.form-control( type="text" name="keyword" placeholder="Ej. Licitaciones Petroleras" ng-model="keyword" )
+                        div.custom-select
+                            select.form-control( name="category" ng-model="category" )
+                                option( value="" ) Todas las categorias
+                                option( value="salud" ) Salud
+                                option( value="geoespacial" ) Geoespacial
+                                option( value="seguridad-y-justicia" ) Seguridad y justicia
+                                option( value="energia-y-medio-ambiente" ) Energía y medio ambiente
+                                option( value="educacion" ) Educación
+                                option( value="economia" ) Economía
+                                option( value="cultura-y-turismo" ) Cultura y turismo
+                                option( value="finanzas-y-contrataciones" ) Finanzas y contrataciones
+                                option( value="infraestructura" ) Infraestructura
+                                option( value="desarrollo-sostenible" ) Desarrollo sostenible
+                                option( value="gobiernos-locales" ) Gobiernos locales
+                                option( value="otros" ) Otros
+                        button.btn.btn-primary( type="submit" ) Buscar
+                    p 
+                        small Etiquetas populares
+                    ul.tags-list
+                        li 
+                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=salud" target="_blank" ) Salud
+                        li 
+                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=finanzas-y-contrataciones" target="_blank" ) Finanzas y Contrataciones
+                        li
+                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=seguridad y justicia" target="_blank" ) Seguridad y Justicia
+                        li
+                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=infraestructura" target="_blank" ) Infraestructura
+            ul.categories-list
+                li
+                    a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=salud" target="_blank" alt="Salud" )
+                        img( src="img/ic-health.png" alt="Salud" )
+                li
+                    a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=geoespacial" target="_blank" alt="Geoespacial" )
+                        img( src="img/ic-geospatial.png" alt="Geoespacial" )
+                li
+                    a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=seguridad-y-justicia" target="_blank" alt="Seguridad y Justicia" )
+                        img( src="img/ic-security.png" alt="Seguridad y Justicia" )
+                li
+                    a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=energia-y-medio-ambiente" target="_blank" alt="Energía y Medio Ambiente" )
+                        img( src="img/ic-environment.png" alt="Energía y Medio Ambiente" )
+                li
+                    a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=educacion" target="_blank" alt="Educación" )
+                        img( src="img/ic-education.png" alt="Educación" )
+                li
+                    a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=economia" target="_blank" alt="Economía" )
+                        img( src="img/ic-economy.png" alt="Economía" )
+                li
+                    a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=cultura-y-turismo" target="_blank" alt="Cultura y Turismo" )
+                        img( src="img/ic-culture.png" alt="Cultura y Turismo" )
+                li
+                    a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=finanzas-y-contrataciones" target="_blank" alt="Finanzas y Contrataciones" )
+                        img( src="img/ic-finance.png" alt="Finanzas y Contrataciones" )
+                li
+                    a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=infraestructura" target="_blank" alt="Infraestructura" )
+                        img( src="img/ic-infrastructure.png" alt="Infraestructura" )
+                li
+                    a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=desarrollo-sostenible" target="_blank" alt="Desarrollo Sostenible" )
+                        img( src="img/ic-development.png" alt="Desarrollo Sostenible" )
+                li
+                    a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=gobiernos-locales" target="_blank" alt="Gobiernos Locales" )
+                        img( src="img/ic-government.png" alt="Gobiernos Locales" )

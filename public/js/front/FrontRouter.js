@@ -25,8 +25,9 @@ define( function () {
                 parent      : 'home',
                 url         : '/',
                 views       : {
-                    'landing-data'      : {
-                        templateUrl     : 'partials/front/landing'
+                    'landing-search'    : {
+                        templateUrl     : 'partials/front/landingSearch',
+                        controller      : 'LandingDataSearchCtrl'
                     }
                 }
             });
