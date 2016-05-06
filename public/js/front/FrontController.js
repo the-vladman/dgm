@@ -2,6 +2,6 @@
 
 define( function () {
     return function () {
-        $( 'body' ).removeClass( 'admin' );
+        $( 'body' ).addClass( 'front' ).removeClass( 'admin' );
     };
 });
