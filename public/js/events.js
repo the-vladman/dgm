@@ -4,6 +4,9 @@ define( function () {
     var events  = angular.module( 'events', []);
 
     events.constant( 'events', {
+        DATASETS_ERROR          : 'datasets.error',
+        DATASETS_QUERY          : 'datasets.query',
+        DATASETS_QUERYING       : 'datasets.querying',
         LOGIN_ERROR             : 'login.error',
         LOGIN_SUCCESS           : 'login.success',
         LOGOUT_ERROR            : 'logout.error',
