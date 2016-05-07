@@ -4,12 +4,13 @@
 /********************************
     General Styles
 ********************************/
-body                                        { margin: 0; font-family: "Open Sans"; font-size: 16px; font-weight: 300; color: #474747; }
+body                                        { margin: 0; font-family: "Open Sans"; font-size: 16px; line-height: 1.8em; font-weight: 300; color: #474747; }
 body.admin                                  { padding-top: 75px; background-color: #f5f7f8; font-size: 13px; }
 img                                         { max-width: 100%; max-height: 100%; }
 a, a:hover, a:focus, a:active, a:focus      { outline: 0; text-decoration: none; }
 .container-fluid                            { max-width: 1100px; }
 body.admin .container-fluid                 { max-width: none; }
+ul                                          { padding: 0; list-style: none; }
 
 /********************************
     Sticky Footer Styles
@@ -22,8 +23,15 @@ dgm-footer                                  { width: 100%; height: 432px; positi
     Fonts Styles
 ********************************/
 h2                                          { font-size: 24px; font-weight: 600; color: #545454; }
-h3                                          { font-family: "Open Sans"; font-size: 24px; font-weight: 300; }
+h3                                          { font-size: 24px; font-weight: 300; }
+h4                                          { margin-top: 0; margin-bottom: 20px; font-size: 16px; font-weight: 600; color: #595959; }
+a                                           { color: #0c9; }
+a:hover                                     { color: #05aa81; }
 strong                                      { font-weight: 400; }
+
+/********************************
+    Badges Styles
+********************************/
 .dataset-format                             { font-size: 12px; font-weight: 700; color: #fff; text-transform: uppercase; border-radius: 0; padding: 3px 5px; }
 .dataset-format[data-format="csv"],
 .dataset-format[data-format="CSV"]          { background-color: #ffd100; }
@@ -55,15 +63,22 @@ strong                                      { font-weight: 400; }
 .dataset-format[data-format="KMZ"]          { background-color: #55adab; }
 .dataset-format[data-format="zip"],
 .dataset-format[data-format="ZIP"]          { background-color: #001dff; }
+.social-icon                                { display: block; width: 60px; height: 60px; margin: 0 auto; background-color: #0c9; background-repeat: no-repeat; background-position: 50%; border-radius: 3px; }
+.social-icon:hover                          { background-color: #05aa81; box-shadow :inset 0 3px 5px rgba(0,0,0,.125); }
+.social-icon.social-rss                     { background-image: url(../img/ic-rss.png); }
+.social-icon.social-facebook                { background-image: url(../img/ic-facebook.png); }
+.social-icon.social-twitter                 { background-image: url(../img/ic-twitter.png); }
+.social-icon.social-github                  { background-image: url(../img/ic-github.png); }
 
 /********************************
     Form Styles
 ********************************/
-.front .form-control                        { height: 42px; padding: 10px 12px; border: none; }
-.front .btn                                 { font-size: 13px; }
-.front .btn-primary                         { height: 42px; background-color: #4a4a4a; border: none; }
-.front .btn-primary:active                  { background-color: #333; }
-.custom-select                              { height: 42px; padding: 0; margin: 0; background: #fff url("../img/ic_arrow_down.png") no-repeat 95% 50%; }
+.front .form-control                        { height: 50px; padding: 10px 12px; margin-bottom: 20px; border-color: rgba(0,0,0,0.1); }
+.front .btn                                 { display: block; width: 100%; font-size: 13px; text-transform: uppercase; }
+.front .btn-primary                         { height: 50px; background-color: #0c9; border: none; }
+.front .btn-primary:hover,
+.front .btn-primary:active                  { background-color: #05aa81; }
+.custom-select                              { height: 50px; padding: 0; margin: 0; background: #fff url("../img/ic_arrow_down.png") no-repeat 95% 50%; }
 .custom-select select                       { border: none; box-shadow: none; background-color: transparent; color: #9b9b9b; background-image: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .custom-select select:focus,
 .custom-select select:active                { outline: none; }
@@ -71,10 +86,14 @@ strong                                      { font-weight: 400; }
 .form-inline .custom-select                 { display: inline-block; border-left: 1px solid #ccc; }
 .form-inline .custom-select select          { width: 100%; }
 .data-form                                  { margin-top: 20px; margin-bottom: 30px; }
+.data-form .form-control                    { margin-bottom: 0; border: none; }
 .data-form input[type="text"]               { width: 50%; border-radius: 4px 0 0 4px; }
 .data-form select.form-control              { border-radius: 0; }
 .data-form .custom-select                   { width: 34%; }
-.data-form .btn                             { border-radius: 0 4px 4px 0; }
+.data-form .btn                             { display: inline-block; width: auto; border-radius: 0 4px 4px 0; }
+.data-form .btn-primary                     { background-color: #4a4a4a; }
+.data-form .btn-primary:hover,
+.data-form .btn-primary:active              { background-color: #333; }
 
 /********************************
     Landing Styles
@@ -84,7 +103,7 @@ section                                     { margin-bottom: 30px; }
 .front h2:after                             { content: ''; width: 40px; position: absolute; bottom: -6px; left: 0; border-bottom: solid 5px #0c9; }
 #landing-search                             { padding-top: 40px; padding-bottom: 30px; background-color: #0c9; text-align: center; color: rgba(255,255,255,0.9); }
 #landing-search h3                          { margin-bottom: 20px; }
-#landing-search .tags-list                  { margin-top: 30px; margin-bottom: 50px; padding: 0; list-style: none; }
+#landing-search .tags-list                  { margin-top: 30px; margin-bottom: 50px; }
 #landing-search .tags-list li               { display: inline-block; margin-right: 10px; padding: 5px 10px; background-color: rgba(84,84,84,0.5); border-radius: 4px; font-size: 13px; }
 #landing-search .tags-list li:hover         { background-color: rgba(84,84,84,0.6); }
 #landing-search .tags-list li a             { display: block; color: #fff; }
@@ -92,13 +111,18 @@ section                                     { margin-bottom: 30px; }
 #landing-search .tags-list li:last-child    { margin-right: 0; }
 #landing-search .categories-list            { padding: 0; list-style: none; }
 #landing-search .categories-list li         { display: inline-block; margin-right: 60px; }
-#landing-data .data-list                    { margin-bottom: 40px; padding: 0; list-style: none; }
+#landing-data .data-list                    { margin-bottom: 40px; }
 #landing-data .data-list li                 { display: inline-block; margin-right: 20px; padding: 10px 35px; border-radius: 4px; background-color: #efefef; font-size: 18px; cursor: pointer; }
 #landing-data .data-list li:hover,
 #landing-data .data-list li.active          { background-color: #0c9; color: #fff; }
 #landing-data .data-list li:last-child      { margin-right: 0; }
 #landing-data .data-table                   { padding: 30px 20px; background-color: #efefef; border-radius: 4px; }
 #landing-data .data-table .table            { margin-bottom: 0; }
+#landing-subscribe                          { margin-top: 40px; padding: 50px 0 40px; background-color: #efefef; color: #7a7a7a; }
+#landing-subscribe p                        { margin-bottom: 30px; }
+#landing-subscribe .social-links            { display: inline-block; position: relative; left: 50%; transform: translateX(-50%); }
+#landing-subscribe .social-links > li       { display: inline-block; margin-right: 10px; }
+#landing-subscribe .social-links > li:last-child        { margin-right: 0; }
 #landing-search .categories-list li:last-child          { margin-right: 0; }
 #landing-data .data-table table > tbody > tr            { cursor: pointer; }
 #landing-data .data-table table > tbody > tr > td       { padding-bottom: 20px; font-size: 18px; border-top-color: #d8d8d8; }
@@ -141,23 +165,23 @@ section                                     { margin-bottom: 30px; }
 /********************************
     Admin Form Styles
 ********************************/
-form                                        { overflow: hidden; }
+.admin form                                 { overflow: hidden; }
 .admin .form-control,
 .admin input                                { height: 40px; padding: 10px 30px 10px 14px; font-size: 12px; color: #666; border: 1px solid #dfe1e3; border-radius: 4px; }
-.form-group                                 { margin-bottom: 20px; }
-.form-group > label                         { margin-bottom: 15px; }
-.search-form                                { margin-bottom: 20px; position: relative; }
-.search-form .glyphicon                     { position: absolute; right: 15px; top: 11px; color: #ccc; }
+.admin .form-group                          { margin-bottom: 20px; }
+.admin .form-group > label                  { margin-bottom: 15px; }
+.admin .search-form                         { margin-bottom: 20px; position: relative; }
+.admin .search-form .glyphicon              { position: absolute; right: 15px; top: 11px; color: #ccc; }
 
 /********************************
     Admin Tables Styles
 ********************************/
-.table-header                               { margin-top: 20px; }
-.table > tbody > tr > td                    { height: 45px; line-height: 29px; color: #666; }
-.table > tbody > tr > td img                { margin-right: 10px; }
-.table > tbody > tr > td > a                { display: block; height: 29px; font-weight: 500; color: #666; }
-.btn                                        { margin-left: 10px; padding: 9px 15px; font-size: 11px; font-weight: 300; text-transform: uppercase; }
-.btn:first-child                            { margin-left: 0; }
+.admin .table-header                        { margin-top: 20px; }
+.admin .table > tbody > tr > td             { height: 45px; line-height: 29px; color: #666; }
+.admin .table > tbody > tr > td img         { margin-right: 10px; }
+.admin .table > tbody > tr > td > a         { display: block; height: 29px; font-weight: 500; color: #666; }
+.admin .btn                                 { margin-left: 10px; padding: 9px 15px; font-size: 11px; font-weight: 300; text-transform: uppercase; }
+.admin .btn:first-child                     { margin-left: 0; }
 
 /********************************
     Admin Header Styles

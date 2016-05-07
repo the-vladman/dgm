@@ -38,6 +38,10 @@ define( function () {
                     },
                     'landing-blog'      : {
                         templateUrl     : 'partials/front/landingBlog'
+                    },
+                    'landing-subscribe' : {
+                        templateUrl     : 'partials/front/landingSubscribe',
+                        controller      : 'LandingSubscribeCtrl'
                     }
                 }
             });
