@@ -4,6 +4,7 @@ define( function ( require ) {
     require( 'events' );
     require( 'admin/AdminModule' );
     require( 'common/CommonModule' );
+    require( 'content/ContentModule' );
     require( 'front/FrontModule' );
     require( 'landing/LandingModule' );
     require( 'sessions/SessionsModule' );
@@ -16,6 +17,7 @@ define( function ( require ) {
             'ui.router',
             'AdminModule',
             'CommonModule',
+            'ContentModule',
             'FrontModule',
             'LandingModule',
             'SessionsModule',
