@@ -5,6 +5,7 @@ define( function ( require ) {
     require( 'admin/AdminModule' );
     require( 'common/CommonModule' );
     require( 'front/FrontModule' );
+    require( 'landing/LandingModule' );
     require( 'sessions/SessionsModule' );
     require( 'users/UsersModule' );
 
@@ -16,6 +17,7 @@ define( function ( require ) {
             'AdminModule',
             'CommonModule',
             'FrontModule',
+            'LandingModule',
             'SessionsModule',
             'UsersModule'
         ]);
