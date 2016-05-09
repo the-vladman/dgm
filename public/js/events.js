@@ -4,6 +4,12 @@ define( function () {
     var events  = angular.module( 'events', []);
 
     events.constant( 'events', {
+        CATEGORIES_CREATED      : 'categories.created',
+        CATEGORIES_DELETED      : 'categories.deleted',
+        CATEGORIES_ERROR        : 'categories.error',
+        CATEGORIES_QUERIED      : 'categories.queried',
+        CATEGORIES_RETRIEVED    : 'categories.retrieved',
+        CATEGORIES_UPDATED      : 'categories.updated',
         DATASETS_ERROR          : 'datasets.error',
         DATASETS_QUERY          : 'datasets.query',
         DATASETS_QUERYING       : 'datasets.querying',
