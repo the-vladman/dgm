@@ -12,11 +12,15 @@ nav.navbar.navbar-default.navbar-fixed-top
             ul.nav.navbar-nav
                 li( ng-class="{active:$state.is('admin')}" )
                     a( ui-sref="admin" )
-                        i.glyphicon.glyphicon-home
+                        i.icon-home
                         |  Inicio
+                li( ng-class="{active:$state.includes('content')}" )
+                    a( ui-sref="content.summary" )
+                        i.icon-doc-text-inv
+                        |  Contenido
                 li( ng-class="{active:$state.includes('users')}" )
                     a( ui-sref="users.list" )
-                        i.glyphicon.glyphicon-user
+                        i.icon-users
                         |  Usuarios
             ul.nav.navbar-nav.navbar-right
                 li.dropdown
