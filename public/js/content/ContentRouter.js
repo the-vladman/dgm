@@ -9,7 +9,17 @@ define( function () {
                 url         : '/content',
                 views       : {
                     'admin-main'    : {
-                        templateUrl : 'partials/content/base'
+                        templateUrl : 'partials/content/base',
+                        controller  : 'ContentBaseCtrl'
+                    }
+                }
+            })
+            .state( 'content.categoryCreate', {
+                url         : '/category/create',
+                views       : {
+                    'content-main'  : {
+                        templateUrl : 'partials/content/categoryCreate',
+                        controller  : 'CategoriesCreateCtrl'
                     }
                 }
             })
