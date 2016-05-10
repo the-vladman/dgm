@@ -9,12 +9,13 @@ define( function () {
                 url         : '/posts',
                 views       : {
                     'admin-main'    : {
-                        templateUrl : 'partials/posts/base'
+                        templateUrl : 'partials/posts/base',
+                        controller  : 'PostsBaseCtrl'
                     }
                 }
             })
             .state( 'posts.summary', {
-                url     : '/summary'
+                url         : '/summary'
             });
     };
 });
