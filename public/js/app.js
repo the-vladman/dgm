@@ -8,6 +8,7 @@ define( function ( require ) {
     require( 'content/ContentModule' );
     require( 'front/FrontModule' );
     require( 'landing/LandingModule' );
+    require( 'posts/PostsModule' );
     require( 'sessions/SessionsModule' );
     require( 'users/UsersModule' );
 
@@ -22,6 +23,7 @@ define( function ( require ) {
             'ContentModule',
             'FrontModule',
             'LandingModule',
+            'PostsModule',
             'SessionsModule',
             'UsersModule'
         ]);
