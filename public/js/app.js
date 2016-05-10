@@ -32,7 +32,7 @@ define( function ( require ) {
         $httpProvider.interceptors.push( [ '$rootScope', '$cookies', function ( $rootScope, $cookies ) {
             return {
                 request     : function( config ) {
-                    var api = ( config.url.indexOf( 'api' ) != -1 ) ? true : false;
+                    var api = ( config.url.indexOf( 'cms-api' ) != -1 ) ? true : false;
 
                     if ( api ) {
                         var holder  = '';

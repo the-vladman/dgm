@@ -3,15 +3,15 @@ var express         = require( 'express' ),
     users           = require( './users' ),
     sessions        = require( './sessions' ),
     SessionHandler  = require( '../lib/session' ),
-    api             = express.Router();
+    cmsApi          = express.Router();
 
-api.use( '/sessions', sessions );
+cmsApi.use( '/sessions', sessions );
 
 // Validate the user's session
-api.use( SessionHandler.validate );
+cmsApi.use( SessionHandler.validate );
 
 // Members only resources
-api.use( '/categories', categories );
-api.use( '/users', users );
+cmsApi.use( '/categories', categories );
+cmsApi.use( '/users', users );
 
-module.exports  = api;
+module.exports  = cmsApi;

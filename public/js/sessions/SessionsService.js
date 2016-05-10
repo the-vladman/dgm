@@ -5,7 +5,7 @@ define( function () {
         return {
             _user       : null,
 
-            _resource   : $resource( 'api/sessions/:id' ),
+            _resource   : $resource( 'cms-api/sessions/:id' ),
 
             _getUser    : function ( loggingIn ) {
                 var that    = this;
