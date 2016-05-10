@@ -14,7 +14,7 @@ define( function () {
             _init       : function ( model ) {
                 var that        = this;
                 this._model     = model;
-                this._resource  = $resource( 'api/' + model + '/:id', null, {
+                this._resource  = $resource( 'cms-api/' + model + '/:id', null, {
                     query   : {
                         method              : 'GET',
                         isArray             : true,

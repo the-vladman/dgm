@@ -13,10 +13,10 @@ app.settings.env    = app.get( 'env' );
 start.launch( app );
 
 // Set the CMS server routes
-var api         = require( './routers/api' ),
+var cmsApi      = require( './routers/cmsApi' ),
     front       = require( './routers/front' );
 
-app.use( '/api', api );
+app.use( '/cms-api', cmsApi );
 app.use( '/', front );
 
 app.use( error.notFound );
