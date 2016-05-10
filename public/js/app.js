@@ -13,6 +13,7 @@ define( function ( require ) {
     require( 'users/UsersModule' );
 
     var app     = angular.module( 'dgm', [
+            'angular-medium-editor',
             'events',
             'ngCookies',
             'ngResource',
