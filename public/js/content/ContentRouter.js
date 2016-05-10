@@ -25,6 +25,6 @@ define( function () {
             })
             .state( 'content.summary', {
                 url         : '/summary'
-            })
+            });
     };
 });

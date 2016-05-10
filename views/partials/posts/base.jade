@@ -1,0 +1,7 @@
+.row
+    div.col-md-8
+        h3( ng-if="$state.is( 'posts.summary' )" ) Contenido
+        h3( ng-if="$state.is( 'posts.create' )" ) Crear Post
+    div.col-md-4.view-controls
+        a.btn.btn-success.pull-right( ui-sref="posts.create" ng-if="$state.is( 'posts.summary' )" ) Crear Post
+div( ui-view="posts-main" )
