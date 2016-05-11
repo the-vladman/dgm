@@ -48,6 +48,9 @@ define( function () {
             uploading   = true;
             $scope.update();
         });
+        $scope.$on( Posts.getEvent( 'DELETED' ), function ( e, data ) {
+            $scope.$state.go( 'posts.list' );
+        });
         $scope.$on( Posts.getEvent( 'UPDATED' ), function ( e, data ) {
             if ( !uploading ) {
                 $scope.$state.go( 'posts.list' );
@@ -55,6 +58,9 @@ define( function () {
                 $scope.post.cover_photo = data.cover_photo;
                 uploading   = false;
             }
+        });
+        $scope.$on( 'POST_REMOVE', function () {
+            Posts.remove( $stateParams.id );
         });
         $scope.$on( 'POST_UPDATE', function () {
             $scope.update();
