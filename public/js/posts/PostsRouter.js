@@ -16,6 +16,15 @@ define( function () {
             })
             .state( 'posts.summary', {
                 url         : '/summary'
+            })
+            .state( 'posts.create', {
+                url         : '/create',
+                views       : {
+                    'posts-main'    : {
+                        templateUrl : 'partials/posts/create',
+                        controller  : 'PostsCreateCtrl'
+                    }
+                }
             });
     };
 });

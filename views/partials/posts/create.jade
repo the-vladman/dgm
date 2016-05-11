@@ -1,0 +1,42 @@
+.row
+    .col-md-8.col-md-offset-2
+        form( ng-submit="create()" )
+            .row
+                .col-md-4
+                    .form-group
+                        label( for="section" ) Sección
+                        .custom-select
+                            select.form-control( name="section" ng-model="post.section" ng-options="section._id as section.name for section in sections track by section._id" )
+                                option( value="" ) Seleccionar sección...
+                .col-md-4
+                    .form-group
+                        label( for="category" ) Categoría
+                        .custom-select
+                            select.form-control( name="category" ng-model="post.category" ng-options="category._id as category.name for category in categories track by category._id" )
+                                option( value="" ) Seleccionar categoría...
+                .col-md-4
+                    .form-group
+                        label( for="tag" ) Tag
+                        .custom-select
+                            select.form-control( name="tag" ng-model="post.tag" ng-options="tag._id as tag.name for tag in tags track by tag._id" )
+                                option( value="" ) Seleccionar tag...
+            .row
+                .col-md-6
+                    .form-group
+                        label( for="status" ) Estatus
+                        .custom-select
+                            select.form-control( name="status" ng-model="post.status" )
+                                option( value="" ) Seleccione estatus...
+                                option( value="PUBLISHED" ng-if="user.type <= 2" ) Publicado
+                                option( value="DRAFT" ) Borrador
+                                option( value="ARCHIVED" ) Archivado
+                .col-md-6( ng-if="user.type <= 1" )
+                    .form-group
+                        label( for="created_by" ) Creado por
+                        .custom-select
+                            select.form-control( name="created_by" ng-model="post.created_by" ng-options="author._id as author.name for author in authors track by author._id" )
+                                option( value="" ) Seleccione autor...
+            .post
+                h1.title( medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: { align : 'left', buttons : [ 'bold', 'italic', 'underline' ], static : true, updateOnEmptySelection : true } }" data-placeholder="Título del artículo" ng-model="post.name" )
+                p.author( medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: false }" data-placeholder="Escuadron de datos" ng-model="post.author" )
+                .content( medium-editor bind-options="{toolbar : { buttons : [ 'bold', 'italic', 'underline', 'anchor', 'h2', 'quote' ] }}" data-placeholder="Contenido del artículo" ng-model="post.content" )

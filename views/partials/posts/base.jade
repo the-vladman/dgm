@@ -5,4 +5,5 @@
     div.col-md-4.view-controls
         a.btn.btn-success.pull-right( ui-sref="posts.create" ng-if="$state.is( 'posts.summary' )" ) Crear Post
         button.btn.btn-success.pull-right( ng-if="$state.is( 'posts.create' )" ng-click="save()" ) Guardar Post
+        a.btn.btn-default.pull-right( ui-sref="posts.summary" ng-if="$state.is( 'posts.create' )" ) Atras
 div( ui-view="posts-main" )
