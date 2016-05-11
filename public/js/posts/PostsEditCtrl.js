@@ -1,7 +1,13 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, $stateParams, Posts, Categories, Users ) {
+    return function ( $scope, $stateParams, events, Posts, Categories, Users ) {
+        var uploading   = false;
+
+        $scope.config   = {
+            fileName    : 'cover_photo',
+            url         : 'cms-api/posts'
+        };
         $scope.post     = Posts.get( $stateParams.id, true );
         $scope.sections = Categories.query({
             page        : 1,
@@ -28,12 +34,27 @@ define( function () {
             $scope.post.content = $scope.post.content.replace( /<br>/g, '' );
             $scope.post.name    = $scope.post.name.replace( /<br>/g, '' );
             $scope.post.slug    = $scope.post.name.replace( / /g, '-' ).toLowerCase();
-            
+
+            if ( !uploading ) {
+                delete $scope.post.cover_photo;
+            }
+
             Posts.update( $stateParams.id, $scope.post );
         };
 
-        $scope.$on( Posts.getEvent( 'UPDATED' ), function () {
-            $scope.$state.go( 'posts.list' );
+        $scope.$on( events.FILEUPLOADER_DONE, function ( e, data ) {
+            $scope.post[ Object.keys( data )[0] ]   = data[ Object.keys( data )[0] ];
+
+            uploading   = true;
+            $scope.update();
+        });
+        $scope.$on( Posts.getEvent( 'UPDATED' ), function ( e, data ) {
+            if ( !uploading ) {
+                $scope.$state.go( 'posts.list' );
+            } else {
+                $scope.post.cover_photo = data.cover_photo;
+                uploading   = false;
+            }
         });
         $scope.$on( 'POST_UPDATE', function () {
             $scope.update();

@@ -14,9 +14,9 @@ define( function ( require ) {
 
     PostsModule.controller( 'PostsBaseCtrl', [ '$scope', PostsBaseCtrl ]);
 
-    PostsModule.controller( 'PostsCreateCtrl', [ '$scope', 'PostsService', 'CategoriesService', 'UsersService', PostsCreateCtrl ]);
+    PostsModule.controller( 'PostsCreateCtrl', [ '$scope', 'events', 'PostsService', 'CategoriesService', 'UsersService', PostsCreateCtrl ]);
 
-    PostsModule.controller( 'PostsEditCtrl', [ '$scope', '$stateParams', 'PostsService', 'CategoriesService', 'UsersService', PostsEditCtrl ]);
+    PostsModule.controller( 'PostsEditCtrl', [ '$scope', '$stateParams', 'events', 'PostsService', 'CategoriesService', 'UsersService', PostsEditCtrl ]);
 
     PostsModule.controller( 'PostsListCtrl', [ '$scope', 'PostsService', PostsListCtrl ]);
 

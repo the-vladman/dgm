@@ -1,7 +1,11 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, Posts, Categories, Users ) {
+    return function ( $scope, events, Posts, Categories, Users ) {
+        $scope.config   = {
+            fileName    : 'cover_photo',
+            url         : 'cms-api/posts'
+        };
         $scope.post     = {
             name        : '',
             section     : ''
@@ -35,6 +39,9 @@ define( function () {
             Posts.create( $scope.post );
         };
 
+        $scope.$on( events.FILEUPLOADER_DONE, function ( e, data ) {
+            $scope.post[ Object.keys( data )[0] ]   = data[ Object.keys( data )[0] ];
+        });
         $scope.$on( Posts.getEvent( 'CREATED' ), function () {
             $scope.$state.go( 'posts.list' );
         });
