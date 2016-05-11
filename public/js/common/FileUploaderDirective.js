@@ -19,7 +19,7 @@ define( function () {
                         $rootScope.$broadcast( events.FILEUPLOADER_UPLOADING );
                     },
                     doneHandler         = function ( e, data ) {
-                        $( 'img', element ).attr( 'src', data.result.path.replace( /public\//, '' ) );
+                        $( 'img', element ).attr( 'src', data.result.path );
                         element.removeClass( 'uploading' ).addClass( 'uploaded' );
                         $rootScope.$broadcast( events.FILEUPLOADER_DONE, data.result );
                     },
