@@ -1,0 +1,6 @@
+.row
+    div.col-md-8
+        h3( ng-if="$state.is( 'categories.list' )" ) Categorías
+    div.col-md-4.view-controls
+        a.btn.btn-success.pull-right( ui-sref="categories.create" ng-if="$state.is( 'categories.list' )" ) Crear Categoría
+div( ui-view="categories-main" )
