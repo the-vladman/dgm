@@ -26,14 +26,14 @@ var express     = require( 'express' ),
                 select  : 'name slug'
             },
             {
-                field   : 'tags',
+                field   : 'tag',
                 select  : 'name slug'
             }
         ];
     };
 
 router.get( '', function ( req, res, next ) {
-    var filters = [ 'author', 'category', 'created_by', 'creation_date', 'edited_by', 'edition_date', 'published_by', 'published_date', 'section', 'status' ];
+    var filters = [ 'author', 'category', 'created_by', 'creation_date', 'edited_by', 'edition_date', 'published_by', 'published_date', 'section', 'status', 'tag' ];
 
     Utils.paginate( Post, filters, _getRefs(), req, res, next );
 });
@@ -83,7 +83,7 @@ router.post( '/', Session.validate, function ( req, res, next ) {
             section         : req.body.section,
             slug            : req.body.slug,
             status          : req.body.status,
-            tags            : req.body.tags
+            tag             : req.body.tag
         }, function ( err, post ) {
             if ( err || !post ) {
                 err         = new Error( 'Invalid post data' );
