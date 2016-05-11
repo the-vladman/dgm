@@ -1,9 +1,9 @@
 .row
     div.col-md-8
-        h3( ng-if="$state.is( 'posts.summary' )" ) Contenido
+        h3( ng-if="$state.is( 'posts.list' )" ) Contenido
         h3( ng-if="$state.is( 'posts.create' )" ) Crear Post
     div.col-md-4.view-controls
-        a.btn.btn-success.pull-right( ui-sref="posts.create" ng-if="$state.is( 'posts.summary' )" ) Crear Post
+        a.btn.btn-success.pull-right( ui-sref="posts.create" ng-if="$state.is( 'posts.list' )" ) Crear Post
         button.btn.btn-success.pull-right( ng-if="$state.is( 'posts.create' )" ng-click="save()" ) Guardar Post
-        a.btn.btn-default.pull-right( ui-sref="posts.summary" ng-if="$state.is( 'posts.create' )" ) Atras
+        a.btn.btn-default.pull-right( ui-sref="posts.list" ng-if="$state.is( 'posts.create' )" ) Atras
 div( ui-view="posts-main" )

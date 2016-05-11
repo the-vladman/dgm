@@ -36,7 +36,7 @@ define( function () {
         };
 
         $scope.$on( Posts.getEvent( 'CREATED' ), function () {
-            $scope.$state.go( 'posts.summary' );
+            $scope.$state.go( 'posts.list' );
         });
         $scope.$on( 'POST_SAVE', function () {
             $scope.create();

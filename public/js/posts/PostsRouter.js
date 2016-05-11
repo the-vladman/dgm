@@ -14,8 +14,14 @@ define( function () {
                     }
                 }
             })
-            .state( 'posts.summary', {
-                url         : '/summary'
+            .state( 'posts.list', {
+                url         : '/list',
+                views       : {
+                    'posts-main'    : {
+                        templateUrl : 'partials/posts/list',
+                        controller  : 'PostsListCtrl'
+                    }
+                }
             })
             .state( 'posts.create', {
                 url         : '/create',
