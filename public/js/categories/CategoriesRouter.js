@@ -15,7 +15,13 @@ define( function () {
                 }
             })
             .state( 'categories.list', {
-                url         : '/list'
+                url         : '/list',
+                views       : {
+                    'categories-main'   : {
+                        templateUrl     : 'partials/categories/list',
+                        controller      : 'CategoriesListCtrl'
+                    }
+                }
             });
     };
 });
