@@ -1,4 +1,7 @@
 var express     = require( 'express' ),
+    path        = require( 'path' ),
+    rimraf      = require( 'rimraf' ),
+    config      = require( '../config/app' ),
     Post        = require( '../models/post' ),
     Session     = require( '../lib/session' ),
     Utils       = require( '../lib/utils' ),
@@ -64,10 +67,13 @@ router.get( '/:id', function ( req, res, next ) {
 
 router.post( '/', Session.validate, function ( req, res, next ) {
     if ( req.uploading ) {
-        var file    = req.body.files[ Object.keys( req.body.files )[0] ][0];
-        delete file.headers;
-
-        res.json( file );
+        Utils.upload( req, req.body.file, path.join( config.uploads_tmp_path ), function ( e, file ) {
+            if ( e ) {
+                next( e );
+            } else {
+                res.json( file );
+            }
+        });
     } else {
         if ( req.session.access_level == 3 && req.body.status != 'DRAFT' ) {
             var err     = new Error( 'Permission denied' );
@@ -96,7 +102,15 @@ router.post( '/', Session.validate, function ( req, res, next ) {
                     err.status  = 403;
                     next( err );
                 } else {
-                    res.json( post );
+                    if ( req.body.cover_photo ) {
+                        Utils.move( req.body.cover_photo, path.join( config.uploads_path, post.id ), function ( e, file ) {
+                            post.cover_photo    = file;
+                            post.save();
+                            res.json( post );
+                        });
+                    } else {
+                        res.json( post );
+                    }
                 }
             });
         }
@@ -106,7 +120,8 @@ router.post( '/', Session.validate, function ( req, res, next ) {
 router.put( '/:id', Session.validate, function ( req, res, next ) {
     var updated = function ( err, post ) {
             res.json( post );
-        }
+        },
+        cover   = false;
 
     Post.findById( req.params.id, function ( err, post ) {
         if ( err || !post ) {
@@ -120,10 +135,22 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
                         continue;
                 }
 
+                if ( key == 'cover_photo' ) {
+                    cover   = true;
+                    continue;
+                }
+
                 post[key]   = req.body[key];
             }
 
-            post.save( updated );
+            if ( cover ) {
+                Utils.move( req.body.cover_photo, path.join( config.uploads_path, post.id ), function ( e, file ) {
+                    post.cover_photo    = file;
+                    post.save( updated );
+                });
+            } else {
+                post.save( updated );
+            }
         }
     });
 });
@@ -144,7 +171,9 @@ router.delete( '/:id', Session.validate, function ( req, res, next ) {
                 err.status  = 404;
                 next( err );
             } else {
-                post.remove( removed );
+                rimraf( path.join( config.uploads_path, post.id ), function () {
+                    post.remove( removed );
+                });
             }
         });
     }

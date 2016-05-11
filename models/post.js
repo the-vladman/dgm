@@ -13,6 +13,10 @@ var mongoose        = require( 'mongoose' ),
             type        : String,
             required    : true
         },
+        cover_photo     : {
+            type        : Object,
+            required    : false
+        },
         created_by      : {
             type        : mongoose.Schema.Types.ObjectId,
             ref         : 'User',
