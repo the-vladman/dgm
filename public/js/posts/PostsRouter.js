@@ -31,6 +31,15 @@ define( function () {
                         controller  : 'PostsCreateCtrl'
                     }
                 }
+            })
+            .state( 'posts.edit', {
+                url         : '/edit/:id',
+                views       : {
+                    'posts-main'    : {
+                        templateUrl : 'partials/posts/create',
+                        controller  : 'PostsEditCtrl'
+                    }
+                }
             });
     };
 });
