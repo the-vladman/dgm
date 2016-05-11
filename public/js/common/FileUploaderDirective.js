@@ -5,7 +5,8 @@ define( function () {
         return {
             restrict    : 'EA',
             scope       : {
-                config  : '='
+                config  : '=',
+                img     : '='
             },
             templateUrl : 'partials/common/fileuploader.jade',
             link        : function ( scope, element ) {
@@ -13,7 +14,8 @@ define( function () {
                         element.removeClass( 'dragging' ).addClass( 'uploading' );
 
                         data.formData   = {
-                            session     : Session.getToken()
+                            session     : Session.getToken(),
+                            file        : scope.fileName
                         };
                         data.submit();
                         $rootScope.$broadcast( events.FILEUPLOADER_UPLOADING );
@@ -21,7 +23,9 @@ define( function () {
                     doneHandler         = function ( e, data ) {
                         $( 'img', element ).attr( 'src', data.result.path );
                         element.removeClass( 'uploading' ).addClass( 'uploaded' );
-                        $rootScope.$broadcast( events.FILEUPLOADER_DONE, data.result );
+                        var result              = {};
+                        result[scope.fileName]  = data.result;
+                        $rootScope.$broadcast( events.FILEUPLOADER_DONE, result );
                     },
                     dragleaveHandler    = function () {
                         element.removeClass( 'dragging' );
