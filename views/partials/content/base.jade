@@ -1,9 +1,0 @@
-.row
-    div.col-md-8
-        h3( ng-if="$state.is( 'content.summary' )" ) Contenido
-        h3( ng-if="$state.is( 'content.categoryCreate' )" ) Crear Categoría
-    div.col-md-4.view-controls
-        a.btn.btn-success.pull-right( ui-sref="content.categoryCreate" ng-if="$state.is( 'content.summary' )" ) Crear Categoría
-        button.btn.btn-success.pull-right( ng-click="createCategory()" ng-if="$state.is( 'content.categoryCreate' )" ) Crear
-        a.btn.btn-default.pull-right( ui-sref="content.summary" ng-if="$state.is( 'content.categoryCreate' )" ) Atras
-div( ui-view="content-main" )

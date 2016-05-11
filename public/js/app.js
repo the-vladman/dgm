@@ -5,13 +5,14 @@ define( function ( require ) {
     require( 'admin/AdminModule' );
     require( 'categories/CategoriesModule' );
     require( 'common/CommonModule' );
-    require( 'content/ContentModule' );
     require( 'front/FrontModule' );
     require( 'landing/LandingModule' );
+    require( 'posts/PostsModule' );
     require( 'sessions/SessionsModule' );
     require( 'users/UsersModule' );
 
     var app     = angular.module( 'dgm', [
+            'angular-medium-editor',
             'events',
             'ngCookies',
             'ngResource',
@@ -19,9 +20,9 @@ define( function ( require ) {
             'AdminModule',
             'CategoriesModule',
             'CommonModule',
-            'ContentModule',
             'FrontModule',
             'LandingModule',
+            'PostsModule',
             'SessionsModule',
             'UsersModule'
         ]);

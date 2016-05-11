@@ -1,0 +1,13 @@
+.file-uploader
+    img( ng-src="{{ img.path }}" )
+    .uploader-legend
+        .icons-container
+            i.glyphicon.glyphicon-cloud-upload
+            i.glyphicon.glyphicon-refresh
+            i.glyphicon.glyphicon-ok
+            i.glyphicon.glyphicon-remove
+        h2 Drag &amp; Drop
+        p 
+            | your files, or 
+            span( ng-click="browse($event)" ) browse.
+        input( type="file" class="uploader" name="{{ fileName }}" )

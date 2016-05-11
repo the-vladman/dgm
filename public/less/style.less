@@ -29,6 +29,46 @@ h4                                          { margin-top: 0; margin-bottom: 20px
 a                                           { color: #0c9; }
 a:hover                                     { color: #05aa81; }
 strong                                      { font-weight: 400; }
+.post .title                                { font-size: 36px; line-height: 39px; font-weight: 300; color: #333; }
+.post .author                               { font-size: 12px; font-style: italic; font-weight: 300; color: #595959; }
+.post .content h2                           { font-size: 24px; font-weight: 300; line-height: 33px; color: #333; margin-bottom: 20px; }
+.post .content li,
+.post .content p                            { font-size: 16px; line-height: 26px; font-weight: 300; color: #595959; margin-bottom: 20px; }
+
+/********************************
+    File Uploader Styles
+********************************/
+.file-uploader                              { height: 100%; margin: 0 auto; border: 2px dashed rgba(0,0,0,0.2); border-radius: 8px; position: relative; }
+.file-uploader img                          { width: 100%; height: 100%; position: absolute; left: 0; top: 0; }
+.cover-photo-upload                         { display: block; height: 235px; margin-top: 20px; }
+.file-uploader .uploader-legend             { width: 300px; height: 180px; margin: 25px auto 0; position: relative; z-index: 100; }
+.uploaded .file-uploader .uploader-legend   { background-color: rgba(0,0,0,0.2); border-radius: 5px; }
+.file-uploader .icons-container             { width: 82px; height: 84px; margin: 0 auto; overflow: hidden; position: relative; }
+.file-uploader .icons-container .glyphicon  { position: absolute; left: 50%; top: 0; transform: translateX(-50%); }
+.file-uploader .glyphicon-cloud-upload      { font-size: 80px; color: #ccc; }
+.file-uploader h2                           { text-align: center; margin-top: 10px; font-size: 40px; color: #ccc; }
+.file-uploader p                            { text-align: center; font-size: 18px; color: #aaa; }
+.file-uploader p > span                     { color: #999; text-decoration: underline; cursor: pointer; }
+.uploaded .file-uploader p                  { color: #ccc; }
+.uploaded .file-uploader p > span           { color: #fff; }
+.file-uploader input                        { display: none; }
+.dragging .file-uploader,
+.uploading .file-uploader                   { background-color: rgba(99,169,261,0.07); border-color: #63a9dd; }
+.file-uploader .icons-container .glyphicon-refresh              { left: 30px; }
+.file-uploader .icons-container .glyphicon-ok,
+.file-uploader .icons-container .glyphicon-remove               { left: 41px; }
+.file-uploader .icons-container .glyphicon-refresh,
+.file-uploader .icons-container .glyphicon-ok,
+.file-uploader .icons-container .glyphicon-remove,
+.dragging .file-uploader .icons-container .glyphicon-refresh,
+.dragging .file-uploader .icons-container .glyphicon-ok         { display: inline-block; font-size: 25px; color: #6fc67f; top: 90px; transition: all 1s; }
+.dragging .file-uploader .icons-container .glyphicon-remove     { display: none; }
+.file-uploader .icons-container .glyphicon-refresh              { animation: spin 1s linear infinite; }
+.file-uploader .icons-container .glyphicon-remove               { color: #de6262; }
+.uploading .file-uploader .icons-container .glyphicon-refresh   { top: 30px; }
+.uploaded .file-uploader .icons-container .glyphicon-refresh    { top: -35px; }
+.uploaded .file-uploader .icons-container .glyphicon-ok         { top: 30px; }
+.failed .file-uploader .icons-container .glyphicon-remove       { top: 30px; }
 
 /********************************
     Badges Styles
@@ -133,6 +173,10 @@ section                                     { margin-bottom: 30px; }
 /********************************
     Posts Styles
 ********************************/
+.admin .post                                { padding: 20px; background-color: #fff; }
+.post .title                                { margin-top: 0; margin-bottom: 30px; }
+.post .content ul                           { margin-bottom: 20px; padding-left: 15px; list-style: disc; }
+.post .content li                           { margin-bottom: 15px; }
 .posts-row                                  { margin-bottom: 30px; }
 .posts-row:last-child                       { margin-bottom: 0; }
 .post-item .inner                           { border-radius: 4px; position: relative; }
@@ -161,6 +205,19 @@ section                                     { margin-bottom: 30px; }
 .post-item .inner .tag-icon.tag-infrastructure          { background-image: url(../img/ic-infrastructure.png); }
 
 /********************************
+    Admin Styles
+********************************/
+span.post-label,
+span.user-label                             { padding: 6px 8px; background-color: #eee; font-size: 10px; font-weight: 400; line-height: 1; text-transform: uppercase; color: rgba(255,255,255,0.8); }
+span.label-archived,
+span.label-super                            { background-color: #242628; }
+span.label-admin                            { background-color: #5ba4e5; }
+span.label-published,
+span.label-editor                           { background-color: #5be5aa; }
+span.label-draft,
+span.label-author                           { background-color: #e55b5b; }
+
+/********************************
     Admin Login Styles
 ********************************/
 #login-form                                 { margin-top: 200px; padding: 30px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 0 1px rgba(0,0,0,0.15), 0 1px 15px rgba(0,0,0,0.3); }
@@ -174,7 +231,7 @@ section                                     { margin-bottom: 30px; }
 .admin .form-group                          { margin-bottom: 20px; }
 .admin .form-group > label                  { margin-bottom: 15px; }
 .admin .search-form                         { margin-bottom: 20px; position: relative; }
-.admin .search-form .glyphicon              { position: absolute; right: 15px; top: 11px; color: #ccc; }
+.admin .search-form .glyphicon              { position: absolute; right: 15px; top: 13px; color: #ccc; }
 
 /********************************
     Admin Tables Styles
@@ -202,11 +259,6 @@ section                                     { margin-bottom: 30px; }
 /********************************
     Admin Users Styles
 ********************************/
-span.user-label                             { padding: 6px 8px; background-color: #eee; font-size: 10px; font-weight: 400; line-height: 1; text-transform: uppercase; color: rgba(255,255,255,0.8); }
-span.label-super                            { background-color: #242628; }
-span.label-admin                            { background-color: #5ba4e5; }
-span.label-editor                           { background-color: #5be5aa; }
-span.label-author                           { background-color: #e55b5b; }
 .profile-container                          { margin-top: 20px; background-color: #fff; }
 .profile-container .user-avatar             { width: 20%; position: relative; left: 30px; top: -100px; }
 .profile-container .password-form           { margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.1); }
