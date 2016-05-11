@@ -63,36 +63,43 @@ router.get( '/:id', function ( req, res, next ) {
 });
 
 router.post( '/', Session.validate, function ( req, res, next ) {
-    if ( req.session.access_level == 3 && req.body.status != 'DRAFT' ) {
-        var err     = new Error( 'Permission denied' );
-        err.status  = 401;
-        next( err );
+    if ( req.uploading ) {
+        var file    = req.body.files[ Object.keys( req.body.files )[0] ][0];
+        delete file.headers;
+
+        res.json( file );
     } else {
-        Post.create({
-            author          : req.body.author,
-            category        : req.body.category,
-            content         : req.body.content,
-            created_by      : req.body.created_by,
-            creation_date   : req.body.creation_date,
-            datasets        : req.body.datasets,
-            edited_by       : req.body.edited_by,
-            edition_date    : req.body.edition_date,
-            name            : req.body.name,
-            published_by    : req.body.published_by,
-            published_date  : req.body.published_date,
-            section         : req.body.section,
-            slug            : req.body.slug,
-            status          : req.body.status,
-            tag             : req.body.tag
-        }, function ( err, post ) {
-            if ( err || !post ) {
-                err         = new Error( 'Invalid post data' );
-                err.status  = 403;
-                next( err );
-            } else {
-                res.json( post );
-            }
-        });
+        if ( req.session.access_level == 3 && req.body.status != 'DRAFT' ) {
+            var err     = new Error( 'Permission denied' );
+            err.status  = 401;
+            next( err );
+        } else {
+            Post.create({
+                author          : req.body.author,
+                category        : req.body.category,
+                content         : req.body.content,
+                created_by      : req.body.created_by,
+                creation_date   : req.body.creation_date,
+                datasets        : req.body.datasets,
+                edited_by       : req.body.edited_by,
+                edition_date    : req.body.edition_date,
+                name            : req.body.name,
+                published_by    : req.body.published_by,
+                published_date  : req.body.published_date,
+                section         : req.body.section,
+                slug            : req.body.slug,
+                status          : req.body.status,
+                tag             : req.body.tag
+            }, function ( err, post ) {
+                if ( err || !post ) {
+                    err         = new Error( 'Invalid post data' );
+                    err.status  = 403;
+                    next( err );
+                } else {
+                    res.json( post );
+                }
+            });
+        }
     }
 });
 
