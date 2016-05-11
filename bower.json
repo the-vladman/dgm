@@ -28,6 +28,11 @@
         "ui-router"             : "0.2.18"
     },
     "overrides"     : {
+        "angular"               : {
+            "dependencies"      : {
+                "jquery"        : "1.9.1 - 2"
+            }
+        },
         "blueimp-file-upload"   : {
             "main"  : [
                 "js/vendor/jquery.ui.widget.js",

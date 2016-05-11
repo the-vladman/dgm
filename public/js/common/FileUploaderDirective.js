@@ -9,9 +9,8 @@ define( function () {
             },
             templateUrl : 'partials/common/fileuploader.jade',
             link        : function ( scope, element ) {
-                var uploadForm          = $( element ),
-                    addHandler          = function ( e, data ) {
-                        uploadForm.removeClass( 'dragging' ).addClass( 'uploading' );
+                var addHandler          = function ( e, data ) {
+                        element.removeClass( 'dragging' ).addClass( 'uploading' );
 
                         data.formData   = {
                             session     : Session.getToken()
@@ -20,31 +19,20 @@ define( function () {
                         $rootScope.$broadcast( events.FILEUPLOADER_UPLOADING );
                     },
                     doneHandler         = function ( e, data ) {
-                        $( 'img', uploadForm ).attr( 'src', data.result.path.replace( /public\//, '' ) );
-                        uploadForm.removeClass( 'uploading' ).addClass( 'uploaded' );
+                        $( 'img', element ).attr( 'src', data.result.path.replace( /public\//, '' ) );
+                        element.removeClass( 'uploading' ).addClass( 'uploaded' );
                         $rootScope.$broadcast( events.FILEUPLOADER_DONE, data.result );
                     },
                     dragleaveHandler    = function () {
-                        uploadForm.removeClass( 'dragging' );
+                        element.removeClass( 'dragging' );
                     },
                     dragoverHandler     = function () {
-                        uploadForm.removeClass( 'uploading' ).addClass( 'dragging' );
+                        element.removeClass( 'uploading' ).addClass( 'dragging' );
                     },
                     failHandler         = function () {
-                        uploadForm.removeClass( 'uploading' ).addClass( 'failed' );
+                        element.removeClass( 'uploading' ).addClass( 'failed' );
                         $rootScope.$broadcast( events.FILEUPLOADER_ERROR );
                     };
-
-                uploadForm.fileupload({
-                    add                 : addHandler,
-                    dataType            : 'json',
-                    done                : doneHandler,
-                    dragover            : dragoverHandler,
-                    dropZone            : uploadForm,
-                    fail                : failHandler,
-                    sequentialUploads   : true,
-                    url                 : scope.config.url
-                }).on( 'dragleave', dragleaveHandler );
 
                 if ( scope.config.fileName ) {
                     scope.fileName  = scope.config.fileName;
@@ -55,8 +43,19 @@ define( function () {
                 scope.browse        = function ( e ) {
                     e.preventDefault();
 
-                    $( '.uploader', uploadForm ).click();
+                    $( '.uploader', element ).click();
                 };
+
+                element.fileupload({
+                    add                 : addHandler,
+                    dataType            : 'json',
+                    done                : doneHandler,
+                    dragover            : dragoverHandler,
+                    dropZone            : element,
+                    fail                : failHandler,
+                    sequentialUploads   : true,
+                    url                 : scope.config.url
+                }).on( 'dragleave', dragleaveHandler );
             }
         };
     };
