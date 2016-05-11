@@ -1,4 +1,5 @@
 var express     = require( 'express' ),
+    fs          = require( 'fs' ),
     path        = require( 'path' ),
     rimraf      = require( 'rimraf' ),
     config      = require( '../config/app' ),
@@ -118,10 +119,16 @@ router.post( '/', Session.validate, function ( req, res, next ) {
 });
 
 router.put( '/:id', Session.validate, function ( req, res, next ) {
-    var updated = function ( err, post ) {
-            res.json( post );
+    var cover       = false,
+        moveCover   = function ( post ) {
+            Utils.move( req.body.cover_photo, path.join( config.uploads_path, post.id ), function ( e, file ) {
+                post.cover_photo    = file;
+                post.save( updated );
+            });
         },
-        cover   = false;
+        updated     = function ( err, post ) {
+            res.json( post );
+        };
 
     Post.findById( req.params.id, function ( err, post ) {
         if ( err || !post ) {
@@ -144,10 +151,13 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
             }
 
             if ( cover ) {
-                Utils.move( req.body.cover_photo, path.join( config.uploads_path, post.id ), function ( e, file ) {
-                    post.cover_photo    = file;
-                    post.save( updated );
-                });
+                if ( post.cover_photo ) {
+                    fs.unlink( post.cover_photo.path, function () {
+                        moveCover( post );
+                    });
+                } else {
+                    moveCover( post );
+                }
             } else {
                 post.save( updated );
             }
