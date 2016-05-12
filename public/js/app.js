@@ -16,6 +16,8 @@ define( function ( require ) {
             'events',
             'ngCookies',
             'ngResource',
+            'ui.bootstrap.pagination',
+            'ui.bootstrap.tpls',
             'ui.router',
             'AdminModule',
             'CategoriesModule',
