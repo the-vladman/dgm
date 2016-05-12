@@ -18,6 +18,10 @@ nav.navbar.navbar-default.navbar-fixed-top
                     a( ui-sref="posts.list" )
                         i.icon-doc-text-inv
                         |  Contenido
+                li( ng-class="{active:$state.includes('categories')}" )
+                    a( ui-sref="categories.list" )
+                        i.icon-tags
+                        |  Categorías
                 li( ng-class="{active:$state.includes('users')}" )
                     a( ui-sref="users.list" )
                         i.icon-users

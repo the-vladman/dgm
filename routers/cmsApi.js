@@ -6,6 +6,7 @@ var express         = require( 'express' ),
     SessionHandler  = require( '../lib/session' ),
     cmsApi          = express.Router();
 
+cmsApi.use( '/categories', categories );
 cmsApi.use( '/sessions', sessions );
 cmsApi.use( '/posts', posts );
 
@@ -13,7 +14,6 @@ cmsApi.use( '/posts', posts );
 cmsApi.use( SessionHandler.validate );
 
 // Members only resources
-cmsApi.use( '/categories', categories );
 cmsApi.use( '/users', users );
 
 module.exports  = cmsApi;
