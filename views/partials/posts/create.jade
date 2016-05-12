@@ -1,5 +1,5 @@
 .row
-    .col-md-8.col-md-offset-2
+    .col-md-8
         form#post-create-form( ng-submit="create()" )
             .row
                 .col-md-4
@@ -36,8 +36,10 @@
                         .custom-select
                             select.form-control( name="created_by" ng-model="post.created_by" ng-options="author._id as author.name for author in authors track by author._id" )
                                 option( value="" ) Seleccione autor...
-        .cover-photo-upload( data-config="config" data-img="post.cover_photo" file-uploader ng-class="{uploaded: post.cover_photo}" )
+        .cover-photo-upload( data-config="configCover" data-img="post.cover_photo" file-uploader ng-class="{uploaded: post.cover_photo}" )
         .post
             h1.title( medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: { align : 'left', buttons : [ 'bold', 'italic', 'underline' ], static : true, updateOnEmptySelection : true } }" data-placeholder="Título del artículo" ng-model="post.name" )
             p.author( medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: false }" data-placeholder="Escuadron de datos" ng-model="post.author" )
             .content( medium-editor bind-options="{toolbar : { buttons : [ 'bold', 'italic', 'underline', 'anchor', 'h2', 'quote', 'orderedlist', 'unorderedlist' ] }}" data-placeholder="Contenido del artículo" ng-model="post.content" )
+    .col-md-4
+        .grid-photo-upload( data-config="configGrid" data-img="post.grid_photo" file-uploader ng-class="{uploaded: post.grid_photo}" )

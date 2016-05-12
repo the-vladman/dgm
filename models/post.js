@@ -40,6 +40,10 @@ var mongoose        = require( 'mongoose' ),
             type        : Date,
             required    : false
         },
+        grid_photo      : {
+            type        : Object,
+            required    : false
+        },
         name            : {
             type        : String,
             required    : true,
