@@ -9,12 +9,14 @@
             thead
                 tr
                     th Nombre
-                    th( width="30%" ) Sección
-                    th( width="30%" ) Tipo
+                    th( width="20%" ) Slug
+                    th( width="20%" ) Sección
+                    th( width="20%" ) Tipo
             tbody
                 tr( ng-repeat="category in categories" )
                     td 
                         a( ui-sref="categories.edit({ id : category._id })" alt="{{ category.name }}" ) {{ category.name }}
+                    td {{ category.slug }}
                     td {{ category.section.name }}
                     td
                         span( ng-if="category.type == 'SECTION'" ) Sección
