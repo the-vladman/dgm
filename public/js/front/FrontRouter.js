@@ -34,10 +34,12 @@ define( function () {
                         controller      : 'LandingDataCtrl'
                     },
                     'landing-tools'     : {
-                        templateUrl     : 'partials/front/landingTools'
+                        templateUrl     : 'partials/front/landingTools',
+                        controller      : 'LandingPostsCtrl'
                     },
                     'landing-blog'      : {
-                        templateUrl     : 'partials/front/landingBlog'
+                        templateUrl     : 'partials/front/landingBlog',
+                        controller      : 'LandingPostsCtrl'
                     },
                     'landing-subscribe' : {
                         templateUrl     : 'partials/front/landingSubscribe',

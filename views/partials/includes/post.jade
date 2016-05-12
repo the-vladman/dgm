@@ -1,0 +1,12 @@
+.inner
+    img( ng-src="{{ post.grid_photo.path }}" )
+    .overlay
+        h3: a( href="#" ) {{ post.name | limitTo:46 }}
+        p.author {{ post.author }}
+        a.read-more( href="#" )
+            | Leer más
+            .arrow-tip
+        a.tag( href="#" )
+            span( class="tag-icon tag-{{ post.tag.slug }}" )
+            span.link {{ post.tag.name }}
+        p.category {{ post.category.name }}
