@@ -18,7 +18,7 @@ define( function () {
             $scope.create();
         });
         $scope.$on( Categories.getEvent( 'CREATED' ), function () {
-            $scope.$state.go( 'content.summary' );
+            $scope.$state.go( 'categories.list' );
         });
         $scope.$watch( 'category.name', function ( name ) {
             $scope.category.slug    = $scope.category.name.replace( / /g, '-' ).toLowerCase();

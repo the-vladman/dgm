@@ -22,6 +22,15 @@ define( function () {
                         controller      : 'CategoriesListCtrl'
                     }
                 }
+            })
+            .state( 'categories.create', {
+                url         : '/create',
+                views       : {
+                    'categories-main'   : {
+                        templateUrl     : 'partials/categories/create',
+                        controller      : 'CategoriesCreateCtrl'
+                    }
+                }
             });
     };
 });
