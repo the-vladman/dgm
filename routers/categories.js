@@ -13,7 +13,7 @@ var express     = require( 'express' ),
     };
 
 router.get( '', function ( req, res, next ) {
-    var filters = [ 'section', 'type' ];
+    var filters = [ 'name', 'section', 'slug', 'type' ];
 
     Utils.paginate( Category, filters, _getRefs(), req, res, next );
 });
