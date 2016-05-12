@@ -5,6 +5,7 @@ define( function ( require ) {
     var LandingDataCtrl         = require( 'landing/LandingDataCtrl' );
     var LandingSearchCtrl       = require( 'landing/LandingSearchCtrl' );
     var LandingSubscribeCtrl    = require( 'landing/LandingSubscribeCtrl' );
+    var LandingToolsCtrl        = require( 'landing/LandingToolsCtrl' );
 
     var LandingModule           = angular.module( 'LandingModule', []);
 
@@ -15,4 +16,6 @@ define( function ( require ) {
     LandingModule.controller( 'LandingSearchCtrl', [ '$scope', LandingSearchCtrl ]);
 
     LandingModule.controller( 'LandingSubscribeCtrl', [ '$scope', LandingSubscribeCtrl ]);
+
+    LandingModule.controller( 'LandingToolsCtrl', [ '$scope', 'CategoriesService', 'PostsService', LandingToolsCtrl ]);
 });
