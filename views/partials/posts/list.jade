@@ -28,3 +28,5 @@
                         span.post-label.label-published( ng-if="post.status == 'PUBLISHED'" ) Publicado
                         span.post-label.label-draft( ng-if="post.status == 'DRAFT'" ) Borrador
                         span.post-label.label-archived( ng-if="post.status == 'ARCHIVED'" ) Archivado
+        p.text-center( ng-if="total > per_page" )
+            uib-pagination( max-size="10" boundary-links="true" boundary-link-numbers="true" rotate="true" total-items="total" items-per-page="per_page" previous-text!="&lsaquo;" next-text!="&rsaquo;" first-text!="&laquo;" last-text!="&raquo;" ng-model="page" ng-change="query()" )
