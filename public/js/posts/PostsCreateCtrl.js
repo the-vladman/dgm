@@ -2,27 +2,31 @@
 
 define( function () {
     return function ( $scope, events, Posts, Categories, Users ) {
-        $scope.config   = {
+        $scope.configCover  = {
             fileName    : 'cover_photo',
             url         : 'cms-api/posts'
         };
-        $scope.post     = {
+        $scope.configGrid   = {
+            fileName    : 'grid_photo',
+            url         : 'cms-api/posts'
+        };
+        $scope.post         = {
             name        : '',
             section     : ''
         };
-        $scope.sections = Categories.query({
+        $scope.sections     = Categories.query({
             page        : 1,
             per_page    : 99999,
             select      : 'name',
             type        : 'SECTION'
         });
-        $scope.tags     = Categories.query({
+        $scope.tags         = Categories.query({
             page        : 1,
             per_page    : 99999,
             select      : 'name',
             type        : 'TAG'
         });
-        $scope.authors  = Users.query({
+        $scope.authors      = Users.query({
             page        : 1,
             per_page    : 9999,
             type        : {
@@ -30,7 +34,7 @@ define( function () {
             }
         });
 
-        $scope.create   = function () {
+        $scope.create       = function () {
             $scope.post.author  = $scope.post.author.replace( /<br>/g, '' );
             $scope.post.content = $scope.post.content.replace( /<br>/g, '' );
             $scope.post.name    = $scope.post.name.replace( /<br>/g, '' );

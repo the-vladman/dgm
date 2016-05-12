@@ -2,11 +2,15 @@
 
 define( function () {
     return function ( $scope, $stateParams, events, Posts, Categories, Users ) {
-        var uploading   = false;
+        var uploading       = false;
 
-        $scope.config   = {
-            fileName    : 'cover_photo',
-            url         : 'cms-api/posts'
+        $scope.configCover  = {
+            fileName        : 'cover_photo',
+            url             : 'cms-api/posts'
+        };
+        $scope.configGrid   = {
+            fileName        : 'grid_photo',
+            url             : 'cms-api/posts'
         };
         $scope.post     = Posts.get( $stateParams.id, true );
         $scope.sections = Categories.query({
