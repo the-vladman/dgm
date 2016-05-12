@@ -3,74 +3,16 @@
         .col-md-12
             h2 Blog
             .row.posts-row
-                .col-md-4.post-item
+                .col-md-4.post-item( ng-repeat="post in posts" )
                     .inner
-                        img( src="img/img-blog.png" )
+                        img( ng-src="{{ post.grid_photo.path }}" )
                         .overlay
-                            h3 
-                                a( href="#" ) Herramienta de Datos para el Cambio Climático
-                            p.author Estrategia digital nacional
-                            a.read-more( href="#" ) 
+                            h3: a( href="#" ) {{ post.name | limitTo:46 }}
+                            p.author {{ post.author }}
+                            a.read-more( href="#" )
                                 | Leer más
                                 .arrow-tip
                             a.tag( href="#" )
-                                span.tag-icon.tag-environment
-                                span.link Medio Ambiente
-                            p.category Noticia
-                .col-md-4.post-item
-                    .inner
-                        img( src="img/img-tool.png" )
-                        .overlay
-                            h3 
-                                a( href="#" ) Herramienta de Datos para el Cambio Climático
-                            p.author Estrategia digital nacional
-                            a.read-more( href="#" ) 
-                                | Leer más
-                                .arrow-tip
-                            a.tag( href="#" )
-                                span.tag-icon.tag-environment
-                                span.link Medio Ambiente
-                            p.category Noticia
-                .col-md-4.post-item
-                    .inner
-                        img( src="img/img-tool.png" )
-                        .overlay
-                            h3 
-                                a( href="#" ) Herramienta de Datos para el Cambio Climático
-                            p.author Estrategia digital nacional
-                            a.read-more( href="#" ) 
-                                | Leer más
-                                .arrow-tip
-                            a.tag( href="#" )
-                                span.tag-icon.tag-environment
-                                span.link Medio Ambiente
-                            p.category Noticia
-            .row.posts-row
-                .col-md-8.post-item.featured
-                    .inner
-                        img( src="img/img-tool-featured.png" )
-                        .overlay
-                            h3 
-                                a( href="#" ) Datos abiertos para prevenir accidentes viales: Torreón
-                            p.author Ing. Guillermo Valdés Lozano, IMPLAN Torreón
-                            a.read-more( href="#" ) 
-                                | Leer más
-                                .arrow-tip
-                            a.tag( href="#" )
-                                span.tag-icon.tag-infrastructure
-                                span.link Infraestructura
-                            p.category Caso de uso
-                .col-md-4.post-item
-                    .inner
-                        img( src="img/img-tool.png" )
-                        .overlay
-                            h3 
-                                a( href="#" ) Herramienta de Datos para el Cambio Climático
-                            p.author Estrategia digital nacional
-                            a.read-more( href="#" ) 
-                                | Leer más
-                                .arrow-tip
-                            a.tag( href="#" )
-                                span.tag-icon.tag-environment
-                                span.link Medio Ambiente
-                            p.category Noticia
+                                span( class="tag-icon tag-{{ post.tag.slug }}" )
+                                span.link {{ post.tag.name }}
+                            p.category {{ post.category.name }}

@@ -1,11 +1,14 @@
 'use strict';
 
 define( function ( require ) {
+    var LandingBlogCtrl         = require( 'landing/LandingBlogCtrl' );
     var LandingDataCtrl         = require( 'landing/LandingDataCtrl' );
     var LandingSearchCtrl       = require( 'landing/LandingSearchCtrl' );
     var LandingSubscribeCtrl    = require( 'landing/LandingSubscribeCtrl' );
 
     var LandingModule           = angular.module( 'LandingModule', []);
+
+    LandingModule.controller( 'LandingBlogCtrl', [ '$scope', 'CategoriesService', 'PostsService', LandingBlogCtrl ]);
 
     LandingModule.controller( 'LandingDataCtrl', [ '$scope', 'CkanService', LandingDataCtrl ]);
 

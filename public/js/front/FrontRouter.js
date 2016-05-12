@@ -37,7 +37,8 @@ define( function () {
                         templateUrl     : 'partials/front/landingTools'
                     },
                     'landing-blog'      : {
-                        templateUrl     : 'partials/front/landingBlog'
+                        templateUrl     : 'partials/front/landingBlog',
+                        controller      : 'LandingBlogCtrl'
                     },
                     'landing-subscribe' : {
                         templateUrl     : 'partials/front/landingSubscribe',
