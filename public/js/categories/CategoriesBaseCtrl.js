@@ -2,6 +2,9 @@
 
 define( function () {
     return function ( $scope ) {
+        $scope.remove   = function () {
+            $scope.$broadcast( 'REMOVE_CATEGORY' );
+        };
         $scope.save     = function () {
             $scope.$broadcast( 'CREATE_CATEGORY' );
         };

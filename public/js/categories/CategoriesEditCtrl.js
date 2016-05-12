@@ -12,8 +12,14 @@ define( function () {
             Categories.update( $stateParams.id, $scope.category );
         };
 
+        $scope.$on( Categories.getEvent( 'DELETED' ), function () {
+            $scope.$state.go( 'categories.list' );
+        });
         $scope.$on( Categories.getEvent( 'UPDATED' ), function () {
             $scope.$state.go( 'categories.list' );
+        });
+        $scope.$on( 'REMOVE_CATEGORY', function () {
+            Categories.remove( $stateParams.id );
         });
         $scope.$on( 'UPDATE_CATEGORY', function () {
             $scope.create();
