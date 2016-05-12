@@ -67,6 +67,15 @@ router.get( '/:id', function ( req, res, next ) {
 });
 
 router.post( '/', Session.validate, function ( req, res, next ) {
+    var cover       = false,
+        grid        = false,
+        moveFile    = function ( field, post ) {
+            Utils.move( req.body[field], path.join( config.uploads_path, post.id ), function ( e, file ) {
+                post[field] = file;
+                post.save();
+            });
+        };
+
     if ( req.uploading ) {
         Utils.upload( req, req.body.file, path.join( config.uploads_tmp_path ), function ( e, file ) {
             if ( e ) {
@@ -103,15 +112,17 @@ router.post( '/', Session.validate, function ( req, res, next ) {
                     err.status  = 403;
                     next( err );
                 } else {
-                    if ( req.body.cover_photo ) {
-                        Utils.move( req.body.cover_photo, path.join( config.uploads_path, post.id ), function ( e, file ) {
-                            post.cover_photo    = file;
-                            post.save();
-                            res.json( post );
-                        });
-                    } else {
-                        res.json( post );
+                    if ( req.body.cover_photo || req.body.grid_photo ) {
+                        if ( req.body.cover_photo ) {
+                            moveFile( 'cover_photo', post );
+                        }
+
+                        if ( req.body.grid_photo ) {
+                            moveFile( 'grid_photo', post );
+                        }
                     }
+
+                    res.json( post );
                 }
             });
         }
@@ -119,14 +130,17 @@ router.post( '/', Session.validate, function ( req, res, next ) {
 });
 
 router.put( '/:id', Session.validate, function ( req, res, next ) {
-    var cover       = false,
-        moveCover   = function ( post ) {
-            Utils.move( req.body.cover_photo, path.join( config.uploads_path, post.id ), function ( e, file ) {
-                post.cover_photo    = file;
+    var uploading   = {
+            cover_photo : false,
+            grid_photo  : false
+        },
+        moveImg         = function ( field, post ) {
+            Utils.move( req.body[field], path.join( config.uploads_path, post.id ), function ( e, file ) {
+                post[field]             = file;
                 post.save( updated );
             });
         },
-        updated     = function ( err, post ) {
+        updated         = function ( err, post ) {
             res.json( post );
         };
 
@@ -142,21 +156,35 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
                         continue;
                 }
 
-                if ( key == 'cover_photo' ) {
-                    cover   = true;
+                if ( key == 'cover_photo' || key == 'grid_photo' ) {
+                    if ( post[key] == undefined || post[key].path != req.body[key].path ) {
+                        uploading[key]  = true;
+                    }
                     continue;
                 }
 
                 post[key]   = req.body[key];
             }
 
-            if ( cover ) {
-                if ( post.cover_photo ) {
-                    fs.unlink( post.cover_photo.path, function () {
-                        moveCover( post );
-                    });
-                } else {
-                    moveCover( post );
+            if ( uploading.cover_photo || uploading.grid_photo ) {
+                if ( uploading.cover_photo ) {
+                    if ( post.cover_photo ) {
+                        fs.unlink( post.cover_photo.path, function () {
+                            moveImg( 'cover_photo', post );
+                        });
+                    } else {
+                        moveImg( 'cover_photo', post );
+                    }
+                }
+
+                if ( uploading.grid_photo ) {
+                    if ( post.grid_photo ) {
+                        fs.unlink( post.grid_photo.path, function () {
+                            moveImg( 'grid_photo', post );
+                        });
+                    } else {
+                        moveImg( 'grid_photo', post );
+                    }
                 }
             } else {
                 post.save( updated );
