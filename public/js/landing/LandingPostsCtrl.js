@@ -1,7 +1,7 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, Categories, Posts ) {
+    return function ( $scope, $element, Categories, Posts ) {
         var queryPosts  = function ( section ) {
             $scope.posts    = Posts.query({
                 expanded    : true,
@@ -16,7 +16,7 @@ define( function () {
             page        : 1,
             per_page    : 1,
             select      : 'name',
-            slug        : 'herramientas',
+            slug        : $element.data( 'section' ),
             type        : 'SECTION'
         }).$promise.then( function ( data ) {
             if ( data.length == 1 ) {

@@ -35,11 +35,11 @@ define( function () {
                     },
                     'landing-tools'     : {
                         templateUrl     : 'partials/front/landingTools',
-                        controller      : 'LandingToolsCtrl'
+                        controller      : 'LandingPostsCtrl'
                     },
                     'landing-blog'      : {
                         templateUrl     : 'partials/front/landingBlog',
-                        controller      : 'LandingBlogCtrl'
+                        controller      : 'LandingPostsCtrl'
                     },
                     'landing-subscribe' : {
                         templateUrl     : 'partials/front/landingSubscribe',
