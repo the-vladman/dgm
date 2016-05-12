@@ -31,6 +31,15 @@ define( function () {
                         controller      : 'CategoriesCreateCtrl'
                     }
                 }
+            })
+            .state( 'categories.edit', {
+                url         : '/edit/:id',
+                views       : {
+                    'categories-main'   : {
+                        templateUrl     : 'partials/categories/create',
+                        controller      : 'CategoriesEditCtrl'
+                    }
+                }
             });
     };
 });
