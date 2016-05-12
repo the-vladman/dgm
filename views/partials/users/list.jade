@@ -25,3 +25,5 @@
                         span.user-label.label-admin( ng-if="user.type == 1" ) Administrador
                         span.user-label.label-editor( ng-if="user.type == 2" ) Editor
                         span.user-label.label-author( ng-if="user.type == 3" ) Autor
+        p.text-center
+            uib-pagination( max-size="10" boundary-links="true" boundary-link-numbers="true" rotate="true" total-items="total" items-per-page="per_page" previous-text!="&lsaquo;" next-text!="&rsaquo;" first-text!="&laquo;" last-text!="&raquo;" ng-model="page" ng-change="query()" )
