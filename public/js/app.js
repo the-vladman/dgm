@@ -16,6 +16,7 @@ define( function ( require ) {
             'events',
             'ngCookies',
             'ngResource',
+            'ngSanitize',
             'ui.bootstrap.pagination',
             'ui.bootstrap.tpls',
             'ui.router',
