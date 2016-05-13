@@ -1,9 +1,9 @@
 .inner
     img( ng-src="{{ post.grid_photo.path }}" )
     .overlay
-        h3: a( href="#" ) {{ post.name | limitTo:46 }}
+        h3: a( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" ) {{ post.name | limitTo:46 }}
         p.author {{ post.author }}
-        a.read-more( href="#" )
+        a.read-more( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" )
             | Leer más
             .arrow-tip
         a.tag( href="#" )
