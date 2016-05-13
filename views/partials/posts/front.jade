@@ -1,0 +1,10 @@
+.container-fluid
+    .row
+        .col-md-12
+            img( ng-src="{{ post.cover_photo.path }}" )
+            .row
+                .col-md-8.col-md-offset-2
+                    .post
+                        h1.title {{ post.name }}
+                        p.author {{ post.author }}
+                        .content( ng-bind-html="content" )
