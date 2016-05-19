@@ -19,8 +19,9 @@ define( function () {
             slug        : $element.data( 'section' ),
             type        : 'SECTION'
         }).$promise.then( function ( data ) {
+            $scope.section_id   = data[0]._id;
             if ( data.length == 1 ) {
-                queryPosts( data[0]._id );
+                queryPosts( $scope.section_id );
             }
         });
     };
