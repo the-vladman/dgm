@@ -46,6 +46,15 @@ define( function () {
                         controller      : 'LandingSubscribeCtrl'
                     }
                 }
+            })
+            .state( 'front.post', {
+                url     : '/:section/:category/:tag/:post',
+                views   : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/posts/front',
+                        controller      : 'PostsFrontCtrl'
+                    }
+                }
             });
     };
 });

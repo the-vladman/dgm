@@ -1,5 +1,6 @@
 var express     = require( 'express' ),
     fs          = require( 'fs' ),
+    mongoose    = require( 'mongoose' ),
     path        = require( 'path' ),
     rimraf      = require( 'rimraf' ),
     config      = require( '../config/app' ),
@@ -43,7 +44,8 @@ router.get( '', function ( req, res, next ) {
 });
 
 router.get( '/:id', function ( req, res, next ) {
-    var cursor      = Post.findById( req.params.id ),
+    var query       = ( mongoose.Types.ObjectId.isValid( req.params.id ) ) ? { _id : mongoose.Types.ObjectId( req.params.id ) } : { slug : req.params.id };
+        cursor      = Post.findOne( query ),
         callback    = function ( err, post ) {
             if ( err || !post ) {
                 err         = new Error( 'Invalid post id' );
