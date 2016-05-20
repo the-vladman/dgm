@@ -7,6 +7,7 @@ define( function ( require ) {
     var PostsFrontCtrl      = require( 'posts/PostsFrontCtrl' );
     var PostsListCtrl       = require( 'posts/PostsListCtrl' );
     var PostsRouter         = require( 'posts/PostsRouter' );
+    var PostsSectionCtrl    = require( 'posts/PostsSectionCtrl' );
     var PostsService        = require( 'posts/PostsService' );
 
     var PostsModule         = angular.module( 'PostsModule', [
@@ -24,6 +25,8 @@ define( function ( require ) {
     PostsModule.controller( 'PostsFrontCtrl', [ '$scope', '$stateParams', '$sce', 'PostsService', PostsFrontCtrl ]);
 
     PostsModule.controller( 'PostsListCtrl', [ '$scope', 'PostsService', PostsListCtrl ]);
+
+    PostsModule.controller( 'PostsSectionCtrl', [ '$scope', '$stateParams', 'PostsService', PostsSectionCtrl ]);
 
     PostsModule.factory( 'PostsService', [ 'BaseService', PostsService ]);
 });

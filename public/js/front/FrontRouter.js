@@ -55,6 +55,18 @@ define( function () {
                         controller      : 'PostsFrontCtrl'
                     }
                 }
+            })
+            .state( 'front.section', {
+                params  : {
+                    section_id  : null
+                },
+                url     : '/:section',
+                views   : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/posts/section',
+                        controller      : 'PostsSectionCtrl'
+                    }
+                }
             });
     };
 });
