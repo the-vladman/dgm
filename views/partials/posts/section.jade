@@ -4,10 +4,10 @@
             h2 {{ section }}
             .row
                 .col-md-8
-                    form.search-form.colored.form-inline( ng-submit="search()" )
-                        input.form-control( type="text" name="keyword" placeholder="Ej. Atlas de complejidad económica" ng-model="keyword" )
+                    form.search-form.colored.form-inline( ng-submit="query()" )
+                        input.form-control( type="text" name="keyword" placeholder="Ej. Atlas de complejidad económica" ng-model="search.keyword" )
                         div.custom-select
-                            select.form-control( name="category" ng-model="category" ng-options="tag._id as tag.name for tag in tags track by tag._id" )
+                            select.form-control( name="tag" ng-model="search.tag" ng-options="tag._id as tag.name for tag in tags track by tag._id" )
                                 option( value="" ) Todas las categorias
                         button.btn.btn-primary( type="submit" ) Buscar
             .row.posts-row
