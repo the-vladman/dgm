@@ -48,7 +48,7 @@ define( function () {
                 }
             })
             .state( 'front.post', {
-                url     : '/:section/:category/:tag/:post',
+                url     : '/{section:herramientas|blog}/:category/:tag/:post',
                 views   : {
                     'front-container'   : {
                         templateUrl     : 'partials/posts/front',
@@ -60,7 +60,7 @@ define( function () {
                 params  : {
                     section_id  : null
                 },
-                url     : '/:section',
+                url     : '/{section:herramientas|blog}',
                 views   : {
                     'front-container'   : {
                         templateUrl     : 'partials/posts/section',
