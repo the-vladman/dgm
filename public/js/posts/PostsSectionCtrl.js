@@ -3,7 +3,7 @@
 define( function () {
     return function ( $scope, $stateParams, Posts, Categories ) {
         $scope.page     = 1;
-        $scope.per_page = 10;
+        $scope.per_page = 12;
         $scope.search   = {};
         $scope.section  = $stateParams.section;
         $scope.tags     = Categories.query({

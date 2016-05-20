@@ -1,6 +1,6 @@
 .container-fluid
     .row
-        .col-md-12
+        .col-md-12.section-page
             h2 {{ section }}
             .row
                 .col-md-8
@@ -13,3 +13,6 @@
             .row.posts-row
                 .col-md-4.post-item( ng-repeat="post in posts" )
                     include ../includes/post.jade
+                .col-md-12
+            p.text-center
+                uib-pagination( max-size="10" boundary-links="true" boundary-link-numbers="true" rotate="true" total-items="total" items-per-page="per_page" previous-text!="&lsaquo;" next-text!="&rsaquo;" first-text!="&laquo;" last-text!="&raquo;" ng-model="page" ng-change="query()" )
