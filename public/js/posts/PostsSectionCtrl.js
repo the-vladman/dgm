@@ -14,6 +14,11 @@ define( function () {
             });
         };
         $scope.section  = $stateParams.section;
+        $scope.tags     = Categories.query({
+            page        : 1,
+            per_page    : 9999,
+            type        : 'TAG'
+        });
 
         if ( $stateParams.section_id ) {
             $scope.query();

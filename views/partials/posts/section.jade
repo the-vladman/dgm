@@ -2,6 +2,14 @@
     .row
         .col-md-12
             h2 {{ section }}
+            .row
+                .col-md-8
+                    form.search-form.colored.form-inline( ng-submit="search()" )
+                        input.form-control( type="text" name="keyword" placeholder="Ej. Atlas de complejidad económica" ng-model="keyword" )
+                        div.custom-select
+                            select.form-control( name="category" ng-model="category" ng-options="tag._id as tag.name for tag in tags track by tag._id" )
+                                option( value="" ) Todas las categorias
+                        button.btn.btn-primary( type="submit" ) Buscar
             .row.posts-row
                 .col-md-4.post-item( ng-repeat="post in posts" )
                     include ../includes/post.jade
