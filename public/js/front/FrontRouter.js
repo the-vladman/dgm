@@ -48,11 +48,23 @@ define( function () {
                 }
             })
             .state( 'front.post', {
-                url     : '/:section/:category/:tag/:post',
+                url     : '/{section:herramientas|blog}/:category/:tag/:post',
                 views   : {
                     'front-container'   : {
                         templateUrl     : 'partials/posts/front',
                         controller      : 'PostsFrontCtrl'
+                    }
+                }
+            })
+            .state( 'front.section', {
+                params  : {
+                    section_id  : null
+                },
+                url     : '/{section:herramientas|blog}',
+                views   : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/posts/section',
+                        controller      : 'PostsSectionCtrl'
                     }
                 }
             });

@@ -5,7 +5,7 @@
             p Más de 2,000 bases de datos, de 11 categorías y de 300 instituciones
             .row
                 .col-md-6.col-md-offset-3
-                    form.data-form.form-inline( ng-submit="search()" )
+                    form.search-form.form-inline( ng-submit="search()" )
                         input.form-control( type="text" name="keyword" placeholder="Ej. Licitaciones Petroleras" ng-model="keyword" )
                         div.custom-select
                             select.form-control( name="category" ng-model="category" )

@@ -38,7 +38,7 @@ var express     = require( 'express' ),
     };
 
 router.get( '', function ( req, res, next ) {
-    var filters = [ 'author', 'category', 'created_by', 'creation_date', 'edited_by', 'edition_date', 'published_by', 'published_date', 'section', 'status', 'tag' ];
+    var filters = [ 'author', 'category', 'created_by', 'creation_date', 'edited_by', 'edition_date', 'name', 'published_by', 'published_date', 'section', 'status', 'tag' ];
 
     Utils.paginate( Post, filters, _getRefs(), req, res, next );
 });
