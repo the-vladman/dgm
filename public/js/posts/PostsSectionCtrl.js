@@ -1,7 +1,7 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, $stateParams, Posts ) {
+    return function ( $scope, $stateParams, Posts, Categories ) {
         $scope.page     = 1;
         $scope.per_page = 10;
         $scope.query    = function () {
@@ -15,6 +15,19 @@ define( function () {
         };
         $scope.section  = $stateParams.section;
 
-        $scope.query();
+        if ( $stateParams.section_id ) {
+            $scope.query();
+        } else {
+            Categories.query({
+                page        : 1,
+                per_page    : 1,
+                select      : 'name',
+                slug        : $scope.section,
+                type        : 'SECTION'
+            }).$promise.then( function ( data ) {
+                $stateParams.section_id     = data[0]._id;
+                $scope.query();
+            });
+        }
     };
 });

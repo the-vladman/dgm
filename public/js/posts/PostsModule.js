@@ -26,7 +26,7 @@ define( function ( require ) {
 
     PostsModule.controller( 'PostsListCtrl', [ '$scope', 'PostsService', PostsListCtrl ]);
 
-    PostsModule.controller( 'PostsSectionCtrl', [ '$scope', '$stateParams', 'PostsService', PostsSectionCtrl ]);
+    PostsModule.controller( 'PostsSectionCtrl', [ '$scope', '$stateParams', 'PostsService', 'CategoriesService', PostsSectionCtrl ]);
 
     PostsModule.factory( 'PostsService', [ 'BaseService', PostsService ]);
 });
