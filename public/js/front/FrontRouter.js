@@ -58,9 +58,10 @@ define( function () {
             })
             .state( 'front.section', {
                 params  : {
+                    category_id : null,
                     section_id  : null
                 },
-                url     : '/{section:herramientas|blog}',
+                url     : '/{section:herramientas|blog}?category',
                 views   : {
                     'front-container'   : {
                         templateUrl     : 'partials/posts/section',
