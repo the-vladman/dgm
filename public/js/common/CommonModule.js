@@ -3,10 +3,13 @@
 define( function ( require ) {
     var BaseService             = require( 'common/BaseService' );
     var CkanService             = require( 'common/CkanService' );
+    var BreadcrumbDirective     = require( 'common/BreadcrumbDirective' );
     var FileUploaderDirective   = require( 'common/FileUploaderDirective' );
     var NoSpaceFilter           = require( 'common/NoSpaceFilter' );
 
     var CommonModule            = angular.module( 'CommonModule', []);
+
+    CommonModule.directive( 'breadcrumb', [ '$location', 'events', BreadcrumbDirective ]);
 
     CommonModule.directive( 'fileUploader', [ '$rootScope', 'events', 'SessionsService', FileUploaderDirective ] );
 

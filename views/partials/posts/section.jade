@@ -1,3 +1,16 @@
+.breadcrumb-container
+    .container-fluid
+        .row
+            .col-md-7
+                breadcrumb
+            .col-md-5
+                ul.categories-menu
+                    li( ng-class="{'active':category_id == undefined}" )
+                        a( ui-sref="front.section({ section : section, category : null, category_id : null, section_id : section_id })" ) 
+                            span( ng-if="section == 'blog'" ) Todas las historias
+                            span( ng-if="section == 'herramientas'" ) Todas las herramientas
+                    li( ng-repeat="category in categories" ng-class="{'active':category_id == category._id}" )
+                        a( ui-sref="front.section({ section : section, category : category.slug, category_id : category._id, section_id : section_id })" ) {{ category.name }}
 .container-fluid
     .row
         .col-md-12.section-page
