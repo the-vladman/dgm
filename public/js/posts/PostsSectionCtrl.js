@@ -1,7 +1,7 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, $stateParams, Posts, Categories ) {
+    return function ( $scope, $location, $stateParams, Posts, Categories ) {
         $scope.page     = 1;
         $scope.per_page = 12;
         $scope.search   = {};
@@ -29,6 +29,14 @@ define( function () {
                 status      : 'PUBLISHED',
                 tag         : $scope.search.tag
             });
+
+            if ( $scope.search.tag ) {
+                for ( var i = 0; i < $scope.tags.length; i++ ) {
+                    if ( $scope.tags[i]._id == $scope.search.tag ) {
+                        $location.search( 'tag', $scope.tags[i].slug );
+                    }
+                }
+            }
         };
 
         if ( $stateParams.section_id ) {
