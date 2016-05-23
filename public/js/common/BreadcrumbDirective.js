@@ -1,7 +1,7 @@
 'use strict';
 
 define( function () {
-    return function ( $rootScope, $location ) {
+    return function ( $location, events ) {
         return {
             restrict    : 'E',
             templateUrl : 'partials/common/breadcrumb',
@@ -29,6 +29,34 @@ define( function () {
                         url     : query.category.replace( new RegExp( '-', 'g' ), ' ' )
                     });
                 }
+                if ( query && query.tag ) {
+                    var params  = {
+                        section : sections[0],
+                        tag     : query.tag
+                    };
+
+                    if ( query.category ) {
+                        params.category = query.category
+                    }
+
+                    scope.crumbs.push({
+                        params  : params,
+                        sref    : 'front.section',
+                        url     : query.tag.replace( new RegExp( '-', 'g' ), ' ' )
+                    });
+                }
+
+                scope.$on( events.POSTS_RETRIEVED, function ( e, post ) {
+                    scope.crumbs.push({
+                        params  : {
+                            category    : post.category.name,
+                            section     : post.section.name,
+                            tag         : post.tag.name
+                        },
+                        sref    : 'front.post',
+                        url     : post.name
+                    });
+                });
             }
         };
     };

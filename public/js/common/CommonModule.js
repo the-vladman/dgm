@@ -9,7 +9,7 @@ define( function ( require ) {
 
     var CommonModule            = angular.module( 'CommonModule', []);
 
-    CommonModule.directive( 'breadcrumb', [ '$rootScope', '$location', BreadcrumbDirective ]);
+    CommonModule.directive( 'breadcrumb', [ '$location', 'events', BreadcrumbDirective ]);
 
     CommonModule.directive( 'fileUploader', [ '$rootScope', 'events', 'SessionsService', FileUploaderDirective ] );
 

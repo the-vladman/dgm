@@ -48,7 +48,7 @@ define( function () {
                 }
             })
             .state( 'front.post', {
-                url     : '/{section:herramientas|blog}/:category/:tag/:post',
+                url     : '/{section:herramientas|blog}/:post?category&tag',
                 views   : {
                     'front-container'   : {
                         templateUrl     : 'partials/posts/front',
