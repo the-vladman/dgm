@@ -63,5 +63,16 @@ define( function () {
                 });
             }
         }
+        if ( $stateParams.tag ) {
+            Categories.query({
+                per_page    : 1,
+                page        : 1,
+                slug        : $stateParams.tag,
+                type        : 'TAG'
+            }).$promise.then( function ( tags ) {
+                $scope.search.tag   = tags[0];
+                $scope.query();
+            });
+        }
     };
 });

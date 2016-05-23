@@ -61,7 +61,7 @@ define( function () {
                     category_id : null,
                     section_id  : null
                 },
-                url     : '/{section:herramientas|blog}?category',
+                url     : '/{section:herramientas|blog}?category&tag',
                 views   : {
                     'front-container'   : {
                         templateUrl     : 'partials/posts/section',
