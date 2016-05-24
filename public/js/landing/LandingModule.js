@@ -12,7 +12,7 @@ define( function ( require ) {
 
     LandingModule.controller( 'LandingPostsCtrl', [ '$scope', '$element', 'CategoriesService', 'PostsService', LandingPostsCtrl ]);
 
-    LandingModule.controller( 'LandingSearchCtrl', [ '$scope', LandingSearchCtrl ]);
+    LandingModule.controller( 'LandingSearchCtrl', [ '$scope', 'CategoriesService', LandingSearchCtrl ]);
 
     LandingModule.controller( 'LandingSubscribeCtrl', [ '$scope', LandingSubscribeCtrl ]);
 });
