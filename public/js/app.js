@@ -18,6 +18,7 @@ define( function ( require ) {
             'ngResource',
             'ngSanitize',
             'ui.bootstrap.pagination',
+            'ui.bootstrap.tooltip',
             'ui.bootstrap.tpls',
             'ui.router',
             'AdminModule',
