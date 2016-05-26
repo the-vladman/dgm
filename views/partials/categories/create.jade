@@ -20,4 +20,7 @@
                 .custom-select
                     select.form-control( name="section" ng-model="category.section" ng-options="section._id as section.name for section in sections track by section._id" )
                         option( value="" ) Seleccionar sección...
+            .form-group( ng-if="category.type == 'TAG'" )
+                label( for="description" ) Descripción
+                textarea.form-control( name="description" placeholder="Descripción" rows="5" ng-model="category.description" )
         .cover-photo-upload.category( data-config="configCover" data-img="category.cover_photo" file-uploader ng-class="{uploaded: category.cover_photo}" ng-if="category.type == 'TAG'" )
