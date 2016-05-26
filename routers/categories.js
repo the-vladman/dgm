@@ -71,10 +71,11 @@ router.post( '/', Session.validate, function ( req, res, next ) {
             });
         } else {
             Category.create({
-                name    : req.body.name,
-                section : req.body.section,
-                slug    : req.body.slug,
-                type    : req.body.type
+                description : req.body.description,
+                name        : req.body.name,
+                section     : req.body.section,
+                slug        : req.body.slug,
+                type        : req.body.type
             }, function ( err, category ) {
                 if ( err || !category ) {
                     err         = new Error( 'Invalid category data' );

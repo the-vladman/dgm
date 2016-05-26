@@ -4,6 +4,10 @@ var mongoose        = require( 'mongoose' ),
             type        : Object,
             required    : false
         },
+        description     : {
+            type        : String,
+            required    : false
+        },
         name            : {
             type        : String,
             required    : true
