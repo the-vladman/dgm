@@ -47,6 +47,15 @@ define( function () {
                     }
                 }
             })
+            .state( 'front.category', {
+                url     : '/categoria/:category',
+                views   : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/categories/category',
+                        controller      : 'CategoriesContentCtrl'
+                    }
+                }
+            })
             .state( 'front.post', {
                 url     : '/{section:herramientas|blog}/:post?category&tag',
                 views   : {
