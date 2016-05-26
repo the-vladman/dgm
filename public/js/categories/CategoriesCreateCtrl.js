@@ -28,7 +28,9 @@ define( function () {
             $scope.$state.go( 'categories.list' );
         });
         $scope.$watch( 'category.name', function ( name ) {
-            $scope.category.slug    = $scope.category.name.replace( / /g, '-' ).toLowerCase();
+            $scope.category.slug    = slug( $scope.category.name, {
+                lower   : true
+            });
         });
     };
 });

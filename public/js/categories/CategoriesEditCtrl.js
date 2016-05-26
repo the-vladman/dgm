@@ -43,7 +43,9 @@ define( function () {
         });
         $scope.$watch( 'category.name', function ( name ) {
             if ( name ) {
-                $scope.category.slug    = $scope.category.name.replace( / /g, '-' ).toLowerCase();
+                $scope.category.slug    = slug( $scope.category.name, {
+                    lower   : true
+                });
             }
         });
     };
