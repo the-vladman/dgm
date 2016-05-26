@@ -15,6 +15,10 @@ define( function () {
             type        : 'SECTION'
         });
         $scope.create       = function () {
+            if ( !uploading ) {
+                delete $scope.category.cover_photo;
+            }
+
             Categories.update( $stateParams.id, $scope.category );
         };
 
