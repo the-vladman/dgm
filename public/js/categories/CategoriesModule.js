@@ -14,9 +14,9 @@ define( function ( require ) {
 
     CategoriesModule.controller( 'CategoriesBaseCtrl', [ '$scope', CategoriesBaseCtrl ]);
 
-    CategoriesModule.controller( 'CategoriesCreateCtrl', [ '$scope', 'CategoriesService', CategoriesCreateCtrl ]);
+    CategoriesModule.controller( 'CategoriesCreateCtrl', [ '$scope', 'events', 'CategoriesService', CategoriesCreateCtrl ]);
 
-    CategoriesModule.controller( 'CategoriesEditCtrl', [ '$scope', '$stateParams', 'CategoriesService', CategoriesEditCtrl ]);
+    CategoriesModule.controller( 'CategoriesEditCtrl', [ '$scope', '$stateParams', 'events', 'CategoriesService', CategoriesEditCtrl ]);
 
     CategoriesModule.controller( 'CategoriesListCtrl', [ '$scope', 'CategoriesService', CategoriesListCtrl ]);
 

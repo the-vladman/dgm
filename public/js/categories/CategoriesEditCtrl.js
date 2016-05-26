@@ -1,7 +1,13 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, $stateParams, Categories ) {
+    return function ( $scope, $stateParams, events, Categories ) {
+        var uploading       = false;
+
+        $scope.configCover  = {
+            fileName    : 'cover_photo',
+            url         : 'cms-api/categories'
+        };
         $scope.category     = Categories.get( $stateParams.id, true );
         $scope.sections     = Categories.query({
             page        : 1,
@@ -12,11 +18,22 @@ define( function () {
             Categories.update( $stateParams.id, $scope.category );
         };
 
+        $scope.$on( events.FILEUPLOADER_DONE, function ( e, data ) {
+            $scope.category[ Object.keys( data )[0] ]   = data[ Object.keys( data )[0] ];
+
+            uploading       = true;
+            $scope.update();
+        });
         $scope.$on( Categories.getEvent( 'DELETED' ), function () {
             $scope.$state.go( 'categories.list' );
         });
-        $scope.$on( Categories.getEvent( 'UPDATED' ), function () {
-            $scope.$state.go( 'categories.list' );
+        $scope.$on( Categories.getEvent( 'UPDATED' ), function ( e, data ) {
+            if ( !uploading ) {
+                $scope.$state.go( 'categories.list' );
+            } else {
+                $scope.category.cover_photo = data.cover_photo;
+                uploading   = false;
+            }
         });
         $scope.$on( 'REMOVE_CATEGORY', function () {
             Categories.remove( $stateParams.id );
@@ -25,7 +42,9 @@ define( function () {
             $scope.create();
         });
         $scope.$watch( 'category.name', function ( name ) {
-            $scope.category.slug    = $scope.category.name.replace( / /g, '-' ).toLowerCase();
+            if ( name ) {
+                $scope.category.slug    = $scope.category.name.replace( / /g, '-' ).toLowerCase();
+            }
         });
     };
 });

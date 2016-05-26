@@ -1,19 +1,26 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, Categories ) {
-        $scope.category = {
+    return function ( $scope, events, Categories ) {
+        $scope.configCover  = {
+            fileName    : 'cover_photo',
+            url         : 'cms-api/categories'
+        };
+        $scope.category     = {
             name        : ''
         };
-        $scope.create   = function () {
+        $scope.create       = function () {
             Categories.create( $scope.category );
         };
-        $scope.sections = Categories.query({
+        $scope.sections     = Categories.query({
             page        : 1,
             per_page    : 9999,
             type        : 'SECTION'
         });
 
+        $scope.$on( events.FILEUPLOADER_DONE, function ( e, data ) {
+            $scope.category[ Object.keys( data )[0] ]   = data[ Object.keys( data )[0] ];
+        });
         $scope.$on( 'CREATE_CATEGORY', function () {
             $scope.create();
         });
