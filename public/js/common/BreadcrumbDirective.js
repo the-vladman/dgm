@@ -57,6 +57,15 @@ define( function () {
                         url     : post.name
                     });
                 });
+                scope.$on( events.CATEGORIES_RETRIEVED, function ( e, category ) {
+                    scope.crumbs.push({
+                        params  : {
+                            category    : category.slug
+                        },
+                        sref    : 'front.category',
+                        url     : category.name
+                    });
+                });
             }
         };
     };
