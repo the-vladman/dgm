@@ -30,8 +30,8 @@ define( function () {
                         controller      : 'LandingSearchCtrl'
                     },
                     'landing-data'      : {
-                        templateUrl     : 'partials/front/landingData',
-                        controller      : 'LandingDataCtrl'
+                        templateUrl     : 'partials/data/table',
+                        controller      : 'DataLoadCtrl'
                     },
                     'landing-tools'     : {
                         templateUrl     : 'partials/front/landingTools',

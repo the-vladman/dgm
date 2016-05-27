@@ -9,7 +9,7 @@ define( function () {
         $scope.load     = function ( e, type ) {
             var el      = $( e.currentTarget );
             if ( !el.hasClass( 'active' ) ) {
-                $( '.active', '#landing-data .data-list' ).removeClass( 'active' );
+                $( '.active', '.section-data .data-list' ).removeClass( 'active' );
                 el.addClass( 'active' );
 
                 switch( type ) {

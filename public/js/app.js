@@ -5,6 +5,7 @@ define( function ( require ) {
     require( 'admin/AdminModule' );
     require( 'categories/CategoriesModule' );
     require( 'common/CommonModule' );
+    require( 'data/DataModule' );
     require( 'front/FrontModule' );
     require( 'landing/LandingModule' );
     require( 'posts/PostsModule' );
@@ -24,6 +25,7 @@ define( function ( require ) {
             'AdminModule',
             'CategoriesModule',
             'CommonModule',
+            'DataModule',
             'FrontModule',
             'LandingModule',
             'PostsModule',
