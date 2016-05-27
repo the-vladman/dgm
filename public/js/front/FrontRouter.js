@@ -47,12 +47,22 @@ define( function () {
                     }
                 }
             })
-            .state( 'front.category', {
-                url     : '/categoria/:category',
-                views   : {
+            .state( 'category', {
+                abstract    : true,
+                parent      : 'front',
+                url         : '/categoria',
+                views       : {
                     'front-container'   : {
-                        templateUrl     : 'partials/categories/category',
-                        controller      : 'CategoriesContentCtrl'
+                        templateUrl     : 'partials/categories/front'
+                    }
+                }
+            })
+            .state( 'category.details', {
+                url         : '/:category',
+                views       : {
+                    'category-header'   : {
+                        templateUrl     : 'partials/categories/header',
+                        controller      : 'CategoriesHeaderCtrl'
                     }
                 }
             })
