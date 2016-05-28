@@ -1,7 +1,8 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, $element, Categories, Posts ) {
+    return function ( $scope, $element, $stateParams, Categories, Posts ) {
+        $scope.section  = $element.data( 'section' );
         var queryPosts  = function ( section ) {
             $scope.posts    = Posts.query({
                 expanded    : true,
