@@ -63,7 +63,11 @@ define( function () {
                     'category-header'   : {
                         templateUrl     : 'partials/categories/header',
                         controller      : 'CategoriesHeaderCtrl'
-                    }
+                    },
+                    'category-data'     : {
+                        templateUrl     : 'partials/data/table',
+                        controller      : 'DataLoadCtrl'
+                    },
                 }
             })
             .state( 'front.post', {

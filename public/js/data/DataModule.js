@@ -5,5 +5,5 @@ define( function ( require ) {
 
     var DataModule      = angular.module( 'DataModule', []);
 
-    DataModule.controller( 'DataLoadCtrl', [ '$scope', 'CkanService', DataLoadCtrl ]);
+    DataModule.controller( 'DataLoadCtrl', [ '$scope', '$stateParams', 'CkanService', DataLoadCtrl ]);
 });

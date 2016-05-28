@@ -1,9 +1,11 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, CkanService ) {
+    return function ( $scope, $stateParams, CkanService ) {
         var query       = function ( order ) {
-            $scope.datasets = CkanService.datasets( '', 3, order );
+            var q       = ( $stateParams.category ) ? 'tags:' + $stateParams.category : '';
+
+            $scope.datasets = CkanService.datasets( q, 3, order );
         };
 
         $scope.load     = function ( e, type ) {
