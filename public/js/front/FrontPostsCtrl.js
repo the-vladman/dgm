@@ -3,15 +3,28 @@
 define( function () {
     return function ( $scope, $element, $stateParams, Categories, Posts ) {
         $scope.section  = $element.data( 'section' );
-        var queryPosts  = function ( section ) {
-            $scope.posts    = Posts.query({
-                expanded    : true,
-                page        : 1,
-                per_page    : 6,
-                section     : section,
-                status      : 'PUBLISHED'
-            });
-        };
+        var per_page    = 6,
+            queryPosts  = function ( section, tag ) {
+                $scope.posts    = Posts.query({
+                    expanded    : true,
+                    page        : 1,
+                    per_page    : per_page,
+                    section     : section,
+                    status      : 'PUBLISHED',
+                    tag         : tag
+                });
+            },
+            queryTag    = function () {
+                Categories.query({
+                    page        : 1,
+                    per_page    : 1,
+                    select      : 'name',
+                    slug        : $stateParams.category,
+                    type        : 'TAG'
+                }).$promise.then( function ( data ) {
+                    queryPosts( $scope.section_id, data[0]._id );
+                });
+            };
 
         Categories.query({
             page        : 1,
@@ -22,7 +35,13 @@ define( function () {
         }).$promise.then( function ( data ) {
             $scope.section_id   = data[0]._id;
             if ( data.length == 1 ) {
-                queryPosts( $scope.section_id );
+                if ( $stateParams.category ) {
+                    $scope.tag  = $stateParams.category;
+                    per_page    = 3;
+                    queryTag();
+                } else {
+                    queryPosts( $scope.section_id );
+                }
             }
         });
     };

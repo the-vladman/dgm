@@ -34,12 +34,12 @@ define( function () {
                         controller      : 'DataLoadCtrl'
                     },
                     'landing-tools'     : {
-                        templateUrl     : 'partials/front/landingTools',
-                        controller      : 'LandingPostsCtrl'
+                        templateUrl     : 'partials/front/posts',
+                        controller      : 'FrontPostsCtrl'
                     },
                     'landing-blog'      : {
-                        templateUrl     : 'partials/front/landingBlog',
-                        controller      : 'LandingPostsCtrl'
+                        templateUrl     : 'partials/front/posts',
+                        controller      : 'FrontPostsCtrl'
                     },
                     'landing-subscribe' : {
                         templateUrl     : 'partials/front/landingSubscribe',
@@ -68,6 +68,14 @@ define( function () {
                         templateUrl     : 'partials/data/table',
                         controller      : 'DataLoadCtrl'
                     },
+                    'category-tools'    : {
+                        templateUrl     : 'partials/front/posts',
+                        controller      : 'FrontPostsCtrl'
+                    },
+                    'category-blog'     : {
+                        templateUrl     : 'partials/front/posts',
+                        controller      : 'FrontPostsCtrl'
+                    }
                 }
             })
             .state( 'front.post', {
