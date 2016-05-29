@@ -1,5 +1,21 @@
 var mongoose        = require( 'mongoose' ),
     CategorySchema  = new mongoose.Schema({
+        cover_photo     : {
+            type        : Object,
+            required    : false
+        },
+        description     : {
+            type        : String,
+            required    : false
+        },
+        extras          : {
+            type        : Array,
+            required    : false
+        },
+        grid_photo      : {
+            type        : Object,
+            required    : false
+        },
         name            : {
             type        : String,
             required    : true

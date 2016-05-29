@@ -1,0 +1,19 @@
+.breadcrumb-container
+    .container-fluid
+        .row
+            .col-md-12
+                breadcrumb
+.container-fluid
+    .row
+        .col-md-12
+            .category-header
+                img( ng-src="{{ category.cover_photo.path }}" alt="{{ category.name }}" )
+                .overlay
+                    .title
+                        img( src="img/ic-{{ category.slug }}.png" alt="{{ category.name }}" )
+                        h1 {{ category.name }}
+                        p {{ category.description }}
+                    .row.category-info
+                        .col-md-4( ng-repeat="extra in category.extras" )
+                            h5 {{ extra.title }}
+                            h4 {{ extra.info }}

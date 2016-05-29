@@ -36,5 +36,5 @@
                             a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=infraestructura" target="_blank" ) Infraestructura
             ul.categories-list
                 li( ng-repeat="tag in tags" )
-                    a( alt="{{ tag.name }}" uib-tooltip="{{ tag.name }}" )
+                    a( ui-sref="category.details({ category : tag.slug })" alt="{{ tag.name }}" uib-tooltip="{{ tag.name }}" )
                         img( src="img/ic-{{ tag.slug }}.png" alt="{{ tag.name }}" )

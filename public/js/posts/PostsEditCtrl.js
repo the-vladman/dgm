@@ -37,7 +37,9 @@ define( function () {
             $scope.post.author  = $scope.post.author.replace( /<br>/g, '' );
             $scope.post.content = $scope.post.content.replace( /<br>/g, '' );
             $scope.post.name    = $scope.post.name.replace( /<br>/g, '' );
-            $scope.post.slug    = $scope.post.name.replace( / /g, '-' ).toLowerCase();
+            $scope.post.slug    = slug( $scope.post.name, {
+                lower   : true
+            });
 
             if ( !uploading ) {
                 delete $scope.post.cover_photo;

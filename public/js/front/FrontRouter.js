@@ -30,20 +30,55 @@ define( function () {
                         controller      : 'LandingSearchCtrl'
                     },
                     'landing-data'      : {
-                        templateUrl     : 'partials/front/landingData',
-                        controller      : 'LandingDataCtrl'
+                        templateUrl     : 'partials/data/table',
+                        controller      : 'DataLoadCtrl'
                     },
                     'landing-tools'     : {
-                        templateUrl     : 'partials/front/landingTools',
-                        controller      : 'LandingPostsCtrl'
+                        templateUrl     : 'partials/front/posts',
+                        controller      : 'FrontPostsCtrl'
                     },
                     'landing-blog'      : {
-                        templateUrl     : 'partials/front/landingBlog',
-                        controller      : 'LandingPostsCtrl'
+                        templateUrl     : 'partials/front/posts',
+                        controller      : 'FrontPostsCtrl'
                     },
                     'landing-subscribe' : {
                         templateUrl     : 'partials/front/landingSubscribe',
                         controller      : 'LandingSubscribeCtrl'
+                    }
+                }
+            })
+            .state( 'category', {
+                abstract    : true,
+                parent      : 'front',
+                url         : '/categoria',
+                views       : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/categories/front'
+                    }
+                }
+            })
+            .state( 'category.details', {
+                url         : '/:category',
+                views       : {
+                    'category-header'   : {
+                        templateUrl     : 'partials/categories/header',
+                        controller      : 'CategoriesHeaderCtrl'
+                    },
+                    'category-data'     : {
+                        templateUrl     : 'partials/data/table',
+                        controller      : 'DataLoadCtrl'
+                    },
+                    'category-tools'    : {
+                        templateUrl     : 'partials/front/posts',
+                        controller      : 'FrontPostsCtrl'
+                    },
+                    'category-blog'     : {
+                        templateUrl     : 'partials/front/posts',
+                        controller      : 'FrontPostsCtrl'
+                    },
+                    'category-extras'   : {
+                        templateUrl     : 'partials/categories/extras',
+                        controller      : 'CategoriesExtraCtrl'
                     }
                 }
             })
