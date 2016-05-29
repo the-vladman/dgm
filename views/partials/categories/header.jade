@@ -13,3 +13,7 @@
                         img( src="img/ic-{{ category.slug }}.png" alt="{{ category.name }}" )
                         h1 {{ category.name }}
                         p {{ category.description }}
+                    .row.category-info
+                        .col-md-4( ng-repeat="extra in category.extras" )
+                            h5 {{ extra.title }}
+                            h4 {{ extra.info }}
