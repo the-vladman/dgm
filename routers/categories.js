@@ -82,8 +82,14 @@ router.post( '/', Session.validate, function ( req, res, next ) {
                     err.status  = 403;
                     next( err );
                 } else {
-                    if ( req.body.cover_photo ) {
-                        moveFile( 'cover_photo', category );
+                    if ( req.body.cover_photo || req.body.grid_photo ) {
+                        if ( req.body.cover_photo ) {
+                            moveFile( 'cover_photo', post );
+                        }
+
+                        if ( req.body.grid_photo ) {
+                            moveFile( 'grid_photo', post );
+                        }
                     }
 
                     res.json( category );
@@ -95,7 +101,8 @@ router.post( '/', Session.validate, function ( req, res, next ) {
 
 router.put( '/:id', Session.validate, function ( req, res, next ) {
     var uploading   = {
-            cover_photo : false
+            cover_photo : false,
+            grid_photo  : false
         },
         moveImg     = function ( field, category ) {
             Utils.move( req.body[field], path.join( config.uploads_path, category.id ), function ( e, file ) {
@@ -114,7 +121,7 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
             next( err );
         } else {
             for ( var key in req.body ) {
-                if ( key == 'cover_photo' ) {
+                if ( key == 'cover_photo' || key == 'grid_photo' ) {
                     if ( category[key] == undefined || category[key].path != req.body[key].path ) {
                         uploading[key]  = true;
                     }
@@ -132,6 +139,16 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
                         });
                     } else {
                         moveImg( 'cover_photo', category );
+                    }
+                }
+
+                if ( uploading.grid_photo ) {
+                    if ( category.grid_photo ) {
+                        fs.unlink( category.grid_photo.path, function () {
+                            moveImg( 'grid_photo', category );
+                        });
+                    } else {
+                        moveImg( 'grid_photo', category );
                     }
                 }
             } else {
