@@ -4,6 +4,7 @@ define( function ( require ) {
     var CategoriesBaseCtrl      = require( 'categories/CategoriesBaseCtrl' );
     var CategoriesCreateCtrl    = require( 'categories/CategoriesCreateCtrl' );
     var CategoriesEditCtrl      = require( 'categories/CategoriesEditCtrl' );
+    var CategoriesExtraCtrl     = require( 'categories/CategoriesExtraCtrl' );
     var CategoriesHeaderCtrl    = require( 'categories/CategoriesHeaderCtrl' );
     var CategoriesListCtrl      = require( 'categories/CategoriesListCtrl' );
     var CategoriesRouter        = require( 'categories/CategoriesRouter' );
@@ -18,6 +19,8 @@ define( function ( require ) {
     CategoriesModule.controller( 'CategoriesCreateCtrl', [ '$scope', 'events', 'CategoriesService', CategoriesCreateCtrl ]);
 
     CategoriesModule.controller( 'CategoriesEditCtrl', [ '$scope', '$stateParams', 'events', 'CategoriesService', CategoriesEditCtrl ]);
+
+    CategoriesModule.controller( 'CategoriesExtraCtrl', [ '$scope', '$stateParams', 'CategoriesService', CategoriesExtraCtrl ]);
 
     CategoriesModule.controller( 'CategoriesHeaderCtrl', [ '$scope', '$stateParams', 'CategoriesService', CategoriesHeaderCtrl ]);
 

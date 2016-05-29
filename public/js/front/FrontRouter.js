@@ -75,6 +75,10 @@ define( function () {
                     'category-blog'     : {
                         templateUrl     : 'partials/front/posts',
                         controller      : 'FrontPostsCtrl'
+                    },
+                    'category-extras'   : {
+                        templateUrl     : 'partials/categories/extras',
+                        controller      : 'CategoriesExtraCtrl'
                     }
                 }
             })
