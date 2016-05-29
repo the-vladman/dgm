@@ -8,6 +8,10 @@ define( function () {
             fileName    : 'cover_photo',
             url         : 'cms-api/categories'
         };
+        $scope.configGrid   = {
+            fileName        : 'grid_photo',
+            url             : 'cms-api/categories'
+        };
         $scope.category     = Categories.get( $stateParams.id, true );
         $scope.sections     = Categories.query({
             page        : 1,
@@ -17,6 +21,7 @@ define( function () {
         $scope.create       = function () {
             if ( !uploading ) {
                 delete $scope.category.cover_photo;
+                delete $scope.category.grid_photo;
             }
 
             Categories.update( $stateParams.id, $scope.category );
@@ -36,6 +41,7 @@ define( function () {
                 $scope.$state.go( 'categories.list' );
             } else {
                 $scope.category.cover_photo = data.cover_photo;
+                $scope.category.grid_photo  = data.grid_photo;
                 uploading   = false;
             }
         });

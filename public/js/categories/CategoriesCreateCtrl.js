@@ -6,6 +6,10 @@ define( function () {
             fileName    : 'cover_photo',
             url         : 'cms-api/categories'
         };
+        $scope.configGrid   = {
+            fileName        : 'grid_photo',
+            url             : 'cms-api/categories'
+        };
         $scope.category     = {
             name        : ''
         };

@@ -1,5 +1,5 @@
 .row
-    .col-md-6.col-md-offset-3
+    div( ng-class="{ 'col-md-6 col-md-offset-3': category.type != 'TAG', 'col-md-7 col-md-offset-1': category.type == 'TAG' }" )
         form( ng-submit="create()" )
             .form-group
                 label( for="name" ) Categoría
@@ -24,3 +24,5 @@
                 label( for="description" ) Descripción
                 textarea.form-control( name="description" placeholder="Descripción" rows="5" ng-model="category.description" )
         .cover-photo-upload.category( data-config="configCover" data-img="category.cover_photo" file-uploader ng-class="{uploaded: category.cover_photo}" ng-if="category.type == 'TAG'" )
+    .col-md-3( ng-if="category.type == 'TAG'" )
+        .grid-photo-upload.category( data-config="configGrid" data-img="category.grid_photo" file-uploader ng-class="{uploaded: category.grid_photo}" )
