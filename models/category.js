@@ -8,6 +8,10 @@ var mongoose        = require( 'mongoose' ),
             type        : String,
             required    : false
         },
+        extras          : {
+            type        : Array,
+            required    : false
+        },
         grid_photo      : {
             type        : Object,
             required    : false

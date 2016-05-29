@@ -72,6 +72,7 @@ router.post( '/', Session.validate, function ( req, res, next ) {
         } else {
             Category.create({
                 description : req.body.description,
+                extras      : req.body.extras,
                 name        : req.body.name,
                 section     : req.body.section,
                 slug        : req.body.slug,
