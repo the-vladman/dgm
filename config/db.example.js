@@ -1,7 +1,7 @@
 module.exports  = {
-    'database'  : 'MONGODB_DATABASE',
-    'host'      : 'MONGODB_HOST',
-    'pass'      : 'MONGODB_USER',
-    'port'      : 'MONGODB_PORT',
-    'user'      : 'MONGODB_PASS'
+    'database'  : '{{MONGO_DB}}',
+    'host'      : '{{MONGO_HOST}}',
+    'pass'      : '{{MONGO_USER}}',
+    'port'      : '{{MONGO_PORT}}',
+    'user'      : '{{MONGO_PASS}}'
 };
