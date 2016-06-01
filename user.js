@@ -1,10 +1,10 @@
 var mongoose    = require( 'mongoose' ),
     db          = require( './config/db' ),
     User        = require( './models/user' ),
-    name        = process.argv[2],
-    email       = process.argv[3],
-    pass        = process.argv[4],
-    type        = process.argv[5],
+    name        = ( process.argv[2] ) ? process.argv[2] : process.env.USER_NAME,
+    email       = ( process.argv[3] ) ? process.argv[3] : process.env.USER_EMAIL,
+    pass        = ( process.argv[4] ) ? process.argv[4] : process.env.USER_PASS,
+    type        = ( process.argv[5] ) ? process.argv[5] : 0,
     conn_str    = 'mongodb://';
 
 if ( db.user ) {
