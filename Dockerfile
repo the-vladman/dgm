@@ -7,6 +7,7 @@ WORKDIR /usr/src/app
 # Bundle app source
 COPY . /usr/src/app
 ADD commands/start.sh  /usr/src/app/start.sh
+RUN rm config/app.js
 RUN rm config/db.js
 RUN rm -rf node_modules
 RUN rm -rf public/img/uploads
