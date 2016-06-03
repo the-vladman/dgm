@@ -6,6 +6,7 @@ var async               = require( 'async' ),
     config              = require( '../config/app' ),
     Category            = require( '../models/category' ),
     Post                = require( '../models/post' ),
+    User                = require( '../models/user' ),
     nodeZip             = require( 'node-zip' ),
     router              = express.Router(),
     compressCategories  = function ( req, zip, cb ) {
@@ -63,6 +64,23 @@ var async               = require( 'async' ),
                 });
             }
         });
+    },
+    compressUsers       = function ( req, zip, cb ) {
+        User.find( function ( err, users ) {
+            if ( err || !users ) {
+                cb( true );
+            } else {
+                var usersFile   = path.join( config.uploads_tmp_path, 'users.json' );
+
+                jsonfile.writeFile( usersFile, users, {
+                    spaces  : 2
+                }, function () {
+                    zip.file( 'data/users.json', fs.readFileSync( usersFile ) );
+
+                    cb( null, zip );
+                });
+            }
+        });
     };
 
 router.get( '/', function ( req, res, next ) {
@@ -80,6 +98,15 @@ router.get( '/', function ( req, res, next ) {
         },
         function ( zip, cb ) {
             compressPosts( req, zip, function ( err, zip ) {
+                if ( err ) {
+                    cb( true );
+                } else {
+                    cb( null, zip );
+                }
+            });
+        },
+        function ( zip, cb ) {
+            compressUsers( req, zip, function ( err, zip ) {
                 if ( err ) {
                     cb( true );
                 } else {
