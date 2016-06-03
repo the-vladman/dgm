@@ -1,5 +1,6 @@
 var express         = require( 'express' ),
     categories      = require( './categories' ),
+    collections     = require( './collections' ),
     posts           = require( './posts' ),
     users           = require( './users' ),
     sessions        = require( './sessions' ),
@@ -14,6 +15,7 @@ cmsApi.use( '/posts', posts );
 cmsApi.use( SessionHandler.validate );
 
 // Members only resources
+cmsApi.use( '/collections', collections );
 cmsApi.use( '/users', users );
 
 module.exports  = cmsApi;
