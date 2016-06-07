@@ -327,9 +327,12 @@ router.get( '/', function ( req, res, next ) {
                 compression : 'DEFLATE'
             }), 'binary' );
 
-            var filename    = path.basename( zipFile );
-            res.setHeader( 'Content-disposition', 'attachment; filename=' + filename );
-            res.setHeader( 'Content-type', 'application/zip' );
+            var filename    = path.basename( zipFile ),
+                stats       = fs.statSync( zipFile );
+
+            res.setHeader( 'Content-Disposition', 'attachment; filename=' + filename );
+            res.setHeader( 'Content-Length', stats.size );
+            res.setHeader( 'Content-Type', 'application/zip' );
 
             var filestream  = fs.createReadStream( zipFile );
             filestream.pipe( res );
