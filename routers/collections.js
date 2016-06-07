@@ -11,77 +11,157 @@ var async               = require( 'async' ),
     nodeZip             = require( 'node-zip' ),
     router              = express.Router(),
     compressCategories  = function ( req, zip, cb ) {
-        Category.find( function ( err, categories ) {
-            if ( err || !categories ) {
-                cb( true );
-            } else {
-                var categoriesFile  = path.join( config.uploads_tmp_path, 'categories.json' );
+        var params      = JSON.parse( req.query.categories ),
+            filters     = {
+                $or     : []
+            };
 
-                jsonfile.writeFile( categoriesFile, categories, {
-                    spaces  : 2
-                }, function () {
-                    zip.file( 'data/categories.json', fs.readFileSync( categoriesFile ) );
-
-                    for ( var i = 0; i < categories.length; i++ ) {
-                        if ( categories[i].type == 'TAG' ) {
-                            if ( categories[i].cover_photo && categories[i].cover_photo.path ) {
-                                zip.file( path.join( 'data/images/', categories[i].id, categories[i].cover_photo.name ), fs.readFileSync( categories[i].cover_photo.path ) );
-                            }
-
-                            if ( categories[i].grid_photo && categories[i].grid_photo.path ) {
-                                zip.file( path.join( 'data/images/', categories[i].id, categories[i].grid_photo.name ), fs.readFileSync( categories[i].grid_photo.path ) );
-                            }
-                        }
-                    }
-
-                    cb( null, zip );
+        if ( params.sections || params.categories || params.tags ) {
+            if ( params.sections == true ) {
+                filters.$or.push({
+                    type    : 'SECTION'
                 });
             }
-        });
+            if ( params.categories == true ) {
+                filters.$or.push({
+                    type    : 'CATEGORY'
+                });
+            }
+            if ( params.tags == true ) {
+                filters.$or.push({
+                    type    : 'TAG'
+                });
+            }
+
+            Category.find( filters, function ( err, categories ) {
+                if ( err || !categories ) {
+                    cb( true );
+                } else {
+                    var categoriesFile  = path.join( config.uploads_tmp_path, 'categories.json' );
+
+                    jsonfile.writeFile( categoriesFile, categories, {
+                        spaces  : 2
+                    }, function () {
+                        zip.file( 'data/categories.json', fs.readFileSync( categoriesFile ) );
+
+                        for ( var i = 0; i < categories.length; i++ ) {
+                            if ( categories[i].type == 'TAG' ) {
+                                if ( categories[i].cover_photo && categories[i].cover_photo.path ) {
+                                    zip.file( path.join( 'data/images/', categories[i].id, categories[i].cover_photo.name ), fs.readFileSync( categories[i].cover_photo.path ) );
+                                }
+
+                                if ( categories[i].grid_photo && categories[i].grid_photo.path ) {
+                                    zip.file( path.join( 'data/images/', categories[i].id, categories[i].grid_photo.name ), fs.readFileSync( categories[i].grid_photo.path ) );
+                                }
+                            }
+                        }
+
+                        cb( null, zip );
+                    });
+                }
+            });
+        } else {
+            cb( null, zip );
+        }
     },
     compressPosts       = function ( req, zip, cb ) {
-        Post.find( function ( err, posts ) {
-            if ( err || !posts ) {
-                cb( true );
-            } else {
-                var postsFile   = path.join( config.uploads_tmp_path, 'posts.json' );
+        var params      = JSON.parse( req.query.posts ),
+            filters     = {
+                $or     : []
+            };
 
-                jsonfile.writeFile( postsFile, posts, {
-                    spaces  : 2
-                }, function () {
-                    zip.file( 'data/posts.json', fs.readFileSync( postsFile ) );
-
-                    for ( var i = 0; i < posts.length; i++ ) {
-                        if ( posts[i].cover_photo && posts[i].cover_photo.path ) {
-                            zip.file( path.join( 'data/images/', posts[i].id, posts[i].cover_photo.name ), fs.readFileSync( posts[i].cover_photo.path ) );
-                        }
-
-                        if ( posts[i].grid_photo && posts[i].grid_photo.path ) {
-                            zip.file( path.join( 'data/images/', posts[i].id, posts[i].grid_photo.name ), fs.readFileSync( posts[i].grid_photo.path ) );
-                        }
-                    }
-
-                    cb( null, zip );
+        if ( params.archived || params.drafts || params.published ) {
+            if ( params.archived == true ) {
+                filters.$or.push({
+                    status  : 'ARCHIVED'
                 });
             }
-        });
+            if ( params.drafts == true ) {
+                filters.$or.push({
+                    status  : 'DRAFT'
+                });
+            }
+            if ( params.published == true ) {
+                filters.$or.push({
+                    status  : 'PUBLISHED'
+                });
+            }
+
+            Post.find( filters, function ( err, posts ) {
+                if ( err || !posts ) {
+                    cb( true );
+                } else {
+                    var postsFile   = path.join( config.uploads_tmp_path, 'posts.json' );
+
+                    jsonfile.writeFile( postsFile, posts, {
+                        spaces  : 2
+                    }, function () {
+                        zip.file( 'data/posts.json', fs.readFileSync( postsFile ) );
+
+                        for ( var i = 0; i < posts.length; i++ ) {
+                            if ( posts[i].cover_photo && posts[i].cover_photo.path ) {
+                                zip.file( path.join( 'data/images/', posts[i].id, posts[i].cover_photo.name ), fs.readFileSync( posts[i].cover_photo.path ) );
+                            }
+
+                            if ( posts[i].grid_photo && posts[i].grid_photo.path ) {
+                                zip.file( path.join( 'data/images/', posts[i].id, posts[i].grid_photo.name ), fs.readFileSync( posts[i].grid_photo.path ) );
+                            }
+                        }
+
+                        cb( null, zip );
+                    });
+                }
+            });
+        } else {
+            cb( null, zip );
+        }
     },
     compressUsers       = function ( req, zip, cb ) {
-        User.find( function ( err, users ) {
-            if ( err || !users ) {
-                cb( true );
-            } else {
-                var usersFile   = path.join( config.uploads_tmp_path, 'users.json' );
+        var params      = JSON.parse( req.query.users ),
+            filters     = {
+                $or     : []
+            };
 
-                jsonfile.writeFile( usersFile, users, {
-                    spaces  : 2
-                }, function () {
-                    zip.file( 'data/users.json', fs.readFileSync( usersFile ) );
-
-                    cb( null, zip );
+        if ( params.admin || params.author || params.editor || params.super ) {
+            if ( params.admin == true ) {
+                filters.$or.push({
+                    type    : 1
                 });
             }
-        });
+            if ( params.author == true ) {
+                filters.$or.push({
+                    type    : 3
+                });
+            }
+            if ( params.editor == true ) {
+                filters.$or.push({
+                    type    : 2
+                });
+            }
+            if ( params.super == true ) {
+                filters.$or.push({
+                    type    : 0
+                });
+            }
+
+            User.find( filters, function ( err, users ) {
+                if ( err || !users ) {
+                    cb( true );
+                } else {
+                    var usersFile   = path.join( config.uploads_tmp_path, 'users.json' );
+
+                    jsonfile.writeFile( usersFile, users, {
+                        spaces  : 2
+                    }, function () {
+                        zip.file( 'data/users.json', fs.readFileSync( usersFile ) );
+
+                        cb( null, zip );
+                    });
+                }
+            });
+        } else {
+            cb( null, zip );
+        }
     },
     loadCategories      = function ( req, zip, cb ) {
         var categories  = JSON.parse( zip.files[ 'data/categories.json' ]._data ),
