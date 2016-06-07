@@ -1,7 +1,7 @@
 'use strict';
 
 define( function () {
-    return function ( $scope ) {
+    return function ( $scope, Collections ) {
         $scope.filters  = {
             categories      : {
                 categories  : true,
@@ -21,7 +21,12 @@ define( function () {
             }
         };
         $scope.export   = function () {
-            
+            Collections.export( $scope.filters ).$promise.then( function ( data ) {
+                var blob        = data.response.blob,
+                    filename    = data.response.filename || 'data.zip';
+
+                saveAs( blob, filename );
+            });
         };
     };
 });
