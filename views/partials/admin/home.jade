@@ -30,23 +30,23 @@ nav.navbar.navbar-default.navbar-fixed-top
                 li.dropdown
                     a.dropdown-toggle( href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" )
                         i.glyphicon.glyphicon-cog
-                        ul.dropdown-menu
-                            li
-                                a()
-                                    i.glyphicon.glyphicon-save
-                                    | Exportar
-                            li
-                                a()
-                                    i.glyphicon.glyphicon-open
-                                    | Importar
+                    ul.dropdown-menu
+                        li
+                            a( ui-sref="export" )
+                                i.glyphicon.glyphicon-save
+                                | Exportar
+                        li
+                            a()
+                                i.glyphicon.glyphicon-open
+                                | Importar
                 li.dropdown
                     a.dropdown-toggle( href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ) 
                         img( class="menu-avatar" src="img/ic_avatar.png" alt="{{ user.name }}" )
                         | {{ user.name }} 
                         span.caret
-                        ul.dropdown-menu
-                            li
-                                a( ui-sref="admin-logout" )
-                                    i.glyphicon.glyphicon-log-out
-                                    | Cerrar Sesión
+                    ul.dropdown-menu
+                        li
+                            a( ui-sref="admin-logout" )
+                                i.glyphicon.glyphicon-log-out
+                                | Cerrar Sesión
 div.container-fluid( ui-view="admin-main" )
