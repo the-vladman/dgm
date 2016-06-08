@@ -12,6 +12,10 @@ define( function () {
             fileName        : 'grid_photo',
             url             : 'cms-api/posts'
         };
+        $scope.dpOpen       = false;
+        $scope.dpOptions    = {
+            showWeeks       : false
+        };
         $scope.post     = Posts.get( $stateParams.id, true );
         $scope.sections = Categories.query({
             page        : 1,
@@ -47,12 +51,18 @@ define( function () {
 
             Posts.update( $stateParams.id, $scope.post );
         };
+        $scope.open     = function () {
+            $scope.dpOpen   = true;
+        };
 
         $scope.$on( events.FILEUPLOADER_DONE, function ( e, data ) {
             $scope.post[ Object.keys( data )[0] ]   = data[ Object.keys( data )[0] ];
 
             uploading   = true;
             $scope.update();
+        });
+        $scope.$on( Posts.getEvent( 'RETRIEVED' ), function () {
+            $scope.post.creation_date   = new Date( $scope.post.creation_date );
         });
         $scope.$on( Posts.getEvent( 'DELETED' ), function ( e, data ) {
             $scope.$state.go( 'posts.list' );
