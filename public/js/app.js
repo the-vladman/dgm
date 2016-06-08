@@ -18,6 +18,7 @@ define( function ( require ) {
             'ngCookies',
             'ngResource',
             'ngSanitize',
+            'ui.bootstrap.datepicker',
             'ui.bootstrap.pagination',
             'ui.bootstrap.tooltip',
             'ui.bootstrap.tpls',
