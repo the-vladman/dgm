@@ -167,7 +167,9 @@ var async               = require( 'async' ),
         }
     },
     loadCategories      = function ( req, zip, cb ) {
-        var categories  = JSON.parse( zip.files[ 'data/categories.json' ]._data ),
+        var filePath    = path.join( config.uploads_tmp_path, 'categories_import.json' ),
+            file        = fs.writeFileSync( filePath, zip.files[ 'data/categories.json' ]._data, 'binary' ),
+            categories  = jsonfile.readFileSync( filePath ),
             ids         = Array(),
             photos      = Array();
 
@@ -234,7 +236,9 @@ var async               = require( 'async' ),
         });
     },
     loadPosts           = function ( req, zip, usersIds, categoriesIds, cb ) {
-        var posts       = JSON.parse( zip.files[ 'data/posts.json' ]._data ),
+        var filePath    = path.join( config.uploads_tmp_path, 'posts_import.json' ),
+            file        = fs.writeFileSync( filePath, zip.files[ 'data/posts.json' ]._data, 'binary' ),
+            posts       = jsonfile.readFileSync( filePath ),
             ids         = Array(),
             photos      = Array();
 
@@ -343,7 +347,9 @@ var async               = require( 'async' ),
         });
     },
     loadUsers           = function ( req, zip, cb ) {
-        var users       = JSON.parse( zip.files[ 'data/users.json' ]._data ),
+        var filePath    = path.join( config.uploads_tmp_path, 'users_import.json' ),
+            file        = fs.writeFileSync( filePath, zip.files[ 'data/users.json' ]._data, 'binary' ),
+            users       = jsonfile.readFileSync( filePath ),
             ids         = Array();
 
         for ( var i = 0; i < users.length; i++ ) {
@@ -453,7 +459,7 @@ router.post( '/', function ( req, res, next ) {
                 base64      : false,
                 checkCRC32  : true
             }),
-            settings    = JSON.parse( zip.files[ 'data/settings.json' ]._data );
+            settings        = JSON.parse( zip.files[ 'data/settings.json' ]._data );
 
         async.waterfall([
             function ( cb ) {
