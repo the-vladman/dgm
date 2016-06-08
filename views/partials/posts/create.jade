@@ -24,7 +24,7 @@
                 .col-md-6
                     .form-group
                         label( for="creation_date" ) Fecha de creación
-                        .input-group
+                        .input-group.datepicker-group
                             input.form-control( type="text" name="creation_date" ng-model="post.creation_date" ng-click="open()" uib-datepicker-popup="dd-MM-yyyy" datepicker-options="dpOptions" is-open="dpOpen" show-button-bar="false" )
                             .input-group-addon( ng-click="open()" )
                                 i.glyphicon.glyphicon-calendar
