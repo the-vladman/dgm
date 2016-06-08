@@ -10,7 +10,7 @@ var async               = require( 'async' ),
     User                = require( '../models/user' ),
     nodeZip             = require( 'node-zip' ),
     router              = express.Router(),
-    compressCategories  = function ( req, zip, cb ) {
+    compressCategories  = function ( req, zip, settings, cb ) {
         var params      = JSON.parse( req.query.categories ),
             filters     = {
                 $or     : []
@@ -56,15 +56,16 @@ var async               = require( 'async' ),
                             }
                         }
 
-                        cb( null, zip );
+                        cb( null, settings, zip );
                     });
                 }
             });
         } else {
-            cb( null, zip );
+            settings.categories     = false;
+            cb( null, settings, zip );
         }
     },
-    compressPosts       = function ( req, zip, cb ) {
+    compressPosts       = function ( req, zip, settings, cb ) {
         var params      = JSON.parse( req.query.posts ),
             filters     = {
                 $or     : []
@@ -108,15 +109,16 @@ var async               = require( 'async' ),
                             }
                         }
 
-                        cb( null, zip );
+                        cb( null, settings, zip );
                     });
                 }
             });
         } else {
-            cb( null, zip );
+            settings.posts      = false;
+            cb( null, settings, zip );
         }
     },
-    compressUsers       = function ( req, zip, cb ) {
+    compressUsers       = function ( req, zip, settings, cb ) {
         var params      = JSON.parse( req.query.users ),
             filters     = {
                 $or     : []
@@ -155,12 +157,13 @@ var async               = require( 'async' ),
                     }, function () {
                         zip.file( 'data/users.json', fs.readFileSync( usersFile ) );
 
-                        cb( null, zip );
+                        cb( null, settings, zip );
                     });
                 }
             });
         } else {
-            cb( null, zip );
+            settings.users  = false;
+            cb( null, settings, zip );
         }
     },
     loadCategories      = function ( req, zip, cb ) {
@@ -253,45 +256,49 @@ var async               = require( 'async' ),
             delete posts[i].cover_photo;
             delete posts[i].grid_photo;
 
-            for ( var j = 0; j < usersIds.length; j++ ) {
-                if ( !author && ( posts[i].created_by && posts[i].created_by == usersIds[j].original ) ) {
-                    posts[i].created_by     = usersIds[j].created;
-                    author                  = true;
-                }
+            if ( usersIds ) {
+                for ( var j = 0; j < usersIds.length; j++ ) {
+                    if ( !author && ( posts[i].created_by && posts[i].created_by == usersIds[j].original ) ) {
+                        posts[i].created_by     = usersIds[j].created;
+                        author                  = true;
+                    }
 
-                if ( !editor && ( posts[i].edited_by && posts[i].edited_by == usersIds[j].original ) ) {
-                    posts[i].edited_by      = usersIds[j].created;
-                    editor                  = true;
-                }
+                    if ( !editor && ( posts[i].edited_by && posts[i].edited_by == usersIds[j].original ) ) {
+                        posts[i].edited_by      = usersIds[j].created;
+                        editor                  = true;
+                    }
 
-                if ( !publisher && ( posts[i].published_by && posts[i].published_by == usersIds[j].original ) ) {
-                    posts[i].published_by   = usersIds[j].created;
-                    publisher               = true;
-                }
+                    if ( !publisher && ( posts[i].published_by && posts[i].published_by == usersIds[j].original ) ) {
+                        posts[i].published_by   = usersIds[j].created;
+                        publisher               = true;
+                    }
 
-                if ( author && editor && publisher ) {
-                    break;
+                    if ( author && editor && publisher ) {
+                        break;
+                    }
                 }
             }
 
-            for ( var j = 0; j < categoriesIds.length; j++ ) {
-                if ( !category && posts[i].category == categoriesIds[j].original ) {
-                    posts[i].category   = categoriesIds[j].created;
-                    category            = true;
-                }
+            if ( categoriesIds ) {
+                for ( var j = 0; j < categoriesIds.length; j++ ) {
+                    if ( !category && posts[i].category == categoriesIds[j].original ) {
+                        posts[i].category   = categoriesIds[j].created;
+                        category            = true;
+                    }
 
-                if ( !section && posts[i].section == categoriesIds[j].original ) {
-                    posts[i].section    = categoriesIds[j].created;
-                    section             = true;
-                }
+                    if ( !section && posts[i].section == categoriesIds[j].original ) {
+                        posts[i].section    = categoriesIds[j].created;
+                        section             = true;
+                    }
 
-                if ( !tag && posts[i].tag == categoriesIds[j].original ) {
-                    posts[i].tag        = categoriesIds[j].created;
-                    tag                 = true;
-                }
+                    if ( !tag && posts[i].tag == categoriesIds[j].original ) {
+                        posts[i].tag        = categoriesIds[j].created;
+                        tag                 = true;
+                    }
 
-                if ( category && section && tag ) {
-                    break;
+                    if ( category && section && tag ) {
+                        break;
+                    }
                 }
             }
         }
@@ -363,46 +370,60 @@ var async               = require( 'async' ),
     };
 
 router.get( '/', function ( req, res, next ) {
-    var zip     = new nodeZip();
+    var zip         = new nodeZip(),
+        settings    = {
+            categories  : true,
+            posts       : true,
+            users       : true
+        };
 
     async.waterfall([
         function ( cb ) {
-            compressCategories( req, zip, function ( err, zip ) {
+            compressCategories( req, zip, settings, function ( err, settings, zip ) {
                 if ( err ) {
                     cb( true );
                 } else {
-                    cb( null, zip );
+                    cb( null, settings, zip );
                 }
             });
         },
-        function ( zip, cb ) {
-            compressPosts( req, zip, function ( err, zip ) {
+        function ( settings, zip, cb ) {
+            compressPosts( req, zip, settings, function ( err, settings, zip ) {
                 if ( err ) {
                     cb( true );
                 } else {
-                    cb( null, zip );
+                    cb( null, settings, zip );
                 }
             });
         },
-        function ( zip, cb ) {
-            compressUsers( req, zip, function ( err, zip ) {
+        function ( settings, zip, cb ) {
+            compressUsers( req, zip, settings, function ( err, settings, zip ) {
                 if ( err ) {
                     cb( true );
                 } else {
-                    cb( null, zip );
+                    cb( null, {
+                        settings    : settings,
+                        zip         : zip
+                    });
                 }
             });
         }
-    ], function ( err, zip ) {
+    ], function ( err, result ) {
         if ( err ) {
             err         = new Error( 'Invalid query' );
             err.status  = 401;
 
             cb( err );
         } else {
-            var zipFile     = path.join( config.uploads_tmp_path, 'data.zip' );
+            var zipFile         = path.join( config.uploads_tmp_path, 'data.zip' ),
+                settingsFile    = path.join( config.uploads_tmp_path, 'settings.json' );
 
-            fs.writeFileSync( zipFile, zip.generate({
+            jsonfile.writeFileSync( settingsFile, settings, {
+                spaces  : 2
+            });
+            zip.file( 'data/settings.json', fs.readFileSync( settingsFile ) );
+
+            fs.writeFileSync( zipFile, result.zip.generate({
                 base64      : false,
                 compression : 'DEFLATE'
             }), 'binary' );
@@ -427,39 +448,52 @@ router.post( '/', function ( req, res, next ) {
 
         next( err );
     } else {
-        var zipFile = fs.readFileSync( req.body.files.data[0].path ),
-            zip     = new nodeZip( zipFile, {
+        var zipFile     = fs.readFileSync( req.body.files.data[0].path ),
+            zip         = new nodeZip( zipFile, {
                 base64      : false,
                 checkCRC32  : true
-            });
+            }),
+            settings    = JSON.parse( zip.files[ 'data/settings.json' ]._data );
 
         async.waterfall([
             function ( cb ) {
-                loadUsers( req, zip, function ( err, usersIds ) {
-                    if ( err ) {
-                        cb( err );
-                    } else {
-                        cb( null, usersIds );
-                    }
-                });
+                if ( settings.users ) {
+                    loadUsers( req, zip, function ( err, usersIds ) {
+                        if ( err ) {
+                            cb( err );
+                        } else {
+                            cb( null, usersIds );
+                        }
+                    });
+                } else {
+                    cb( null, null );
+                }
             },
             function ( usersIds, cb ) {
-                loadCategories( req, zip, function ( err, categoriesIds ) {
-                    if ( err ) {
-                        cb( err );
-                    } else {
-                        cb( null, usersIds, categoriesIds );
-                    }
-                });
+                if ( settings.categories ) {
+                    loadCategories( req, zip, function ( err, categoriesIds ) {
+                        if ( err ) {
+                            cb( err );
+                        } else {
+                            cb( null, usersIds, categoriesIds );
+                        }
+                    });
+                } else {
+                    cb( null, usersIds, null );
+                }
             },
             function ( usersIds, categoriesIds, cb ) {
-                loadPosts( req, zip, usersIds, categoriesIds, function ( err ) {
-                    if ( err ) {
-                        cb( err );
-                    } else {
-                        cb();
-                    }
-                });
+                if ( settings.posts ) {
+                    loadPosts( req, zip, usersIds, categoriesIds, function ( err ) {
+                        if ( err ) {
+                            cb( err );
+                        } else {
+                            cb();
+                        }
+                    });
+                } else {
+                    cb();
+                }
             }
         ], function ( err, result ) {
             if ( err ) {
