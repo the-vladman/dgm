@@ -23,6 +23,13 @@
             .row
                 .col-md-6
                     .form-group
+                        label( for="creation_date" ) Fecha de creación
+                        .input-group
+                            input.form-control( type="text" name="creation_date" ng-model="post.creation_date" ng-click="open()" uib-datepicker-popup="dd-MM-yyyy" datepicker-options="dpOptions" is-open="dpOpen" show-button-bar="false" )
+                            .input-group-addon( ng-click="open()" )
+                                i.glyphicon.glyphicon-calendar
+                .col-md-6
+                    .form-group
                         label( for="status" ) Estatus
                         .custom-select
                             select.form-control( name="status" ng-model="post.status" )
@@ -30,6 +37,7 @@
                                 option( value="PUBLISHED" ng-if="user.type <= 2" ) Publicado
                                 option( value="DRAFT" ) Borrador
                                 option( value="ARCHIVED" ) Archivado
+            .row
                 .col-md-6( ng-if="user.type <= 1" )
                     .form-group
                         label( for="created_by" ) Creado por

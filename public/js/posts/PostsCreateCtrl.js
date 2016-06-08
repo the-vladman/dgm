@@ -10,6 +10,10 @@ define( function () {
             fileName    : 'grid_photo',
             url         : 'cms-api/posts'
         };
+        $scope.dpOpen       = false;
+        $scope.dpOptions    = {
+            showWeeks       : false
+        };
         $scope.post         = {
             name        : '',
             section     : ''
@@ -43,6 +47,9 @@ define( function () {
             });
             
             Posts.create( $scope.post );
+        };
+        $scope.open         = function () {
+            $scope.dpOpen   = true;
         };
 
         $scope.$on( events.FILEUPLOADER_DONE, function ( e, data ) {
