@@ -21,6 +21,26 @@ define( function () {
                         controller  : 'AdminCtrl'
                     }
                 }
+            })
+            .state( 'export', {
+                parent  : 'admin',
+                url     : '/export',
+                views   : {
+                    'admin-main'    : {
+                        templateUrl : 'partials/admin/export',
+                        controller  : 'AdminExportCtrl'
+                    }
+                }
+            })
+            .state( 'import', {
+                parent  : 'admin',
+                url     : '/import',
+                views   : {
+                    'admin-main'    : {
+                        templateUrl : 'partials/admin/import',
+                        controller  : 'AdminImportCtrl'
+                    }
+                }
             });
     };
 });
