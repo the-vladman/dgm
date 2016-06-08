@@ -56,6 +56,7 @@ var async               = require( 'async' ),
                             }
                         }
 
+                        fs.unlinkSync( categoriesFile );
                         cb( null, settings, zip );
                     });
                 }
@@ -109,6 +110,7 @@ var async               = require( 'async' ),
                             }
                         }
 
+                        fs.unlinkSync( postsFile );
                         cb( null, settings, zip );
                     });
                 }
@@ -157,6 +159,7 @@ var async               = require( 'async' ),
                     }, function () {
                         zip.file( 'data/users.json', fs.readFileSync( usersFile ) );
 
+                        fs.unlinkSync( usersFile );
                         cb( null, settings, zip );
                     });
                 }
@@ -172,6 +175,7 @@ var async               = require( 'async' ),
             categories  = jsonfile.readFileSync( filePath ),
             ids         = Array(),
             photos      = Array();
+        fs.unlinkSync( filePath );
 
         for ( var i = 0; i < categories.length; i++ ) {
             ids.push({
@@ -241,6 +245,7 @@ var async               = require( 'async' ),
             posts       = jsonfile.readFileSync( filePath ),
             ids         = Array(),
             photos      = Array();
+        fs.unlinkSync( filePath );
 
         for ( var i = 0; i < posts.length; i++ ) {
             var author      = false,
@@ -351,6 +356,7 @@ var async               = require( 'async' ),
             file        = fs.writeFileSync( filePath, zip.files[ 'data/users.json' ]._data, 'binary' ),
             users       = jsonfile.readFileSync( filePath ),
             ids         = Array();
+        fs.unlinkSync( filePath );
 
         for ( var i = 0; i < users.length; i++ ) {
             ids.push({
@@ -429,6 +435,7 @@ router.get( '/', function ( req, res, next ) {
             });
             zip.file( 'data/settings.json', fs.readFileSync( settingsFile ) );
 
+            fs.unlinkSync( settingsFile );
             fs.writeFileSync( zipFile, result.zip.generate({
                 base64      : false,
                 compression : 'DEFLATE'
@@ -441,8 +448,12 @@ router.get( '/', function ( req, res, next ) {
             res.setHeader( 'Content-Length', stats.size );
             res.setHeader( 'Content-Type', 'application/zip' );
 
-            var filestream  = fs.createReadStream( zipFile );
-            filestream.pipe( res );
+            var filestream  = fs.createReadStream( zipFile ),
+                stream      = filestream.pipe( res );
+
+            stream.on( 'finish', function () {
+                fs.unlinkSync( zipFile );
+            });
         }
     });
 });
@@ -460,6 +471,7 @@ router.post( '/', function ( req, res, next ) {
                 checkCRC32  : true
             }),
             settings        = JSON.parse( zip.files[ 'data/settings.json' ]._data );
+        fs.unlinkSync( req.body.files.data[0].path );
 
         async.waterfall([
             function ( cb ) {
