@@ -8,3 +8,6 @@
                     include ../includes/post.jade
                 .col-md-6.post-item( ng-repeat="post in posts" )
                     include ../includes/post.jade
+            p.more-posts: a( ui-sref="front.section({ section : section, section_id : section_id })" ) 
+                span( ng-if="section == 'blog'" ) Ver más historias
+                span( ng-if="section == 'herramientas'" ) Ver más herramientas
