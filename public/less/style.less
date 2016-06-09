@@ -35,6 +35,9 @@ strong                                      { font-weight: 400; }
 .post .content h2                           { font-size: 24px; font-weight: 300; line-height: 33px; color: #333; margin-bottom: 20px; }
 .post .content li,
 .post .content p                            { font-size: 16px; line-height: 26px; font-weight: 300; color: #595959; margin-bottom: 20px; }
+.section-data .data-list li > span          { font-size: 16px; font-weight: 600; text-align: center; }
+.section-data .data-list li:hover > span,
+.section-data .data-list li.active > span   { color: #fff; }
 .category-header h1                         { font-size: 36px; font-weight: 300; color: #fff; }
 .category-header p                          { font-size: 14px; color: #fff; }
 .category-header .category-info             { text-align: center; }
@@ -178,6 +181,12 @@ strong                                      { font-weight: 400; }
 .search-form .btn-primary:active            { background-color: #333; }
 
 /********************************
+    Tables Styles
+********************************/
+.data-table table > tbody > tr              { cursor: pointer; }
+.data-table table > tbody > tr > td         { padding-bottom: 20px; font-size: 14px; border-top-color: #d8d8d8; }
+
+/********************************
     Landing Styles
 ********************************/
 section                                     { margin-bottom: 30px; }
@@ -194,11 +203,10 @@ section                                     { margin-bottom: 30px; }
 #landing-search .tags-list li:last-child    { margin-right: 0; }
 #landing-search .categories-list            { padding: 0; list-style: none; }
 #landing-search .categories-list li         { display: inline-block; max-width: 30px; margin-right: 60px; }
-.section-data .data-list                    { margin-bottom: 40px; }
-.section-data .data-list li                 { display: inline-block; margin-right: 20px; padding: 10px 35px; border-radius: 4px; background-color: #efefef; font-size: 18px; cursor: pointer; }
-.section-data .data-list li:hover,
-.section-data .data-list li.active          { background-color: #0c9; color: #fff; }
-.section-data .data-list li:last-child      { margin-right: 0; }
+.section-data .data-list                    { margin-bottom: 10px; }
+.section-data .data-list li > span          { display: block; padding-top: 10px; padding-bottom: 10px; border-radius: 4px; background-color: #efefef; cursor: pointer; }
+.section-data .data-list li:hover > span,
+.section-data .data-list li.active > span   { background-color: #0c9; }
 .section-data .data-table                   { padding: 30px 20px; background-color: #efefef; border-radius: 4px; }
 .section-data .data-table .table            { margin-bottom: 0; }
 #landing-subscribe                          { margin-top: 40px; padding: 50px 0 40px; background-color: #efefef; color: #7a7a7a; }
@@ -207,8 +215,6 @@ section                                     { margin-bottom: 30px; }
 #landing-subscribe .social-links > li       { display: inline-block; margin-right: 10px; }
 #landing-subscribe .social-links > li:last-child        { margin-right: 0; }
 #landing-search .categories-list li:last-child          { margin-right: 0; }
-#landing-data .data-table table > tbody > tr            { cursor: pointer; }
-#landing-data .data-table table > tbody > tr > td       { padding-bottom: 20px; font-size: 18px; border-top-color: #d8d8d8; }
 
 /********************************
     Posts Styles
