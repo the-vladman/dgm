@@ -2,10 +2,13 @@
     .row
         .col-md-12
             h2 Datos
-            ul.data-list
-                li.active( ng-click="load( $event, 0 )" ) Recomendaciones
-                li( ng-click="load( $event, 1 )" ) Recientes
-                li( ng-click="load( $event, 2 )" ) Más descargados
+            ul.data-list.row
+                li.col-md-4.active( ng-click="load( $event, 0 )" ) 
+                    span Recomendaciones
+                li.col-md-4( ng-click="load( $event, 1 )" ) 
+                    span Recientes
+                li.col-md-4( ng-click="load( $event, 2 )" )
+                    span Más descargados
             .data-table
                 table.table
                     tbody
