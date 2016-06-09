@@ -85,11 +85,11 @@ router.post( '/', Session.validate, function ( req, res, next ) {
                 } else {
                     if ( req.body.cover_photo || req.body.grid_photo ) {
                         if ( req.body.cover_photo ) {
-                            moveFile( 'cover_photo', post );
+                            moveFile( 'cover_photo', category );
                         }
 
                         if ( req.body.grid_photo ) {
-                            moveFile( 'grid_photo', post );
+                            moveFile( 'grid_photo', category );
                         }
                     }
 
