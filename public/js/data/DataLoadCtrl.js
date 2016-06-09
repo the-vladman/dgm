@@ -5,7 +5,7 @@ define( function () {
         var query       = function ( order ) {
             var q       = ( $stateParams.category ) ? 'tags:' + $stateParams.category : '';
 
-            $scope.datasets = CkanService.datasets( q, 3, order );
+            $scope.datasets = CkanService.datasets( q, 5, order );
         };
 
         $scope.load     = function ( e, type ) {
