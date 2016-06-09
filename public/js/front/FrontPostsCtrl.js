@@ -3,10 +3,11 @@
 define( function () {
     return function ( $scope, $element, $stateParams, Categories, Posts ) {
         $scope.section  = $element.data( 'section' );
-        var per_page    = 6,
+        var per_page    = 4,
             queryPosts  = function ( section, tag ) {
                 $scope.posts    = Posts.query({
                     expanded    : true,
+                    featured    : false,
                     page        : 1,
                     per_page    : per_page,
                     section     : section,
@@ -22,7 +23,9 @@ define( function () {
                     slug        : $stateParams.category,
                     type        : 'TAG'
                 }).$promise.then( function ( data ) {
-                    queryPosts( $scope.section_id, data[0]._id );
+                    if ( data[0] ) {
+                        queryPosts( $scope.section_id, data[0]._id );
+                    }
                 });
             };
 
