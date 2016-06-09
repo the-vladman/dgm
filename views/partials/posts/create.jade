@@ -44,6 +44,12 @@
                         .custom-select
                             select.form-control( name="created_by" ng-model="post.created_by" ng-options="author._id as author.name for author in authors track by author._id" )
                                 option( value="" ) Seleccione autor...
+                .col-md-6
+                    .form-group
+                        .checkbox
+                            label
+                                input( type="checkbox" name="featured" value="true" ng-model="post.featured" )
+                                | Destacado
         .cover-photo-upload( data-config="configCover" data-img="post.cover_photo" file-uploader ng-class="{uploaded: post.cover_photo}" )
         .post
             h1.title( medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: { align : 'left', buttons : [ 'bold', 'italic', 'underline' ], static : true, updateOnEmptySelection : true } }" data-placeholder="Título del artículo" ng-model="post.name" )
