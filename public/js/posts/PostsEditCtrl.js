@@ -47,6 +47,7 @@ define( function () {
 
             if ( !uploading ) {
                 delete $scope.post.cover_photo;
+                delete $scope.post.grid_photo;
             }
 
             Posts.update( $stateParams.id, $scope.post );
@@ -72,6 +73,7 @@ define( function () {
                 $scope.$state.go( 'posts.list' );
             } else {
                 $scope.post.cover_photo = data.cover_photo;
+                $scope.post.grid_photo  = data.grid_photo;
                 uploading   = false;
             }
         });
