@@ -4,9 +4,9 @@
     .overlay
         h3: a( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" alt="{{ post.name }}" ) {{ post.name | limitTo:46 }}
         p.author {{ post.author }}
-        a.read-more( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" alt="{{ post.name }}" )
-            | Leer más
-            .arrow-tip
+        p
+            a.read-more( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" alt="{{ post.name }}" )
+                | Leer más
         a.tag( ui-sref="front.section({ section : post.section.slug, tag : post.tag.slug })" alt="{{ post.tag.name }}" )
             span( class="tag-icon tag-{{ post.tag.slug }}" )
             span.link {{ post.tag.name }}
