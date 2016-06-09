@@ -38,7 +38,7 @@ var express     = require( 'express' ),
     };
 
 router.get( '', function ( req, res, next ) {
-    var filters = [ 'author', 'category', 'created_by', 'creation_date', 'edited_by', 'edition_date', 'name', 'published_by', 'published_date', 'section', 'status', 'tag' ];
+    var filters = [ 'author', 'category', 'created_by', 'creation_date', 'edited_by', 'edition_date', 'featured', 'name', 'published_by', 'published_date', 'section', 'status', 'tag' ];
 
     Utils.paginate( Post, filters, _getRefs(), req, res, next );
 });
@@ -167,6 +167,10 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
                 }
 
                 post[key]   = req.body[key];
+            }
+
+            if ( !req.body.featured ) {
+                post.featured   = false;
             }
 
             if ( uploading.cover_photo || uploading.grid_photo ) {

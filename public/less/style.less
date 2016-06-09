@@ -30,6 +30,7 @@ h4                                          { margin-top: 0; margin-bottom: 20px
 a                                           { color: #0c9; }
 a:hover                                     { color: #05aa81; }
 strong                                      { font-weight: 400; }
+p.more-posts > a                            { font-size: 14px; font-weight: 600; }
 .post .title                                { font-size: 36px; line-height: 1.8em; font-weight: 300; color: #333; }
 .post .author                               { font-size: 12px; font-style: italic; font-weight: 300; color: #595959; }
 .post .content h2                           { font-size: 24px; font-weight: 300; line-height: 33px; color: #333; margin-bottom: 20px; }
@@ -38,6 +39,20 @@ strong                                      { font-weight: 400; }
 .section-data .data-list li > span          { font-size: 16px; font-weight: 600; text-align: center; }
 .section-data .data-list li:hover > span,
 .section-data .data-list li.active > span   { color: #fff; }
+.post-item .inner h3                        { font-size: 16px; font-weight: 600; line-height: 1.6em; }
+.post-item .inner h3 > a                    { color: #fff; }
+.post-item .inner a.read-more               { font-size: 12px; color: #0c9; }
+.post-item .inner a.read-more:hover         { font-weight: 600; }
+.post-item .inner p.author                  { font-size: 12px; font-weight: 300; color: #fff; }
+.post-item .inner p.category                { font-weight: 700; text-transform: uppercase; }
+.post-item .inner p.category > a            { color: #fff; }
+.tool-item .inner h3                        { font-size: 14px; font-weight: 600; }
+.tool-item .inner h3 > a                    { color: #0c9; }
+.tool-item .inner p                         { line-height: 15px; }
+.tool-item .inner .category                 { font-size: 14px; font-weight: 600; text-transform: uppercase; }
+.tool-item .inner .category > a             { color: #9b9b9b; }
+.tool-item .inner .author                   { font-size: 11px; font-weight: 300; color: #4a4a4a; }
+.tool-item .inner .read-more                { font-size: 11px; line-height: 15px; }
 .category-header h1                         { font-size: 36px; font-weight: 300; color: #fff; }
 .category-header p                          { font-size: 14px; color: #fff; }
 .category-header .category-info             { text-align: center; }
@@ -235,43 +250,46 @@ section                                     { margin-bottom: 30px; }
 .categories-menu li.active > a,
 .categories-menu li > a:hover               { color: #0c9; }
 .categories-menu li:last-child              { margin-right: 0; }
-.post-item                                  { margin-bottom: 30px; }
-.post-item .inner                           { border-radius: 4px; position: relative; }
+.post-item,
+.tool-item                                  { margin-bottom: 30px; }
+.post-item .inner                           { border-radius: 4px; position: relative; overflow: hidden; }
 .post-item .inner > img                     { border-radius: 4px; }
 .post-item .inner > .overlay                { width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); border-radius: 4px; position: absolute; left: 0; top: 0; }
-.post-item .inner h3                        { font-weight: 700; line-height: 1.6em; position: absolute; bottom: 40px; left: 15px; right: 15px; }
-.post-item .inner h3 a                      { color: #fff; }
-.post-item .inner p.author                  { margin-bottom: 0; font-size: 12px; color: #fff; position: absolute; left: 15px; bottom: 20px; }
-.post-item .inner a.read-more               { font-size: 12px; color: #0c9; position: absolute; bottom: 20px; right: 20px; }
-.post-item .inner a.read-more:hover         { font-weight: 600; }
-.post-item .inner p.category                { margin-bottom: 0; font-weight: 700; text-transform: uppercase; position: absolute; right: 15px; top: 22px; }
-.post-item .inner p.category > a            { color: #fff; }
-.post-item .inner .arrow-tip                { display: inline-block; width: 0; height: 0; margin-left: 5px; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 6px solid #0c9; position: relative; top: 2px; }
+.post-item .inner h3                        { position: absolute; bottom: 40px; left: 15px; right: 15px; }
+.post-item .inner p.author                  { margin-bottom: 0; position: absolute; left: 15px; bottom: 20px; }
+.post-item .inner a.read-more               { position: absolute; bottom: 20px; right: 20px; }
+.post-item .inner p.category                { margin-bottom: 0; position: absolute; right: 15px; top: 22px; }
 .post-item .inner .tag                      { display: block; width: 60%; height: 45px; position: absolute; font-size: 16px; line-height: 45px; color: #fff; left: 15px; top: 15px; }
 .post-item .inner .tag .link                { margin-left: 10px; position: relative; top: -18px; }
-.post-item .inner .tag-icon                 { display: inline-block; width: 45px; height: 45px; background-color: #0c9; background-repeat: no-repeat; background-position: 50%; background-size: 50%; border-radius: 22.5px; }
-.post-item .inner .tag-icon.tag-cultura-y-turismo,
-.post-item .inner .tag-icon.tag-culture     { background-image: url(../img/ic-cultura-y-turismo.png); }
-.post-item .inner .tag-icon.tag-desarrollo-sostenible,
-.post-item .inner .tag-icon.tag-development { background-image: url(../img/ic-desarollo-sostenible.png); }
-.post-item .inner .tag-icon.tag-economia,
-.post-item .inner .tag-icon.tag-economy     { background-image: url(../img/ic-economia.png); }
-.post-item .inner .tag-icon.tag-educacion,
-.post-item .inner .tag-icon.tag-education   { background-image: url(../img/ic-educacion.png); }
-.post-item .inner .tag-icon.tag-energia-y-medio-ambiente,
-.post-item .inner .tag-icon.tag-environment { background-image: url(../img/ic-energia-y-medio-ambiente.png); }
-.post-item .inner .tag-icon.tag-finanzas-y-contrataciones,
-.post-item .inner .tag-icon.tag-finance     { background-image: url(../img/ic-finanzas-y-contrataciones.png); }
-.post-item .inner .tag-icon.tag-geoespacial,
-.post-item .inner .tag-icon.tag-geospatial  { background-image: url(../img/ic-geoespacial.png); }
-.post-item .inner .tag-icon.tag-gobiernos-locales,
-.post-item .inner .tag-icon.tag-government  { background-image: url(../img/ic-gobiernos-locales.png); }
-.post-item .inner .tag-icon.tag-salud,
-.post-item .inner .tag-icon.tag-health      { background-image: url(../img/ic-salud.png); }
-.post-item .inner .tag-icon.tag-seguridad-y-justicia,
-.post-item .inner .tag-icon.tag-security    { background-image: url(../img/ic-seguridad-y-justicia.png); background-position: 50% 42%; }
-.post-item .inner .tag-icon.tag-infraestructura,
-.post-item .inner .tag-icon.tag-infrastructure          { background-image: url(../img/ic-infraestructura.png); }
+.post-item .inner .read-more:after,
+.tool-item .inner .read-more:after          { content: ""; display: inline-block; width: 0; height: 0; margin-left: 5px; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 6px solid #0c9; position: relative; top: 2px; }
+.tool-item .tag-icon                        { float: left; }
+.tool-item .tool-content                    { width: ~"calc(100% - 60px)"; float: right; }
+.tool-item .inner h3                        { margin-top: 10px; }
+.tool-item .inner p                         { margin-bottom: 5px; }
+.tag-icon                                   { display: inline-block; width: 45px; height: 45px; background-color: #0c9; background-repeat: no-repeat; background-position: 50%; background-size: 50%; border-radius: 22.5px; }
+.tag-icon.tag-cultura-y-turismo,
+.tag-icon.tag-culture                       { background-image: url(../img/ic-cultura-y-turismo.png); }
+.tag-icon.tag-desarrollo-sostenible,
+.tag-icon.tag-development                   { background-image: url(../img/ic-desarollo-sostenible.png); }
+.tag-icon.tag-economia,
+.tag-icon.tag-economy                       { background-image: url(../img/ic-economia.png); }
+.tag-icon.tag-educacion,
+.tag-icon.tag-education                     { background-image: url(../img/ic-educacion.png); }
+.tag-icon.tag-energia-y-medio-ambiente,
+.tag-icon.tag-environment                   { background-image: url(../img/ic-energia-y-medio-ambiente.png); }
+.tag-icon.tag-finanzas-y-contrataciones,
+.tag-icon.tag-finance                       { background-image: url(../img/ic-finanzas-y-contrataciones.png); }
+.tag-icon.tag-geoespacial,
+.tag-icon.tag-geospatial                    { background-image: url(../img/ic-geoespacial.png); }
+.tag-icon.tag-gobiernos-locales,
+.tag-icon.tag-government                    { background-image: url(../img/ic-gobiernos-locales.png); }
+.tag-icon.tag-salud,
+.tag-icon.tag-health                        { background-image: url(../img/ic-salud.png); }
+.tag-icon.tag-seguridad-y-justicia,
+.tag-icon.tag-security                      { background-image: url(../img/ic-seguridad-y-justicia.png); background-position: 50% 42%; }
+.tag-icon.tag-infraestructura,
+.tag-icon.tag-infrastructure                { background-image: url(../img/ic-infraestructura.png); }
 
 /********************************
     Category Styles
