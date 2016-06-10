@@ -25,7 +25,7 @@
                         button.btn.btn-primary( type="submit" )
                             .glyphicon.glyphicon-search
             .row.posts-row
-                .col-md-12.post-item( ng-repeat="post in featured" )
+                .col-md-12.post-item( ng-repeat="post in featured" ng-if="page == 1" )
                     include ../includes/post.jade
                 .col-md-6.post-item( ng-repeat="post in posts" ng-if="section == 'blog'" )
                     include ../includes/post.jade

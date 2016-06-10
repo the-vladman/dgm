@@ -30,7 +30,7 @@ define( function () {
                 type        : 'CATEGORY'
             });
 
-            $scope.posts        = Posts.query({
+            Posts.query({
                 category    : $scope.category_id,
                 expanded    : true,
                 featured    : false,
@@ -40,6 +40,9 @@ define( function () {
                 section     : $scope.section_id,
                 status      : 'PUBLISHED',
                 tag         : $scope.search.tag
+            }).$promise.then( function ( data ) {
+                $scope.posts    = data;
+                $scope.total    = Posts.getTotal();
             });
 
             if ( $scope.search.tag ) {
