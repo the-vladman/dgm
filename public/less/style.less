@@ -31,6 +31,10 @@ a                                           { color: #0c9; }
 a:hover                                     { color: #05aa81; }
 strong                                      { font-weight: 400; }
 p.more-posts > a                            { font-size: 14px; font-weight: 600; }
+.home.modal-body                            { text-align: center; }
+.home.modal-body > p > strong               { font-size: 20px; font-weight: 700; color: #0c9; }
+.home.modal-body > ul > li                  { font-size: 20px; font-weight: 600; }
+.home.modal-body > .btn-close               { font-size: 25px; color: #999; }
 .post .title                                { font-size: 36px; line-height: 1.8em; font-weight: 300; color: #333; }
 .post .author                               { font-size: 12px; font-style: italic; font-weight: 300; color: #595959; }
 .post .content h2                           { font-size: 24px; font-weight: 300; line-height: 33px; color: #333; margin-bottom: 20px; }
@@ -208,6 +212,13 @@ section                                     { margin-bottom: 30px; }
 .front h2                                   { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #d8d8d8; text-transform: capitalize; position: relative; }
 .front h2 > a                               { color: #545454; }
 .front h2:after                             { content: ''; width: 40px; position: absolute; bottom: -6px; left: 0; border-bottom: solid 5px #0c9; }
+.modal-dialog                               { width: 460px; margin-top: 150px; }
+.home.modal-body                            { padding: 40px 0; position: relative; }
+.home.modal-body > ul                       { margin-bottom: 0; }
+.home.modal-body > p,
+.home.modal-body > ul > li                  { margin-bottom: 20px; }
+.home.modal-body > ul > li:last-child       { margin-bottom: 0; }
+.home.modal-body > .btn-close               { position: absolute; top: 10px; right: 15px; cursor: pointer; }
 #landing-search                             { padding-top: 30px; padding-bottom: 30px; background: url(../img/bg-landing.png) no-repeat; text-align: center; color: rgba(255,255,255,0.9); }
 #landing-search h3                          { margin-bottom: 20px; }
 #landing-search .tags-list                  { margin-top: 30px; margin-bottom: 50px; }
