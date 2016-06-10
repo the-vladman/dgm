@@ -2,8 +2,19 @@
 
 define( function () {
     return function ( $scope, $location, $stateParams, Posts, Categories ) {
+        var queryFeatured   = function () {
+            $scope.featured     = Posts.query({
+                expanded    : true,
+                featured    : true,
+                page        : 1,
+                per_page    : 1,
+                section     : $scope.section_id,
+                status      : 'PUBLISHED'
+            });
+        };
+
         $scope.page     = 1;
-        $scope.per_page = 12;
+        $scope.per_page = 6;
         $scope.search   = {};
         $scope.section  = $stateParams.section;
         $scope.tags     = Categories.query({
@@ -22,6 +33,7 @@ define( function () {
             $scope.posts        = Posts.query({
                 category    : $scope.category_id,
                 expanded    : true,
+                featured    : false,
                 name        : $scope.search.keyword,
                 page        : $scope.page,
                 per_page    : $scope.per_page,
@@ -41,6 +53,7 @@ define( function () {
 
         if ( $stateParams.section_id ) {
             $scope.section_id   = $stateParams.section_id;
+            queryFeatured();
             $scope.query();
         } else {
             Categories.query({
@@ -52,6 +65,7 @@ define( function () {
             }).$promise.then( function ( data ) {
                 $scope.section_id   = data[0]._id;
                 $scope.query();
+                queryFeatured();
             });
         }
         if ( $stateParams.category ) {
