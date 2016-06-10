@@ -53,6 +53,7 @@ define( function () {
 
         if ( $stateParams.section_id ) {
             $scope.section_id   = $stateParams.section_id;
+            queryFeatured();
             $scope.query();
         } else {
             Categories.query({
