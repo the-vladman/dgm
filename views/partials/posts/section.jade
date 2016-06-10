@@ -27,7 +27,9 @@
             .row.posts-row
                 .col-md-12.post-item( ng-repeat="post in featured" )
                     include ../includes/post.jade
-                .col-md-6.post-item( ng-repeat="post in posts" )
+                .col-md-6.post-item( ng-repeat="post in posts" ng-if="section == 'blog'" )
                     include ../includes/post.jade
+                .col-md-4.tool-item( ng-repeat="post in posts" ng-if="section == 'herramientas'" )
+                    include ../includes/tool.jade
             p.text-center
                 uib-pagination( max-size="10" boundary-links="true" boundary-link-numbers="true" rotate="true" total-items="total" items-per-page="per_page" previous-text!="&lsaquo;" next-text!="&rsaquo;" first-text!="&laquo;" last-text!="&raquo;" ng-model="page" ng-change="query()" )

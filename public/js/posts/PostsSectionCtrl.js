@@ -14,7 +14,7 @@ define( function () {
         };
 
         $scope.page     = 1;
-        $scope.per_page = 6;
+        $scope.per_page = ( $stateParams.section == 'blog' ) ? 6 : 9;
         $scope.search   = {};
         $scope.section  = $stateParams.section;
         $scope.tags     = Categories.query({
