@@ -3,7 +3,7 @@
 define( function () {
     return function ( $scope, $element, $stateParams, Categories, Posts ) {
         $scope.section      = $element.data( 'section' );
-        var per_page        = 4,
+        var per_page        = ( $scope.section == 'blog' ) ? 4 : 6,
             queryFeatured   = function ( section, tag ) {
                 $scope.featured = Posts.query({
                     expanded    : true,
