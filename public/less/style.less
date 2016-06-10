@@ -195,17 +195,21 @@ p.more-posts > a                            { font-size: 14px; font-weight: 600;
 .form-inline .custom-select                 { display: inline-block; border-left: 1px solid #ccc; }
 .form-inline .custom-select select          { width: 100%; }
 .search-form                                { margin-top: 20px; margin-bottom: 30px; }
-.search-form.colored input[type="text"],
-.search-form.colored .custom-select         { background-color: #f5f5f5; box-shadow: none; }
+.search-form.posts input[type="text"],
+.search-form.posts .custom-select           { background-color: #fff; box-shadow: none; border: 1px solid #d8d8d8; }
 .search-form .form-control                  { margin-bottom: 0; border: none; }
 .search-form input[type="text"]             { width: 50%; border-radius: 4px 0 0 4px; }
 .search-form select.form-control            { border-radius: 0; }
 .search-form .custom-select                 { width: 34%; }
+.search-form.posts input[type="text"]       { width: 75%; }
+.search-form.posts .custom-select           { width: 20%; border-left: none; position: relative; top: 1px; }
 .search-form .custom-select select:focus    { box-shadow: none; }
 .search-form .btn                           { display: inline-block; width: auto; border-radius: 0 4px 4px 0; }
 .search-form .btn-primary                   { background-color: #4a4a4a; }
 .search-form .btn-primary:hover,
 .search-form .btn-primary:active            { background-color: #333; }
+.search-form.posts .btn-primary,
+.search-form.posts .btn-primary:hover       { width: 5%; background-color: transparent; color: #9b9b9b; font-size: 20px; border: 1px solid #d8d8d8; border-left: none; }
 
 /********************************
     Tables Styles
