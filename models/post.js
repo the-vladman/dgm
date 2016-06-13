@@ -46,7 +46,8 @@ var mongoose        = require( 'mongoose' ),
         },
         featured        : {
             type        : Boolean,
-            required    : true
+            required    : true,
+            default     : false
         },
         grid_photo      : {
             type        : Object,
