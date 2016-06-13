@@ -64,6 +64,9 @@ define( function () {
         });
         $scope.$on( Posts.getEvent( 'RETRIEVED' ), function () {
             $scope.post.creation_date   = new Date( $scope.post.creation_date );
+            if ( !$scope.post.datasets || $scope.post.datasets.length == 0 ) {
+                $scope.post.datasets    = [ '' ];
+            }
         });
         $scope.$on( Posts.getEvent( 'DELETED' ), function ( e, data ) {
             $scope.$state.go( 'posts.list' );
