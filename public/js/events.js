@@ -13,6 +13,8 @@ define( function () {
         DATASETS_ERROR          : 'datasets.error',
         DATASETS_QUERY          : 'datasets.query',
         DATASETS_QUERYING       : 'datasets.querying',
+        DATASETS_RETRIEVING     : 'datasets.retrieving',
+        DATASETS_RETRIEVED      : 'datasets.retrieved',
         FILEUPLOADER_DONE       : 'fileuploader.done',
         FILEUPLOADER_ERROR      : 'fileuploader.error',
         FILEUPLOADER_UPLOADING  : 'fileuploader.uploading',
