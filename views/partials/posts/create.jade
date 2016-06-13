@@ -50,6 +50,14 @@
                             label
                                 input( type="checkbox" name="featured" value="true" ng-model="post.featured" )
                                 | Destacado
+            .row
+                .col-md-12
+                    .form-group
+                        label( for="datasets" ) Conjuntos de datos
+                        .post-datasets( ng-repeat="dataset in post.datasets track by $index" )
+                            input( type="text" name="datasets" class="form-control" placeholder="Dataset ID" ng-model="post.datasets[$index]" )
+                            button( type="button" class="btn btn-primary" ng-click="datasetAdd()" ng-if="$index == 0" ) Añadir Conjunto
+                            button( type="button" class="btn btn-danger" ng-click="datasetRemove( $index )" ng-if="$index != 0" ) Eliminar
         .cover-photo-upload( data-config="configCover" data-img="post.cover_photo" file-uploader ng-class="{uploaded: post.cover_photo}" )
         .post
             h1.title( medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: { align : 'left', buttons : [ 'bold', 'italic', 'underline' ], static : true, updateOnEmptySelection : true } }" data-placeholder="Título del artículo" ng-model="post.name" )

@@ -31,6 +31,10 @@ var mongoose        = require( 'mongoose' ),
             type        : [ String ],
             required    : false
         },
+        datasets_ext    : {
+            type        : [ String ],
+            required    : false
+        },
         edited_by       : {
             type        : mongoose.Schema.Types.ObjectId,
             ref         : 'User',
@@ -42,7 +46,8 @@ var mongoose        = require( 'mongoose' ),
         },
         featured        : {
             type        : Boolean,
-            required    : true
+            required    : true,
+            default     : false
         },
         grid_photo      : {
             type        : Object,

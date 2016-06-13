@@ -15,6 +15,7 @@ define( function () {
             showWeeks       : false
         };
         $scope.post         = {
+            datasets    : [ '' ],
             name        : '',
             section     : ''
         };
@@ -38,7 +39,7 @@ define( function () {
             }
         });
 
-        $scope.create       = function () {
+        $scope.create           = function () {
             $scope.post.author  = $scope.post.author.replace( /<br>/g, '' );
             $scope.post.content = $scope.post.content.replace( /<br>/g, '' );
             $scope.post.name    = $scope.post.name.replace( /<br>/g, '' );
@@ -48,7 +49,13 @@ define( function () {
             
             Posts.create( $scope.post );
         };
-        $scope.open         = function () {
+        $scope.datasetAdd       = function () {
+            $scope.post.datasets.push( '' );
+        };
+        $scope.datasetRemove    = function ( i ) {
+            $scope.post.datasets.splice( i, 1 );
+        };
+        $scope.open             = function () {
             $scope.dpOpen   = true;
         };
 
