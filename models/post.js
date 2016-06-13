@@ -31,6 +31,10 @@ var mongoose        = require( 'mongoose' ),
             type        : [ String ],
             required    : false
         },
+        datasets_ext    : {
+            type        : [ String ],
+            required    : false
+        },
         edited_by       : {
             type        : mongoose.Schema.Types.ObjectId,
             ref         : 'User',

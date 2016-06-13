@@ -99,6 +99,7 @@ router.post( '/', Session.validate, function ( req, res, next ) {
                 created_by      : req.body.created_by,
                 creation_date   : req.body.creation_date,
                 datasets        : req.body.datasets,
+                datasets_ext    : req.body.datasets_ext,
                 edited_by       : req.body.edited_by,
                 edition_date    : req.body.edition_date,
                 featured        : req.body.featured,
