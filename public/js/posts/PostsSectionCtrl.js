@@ -35,9 +35,11 @@ define( function () {
                 expanded    : true,
                 featured    : false,
                 name        : $scope.search.keyword,
+                order       : 'DESC',
                 page        : $scope.page,
                 per_page    : $scope.per_page,
                 section     : $scope.section_id,
+                sort        : 'creation_date',
                 status      : 'PUBLISHED',
                 tag         : $scope.search.tag
             }).$promise.then( function ( data ) {
