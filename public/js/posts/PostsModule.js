@@ -22,7 +22,7 @@ define( function ( require ) {
 
     PostsModule.controller( 'PostsEditCtrl', [ '$scope', '$stateParams', 'events', 'PostsService', 'CategoriesService', 'UsersService', PostsEditCtrl ]);
 
-    PostsModule.controller( 'PostsFrontCtrl', [ '$scope', '$stateParams', '$sce', 'PostsService', PostsFrontCtrl ]);
+    PostsModule.controller( 'PostsFrontCtrl', [ '$scope', '$stateParams', '$sce', 'PostsService', 'CkanService', PostsFrontCtrl ]);
 
     PostsModule.controller( 'PostsListCtrl', [ '$scope', 'PostsService', PostsListCtrl ]);
 
