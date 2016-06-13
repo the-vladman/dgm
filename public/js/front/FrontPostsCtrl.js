@@ -19,9 +19,11 @@ define( function () {
                 $scope.posts    = Posts.query({
                     expanded    : true,
                     featured    : false,
+                    order       : 'DESC',
                     page        : 1,
                     per_page    : per_page,
                     section     : section,
+                    sort        : 'creation_date',
                     status      : 'PUBLISHED',
                     tag         : tag
                 });
