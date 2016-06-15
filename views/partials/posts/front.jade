@@ -44,6 +44,9 @@
                         p.author
                             span {{ post.creation_date | date : 'dd MMMM, yyyy' }} |
                             | {{ post.author }}
+                        a.tag( ui-sref="front.section({ section : post.section.slug, tag : post.tag.slug })" alt="{{ post.tag.name }}" )
+                            span( class="tag-icon tag-{{ post.tag.slug }}" )
+                            span.link {{ post.tag.name }}
                     .col-md-7.col-md-offset-1.tool-slider
                 .row
                     .col-md-8
