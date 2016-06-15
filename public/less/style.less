@@ -42,6 +42,7 @@ p.more-posts > a                            { font-size: 14px; font-weight: 600;
 .post .content h2                           { font-size: 24px; font-weight: 300; line-height: 33px; color: #333; margin-bottom: 20px; }
 .post .content li,
 .post .content p                            { font-size: 16px; line-height: 26px; font-weight: 300; color: #595959; margin-bottom: 20px; }
+.post .share-buttons p                      { font-size: 11px; font-weight: 300; color: #474747; text-transform: uppercase; text-align: center; }
 .section-data .data-list li > span          { font-size: 16px; font-weight: 600; text-align: center; }
 .section-data .data-list li:hover > span,
 .section-data .data-list li.active > span   { color: #fff; }
@@ -259,12 +260,15 @@ section                                     { margin-bottom: 30px; }
 /********************************
     Posts Styles
 ********************************/
-.front .post                                { margin-bottom: 100px; }
+.front .post                                { margin-bottom: 100px; position: relative; }
 .admin .post                                { padding: 20px; background-color: #fff; }
 .post .title                                { margin-top: 0; margin-bottom: 30px; }
 .front .post .title                         { margin-top: 50px; }
 .post .content ul                           { margin-bottom: 20px; padding-left: 15px; list-style: disc; }
 .post .content li                           { margin-bottom: 15px; }
+.post .share-buttons                        { position: absolute; right: 15px; top: 100px; }
+.post .share-buttons > p                    { margin-bottom: 15px; }
+.post .share-buttons .fb-share              { margin-bottom: 15px; }
 .post #disqus_thread                        { margin-top: 50px; }
 .posts-row:last-child                       { margin-bottom: 0; }
 .section-page .pagination                   { margin-bottom: 60px; }
