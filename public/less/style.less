@@ -46,6 +46,7 @@ p.more-posts > a                            { font-size: 14px; font-weight: 600;
 .post .content li,
 .post .content p                            { font-size: 16px; line-height: 26px; font-weight: 300; color: #595959; margin-bottom: 20px; }
 .post .share-buttons p                      { font-size: 11px; font-weight: 300; color: #474747; text-transform: uppercase; text-align: center; }
+.post .tool-link                            { font-size: 12px; font-weight: 600; color: #fff; }
 .section-data .data-list li > span          { font-size: 16px; font-weight: 600; text-align: center; }
 .section-data .data-list li:hover > span,
 .section-data .data-list li.active > span   { color: #fff; }
@@ -274,11 +275,19 @@ section                                     { margin-bottom: 30px; }
 .post .content ul                           { margin-bottom: 20px; padding-left: 15px; list-style: disc; }
 .post .content li                           { margin-bottom: 15px; }
 .post .share-buttons                        { position: absolute; right: 15px; top: 100px; }
-.post.tool .share-buttons                   { top: 375px; }
+.post.tool .share-buttons                   { top: 350px; }
 .post .share-buttons > p                    { margin-bottom: 15px; }
 .post .share-buttons .fb-share              { margin-bottom: 15px; }
 .post .tool-slider                          { height: 300px; margin-bottom: 50px; background-color: #f6f6f6; }
 .post #disqus_thread                        { margin-top: 50px; }
+.post .tool-info                            { height: 300px; position: relative; }
+.post .tool-info .link-buttons              { position: absolute; bottom: 0; }
+.post .tool-link                            { display: block; width: 300px; margin-bottom: 10px; padding: 10px; background-color: #0c9; border-radius: 5px; }
+.post .tool-link:last-child                 { margin-bottom: 0; }
+.post .tool-link:hover                      { background-color: #05aa81; }
+.post .tool-link > img                      { margin-right: 10px; position: relative; }
+.post .tool-link.apple-link > img           { top: -2px; }
+.post .tool-link.google-link > img          { top: -3px; }
 .posts-row:last-child                       { margin-bottom: 0; }
 .section-page .pagination                   { margin-bottom: 60px; }
 .breadcrumb-container                       { background-color: #f6f6f6; }

@@ -39,7 +39,7 @@
                     .tw-share
                         div( tweet="post.name" )
                 .row
-                    .col-md-4
+                    .col-md-4.tool-info
                         h1.title {{ post.name }}
                         p.author
                             span {{ post.creation_date | date : 'dd MMMM, yyyy' }} |
@@ -47,6 +47,13 @@
                         a.tag( ui-sref="front.section({ section : post.section.slug, tag : post.tag.slug })" alt="{{ post.tag.name }}" )
                             span( class="tag-icon tag-{{ post.tag.slug }}" )
                             span.link {{ post.tag.name }}
+                        .link-buttons
+                            a.tool-link.apple-link( href="{{ post.apple_store }}" ng-if="post.apple_store" alt="App Store" target="_blank" )
+                                img( src="img/ic-ios.png" alt="App Store" )
+                                | Disponible en App Store
+                            a.tool-link.google-link( href="{{ post.google_play }}" ng-if="post.google_play" alt="Android Market" target="_blank" )
+                                img( src="img/ic-android.png" alg="Android Market" )
+                                | Disponible en Android Market
                     .col-md-7.col-md-offset-1.tool-slider
                 .row
                     .col-md-8
