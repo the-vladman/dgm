@@ -6,7 +6,7 @@
                     .form-group
                         label( for="section" ) Sección
                         .custom-select
-                            select.form-control( name="section" ng-model="post.section" ng-options="section._id as section.name for section in sections track by section._id" )
+                            select.form-control( name="section" ng-model="post.section" ng-options="section as section.name for section in sections track by section._id" )
                                 option( value="" ) Seleccionar sección...
                 .col-md-4
                     .form-group
@@ -50,6 +50,15 @@
                             label
                                 input( type="checkbox" name="featured" value="true" ng-model="post.featured" )
                                 | Destacado
+            .row( ng-if="post.section.name == 'Herramientas'" )
+                .col-md-6
+                    .form-group
+                        label( for="apple_store" ) Enlace Apple Store
+                        input( type="text" name="apple_store" class="form-control" placeholder="Apple Store" ng-model="post.apple_store" )
+                .col-md-6
+                    .form-group
+                        label( for="google_play" ) Enlace Google Play
+                        input( type="text" name="google_play" class="form-control" placeholder="Google Play" ng-model="post.google_play" )
             .row
                 .col-md-12
                     .form-group

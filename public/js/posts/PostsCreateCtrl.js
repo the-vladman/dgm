@@ -43,6 +43,7 @@ define( function () {
             $scope.post.author  = $scope.post.author.replace( /<br>/g, '' );
             $scope.post.content = $scope.post.content.replace( /<br>/g, '' );
             $scope.post.name    = $scope.post.name.replace( /<br>/g, '' );
+            $scope.post.section = $scope.post.section._id;
             $scope.post.slug    = slug( $scope.post.name, {
                 lower   : true
             });
@@ -73,7 +74,7 @@ define( function () {
                 $scope.categories   = Categories.query({
                     page        : 1,
                     per_page    : 99999,
-                    section     : section,
+                    section     : section._id,
                     select      : 'name',
                     type        : 'CATEGORY'
                 });
