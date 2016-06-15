@@ -39,6 +39,7 @@ p.more-posts > a                            { font-size: 14px; font-weight: 600;
 .data-table table > thead > tr > th         { font-size: 14px; }
 .data-table table > tbody > tr > td         { font-size: 14px; }
 .post .title                                { font-size: 36px; line-height: 1.8em; font-weight: 300; color: #333; }
+.post.tool .title                           { font-size: 20px; line-height: 1.6em; font-weight: 400; }
 .post .author                               { font-size: 12px; font-style: italic; font-weight: 300; color: #595959; }
 .post .author > span                        { font-style: normal; text-transform: capitalize; }
 .post .content h2                           { font-size: 24px; font-weight: 300; line-height: 33px; color: #333; margin-bottom: 20px; }
@@ -262,15 +263,17 @@ section                                     { margin-bottom: 30px; }
 /********************************
     Posts Styles
 ********************************/
-.front .post                                { margin-bottom: 100px; position: relative; }
+.front .post                                { margin-top: 40px; margin-bottom: 100px; position: relative; }
 .admin .post                                { padding: 20px; background-color: #fff; }
 .post .title                                { margin-top: 0; margin-bottom: 30px; }
-.front .post .title                         { margin-top: 50px; }
+.post.tool .title                           { margin-bottom: 20px; }
 .post .content ul                           { margin-bottom: 20px; padding-left: 15px; list-style: disc; }
 .post .content li                           { margin-bottom: 15px; }
 .post .share-buttons                        { position: absolute; right: 15px; top: 100px; }
+.post.tool .share-buttons                   { top: 375px; }
 .post .share-buttons > p                    { margin-bottom: 15px; }
 .post .share-buttons .fb-share              { margin-bottom: 15px; }
+.post .tool-slider                          { height: 300px; margin-bottom: 50px; background-color: #f6f6f6; }
 .post #disqus_thread                        { margin-top: 50px; }
 .posts-row:last-child                       { margin-bottom: 0; }
 .section-page .pagination                   { margin-bottom: 60px; }
