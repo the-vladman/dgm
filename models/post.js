@@ -1,5 +1,9 @@
 var mongoose        = require( 'mongoose' ),
     PostSchema      = new mongoose.Schema({
+        apple_store     : {
+            type        : String,
+            required    : false
+        },
         author          : {
             type        : String,
             required    : true
@@ -48,6 +52,10 @@ var mongoose        = require( 'mongoose' ),
             type        : Boolean,
             required    : true,
             default     : false
+        },
+        google_play     : {
+            type        : String,
+            required    : false
         },
         grid_photo      : {
             type        : Object,

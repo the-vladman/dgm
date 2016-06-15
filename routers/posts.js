@@ -93,6 +93,7 @@ router.post( '/', Session.validate, function ( req, res, next ) {
             next( err );
         } else {
             Post.create({
+                apple_store     : req.body.apple_store,
                 author          : req.body.author,
                 category        : req.body.category,
                 content         : req.body.content,
@@ -103,6 +104,7 @@ router.post( '/', Session.validate, function ( req, res, next ) {
                 edited_by       : req.body.edited_by,
                 edition_date    : req.body.edition_date,
                 featured        : req.body.featured,
+                google_play     : req.body.google_play,
                 name            : req.body.name,
                 published_by    : req.body.published_by,
                 published_date  : req.body.published_date,
