@@ -11,6 +11,11 @@
                     span Más descargados
             .data-table
                 table.table
+                    thead
+                        tr
+                            th Nombre
+                            th Institución
+                            th Formato
                     tbody
                         tr( ng-repeat="dataset in datasets" ng-click="select( dataset.name )" )
                             td {{ dataset.title }}
