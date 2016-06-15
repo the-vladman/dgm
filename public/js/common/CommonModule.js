@@ -2,8 +2,9 @@
 
 define( function ( require ) {
     var BaseService             = require( 'common/BaseService' );
-    var CkanService             = require( 'common/CkanService' );
     var BreadcrumbDirective     = require( 'common/BreadcrumbDirective' );
+    var CkanService             = require( 'common/CkanService' );
+    var FbShareDirective        = require( 'common/FbShareDirective' );
     var FileUploaderDirective   = require( 'common/FileUploaderDirective' );
     var NoSpaceFilter           = require( 'common/NoSpaceFilter' );
     var TweetDirective          = require( 'common/TweetDirective' );
@@ -15,6 +16,8 @@ define( function ( require ) {
     CommonModule.directive( 'fileUploader', [ '$rootScope', 'events', 'SessionsService', FileUploaderDirective ]);
 
     CommonModule.directive( 'tweet', [ '$window', '$location', TweetDirective ]);
+
+    CommonModule.directive( 'fbShare', [ '$window', '$location', FbShareDirective ]);
 
     CommonModule.factory( 'BaseService', [ '$rootScope', '$resource', 'events', BaseService ]);
 
