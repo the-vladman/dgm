@@ -1,5 +1,9 @@
 var mongoose        = require( 'mongoose' ),
     PostSchema      = new mongoose.Schema({
+        apple_store     : {
+            type        : String,
+            required    : false
+        },
         author          : {
             type        : String,
             required    : true
@@ -49,6 +53,10 @@ var mongoose        = require( 'mongoose' ),
             required    : true,
             default     : false
         },
+        google_play     : {
+            type        : String,
+            required    : false
+        },
         grid_photo      : {
             type        : Object,
             required    : false
@@ -74,6 +82,10 @@ var mongoose        = require( 'mongoose' ),
             ref         : 'Category',
             required    : true
         },
+        slider_photos   : {
+            type        : [],
+            required    : false
+        },
         slug            : {
             type        : String,
             required    : true
@@ -89,4 +101,5 @@ var mongoose        = require( 'mongoose' ),
         }
     });
 
+PostSchema.set( 'versionKey', false );
 module.exports  = mongoose.model( 'Post', PostSchema );

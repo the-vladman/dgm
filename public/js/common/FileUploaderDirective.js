@@ -9,7 +9,7 @@ define( function () {
                 img     : '='
             },
             templateUrl : 'partials/common/fileuploader.jade',
-            link        : function ( scope, element ) {
+            link        : function ( scope, element, attrs ) {
                 var addHandler          = function ( e, data ) {
                         element.removeClass( 'dragging' ).addClass( 'uploading' );
 
@@ -25,6 +25,11 @@ define( function () {
                         element.removeClass( 'uploading' ).addClass( 'uploaded' );
                         var result              = {};
                         result[scope.fileName]  = data.result;
+
+                        if ( attrs.index ) {
+                            result.index        = attrs.index;
+                        }
+
                         $rootScope.$broadcast( events.FILEUPLOADER_DONE, result );
                     },
                     dragleaveHandler    = function () {

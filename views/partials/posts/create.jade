@@ -6,19 +6,19 @@
                     .form-group
                         label( for="section" ) Sección
                         .custom-select
-                            select.form-control( name="section" ng-model="post.section" ng-options="section._id as section.name for section in sections track by section._id" )
+                            select.form-control( name="section" ng-model="post.section" ng-options="section._id as section.name for section in sections" )
                                 option( value="" ) Seleccionar sección...
                 .col-md-4
                     .form-group
                         label( for="category" ) Categoría
                         .custom-select
-                            select.form-control( name="category" ng-model="post.category" ng-options="category._id as category.name for category in categories track by category._id" )
+                            select.form-control( name="category" ng-model="post.category" ng-options="category._id as category.name for category in categories" )
                                 option( value="" ) Seleccionar categoría...
                 .col-md-4
                     .form-group
                         label( for="tag" ) Tag
                         .custom-select
-                            select.form-control( name="tag" ng-model="post.tag" ng-options="tag._id as tag.name for tag in tags track by tag._id" )
+                            select.form-control( name="tag" ng-model="post.tag" ng-options="tag._id as tag.name for tag in tags" )
                                 option( value="" ) Seleccionar tag...
             .row
                 .col-md-6
@@ -42,7 +42,7 @@
                     .form-group
                         label( for="created_by" ) Creado por
                         .custom-select
-                            select.form-control( name="created_by" ng-model="post.created_by" ng-options="author._id as author.name for author in authors track by author._id" )
+                            select.form-control( name="created_by" ng-model="post.created_by" ng-options="author._id as author.name for author in authors" )
                                 option( value="" ) Seleccione autor...
                 .col-md-6
                     .form-group
@@ -50,6 +50,15 @@
                             label
                                 input( type="checkbox" name="featured" value="true" ng-model="post.featured" )
                                 | Destacado
+            .row( ng-if="sectionName == 'Herramientas'" )
+                .col-md-6
+                    .form-group
+                        label( for="apple_store" ) Enlace Apple Store
+                        input( type="text" name="apple_store" class="form-control" placeholder="Apple Store" ng-model="post.apple_store" )
+                .col-md-6
+                    .form-group
+                        label( for="google_play" ) Enlace Google Play
+                        input( type="text" name="google_play" class="form-control" placeholder="Google Play" ng-model="post.google_play" )
             .row
                 .col-md-12
                     .form-group
@@ -65,3 +74,8 @@
             .content( medium-editor bind-options="{toolbar : { buttons : [ 'bold', 'italic', 'underline', 'anchor', 'h2', 'quote', 'orderedlist', 'unorderedlist' ] }}" data-placeholder="Contenido del artículo" ng-model="post.content" )
     .col-md-4
         .grid-photo-upload( data-config="configGrid" data-img="post.grid_photo" file-uploader ng-class="{uploaded: post.grid_photo}" )
+        div.photo-gallery( ng-if="sectionName == 'Herramientas'" )
+            h3 Galería de Fotos
+            button( type="button" class="btn btn-primary" ng-click="photoAdd()" ) Añadir Imagen
+            button( type="button" class="btn btn-danger" ng-click="photoRemove()" ) Eliminar Imagen
+            .gallery-photo-upload( data-config="configGallery" data-img="photo" data-index="{{ $index }}" file-uploader ng-class="{uploaded: photo.path}" ng-repeat="photo in post.slider_photos track by $index" )

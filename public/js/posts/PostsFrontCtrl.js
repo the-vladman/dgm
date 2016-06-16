@@ -2,6 +2,7 @@
 
 define( function () {
     return function ( $scope, $stateParams, $sce, Posts, CkanService ) {
+        $scope.section  = $stateParams.section;
         $scope.post     = Posts.get( $stateParams.post, true );
 
         $scope.$on( Posts.getEvent( 'RETRIEVED' ), function () {
