@@ -63,8 +63,8 @@ define( function () {
         $scope.photoAdd         = function () {
             $scope.post.slider_photos.push( '' );
         };
-        $scope.photoRemove      = function ( i ) {
-            $scope.post.slider_photos.splice( i, 1 );
+        $scope.photoRemove      = function () {
+            $scope.post.slider_photos.pop();
         };
         $scope.open             = function () {
             $scope.dpOpen   = true;

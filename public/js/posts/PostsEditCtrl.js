@@ -53,8 +53,8 @@ define( function () {
         $scope.photoAdd         = function () {
             $scope.post.slider_photos.push( '' );
         };
-        $scope.photoRemove      = function ( i ) {
-            $scope.post.slider_photos.splice( i, 1 );
+        $scope.photoRemove      = function () {
+            $scope.post.slider_photos.pop();
 
             delete $scope.post.cover_photo;
             delete $scope.post.grid_photo;
