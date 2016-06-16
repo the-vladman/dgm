@@ -36,7 +36,7 @@ var mongoose        = require( 'mongoose' ),
             required    : false
         },
         datasets_ext    : {
-            type        : [ String ],
+            type        : [],
             required    : false
         },
         edited_by       : {

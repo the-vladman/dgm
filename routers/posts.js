@@ -143,7 +143,7 @@ router.post( '/', Session.validate, function ( req, res, next ) {
                             moveFile( 'grid_photo', post );
                         }
 
-                        if ( req.body.slider_photos ) {
+                        if ( req.body.slider_photos && req.body.slider_photos[0].path ) {
                             moveFile( 'slider_photos', post );
                         }
                     }
