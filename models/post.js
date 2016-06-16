@@ -83,7 +83,7 @@ var mongoose        = require( 'mongoose' ),
             required    : true
         },
         slider_photos   : {
-            type        : Array,
+            type        : [],
             required    : false
         },
         slug            : {
@@ -101,4 +101,5 @@ var mongoose        = require( 'mongoose' ),
         }
     });
 
+PostSchema.set( 'versionKey', false );
 module.exports  = mongoose.model( 'Post', PostSchema );

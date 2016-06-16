@@ -73,16 +73,18 @@ router.post( '/', Session.validate, function ( req, res, next ) {
         grid        = false,
         moveFile    = function ( field, post ) {
             if ( field == 'slider_photos' ) {
-                var j = 0;
+                var j               = 0;
                 post.slider_photos  = Array();
-                for ( var i = 0; i < req.body.slider_photos.length; i++ ) {
-                    Utils.move( req.body.slider_photos[i], path.join( config.uploads_path, post.id ), function ( e, file ) {
-                        post.slider_photos.push( file );
 
-                        if ( ++j == req.body.slider_photos.length ) {
+                for ( var i = 0; i < req.body.slider_photos.length; i++ ) {
+                    Utils.move( req.body.slider_photos[i], path.join( config.uploads_path, post.id ), function ( e, file, index ) {
+                        post.slider_photos[index]   = file;
+
+                        if ( ++j >= req.body.slider_photos.length ) {
+                            post.markModified( 'slider_photos' );
                             post.save();
                         }
-                    });
+                    }, i );
                 }
             } else {
                 Utils.move( req.body[field], path.join( config.uploads_path, post.id ), function ( e, file ) {
@@ -159,18 +161,23 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
             grid_photo      : false,
             slider_photos   : false
         },
-        moveImg         = function ( field, post ) {
+        moveImg     = function ( field, post ) {
             if ( field == 'slider_photos' ) {
-                var j = 0;
-                post.slider_photos  = Array();
-                for ( var i = 0; i < req.body.slider_photos.length; i++ ) {
-                    Utils.move( req.body.slider_photos[i], path.join( config.uploads_path, post.id ), function ( e, file ) {
-                        post.slider_photos.push( file );
+                var j   = 0;
 
-                        if ( ++j == req.body.slider_photos.length ) {
+                for ( var i = 0; i < req.body.slider_photos.length; i++ ) {
+                    if ( post.slider_photos[i] && post.slider_photos[i].path != req.body.slider_photos[i].path ) {
+                        fs.unlink( post.slider_photos[i].path );
+                    }
+
+                    Utils.move( req.body.slider_photos[i], path.join( config.uploads_path, post.id ), function ( e, file, index ) {
+                        post.slider_photos[index]   = file;
+
+                        if ( ++j >= req.body.slider_photos.length ) {
+                            post.markModified( 'slider_photos' );
                             post.save( updated );
                         }
-                    });
+                    }, i );
                 }
             } else {
                 Utils.move( req.body[field], path.join( config.uploads_path, post.id ), function ( e, file ) {
@@ -179,7 +186,7 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
                 });
             }
         },
-        updated         = function ( err, post ) {
+        updated     = function ( err, post ) {
             res.json( post );
         };
 
@@ -231,17 +238,7 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
                 }
 
                 if ( uploading.slider_photos ) {
-                    if ( post.slider_photos && post.slider_photos.length > 0 ) {
-                        for ( var i = 0; i < post.slider_photos.length; i++ ) {
-                            if ( post.slider_photos[i] && post.slider_photos[i].path ) {
-                                fs.unlinkSync( post.slider_photos[i].path );
-                            }
-                        }
-
-                        moveImg( 'slider_photos', post );
-                    } else {
-                        moveImg( 'slider_photos', post );
-                    }
+                    moveImg( 'slider_photos', post );
                 }
             } else {
                 post.save( updated );
