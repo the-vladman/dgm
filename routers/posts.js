@@ -44,7 +44,7 @@ router.get( '', function ( req, res, next ) {
 });
 
 router.get( '/:id', function ( req, res, next ) {
-    var query       = ( mongoose.Types.ObjectId.isValid( req.params.id ) ) ? { _id : mongoose.Types.ObjectId( req.params.id ) } : { slug : req.params.id },
+    var query       = ( /^[a-fA-F0-9]{24}$/.test( req.params.id ) ) ? { _id : mongoose.Types.ObjectId( req.params.id ) } : { slug : req.params.id },
         cursor      = Post.findOne( query ),
         callback    = function ( err, post ) {
             if ( err || !post ) {
