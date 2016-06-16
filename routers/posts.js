@@ -174,8 +174,18 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
                         post.slider_photos[index]   = file;
 
                         if ( ++j >= req.body.slider_photos.length ) {
-                            post.markModified( 'slider_photos' );
-                            post.save( updated );
+                            if ( post.slider_photos.length > req.body.slider_photos.length ) {
+                                for ( var k = j; k < post.slider_photos.length; k++ ) {
+                                    fs.unlink( post.slider_photos[k].path );
+                                    post.update({ $pull : { slider_photos : post.slider_photos[k] } }, function () {
+                                        post.slider_photos.pop();
+                                        updated( null, post );
+                                    });
+                                }
+                            } else {
+                                post.markModified( 'slider_photos' );
+                                post.save( updated );
+                            }
                         }
                     }, i );
                 }
