@@ -2,27 +2,34 @@
 
 define( function () {
     return function ( $scope, $stateParams, events, Posts, Categories, Users ) {
-        var uploading       = false;
+        var uploading           = false;
 
-        $scope.configCover  = {
-            fileName        : 'cover_photo',
-            url             : 'cms-api/posts'
-        };
-        $scope.configGrid   = {
-            fileName        : 'grid_photo',
-            url             : 'cms-api/posts'
-        };
-        $scope.dpOpen       = false;
-        $scope.dpOptions    = {
-            showWeeks       : false
-        };
-        $scope.post     = Posts.get( $stateParams.id, true );
-        $scope.sections = Categories.query({
+        Categories.query({
             page        : 1,
             per_page    : 99999,
             select      : 'name',
             type        : 'SECTION'
+        }).$promise.then( function ( data ) {
+            $scope.sections     = data;
+            $scope.post         = Posts.get( $stateParams.id );
         });
+
+        $scope.configCover      = {
+            fileName    : 'cover_photo',
+            url         : 'cms-api/posts'
+        };
+        $scope.configGallery    = {
+            fileName    : 'slider_photos',
+            url         : 'cms-api/posts'
+        };
+        $scope.configGrid       = {
+            fileName    : 'grid_photo',
+            url         : 'cms-api/posts'
+        };
+        $scope.dpOpen           = false;
+        $scope.dpOptions        = {
+            showWeeks       : false
+        };
         $scope.tags     = Categories.query({
             page        : 1,
             per_page    : 99999,
@@ -41,7 +48,6 @@ define( function () {
             $scope.post.author  = $scope.post.author.replace( /<br>/g, '' );
             $scope.post.content = $scope.post.content.replace( /<br>/g, '' );
             $scope.post.name    = $scope.post.name.replace( /<br>/g, '' );
-            $scope.post.section = $scope.post.section._id;
             $scope.post.slug    = slug( $scope.post.name, {
                 lower   : true
             });
@@ -49,6 +55,7 @@ define( function () {
             if ( !uploading ) {
                 delete $scope.post.cover_photo;
                 delete $scope.post.grid_photo;
+                delete $scope.post.slider_photos;
             }
 
             Posts.update( $stateParams.id, $scope.post );
@@ -58,7 +65,30 @@ define( function () {
         };
 
         $scope.$on( events.FILEUPLOADER_DONE, function ( e, data ) {
-            $scope.post[ Object.keys( data )[0] ]   = data[ Object.keys( data )[0] ];
+            if ( Object.keys( data )[0] == 'slider_photos' ) {
+                if ( $scope.post.slider_photos[0] == '' ) {
+                    $scope.post.slider_photos[0]        = data[ Object.keys( data )[0] ];
+                } else {
+                    $scope.post.slider_photos.push( data[ Object.keys( data )[0] ] );
+                }
+            } else {
+                $scope.post[ Object.keys( data )[0] ]   = data[ Object.keys( data )[0] ];
+            }
+
+            switch ( Object.keys( data )[0] ) {
+                case 'cover_photo' :
+                    delete $scope.post.grid_photo;
+                    delete $scope.post.slider_photos;
+                    break;
+                case 'grid_photo' :
+                    delete $scope.post.cover_photo;
+                    delete $scope.post.slider_photos;
+                    break;
+                case 'slider_photos' :
+                    delete $scope.post.cover_photo;
+                    delete $scope.post.grid_photo;
+                    break;
+            }
 
             uploading   = true;
             $scope.update();
@@ -66,7 +96,11 @@ define( function () {
         $scope.$on( Posts.getEvent( 'RETRIEVED' ), function () {
             $scope.post.creation_date   = new Date( $scope.post.creation_date );
             if ( !$scope.post.datasets || $scope.post.datasets.length == 0 ) {
-                $scope.post.datasets    = [ '' ];
+                $scope.post.datasets        = [ '' ];
+            }
+
+            if ( !$scope.post.slider_photos || $scope.post.slider_photos.length == 0 ) {
+                $scope.post.slider_photos   = [ '' ];
             }
         });
         $scope.$on( Posts.getEvent( 'DELETED' ), function ( e, data ) {
@@ -76,8 +110,9 @@ define( function () {
             if ( !uploading ) {
                 $scope.$state.go( 'posts.list' );
             } else {
-                $scope.post.cover_photo = data.cover_photo;
-                $scope.post.grid_photo  = data.grid_photo;
+                $scope.post.cover_photo     = data.cover_photo;
+                $scope.post.grid_photo      = data.grid_photo;
+                $scope.post.slider_photos   = data.slider_photos;
                 uploading   = false;
             }
         });
@@ -92,10 +127,16 @@ define( function () {
                 $scope.categories   = Categories.query({
                     page        : 1,
                     per_page    : 99999,
-                    section     : section._id,
+                    section     : section,
                     select      : 'name',
                     type        : 'CATEGORY'
                 });
+
+                for ( var i = 0; i < $scope.sections.length; i++ ) {
+                    if ( section == $scope.sections[i]._id ) {
+                        $scope.sectionName  = $scope.sections[i].name;
+                    }
+                }
             }
         });
     };
