@@ -29,7 +29,7 @@
                                         th Nombre
                                         th Institución
                                         th Formato
-                                tbody∏
+                                tbody
                                     tr( ng-repeat="dataset in datasets" ng-click="select( dataset.name )" )
                                         td {{ dataset.title }}
                                         td( width="25%" ) {{ dataset.organization.title }}
@@ -59,7 +59,14 @@
                             a.tool-link.google-link( href="{{ post.google_play }}" ng-if="post.google_play" alt="Android Market" target="_blank" )
                                 img( src="img/ic-android.png" alg="Android Market" )
                                 | Disponible en Android Market
-                    .col-md-7.col-md-offset-1.tool-slider
+                    .col-md-7.col-md-offset-1
+                        .tool-slider
+                            #tool-gallery.carousel.slide( data-ride="carousel" ng-if="post.slider_photos && post.slider_photos.length > 0" )
+                                ol.carousel-indicators
+                                    li( ng-repeat="photo in post.slider_photos" data-target="#tool-gallery" data-slide-to="{{ $index }}" ng-class="{active: $index == 0}" )
+                                .carousel-inner( role="listbox" )
+                                    .item( ng-repeat="photo in post.slider_photos" ng-class="{active: $index == 0}" )
+                                        img( ng-src="{{ photo.path }}" )
                 .row
                     .col-md-8
                         .content( ng-bind-html="content" )
