@@ -4,6 +4,7 @@ define( function ( require ) {
     var BaseService             = require( 'common/BaseService' );
     var BreadcrumbDirective     = require( 'common/BreadcrumbDirective' );
     var CkanService             = require( 'common/CkanService' );
+    var ExcerptFilter           = require( 'common/ExcerptFilter' );
     var FbShareDirective        = require( 'common/FbShareDirective' );
     var FileUploaderDirective   = require( 'common/FileUploaderDirective' );
     var NoSpaceFilter           = require( 'common/NoSpaceFilter' );
@@ -22,6 +23,8 @@ define( function ( require ) {
     CommonModule.factory( 'BaseService', [ '$rootScope', '$resource', 'events', BaseService ]);
 
     CommonModule.factory( 'CkanService', [ '$rootScope', '$resource', 'events', CkanService ]);
+
+    CommonModule.filter( 'excerpt', ExcerptFilter );
 
     CommonModule.filter( 'noSpace', [ NoSpaceFilter ]);
 });
