@@ -44,6 +44,23 @@ define( function () {
             }
         });
 
+        $scope.datasetAdd       = function () {
+            $scope.post.datasets.push( '' );
+        };
+        $scope.datasetRemove    = function ( i ) {
+            $scope.post.datasets.splice( i, 1 );
+        };
+        $scope.photoAdd         = function () {
+            $scope.post.slider_photos.push( '' );
+        };
+        $scope.photoRemove      = function ( i ) {
+            $scope.post.slider_photos.splice( i, 1 );
+
+            delete $scope.post.cover_photo;
+            delete $scope.post.grid_photo;
+            uploading   = true;
+            $scope.update();
+        };
         $scope.update   = function () {
             $scope.post.author  = $scope.post.author.replace( /<br>/g, '' );
             $scope.post.content = $scope.post.content.replace( /<br>/g, '' );
@@ -66,11 +83,7 @@ define( function () {
 
         $scope.$on( events.FILEUPLOADER_DONE, function ( e, data ) {
             if ( Object.keys( data )[0] == 'slider_photos' ) {
-                if ( $scope.post.slider_photos[0] == '' ) {
-                    $scope.post.slider_photos[0]        = data[ Object.keys( data )[0] ];
-                } else {
-                    $scope.post.slider_photos.push( data[ Object.keys( data )[0] ] );
-                }
+                $scope.post.slider_photos[ parseInt( data.index ) ] = data[ Object.keys( data )[0] ];
             } else {
                 $scope.post[ Object.keys( data )[0] ]   = data[ Object.keys( data )[0] ];
             }

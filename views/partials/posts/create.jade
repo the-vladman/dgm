@@ -76,4 +76,6 @@
         .grid-photo-upload( data-config="configGrid" data-img="post.grid_photo" file-uploader ng-class="{uploaded: post.grid_photo}" )
         div.photo-gallery( ng-if="sectionName == 'Herramientas'" )
             h3 Galería de Fotos
-            .gallery-photo-upload( data-config="configGallery" data-img="photo" file-uploader ng-class="{uploaded: photo.path}" ng-repeat="photo in post.slider_photos track by $index" )
+            button( type="button" class="btn btn-primary" ng-click="photoAdd()" ) Añadir Imagen
+            button( type="button" class="btn btn-danger" ng-click="photoRemove()" ) Eliminar Imagen
+            .gallery-photo-upload( data-config="configGallery" data-img="photo" data-index="{{ $index }}" file-uploader ng-class="{uploaded: photo.path}" ng-repeat="photo in post.slider_photos track by $index" )
