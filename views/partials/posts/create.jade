@@ -67,6 +67,18 @@
                             input( type="text" name="datasets" class="form-control" placeholder="Dataset ID" ng-model="post.datasets[$index]" )
                             button( type="button" class="btn btn-primary" ng-click="datasetAdd()" ng-if="$index == 0" ) Añadir Conjunto
                             button( type="button" class="btn btn-danger" ng-click="datasetRemove( $index )" ng-if="$index != 0" ) Eliminar
+            .row( ng-repeat="dataset_ext in post.datasets_ext track by $index" )
+                .col-md-6
+                    .form-group
+                        label( for="dataset" ) Conjuntos de datos
+                        input( type="text" name="dataset" class="form-control" placeholder="Dataset" ng-model="post.datasets_ext[$index].name" )
+                .col-md-6
+                    .form-group
+                        label( for="dataset_link" ) Enlace Externo
+                        .post-datasets
+                            input( type="text" name="dataset_link" class="form-control" placeholder="Dataset Link" ng-model="post.datasets_ext[$index].href" )
+                            button( type="button" class="btn btn-primary" ng-click="datasetExtAdd()" ng-if="$index == 0" ) Añadir Conjunto
+                            button( type="button" class="btn btn-danger" ng-click="datasetExtRemove( $index )" ng-if="$index != 0" ) Eliminar
         .cover-photo-upload( data-config="configCover" data-img="post.cover_photo" file-uploader ng-class="{uploaded: post.cover_photo}" )
         .post
             h1.title( medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: { align : 'left', buttons : [ 'bold', 'italic', 'underline' ], static : true, updateOnEmptySelection : true } }" data-placeholder="Título del artículo" ng-model="post.name" )

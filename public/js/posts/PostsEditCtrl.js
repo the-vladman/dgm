@@ -50,6 +50,12 @@ define( function () {
         $scope.datasetRemove    = function ( i ) {
             $scope.post.datasets.splice( i, 1 );
         };
+        $scope.datasetExtAdd    = function () {
+            $scope.post.datasets_ext.push( '' );
+        };
+        $scope.datasetExtRemove = function ( i ) {
+            $scope.post.datasets_ext.splice( i, 1 );
+        };
         $scope.photoAdd         = function () {
             $scope.post.slider_photos.push( '' );
         };
@@ -110,6 +116,10 @@ define( function () {
             $scope.post.creation_date   = new Date( $scope.post.creation_date );
             if ( !$scope.post.datasets || $scope.post.datasets.length == 0 ) {
                 $scope.post.datasets        = [ '' ];
+            }
+
+            if ( !$scope.post.datasets_ext || $scope.post.datasets_ext.length == 0 ) {
+                $scope.post.datasets_ext    = [ '' ];
             }
 
             if ( !$scope.post.slider_photos || $scope.post.slider_photos.length == 0 ) {

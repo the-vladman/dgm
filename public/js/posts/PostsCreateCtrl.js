@@ -20,6 +20,7 @@ define( function () {
         };
         $scope.post     = {
             datasets        : [ '' ],
+            datasets_ext    : [ '' ],
             slider_photos   : [ '' ],
             name            : '',
             section         : ''
@@ -59,6 +60,12 @@ define( function () {
         };
         $scope.datasetRemove    = function ( i ) {
             $scope.post.datasets.splice( i, 1 );
+        };
+        $scope.datasetExtAdd    = function () {
+            $scope.post.datasets_ext.push( '' );
+        };
+        $scope.datasetExtRemove = function ( i ) {
+            $scope.post.datasets_ext.splice( i, 1 );
         };
         $scope.photoAdd         = function () {
             $scope.post.slider_photos.push( '' );
