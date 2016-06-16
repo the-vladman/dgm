@@ -72,10 +72,24 @@ router.post( '/', Session.validate, function ( req, res, next ) {
     var cover       = false,
         grid        = false,
         moveFile    = function ( field, post ) {
-            Utils.move( req.body[field], path.join( config.uploads_path, post.id ), function ( e, file ) {
-                post[field] = file;
-                post.save();
-            });
+            if ( field == 'slider_photos' ) {
+                var j = 0;
+                post.slider_photos  = Array();
+                for ( var i = 0; i < req.body.slider_photos.length; i++ ) {
+                    Utils.move( req.body.slider_photos[i], path.join( config.uploads_path, post.id ), function ( e, file ) {
+                        post.slider_photos.push( file );
+
+                        if ( ++j == req.body.slider_photos.length ) {
+                            post.save();
+                        }
+                    });
+                }
+            } else {
+                Utils.move( req.body[field], path.join( config.uploads_path, post.id ), function ( e, file ) {
+                    post[field] = file;
+                    post.save();
+                });
+            }
         };
 
     if ( req.uploading ) {
@@ -118,13 +132,17 @@ router.post( '/', Session.validate, function ( req, res, next ) {
                     err.status  = 403;
                     next( err );
                 } else {
-                    if ( req.body.cover_photo || req.body.grid_photo ) {
+                    if ( req.body.cover_photo || req.body.grid_photo || req.body.slider_photos ) {
                         if ( req.body.cover_photo ) {
                             moveFile( 'cover_photo', post );
                         }
 
                         if ( req.body.grid_photo ) {
                             moveFile( 'grid_photo', post );
+                        }
+
+                        if ( req.body.slider_photos ) {
+                            moveFile( 'slider_photos', post );
                         }
                     }
 
@@ -137,14 +155,29 @@ router.post( '/', Session.validate, function ( req, res, next ) {
 
 router.put( '/:id', Session.validate, function ( req, res, next ) {
     var uploading   = {
-            cover_photo : false,
-            grid_photo  : false
+            cover_photo     : false,
+            grid_photo      : false,
+            slider_photos   : false
         },
         moveImg         = function ( field, post ) {
-            Utils.move( req.body[field], path.join( config.uploads_path, post.id ), function ( e, file ) {
-                post[field]             = file;
-                post.save( updated );
-            });
+            if ( field == 'slider_photos' ) {
+                var j = 0;
+                post.slider_photos  = Array();
+                for ( var i = 0; i < req.body.slider_photos.length; i++ ) {
+                    Utils.move( req.body.slider_photos[i], path.join( config.uploads_path, post.id ), function ( e, file ) {
+                        post.slider_photos.push( file );
+
+                        if ( ++j == req.body.slider_photos.length ) {
+                            post.save( updated );
+                        }
+                    });
+                }
+            } else {
+                Utils.move( req.body[field], path.join( config.uploads_path, post.id ), function ( e, file ) {
+                    post[field] = file;
+                    post.save( updated );
+                });
+            }
         },
         updated         = function ( err, post ) {
             res.json( post );
@@ -162,8 +195,8 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
                         continue;
                 }
 
-                if ( key == 'cover_photo' || key == 'grid_photo' ) {
-                    if ( post[key] == undefined || post[key].path != req.body[key].path ) {
+                if ( key == 'cover_photo' || key == 'grid_photo' || key == 'slider_photos' ) {
+                    if ( post[key] == undefined || post[key].path != req.body[key].path || Array.isArray( req.body[key] ) ) {
                         uploading[key]  = true;
                     }
                     continue;
@@ -176,7 +209,7 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
                 post.featured   = false;
             }
 
-            if ( uploading.cover_photo || uploading.grid_photo ) {
+            if ( uploading.cover_photo || uploading.grid_photo || uploading.slider_photos ) {
                 if ( uploading.cover_photo ) {
                     if ( post.cover_photo ) {
                         fs.unlink( post.cover_photo.path, function () {
@@ -194,6 +227,20 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
                         });
                     } else {
                         moveImg( 'grid_photo', post );
+                    }
+                }
+
+                if ( uploading.slider_photos ) {
+                    if ( post.slider_photos && post.slider_photos.length > 0 ) {
+                        for ( var i = 0; i < post.slider_photos.length; i++ ) {
+                            if ( post.slider_photos[i] && post.slider_photos[i].path ) {
+                                fs.unlinkSync( post.slider_photos[i].path );
+                            }
+                        }
+
+                        moveImg( 'slider_photos', post );
+                    } else {
+                        moveImg( 'slider_photos', post );
                     }
                 }
             } else {

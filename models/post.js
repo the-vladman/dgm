@@ -82,6 +82,10 @@ var mongoose        = require( 'mongoose' ),
             ref         : 'Category',
             required    : true
         },
+        slider_photos   : {
+            type        : Array,
+            required    : false
+        },
         slug            : {
             type        : String,
             required    : true
