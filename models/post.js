@@ -98,6 +98,10 @@ var mongoose        = require( 'mongoose' ),
             type        : mongoose.Schema.Types.ObjectId,
             ref         : 'Category',
             required    : true
+        },
+        web_link        : {
+            type        : String,
+            required    : false
         }
     });
 

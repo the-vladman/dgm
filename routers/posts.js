@@ -127,7 +127,8 @@ router.post( '/', Session.validate, function ( req, res, next ) {
                 section         : req.body.section,
                 slug            : req.body.slug,
                 status          : req.body.status,
-                tag             : req.body.tag
+                tag             : req.body.tag,
+                web_link        : req.body.web_link
             }, function ( err, post ) {
                 if ( err || !post ) {
                     err         = new Error( 'Invalid post data' );
