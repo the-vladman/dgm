@@ -2,9 +2,9 @@
     .row
         .col-md-4
             h4 Suscríbete al boletín mensual
-            form( action="//gob.us9.list-manage.com/subscribe/post-json?u=2128f25c973f219e1b51af623&amp;id=99ced13731&amp;c=?" method="get" ng-submit="subscribe( $event )" )
-                //.form-group
-                // input.form-control( type="text" name="name" placeholder="Nombre" ng-model="name" )
+            form( action="//gob.us9.list-manage.com/subscribe/post-json?u=2128f25c973f219e1b51af623&id=99ced13731&c=?" method="get" ng-submit="subscribe( $event )" )
+                .form-group
+                    input.form-control( type="text" name="NAME" placeholder="Nombre" ng-model="name" )
                 .form-group
                     input.form-control( type="email" name="EMAIL" placeholder="Correo electrónico" ng-model="email" )
                 button.btn.btn-primary( type="submit" ) Enviar
