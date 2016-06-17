@@ -119,6 +119,7 @@ router.post( '/', Session.validate, function ( req, res, next ) {
                 datasets_ext    : req.body.datasets_ext,
                 edited_by       : req.body.edited_by,
                 edition_date    : req.body.edition_date,
+                external_link   : req.body.external_link,
                 featured        : req.body.featured,
                 google_play     : req.body.google_play,
                 iframe          : req.body.iframe,
