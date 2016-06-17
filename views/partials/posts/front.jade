@@ -64,6 +64,9 @@
                             span( class="tag-icon tag-{{ post.tag.slug }}" )
                             span.link {{ post.tag.name }}
                         .link-buttons
+                            a.tool-link.web-link( href="{{ post.web_link }}" ng-if="post.web_link" alt="Web App" target="_blank" )
+                                img( src="img/ic-web.png" alt="Web App" )
+                                | Disponible en Aplicación Web
                             a.tool-link.apple-link( href="{{ post.apple_store }}" ng-if="post.apple_store" alt="App Store" target="_blank" )
                                 img( src="img/ic-ios.png" alt="App Store" )
                                 | Disponible en App Store
