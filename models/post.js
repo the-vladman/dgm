@@ -61,6 +61,10 @@ var mongoose        = require( 'mongoose' ),
             type        : Object,
             required    : false
         },
+        iframe          : {
+            type        : String,
+            required    : false
+        },
         name            : {
             type        : String,
             required    : true,

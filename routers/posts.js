@@ -121,6 +121,7 @@ router.post( '/', Session.validate, function ( req, res, next ) {
                 edition_date    : req.body.edition_date,
                 featured        : req.body.featured,
                 google_play     : req.body.google_play,
+                iframe          : req.body.iframe,
                 name            : req.body.name,
                 published_by    : req.body.published_by,
                 published_date  : req.body.published_date,

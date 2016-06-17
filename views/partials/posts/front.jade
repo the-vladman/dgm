@@ -3,6 +3,8 @@
         .row
             .col-md-12
                 breadcrumb
+.iframe-container( ng-if="post.iframe" )
+    iframe( class="tool-iframe noscroll" ng-src="{{ iframe }}" )
 .container-fluid
     .row
         .col-md-12
