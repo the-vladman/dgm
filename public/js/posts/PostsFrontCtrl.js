@@ -6,7 +6,10 @@ define( function () {
         $scope.post     = Posts.get( $stateParams.post, true );
 
         $scope.$on( Posts.getEvent( 'RETRIEVED' ), function () {
-            $scope.content  = $sce.trustAsHtml( $scope.post.content );
+            if ( $scope.post.iframe ) {
+                $scope.iframe   = $sce.trustAsResourceUrl( $scope.post.iframe );
+            }
+            $scope.content      = $sce.trustAsHtml( $scope.post.content );
 
             if ( $scope.post.datasets && $scope.post.datasets.length > 0 ) {
                 $scope.datasets         = Array();
