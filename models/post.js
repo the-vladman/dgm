@@ -48,6 +48,10 @@ var mongoose        = require( 'mongoose' ),
             type        : Date,
             required    : false
         },
+        external_link   : {
+            type        : String,
+            required    : false
+        },
         featured        : {
             type        : Boolean,
             required    : true,
