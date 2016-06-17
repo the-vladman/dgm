@@ -59,6 +59,11 @@
                     .form-group
                         label( for="google_play" ) Enlace Google Play
                         input( type="text" name="google_play" class="form-control" placeholder="Google Play" ng-model="post.google_play" )
+            .row( ng-if="sectionName == 'Herramientas'" )
+                .col-md-6
+                    .form-group
+                        label( for="web_link" ) Enlace Web App
+                        input( type="text" name="web_link" class="form-control" placeholder="Aplicación Web" ng-model="post.web_link" )
             .row
                 .col-md-12
                     .form-group
