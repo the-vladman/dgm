@@ -68,6 +68,11 @@
                     .form-group
                         label( for="iframe" ) iFrame
                         input( type="text" name="iframe" class="form-control" placeholder="Aplicación iFrame" ng-model="post.iframe" )
+            .row( ng-if="sectionName == 'Herramientas'" )
+                .col-md-6
+                    .form-group
+                        label( for="external_link" ) Enlace Micrositio
+                        input( type="text" name="external_link" class="form-control" placeholder="Enlace Micrositio" ng-model="post.external_link" )
             .row
                 .col-md-12
                     .form-group
