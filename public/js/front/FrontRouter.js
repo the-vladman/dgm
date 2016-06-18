@@ -103,6 +103,15 @@ define( function () {
                         controller      : 'PostsSectionCtrl'
                     }
                 }
+            })
+            .state( '404', {
+                parent  : 'front',
+                url     : '/404',
+                views   : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/front/404'
+                    }
+                }
             });
     };
 });
