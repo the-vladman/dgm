@@ -3,12 +3,12 @@
         .row
             .col-md-12
                 breadcrumb
-.container-fluid
-    .row
-        .col-md-12
-            .category-header
-                img( ng-src="{{ category.cover_photo.path }}" alt="{{ category.name }}" )
-                .overlay
+.category-header
+    img( ng-src="{{ category.cover_photo.path }}" alt="{{ category.name }}" )
+    .overlay
+        .container-fluid
+            .row
+                .col-md-12
                     .title
                         img( src="img/ic-{{ category.slug }}.png" alt="{{ category.name }}" )
                         h1 {{ category.name }}
