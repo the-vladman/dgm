@@ -35,8 +35,9 @@ define( function ( require ) {
             'UsersModule'
         ]);
 
-    app.config( [ '$locationProvider', '$httpProvider', function ( $locationProvider, $httpProvider ) {
+    app.config( [ '$locationProvider', '$urlRouterProvider', '$httpProvider', function ( $locationProvider, $urlRouterProvider, $httpProvider ) {
         $locationProvider.html5Mode( true );
+        $urlRouterProvider.otherwise( '/404' );
 
         $httpProvider.interceptors.push( [ '$rootScope', '$cookies', function ( $rootScope, $cookies ) {
             return {
