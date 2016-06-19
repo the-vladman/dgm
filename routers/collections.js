@@ -108,6 +108,14 @@ var async               = require( 'async' ),
                             if ( posts[i].grid_photo && posts[i].grid_photo.path ) {
                                 zip.file( path.join( 'data/images/', posts[i].id, posts[i].grid_photo.name ), fs.readFileSync( posts[i].grid_photo.path ) );
                             }
+
+                            if ( posts[i].slider_photos && Array.isArray( posts[i].slider_photos ) ) {
+                                for ( var j = 0; j < posts[i].slider_photos.length; j++ ) {
+                                    if ( posts[i].slider_photos[j] && posts[i].slider_photos[j].path ) {
+                                        zip.file( path.join( 'data/images/', posts[i].id, posts[i].slider_photos[j].name ), fs.readFileSync( posts[i].slider_photos[j].path ) );
+                                    }
+                                }
+                            }
                         }
 
                         fs.unlinkSync( postsFile );
@@ -257,13 +265,15 @@ var async               = require( 'async' ),
 
             ids.push( posts[i]._id );
             photos.push({
-                cover_photo : posts[i].cover_photo,
-                grid_photo  : posts[i].grid_photo
+                cover_photo     : posts[i].cover_photo,
+                grid_photo      : posts[i].grid_photo,
+                slider_photos   : posts[i].slider_photos
             });
 
             delete posts[i]._id;
             delete posts[i].cover_photo;
             delete posts[i].grid_photo;
+            delete posts[i].slider_photos;
 
             if ( usersIds ) {
                 for ( var j = 0; j < usersIds.length; j++ ) {
@@ -339,6 +349,17 @@ var async               = require( 'async' ),
                             path    : path.join( dir, photos[i].grid_photo.name ),
                             name    : photos[i].grid_photo.name
                         };
+                    }
+
+                    if ( photos[i].slider_photos != undefined && Array.isArray( photos[i].slider_photos ) ) {
+                        post.slider_photos  = Array();
+                        for ( var j = 0; j < photos[i].slider_photos.length; j++ ) {
+                            fs.writeFileSync( path.join( dir, photos[i].slider_photos[j].name ), zip.files['data/images/' + ids[i] + '/' + photos[i].slider_photos[j].name]._data, 'binary' );
+                            post.slider_photos.push({
+                                path    : path.join( dir, photos[i].slider_photos[j].name ),
+                                name    : photos[i].slider_photos[j].name
+                            });
+                        }
                     }
 
                     i++;
