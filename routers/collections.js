@@ -225,8 +225,8 @@ var async               = require( 'async' ),
                             };
                         }
 
+                        i++;
                         category.save( function () {
-                            i++;
                             done( null );
                         });
                     } else {
@@ -341,8 +341,8 @@ var async               = require( 'async' ),
                         };
                     }
 
+                    i++;
                     post.save( function () {
-                        i++;
                         done( null );
                     });
                 }, function ( err ) {
