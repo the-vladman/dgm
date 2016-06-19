@@ -108,6 +108,14 @@ var async               = require( 'async' ),
                             if ( posts[i].grid_photo && posts[i].grid_photo.path ) {
                                 zip.file( path.join( 'data/images/', posts[i].id, posts[i].grid_photo.name ), fs.readFileSync( posts[i].grid_photo.path ) );
                             }
+
+                            if ( posts[i].slider_photos && Array.isArray( posts[i].slider_photos ) ) {
+                                for ( var j = 0; j < posts[i].slider_photos.length; j++ ) {
+                                    if ( posts[i].slider_photos[j] && posts[i].slider_photos[j].path ) {
+                                        zip.file( path.join( 'data/images/', posts[i].id, posts[i].slider_photos[j].name ), fs.readFileSync( posts[i].slider_photos[j].path ) );
+                                    }
+                                }
+                            }
                         }
 
                         fs.unlinkSync( postsFile );
