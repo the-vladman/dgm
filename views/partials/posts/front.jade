@@ -37,7 +37,7 @@
                                         td( width="25%" ) {{ dataset.organization.title }}
                                         td( width="10%" )
                                             span.dataset-format( ng-if="dataset.resources[0].format == 'CSV' || dataset.resources[0].format == 'JSON' || dataset.resources[0].format == 'SHP' || dataset.resources[0].format == 'KML' || dataset.resources[0].format == 'XSLX' || dataset.resources[0].format == 'GEOJSON' || dataset.resources[0].format == 'XML' || dataset.resources[0].format == 'csv' || dataset.resources[0].format == 'json' || dataset.resources[0].format == 'shp' || dataset.resources[0].format == 'kml' || dataset.resources[0].format == 'xslx' || dataset.resources[0].format == 'geojson' || dataset.resources[0].format == 'xml'" data-format="{{ dataset.resources[0].format | noSpace }}") {{ dataset.resources[0].format }}
-                    div( class="datasets" ng-if="post.datasets_ext.length > 0 && post.datasets_ext[0].name != ''" )
+                    div( class="datasets" ng-if="post.datasets_ext.length > 0 && post.datasets_ext[0] != '' && post.datasets_ext[0].name != ''" )
                         h2 Conjuntos de Datos Externos
                         .data-table
                             table.table
@@ -103,7 +103,7 @@
                                             td( width="25%" ) {{ dataset.organization.title }}
                                             td( width="10%" )
                                                 span.dataset-format( ng-if="dataset.resources[0].format == 'CSV' || dataset.resources[0].format == 'JSON' || dataset.resources[0].format == 'SHP' || dataset.resources[0].format == 'KML' || dataset.resources[0].format == 'XSLX' || dataset.resources[0].format == 'GEOJSON' || dataset.resources[0].format == 'XML' || dataset.resources[0].format == 'csv' || dataset.resources[0].format == 'json' || dataset.resources[0].format == 'shp' || dataset.resources[0].format == 'kml' || dataset.resources[0].format == 'xslx' || dataset.resources[0].format == 'geojson' || dataset.resources[0].format == 'xml'" data-format="{{ dataset.resources[0].format | noSpace }}") {{ dataset.resources[0].format }}
-                        div( class="datasets" ng-if="post.datasets_ext.length > 0 && post.datasets_ext[0].name != ''" )
+                        div( class="datasets" ng-if="post.datasets_ext.length > 0 && post.datasets_ext[0] != '' && post.datasets_ext[0].name != ''" )
                             h2 Conjuntos de Datos Externos
                             .data-table
                                 table.table
