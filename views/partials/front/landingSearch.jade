@@ -26,13 +26,11 @@
                     p.shadow Etiquetas populares
                     ul.tags-list
                         li 
-                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=salud" target="_blank" ) Salud
+                            a( href="//busca.datos.gob.mx/#!/conjuntos/?gob=federal" target="_blank" ) Federal
                         li 
-                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=finanzas-y-contrataciones" target="_blank" ) Finanzas y Contrataciones
+                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=energia-y-medio-ambiente" target="_blank" ) Energía y Medio Ambiente
                         li
-                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=seguridad y justicia" target="_blank" ) Seguridad y Justicia
-                        li
-                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=infraestructura" target="_blank" ) Infraestructura
+                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=desarrollo-sostenible" target="_blank" ) Desarrollo Sostenible
             ul.categories-list
                 li( ng-repeat="tag in tags" )
                     a( ui-sref="category.details({ category : tag.slug })" alt="{{ tag.name }}" uib-tooltip="{{ tag.name }}" )
