@@ -6,10 +6,16 @@
             .row.posts-row
                 .col-md-12.post-item( ng-repeat="post in featured" )
                     include ../includes/post.jade
-                .col-md-6.post-item( ng-repeat="post in posts" ng-if="section == 'blog'" )
+            .row.posts-row( ng-if="section == 'blog'" )
+                .col-md-6.post-item( ng-repeat-start="post in posts" )
                     include ../includes/post.jade
-                .col-md-4.tool-item( ng-repeat="post in posts" ng-if="section == 'herramientas'" )
+                .clearfix( ng-if="$index % 2 == 1" )
+                div( ng-repeat-end="" )
+            .row.posts-row( ng-if="section == 'herramientas'" )
+                .col-md-4.tool-item( ng-repeat-start="post in posts" )
                     include ../includes/tool.jade
+                .clearfix( ng-if="$index % 2 == 0 && $index != 0" )
+                div( ng-repeat-end="" )
             p.more-posts: a( ui-sref="front.section({ section : section, section_id : section_id })" ) 
                 span( ng-if="section == 'blog'" ) Ver más historias
                 span( ng-if="section == 'herramientas'" ) Ver más herramientas
