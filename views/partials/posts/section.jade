@@ -27,14 +27,15 @@
             .row.posts-row
                 .col-md-12.post-item( ng-repeat="post in featured" ng-if="page == 1" )
                     include ../includes/post.jade
-            .row.posts-row
-                .col-md-6.post-item( ng-repeat-start="post in posts" ng-if="section == 'blog'" )
+            .row.posts-row( ng-if="section == 'blog'" )
+                .col-md-6.post-item( ng-repeat-start="post in posts" )
                     include ../includes/post.jade
-                .clearfix( ng-if="$index % 2 == 1 && section == 'blog'" )
-                div( ng-repeat-end="" ng-if="section == 'blog'" )
-                .col-md-4.tool-item( ng-repeat="post in posts" ng-if="section == 'herramientas'" )
+                .clearfix( ng-if="$index % 2 == 1" )
+                div( ng-repeat-end="" )
+            .row.posts-row( ng-if="section == 'herramientas'" )
+                .col-md-4.tool-item( ng-repeat-start="post in posts" )
                     include ../includes/tool.jade
-                .clearfix( ng-if="$index % 3 == 2 && section == 'herramientas'" )
-                div( ng-repeat-end="" ng-if="section == 'herramientas'" )
+                .clearfix( ng-if="$index % 2 == 0 && $index != 0" )
+                div( ng-repeat-end="" )
             p.text-center
                 uib-pagination( max-size="10" boundary-links="true" boundary-link-numbers="true" rotate="true" total-items="total" items-per-page="per_page" previous-text!="&lsaquo;" next-text!="&rsaquo;" first-text!="&laquo;" last-text!="&raquo;" ng-model="page" ng-change="query()" )
