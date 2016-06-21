@@ -4,11 +4,10 @@
             h3 Descubre <strong>Datos Abiertos</strong> de tu gobierno.
             p Más de 11,800 datos de 200 instituciones
             .row
-                .col-md-6.col-md-offset-3
+                .col-md-8.col-md-offset-2
                     form.search-form.form-inline( ng-submit="search()" )
                         input.form-control( type="text" name="keyword" placeholder="Ej. Licitaciones Petroleras" ng-model="keyword" )
-                        div.custom-select
-                            select.form-control( name="category" ng-model="category" )
+                        select.form-control( name="category" ng-model="category" custom-select )
                                 option( value="" ) Todas las categorias
                                 option( value="salud" ) Salud
                                 option( value="geoespacial" ) Geoespacial

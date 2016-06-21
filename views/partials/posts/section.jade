@@ -19,9 +19,8 @@
                 .col-md-12
                     form.search-form.posts.form-inline( ng-submit="query()" )
                         input.form-control( type="text" name="keyword" placeholder="Ej. Atlas de complejidad económica" ng-model="search.keyword" )
-                        div.custom-select
-                            select.form-control( name="tag" ng-model="search.tag" ng-options="tag._id as tag.name for tag in tags track by tag._id" )
-                                option( value="" ) Filtrar por tema
+                        select.form-control( name="tag" ng-model="search.tag" ng-options="option._id as option.name for option in options track by option._id" custom-select )
+                            option( value="" ) Filtrar por tema
                         button.btn.btn-primary( type="submit" )
                             .glyphicon.glyphicon-search
             .row.posts-row
