@@ -12,6 +12,16 @@ define( function () {
                     }
                 }
             })
+            .state( 'about', {
+                parent  : 'front',
+                url     : '/acerca',
+                views   : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/front/about',
+                        controller      : 'FrontAboutCtrl'
+                    }
+                }
+            })
             .state( 'home', {
                 abstract    : true,
                 parent      : 'front',

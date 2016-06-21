@@ -1,6 +1,7 @@
 'use strict';
 
 define( function ( require ) {
+    var FrontAboutCtrl      = require( 'front/FrontAboutCtrl' );
     var FrontController     = require( 'front/FrontController' );
     var FrontPopupCtrl      = require( 'front/FrontPopupCtrl' );
     var FrontPostsCtrl      = require( 'front/FrontPostsCtrl' );
@@ -9,6 +10,8 @@ define( function ( require ) {
     var FrontModule         = angular.module( 'FrontModule', []);
 
     FrontModule.config([ '$stateProvider', FrontRouter ]);
+
+    FrontModule.controller( 'FrontAboutCtrl', [ '$scope', '$sce', 'PostsService', FrontAboutCtrl ]);
 
     FrontModule.controller( 'FrontCtrl', [ '$cookies', '$uibModal', FrontController ] );
 
