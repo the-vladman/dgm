@@ -6,6 +6,7 @@ public/bower_components/
 public/css/style.css
 public/tmp
 public/img/uploads
+public/built
 
 # Configuration files
 config/app.js
