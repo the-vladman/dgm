@@ -26,7 +26,7 @@ define( function () {
             }
         };
         $scope.select   = function ( dataset ) {
-            window.open( 'http://busca.datos.gob.mx/#!/conjuntos/' + dataset, '_blank' );
+            window.open( 'busca/dataset/' + dataset, '_blank' );
         };
 
         query( 'dcat_modified desc' );
