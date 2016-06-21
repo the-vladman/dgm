@@ -4,6 +4,7 @@ define( function ( require ) {
     var BaseService             = require( 'common/BaseService' );
     var BreadcrumbDirective     = require( 'common/BreadcrumbDirective' );
     var CkanService             = require( 'common/CkanService' );
+    var CustomSelectDirective   = require( 'common/CustomSelectDirective' );
     var ExcerptFilter           = require( 'common/ExcerptFilter' );
     var FbShareDirective        = require( 'common/FbShareDirective' );
     var FileUploaderDirective   = require( 'common/FileUploaderDirective' );
@@ -13,6 +14,8 @@ define( function ( require ) {
     var CommonModule            = angular.module( 'CommonModule', []);
 
     CommonModule.directive( 'breadcrumb', [ '$location', 'events', BreadcrumbDirective ]);
+
+    CommonModule.directive( 'customSelect', [ '$timeout', CustomSelectDirective ]);
 
     CommonModule.directive( 'fileUploader', [ '$rootScope', 'events', 'SessionsService', FileUploaderDirective ]);
 
