@@ -2,7 +2,14 @@
 
 define( function () {
     return function ( $scope, $stateParams, CkanService ) {
-        var recommended = [
+        var downloaded  = [
+                'concesiones-mineras',
+                'directorio-registro-federal-de-las-organizaciones-de-la-sociedad-civil',
+                'proyecciones-de-la-poblacion-de-mexico',
+                'catalogo-de-centros-de-trabajo',
+                'proyecciones-de-la-poblacion-de-mexico'
+            ],
+            recommended = [
                 'quien-es-quien-en-los-precios',
                 'ubicacion-de-codigos-postales-en-mexico',
                 'prospera-programa-de-inclusion-social',
@@ -10,7 +17,6 @@ define( function () {
                 'catalogo-de-nucleos-agrarios'
             ],
             query       = function ( type ) {
-                console.log( type );
                 switch( type ) {
                     case 0 :
                         $scope.datasets     = Array();
@@ -18,13 +24,16 @@ define( function () {
                             $scope.datasets.push( CkanService.dataset( recommended[i] ) );
                         }
                         break;
-                    case 2 :
+                    case 1 :
                         var q       = ( $stateParams.category ) ? 'tags:' + $stateParams.category : '';
 
                         $scope.datasets = CkanService.datasets( q, 5, 'dcat_modified desc' );
                         break;
-                    case 1 :
-                        query( 'metadata_created desc' );
+                    case 2 :
+                        $scope.datasets     = Array();
+                        for ( var i = 0; i < downloaded.length; i++ ) {
+                            $scope.datasets.push( CkanService.dataset( downloaded[i] ) );
+                        }
                         break;
                 }
             };
