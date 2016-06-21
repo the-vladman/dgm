@@ -17,7 +17,7 @@ define( function () {
         $scope.per_page = ( $stateParams.section == 'blog' ) ? 6 : 9;
         $scope.search   = {};
         $scope.section  = $stateParams.section;
-        $scope.tags     = Categories.query({
+        $scope.options  = Categories.query({
             page        : 1,
             per_page    : 9999,
             type        : 'TAG'
