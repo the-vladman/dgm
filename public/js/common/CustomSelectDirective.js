@@ -8,6 +8,14 @@ define( function () {
                 $timeout( function () {
                     element.selectpicker();
                 });
+
+                if ( scope.options ) {
+                    scope.options.$promise.then( function () {
+                        $timeout( function () {
+                            element.selectpicker( 'refresh' );
+                        });
+                    });
+                }
             }
         };
     };
