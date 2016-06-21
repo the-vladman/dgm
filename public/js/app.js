@@ -73,10 +73,8 @@ define( function ( require ) {
         $window.ga( 'create', 'UA-44411606-15', 'auto' );
         $rootScope.$state   = $state;
 
-        $rootScope.$on('$stateChangeSuccess', function (event) {
+        $rootScope.$on( '$stateChangeSuccess', function ( event ) {
             $window.ga('send', 'pageview', $location.path());
-
-            $( '.selectpicker' ).selectpicker();
         });
     }]);
 

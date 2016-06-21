@@ -221,6 +221,7 @@ p.more-posts > a                            { font-size: 14px; font-weight: 600;
 .search-form input[type="text"]             { width: 50%; border-radius: 4px 0 0 4px; }
 .search-form select.form-control            { border-radius: 0; }
 .search-form .custom-select                 { width: 34%; }
+.search-form .form-control.bootstrap-select { width: 34%; border-radius: 0; }
 .search-form.posts input[type="text"]       { width: 75%; }
 .search-form.posts .custom-select           { width: 20%; border-left: none; position: relative; top: 1px; }
 .search-form .custom-select select:focus    { box-shadow: none; }
@@ -230,6 +231,22 @@ p.more-posts > a                            { font-size: 14px; font-weight: 600;
 .search-form .btn-primary:active            { background-color: #333; }
 .search-form.posts .btn-primary,
 .search-form.posts .btn-primary:hover       { width: 5%; background-color: transparent; color: #9b9b9b; font-size: 20px; border: 1px solid #d8d8d8; border-left: none; }
+.bootstrap-select > .btn                    { border: none; text-align: center; text-transform: none; color: #9b9b9b; position: relative; left: 50%; transform: translateX(-50%); }
+.bootstrap-select > .btn > .bs-caret        { display: inline-block; width: 12px; height: 8px; background-image: url("../img/ic_arrow_down.png"); }
+.bootstrap-select > .btn > .bs-caret .caret { display: none; }
+.bootstrap-select > .btn:hover,
+.bootstrap-select.open > .btn,
+.bootstrap-select.open > .btn:hover         { background-color: transparent; box-shadow: none; color: #9b9b9b; }
+.bootstrap-select > .btn:focus              { background-color: transparent; outline: none; }
+.bootstrap-select.open .dropdown-menu       { margin: 0 auto; }
+.bootstrap-select .dropdown-menu            { background-color: #f6f6f6; border-radius: 0 0 5px 5px; border: none; }
+.bootstrap-select li > a > span             { color: #9b9b9b; }
+.bootstrap-select li.selected,
+.bootstrap-select li:hover,
+.bootstrap-select li.selected > a,
+.bootstrap-select li:hover > a,             { background-color: #0c9; }
+.bootstrap-select li.selected > a > span,
+.bootstrap-select li:hover > a > span       { color: #fff; }
 
 /********************************
     Tables Styles
