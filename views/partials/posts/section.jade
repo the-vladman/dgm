@@ -1,9 +1,9 @@
 .breadcrumb-container
     .container-fluid
         .row
-            .col-md-7
+            .col-md-7.col-xs-12.col-sm-12
                 breadcrumb
-            .col-md-5
+            .col-md-5.hidden-xs.hidden-sm
                 ul.categories-menu
                     li( ng-class="{'active':category_id == undefined}" )
                         a( ui-sref="front.section({ section : section, category : null, category_id : null, section_id : section_id })" ) 
@@ -19,7 +19,7 @@
                 .col-md-12
                     form.search-form.posts.form-inline( ng-submit="query()" )
                         input.form-control( type="text" name="keyword" placeholder="Ej. Atlas de complejidad económica" ng-model="search.keyword" )
-                        select.form-control( name="tag" ng-model="search.tag" ng-options="option._id as option.name for option in options track by option._id" custom-select )
+                        select.form-control.hidden-xs.hidden-sm( name="tag" ng-model="search.tag" ng-options="option._id as option.name for option in options track by option._id" custom-select )
                             option( value="" ) Filtrar por tema
                         button.btn.btn-primary( type="submit" )
                             .glyphicon.glyphicon-search
