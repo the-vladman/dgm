@@ -19,10 +19,10 @@ define( function () {
             }
 
             if ( $scope.category ) {
-                query   += 'categoria=' + $scope.category;
+                query   += 'tags=' + $scope.category;
             }
 
-            window.open( 'http://busca.datos.gob.mx/#!/conjuntos/?' + query, '_blank' );
+            window.open( 'busca/dataset?' + query, '_blank' );
         };
     };
 });
