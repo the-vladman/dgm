@@ -5,6 +5,9 @@ define( function () {
         var query       = '';
 
         $scope.tags     = Categories.query({
+            slug        : {
+                $ne     : 'nula'
+            },
             page        : 1,
             per_page    : 99,
             type        : 'TAG'

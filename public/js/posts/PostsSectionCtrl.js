@@ -18,6 +18,9 @@ define( function () {
         $scope.search   = {};
         $scope.section  = $stateParams.section;
         $scope.options  = Categories.query({
+            slug        : {
+                $ne     : 'nula'
+            },
             page        : 1,
             per_page    : 9999,
             type        : 'TAG'
