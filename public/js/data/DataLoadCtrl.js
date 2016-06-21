@@ -2,11 +2,32 @@
 
 define( function () {
     return function ( $scope, $stateParams, CkanService ) {
-        var query       = function ( order ) {
-            var q       = ( $stateParams.category ) ? 'tags:' + $stateParams.category : '';
+        var recommended = [
+                'quien-es-quien-en-los-precios',
+                'ubicacion-de-codigos-postales-en-mexico',
+                'prospera-programa-de-inclusion-social',
+                'indice-de-rezago-social20002005-y-2010-nacionalestatalmunicipal-y-localidad',
+                'catalogo-de-nucleos-agrarios'
+            ],
+            query       = function ( type ) {
+                console.log( type );
+                switch( type ) {
+                    case 0 :
+                        $scope.datasets     = Array();
+                        for ( var i = 0; i < recommended.length; i++ ) {
+                            $scope.datasets.push( CkanService.dataset( recommended[i] ) );
+                        }
+                        break;
+                    case 2 :
+                        var q       = ( $stateParams.category ) ? 'tags:' + $stateParams.category : '';
 
-            $scope.datasets = CkanService.datasets( q, 5, order );
-        };
+                        $scope.datasets = CkanService.datasets( q, 5, 'dcat_modified desc' );
+                        break;
+                    case 1 :
+                        query( 'metadata_created desc' );
+                        break;
+                }
+            };
 
         $scope.load     = function ( e, type ) {
             var el      = $( e.currentTarget );
@@ -14,21 +35,13 @@ define( function () {
                 $( '.active', '.section-data .data-list' ).removeClass( 'active' );
                 el.addClass( 'active' );
 
-                switch( type ) {
-                    case 0 :
-                    case 2 :
-                        query( 'dcat_modified desc' );
-                        break;
-                    case 1 :
-                        query( 'metadata_created desc' );
-                        break;
-                }
+                query( type );
             }
         };
         $scope.select   = function ( dataset ) {
             window.open( 'busca/dataset/' + dataset, '_blank' );
         };
 
-        query( 'dcat_modified desc' );
+        query( 0 );
     };
 });
