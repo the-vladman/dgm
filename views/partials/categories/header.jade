@@ -15,5 +15,9 @@
                         p {{ category.description }}
                     .row.category-info
                         .col-md-4( ng-repeat="extra in category.extras" )
-                            h5 {{ extra.title }}
-                            h4 {{ extra.info }}
+                            h5( ng-if="extra.link" )
+                                a( href="{{ extra.link }}" alt="{{ extra.title }}" target="_blank" ) {{ extra.title }}
+                            h5( ng-if="!extra.link" ) {{ extra.title }}
+                            h4( ng-if="extra.link" )
+                                a( href="{{ extra.link }}" alt="{{ extra.title }}" target="_blank" ) {{ extra.info }}
+                            h4( ng-if="!extra.link" ) {{ extra.info }}

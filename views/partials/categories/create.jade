@@ -33,16 +33,25 @@
                 label( for="extra-1-info" ) Info Extra
                 input.form-control( type="text" name="extra-1-info" placeholder="Información" ng-model="category.extras[0].info" )
             .form-group
+                label( for="extra-1-info" ) Enlace Info
+                input.form-control( type="text" name="extra-1-link" placeholder="Enlace" ng-model="category.extras[0].link" )
+            .form-group
                 label( for="extra-2-title" ) Título Info
-                input.form-control( type="text" name="extra-1-title" placeholder="Título" ng-model="category.extras[1].title" )
+                input.form-control( type="text" name="extra-2-title" placeholder="Título" ng-model="category.extras[1].title" )
             .form-group
                 label( for="extra-2-info" ) Info Extra
-                input.form-control( type="text" name="extra-1-info" placeholder="Información" ng-model="category.extras[1].info" )
+                input.form-control( type="text" name="extra-2-info" placeholder="Información" ng-model="category.extras[1].info" )
+            .form-group
+                label( for="extra-1-info" ) Enlace Info
+                input.form-control( type="text" name="extra-2-link" placeholder="Enlace" ng-model="category.extras[1].link" )
             .form-group
                 label( for="extra-3-title" ) Título Info
-                input.form-control( type="text" name="extra-1-title" placeholder="Título" ng-model="category.extras[2].title" )
+                input.form-control( type="text" name="extra-3-title" placeholder="Título" ng-model="category.extras[2].title" )
             .form-group
                 label( for="extra-3-info" ) Info Extra
-                input.form-control( type="text" name="extra-1-info" placeholder="Información" ng-model="category.extras[2].info" )
+                input.form-control( type="text" name="extra-3-info" placeholder="Información" ng-model="category.extras[2].info" )
+            .form-group
+                label( for="extra-1-info" ) Enlace Info
+                input.form-control( type="text" name="extra-3-link" placeholder="Enlace" ng-model="category.extras[2].link" )
     .col-md-3( ng-if="category.type == 'TAG'" )
         .grid-photo-upload.category( data-config="configGrid" data-img="category.grid_photo" file-uploader ng-class="{uploaded: category.grid_photo}" )
