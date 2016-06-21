@@ -3,6 +3,9 @@
 define( function () {
     return function ( $scope, $stateParams, Categories ) {
         Categories.query({
+            slug        : {
+                $ne     : 'nula'
+            },
             page        : 1,
             per_page    : 9999,
             type        : 'TAG'
