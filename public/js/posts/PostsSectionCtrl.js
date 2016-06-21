@@ -48,9 +48,9 @@ define( function () {
             });
 
             if ( $scope.search.tag ) {
-                for ( var i = 0; i < $scope.tags.length; i++ ) {
-                    if ( $scope.tags[i]._id == $scope.search.tag ) {
-                        $location.search( 'tag', $scope.tags[i].slug );
+                for ( var i = 0; i < $scope.options.length; i++ ) {
+                    if ( $scope.options[i]._id == $scope.search.tag ) {
+                        $location.search( 'tag', $scope.options[i].slug );
                     }
                 }
             }
@@ -101,5 +101,9 @@ define( function () {
                 $scope.query();
             });
         }
+
+        $scope.$watch( 'search.tag', function ( tag ) {
+            $scope.query();
+        });
     };
 });
