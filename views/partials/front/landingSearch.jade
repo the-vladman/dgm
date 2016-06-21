@@ -25,11 +25,11 @@
                     p.shadow Etiquetas populares
                     ul.tags-list
                         li 
-                            a( href="//busca.datos.gob.mx/#!/conjuntos/?gob=federal" target="_blank" ) Federal
+                            a( href="busca/dataset?vocab_gov_types=Federal" target="_blank" ) Federal
                         li 
-                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=energia-y-medio-ambiente" target="_blank" ) Energía y Medio Ambiente
+                            a( href="busca/dataset?tags=energia-y-medio-ambiente" target="_blank" ) Energía y Medio Ambiente
                         li
-                            a( href="//busca.datos.gob.mx/#!/conjuntos/?categoria=desarrollo-sostenible" target="_blank" ) Desarrollo Sostenible
+                            a( href="busca/dataset?tags=desarrollo-sostenible" target="_blank" ) Desarrollo Sostenible
             ul.categories-list
                 li( ng-repeat="tag in tags" )
                     a( ui-sref="category.details({ category : tag.slug })" alt="{{ tag.name }}" uib-tooltip="{{ tag.name }}" )
