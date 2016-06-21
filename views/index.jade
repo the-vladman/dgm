@@ -23,7 +23,10 @@ block body
     script(src='bower_components/slug/slug.js')
     script(src='bower_components/ui-router/release/angular-ui-router.js')
     // endbower
-    script( data-main='js/main' src='bower_components/requirejs/require.js' )
+    if settings.env == 'production'
+        script( data-main='built/main' src='bower_components/requirejs/require.js' )
+    else
+        script( data-main='js/main' src='bower_components/requirejs/require.js' )
     script.
         var _sf_async_config = { uid: 62850, domain: 'datos.gob.mx', useCanonical: true };
         (function() {
