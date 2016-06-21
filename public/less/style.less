@@ -98,20 +98,28 @@ p.more-posts > a                            { font-size: 14px; font-weight: 600;
 .admin .form-group .radio > label           { color: #474747; }
 .admin .callout.callout-warning h4          { color: #aa6708; }
 @media (max-width: @screen-md-min)          {
+    h2                                      { font-size: 18px; }
     .form-control                           { font-size: 11px; }
+    .post .title                            { font-size: 16px; }
+    .post .author                           { font-size: 10px; }
+    .post .content li,
+    .post .content p                        { font-size: 12px; line-height: 22px; }
 }
 
 /********************************
     Breadcrumb Styles
 ********************************/
-.breadcrumb                                 { margin-bottom: 0; padding: 0; background-color: transparent; border-radius: 0; }
-.breadcrumb > li                            { font-size: 12px; font-weight: 400; line-height: 50px; }
+.breadcrumb                                 { min-height: 30px; margin-bottom: 0; padding: 10px 0; background-color: transparent; border-radius: 0; }
+.breadcrumb > li                            { font-size: 12px; font-weight: 400; line-height: 30px; }
 .breadcrumb > li + li::before               { padding: 0 3px 0 8px; font-size: 13px; }
-.breadcrumb > li > a                        { display: inline-block; color: #545454; text-transform: capitalize; }
+.breadcrumb > li > a                        { display: inline; color: #545454; text-transform: capitalize; }
 .breadcrumb > li.active > a,
 .breadcrumb > li:last-child > a,
 .breadcrumb > li > a:hover                  { color: #0c9; }
 .breadcrumb > li:last-child > a             { pointer-events: none; }
+@media (max-width: @screen-md-min)          {
+    .breadcrumb > li                        { font-size: 10px; font-weight: 300; line-height: 20px; }
+}
 
 /********************************
     Pagination Styles
@@ -267,10 +275,13 @@ p.more-posts > a                            { font-size: 14px; font-weight: 600;
     Tables Styles
 ********************************/
 .data-table                                 { padding: 30px 20px; background-color: #efefef; border-radius: 4px; }
+.data-table table                           { margin-bottom: 0; }
 .data-table table > tbody > tr              { cursor: pointer; }
 .data-table table > tbody > tr > td         { padding-bottom: 20px; border-top-color: #d8d8d8; }
 @media (max-width: @screen-md-min)          {
+    .data-table                             { padding: 20px 10px; }
     .data-table table > tbody > tr > td > p { font-size: 11px; margin-bottom: 10px; }
+    .data-table table > tbody > tr > td > a { font-size: 11px; }
     .data-table table > tbody > tr > td > p > span          { font-size: 10px; float: right; }
     .data-table table > tbody > tr > td > p:last-child      { margin-bottom: 0; }
 }
@@ -430,6 +441,7 @@ div.page-404 img                            { width: 50%; }
 .tag-icon.tag-infraestructura,
 .tag-icon.tag-infrastructure                { background-image: url(../img/ic-infraestructura.png); }
 @media (max-width: @screen-md-min)          {
+    .front .post.tool                       { margin-top: 0; }
     .post-item .inner h3                    { left: 10px; top: 18px; font-size: 12px; }
     .post-item .inner p.category            { font-size: 11px; top: 10px; right: 10px; }
     .post-item .inner .tag,
@@ -448,6 +460,8 @@ div.page-404 img                            { width: 50%; }
     .tool-item .inner h3                    { margin-bottom: 5px; font-size: 12px; line-height: 20px; }
     .tool-item .inner .category,
     .tool-item .inner .author               { margin-bottom: 5px; font-size: 11px; }
+    .post .tool-info                        { height: auto; margin-bottom: 30px; }
+    .post .tool-info .link-buttons          { margin-top: 20px; position: relative; bottom: auto; }
     .tag-icon                               { width: 20px; height: 20px; border-radius: 10px; }
 }
 
