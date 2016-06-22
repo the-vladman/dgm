@@ -2,10 +2,11 @@
     img( ng-src="{{ post.grid_photo.path }}" ng-if="!post.featured" )
     img( ng-src="{{ post.cover_photo.path }}" ng-if="post.featured" )
     .overlay( ng-if="$state.is( 'landing' )" )
-        h3
-            a( href="{{ post.external_link }}" alt="{{ post.name }}" target="_blank" ng-if="post.external_link" ) {{ post.name }}
-            a( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" alt="{{ post.name }}" ng-if="!post.external_link" ) {{ post.name }}
-        p.excerpt.hidden-xs.hidden-sm {{ post.content | excerpt | limitTo:150 }}...
+        .post-info
+            h3
+                a( href="{{ post.external_link }}" alt="{{ post.name }}" target="_blank" ng-if="post.external_link" ) {{ post.name }}
+                a( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" alt="{{ post.name }}" ng-if="!post.external_link" ) {{ post.name }}
+            p.excerpt.hidden-xs.hidden-sm {{ post.content | excerpt | limitTo:150 }}...
         p.author {{ post.author }}
         p.no-margin
             a.read-more( href="{{ post.external_link }}" alt="{{ post.name }}" target="_blank" ng-if="post.external_link" ) Leer más
