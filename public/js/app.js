@@ -37,7 +37,13 @@ define( function ( require ) {
 
     app.config( [ '$locationProvider', '$urlRouterProvider', '$httpProvider', function ( $locationProvider, $urlRouterProvider, $httpProvider ) {
         $locationProvider.html5Mode( true );
-        $urlRouterProvider.otherwise( '/404' );
+        $urlRouterProvider.otherwise( function ( $injector, $location, $window ) {
+            if ( $location.url() == '/busca' ) {
+                window.open( $location.absUrl(), '_self' );
+            } else {
+                $location.url( '/404' );
+            }
+        });
 
         $httpProvider.interceptors.push( [ '$rootScope', '$cookies', function ( $rootScope, $cookies ) {
             return {
