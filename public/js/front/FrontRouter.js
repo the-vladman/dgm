@@ -27,7 +27,8 @@ define( function () {
                 parent      : 'front',
                 views       : {
                     'front-container'   : {
-                        templateUrl     : 'partials/front/home'
+                        templateUrl     : 'partials/front/home',
+                        controller      : 'FrontHomeCtrl'
                     }
                 }
             })
