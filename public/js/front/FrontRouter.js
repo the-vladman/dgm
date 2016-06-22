@@ -22,6 +22,15 @@ define( function () {
                     }
                 }
             })
+            .state( 'libreusomx', {
+                parent  : 'front',
+                url     : '/libreusomx',
+                views   : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/front/libreusomx'
+                    }
+                }
+            })
             .state( 'home', {
                 abstract    : true,
                 parent      : 'front',
