@@ -3,6 +3,7 @@
 define( function ( require ) {
     var FrontAboutCtrl      = require( 'front/FrontAboutCtrl' );
     var FrontController     = require( 'front/FrontController' );
+    var FrontHomeCtrl       = require( 'front/FrontHomeCtrl' );
     var FrontPopupCtrl      = require( 'front/FrontPopupCtrl' );
     var FrontPostsCtrl      = require( 'front/FrontPostsCtrl' );
     var FrontRouter         = require( 'front/FrontRouter' );
@@ -14,6 +15,8 @@ define( function ( require ) {
     FrontModule.controller( 'FrontAboutCtrl', [ '$scope', '$sce', 'PostsService', FrontAboutCtrl ]);
 
     FrontModule.controller( 'FrontCtrl', [ '$cookies', '$uibModal', FrontController ] );
+
+    FrontModule.controller( 'FrontHomeCtrl', [ '$scope', '$cookies', FrontHomeCtrl ]);
 
     FrontModule.controller( 'FrontPopupCtrl', [ '$scope', '$cookies', '$uibModalInstance', FrontPopupCtrl ]);
 
