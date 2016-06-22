@@ -7,7 +7,7 @@ define( function () {
                 'directorio-registro-federal-de-las-organizaciones-de-la-sociedad-civil',
                 'proyecciones-de-la-poblacion-de-mexico',
                 'catalogo-de-centros-de-trabajo',
-                'proyecciones-de-la-poblacion-de-mexico'
+                'catalogo-de-nucleos-agrarios'
             ],
             recommended = [
                 'quien-es-quien-en-los-precios',
