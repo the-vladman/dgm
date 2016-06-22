@@ -1,9 +1,8 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, $cookies, $uibModalInstance ) {
+    return function ( $scope, $uibModalInstance ) {
         $scope.close    = function () {
-            $cookies.put( 'dgm.modal.dismissed', true );
             $uibModalInstance.close();
         };
     };
