@@ -22,7 +22,7 @@ define( function () {
                 query   += 'tags=' + $scope.category;
             }
 
-            window.open( 'busca/dataset?' + query, '_blank' );
+            window.open( 'busca/dataset?' + query, '_self' );
         };
     };
 });
