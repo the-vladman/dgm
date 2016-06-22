@@ -1,0 +1,13 @@
+.inner
+    a.tag( ui-sref="front.section({ section : post.section.slug, tag : post.tag.slug })" alt="{{ post.tag.name }}" )
+        span( class="tag-icon tag-{{ post.tag.slug }}" )
+    .tool-content
+        h3
+            a( href="{{ post.external_link }}" alt="{{ post.name }}" target="_blank" ng-if="post.external_link" ) {{ post.name }}
+            a( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" alt="{{ post.name }}" ng-if="!post.external_link" ) {{ post.name }}
+        p.category
+            a( ui-sref="front.section({ section : post.section.slug, category : post.category.slug })" alt="{{ post.category.name }}" ) {{ post.category.name }}
+        p.author {{ post.author }}
+        p
+            a.read-more( href="{{ post.external_link }}" alt="{{ post.name }}" target="_blank" ng-if="post.external_link" ) Ir a la herramienta
+            a.read-more( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" alt="{{ post.name }}" ng-if="!post.external_link" ) Ir a la herramienta

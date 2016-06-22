@@ -1,6 +1,14 @@
-_site/
-.sass-cache/
 .DS_Store
-*~
+.tmp
 npm-debug.log
-.jekyll-metadata
+node_modules/
+public/bower_components/
+public/css/style.css
+public/css/vendor.css
+public/tmp
+public/img/uploads
+public/built
+
+# Configuration files
+config/app.js
+config/db.js

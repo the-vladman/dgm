@@ -1,0 +1,6 @@
+ul.breadcrumb
+    li
+        a( ui-sref="landing" )
+            i.glyphicon.glyphicon-home
+    li( ng-repeat="crumb in crumbs" )
+        a( ui-sref="{{ crumb.sref }}( crumb.params )" ui-sref-opts="{ inherit : false }" ) {{ crumb.url }}

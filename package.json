@@ -1,0 +1,42 @@
+{
+    "name"          : "dgm",
+    "version"       : "6.0.0",
+    "description"   : "CMS for the blog datos.gob.mx",
+    "main"          : "index.js",
+    "scripts"       : {
+        "start"     : "DEBUG=app node index.js",
+        "test"      : "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository"    : {
+        "type"      : "git",
+        "url"       : "git+https://github.com/mxabierto/dgm.git"
+    },
+    "author"        : "Carlos Cessa",
+    "license"       : "MIT",
+    "bugs"          : {
+        "url"       : "https://github.com/mxabierto/dgm/issues"
+    },
+    "homepage"      : "https://github.com/mxabierto/dgm#readme",
+    "dependencies"  : {
+        "async"             : "1.5.2",
+        "bcrypt"            : "0.8.6",
+        "body-parser"       : "1.15.0",
+        "buildify"          : "0.4.0",
+        "debug"             : "2.2.0",
+        "express"           : "4.13.4",
+        "jade"              : "1.10.0",
+        "jsonfile"          : "2.3.1",
+        "less"              : "2.6.1",
+        "livereload"        : "0.4.1",
+        "method-override"   : "2.3.5",
+        "mkdirp"            : "0.5.1",
+        "morgan"            : "1.7.0",
+        "mongoose"          : "4.4.14",
+        "multiparty"        : "4.1.2",
+        "node-watch"        : "0.3.5",
+        "node-zip"          : "1.1.1",
+        "requirejs"         : "2.1.22",
+        "rimraf"            : "2.5.2",
+        "wiredep"           : "4.0.0"
+    }
+}

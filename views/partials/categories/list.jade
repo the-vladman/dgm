@@ -1,0 +1,26 @@
+.row
+    .col-md-12
+        div.row.table-header
+            div.col-md-3.col-md-offset-9
+                form.search-form
+                    input.form-control( type="text" placeholder="Buscar" )
+                    i.glyphicon.glyphicon-search
+        table.table.table-striped
+            thead
+                tr
+                    th Nombre
+                    th( width="20%" ) Slug
+                    th( width="20%" ) Sección
+                    th( width="20%" ) Tipo
+            tbody
+                tr( ng-repeat="category in categories" )
+                    td 
+                        a( ui-sref="categories.edit({ id : category._id })" alt="{{ category.name }}" ) {{ category.name }}
+                    td {{ category.slug }}
+                    td {{ category.section.name }}
+                    td
+                        span( ng-if="category.type == 'SECTION'" ) Sección
+                        span( ng-if="category.type == 'CATEGORY'" ) Categoría
+                        span( ng-if="category.type == 'TAG'" ) Tag
+        p.text-center
+            uib-pagination( max-size="10" boundary-links="true" boundary-link-numbers="true" rotate="true" total-items="total" items-per-page="per_page" previous-text!="&lsaquo;" next-text!="&rsaquo;" first-text!="&laquo;" last-text!="&raquo;" ng-model="page" ng-change="query()" )

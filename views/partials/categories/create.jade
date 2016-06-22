@@ -1,0 +1,57 @@
+.row
+    div( ng-class="{ 'col-md-6 col-md-offset-3': category.type != 'TAG', 'col-md-6': category.type == 'TAG' }" )
+        form( ng-submit="create()" )
+            .form-group
+                label( for="name" ) Categoría
+                input.form-control( type="text" name="name" placeholder="Categoría" ng-model="category.name" )
+            .form-group
+                label( for="slug" ) Slug
+                input.form-control( type="text" name="slug" placeholder="Slug" ng-model="category.slug" )
+            .form-group
+                label( for="type" ) Tipo
+                .custom-select
+                    select.form-control( name="type" ng-model="category.type" )
+                        option( value="" ) Seleccionar tipo...
+                        option( value="SECTION" ) Sección
+                        option( value="CATEGORY" ) Categoría
+                        option( value="TAG" ) Tag
+            .form-group( ng-if="category.type == 'CATEGORY'" )
+                label( for="section" ) Sección
+                .custom-select
+                    select.form-control( name="section" ng-model="category.section" ng-options="section._id as section.name for section in sections track by section._id" )
+                        option( value="" ) Seleccionar sección...
+            .form-group( ng-if="category.type == 'TAG'" )
+                label( for="description" ) Descripción
+                textarea.form-control( name="description" placeholder="Descripción" rows="5" ng-model="category.description" )
+        .cover-photo-upload.category( data-config="configCover" data-img="category.cover_photo" file-uploader ng-class="{uploaded: category.cover_photo}" ng-if="category.type == 'TAG'" )
+    .col-md-3( ng-if="category.type == 'TAG'" )
+        form
+            .form-group
+                label( for="extra-1-title" ) Título Info
+                input.form-control( type="text" name="extra-1-title" placeholder="Título" ng-model="category.extras[0].title" )
+            .form-group
+                label( for="extra-1-info" ) Info Extra
+                input.form-control( type="text" name="extra-1-info" placeholder="Información" ng-model="category.extras[0].info" )
+            .form-group
+                label( for="extra-1-info" ) Enlace Info
+                input.form-control( type="text" name="extra-1-link" placeholder="Enlace" ng-model="category.extras[0].link" )
+            .form-group
+                label( for="extra-2-title" ) Título Info
+                input.form-control( type="text" name="extra-2-title" placeholder="Título" ng-model="category.extras[1].title" )
+            .form-group
+                label( for="extra-2-info" ) Info Extra
+                input.form-control( type="text" name="extra-2-info" placeholder="Información" ng-model="category.extras[1].info" )
+            .form-group
+                label( for="extra-1-info" ) Enlace Info
+                input.form-control( type="text" name="extra-2-link" placeholder="Enlace" ng-model="category.extras[1].link" )
+            .form-group
+                label( for="extra-3-title" ) Título Info
+                input.form-control( type="text" name="extra-3-title" placeholder="Título" ng-model="category.extras[2].title" )
+            .form-group
+                label( for="extra-3-info" ) Info Extra
+                input.form-control( type="text" name="extra-3-info" placeholder="Información" ng-model="category.extras[2].info" )
+            .form-group
+                label( for="extra-1-info" ) Enlace Info
+                input.form-control( type="text" name="extra-3-link" placeholder="Enlace" ng-model="category.extras[2].link" )
+    .col-md-3( ng-if="category.type == 'TAG'" )
+        .grid-photo-upload.category( data-config="configGrid" data-img="category.grid_photo" file-uploader ng-class="{uploaded: category.grid_photo}" )

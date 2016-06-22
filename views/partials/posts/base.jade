@@ -1,0 +1,12 @@
+.row.admin-controls
+    div.col-md-8
+        h3( ng-if="$state.is( 'posts.list' )" ) Contenido
+        h3( ng-if="$state.is( 'posts.create' )" ) Crear Artículo
+        h3( ng-if="$state.is( 'posts.edit' )" ) Editar Artículo
+    div.col-md-4.view-controls
+        a.btn.btn-success.pull-right( ui-sref="posts.create" ng-if="$state.is( 'posts.list' )" ) Crear Artículo
+        button.btn.btn-success.pull-right( ng-if="$state.is( 'posts.create' )" ng-click="save()" ) Guardar Artículo
+        button.btn.btn-success.pull-right( ng-if="$state.is( 'posts.edit' )" ng-click="update()" ) Actualizar Artículo
+        button.btn.btn-danger.pull-right( ng-click="remove()" ng-if="$state.is( 'posts.edit' )" ) Eliminar
+        a.btn.btn-default.pull-right( ui-sref="posts.list" ng-if="$state.is( 'posts.create' ) || $state.is( 'posts.edit' )" ) Atras
+div( ui-view="posts-main" )
