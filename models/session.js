@@ -4,10 +4,6 @@ var mongoose        = require( 'mongoose' ),
             type        : Number,
             required    : true
         },
-        ip_address      : {
-            type        : String,
-            required    : true
-        },
         last_activity   : {
             type        : Date,
             required    : true,
