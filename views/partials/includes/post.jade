@@ -1,6 +1,7 @@
 .inner
     img( ng-src="{{ post.grid_photo.path }}" ng-if="!post.featured" )
-    img( ng-src="{{ post.cover_photo.path }}" ng-if="post.featured" )
+    img.hidden-xs.hidden-sm( ng-src="{{ post.cover_photo.path }}" ng-if="post.featured" )
+    img.hidden-md.hidden-lg( ng-src="{{ post.grid_photo.path }}" ng-if="post.featured" )
     .overlay( ng-if="$state.is( 'landing' )" )
         .post-info
             h3
