@@ -3,8 +3,8 @@
         .col-md-12
             h2
                 a( ui-sref="front.section({ section : section, section_id : section_id, tag : tag })" ) {{ section }}
-            .row.posts-row.hidden-xs.hidden-sm
-                .col-md-12.post-item( ng-repeat="post in featured" )
+            .row.posts-row
+                .col-md-12.col-xs-12.col-sm-12.post-item( ng-repeat="post in featured" )
                     include ../includes/post.jade
             .row.posts-row( ng-if="section == 'blog'" )
                 .col-md-6.col-xs-12.col-sm-12.post-item( ng-repeat-start="post in posts" )
