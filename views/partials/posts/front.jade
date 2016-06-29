@@ -5,11 +5,11 @@
                 breadcrumb
 .iframe-container.hidden-xs.hidden-sm( ng-if="post.iframe" )
     iframe( class="tool-iframe noscroll" ng-src="{{ iframe }}" )
+img.hidden-sm.hidden-xs.post-cover( ng-src="{{ post.cover_photo.path }}" ng-if="section == 'blog'" )
 img.hidden-md.hidden-lg( ng-src="{{ post.cover_photo.path }}" ng-if="section == 'blog'" )
 .container-fluid
     .row
         .col-md-12
-            img.hidden-xs.hidden-sm( ng-src="{{ post.cover_photo.path }}" ng-if="section == 'blog'" )
             .row.post( ng-if="section == 'blog'" )
                 .share-buttons.hidden-xs.hidden-sm
                     p Compartir
