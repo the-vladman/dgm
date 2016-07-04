@@ -3,8 +3,7 @@
         .row
             .col-md-12
                 breadcrumb
-.category-header
-    img( ng-src="{{ category.cover_photo.path }}" alt="{{ category.name }}" )
+.category-header( style="background-image: url('{{ category.cover_photo.path }}')" )
     .overlay
         .container-fluid
             .row
