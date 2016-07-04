@@ -5,7 +5,7 @@
                 breadcrumb
 .iframe-container.hidden-xs.hidden-sm( ng-if="post.iframe" )
     iframe( class="tool-iframe noscroll" ng-src="{{ iframe }}" )
-img.hidden-sm.hidden-xs.post-cover( ng-src="{{ post.cover_photo.path }}" ng-if="section == 'blog'" )
+.hidden-sm.hidden-xs.post-cover( ng-if="section == 'blog'" style="background-image: url('{{ post.cover_photo.path }}');" )
 img.hidden-md.hidden-lg( ng-src="{{ post.cover_photo.path }}" ng-if="section == 'blog'" )
 .container-fluid
     .row
