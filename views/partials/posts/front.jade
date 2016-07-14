@@ -34,8 +34,10 @@ img.hidden-md.hidden-lg( ng-src="{{ post.cover_photo.path }}" ng-if="section == 
                                         th Formato
                                 tbody
                                     tr( ng-repeat="dataset in datasets" ng-click="select( dataset.name )" )
-                                        td {{ dataset.title }}
-                                        td( width="25%" ) {{ dataset.organization.title }}
+                                        td
+                                            a( href="http://datos.gob.mx/busca/dataset/{{ dataset.name }}" alt="{{ dataset.name }}" target="_self" ) {{ dataset.title }}
+                                        td( width="25%" )
+                                            a( href="http://datos.gob.mx/busca/organization/{{ dataset.organization.name }}" alt="{{ dataset.organization.name }}" target="_self" ) {{ dataset.organization.title }}
                                         td( width="10%" )
                                             span.dataset-format( ng-if="dataset.resources[0].format == 'CSV' || dataset.resources[0].format == 'JSON' || dataset.resources[0].format == 'SHP' || dataset.resources[0].format == 'KML' || dataset.resources[0].format == 'XSLX' || dataset.resources[0].format == 'GEOJSON' || dataset.resources[0].format == 'XML' || dataset.resources[0].format == 'csv' || dataset.resources[0].format == 'json' || dataset.resources[0].format == 'shp' || dataset.resources[0].format == 'kml' || dataset.resources[0].format == 'xslx' || dataset.resources[0].format == 'geojson' || dataset.resources[0].format == 'xml'" data-format="{{ dataset.resources[0].format | noSpace }}") {{ dataset.resources[0].format }}
                     div( class="datasets" ng-if="post.datasets_ext.length > 0 && post.datasets_ext[0] != '' && post.datasets_ext[0].name != ''" )
@@ -48,7 +50,7 @@ img.hidden-md.hidden-lg( ng-src="{{ post.cover_photo.path }}" ng-if="section == 
                                 tbody
                                     tr( ng-repeat="dataset in post.datasets_ext" )
                                         td
-                                            a( href="{{ dataset.href }}" alt="{{ dataset.name }}" target="_blank" ){{ dataset.name }}
+                                            a( href="{{ dataset.href }}" alt="{{ dataset.name }}" target="_blank" ) {{ dataset.name }}
                     #disqus_thread
             .post.tool( ng-if="section == 'herramientas'" )
                 .share-buttons.hidden-xs.hidden-sm
@@ -109,8 +111,10 @@ img.hidden-md.hidden-lg( ng-src="{{ post.cover_photo.path }}" ng-if="section == 
                                             th Formato
                                     tbody
                                         tr.hidden-xs.hidden-sm( ng-repeat="dataset in datasets" ng-click="select( dataset.name )" )
-                                            td {{ dataset.title }}
-                                            td( width="25%" ) {{ dataset.organization.title }}
+                                            td
+                                                a( href="http://datos.gob.mx/busca/dataset/{{ dataset.name }}" alt="{{ dataset.name }}" target="_self" ) {{ dataset.title }}
+                                            td( width="25%" )
+                                                a( href="http://datos.gob.mx/busca/organization/{{ dataset.organization.name }}" alt="{{ dataset.organization.name }}" target="_self" ) {{ dataset.organization.title }}
                                             td( width="10%" )
                                                 span.dataset-format( ng-if="dataset.resources[0].format == 'CSV' || dataset.resources[0].format == 'JSON' || dataset.resources[0].format == 'SHP' || dataset.resources[0].format == 'KML' || dataset.resources[0].format == 'XSLX' || dataset.resources[0].format == 'GEOJSON' || dataset.resources[0].format == 'XML' || dataset.resources[0].format == 'csv' || dataset.resources[0].format == 'json' || dataset.resources[0].format == 'shp' || dataset.resources[0].format == 'kml' || dataset.resources[0].format == 'xslx' || dataset.resources[0].format == 'geojson' || dataset.resources[0].format == 'xml'" data-format="{{ dataset.resources[0].format | noSpace }}") {{ dataset.resources[0].format }}
                                         tr.hidden-md.hidden-lg( ng-repeat="dataset in datasets" ng-click="select( dataset.name )" )
