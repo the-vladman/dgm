@@ -13,7 +13,7 @@ define( function () {
                 'quien-es-quien-en-los-precios',
                 'ubicacion-de-codigos-postales-en-mexico',
                 'prospera-programa-de-inclusion-social',
-                'indice-de-rezago-social20002005-y-2010-nacionalestatalmunicipal-y-localidad',
+                'plan-de-maestro-para-el-proyecto',
                 'catalogo-de-nucleos-agrarios'
             ],
             query       = function ( type ) {
