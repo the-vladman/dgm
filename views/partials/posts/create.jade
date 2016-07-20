@@ -97,7 +97,7 @@
         .post
             h1.title( medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: { align : 'left', buttons : [ 'bold', 'italic', 'underline' ], static : true, updateOnEmptySelection : true } }" data-placeholder="Título del artículo" ng-model="post.name" )
             p.author( medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: false }" data-placeholder="Escuadron de datos" ng-model="post.author" )
-            .content( medium-editor bind-options="{toolbar : { buttons : [ 'bold', 'italic', 'underline', 'anchor', 'h2', 'quote', 'orderedlist', 'unorderedlist' ] }}" data-placeholder="Contenido del artículo" ng-model="post.content" )
+            .content( medium-editor bind-options="{toolbar : { buttons : [ 'bold', 'italic', 'underline', 'anchor', 'h2', 'quote', 'orderedlist', 'unorderedlist' ] }, anchor : { targetCheckbox : true, targetCheckboxText : '¡Abrir en nueva ventana!' }}" data-placeholder="Contenido del artículo" ng-model="post.content" )
     .col-md-4
         .grid-photo-upload( data-config="configGrid" data-img="post.grid_photo" file-uploader ng-class="{uploaded: post.grid_photo}" )
         div.photo-gallery( ng-if="sectionName == 'Herramientas'" )
