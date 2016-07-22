@@ -9,7 +9,8 @@ define( function () {
                 url         : '/datasets',
                 views       : {
                     'admin-main'    : {
-                        templateUrl : 'partials/datasets/base'
+                        templateUrl : 'partials/datasets/base',
+                        controller  : 'DatasetsBaseCtrl'
                     }
                 }
             })

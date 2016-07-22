@@ -29,6 +29,3 @@
                 select.form-control( name="type" ng-model="dataset.type" )
                     option( value="" ) Seleccionar tipo...
                     option( value="RECOMMENDED" ) Recomendado
-            button.btn.btn-success.pull-right( type="submit" ng-if="$state.is( 'datasets.create' )" ) Crear
-            button.btn.btn-success.pull-right( type="submit" ng-if="$state.is( 'datasets.edit' )" ) Actualizar
-            a.btn.btn-default.pull-right( ui-sref="datasets.list" ) Cancelar

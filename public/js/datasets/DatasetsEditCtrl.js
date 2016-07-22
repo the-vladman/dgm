@@ -11,5 +11,8 @@ define( function () {
         $scope.$on( Datasets.getEvent( 'UPDATED' ), function () {
             $scope.$state.go( 'datasets.list' );
         });
+        $scope.$on( 'UPDATE_DATASET', function () {
+            $scope.create();
+        });
     };
 });
