@@ -45,7 +45,7 @@ router.post( '/', Session.validate, function ( req, res, next ) {
         next( err );
     } else {
         Dataset.create({
-            formats         : req.body.formats,
+            format          : req.body.format,
             link            : req.body.link,
             organization    : req.body.organization,
             title           : req.body.title,

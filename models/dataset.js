@@ -5,8 +5,8 @@ var mongoose        = require( 'mongoose' ),
             required    : true,
             default     : Date.now
         },
-        formats         : {
-            type        : [ String ],
+        format          : {
+            type        : String,
             required    : true
         },
         link            : {
