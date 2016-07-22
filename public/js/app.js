@@ -6,6 +6,7 @@ define( function ( require ) {
     require( 'categories/CategoriesModule' );
     require( 'common/CommonModule' );
     require( 'data/DataModule' );
+    require( 'datasets/DatasetsModule' )
     require( 'front/FrontModule' );
     require( 'landing/LandingModule' );
     require( 'posts/PostsModule' );
@@ -28,6 +29,7 @@ define( function ( require ) {
             'CategoriesModule',
             'CommonModule',
             'DataModule',
+            'DatasetsModule',
             'FrontModule',
             'LandingModule',
             'PostsModule',
