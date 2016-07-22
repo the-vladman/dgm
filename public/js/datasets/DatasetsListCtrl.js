@@ -6,8 +6,10 @@ define( function () {
         $scope.per_page = 10;
         $scope.query    = function () {
             $scope.datasets = Datasets.query({
+                order       : 'DESC',
                 page        : $scope.page,
-                per_page    : $scope.per_page
+                per_page    : $scope.per_page,
+                sort        : 'creation_date'
             });
         };
 
