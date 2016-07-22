@@ -12,7 +12,8 @@
                 input.form-control( type="text" name="organization" placeholder="SAGARPA" ng-model="dataset.organization" )
             .form-group
                 label( for="formats" ) Formatos
-                select.form-control.multiple( name="formats" ng-model="dataset.formats" multiple )
+                select.form-control( name="formats" ng-model="dataset.format" )
+                    option( value="" ) Seleccionar formato...
                     option( value="pdf" ) PDF
                     option( value="xml" ) XML
                     option( value="csv" ) CSV

@@ -11,7 +11,7 @@
                     th Título
                     th( width="20%" ) Enlace
                     th( width="20%" ) Organización
-                    th( width="20%" ) Formatos
+                    th( width="20%" ) Formato
                     th( width="8%" ) Tipo
             tbody
                 tr( ng-repeat="dataset in datasets" )
@@ -19,8 +19,7 @@
                         a( ui-sref="datasets.edit({ id : dataset._id })" alt="{{ dataset.name }}" ) {{ dataset.title }}
                     td {{ dataset.link }}
                     td {{ dataset.organization }}
-                    td
-                        <span ng-repeat="format in dataset.formats">{{ format }}, </span>
+                    td {{ dataset.format }}
                     td.text-center
                         span.dataset-label( ng-if="dataset.type == 'RECOMMENDED'" ) Recomendado
         p.text-center
