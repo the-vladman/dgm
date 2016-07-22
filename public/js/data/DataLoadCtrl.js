@@ -1,7 +1,7 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, $stateParams, CkanService ) {
+    return function ( $scope, $stateParams, CkanService, Datasets ) {
         var downloaded  = [
                 'concesiones-mineras',
                 'directorio-registro-federal-de-las-organizaciones-de-la-sociedad-civil',
@@ -9,20 +9,33 @@ define( function () {
                 'catalogo-de-centros-de-trabajo',
                 'catalogo-de-nucleos-agrarios'
             ],
-            recommended = [
-                'quien-es-quien-en-los-precios',
-                'ubicacion-de-codigos-postales-en-mexico',
-                'prospera-programa-de-inclusion-social',
-                'plan-de-maestro-para-el-proyecto',
-                'catalogo-de-nucleos-agrarios'
-            ],
             query       = function ( type ) {
                 switch( type ) {
                     case 0 :
                         $scope.datasets     = Array();
-                        for ( var i = 0; i < recommended.length; i++ ) {
-                            $scope.datasets.push( CkanService.dataset( recommended[i] ) );
-                        }
+                        Datasets.query({
+                            order       : 'DESC',
+                            page        : 1,
+                            per_page    : 5,
+                            sort        : 'creation_date',
+                            type        : 'RECOMMENDED'
+                        }).$promise.then( function ( data ) {
+                            for ( var i = 0; i < data.length; i++ ) {
+                                $scope.datasets.push({
+                                    link            : data[i].link,
+                                    organization    : {
+                                        title       : data[i].organization
+                                    },
+                                    name            : data[i].title,
+                                    resources       : [
+                                        {
+                                            format  : data[i].format
+                                        }
+                                    ],
+                                    title           : data[i].title
+                                });
+                            }
+                        });
                         break;
                     case 1 :
                         var q       = ( $stateParams.category ) ? 'tags:' + $stateParams.category : '';
@@ -47,8 +60,12 @@ define( function () {
                 query( type );
             }
         };
-        $scope.select   = function ( dataset ) {
-            window.open( 'busca/dataset/' + dataset, '_blank' );
+        $scope.select   = function ( dataset, link ) {
+            if ( link ) {
+                window.open( link, '_blank' );
+            } else {
+                window.open( 'busca/dataset/' + dataset, '_blank' );
+            }
         };
 
         query( 0 );
