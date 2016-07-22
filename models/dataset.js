@@ -1,5 +1,10 @@
 var mongoose        = require( 'mongoose' ),
     DatasetSchema   = new mongoose.Schema({
+        creation_date   : {
+            type        : Date,
+            required    : true,
+            default     : Date.now
+        },
         formats         : {
             type        : [ String ],
             required    : true

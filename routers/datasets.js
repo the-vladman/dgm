@@ -74,6 +74,10 @@ router.put( '/:id', Session.validate, function ( req, res, next ) {
             next( err );
         } else {
             for ( var key in req.body ) {
+                if ( key == 'creation_date' ) {
+                    continue;
+                }
+
                 dataset[key]   = req.body[key];
             }
 
