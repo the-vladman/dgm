@@ -30,6 +30,15 @@ define( function () {
                         controller  : 'DatasetsCreateCtrl'
                     }
                 }
+            })
+            .state( 'datasets.edit', {
+                url         : '/edit/:id',
+                views       : {
+                    'datasets-main' : {
+                        templateUrl : 'partials/datasets/create',
+                        controller  : 'DatasetsEditCtrl'
+                    }
+                }
             });
     };
 });

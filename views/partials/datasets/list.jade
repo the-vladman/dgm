@@ -16,7 +16,7 @@
             tbody
                 tr( ng-repeat="dataset in datasets" )
                     td
-                        a( ui-sref="datasets.details({ id : dataset._id })" alt="{{ dataset.name }}" ) {{ dataset.title }}
+                        a( ui-sref="datasets.edit({ id : dataset._id })" alt="{{ dataset.name }}" ) {{ dataset.title }}
                     td {{ dataset.link }}
                     td {{ dataset.organization }}
                     td
