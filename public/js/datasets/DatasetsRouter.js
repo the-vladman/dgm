@@ -20,6 +20,15 @@ define( function () {
                         templateUrl : 'partials/datasets/list'
                     }
                 }
+            })
+            .state( 'datasets.create', {
+                url         : '/datasets',
+                views       : {
+                    'datasets-main' : {
+                        templateUrl : 'partials/datasets/create',
+                        controller  : 'DatasetsCreateCtrl'
+                    }
+                }
             });
     };
 });

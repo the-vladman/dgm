@@ -1,6 +1,7 @@
 .row.admin-controls
     div.col-md-8
         h3( ng-if="$state.is( 'datasets.list' )" ) Datasets
+        h3( ng-if="$state.is( 'datasets.create' )" ) Crear Dataset
     div.col-md-4.view-controls
         a.btn.btn-success.pull-right( ui-sref="datasets.create" ng-if="$state.is( 'datasets.list' )" ) Crear Dataset
 div( ui-view="datasets-main" )
