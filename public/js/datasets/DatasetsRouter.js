@@ -17,7 +17,8 @@ define( function () {
                 url         : '/list',
                 views       : {
                     'datasets-main' : {
-                        templateUrl : 'partials/datasets/list'
+                        templateUrl : 'partials/datasets/list',
+                        controller  : 'DatasetsListCtrl'
                     }
                 }
             })

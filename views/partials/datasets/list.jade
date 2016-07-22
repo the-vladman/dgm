@@ -10,8 +10,8 @@
                 tr
                     th Título
                     th( width="20%" ) Enlace
-                    th( width="25%" ) Organización
-                    th( width="15%" ) Formatos
+                    th( width="20%" ) Organización
+                    th( width="20%" ) Formatos
                     th( width="8%" ) Tipo
             tbody
                 tr( ng-repeat="dataset in datasets" )
@@ -19,8 +19,9 @@
                         a( ui-sref="datasets.details({ id : dataset._id })" alt="{{ dataset.name }}" ) {{ dataset.title }}
                     td {{ dataset.link }}
                     td {{ dataset.organization }}
-                    td {{ dataset.formats }}
+                    td
+                        <span ng-repeat="format in dataset.formats">{{ format }}, </span>
                     td.text-center
-                        span.dataset-label.label-super( ng-if="dataset.type == 'RECOMMENDED'" ) Recomendado
+                        span.dataset-label( ng-if="dataset.type == 'RECOMMENDED'" ) Recomendado
         p.text-center
             uib-pagination( max-size="10" boundary-links="true" boundary-link-numbers="true" rotate="true" total-items="total" items-per-page="per_page" previous-text!="&lsaquo;" next-text!="&rsaquo;" first-text!="&laquo;" last-text!="&raquo;" ng-model="page" ng-change="query()" )
