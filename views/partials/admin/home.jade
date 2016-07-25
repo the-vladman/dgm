@@ -26,6 +26,10 @@ nav.navbar.navbar-default.navbar-fixed-top
                     a( ui-sref="users.list" )
                         i.icon-users
                         |  Usuarios
+                li( ng-class="{active:$state.includes('datasets')}" )
+                    a( ui-sref="datasets.list" )
+                        i.icon-box
+                        |  Datasets
             ul.nav.navbar-nav.navbar-right
                 li.dropdown
                     a.dropdown-toggle( href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" )

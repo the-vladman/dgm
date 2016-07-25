@@ -18,7 +18,7 @@
                             th Institución
                             th Formato
                     tbody
-                        tr.hidden-xs.hidden-sm( ng-repeat="dataset in datasets" ng-click="select( dataset.name )" )
+                        tr.hidden-xs.hidden-sm( ng-repeat="dataset in datasets" ng-click="select( dataset.name, dataset.link )" )
                             td {{ dataset.title }}
                             td( width="25%" ) {{ dataset.organization.title }}
                             td( width="10%" )

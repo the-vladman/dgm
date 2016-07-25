@@ -1,6 +1,7 @@
 var express         = require( 'express' ),
     categories      = require( './categories' ),
     collections     = require( './collections' ),
+    datasets        = require( './datasets' ),
     posts           = require( './posts' ),
     users           = require( './users' ),
     sessions        = require( './sessions' ),
@@ -8,6 +9,7 @@ var express         = require( 'express' ),
     cmsApi          = express.Router();
 
 cmsApi.use( '/categories', categories );
+cmsApi.use( '/datasets', datasets );
 cmsApi.use( '/sessions', sessions );
 cmsApi.use( '/posts', posts );
 
