@@ -1,7 +1,19 @@
 'use strict';
 
 define( function () {
-    return function ( $stateProvider ) {
+    return function ( $stateProvider, $urlRouterProvider ) {
+        $urlRouterProvider.rule( function( $injector, $location ) {
+            console.log( $location.path() );
+            var path                = $location.path(),
+                hasTrailingSlash    = path[path.length-1] === '/';
+
+            if( hasTrailingSlash ) {
+                //if last charcter is a slash, return the same url without the slash  
+                var newPath = path.substr(0, path.length - 1); 
+                return newPath; 
+            }
+        });
+
         $stateProvider
             .state( 'front', {
                 abstract    : true,

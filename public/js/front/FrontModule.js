@@ -10,7 +10,7 @@ define( function ( require ) {
 
     var FrontModule         = angular.module( 'FrontModule', []);
 
-    FrontModule.config([ '$stateProvider', FrontRouter ]);
+    FrontModule.config([ '$stateProvider', '$urlRouterProvider', FrontRouter ]);
 
     FrontModule.controller( 'FrontAboutCtrl', [ '$scope', '$sce', 'PostsService', FrontAboutCtrl ]);
 
