@@ -59,12 +59,12 @@ img.hidden-md.hidden-lg( ng-src="{{ post.cover_photo.path }}" ng-if="section == 
                         div( fb-share="post.name" )
                     .tw-share
                         div( tweet="post.name" )
-                .row
-                    .col-xs-12.col-sm-12.hidden-md.hidden-lg
+                .row.hidden-md.hidden-lg
+                    .col-xs-12.col-sm-12
                         .tool-slider
-                            #tool-gallery.carousel.slide( data-ride="carousel" ng-if="post.slider_photos && post.slider_photos.length > 0" )
+                            #tool-gallery-mobile.carousel.slide( data-ride="carousel" ng-if="post.slider_photos && post.slider_photos.length > 0" )
                                 ol.carousel-indicators
-                                    li( ng-repeat="photo in post.slider_photos" data-target="#tool-gallery" data-slide-to="{{ $index }}" ng-class="{active: $index == 0}" )
+                                    li( ng-repeat="photo in post.slider_photos" data-target="#tool-gallery-mobile" data-slide-to="{{ $index }}" ng-class="{active: $index == 0}" )
                                 .carousel-inner( role="listbox" )
                                     .item( ng-repeat="photo in post.slider_photos" ng-class="{active: $index == 0}" )
                                         img( ng-src="{{ photo.path }}" )

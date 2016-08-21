@@ -22,7 +22,7 @@ define( function () {
                     transformResponse   : function ( data ) {
                         var response    = angular.fromJson( data );
 
-                        return response.result;
+                        return response && response.result || [];
                     }
                 },
                 datasets                : {
@@ -33,7 +33,7 @@ define( function () {
 
                         Service._total  = response.result.count;
 
-                        return response.result.results;
+                        return response && response.result.results || [];
                     }
                 }
             }),
