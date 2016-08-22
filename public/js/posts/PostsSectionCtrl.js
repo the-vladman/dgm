@@ -106,7 +106,9 @@ define( function () {
         }
 
         $scope.$watch( 'search.tag', function ( tag ) {
-            $scope.query();
+            if ( tag ) {
+                $scope.query();
+            }
         });
     };
 });
