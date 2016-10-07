@@ -8,9 +8,9 @@ define( function () {
                 hasTrailingSlash    = path[path.length-1] === '/';
 
             if( hasTrailingSlash ) {
-                //if last charcter is a slash, return the same url without the slash  
-                var newPath = path.substr(0, path.length - 1); 
-                return newPath; 
+                //if last charcter is a slash, return the same url without the slash
+                var newPath = path.substr(0, path.length - 1);
+                return newPath;
             }
         });
 
@@ -31,6 +31,16 @@ define( function () {
                     'front-container'   : {
                         templateUrl     : 'partials/front/about',
                         controller      : 'FrontAboutCtrl'
+                    }
+                }
+            })
+            .state( 'privacy', {
+                parent  : 'front',
+                url     : '/privacidad',
+                views   : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/front/privacy',
+                        controller      : 'FrontPrivacyCtrl'
                     }
                 }
             })
