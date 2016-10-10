@@ -2,20 +2,21 @@
     img( ng-src="{{ post.grid_photo.path }}" ng-if="!post.featured" )
     img.hidden-xs.hidden-sm( ng-src="{{ post.cover_photo.path }}" ng-if="post.featured" )
     img.hidden-md.hidden-lg( ng-src="{{ post.grid_photo.path }}" ng-if="post.featured" )
+    a.tag( ui-sref="front.section({ section : post.section.slug, tag : post.tag.slug })" alt="{{ post.tag.name }}" )
+        span( class="tag-icon tag-{{ post.tag.slug }}" )
+
     .overlay( ng-if="$state.is( 'landing' )" )
         .post-info
             h3
                 a( href="{{ post.external_link }}" alt="{{ post.name }}" target="_blank" ng-if="post.external_link" ) {{ post.name }}
                 a( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" alt="{{ post.name }}" ng-if="!post.external_link" ) {{ post.name }}
             p.excerpt.hidden-xs.hidden-sm {{ post.content | excerpt | limitTo:150 }}...
-        p.author {{ post.author }}
-        p.no-margin
-            a.read-more( href="{{ post.external_link }}" alt="{{ post.name }}" target="_blank" ng-if="post.external_link" ) Leer más
-            a.read-more( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" alt="{{ post.name }}" ng-if="!post.external_link" ) Leer más
         p.category
             a( ui-sref="front.section({ section : post.section.slug, category : post.category.slug })" alt="{{ post.category.name }}" ) {{ post.category.name }}
-    a.tag( ui-sref="front.section({ section : post.section.slug, tag : post.tag.slug })" alt="{{ post.tag.name }}" ng-if="!$state.is( 'landing' )" )
-        span( class="tag-icon tag-{{ post.tag.slug }}" )
+        p.author {{ post.author }}
+        p.float-right.no-margin
+            a.read-more( href="{{ post.external_link }}" alt="{{ post.name }}" target="_blank" ng-if="post.external_link" ) Leer más
+            a.read-more( ui-sref="front.post({ section : post.section.slug, category : post.category.slug, tag : post.tag.slug, post : post.slug })" alt="{{ post.name }}" ng-if="!post.external_link" ) Leer más
 .post-info( ng-if="!$state.is( 'landing' )" ng-class="{featured:post.featured}" )
     h3
         a( href="{{ post.external_link }}" alt="{{ post.name }}" target="_blank" ng-if="post.external_link" ) {{ post.name }}

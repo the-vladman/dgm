@@ -65,11 +65,11 @@ p.more-posts > a                            { font-size: 14px; font-weight: 600;
 .post-item .inner a.read-more               { font-size: 12px; color: #0c9; }
 .post-item .inner a.read-more:hover         { font-weight: 600; }
 .post-item .inner p.excerpt                 { font-size: 12px; font-weight: 300; line-height: 20px; }
-.post-item .inner p.author                  { font-size: 12px; font-weight: 300; }
-.post-item .inner p.category                { font-weight: 700; text-transform: uppercase; }
+.post-item .inner p.author                  { font-size: 12px; font-weight: 300; display: inline;}
+.post-item .inner p.category                { font-weight: 600; font-size: 12px; text-transform: uppercase; }
 .post-item .inner p.category > a            { color: #545454; }
 .post-item .inner a.tag,
-.post a.tag                                 { font-size: 16px; line-height: 30px; color: #fff; }
+.post a.tag                                 { font-size: 16px; line-height: 30px; color: #fff; position: absolute; top: 10px; left: 10px;}
 .post a.tag                                 { font-size: 12px; color: #474747; }
 .post-info > h3,
 .tool-item .inner h3                        { font-size: 14px; font-weight: 600; line-height: 1.8em; }
@@ -397,7 +397,7 @@ div.page-404 img                            { width: 50%; }
 .post-item,
 .tool-item                                  { margin-bottom: 30px; }
 .post-item .inner,
-.tool-item .inner                           { border-radius: 4px; overflow: hidden; }
+.tool-item .inner                           { border-radius: 4px; overflow: hidden; position: relative}
 .post-item .inner > img                     { border-radius: 4px; }
 .post-item .inner > .overlay                { width: 100%; height: 100%; border-radius: 4px; color: #545454 }
 .post-item .inner p.author                  { margin-bottom: 0; }
@@ -449,7 +449,8 @@ div.page-404 img                            { width: 50%; }
     .post .tag                              { height: 20px; }
     .post-item .inner .tag .link,
     .post a.tag .link                       { top: -6px; font-size: 11px; }
-    .post-item .inner a.read-more           { font-size: 10px; float: right;}
+    .post-item .inner a.read-more           { font-size: 10px;}
+    .post-item .inner p.read-more           {display: right;}
     .post-item .inner p.author              { font-size: 10px; }
     .post-item .inner .read-more:after,
     .tool-item .inner .read-more:after,
@@ -557,3 +558,5 @@ span.label-author                           { background-color: #e55b5b; }
 .profile-container .user-avatar             { width: 20%; position: relative; left: 30px; top: -100px; }
 .profile-container .password-form           { margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.1); }
 .profile-container .details-container       { position: relative; top: -90px; }
+
+.float-right                                { float: right;}
