@@ -31,12 +31,17 @@ var express     = require( 'express' ),
                     err.status  = 404;
                     next( err );
                 } else {
+<<<<<<< faa46520eaf3e2799e6bb0e339f59eae1ff3067a
+=======
+                  console.log('ENTER!!')
+>>>>>>> Modificiaciones test para Visualizadores
                     res.json( visualizer );
                 }
             };
             cursor.exec( callback )
     });
 
+<<<<<<< faa46520eaf3e2799e6bb0e339f59eae1ff3067a
     router.post('/', Session.validate, function(req, res, next){
         moveImg     = function ( field, visualizer ){
             Utils.move( req.body[field], path.join( config.uploads_path, viusalizer.id ), function ( e, file ) {
@@ -155,6 +160,27 @@ var express     = require( 'express' ),
         }
     });
 
+=======
+    router.put('/:id', Session.validate, function (req, res, next){
+
+
+        Visualizer.findById( req.params.id, function (err, visualizer) {
+            if ( err || !visualizer ) {
+                err     = new Error ('Invalid visualizer id');
+                err.status = 404;
+                next(err);
+
+            } else {
+              //fill dates with information request
+              for( var key in  req.body ){
+                visualizer[key] = req.body[key];
+              }
+
+              visualizer.save( visualizer );
+            }
+
+        });
+>>>>>>> Modificiaciones test para Visualizadores
     });
 
 
