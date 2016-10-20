@@ -3,7 +3,6 @@
 define( function () {
     return function ( $stateProvider, $urlRouterProvider ) {
         $urlRouterProvider.rule( function( $injector, $location ) {
-            console.log( $location.path() );
             var path                = $location.path(),
                 hasTrailingSlash    = path[path.length-1] === '/';
 
@@ -97,6 +96,11 @@ define( function () {
                     'landing-tools'     : {
                         templateUrl     : 'partials/front/posts',
                         controller      : 'FrontPostsCtrl'
+                    },
+                    'landing-visualizaciones'
+                                        :{
+                      templateUrl       : 'partials/front/posts',
+                      controller        : 'FrontPostsCtrl'
                     },
                     'landing-blog'      : {
                         templateUrl     : 'partials/front/posts',
