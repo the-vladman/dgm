@@ -6,8 +6,6 @@ define( function () {
         var per_page        = ( $scope.section == 'blog' ) ? 4 : 6,
             queryFeatured   = function ( section, tag ) {
                 $scope.featured = Posts.query({
-                    expanded    : true,
-                    featured    : true,
                     page        : 1,
                     per_page    : 1,
                     section     : section,
