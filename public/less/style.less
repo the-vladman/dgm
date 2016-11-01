@@ -480,6 +480,78 @@ div.page-404 img                            { width: 50%; }
 #category-extras .sector-item .overlay span { display: block; margin-top: 40px; }
 
 /********************************
+    Style Guide Styles
+********************************/
+.front .style-guide h2                      { margin-bottom: 20px; padding-bottom: 0; border-bottom: none; }
+.front .style-guide h2:after                { display: none; }
+.front .style-guide h2.section-title        { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #d8d8d8; position: relative; }
+.front .style-guide h2.section-title:after  { display: block; content: ''; width: 40px; position: absolute; bottom: -6px; left: 0; border-bottom: solid 5px #0c9; }
+.front .style-guide .btn                    { display: inline-block; width: auto; height: auto; margin-right: 10px; }
+.front .style-guide .btn-group .btn         { margin-right: 0; }
+.front .style-guide .btn-group-vertical .btn{ display: block; width: 100%; }
+.front .style-guide .btn-lg                 { font-size: 18px; }
+.front .style-guide .btn-sm,
+.front .style-guide .btn-xs                 { font-size: 12px; }
+.style-guide > h1                           { margin-bottom: 30px; }
+.style-guide h2.section-title               { margin-top: 40px; }
+.highlight                                  { margin-top: 20px; padding: 9px 14px; margin-bottom: 40px; background-color: #f7f7f9; border: 1px solid #e1e1e8; border-radius: 4px;color: #474747; }
+.highlight p                                { margin-bottom: 0; line-height: 1.3em; font-family: "Courier"; font-size: 12px; }
+.highlight p > span                         { color: #666699; }
+.highlight p > span.text-lblue              { color: #0099ff;  }
+.highlight p > span.text-lgray              { color: rgba(0,0,0,0.4); }
+.highlight p > span.text-red                { color: #ff6666;}
+.highlight p.double-indent-first            { text-indent: 30px; }
+.highlight p.triple-indent-first            { text-indent: 45px; }
+.highlight p.fourth-indent-first            { text-indent: 60px; }
+.highlight p.indent-first                   { text-indent: 15px; }
+.highlight-form                             { padding: 20px; }
+.highlight-form label                       { line-height: 20px; margin-bottom: 5px; color: rgba(0,0,0,0.5); font-size: 13px; }
+.highlight-form p                           { margin-bottom: 10px; font-size: 13px; }
+.element-highlight                          { background-color: #f7f7f9; border: 1px solid #e1e1e8; font-size: 9px; color: #9b9b9b; margin-bottom: 15px; border-right: none; }
+.element-highlight:last-child               { border-right: 1px solid #e1e1e8; }
+.color-block                                { height: 50px; margin-bottom: 20px; }
+.navbar.navbar-secondary                    { background-color: #0c9; height: auto; min-height: auto; }
+.navbar-secondary .navbar-brand             { color: #fff; font-size: 11px; }
+.navbar-secondary ul.nav > li > a           { color: rgba(0,0,0,0.4); padding: 10px; font-size: 11px; line-height: 36px; }
+.navbar-secondary ul.nav > li.active > a,
+.navbar-secondary ul.nav > li:hover > a     { background-color: transparent; color: #fff; }
+.style-guide .btn-group-justified > .btn-group .btn         { width: 100%; }
+
+/********************************
+    External Stylesheet
+********************************/
+.style-guide h1, .style-guide h2,
+.style-guide h3, .style-guide h4,
+.style-guide h5, .style-guide h6            { margin-bottom: 30px !important; }
+
+/********************************
+    Breadcrumb Styles
+********************************/
+.breadcrumb                                 { min-height: 30px; margin-bottom: 0; padding: 10px 0; background-color: transparent; border-radius: 0; }
+.breadcrumb > li                            { font-size: 12px; font-weight: 400; line-height: 30px; }
+.breadcrumb > li + li::before               { padding: 0 3px 0 8px; font-size: 13px; }
+.breadcrumb > li > a                        { display: inline; color: #545454; text-transform: capitalize; }
+.breadcrumb > li.active > a,
+.breadcrumb > li:last-child > a,
+.breadcrumb > li > a:hover                  { color: #0c9; }
+.breadcrumb > li:last-child > a             { pointer-events: none; }
+@media (max-width: @screen-md-min)          {
+    .breadcrumb > li                        { font-size: 10px; font-weight: 300; line-height: 20px; }
+}
+
+/********************************
+    Pagination Styles
+********************************/
+.pagination > .active > a,
+.pagination > .active > a:hover             { background-color: #0c9; border-color: #0c9; }
+.pagination > li > a                        { color: #0c9; }
+.pagination > li > a:hover                  { color: #0a9; }
+
+/********************************
+    End External Stylesheet
+********************************/
+
+/********************************
     Admin Styles
 ********************************/
 .admin-controls                             { margin-bottom: 30px; }
