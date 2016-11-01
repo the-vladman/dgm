@@ -1,6 +1,6 @@
 {
     "name"          : "dgm",
-    "version"       : "6.0.0",
+    "version"       : "6.3.1",
     "description"   : "CMS for the blog datos.gob.mx",
     "main"          : "index.js",
     "scripts"       : {
