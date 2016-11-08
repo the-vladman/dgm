@@ -36,7 +36,7 @@ define( function () {
             })
             .state( 'style_guide', {
                 parent  : 'front',
-                url     : '/guia-base',
+                url     : '/guia-estilos',
                 views   : {
                     'front-container'   : {
                         templateUrl     : 'partials/front/style_guide'
