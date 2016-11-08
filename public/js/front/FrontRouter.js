@@ -34,6 +34,15 @@ define( function () {
                     }
                 }
             })
+            .state( 'style_guide', {
+                parent  : 'front',
+                url     : '/guia-estilos',
+                views   : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/front/style_guide'
+                    }
+                }
+            })
             .state( 'privacy', {
                 parent  : 'front',
                 url     : '/privacidad',
