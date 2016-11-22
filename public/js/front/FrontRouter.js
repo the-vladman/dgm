@@ -53,6 +53,16 @@ define( function () {
                     }
                 }
             })
+            .state('accessibility', {
+               parent    : 'front',
+               url       : '/accesibilidad',
+               views     : {
+                    'front-container'  : {
+                       templateUrl     : 'partials/front/accessibility',
+                       controller      : 'FrontAccessibilityCtrl'
+                     }
+                 }
+             })
             .state( 'libreusomx', {
                 parent  : 'front',
                 url     : '/libreusomx',
