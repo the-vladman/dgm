@@ -30,18 +30,13 @@ var express     = require( 'express' ),
                     err         = new Error( 'Invalid visualizer id' );
                     err.status  = 404;
                     next( err );
-                } else {
-<<<<<<< faa46520eaf3e2799e6bb0e339f59eae1ff3067a
-=======
-                  console.log('ENTER!!')
->>>>>>> Modificiaciones test para Visualizadores
+                } else {s
                     res.json( visualizer );
                 }
             };
             cursor.exec( callback )
     });
 
-<<<<<<< faa46520eaf3e2799e6bb0e339f59eae1ff3067a
     router.post('/', Session.validate, function(req, res, next){
         moveImg     = function ( field, visualizer ){
             Utils.move( req.body[field], path.join( config.uploads_path, viusalizer.id ), function ( e, file ) {
@@ -160,7 +155,6 @@ var express     = require( 'express' ),
         }
     });
 
-=======
     router.put('/:id', Session.validate, function (req, res, next){
 
 
@@ -180,7 +174,6 @@ var express     = require( 'express' ),
             }
 
         });
->>>>>>> Modificiaciones test para Visualizadores
     });
 
 
