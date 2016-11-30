@@ -32,17 +32,12 @@ var express     = require( 'express' ),
                     err.status  = 404;
                     next( err );
                 } else {
-<<<<<<< bb2de617a8f25afbc7cc318e6a07c1f601c7a49d
-=======
-                  console.log('ENTER!!')
->>>>>>> Modificiaciones test para Visualizadores
                     res.json( visualizer );
                 }
             };
             cursor.exec( callback )
     });
 
-<<<<<<< bb2de617a8f25afbc7cc318e6a07c1f601c7a49d
     router.post('/', Session.validate, function(req, res, next){
         moveImg     = function ( field, visualizer ){
             Utils.move( req.body[field], path.join( config.uploads_path, viusalizer.id ), function ( e, file ) {
@@ -167,7 +162,6 @@ var express     = require( 'express' ),
         }
     });
 
-=======
     router.put('/:id', Session.validate, function (req, res, next){
 
 
@@ -187,7 +181,6 @@ var express     = require( 'express' ),
             }
 
         });
->>>>>>> Modificiaciones test para Visualizadores
     });
 
 
