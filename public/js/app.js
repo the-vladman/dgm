@@ -13,6 +13,7 @@ define( function ( require ) {
     require( 'sessions/SessionsModule' );
     require( 'users/UsersModule' );
     require( 'visualizers/VisualizersModule');
+    require( 'settings/SettingsModule' );
 
     var app     = angular.module( 'dgm', [
             'angular-medium-editor',
@@ -29,6 +30,7 @@ define( function ( require ) {
             'AdminModule',
             'CategoriesModule',
             'VisualizersModule',
+            'SettingsModule',
             'CommonModule',
             'DataModule',
             'DatasetsModule',

@@ -23,9 +23,9 @@ define( function ( require ) {
 
     FrontModule.controller( 'FrontCtrl', [ '$cookies', '$uibModal', FrontController ] );
 
-    FrontModule.controller( 'FrontHomeCtrl', [ '$scope', '$cookies', '$uibModal', 'VisualizersService', FrontHomeCtrl ]);
+    FrontModule.controller( 'FrontHomeCtrl', [ '$scope', '$cookies', '$uibModal', 'VisualizersService', 'SettingsService', FrontHomeCtrl ]);
 
     FrontModule.controller( 'FrontPopupCtrl', [ '$scope', '$uibModalInstance', FrontPopupCtrl ]);
 
-    FrontModule.controller( 'FrontPostsCtrl', [ '$scope', '$element', '$stateParams', 'CategoriesService', 'PostsService', 'VisualizersService', FrontPostsCtrl ]);
+    FrontModule.controller( 'FrontPostsCtrl', [ '$scope', '$element', '$stateParams', 'CategoriesService', 'PostsService', 'VisualizersService', 'SettingsService',  FrontPostsCtrl ]);
 });

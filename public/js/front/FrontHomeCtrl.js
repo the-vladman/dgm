@@ -1,7 +1,7 @@
 'use strict';
 
 define( function () {
-    return function ( $scope, $cookies, $modal, Visualizers ) {
+    return function ( $scope, $cookies, $modal, Visualizers, Settings ) {
         $scope.closeFunctionality   = function () {
             $( '#site-functionality' ).css( 'display', 'none' );
 
@@ -30,5 +30,8 @@ define( function () {
             if( !data[0] )
                 $scope.visualizerPublish = false;
         });
+
+
+        $scope.imageLanding = Settings.get( 'image-landing' );
     };
 });

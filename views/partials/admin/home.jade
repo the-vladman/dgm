@@ -34,6 +34,10 @@ nav.navbar.navbar-default.navbar-fixed-top
                     a( ui-sref="visualizers.list" )
                         i.icon-box
                         |  Visualizaciones
+                li( ng-class="{active:$state.includes('settings')}" )
+                    a( ui-sref="settings.edit" )
+                        i.icon-box
+                        |  Ajustes
             ul.nav.navbar-nav.navbar-right
                 li.dropdown
                     a.dropdown-toggle( href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" )
