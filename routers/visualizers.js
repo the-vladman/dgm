@@ -14,7 +14,8 @@ var express     = require( 'express' ),
                 field   : 'name',
                 select  : 'name slug'
             }
-          ]};
+          ]},
+    regex = /(&lt)\;\w+(&gt)\;/ig;
 
     router.get( '', function ( req, res, next ) {
         var filters = [ 'name', 'edition_date', 'status' ];
@@ -30,7 +31,7 @@ var express     = require( 'express' ),
                     err         = new Error( 'Invalid visualizer id' );
                     err.status  = 404;
                     next( err );
-                } else {s
+                } else {
                     res.json( visualizer );
                 }
             };
@@ -127,6 +128,12 @@ var express     = require( 'express' ),
                     continue;
                 }
 
+                if ( key == 'name'){
+                  if (req.body[key] !== undefined ){
+                    req.body[key] = req.body[key].replace(regex, "");
+                  }
+                }
+
                 visualizer[key]   = req.body[key];
             }
 
@@ -155,25 +162,6 @@ var express     = require( 'express' ),
         }
     });
 
-    router.put('/:id', Session.validate, function (req, res, next){
-
-
-        Visualizer.findById( req.params.id, function (err, visualizer) {
-            if ( err || !visualizer ) {
-                err     = new Error ('Invalid visualizer id');
-                err.status = 404;
-                next(err);
-
-            } else {
-              //fill dates with information request
-              for( var key in  req.body ){
-                visualizer[key] = req.body[key];
-              }
-
-              visualizer.save( visualizer );
-            }
-
-        });
     });
 
 
