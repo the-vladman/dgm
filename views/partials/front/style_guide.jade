@@ -1,0 +1,733 @@
+.breadcrumb-container
+    .container-fluid
+        .row
+            .col-md-12
+                breadcrumb
+.container-fluid
+    .row
+        .col-md-9.post.style-guide
+            h1 Bienvenido a la guía<br />de estilo para datos.gob.mx
+            .section
+                h2.section-title Objetivo
+                p Con el objetivo de estandarizar la estructura de los contenidos en datos.gob.mx, se ha realizado el siguiente documento, que funciona como una guía compuesta por un conjunto de elementos especificos que se deben de cumplir al momento de realizar la maquetacion de alguna seccion o pagina nueva de datos.gob.mx
+                p La gráfica base sirve como referencia para organizar la información y la forma en la que esta estara disponible, para facilitar a nuestros usuarios que accedan de manera sencilla a todo el contenido que solicite.
+            .section
+                h2.section-title Configuración Básica
+                h4 Uso de título
+                p Todas las paginas que utilicen la grafica base deberan tener un titulo utilizando la etiqueta <span>&lt;title&gt;</span> dentro de la etiqueta <span>&lt;head&gt;</span>.
+                figure.highlight
+                    p <span>&lt;head&gt;</span>
+                    p.indent-first ...
+                    p.indent-first <span>&lt;title&gt;</span>Ejemplo de nueva pagina para GOB.mx<span>&lt;title&gt;</span>
+                    p.indent-first ...
+                    p <span>&lt;/head&gt;</span>
+            .section
+                h2.section-title Uso de favicon
+                p Descargar las imagenes de favicon <span style="color:#00cc99"><u>aquí</u></span> y agregas el archivo <i>favicon.ico</i> en el directorio raíz del sitio. Posteriormente se deberá vincular la imagen utilizando la etiqueta <span class="text-red">&lt;link&gt;</span> dentro de la etiqueta <span class="text-red" ">&lt;head&gt;</span>.
+                figure.highlight
+                    p <span>&lt;head&gt;</span>
+                    p.indent-first ...
+                    p.indent-first <span>&lt;link</span><span style="color:#0089FF"> href=</span><span style="color:red">"/favicon.ico"</span> <span style="color:#0089FF"> rel=</span><span style="color:red">"shortcut icon"</span>&gt;
+                    p.indent-first ...
+                    p <span>&lt;/head&gt;</span>
+            .section
+                h2.section-title Sistema de retícula
+                p Con el objetivo de estandarizar la estructura de los contenidos en datos.gob.mx, se ha realizado el siguiente documento, que funciona como una guia compuesta por un conjunto de elementos especificos que se deben de cumplir al momento de realizar maquetacion de alguna seccion o página nueva de datos.gob.mx
+                p La gráfica base sirvo como referencia para organizar la informacion y la forma en la que esta estara disponible, para facilitar a nuestros usuarios que accedan de manera sencilla a todo el contenido que solicite
+                h4 Ejemplo:
+                .container-fluid
+                    .row
+                        .col-md-1.element-highlight col-md-1
+                        .col-md-1.element-highlight col-md-1
+                        .col-md-1.element-highlight col-md-1
+                        .col-md-1.element-highlight col-md-1
+                        .col-md-1.element-highlight col-md-1
+                        .col-md-1.element-highlight col-md-1
+                        .col-md-1.element-highlight col-md-1
+                        .col-md-1.element-highlight col-md-1
+                        .col-md-1.element-highlight col-md-1
+                        .col-md-1.element-highlight col-md-1
+                        .col-md-1.element-highlight col-md-1
+                        .col-md-1.element-highlight col-md-1
+                .container-fluid
+                    .row
+                        .col-md-8.element-highlight col-md-8
+                        .col-md-4.element-highlight col-md-4
+                .container-fluid
+                    .row
+                        .col-md-4.element-highlight col-md-4
+                        .col-md-4.element-highlight col-md-4
+                        .col-md-4.element-highlight col-md-4
+                .container-fluid
+                    .row
+                        .col-md-6.element-highlight col-md-6
+                        .col-md-6.element-highlight col-md-6
+                figure.highlight
+                    p <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"row</span><span>&gt;</span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-1"</span><span>&gt;</span>col-md-1<span>&lt;/div&gt;</span></span></span>
+                    p <span>&lt;/div&gt;</span>
+                    p <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"row</span><span>&gt;</span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-8"</span><span>&gt;</span>col-md-8<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-4"</span><span>&gt;</span>col-md-4<span>&lt;/div&gt;</span></span></span>
+                    p <span>&lt;/div&gt;</span>
+                    p <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"row</span><span>&gt;</span>
+                    p.indent-first <span>&gt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-4"</span><span>&lt;</span>col-md-4<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-4"</span><span>&gt;</span>col-md-4<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-4"</span><span>&gt;</span>col-md-4<span>&lt;/div&gt;</span></span></span>
+                    p <span>&lt;/div&gt;</span>
+                    p <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"row</span><span>&gt;</span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-6"</span><span>&gt;</span>col-md-6<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-6"</span><span>&gt;</span>col-md-6<span>&lt;/div&gt;</span></span></span>
+                    p.indent-first <span>&lt;div </span> <span class="text-lblue">class=</span><span class="text-red">"col-md-6"</span><span>&gt;</span>col-md-6<span>&lt;/div&gt;</span></span></span>
+                    p <span>&lt;/div&gt;</span>
+            .section
+                h2.section-title Gama de colores
+                p Los colores aquí especificados son lo sque deberán utilizarse en el contenido cuerpo de texto dentro de los documentos deberá ir en negro #474747
+                p #474747
+                .color-block( style="background-color: #474747" )
+                p #9B9B9B
+                .color-block( style="background-color: #9B9B9B" )
+                p #D8D8D8
+                .color-block( style="background-color: #d8d8d8" )
+                p #F6F6F6
+                .color-block( style="background-color: #f6f6f6" )
+                p #FFFFFF
+                .color-block( style="background-color: #fff" )
+                p #00CC99
+                .color-block( style="background-color: #0c9" )
+                p #FF6666
+                .color-block( style="background-color: #f66" )
+                h4 Colores de soporte
+                p Estos colores servirán de apoyo en las visualizaciónes, gráficos o en casos donde se deba usar más colores para sementación o diferenciación. No deben usarse en encabezados, títulos, botones u otros elementos en el sitio.
+                .row
+                    .col-md-4
+                        p #663399
+                        .color-block( style="background-color: #663399" )
+                    .col-md-4
+                        p #ff9900
+                        .color-block( style="background-color: #f90" )
+                    .col-md-4
+                        p #0099ff
+                        .color-block( style="background-color: #09f" )
+                .row
+                    .col-md-4
+                        p #333399
+                        .color-block( style="background-color: #339" )
+                    .col-md-4
+                        p #006666
+                        .color-block( style="background-color: #066" )
+                    .col-md-4
+                        p #ff6699
+                        .color-block( style="background-color: #f69" )
+                .row
+                    .col-md-4
+                        p #663399
+                        .color-block( style="background-color: #639" )
+                    .col-md-4
+                        p #474747
+                        .color-block( style="background-color: #474747" )
+                    .col-md-4
+                        p #999999
+                        .color-block( style="background-color: #999" )
+            .section
+                h2.section-title Barra de subnavegación
+                p La barra de subnavegación es un componente que podrá contener encabezados de navegación en su aplicacion a un micrositio o una herramienta. En vistes de móviles estan expandidos, y se vuelven horizontales cuando aumenta el ancho de la ventanilla disponible. En caso de utilizar, se deberá de crear justo después de que se haya abierto la etiqueta<span class="text-red">&lt;main&gt;</span>.
+                nav.navbar.navbar-secondary.sub-navbar
+                    .navbar-header
+                        button.navbar-toggle.collapsed( type="button" data-toggle="collapse" data-target="#subenlaces" )
+                            span.sr-only Interruptor de Navegacion
+                            span.icon-bar
+                            span.icon-bar
+                        a.navbar-brand( href="/" ) Red compartida
+                    #subenlaces.collapse.navbar-collapse
+                        ul.nav.navbar-nav.navbar-right
+                            li.active <a href="#">Planeación</a>
+                            li <a href="#">Concurso</a>
+                            li <a href="#">Adjuntación</a>
+                            li <a href="#">Contratación</a>
+                            li <a href="#">Implementación</a>
+            .section
+                .section-title Formulario
+                p Los controles de formularios individuales reciben automáticamente algunos estilos globales. Todos los elementos<span class="text-red">&lt;input&gt;, &lt;textarea&gt;</span> y <span class="text-red">&lt;select&gt;</span> con la clase<span class="text-red">.form-control</span> se componen de un anchode 100% de forma predeterminada. Para un espaciado más óptimo se deben envolver las etiquetas y los controles con la clase <span class="text-red">.form-group</span>.
+                h4 Ejemplo básico
+                .highlight.highlight-form
+                    form
+                        .form-group
+                            input.form-control( type="text" placeholder="Nombre" )
+                        .form-group
+                            input.form-control( type="email" placeholder="Correo electrónico" )
+                        button.btn.btn-primary( type="submit" ) Enviar
+                h4 Casillas de verificación y botones de opción
+                p Ejemplos para agregar casillas de verificación (checkbox) y botones de opcion (radio).
+                .highlight.highlight-form
+                    p <strong>Ejemplo de casillas de verificación (checkbox)</strong>
+                    p Descripción
+                    .checkbox
+                        label <input type="checkbox"> Opción 1
+                    .checkbox
+                        label <input type="checkbox"> Opción 2
+                    .checkbox
+                        label <input type="checkbox"> Opción 3
+                    p <strong>Ejemplo de botón de opción (radio)</strong>
+                    p Descripción
+                    .radio
+                        label <input name="radio" type="radio"> Opción 1
+                    .radio
+                        label <input name="radio" type="radio"> Opción 2
+                    .radio
+                        label <input name="radio" type="radio"> Opción 3
+                h4 Campos de selección
+                p Usa el comportamiento nativo o agrega el atributo <span class="text-red">multiple</span> para seleccionar múltiples opciones.
+                select.form-control
+                    option Uno
+                    option Dos
+                    option Tres
+                    option Cuatro
+                select.form-control( multiple )
+                    option Uno
+                    option Dos
+                    option Tres
+                    option Cuatro
+            .section
+                h2.section-title Botones
+                p Los botones en una interfaz son elementos vitales, ya que en la mayoría de los casos reúnen muchas de las capacidades de navegación que su creador.
+                p Utilice cualquiera de las clases de botones disponibles para crear rápidamente un botón con estilo.
+                p Para mas informacion ingrese a:<button type="button" class="btn btn-link">ejemplos de caso de uso.</button>
+                button.btn.btn-default( type="button" ) Básico
+                button.btn.btn-danger( type="button" ) Error
+                button.btn.btn-primary( type="button" ) Primario
+                figure.highlight
+                    p <span class="text-lgray">&lt;!-- Botón básico --&gt;</span>
+                    p.color-text <span>&lt;button</span><span class="text-lblue"> type=</span><span class="text-red">"button"</span><span class="text-lblue"> class=</span><span class="text-red">"btn btn-default"</span><span>&gt;</span>Básico<span>&lt;/button&gt;</span>
+                    p <span class="text-lgray">&lt;!-- Botón básico --&gt;</span>
+                    p.color-text <span>&lt;button</span><span class="text-lblue"> type=</span><span class="text-red">"button"</span><span class="text-lblue"> class=</span><span class="text-red">"btn btn-danger"</span><span>&gt;</span>Error<span>&lt;/button&gt;</span>
+                    p <span class="text-lgray">&lt;!-- Botón básico --&gt;</span>
+                    p.color-text" <span>&lt;button</span><span class="text-lblue"> type=</span><span class="text-red">"button"</span><span class="text-lblue"> class=</span><span class="text-red">"btn btn-primary"</span><span>&gt;</span>Primario<span>&lt;/button&gt;</span>
+                    p <span class="text-lgray">&lt;!-- Botón básico --&gt;</span>
+                    p.color-text <span>&lt;button</span><span class="text-lblue"> type=</span><span class="text-red">"button"</span><span class="text-lblue"> class=</span><span class="text-red">"btn btn-Link"</span><span>&gt;</span>Hypervínculo<span>&lt;/button&gt;</span>
+                h4 Tamaños de botones
+                p Aquí se detalla los diferentes tamaños que tienen los botones. Agrga la clase <span class="text-red"> .btn-lg</span>,<span class="text-red"> .btn-sm</span>, o <span class="text-red">.btn-xs</span> para modificar el tamaño del botón.
+                p
+                    button.btn.btn-default.btn-lg( type="button" ) Grande
+                    button.btn.btn-primary.btn-lg( type="button" ) Grande
+                p
+                    button.btn.btn-default( type="button" ) Básico
+                    button.btn.btn-primary( type="button" ) Básico
+                p
+                    button.btn.btn-default.btn-sm( type="button" ) Chico
+                    button.btn.btn-primary.btn-sm( type="button" ) Chico
+                p
+                    button.btn.btn-default.btn-xs( type="button" ) Extra chico
+                    button.btn.btn-primary.btn-xs( type="button" ) Extra chico
+                figure.highlight.highlight-btn-siz
+                    p <span>&lt;p&gt;</span>
+                    p.indent-first <span>&lt;button&gt;</span><span class="text-lblue">class=</span><span class="text-red">"btn btn -default btn-lg</span><span class="text-lblue">type=</span><span class="text-red">"button"</span><span>&gt;</span>Grande<span>&lt;/button&gt;</span>
+                    p.indent-first <span>&lt;button&gt;</span><span class="text-lblue">class=</span><span class="text-red">"btn btn -primary btn-lg</span><span class="text-lblue">type=</span><span class="text-red">"button"</span><span>&gt;</span>Grande<span>&lt;/button&gt;</span>
+                    p <span>&lt;/p&gt;</span>
+                    p <span>&lt;p&gt;</span>
+                    p.indent-first <span>&lt;button&gt;</span><span class="text-lblue">class=</span><span class="text-red">"btn btn -default</span><span class="text-lblue">type=</span><span class="text-red">"button"</span><span>&gt;</span>Básico<span>&lt;/button&gt;</span>
+                    p.indent-first <span>&lt;button&gt;</span><span class="text-lblue">class=</span><span class="text-red">"btn btn -primary</span><span class="text-lblue">type=</span><span class="text-red">"button"</span><span>&gt;</span>Básico<span>&lt;/button&gt;</span>
+                    p <span>&lt;/p&gt;</span>
+                    p <span>&lt;p&gt;</span>
+                    p.indent-first <span>&lt;button&gt;</span><span class="text-lblue">class=</span><span class="text-red">"btn btn -default btn-sm</span><span class="text-lblue">type=</span><span class="text-red">"button"</span><span>&gt;</span>Chico<span>&lt;/button&gt;</span>
+                    p.indent-first <span>&lt;button&gt;</span><span class="text-lblue">class=</span><span class="text-red">"btn btn -primary btn-sm</span><span class="text-lblue">type=</span><span class="text-red">"button"</span><span>&gt;</span>Chico<span>&lt;/button&gt;</span>
+                    p <span>&lt;/p&gt;</span>
+                    p <span>&lt;p&gt;</span>
+                    p.indent-first <span>&lt;button&gt;</span><span class="text-lblue">class=</span><span class="text-red">"btn btn -default btn-xs</span><span class="text-lblue">type=</span><span class="text-red">"button"</span><span>&gt;</span>Extra chico<span>&lt;/button&gt;</span>
+                    p.indent-first <span>&lt;button&gt;</span><span class="text-lblue">class=</span><span class="text-red">"btn btn -primary btn-xs</span><span class="text-lblue">type=</span><span class="text-red">"button"</span><span>&gt;</span>Extra chico<span>&lt;/button&gt;</span>
+                    p <span>&lt;/p&gt;</span>
+                h4 Estado activo
+                p Los botones aparecen con una sombra interna, color de fondo y borde más oscuro. Agrega la clase <span class="text-red">.active</span> sólo para las etiquetas<span class="text-red">&lt;a&gt;</span> o<span class="text-red">&lt;button&gt;</span>
+                button.btn.btn-default.active( type="button" ) Ejemplo
+                button.btn.btn-primary.active( type="button" ) Ejemplo
+                figure.highlight
+                    p <span>&lt;button</span><span class="text-lblue"> clas=</span><span class="text-red">"btn btn-default btn-lg active</span><span class="text-lblue">  type=</span><span class="text-red">"button"</span>Ejemplo<span>&lt;/button&gt;</span>
+                    p <span>&lt;button</span><span class="text-lblue"> clas=</span><span class="text-red">"btn btn-default btn-lg active</span><span class="text-lblue">  type=</span><span class="text-red">"button"</span>Ejemplo<span>&lt;/button&gt;</span>
+                h4 Botones deshabilitados
+                p Los botones deshabilitados funcionan igual que los activos. Si se desea cambiar la apariencia del botón agrega la clase <span class="text-red">.disabled</span> a los botones que necesites deshabilitar.
+                button.btn.btn-default.disabled( type="button" disabled ) Ejemplo
+                button.btn.btn-primary.disabled( type="button" disabled ) Ejemplo
+                figure.highlight
+                    p <span>&lt;button</span><span class="text-lblue"> clas=</span><span class="text-red">"btn btn-default btn-lg disabled</span><span class="text-lblue">  type=</span><span class="text-red">"button"</span>Ejemplo<span>&lt;/button&gt;</span>
+                    p <span>&lt;button</span><span class="text-lblue"> clas=</span><span class="text-red">"btn btn-default btn-lg disabled</span><span class="text-lblue">  type=</span><span class="text-red">"button"</span>Ejemplo<span>&lt;/button&gt;</span>
+                h4 Grupo de botones
+                p Serie de botones a la vez una sola línea con el grupo de botones.
+                .btn-group( role="group" aria-label="..." )
+                    button.btn.btn-default( type="button" ) Izquierda
+                    button.btn.btn-default( type="button" ) Centro
+                    button.btn.btn-default( type="button" ) Derecha
+                figure.highlight
+                    p <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"btn-group"</span><span class="text-lblue"> role=</span><span class="text-red">"group"</span><span class="text-lblue"> aria-label=</span><span class="text-red">"..."</span><span>&gt;</span><br/>
+                    p.indent-first<span>&lt;button</span><span class="text-lblue"> type=</span><span class="text-red">"button"</span><span class="text-lblue"> class=</span><span class="text-red">"btn btn-default"</span><span>&gt;</span>Izquierda<span>&lt;/button</span><br/>
+                    p.indent-first<span>&lt;button</span><span class="text-lblue"> type=</span><span class="text-red">"button"</span><span class="text-lblue"> class=</span><span class="text-red">"btn btn-default"</span><span>&gt;</span>Centro<span>&lt;/button</span><br/>
+                    p.indent-first<span>&lt;button</span><span class="text-lblue"> type=</span><span class="text-red">"button"</span><span class="text-lblue"> class=</span><span class="text-red">"btn btn-default"</span><span>&gt;</span>Derecha<span>&lt;/button</span><br/>
+                    p <span>&lt;/div&gt;</span>
+                h4 Grupo de botones vertical
+                p Conjunto de botones que aparecerán apilados verticalmente en lugar de horizontal.
+                .btn-group-vertical( role="group" aria-label="..." )
+                    button.btn.btn-default( type="button" ) Botón
+                    button.btn.btn-default( type="button" ) Botón
+                    .btn-group
+                        button#dropdownMenu1.btn.btn-default.dropdown-toggle( type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ) Dropdown
+                            span.caret
+                        ul.dropdown-menu( aria-labelledby="dropdownMenu1" )
+                            li <a href="#">Botón</a>
+                            li <a href="#">Botón</a>
+                    button.btn.btn-default( type="button" ) Botón
+                    button.btn.btn-default( type="button" ) Botón
+                    .btn-group
+                        button#dropdownMenu2.btn.btn-default.dropdown-toggle( type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ) Dropdown
+                            span.caret
+                        ul.dropdown-menu( aria-labelledby="dropdownMenu2" )
+                            li <a href="#">Botón</a>
+                            li <a href="#">Botón</a>
+                figure.highlight
+                    p <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"btn-group-vertical"</span><span class="text-lblue"> role=</span><span class="text-red">"group"</span><span class="text-lblue">aria_label=</span><span class="text-red">"..."</span><span>&gt;</span>
+                    p.indent-first ...
+                    p <span>&lt;/div&gt;</span>
+                h4 Grupo de botones justificados
+                p Grupo de botones que abarcarán todo el ancho de su contenedor. También funciona con menús desplegables de los botones dentro del grupo de botones.
+                    .row
+                        .col-md-8
+                            .btn-group.btn-group-justified( role="group" aria-label="..." )
+                                .btn-group
+                                    button.btn.btn-default( type="button" ) Izquierda
+                                .btn-group
+                                    button.btn.btn-default( type="button" ) Centro
+                                .btn-group
+                                    button.btn.btn-default( type="button" ) Derecha
+                figure.highlight
+                    p <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"btn-group btn-group-justified</span> <span class="text-lblue">role=</span><span class="text-red">"group"</span><span class="text-lblue"> aria-label=</span><span class="text-red">"..."</span><span>&gt;</span>
+                    p.indent-first ...
+                    p &lt;/div&gt;
+                h4 Botones de ícono
+                p Estos botones van acompañados de un ícono que representa su acción, además del texto.
+                button.btn.btn-default( type="button" )
+                    span.glyphicon.glyphicon-search  Ejemplo
+                button.btn.btn-primary( type="button" )
+                    | Ejemplo 
+                    span.glyphicon.glyphicon-search
+                figure.highlight
+                    p <span class="text-lgray">&lt;!-- Icono del lado izquierda del botón --&gt;</span>
+                    p <span>&lt;button</span><span class="text-lblue"> class=</span><span class="text-red">"btn btn-default"</span><span class="text-lblue">type=</span><span class="text-red">"button"</span><span>&gt;</span>
+                    p.indent-first <span> &lt;span</span><span class="text-lblue"> class=</span><span class="text-red">"glyphicon glyphicon-search"</span><span>&gt;&lt;/span&gt;</span>Ejemplo
+                    p <span>&lt;/button&gt;</span>
+                    p <span class="text-lgray">&lt;!-- Icono del lado izquierda del botón --&gt;</span>
+                    p <span>&lt;button</span><span class="text-lblue"> class=</span><span class="text-red">"btn btn-default"</span><span class="text-lblue">type=</span><span class="text-red">"button"</span><span>&gt;</span>
+                    p.indent-first Ejemplo
+                    p.indent-first <span> &lt;span</span><span class="text-lblue"> class=</span><span class="text-red">"glyphicon glyphicon-search"</span><span>&gt;&lt;/span&gt;</span>
+                    p <span>&lt;/button&gt;</span>
+            .section
+                h2.section-titel Paginación
+                p En esta sección se describe todo lo relacionado con paginadores.
+                ul.pagination
+                    li
+                        a( href="#" aria-label="Prev" )
+                            span( aria-hidden="true" ) &laquo;
+                    li <a href="#">1</a>
+                    li.active <a href="#">2</a>
+                    li <a href="#">3</a>
+                    li <a href="#">4</a>
+                    li <a href="#">5</a>
+                    li <a href="#">...</a>
+                    li <a href="#">20</a>
+                    li
+                        a( href="#" aria-label="Next" )
+                            span( aria-hidden="true" ) &raquo;
+                figure.highlight
+                    p <span>&lt;ul</span><span class="text-lblue"> class=</span><span class="text-red">"pagination"</span><span>&gt;</span>
+                    p.indent-first <span>&lt;li&gt;&lt;a</span><span class="text-lblue"> href=</span><span class="text-red">"#"</span>&gt;<span class="text-lgray">&amp;laquo</span><span>&lt;/a&gt;&lt;/li&gt;</span>
+                    p.indent-first <span>&lt;li&gt;&lt;a</span><span class="text-lblue"> href=</span><span class="text-red">"#"</span><span>&gt;</span>1<span>&lt;/a&gt;&lt;/li&gt;</span>
+                    p.indent-first <span>&lt;li&gt;&lt;a</span><span class="text-lblue"> href=</span><span class="text-red">"#"</span><span>&gt;</span>2<span>&lt;/a&gt;&lt;/li&gt;</span>
+                    p.indent-first <span>&lt;li&gt;&lt;a</span><span class="text-lblue"> href=</span><span class="text-red">"#"</span><span>&gt;</span>3<span>&lt;/a&gt;&lt;/li&gt;</span>
+                    p.indent-first <span>&lt;li&gt;&lt;a</span><span class="text-lblue"> href=</span><span class="text-red">"#"</span><span>&gt;</span>4<span>&lt;/a&gt;&lt;/li&gt;</span>
+                    p.indent-first <span>&lt;li&gt;&lt;a</span><span class="text-lblue"> href=</span><span class="text-red">"#"</span><span>&gt;</span>5<span>&lt;/a&gt;&lt;/li&gt;</span>
+                    p.indent-first <span>&lt;li&gt;&lt;a</span><span class="text-lblue"> href=</span><span class="text-red">"#"</span>&gt;<span class="text-lgray">&amp;raquo</span><span>&lt;/a&gt;&lt;/li&gt;</span>
+                    p <span>&lt;/ul&gt;</span>
+            .section
+                h2.section-title Encabezados
+                p Los siguientes son ejemplos de encabezados con diferentes tamaños de letra.
+                h1 h1. Ejemplo Texto
+                h2 h2. Ejemplo Texto
+                h3 h3. Ejemplo Texto
+                h4 h4. Ejemplo Texto
+                h5 h5. Ejemplo Texto
+                h6 h6. Ejemplo Texto
+                figure.highlight
+                    p <span>&lt;h1&gt;</span>h1. Ejemplo Texto<span>&lt;/h1&gt;</span>
+                    p <span>&lt;h2&gt;</span>h2. Ejemplo Texto<span>&lt;/h2&gt;</span>
+                    p <span>&lt;h3&gt;</span>h3. Ejemplo Texto<span>&lt;/h3&gt;</span>
+                    p <span>&lt;h4&gt;</span>h4. Ejemplo Texto<span>&lt;/h4&gt;</span>
+                    p <span>&lt;h5&gt;</span>h5. Ejemplo Texto<span>&lt;/h5&gt;</span>
+                    p <span>&lt;h6&gt;</span>h6. Ejemplo Texto<span>&lt;/h6&gt;</span>
+            .section
+                h2.section-title Separadores
+                p El uso de separadores se podrá aplicar cuando se necesite mostrar una separación de contenido. La etiqueta <span class="text-red">&lt;hr&gt;</span> agregará márgenes posteriores y superiores en el documento.
+                figure.highlight
+                    p <span>&lt;p&gt;</span> Lorem ipsum dolor...
+                    p <span>&lt;hr&gt;</span>
+                    p <span>&lt;p&gt;</span> Lorem ipsum dolor...
+            .section
+                h2.section-title Separadores para encabezados
+                p Existen los separadores que vienen acompañados de un encabezado. Para ese caso se le agregará la clase <span class="text-red"> red</span> para crear un separador con un pequeño rectángulo rojo.<span class="text-red">&lt;hr class= "red"&gt;</span>
+                figure.highlight
+                    p <span>&lt;h3&gt;</span> Ejemplo texto<span>&lt;/h3&gt;</span>
+                    p <span>&lt;hr class="red"&gt;</span>
+            .section
+                h2.section-title Cuerpos de texto
+                p El tamaño de fuente estandarizado es de 18px, con un interlineado de 1.428. Esto se aplica a todo el contenido dentro de body. El tamaño mínimo recomendable para el texto es de 16px.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur libero id gravida volutpat. Nunc mauris lorem, sodales eu suscipit id, fermentum vitae neque.
+                p Mauris nec massa sem. Etiam quis ipsum in quam consequat bibendum et in ipsum. Suspendisse faucibus metus lacus, vitae adipiscing lacus tincidunt vel.
+                p Praesent id dui suscipit, consectetur ante eget, commodo velit. Vivamus ac turpis nec lectus tincidunt vestibulum vel in odio. Sed ullamcorper eu massa quis porta. Cras at erat lectus.
+                p Ut vel varius felis. Suspendisse potenti. Curabitur luctus eros vel massa adipiscing lacinia. Sed bibendum interdum mi nec interdum. Integer nec erat enim.
+                figure.highlight
+                    p  <span>&lt;p&gt;</span>Lorem ipsum dolor...<span>&lt;/p&gt;</span>
+                h4 Lista desordenada
+                ul
+                    li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    li Vivamus sed leo mollis, ullamcorper lacus et, aliquet nibh.
+                    li Nunc nec accumsan nunc. Cras ac lorem a tellus pulvinar pulvinar.
+                    li LIn dignissim tortor id libero vulputate mollis.
+                figure.highlight
+                    p  <span>&lt;ul&gt;</span>
+                    p.indent-first  <span>&lt;li&gt;</span>Lorem ipsum dolor...<span>&lt;/li&gt;</span>
+                    p  <span>&lt;/ul&gt;</span>
+                h4 Lista ordenada
+                ol
+                    li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    li Vivamus sed leo mollis, ullamcorper lacus et, aliquet nibh.
+                    li Nunc nec accumsan nunc. Cras ac lorem a tellus pulvinar pulvinar.
+                    li In dignissim tortor id libero vulputate mollis.
+                figure.highlight
+                    p  <span>&lt;ol&gt;</span>
+                    p.indent-first  <span>&lt;li&gt;</span>Lorem ipsum dolor...<span>&lt;/li&gt;</span>
+                    p  <span>&lt;/ol&gt;</span>
+                h4 Lista sin estilos
+                ul.list-unstyled
+                    li Lorem ipsum dolor sit amet
+                    li Vconsectetur adipiscing elit
+                    li Nulla volutpat aliquam velit
+                        ul
+                            li Phasellus iaculis neque
+                            li Purus sodales ultricies
+                            li Vestibulum laoreet porttitor sem
+                            li Ac tristique libero volutpat at
+                    li Faucibus porta lacus fringilla vel
+                    li Aenean sit amet erat nunc
+                    li Eget porttitor lorem
+                figure.highlight
+                    p  <span>&lt;ul</span><span class="text-lblue"> class=</span><span class="text-red">"list-unstyled"</span><span>&gt;</span>
+                    p.indent-first  <span>&lt;li&gt;</span>...<span>&lt;/li&gt;</span>
+                    p  <span>&lt;/ul&gt;</span> 
+                h4 Listado horizontal
+                ul.list-inline
+                    li Lorem ipsum
+                    li Phasellus iaculis
+                    li Nulla volutpat
+                figure.highlight
+                    p  <span>&lt;ul</span><span class="text-lblue"> class=</span><span class="text-red">"list-inline"</span><span>&gt;</span>
+                    p.indent-first  <span>&lt;li&gt;</span>...<span>&lt;/li&gt;</span>
+                    p  <span>&lt;/ul&gt;</span>
+            .section
+                h2.section-title Tablas
+                p Para el relleno básico estilo-luz y sólo divisores horizontales se debe añadir la clase base<span class="text-red"> . table</span> a cualquier tabla.
+                h4 Ejemplo básico
+                h5 TÍTULO DE LA TABLA
+                table.table.table-condensed
+                    thead
+                        tr
+                            th Nombre
+                            th( width="20%" ) Institución
+                            th( width="15%" ) Formato
+                    tbody
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td
+                                span.dataset-format( data-format="CSV" ) CSV
+                                span.dataset-format( data-format="SHP" ) SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td
+                                span.dataset-format( data-format="CSV" ) CSV
+                                span.dataset-format( data-format="SHP" ) SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td
+                                span.dataset-format( data-format="CSV" ) CSV
+                                span.dataset-format( data-format="SHP" ) SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td
+                                span.dataset-format( data-format="CSV" ) CSV
+                                span.dataset-format( data-format="SHP" ) SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td
+                                span.dataset-format( data-format="CSV" ) CSV
+                                span.dataset-format( data-format="SHP" ) SHP
+                h5 Tabla con fondo
+                table.table.table-condensed.table-background
+                    thead
+                        tr
+                            th Nombre
+                            th( width="20%" ) Institución
+                            th( width="15%" ) Formato
+                    tbody
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td 
+                                span.dataset-format(data-format="CSV") CSV
+                                span.dataset-format(data-format="SHP") SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td 
+                                span.dataset-format(data-format="CSV") CSV
+                                span.dataset-format(data-format="SHP") SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td 
+                                span.dataset-format(data-format="CSV") CSV
+                                span.dataset-format(data-format="SHP") SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td 
+                                span.dataset-format(data-format="CSV") CSV
+                                span.dataset-format(data-format="SHP") SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td 
+                                span.dataset-format(data-format="CSV") CSV
+                                span.dataset-format(data-format="SHP") SHP
+                h5 Tabla con fondo y botones
+                    .row
+                        .col-md-12
+                            .btn-group.btn-group-justified(role="group" aria-label="...")
+                                .btn-group(role="group")
+                                    button.btn.btn-primary.active(type="button") Recomendaciones</button>
+                                .btn-group(role="group")
+                                    button.btn.btn-default(role="group") Recientes</button>
+                                .btn-group(role="group")
+                                    button.btn.btn-default(role="group") Mas descargados</button>
+                                .btn-group(role="group")
+                                    button.btn.btn-default(role="group") Visualizacion</button>
+                table.table.table-condensed.table-background
+                    thead
+                        tr
+                            th Nombre
+                            th( width="20%" ) Institución
+                            th( width="15%" ) Formato
+                    tbody
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td
+                                span.dataset-format(data-format="CSV") CSV
+                                span.dataset-format(data-format="SHP") SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td
+                                span.dataset-format(data-format="CSV") CSV
+                                span.dataset-format(data-format="SHP") SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td
+                                span.dataset-format(data-format="CSV") CSV
+                                span.dataset-format(data-format="SHP") SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td
+                                span.dataset-format(data-format="CSV") CSV
+                                span.dataset-format(data-format="SHP") SHP
+                        tr
+                            td Mapas Topográficos. Escala 1:50 000. Serie lll. Aguascalientes
+                            td INEGI
+                            td
+                                span.dataset-format(data-format="CSV") CSV
+                                span.dataset-format(data-format="SHP") SHP
+            .section
+                h2.section-title  Alertas
+                p Agrega cualquier texto y un botón opcional de cerrar dentro de la clase<span class="text-red">.alert</span>, después agrega una de las clases contextuales (e.j <span class="text-red">.alert-succes</span>
+                .alert.alert-success(role="alert")¡Felicidades! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .alert.alert-info(role="alert")¡Sugerencia! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .alert.alert-warning(role="alert")¡Precaución! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .alert.alert-danger(role="alert") Error de registo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                figure.highlight
+                    p <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"alert alert-success"</span><span>&gt;</span>...<span>&lt;/div&gt;</span>
+                    p <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"alert alert-info"</span><span>&gt;</span>...<span>&lt;/div&gt;</span>
+                    p <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"alert alert-warning"</span><span>&gt;</span>...<span>&lt;/div&gt;</span>
+                    p <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"alert alert-danger"</span><span>&gt;</span>...<span>&lt;/div&gt;</span>
+            .section
+                h2.section-title Breadcrumb
+                p Indican la ubicación de la página actual dentro de una jerarquía de navegación.
+                .container-fluid
+                    .row
+                        .col-md-12.breadcrumb
+                            ul
+                                li <a href="#"><span class="glyphicon glyphicon-home"></span></a>
+                                li <a href="#">Datos /Catálogo Nacional de Códigos Postales</a>
+                figure.highlight
+                    p <span>&lt;ol</span><span class="text-lblue"> class=</span><span class="text-red">"breadcrumb</span>
+                    p.indet-first <span>&lt;li&gt;&lt;a</span><span class="text-lblue"> href=</span><span class="text-red">"#"</span><span>&gt;</span>&lt;i<span class="text-lblue"> class=</span><span class="text-red">"icon icon-home</span><span>&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                    p.indet-first <span>&lt;li&gt;&lt;a</span><span class="text-lblue"> href=</span><span class="text-red">"#"</span><span>&gt;</span>Inicio<span>&lt;/a&gt;&lt;/li&gt;</span>
+                    p.indet-first <span>&lt;li&gt;&lt;a</span><span class="text-lblue"> href=</span><span class="text-red">"active"</span><span>&gt;</span>Archivo<span>&lt;/a&gt;&lt;/li&gt;</span>
+                    p <span>&lt;ol</span>
+            .section
+                h2.section-title Paneles colapsables
+                p Paneles colapsables para mostrar/ocultar bloques de forma simultánea
+                .panel-group(id="accordion" role="tablist" aria-multiselectable="true")
+                    .panel.panel-default
+                        .panel-heading(role="tab" id="headingOne")
+                            h4.panel-title <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Presupuesto</a>
+                        .panel-collapse.collapse.in(id="collapseOne" role="tabpanel" aria-labelledby="headingOne")
+                            .panel-body
+                                ul
+                                    li Fuente
+                                    li ID
+                                    li Descripción
+                                    li Total
+                                    li Proyecto presupuestario
+                figure.highlight
+                    p <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"panel-group ficha collapse"</span><span class="text-lblue">id=</span><span class="text-red">"accordion"</span><span>&gt;</span>
+                    p.indent-first <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"panel-Default"</span><span>&gt;</span>
+                    p.double-indent-first <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"panel-heading"</span><span>&gt;</span>
+                    p.triple-indent-first <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"panel-tittle"</span><span>&gt;</span>
+                    p.fourth-indent-first <span>&lt;a</span><span class="text-lblue"> data-parent</span><span class="text-red">"#accordion"</span><span class="text-lblue"> data-toggle</span><span class="text-red">"collapse</span><span class="text-lblue"> href=</span><span class="text-red">"#panel-01"</span><span class="text-lblue"> aria-expanded=</span><span class="text-red">"true"</span><span class="text-lblue"> aria-controls=</span><span class="text-red">"panel-01<"/span><span>&gt;</span>
+                    p.fourth-indent-first Título del bloque 1
+                    p.fourth-indent-first <span>&lt;/a&gt;</span>
+                    p.triple-indent-first <span>&lt;/h4&gt;</span>
+                    p.triple-indent-first <span>&lt;button</span><span class="text-lblue"> type=</span><span class="text-red">2button"</span><span class="text-lblue">class=</span><span class="text-red">"collapse-button collapsed"</span><span class="text-lblue"> data-parent</span><span class="text-red">"#accordion"</span><span class="text-lblue"> data-toggle</span><span class="text-red">"collapse"</span><span class="text-lblue">href=</span><span class="text-red">"#panel-01"</span><span>&gt;&lt;/button&gt;</span>
+                    p.double-indent-first<span>&lt;/div&gt;</span>
+                    p.double-indent-first<span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"panel-collapse collapse in"</span><span class="text-lblue">id=</span><span class="text-red">"panel-01"</span><span>&gt;</span>
+                    p.triple-indent-first <span>&lt;div</span><span class="text-lblue"> class=</span><span class="text-red">"panel-body"</span><span>&gt;</span>
+                    p.fourth-indent-first  Lorem ipsum dolor sit amet de. Nulla vitae elit libero, avehicula pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo queam. Pellentesque ornare sem lacinia quam cenenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elir
+                    p.triple-indent-first <span>&lt;/div&gt;</span>
+                    p.double-indent-first<span>&lt;/div&gt;</span>
+                    p.indent-first <span>&lt;/div&gt;</span>
+                    p <span>&lt;/div&gt;</span>
+            .section
+                h2.section-title Íconos
+                p Íconos creados específicamente para datos.gob.mx los cuales tendrán una mayor prioridad en cuanto a los demás íconos.
+                .row
+                    .col-md-2
+                        span.icon.ic-health
+                    .col-md-2
+                        span.icon.ic-geospatial
+                    .col-md-2
+                        span.icon.ic-security
+                    .col-md-2
+                        span.icon.ic-energy
+                    .col-md-2
+                        span.icon.ic-education
+                    .col-md-2
+                        span.icon.ic-economy
+                .row
+                    .col-md-2
+                        span.icon.ic-culture
+                    .col-md-2
+                        span.icon.ic-finanzas
+                    .col-md-2
+                        span.icon.ic-infrastructure
+                    .col-md-2
+                        span.icon.ic-development
+                    .col-md-2
+                        span.icon.ic-government
+            .section
+                h2.section-title Modals
+                p Los modales sirven para alertar al usuario de cambios e la plataforma, procesos que se llevaron a cabo o avisos en general.
+                .alert-modal
+                    .modal-title Bienvenido(a) a la nueva plataforma de Datos Abiertas del Gobierno de la República</p>
+                    p Escuchamos tu opinión y nos adaptamos a ti.
+                    p Ahora podrás encontrar nuevas funcionalidades en datos.gob.mx
+            .section
+                h2.section-title Dropdown o menú de selección
+                p Debe usarse cuando exista un menú desplegable o dropdown.
+                .dropdown
+                    button.btn.btn-default.dropdown-toggle(type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true") Todas las categorias
+                          <span class="caret"></span>
+                    ul.dropdown-menu(aria-labelledby="dropdownMenu1")
+                      li <a href="#">Salud</a>
+                      li <a href="#">Geoespacial</a>
+                      li <a href="#">Seguridad y justicia</a>
+                      li <a href="#">Energía y medio ambiente</a>
+                      li <a href="#">Educación</a>
+                      li <a href="#">Economía</a>
+                      li <a href="#">Cultura y turismo</a>
+                      li <a href="#">Finanzas y contrataciones</a>
+                      li <a href="#">Infraestructura</a>
+                      li <a href="#">Desarrollo sostenible</a>
+                      li <a href="#">Gobiernos locales</a>
+            .section
+                h2.section-title Ficha con imagen
+                p Esta ficha sirve para mostrar una previsualización de los artículos del blog.
+                .row
+                    .col-md-9
+                        img(src="img/Formato-imagen.jpg")
+                p.Format-title Acciona tus ideas en el reto México
+                P Reto México es una iniciativa que vincula a la comunidad de emprendedores con instituciones públicas y privadas para diseñar soluciones a problemática...
+            .section
+                h2.section-title Iconos formatos
+                p Estos son los íconos que acompañan los formatos en CKAN
+                  .row
+                    .col-md-1
+                      <span class="file-type ic-xml"></span>
+                    .col-md-1
+                      <span class="file-type ic-csv"></span> 
+                    .col-md-1
+                      <span class="file-type ic-json"></span>
+                    .col-md-1
+                      <span class="file-type ic-kml"></span>
+                    .col-md-1
+                      <span class="file-type ic-shp"></span>
+                    .col-md-1
+                      <span class="file-type ic-kmz"></span>
+                    .col-md-1
+                      <span class="file-type ic-pdf"></span>
+                    .col-md-1
+                      <span class="file-type ic-txt"></span>
+                    .col-md-1
+                      <span class="file-type ic-tls"></span>
+                    .col-md-1
+                      <span class="file-type ic-xls"></span>
+            .section
+                h2.section-title Visualizaciones
+                p Para entender mejor el valor de los Datos Abiertos creamos una serie de visualizaciones prediseñadas en D3 y con un estilo predeterminado en CSS. Deben usarse los colores secundarios en como paleta de color. Cada gráfica debe tener un botó de descargar (que lleva a descargar los datos) y otro de embeber, que copia el código al portapapeles.
+                h4 Gráfica de composición
+                img(src="img/Grafica-de-composicion.png")
+                h4 Grafica de barras</h4>
+                img(src="img/Grafica-de-barras.png")
+                h4 Lorem ipsum dolor sit amet</h4>
+                img(src="img/mapas.png")
+                h4 Mapa con puntos</h4>
+                img(src="img/mapa2.png")
+                h4 Lorem ipsum dolor sit amet</h4>
+                img(src="img/pastel.png")
+                h4 Gráfica de dispersión</h4>
+                <img src="img/puntos2.png">
+            .section
+                h2.section-title Más informacion
+                p Para informacion mas detallada o dudas puntuales de la gráfica base, favor de escribir a <span class="text-green">diseño@datos.mx</span>
+        .col-md-3

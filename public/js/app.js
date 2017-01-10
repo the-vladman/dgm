@@ -12,6 +12,8 @@ define( function ( require ) {
     require( 'posts/PostsModule' );
     require( 'sessions/SessionsModule' );
     require( 'users/UsersModule' );
+    require( 'visualizers/VisualizersModule');
+    require( 'settings/SettingsModule' );
 
     var app     = angular.module( 'dgm', [
             'angular-medium-editor',
@@ -27,6 +29,8 @@ define( function ( require ) {
             'ui.router',
             'AdminModule',
             'CategoriesModule',
+            'VisualizersModule',
+            'SettingsModule',
             'CommonModule',
             'DataModule',
             'DatasetsModule',

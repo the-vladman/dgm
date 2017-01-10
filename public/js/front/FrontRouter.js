@@ -3,7 +3,6 @@
 define( function () {
     return function ( $stateProvider, $urlRouterProvider ) {
         $urlRouterProvider.rule( function( $injector, $location ) {
-            console.log( $location.path() );
             var path                = $location.path(),
                 hasTrailingSlash    = path[path.length-1] === '/';
 
@@ -34,6 +33,15 @@ define( function () {
                     }
                 }
             })
+            .state( 'style_guide', {
+                parent  : 'front',
+                url     : '/guia-estilos',
+                views   : {
+                    'front-container'   : {
+                        templateUrl     : 'partials/front/style_guide'
+                    }
+                }
+            })
             .state( 'privacy', {
                 parent  : 'front',
                 url     : '/privacidad',
@@ -44,6 +52,16 @@ define( function () {
                     }
                 }
             })
+            .state('accessibility', {
+               parent    : 'front',
+               url       : '/accesibilidad',
+               views     : {
+                    'front-container'  : {
+                       templateUrl     : 'partials/front/accessibility',
+                       controller      : 'FrontAccessibilityCtrl'
+                     }
+                 }
+             })
             .state( 'libreusomx', {
                 parent  : 'front',
                 url     : '/libreusomx',
@@ -78,6 +96,11 @@ define( function () {
                     'landing-tools'     : {
                         templateUrl     : 'partials/front/posts',
                         controller      : 'FrontPostsCtrl'
+                    },
+                    'landing-visualizers'
+                                        :{
+                      templateUrl       : 'partials/front/posts',
+                      controller        : 'FrontPostsCtrl'
                     },
                     'landing-blog'      : {
                         templateUrl     : 'partials/front/posts',
