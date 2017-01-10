@@ -162,25 +162,6 @@ var express     = require( 'express' ),
         }
     });
 
-    router.put('/:id', Session.validate, function (req, res, next){
-
-
-        Visualizer.findById( req.params.id, function (err, visualizer) {
-            if ( err || !visualizer ) {
-                err     = new Error ('Invalid visualizer id');
-                err.status = 404;
-                next(err);
-
-            } else {
-              //fill dates with information request
-              for( var key in  req.body ){
-                visualizer[key] = req.body[key];
-              }
-
-              visualizer.save( visualizer );
-            }
-
-        });
     });
 
 
