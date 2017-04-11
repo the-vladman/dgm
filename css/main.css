@@ -525,7 +525,7 @@ p.cover-image                               { margin-top: 30px; text-align: cent
 .section-content.intro                      { background-color: transparent; }
 .section-content table                      { width: 100%; margin-bottom: 20px; }
 .section-content h2                         { margin-bottom: 30px; }
-.section-content h4                         { margin-bottom: 20px; }
+.section-content h4                         { margin-bottom: 20px; padding-top: 15px; }
 .section-content ul                         { margin-left: 10px; }
 .section-content ol                         { margin-top: 20px; }
 .section-content ul li,
