@@ -2,6 +2,12 @@
 
 define( function () {
     return function ( $scope, $sce, Categories, Posts ) {
+        $scope.trustSrc = function(src) {
+          var url = src.split("v=");
+          var new_url = "https://www.youtube.com/embed/" + url[1];
+          return $sce.trustAsResourceUrl(new_url);
+        }
+
         Categories.get( 'desarrolladores' ).$promise.then( function ( data ) {
             Posts.query({
                 expanded    : true,
@@ -12,7 +18,7 @@ define( function () {
                 }).content;
 
                 $scope.catalog  = _.findWhere( posts, {
-                    slug    : 'catalogo-de-datos-abiertos'
+                    slug    : 'codigo-abierto'
                 }).content;
 
                 $scope.cdn_apis = _.filter( posts, function ( el ) {
@@ -21,6 +27,10 @@ define( function () {
 
                 $scope.ext_apis = _.filter( posts, function ( el ) {
                     return el.category.slug == 'api-external'
+                });
+
+                $scope.media_dev = _.filter( posts, function ( el ) {
+                    return el.category.slug == 'media-desarrolladores'
                 });
             });
         });
