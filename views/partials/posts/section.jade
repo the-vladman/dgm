@@ -1,9 +1,9 @@
 .breadcrumb-container
     .container-fluid
         .row
-            .col-md-7.col-xs-12.col-sm-12
+            .col-md-5.col-xs-12.col-sm-12
                 breadcrumb
-            .col-md-5.hidden-xs.hidden-sm
+            .col-md-7.hidden-xs.hidden-sm
                 ul.categories-menu
                     li( ng-class="{'active':category_id == undefined}" )
                         a( ui-sref="front.section({ section : section, category : null, category_id : null, section_id : section_id })" ) 
