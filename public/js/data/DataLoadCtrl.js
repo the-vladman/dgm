@@ -40,7 +40,7 @@ define( function () {
                     case 1 :
                         var q       = ( $stateParams.category ) ? 'tags:' + $stateParams.category : '';
 
-                        $scope.datasets = CkanService.datasets( q, 5, 'dcat_modified desc' );
+                        $scope.datasets = CkanService.datasets( q, 5, 'metadata_modified desc' );
                         break;
                     case 2 :
                         $scope.datasets     = Array();
