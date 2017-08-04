@@ -15,7 +15,7 @@ define( function () {
 
             _total          : 0,
 
-            _resource       : $resource( 'http://10.20.55.7/busca/api/3/action/:action', null, {
+            _resource       : $resource( 'https://datos.gob.mx/busca/api/3/action/:action', null, {
                 dataset                 : {
                     method              : 'GET',
                     isArray             : false,
