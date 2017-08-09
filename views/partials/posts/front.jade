@@ -5,7 +5,9 @@
                 breadcrumb
 .iframe-container.hidden-xs.hidden-sm( ng-if="post.iframe" )
     iframe( class="tool-iframe noscroll" ng-src="{{ iframe }}" )
-.hidden-sm.hidden-xs.post-cover( ng-if="section == 'blog'" style="background-image: url('{{ post.cover_photo.path }}');" )
+div( ng-if="post.section.slug == 'blog'" )
+  .hidden-sm.hidden-xs.post-cover( ng-if="section == 'blog'" style="background-image: url('{{ post.cover_photo.path }}');" )
+div( ng-repeat-end="" )
 img.hidden-md.hidden-lg( ng-src="{{ post.cover_photo.path }}" ng-if="section == 'blog'" )
 .container-fluid
     .row
@@ -51,7 +53,9 @@ img.hidden-md.hidden-lg( ng-src="{{ post.cover_photo.path }}" ng-if="section == 
                                     tr( ng-repeat="dataset in post.datasets_ext" )
                                         td
                                             a( href="{{ dataset.href }}" alt="{{ dataset.name }}" target="_blank" ) {{ dataset.name }}
-                    #disqus_thread
+                    div( ng-if="post.section.slug == 'blog'" )
+                      #disqus_thread
+                    div( ng-repeat-end="" )
             .post.tool( ng-if="section == 'herramientas'" )
                 .share-buttons.hidden-xs.hidden-sm
                     p Compartir
