@@ -19,7 +19,7 @@ section#developers-banner
                 h2.section-title Interfaces de programación de aplicaciones  (API)
                 p Puedes interactuar con datos.gob.mx mediante varias API, principalmente CKAN, ADELA y diversos recursos de datos alojados en api.datos.gob.mx.
                 .row.posts-row
-                    .col-md-6.well.div_api( ng-repeat-start="post in cdn_apis" )
+                    .col-md-6( ng-repeat-start="post in cdn_apis" )
                         include ../includes/api.jade
                     .clearfix( ng-if="( $index + 1 ) % 2 == 0" )
                     div( ng-repeat-end="" )
