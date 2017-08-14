@@ -1,5 +1,5 @@
 var mongoose    = require( 'mongoose' ),
-    bcrypt      = require( 'bcrypt' ),
+    bcrypt      = require( 'bcryptjs' ),
     UserSchema  = new mongoose.Schema({
         avatar          : {
             type        : String,
