@@ -12,7 +12,7 @@ html
         link( rel="import" href=process.env.CDN_URL  + 'dgm-navbar/dgm-navbar.html')
         link( rel="import" href=process.env.CDN_URL  + 'dgm-footer/dgm-footer.html')
 
-        link( rel="stylesheet" href="https://cdn.datos.gob.mx/assets/css/main.css" )
+        link( rel="stylesheet" href=process.env.CDN_URL + '../assets/css/main.css' )
 
         // bower:css
         link(rel='stylesheet', href='bower_components/medium-editor/dist/css/medium-editor.css')
