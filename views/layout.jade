@@ -12,13 +12,13 @@ html
         link( rel="import" href=process.env.CDN_URL  + 'dgm-navbar/dgm-navbar.html')
         link( rel="import" href=process.env.CDN_URL  + 'dgm-footer/dgm-footer.html')
 
-        link( rel="stylesheet" href=process.env.CDN_URL + '../assets/css/main.css' )
-
         // bower:css
         link(rel='stylesheet', href='bower_components/medium-editor/dist/css/medium-editor.css')
         link(rel='stylesheet', href='bower_components/medium-editor/dist/css/themes/default.css')
         link(rel='stylesheet', href='bower_components/bootstrap-select/dist/css/bootstrap-select.css')
         // endbower
+
+        link( rel="stylesheet" href=process.env.CDN_URL + '../assets/css/main.css' )
 
         if settings.env == 'development'
             script( src="http://localhost:35729/livereload.js?snipver=1" )
