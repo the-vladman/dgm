@@ -8,7 +8,7 @@ public/css/vendor.css
 public/tmp
 public/img/uploads
 public/built
-
+package-lock.json
 # Configuration files
 config/app.js
 config/db.js
