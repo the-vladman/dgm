@@ -1,5 +1,4 @@
 'use strict';
-// ESTE ES EL CONTROLADOR DE LA VISTA DE BLOG
 define(function() {
   return function($scope, $element, $stateParams, Categories, Posts, Visualizers) {
     $scope.section = $element.data('section');
