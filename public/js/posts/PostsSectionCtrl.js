@@ -32,6 +32,11 @@ define(function() {
         type: 'CATEGORY'
       });
 
+      Posts.get()
+      .$promise
+      .then(data => {
+        $scope.total = data.pagination.total;
+      });
       Posts.query({
         category: $scope.category_id,
         expanded: true,
@@ -46,7 +51,7 @@ define(function() {
         tag: $scope.search.tag
       }).$promise.then(function(data) {
         $scope.posts = data;
-        $scope.total = Posts.getTotal();
+        // $scope.total = Posts.getTotal();
       });
 
       if ($scope.search.tag) {
