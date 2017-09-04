@@ -41,6 +41,15 @@ router.get('', function(req, res, next) {
   Utils.paginate(Post, filters, _getRefs(), req, res, next);
 });
 
+router.get('/paginated', function(req, res, next){
+  var cursor = Post.find(),
+  callback = function(err, docs){
+    console.log(docs);
+    res.json(docs);
+  };
+  cursor.exec(callback)
+});
+
 router.get('/:id', function(req, res, next) {
   var query = (/^[a-fA-F0-9]{24}$/.test(req.params.id)) ? {
       _id: mongoose.Types.ObjectId(req.params.id)
