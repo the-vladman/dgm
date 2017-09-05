@@ -24,6 +24,12 @@ define(function() {
       per_page: 9999,
       type: 'TAG'
     });
+
+    /*******************************
+     * FUNCIONES AUXILIARES
+     * funcion que hace el query
+     * @return {[type]} [description]
+     */ 
     $scope.query = function() {
       $scope.categories = Categories.query({
         page: 1,
