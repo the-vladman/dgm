@@ -216,14 +216,17 @@ router.put('/:id', Session.validate, function(req, res, next) {
     },
     updated = function(err, post) {
       res.json(post);
+    },
+    getImagesFromContent = function(content, post){
+      var imagesFromContent = Utils.getImagesFromContent(content);
     };
-
   Post.findById(req.params.id, function(err, post) {
     if (err || !post) {
       err = new Error('Invalid post id');
       err.status = 404;
       next(err);
     } else {
+      getImagesFromContent(req.body.content, post);
       for (var key in req.body) {
         if (req.session.access_level == 3) {
           if (key == 'edited_by' || key == 'edition_date' || key == 'published_by' || key == 'published_date' || key == 'status')
