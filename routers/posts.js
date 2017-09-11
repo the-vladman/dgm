@@ -82,6 +82,7 @@ router.get('/:id', function(req, res, next) {
 router.post('/', Session.validate, function(req, res, next) {
   var cover = false,
     grid = false,
+    newContent = '',
     moveFile = function(field, post) {
       if (field == 'slider_photos') {
         var j = 0;
@@ -102,6 +103,15 @@ router.post('/', Session.validate, function(req, res, next) {
           post[field] = file;
           post.save();
         });
+      }
+    },
+    getImagesFromContent = function(content, post){
+      var imagesFromContent = Utils.getImagesFromContent(content);
+      if (imagesFromContent.length > 0) {
+        var imagesUrls = Utils.saveImagesFromContent(imagesFromContent, post.id, path.join(config.uploads_path, post.id));
+        newContent = Utils.returnContentWithUrls(content, imagesFromContent, imagesUrls);
+      } else {
+        newContent = content;
       }
     };
 
@@ -148,6 +158,9 @@ router.post('/', Session.validate, function(req, res, next) {
           err.status = 403;
           next(err);
         } else {
+          getImagesFromContent(req.body.content, post);
+          post.content = newContent;
+          post.save();
           if (req.body.cover_photo || req.body.grid_photo || req.body.slider_photos) {
             if (req.body.cover_photo) {
               moveFile('cover_photo', post);
@@ -175,6 +188,7 @@ router.put('/:id', Session.validate, function(req, res, next) {
       grid_photo: false,
       slider_photos: false
     },
+    newContent = '',
     moveImg = function(field, post) {
       if (field == 'slider_photos') {
         var j = 0;
@@ -219,6 +233,12 @@ router.put('/:id', Session.validate, function(req, res, next) {
     },
     getImagesFromContent = function(content, post){
       var imagesFromContent = Utils.getImagesFromContent(content);
+      if (imagesFromContent.length > 0) {
+        var imagesUrls = Utils.saveImagesFromContent(imagesFromContent, post.id, path.join(config.uploads_path, post.id));
+        newContent = Utils.returnContentWithUrls(content, imagesFromContent, imagesUrls);
+      } else {
+        newContent = content;
+      }
     };
   Post.findById(req.params.id, function(err, post) {
     if (err || !post) {
@@ -227,6 +247,7 @@ router.put('/:id', Session.validate, function(req, res, next) {
       next(err);
     } else {
       getImagesFromContent(req.body.content, post);
+      req.body.content = newContent;
       for (var key in req.body) {
         if (req.session.access_level == 3) {
           if (key == 'edited_by' || key == 'edition_date' || key == 'published_by' || key == 'published_date' || key == 'status')
