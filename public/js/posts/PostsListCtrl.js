@@ -10,7 +10,6 @@ define(function() {
         page: $scope.page,
         per_page: $scope.per_page
       });
-      console.log('$scope.posts', $scope.posts);
     };
 
     $scope.$on(Posts.getEvent('QUERIED'), function() {

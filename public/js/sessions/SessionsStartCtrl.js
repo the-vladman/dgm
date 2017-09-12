@@ -3,7 +3,6 @@
 define(function() {
   return function($scope, events, Sessions) {
     $scope.login = function() {
-      console.log('$scope.session', $scope.session);
       Sessions.start($scope.session);
     };
 
