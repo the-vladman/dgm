@@ -45,12 +45,10 @@ define(function() {
       },
 
       start: function(credentials) {
-        console.log('credentialwsss', credentials);
         var that = this;
 
         return this._resource.save(credentials,
           function(data) {
-            console.log('DARARRA', data);
             while (!data.$resolved) {
               // Resolving
             }
@@ -64,7 +62,6 @@ define(function() {
             that._getUser(true);
           },
           function() {
-            console.log('dscsdf');
             $rootScope.$broadcast(events.LOGIN_ERROR);
           });
       },
