@@ -29,7 +29,7 @@ define(function() {
      * FUNCIONES AUXILIARES
      * funcion que hace el query
      * @return {[type]} [description]
-     */ 
+     */
     $scope.query = function() {
       $scope.categories = Categories.query({
         page: 1,
@@ -38,11 +38,6 @@ define(function() {
         type: 'CATEGORY'
       });
 
-      Posts.get()
-      .$promise
-      .then(data => {
-        $scope.total = data.pagination.total;
-      });
       Posts.query({
         category: $scope.category_id,
         expanded: true,
@@ -57,7 +52,7 @@ define(function() {
         tag: $scope.search.tag
       }).$promise.then(function(data) {
         $scope.posts = data;
-        // $scope.total = Posts.getTotal();
+        $scope.total = Posts.getTotal();
       });
 
       if ($scope.search.tag) {
