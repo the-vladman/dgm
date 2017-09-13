@@ -10,6 +10,13 @@ define( function () {
                 var sections    = $location.path().substring( 1 ).split( '/' ),
                     query       = $location.search();
 
+                if (sections[0] === 'guia-estilos') {
+                    scope.crumbs.push({
+                        sref: 'sref',
+                        url: 'Gráfica base'
+                    })
+                }
+
                 if ( sections[0] == 'herramientas' || sections[0] == 'blog' ) {
                     scope.crumbs.push({
                         params  : {
