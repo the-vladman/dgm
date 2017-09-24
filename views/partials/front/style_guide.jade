@@ -42,13 +42,10 @@
                         |  de cada html ingrese la ruta copiada de la hoja de estilo de la siguiente forma : 
                         br
                         br
-                        .highlight
-                            .pre
-                                .code
-                                    span.nt ...
-                                    span.nt &lt;link
-                                        span.na href=
-                                            span.s "https://cdn.datos.gob.mx/assets/css/main.css"
+                        figure.highlight
+                            p ...
+                            p.double-indent <span class="nt">&lt;link</span><span class="na"> href=</span><span class="s">"https://cdn.datos.gob.mx/assets/css/main.css"</span> <span class="na"> rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+                            p.first-indent <span class="nt"  >&lt;/head&gt;</span>
                     li
                         | Copie la ruta de la siguiente liga de nuestro archivo de javascript que se encontrará alojada en nuestro CDN: 
                         code.small https://cdn.datos.gob.mx/assets/js/main.js
@@ -56,8 +53,13 @@
                         | Antes de cerrarse la etiqueta 
                         code body
                         |  de cada html ingrese la ruta del script copiada de la siguiente forma : 
-                    /////
-                section.separator
+                        br
+                        br
+                        figure.highlight
+                            p ...
+                            p.double-indent <span class="nt">&lt;script</span><span class="na"> src=</span><span class="s">"https://cdn.datos.gob.mx/assets/js/main.js"</span> <span class="nt">&gt;</span>
+                            p.first-indent <span class="nt"  >&lt;/body&gt;</span>
+            section.separator
                 h4 Ambiente de prueba
                 p
                     | Para un mayor control y calidad se ha incluido un ambiente de QA en el que se va a liberar cada actualización de gráfica base y donde se podrán realizar cualquier tipo de pruebas correspondientes.
@@ -67,7 +69,7 @@
                 p
                     | Para el archivo javascript, la ruta en ambiente prueba será el siguiente: 
                     code.small https://cdn.datos.gob.mx/qa/bower_components/dgm-style/main.js
-                section.separator
+            section.separator
                 h4
                     | Esta guía ya incluye los siguientes frameworks y librerías y por lo tanto se recomienda 
                     strong no agregarlos
@@ -82,6 +84,529 @@
                     li
                         | Open Sans (fuente tipográfica). Para más información consultar 
                         a(href='http://www.google.com/fonts/specimen/Open+Sans', target='_blank') documentación
+            section.separator
+                h4 Uso de favicon
+                |             
+                p
+                    | Descargar la imagen favicon 
+                    a(href="https://datos.gob.mx/img/favicon.ico", target="_blank") aquí
+                    |  y agregar el archivo 
+                    em favicon.ico
+                    |  en el directorio raíz del sitio. Posteriormente se deberá vincular la imagen utilizando la etiqueta 
+                    code &lt;link&gt;
+                    |  dentro de la etiqueta 
+                    code &lt;head&gt;
+                    | .
+                figure.highlight
+                    p <span class="nt">&lt;head&gt;</span>
+                    p.first-indent ...
+                    p.first-indent <span class="nt">&lt;link</span><span class="na"> href=</span><span class="s">"/favicon.ico"</span> <span class="na"> rel=</span><span class="s">"shortcut icon"</span><span class="nt">&gt;</span>
+                    p.first-indent ...
+                    p <span class="nt"  >&lt;/head&gt;</span>
+            section#basic-example.separator
+                h2.section-title Ejemplo básico
+                p
+                    Este es el template básico para agregar una nueva página. Para que el framework funcione correctamente se debe incorporar la liga de los estilos dentro de la etiqueta 
+                    code &lt;head&gt;
+                    , y la liga del script antes de cerrarse la etiqueta 
+                    code &lt;body&gt;
+                    | .         
+                p
+                    strong NOTA:     
+                p
+                    Recuerda que necesitas instalar las dependencias con 
+                    a(href="https://bower.io/", target="_blank") bower 
+                    | de webcomponentsjs y polymer para utilizar nuestros componentes de 
+                    strong navbar
+                    |  y 
+                    strong footer
+                    | .
+                figure.highlight
+                    p <span class="cp">&lt;!DOCTYPE html&gt;</span>
+                    p <span class="nt">&lt;html <span class="na">lang=</span><span class="s">"es"</span>&gt;</span>
+                    p.first-indent <span class="nt">&lt;head&gt;</span>
+                    p.double-indent <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;title&gt;</span>Ejemplo de nueva página para datos.gob.mx<span class="nt">&lt;/title&gt;</span>
+                    br
+                    p.double-indent <span class="c">&lt;!-- webcomponents y polymer --&gt;</span>
+                    p.double-indent <span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"bower_components/webcomponentsjs/webcomponents-lite.min.js"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"bower_components/polymer/polymer.html"</span> <span class="na">rel=</span><span class="s">"import"</span><span class="nt">&gt;</span>
+                    br
+                    p.double-indent <span class="c">&lt;!-- navbar y footer de DGM --&gt;</span>
+                    p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.datos.gob.mx/bower_components/dgm-navbar/dgm-navbar.html"</span> <span class="na">rel=</span><span class="s">"import"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html"</span> <span class="na">rel=</span><span class="s">"import"</span><span class="nt">&gt;</span>
+                    br
+                    p.double-indent <span class="c">&lt;!-- CSS --&gt;</span>
+                    p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/favicon.ico"</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.datos.gob.mx/assets/css/main.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+                    br
+                    p.double-indent <span class="c">&lt;!-- Respond.js soporte de media queries para Internet Explorer 8 --&gt;</span>
+                    p.double-indent <span class="c">&lt;!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 --&gt;</span>
+                    p.double-indent <span class="c">&lt;!--[if lt IE 9]&gt;</span>
+                    p.triple-indent <span class="c">&lt;script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"&gt;&lt;/script&gt;</span>
+                    p.triple-indent <span class="c">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"&gt;&lt;/script&gt;</span>
+                    p.double-indent <span class="c">&lt;![endif]--&gt;</span>
+                    br
+                    p.first-indent <span class="nt">&lt;/head&gt;</span>
+                    p.first-indent <span class="nt">&lt;body <span class="na">class=</span><span class="s">"front"</span>&gt;</span>
+                    br
+                    p.double-indent <span class="c">&lt;!-- Contenido --&gt;</span>
+                    p.double-indent <span class="nt">&lt;main</span><span class="nt">&gt;</span>
+                    p.triple-indent <span class="nt">&lt;dgm-navbar</span><span class="nt">&gt;</span><span class="nt">&lt;/dgm-navbar</span><span class="nt">&gt;</span>
+                    p.triple-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+                    p.triple-indent <span class="nt">&lt;dgm-footer</span><span class="nt">&gt;</span><span class="nt">&lt;/dgm-footer</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;/main&gt;</span>
+                    br
+                    p.double-indent <span class="c">&lt;!-- JS --&gt;</span>
+                    p.double-indent <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.datos.gob.mx/assets/js/main.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+                    br
+                    p.first-indent <span class="nt">&lt;/body&gt;</span>
+                    p <span class="nt">&lt;/html&gt;</span>
+
+            section#grid-system.separator
+                h2.section-title Sistema de retícula
+                p Se incluyó un sistema responsivo, este sistema de fluido se escala de manera apropiada hasta 12 columnas de acuerdo al tamaño del dispositivo o ventana gráfica.            
+                h4 Ejemplo:         
+                .row.show-grid
+                    .col-md-1 .col-md-1
+                    .col-md-1 .col-md-1
+                    .col-md-1 .col-md-1
+                    .col-md-1 .col-md-1
+                    .col-md-1 .col-md-1
+                    .col-md-1 .col-md-1
+                    .col-md-1 .col-md-1
+                    .col-md-1 .col-md-1
+                    .col-md-1 .col-md-1
+                    .col-md-1 .col-md-1
+                    .col-md-1 .col-md-1
+                    .col-md-1 .col-md-1           
+                .row.show-grid
+                    .col-md-8 .col-md-8
+                    .col-md-4 .col-md-4           
+                .row.show-grid
+                    .col-md-4 .col-md-4
+                    .col-md-4 .col-md-4
+                    .col-md-4 .col-md-4           
+                .row.show-grid
+                    .col-md-6 .col-md-6
+                    .col-md-6 .col-md-6
+                figure.highlight
+                    p <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-1"</span><span class="nt">&gt;</span>.col-md-1<span class="nt">&lt;/div&gt;</span>
+                    p <span class="nt">&lt;/div&gt;</span>
+                    p <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-8"</span><span class="nt">&gt;</span>.col-md-8<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+                    p <span class="nt">&lt;/div&gt;</span>
+                    p <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>.col-md-4<span class="nt">&lt;/div&gt;</span>
+                    p <span class="nt">&lt;/div&gt;</span>
+                    p <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6"</span><span class="nt">&gt;</span>.col-md-6<span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-6"</span><span class="nt">&gt;</span>.col-md-6<span class="nt">&lt;/div&gt;</span>
+                    p <span class="nt">&lt;/div&gt;</span>
+            section#colors.separator
+                h2.section-title Gama de colores
+                p Los colores aquí especificados son lo sque deberán utilizarse en el contenido cuerpo de texto dentro de los documentos deberá ir en negro #545454
+                dl.top-buffer
+                    dt #000000 (Fondo del navbar)
+                    dd.dgm-example-color(style='background-color:#000')
+                    dt #545454 (Color de textos)
+                    dd.dgm-example-color(style='background-color:#545454')
+                    dt #EFEFEF (fondo del botón default)
+                    dd.dgm-example-color(style='background-color:#efefef')
+                    dt #9B9B9B (fondo del botón secundario)
+                    dd.dgm-example-color(style='background-color:#9b9b9b')
+                    dt #D8D8D8 (Bordes)
+                    dd.dgm-example-color(style='background-color:#d8d8d8')
+                    dt #F6F6F6
+                    dd.dgm-example-color(style='background-color:#f6f6f6')
+                    dt #FFFFFF
+                    dd.dgm-example-color
+                    dt #FF6666 (Rojo régimen)
+                    dd.dgm-example-color(style='background-color:#ff6666')
+                    dt #00CC99 (Verde apertura)
+                    dd.dgm-example-color(style='background-color:#0c9')
+                h4 Colores de soporte
+                p Estos colores servirán de apoyo en las visualizaciónes, gráficos o en casos donde se deba usar más colores para sementación o diferenciación. No deben usarse en encabezados, títulos, botones u otros elementos en el sitio.
+                .row
+                    .col-md-4
+                        dl.top-buffer
+                            dt #B0D5A2
+                            dd.dgm-example-color(style='background-color:#b0d5a2')
+                    .col-md-4
+                        dl.top-buffer
+                            dt #F7D460
+                            dd.dgm-example-color(style='background-color:#f7d460')
+                    .col-md-4
+                        dl.top-buffer
+                            dt #FFAE66
+                            dd.dgm-example-color(style='background-color:#ffae66')
+                    .col-md-4
+                        dl.top-buffer
+                            dt #FC8A31
+                            dd.dgm-example-color(style='background-color:#fc8a31')
+                    .col-md-4
+                        dl.top-buffer
+                            dt #ED6D64
+                            dd.dgm-example-color(style='background-color:#ed6d64')
+                    .col-md-4
+                        dl.top-buffer
+                            dt #7791D4
+                            dd.dgm-example-color(style='background-color:#7791d4')
+            section#sub-nav-bar.separator
+                h2.section-title Barra de subnavegación
+                p La barra de  subnavegación es un componente que podrá contener encabezados de navegación en su aplicación o sitio para un uso muy particular. En vistas de móviles están expandidos, y se vuelven horizontales cuando aumenta el ancho de la ventanilla disponible. En caso de utilizar, se deberá de crear justo después de que se haya abierto la etiqueta 
+                    code &lt;main&gt;
+                    | .
+                h4 Ejemplo básico
+                .example
+                    nav.navbar.navbar-inverse(role='navigation')
+                        .container-
+                            .navbar-header
+                                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#subenlaces')
+                                    span.sr-only Toggle navigation
+                                    span.icon-bar
+                                    span.icon-bar
+                                    span.icon-bar
+                                a.navbar-brand(href='/') Semarnat
+                            #subenlaces.collapse.navbar-collapse
+                                ul.nav.navbar-nav.navbar-right
+                                    li
+                                        a(href='#') Enlace
+                                    li.dropdown
+                                        a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                                            | Desplegable 
+                                            span.caret
+                                        ul.dropdown-menu(role='menu')
+                                            li
+                                                a(href='#') Acción
+                                            li
+                                                a(href='#') Otra acción
+                                            li
+                                                a(href='#') Algo más aquí
+                                            li.divider
+                                            li
+                                                a(href='#') Enlace separado
+                                    li
+                                        a(href='#') Enlace
+                figure.highlight
+                    p <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-inverse sub-navbar navbar-fixed-top"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-header"</span><span class="nt">&gt;</span>
+                    p.triple-indent <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"navbar-toggle collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#subenlaces"</span><span class="nt">&gt;</span>
+                    p.fourth-indent <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Interruptor de Navegación<span class="nt">&lt;/span&gt;</span>
+                    p.fourth-indent <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                    p.fourth-indent <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                    p.fourth-indent <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                    p.triple-indent <span class="nt">&lt;/button&gt;</span>
+                    p.triple-indent <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Semarnat<span class="nt">&lt;/a&gt;</span>
+                    p.double-indent <span class="nt">&lt;/div&gt;</span>
+                    p.double-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse navbar-collapse"</span> <span class="na">id=</span><span class="s">"subenlaces"</span><span class="nt">&gt;</span>
+                    p.triple-indent <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav navbar-right"</span><span class="nt">&gt;</span>
+                    p.fourth-indent <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Enlace<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    p.fourth-indent <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+                    p.fifth-indent <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>Desplegable <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+                    p.fifth-indent <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+                    p.sixth-indent <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Acción<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    p.sixth-indent <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Otra acción<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    p.sixth-indent <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Algo más aquí<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    p.sixth-indent <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
+                    p.sixth-indent <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Enlace separado<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    p.fifth-indent <span class="nt">&lt;/ul&gt;</span>
+                    p.fourth-indent <span class="nt">&lt;/li&gt;</span>
+                    p.triple-indent <span class="nt">&lt;/ul&gt;</span>
+                    p.double-indent <span class="nt">&lt;/div&gt;</span><span class="c"></span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span><span class="c"></span>
+                    p <span class="nt">&lt;/nav&gt;</span>
+                h4 Uso de logotipos
+                p Los logotipos de cada secretaría o dependencia se deberán de colorar en la parte superior justo después del breadcrumb. Cada logotipo deberá tener un máximo proporcional a 120px de ancho. Los logotipos deben de tener un color blanco específicamente.
+            section#forms.separator
+                h2.section-title Formularios
+                p Los controles de formularios individuales reciben automáticamente algunos estilos globales. Todos los elemento 
+                    code &lt;input&gt;
+                    | , 
+                    code &lt;textarea&gt;
+                    |  y 
+                    code &lt;select&gt;
+                    |  con la clase 
+                    code .form-control
+                    |  se componen de un ancho de 100% de forma predeterminada. Para un espaciado más óptimo se deben envolver las etiquetas y los controles con la clase 
+                    code .form-group
+                    |  .
+                h4 Ejemplo básico
+                .example.clearfix
+                    form
+                        .form-group
+                            label(for='exampleInputEmail1') Correo electrónico:
+                            input#exampleInputEmail1.form-control(type='email', placeholder='Ingrese su email')
+                        .form-group
+                            label(for='exampleInputPassword1') Contraseña:
+                            input#exampleInputPassword1.form-control(type='password', placeholder='Ingrese su contraseña')
+                        .form-group.hidden-xs
+                            label(for='exampleInputFile') Subir archivo:
+                            input#exampleInputFile(type='file')
+                        .checkbox
+                            label
+                                input(type='checkbox')
+                                |  Acepto los términos
+                        .form-group
+                            textarea.form-control(rows='3')
+                        button.btn.btn-primary.pull-right(type='submit') Enviar
+                figure.highlight
+                    p <span class="nt">&lt;form</span> <span class="na">role=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email-01"</span><span class="nt">&gt;</span>Correo electrónico:<span class="nt">&lt;/label&gt;</span>
+                    p.double-indent <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email-01"</span> <span class="na">placeholder=</span><span class="s">"Correo electrónico"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"password-01"</span><span class="nt">&gt;</span>Contraseña<span class="nt">&lt;/label&gt;</span>
+                    p.double-indent <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"password-01"</span> <span class="na">placeholder=</span><span class="s">"Contraseña"</span> <span class="na">type=</span><span class="s">"password"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"file-01"</span><span class="nt">&gt;</span>Cargar archivo:<span class="nt">&lt;/label&gt;</span>
+                    p.double-indent <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"file-01"</span> <span class="na">type=</span><span class="s">"file"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;label&gt;</span>
+                    p.triple-indent <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+                    p.triple-indent Acepto los términos
+                    p.double-indent <span class="nt">&lt;/label&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;</span><span class="nt">&lt;/textarea&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary pull-right"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Enviar<span class="nt">&lt;/button&gt;</span>
+                    p <span class="nt">&lt;/form&gt;</span>
+            section.separator
+                h4 Formulario lineal
+                p Se debe añadir la clase 
+                    code .form-inline
+                    |  al  
+                    code &lt;form&gt;
+                    |  para los controles con alineación a la izquierda y de tipo inline-block. Esto únicamente se aplica a las formas con ventanas que son al menos 768px de ancho.
+                .example
+                    form.form-inline(role='form')
+                        .form-group
+                            label.sr-only(for='email-02') Correo electrónico:
+                            input#email-02.form-control(placeholder='Ingrese su email', type='text')
+                        .form-group
+                            label.sr-only(for='password-02') Contraseña
+                            input#password-02.form-control(placeholder='Ingrese su contraseña', type='password')
+                        .checkbox
+                            label
+                            input(type='checkbox')
+                            | Recordarme
+                        button.btn.btn-primary(type='submit') Ingresar
+                figure.highlight
+                    p <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-inline"</span> <span class="na">role=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"sr-only"</span> <span class="na">for=</span><span class="s">"email-02"</span><span class="nt">&gt;</span>Correo electrónico:<span class="nt">&lt;/label&gt;</span>
+                    p.double-indent <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email-02"</span> <span class="na">placeholder=</span><span class="s">"Ingrese su email"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"sr-only"</span> <span class="na">for=</span><span class="s">"password-02"</span><span class="nt">&gt;</span>Contraseña<span class="nt">&lt;/label&gt;</span>
+                    p.double-indent <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"password-02"</span> <span class="na">placeholder=</span><span class="s">"Ingrese su contraseña"</span> <span class="na">type=</span><span class="s">"password"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;label&gt;</span>
+                    p.triple-indent <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+                    p.triple-indent Recordarme
+                    p.double-indent <span class="nt">&lt;/label&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Ingresar<span class="nt">&lt;/button&gt;</span>
+                    p <span class="nt">&lt;/form&gt;</span>
+
+            section.separator
+                h4 Formulario horizontal
+                p
+                    | Utilice las clases de cuadrícula predefinidos para alinear las etiquetas y los grupos de controles de formulario en una disposición horizontal añadiendo- 
+                    code .form-horizontal
+                    |  al formulario. El agregar esa clase cambiará el comportamiento de 
+                    code .form-groups 
+                    | por filas de cuadrícula, así que no hay necesidad de 
+                    code .row
+                    | .
+                .example
+                    form.form-horizontal(role='form')
+                        .form-group
+                            label.col-sm-3.control-label(for='email-03') Nombre:
+                            .col-sm-9
+                                input#email-03.form-control(placeholder='Ingrese su nombre', type='text')
+                        .form-group
+                            label.col-sm-3.control-label(for='password-03') Contraseña:
+                            .col-sm-9
+                                input#password-03.form-control(placeholder='Contraseña', type='password')
+                        .form-group
+                            .col-sm-offset-3.col-sm-9
+                                .checkbox
+                                    label
+                                        input(type='checkbox')
+                                        | Recordarme
+                        .form-group
+                            .col-sm-offset-3.col-sm-9
+                                button.btn.btn-primary.pull-right(type='submit') Enviar
+                figure.highlight
+                    p <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form-horizontal"</span> <span class="na">role=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-3 control-label"</span> <span class="na">for=</span><span class="s">"email-03"</span><span class="nt">&gt;</span>Correo electrónico:<span class="nt">&lt;/label&gt;</span>
+                    p.double-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
+                    p.triple-indent <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email-03"</span> <span class="na">placeholder=</span><span class="s">"Correo electrónico"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-3 control-label"</span> <span class="na">for=</span><span class="s">"password-03"</span><span class="nt">&gt;</span>Contraseña:<span class="nt">&lt;/label&gt;</span>
+                    p.double-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
+                    p.triple-indent <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"password-03"</span> <span class="na">placeholder=</span><span class="s">"Contraseña"</span> <span class="na">type=</span><span class="s">"password"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-offset-3 col-sm-9"</span><span class="nt">&gt;</span>
+                    p.triple-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+                    p.fourth-indent <span class="nt">&lt;label&gt;</span>
+                    p.fifth-indent <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+                    p.fifth-indent Recordarme
+                    p.fourth-indent <span class="nt">&lt;/label&gt;</span>
+                    p.triple-indent <span class="nt">&lt;/div&gt;</span>
+                    p.double-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-offset-3 col-sm-9"</span><span class="nt">&gt;</span>
+                    p.triple-indent <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary pull-right"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Enviar<span class="nt">&lt;/button&gt;</span>
+                    p.double-indent <span class="nt">&lt;/div&gt;</span>
+                    p.first-indent <span class="nt">&lt;/div&gt;</span>
+                    p <span class="nt">&lt;/form&gt;</span>
+
+            section.separator
+                h4 Caja sencilla de texto
+                p Elemento que sirve para insertar una sola línea de texto.
+                .example
+                    form(role='form')
+                    .form-group
+                        input.form-control(placeholder='Área de texto', type='text')
+                figure.highlight
+                    p <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Area de texto"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+            section.separator
+                h4 Cajas para múltiples líneas de texto
+                p Elemento que sirve para insertar múltiples líneas de texto.
+                .example
+                    form(role='form')
+                    .form-group
+                        textarea.form-control(placeholder='Área de texto', rows='3')
+                figure.highlight
+                    p <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Área de texto"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+
+            section.separator
+                h4 Casillas de verifación y botones de opción
+                p Ejemplos para agregar casillas de verificación (checkbox) y botones de opción (radio).
+                .example
+                    form(role='form')
+                        p
+                            strong Ejemplo de casillas de verifación (checkbox)
+                        .checkbox
+                            label
+                                input(checked='', name='checkbox-01', type='checkbox', value='opcion-01')
+                                | Opción 1
+                        .checkbox
+                            label
+                                input(name='checkbox-01', type='checkbox', value='opcion-02')
+                                | Opción 2
+                        .checkbox
+                            label
+                                input(name='checkbox-01', type='checkbox', value='opcion-03')
+                                | Opción 3
+                        p
+                            strong Ejemplo de botón de opción (radio)
+                        .radio
+                            label
+                                input(checked='', name='radio-01', type='radio', value='opcion-01')
+                                | Opción 1
+                        .radio
+                            label
+                                input(name='radio-01', type='radio', value='opcion-02')
+                                | Opción 2
+                        .radio
+                            label
+                                input(name='radio-01', type='radio', value='opcion-03')
+                                | Opción 3
+                figure.highlight
+                    p <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;label&gt;</span>
+                    p.double-indent <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">"opcion-01"</span><span class="nt">&gt;</span> Opción 1
+                    p.first-indent <span class="nt">&lt;/label&gt;</span>
+                    p.first-indent <span class="nt">&lt;label&gt;</span>
+                    p.double-indent <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">"opcion-02"</span><span class="nt">&gt;</span> Opción 2
+                    p.first-indent <span class="nt">&lt;/label&gt;</span>
+                    p.first-indent <span class="nt">&lt;label&gt;</span>
+                    p.double-indent <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">"opcion-03"</span><span class="nt">&gt;</span> Opción 3
+                    p.first-indent <span class="nt">&lt;/label&gt;</span>
+                    p <span class="nt">&lt;/div&gt;</span>
+                    p ...
+                    p <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;label&gt;</span>
+                    p.double-indent <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-01"</span> <span class="na">value=</span><span class="s">"opcion-01"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span> Opción 1
+                    p.first-indent <span class="nt">&lt;/label&gt;</span>
+                    p.first-indent <span class="nt">&lt;label&gt;</span>
+                    p.double-indent <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-01"</span> <span class="na">value=</span><span class="s">"opcion-02"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span> Opción 2
+                    p.first-indent <span class="nt">&lt;/label&gt;</span>
+                    p.first-indent <span class="nt">&lt;label&gt;</span>
+                    p.double-indent <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-01"</span> <span class="na">value=</span><span class="s">"opcion-03"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span> Opción 3
+                    p.first-indent <span class="nt">&lt;/label&gt;</span>
+                    p <span class="nt">&lt;/div&gt;</span>
+            
+            section.separator
+                h4 Campos de selección
+                p
+                    | Usa el comportamiento nativo o agrega el atributo 
+                    code multiple
+                    |  para seleccionar múltiples opciones.
+                .gobmx-example
+                    form(role='form')
+                        .form-group
+                            select.form-control
+                                option 1
+                                option 2
+                                option 3
+                                option 4
+                                option 5
+                        .form-group
+                            select.form-control(multiple='')
+                                option 1
+                                option 2
+                                option 3
+                                option 4
+                                option 5
+                figure.highlight
+                    p <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;option&gt;</span>1<span class="nt">&lt;/option&gt;</span>
+                    p.first-indent <span class="nt">&lt;option&gt;</span>2<span class="nt">&lt;/option&gt;</span>
+                    p.first-indent <span class="nt">&lt;option&gt;</span>3<span class="nt">&lt;/option&gt;</span>
+                    p.first-indent <span class="nt">&lt;option&gt;</span>4<span class="nt">&lt;/option&gt;</span>
+                    p.first-indent <span class="nt">&lt;option&gt;</span>5<span class="nt">&lt;/option&gt;</span>
+                    p <span class="nt">&lt;/select&gt;</span>
+                    p ...
+                    p <span class="nt">&lt;select</span> <span class="na">multiple</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+                    p.first-indent <span class="nt">&lt;option&gt;</span>1<span class="nt">&lt;/option&gt;</span>
+                    p.first-indent <span class="nt">&lt;option&gt;</span>2<span class="nt">&lt;/option&gt;</span>
+                    p.first-indent <span class="nt">&lt;option&gt;</span>3<span class="nt">&lt;/option&gt;</span>
+                    p.first-indent <span class="nt">&lt;option&gt;</span>4<span class="nt">&lt;/option&gt;</span>
+                    p.first-indent <span class="nt">&lt;option&gt;</span>5<span class="nt">&lt;/option&gt;</span>
+                    p <span class="nt">&lt;/select&gt;</span>
         .col-md-3.right-side-menu
             ul.list-group
                 li.list-group-item Guía de estilo para diseño
