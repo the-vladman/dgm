@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6.
 
+## PUG Loader
+Add this line in:
+### /node_modules/@angular/cli/models/webpack-configs/common.js
+
+`{ test: /\.pug$/, loader: "apply-loader!pug-loader?self" },`
+after:
+`{ test: /\.html$/, loader: 'raw-loader' },`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
