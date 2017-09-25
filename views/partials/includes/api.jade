@@ -1,9 +1,0 @@
-.inner
-.post-info.well.div_api( ng-if="!$state.is( 'landing' )" ng-class="{featured:post.featured}" )
-    span( class="tag-icon tag-developers" )
-    .tool-content
-        h3
-            a( href="/blog/{{ post.slug }}?category={{ post.category.slug }}&tag={{ post.tag.slug }}" alt="{{ post.name }}" target="_blank" ) {{ post.name }}
-        .author.excerpt{{ post.content | excerpt | limitTo:200 }}...
-        p
-            a.link_doc( href="/blog/{{ post.slug }}?category={{ post.category.slug }}&tag={{ post.tag.slug }}" alt="{{ post.name }}" target="_blank" ) Ver más
