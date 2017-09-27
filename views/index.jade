@@ -24,7 +24,7 @@ block body
     script(src='bower_components/underscore/underscore.js')
     // endbower
 
-    script(src='https://cdn.datos.gob.mx/assets/js/jquery-ui-datepicker.min.js')
+    script(src=process.env.CDN_URL  + '../assets/js/jquery-ui-datepicker.min.js')
     
     if settings.env == 'production'
         script( data-main='built/main' src='bower_components/requirejs/require.js' )
