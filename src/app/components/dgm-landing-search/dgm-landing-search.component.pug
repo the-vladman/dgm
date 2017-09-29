@@ -1,0 +1,26 @@
+p dgm-landing-search works!
+
+img(ng-src="{{imageLanding.cover_photo.path}}")
+span.copyright-banner
+    a( href="http://cmgs.gob.mx:8080/mosaicoNacional/webForm1.aspx" ) CC BY SIAP
+.container-fluid
+    .row
+        .col-md-12
+            h3 Descubre <strong>Datos Abiertos</strong> de tu gobierno.
+            p {{numberData|number:0}} datos de {{numberOrganizations|number:0}} instituciones
+            .row
+                .col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2
+                    form.search-form.form-inline.hidden-xs.hidden-sm( ng-submit="search()" )
+                        input.form-control( type="text" name="keyword" placeholder="Ej. Centros educativos" ng-model="keyword" )
+                        button.btn.btn-primary( type="submit" ) Buscar
+                    form.search-form.form-inline.hidden-md.hidden-lg( ng-submit="search()" )
+                        input.form-control( type="text" name="keyword" placeholder="Ej. Centros educativos" ng-model="keyword" )
+                        button.btn.btn-primary( type="submit" )
+                            i.glyphicon.glyphicon-search
+
+.categories.hidden-sm.hidden-xs
+    ul.categories-list
+        li( ng-repeat="tag in tags" )
+            a( ui-sref="category.details({ category : tag.slug })" alt="{{ tag.name }}" )
+                img( src="img/ic-{{ tag.slug }}.svg" alt="{{ tag.name }}" )
+                span {{ tag.name }}
