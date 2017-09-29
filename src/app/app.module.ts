@@ -6,9 +6,12 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { DgmLandingSearchComponent } from './components/dgm-landing-search/dgm-landing-search.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DgmLandingSearchComponent
   ],
   imports: [
     BrowserModule,
