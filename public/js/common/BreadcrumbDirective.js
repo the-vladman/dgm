@@ -10,29 +10,36 @@ define(function() {
         var sections = $location.path().substring(1).split('/'),
           query = $location.search();
 
-        if (sections[0] == 'herramientas' || sections[0] == 'blog') {
+        if (sections[0] === 'guia-estilos') {
           scope.crumbs.push({
-            params: {
-              section: sections[0]
+              sref: 'sref',
+              url: 'Gráfica base'
+          })
+        }
+
+        if ( sections[0] == 'herramientas' || sections[0] == 'blog' ) {
+          scope.crumbs.push({
+            params  : {
+                section     : sections[0]
             },
-            sref: 'front.section',
-            url: sections[0]
+            sref    : 'front.section',
+            url     : sections[0]
           });
         }
-        if (query && query.category) {
+        if ( query && query.category ) {
           scope.crumbs.push({
-            params: {
-              section: sections[0],
-              category: query.category
+            params  : {
+              section     : sections[0],
+              category    : query.category
             },
-            sref: 'front.section',
-            url: query.category.replace(new RegExp('-', 'g'), ' ')
+            sref    : 'front.section',
+            url     : query.category.replace( new RegExp( '-', 'g' ), ' ' )
           });
         }
-        if (query && query.tag) {
-          var params = {
-            section: sections[0],
-            tag: query.tag
+        if ( query && query.tag ) {
+          var params  = {
+              section : sections[0],
+              tag     : query.tag
           };
 
           if (query.category) {
