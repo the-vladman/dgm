@@ -28,7 +28,6 @@ block body
     script(src=process.env.CDN_URL  + '../assets/js/jquery-ui-datepicker.min.js')
     
     if settings.env == 'production'
-        /*script(async  data-main='built/main' src='bower_components/requirejs/require.js' )*/
         script(async  data-main='built/main' src='bower_components/requirejs/require.js' )
     else
         script(async  data-main='js/main' src='bower_components/requirejs/require.js' )
