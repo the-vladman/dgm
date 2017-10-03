@@ -15,11 +15,10 @@ html
         // bower:css
         link(rel='stylesheet', href='bower_components/medium-editor/dist/css/medium-editor.css')
         link(rel='stylesheet', href='bower_components/medium-editor/dist/css/themes/default.css')
-        link(rel='stylesheet', href='bower_components/bootstrap-select/dist/css/bootstrap-select.css')
         // endbower
 
-        link( rel="stylesheet" href="css/style.css" )
-        link( rel="stylesheet", href=process.env.CDN_URL + 'dgm-style/reset-footer.css')
+        link( rel="stylesheet" href=process.env.CDN_URL + '../assets/css/main.css' )
+        link( rel="stylesheet" href='css/sec-style.css' )
 
         if settings.env == 'development'
             script(async  src="http://localhost:35729/livereload.js?snipver=1" )

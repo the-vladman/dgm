@@ -9,6 +9,7 @@ define(function(require) {
   var FrontHomeCtrl = require('front/FrontHomeCtrl');
   var FrontPopupCtrl = require('front/FrontPopupCtrl');
   var FrontPostsCtrl = require('front/FrontPostsCtrl');
+  var FrontStyleGuideCtrl = require('front/FrontStyleGuideCtrl');
   var FrontRouter = require('front/FrontRouter');
 
   var FrontModule = angular.module('FrontModule', []);
@@ -28,6 +29,8 @@ define(function(require) {
   FrontModule.controller('FrontHomeCtrl', ['$scope', '$cookies', '$uibModal', 'VisualizersService', 'SettingsService', FrontHomeCtrl]);
 
   FrontModule.controller('FrontPopupCtrl', ['$scope', '$uibModalInstance', FrontPopupCtrl]);
+
+  FrontModule.controller('FrontStyleGuideCtrl', ['$scope', FrontStyleGuideCtrl]);
 
   FrontModule.controller('FrontPostsCtrl', ['$scope', '$element', '$stateParams', 'CategoriesService', 'PostsService', 'VisualizersService', 'SettingsService', FrontPostsCtrl]);
 });

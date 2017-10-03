@@ -38,7 +38,8 @@ define(function() {
         url: '/guia-estilos',
         views: {
           'front-container': {
-            templateUrl: 'partials/front/style_guide'
+            templateUrl: 'partials/front/style_guide',
+            controller: 'FrontStyleGuideCtrl'
           }
         }
       })
