@@ -14,7 +14,7 @@ define(function() {
             element.removeClass('dragging').addClass('uploading');
             console.log(Session.getToken());
             data.formData = {
-              // session: Session.getToken(),
+              session: Session.getToken(),
               file: scope.fileName
             };
             data.submit();
