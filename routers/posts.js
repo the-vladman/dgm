@@ -310,6 +310,9 @@ router.put('/:id', Session.validate, function(req, res, next) {
           moveImg('slider_photos', post);
         }
       } else {
+        if (req.body.featured) {
+          changeFeatured(req.body.section);
+        }
         post.save(updated);
       }
     }
