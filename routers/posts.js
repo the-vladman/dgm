@@ -105,7 +105,7 @@ router.post('/', Session.validate, function(req, res, next) {
         });
       }
     },
-    getImagesFromContent = function(content, post){
+    getImagesFromContent = function(content, post) {
       var imagesFromContent = Utils.getImagesFromContent(content);
       if (imagesFromContent.length > 0) {
         var imagesUrls = Utils.saveImagesFromContent(imagesFromContent, post.id, path.join(config.uploads_path, post.id));
@@ -231,7 +231,24 @@ router.put('/:id', Session.validate, function(req, res, next) {
     updated = function(err, post) {
       res.json(post);
     },
-    getImagesFromContent = function(content, post){
+    changeFeatured = function(section){
+      console.log('ES impotante');
+      Post.find({
+          section: section,
+          featured: true
+        })
+        .then(sectionPosts => {
+          sectionPosts.forEach(spost => {
+            if (spost.featured) {
+              console.log(spost.featured);
+              spost.featured = false;
+              console.log(spost.featured);
+              spost.save();
+            }
+          });
+        });
+    },
+    getImagesFromContent = function(content, post) {
       var imagesFromContent = Utils.getImagesFromContent(content);
       if (imagesFromContent.length > 0) {
         var imagesUrls = Utils.saveImagesFromContent(imagesFromContent, post.id, path.join(config.uploads_path, post.id));
