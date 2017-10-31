@@ -103,10 +103,20 @@
                     p.first-indent <span class="nt">&lt;link</span><span class="na"> href=</span><span class="s">"/favicon.ico"</span> <span class="na"> rel=</span><span class="s">"shortcut icon"</span><span class="nt">&gt;</span>
                     p.first-indent ...
                     p <span class="nt"  >&lt;/head&gt;</span>
+                p
+                    | Otra opción es que obtenga el 
+                    em favicon.ico 
+                    | directamente de nuestro CDN sin tener que descargarlo:
+                figure.highlight
+                    p <span class="nt">&lt;head&gt;</span>
+                    p.first-indent ...
+                    p.first-indent <span class="nt">&lt;link</span><span class="na"> href=</span><span class="s">"https://cdn.datos.gob.mx/assets/img/favicon.ico"</span> <span class="na"> rel=</span><span class="s">"shortcut icon"</span><span class="nt">&gt;</span>
+                    p.first-indent ...
+                    p <span class="nt"  >&lt;/head&gt;</span>
             section#basic-example.separator
                 h2.section-title Ejemplo básico
                 p
-                    Este es el template básico para agregar una nueva página. Para que el framework funcione correctamente se debe incorporar la liga de los estilos dentro de la etiqueta 
+                    | Este es el template básico para agregar una nueva página. Para que el framework funcione correctamente se debe incorporar la liga de los estilos dentro de la etiqueta 
                     code &lt;head&gt;
                     , y la liga del script antes de cerrarse la etiqueta 
                     code &lt;body&gt;
@@ -114,13 +124,7 @@
                 p
                     strong NOTA:     
                 p
-                    Recuerda que necesitas instalar las dependencias con 
-                    a(href="https://bower.io/", target="_blank") bower 
-                    | de webcomponentsjs y polymer para utilizar nuestros componentes de 
-                    strong navbar
-                    |  y 
-                    strong footer
-                    | .
+                    | Ahora los componentes los puedes accesar directamente desde nuestro CDN, sin tener que usar bower.
                 figure.highlight
                     p <span class="cp">&lt;!DOCTYPE html&gt;</span>
                     p <span class="nt">&lt;html <span class="na">lang=</span><span class="s">"es"</span>&gt;</span>
@@ -131,15 +135,15 @@
                     p.double-indent <span class="nt">&lt;title&gt;</span>Ejemplo de nueva página para datos.gob.mx<span class="nt">&lt;/title&gt;</span>
                     br
                     p.double-indent <span class="c">&lt;!-- webcomponents y polymer --&gt;</span>
-                    p.double-indent <span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"bower_components/webcomponentsjs/webcomponents-lite.min.js"</span><span class="nt">&gt;</span>
-                    p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"bower_components/polymer/polymer.html"</span> <span class="na">rel=</span><span class="s">"import"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://cdn.datos.gob.mx/bower_components/webcomponentsjs/webcomponents-lite.min.js"</span><span class="nt">&gt;</span><span class="nt">&lt;/script</span>&gt;
+                    p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.datos.gob.mx/bower_components/polymer/polymer.html"</span> <span class="na">rel=</span><span class="s">"import"</span><span class="nt">&gt;</span>
                     br
                     p.double-indent <span class="c">&lt;!-- navbar y footer de DGM --&gt;</span>
                     p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.datos.gob.mx/bower_components/dgm-navbar/dgm-navbar.html"</span> <span class="na">rel=</span><span class="s">"import"</span><span class="nt">&gt;</span>
                     p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.datos.gob.mx/bower_components/dgm-footer/dgm-footer.html"</span> <span class="na">rel=</span><span class="s">"import"</span><span class="nt">&gt;</span>
                     br
                     p.double-indent <span class="c">&lt;!-- CSS --&gt;</span>
-                    p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/favicon.ico"</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span><span class="nt">&gt;</span>
+                    p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.datos.gob.mx/assets/img/favicon.ico"</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span><span class="nt">&gt;</span>
                     p.double-indent <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://cdn.datos.gob.mx/assets/css/main.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
                     br
                     p.double-indent <span class="c">&lt;!-- Respond.js soporte de media queries para Internet Explorer 8 --&gt;</span>
