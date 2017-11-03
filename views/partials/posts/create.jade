@@ -76,7 +76,7 @@
             input( type="text" name="external_link" class="form-control" placeholder="Enlace Micrositio" ng-model="post.external_link" )
       .row
         .col-md-12
-          .form-group.has-error
+          .form-group
             label( for="datasets" ) Conjuntos de datos
             .post-datasets( ng-repeat="dataset in post.datasets track by $index" )
               input( type="text" name="datasets" class="form-control" placeholder="Dataset ID" ng-model="post.datasets[$index]")
