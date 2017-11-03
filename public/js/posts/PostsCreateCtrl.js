@@ -46,14 +46,18 @@ define(function() {
     });
 
     $scope.create = function() {
-      $scope.post.author = $scope.post.author.replace(/<br>/g, '');
-      $scope.post.content = $scope.post.content.replace(/<br>/g, '');
-      $scope.post.name = $scope.post.name.replace(/<br>/g, '');
-      $scope.post.slug = slug($scope.post.name, {
-        lower: true
-      });
-
-      Posts.create($scope.post);
+      if ($scope.postForm.$valid && $scope.post.author && $scope.post.name && $scope.post.content) {
+        console.log('ess', $scope.postForm.$valid);
+        $scope.post.author = $scope.post.author.replace(/<br>/g, '');
+        $scope.post.content = $scope.post.content.replace(/<br>/g, '');
+        $scope.post.name = $scope.post.name.replace(/<br>/g, '');
+        $scope.post.slug = slug($scope.post.name, {
+          lower: true
+        });
+        Posts.create($scope.post);
+      } else {
+        alert('Datos Imcompletos');
+      }
     };
     $scope.datasetAdd = function() {
       $scope.post.datasets.push('');

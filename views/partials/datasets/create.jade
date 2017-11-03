@@ -1,18 +1,18 @@
 .row
     .col-md-6.col-md-offset-3
-        form( ng-submit="create()" )
-            .form-group
+        form( name="postForm" novalidate ng-submit="create()" )
+            .form-group#post-form
                 label( for="name" ) Nombre
-                input.form-control( type="text" name="name" placeholder="Nombre" ng-model="dataset.title" )
-            .form-group
+                input.form-control( type="text" name="name" placeholder="Nombre" ng-model="dataset.title" required)
+            .form-group#post-form
                 label( for="link" ) Enlace
-                input.form-control( type="text" name="link" placeholder="http://www.google.com" ng-model="dataset.link" )
-            .form-group
+                input.form-control( type="text" name="link" placeholder="http://www.google.com" ng-model="dataset.link" required)
+            .form-group#post-form
                 label( for="organization" ) Organización
-                input.form-control( type="text" name="organization" placeholder="SAGARPA" ng-model="dataset.organization" )
+                input.form-control( type="text" name="organization" placeholder="SAGARPA" ng-model="dataset.organization" required)
             .form-group
                 label( for="formats" ) Formatos
-                select.form-control( name="formats" ng-model="dataset.format" )
+                select.form-control( name="formats" ng-model="dataset.format" required)
                     option( value="" ) Seleccionar formato...
                     option( value="pdf" ) PDF
                     option( value="xml" ) XML
@@ -27,6 +27,9 @@
                     option( value="zip" ) ZIP
             .form-group
                 label( for="type" ) Tipo
-                select.form-control( name="type" ng-model="dataset.type" )
+                select.form-control( name="type" ng-model="dataset.type" required)
                     option( value="" ) Seleccionar tipo...
                     option( value="RECOMMENDED" ) Recomendado
+
+.modal.fade(tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+  .modal-dialog(role="document")
