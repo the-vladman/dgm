@@ -1,60 +1,61 @@
 .row
   .col-md-8
-    form#post-create-form( ng-submit="create()" )
+    form( name="postForm" novalidate ng-submit="create()" )
       .row
         .col-md-4
-          .form-group
+          .form-group#post-form
             label( for="section" ) Sección
             .custom-select
-              select.form-control( name="section" ng-model="post.section" ng-options="section._id as section.name for section in sections" )
+              select.form-control( name="section" ng-model="post.section" required ng-options="section._id as section.name for section in sections" )
                 option( value="" ) Seleccionar sección...
         .col-md-4
-          .form-group
+          .form-group#post-form
             label( for="category" ) Categoría
             .custom-select
-              select.form-control( name="category" ng-model="post.category" ng-options="category._id as category.name for category in categories" )
+              select.form-control( name="category" ng-model="post.category" required ng-options="category._id as category.name for category in categories" )
                 option( value="" ) Seleccionar categoría...
         .col-md-4
-          .form-group
+          .form-group#post-form
             label( for="tag" ) Tag
             .custom-select
-              select.form-control( name="tag" ng-model="post.tag" ng-options="tag._id as tag.name for tag in tags" )
+              select.form-control( name="tag" ng-model="post.tag" required ng-options="tag._id as tag.name for tag in tags" )
                 option( value="" ) Seleccionar tag...
       .row
         .col-md-6
-          .form-group
+          .form-group#post-form
             label( for="creation_date" ) Fecha de creación
             .input-group.datepicker-group
-              input.form-control( type="text" name="creation_date" ng-model="post.creation_date" ng-click="open()" uib-datepicker-popup="dd-MM-yyyy" datepicker-options="dpOptions" is-open="dpOpen" show-button-bar="false" )
+              input.form-control( type="text" name="creation_date" ng-model="post.creation_date" required ng-click="open()" uib-datepicker-popup="dd-MM-yyyy" datepicker-options="dpOptions" is-open="dpOpen" show-button-bar="false" )
               .input-group-addon( ng-click="open()" )
                 i.glyphicon.glyphicon-calendar
+                
         .col-md-6
-          .form-group
+          .form-group#post-form
             label( for="status" ) Estatus
             .custom-select
-              select.form-control( name="status" ng-model="post.status" )
+              select.form-control( name="status" ng-model="post.status" required )
                 option( value="" ) Seleccione estatus...
                 option( value="PUBLISHED" ng-if="user.type <= 2" ) Publicado
                 option( value="DRAFT" ) Borrador
                 option( value="ARCHIVED" ) Archivado
       .row
         .col-md-6( ng-if="user.type <= 1" )
-          .form-group
+          .form-group#post-form
             label( for="created_by" ) Creado por
             .custom-select
-              select.form-control( name="created_by" ng-model="post.created_by" ng-options="author._id as author.name for author in authors" )
+              select.form-control( name="created_by" ng-model="post.created_by" required ng-options="author._id as author.name for author in authors" )
                 option( value="" ) Seleccione autor...
         .col-md-6
           .form-group
             .checkbox
               label
-                input( type="checkbox" name="featured" value="true" ng-model="post.featured" )
+                input( type="checkbox" name="featured" value="true" ng-model="post.featured")
                 | Destacado
       .row( ng-if="sectionName == 'Herramientas'" )
         .col-md-6
           .form-group
             label( for="apple_store" ) Enlace Apple Store
-            input( type="text" name="apple_store" class="form-control" placeholder="Apple Store" ng-model="post.apple_store" )
+            input( type="text" name="apple_store" class="form-control" placeholder="Apple Store" ng-model="post.apple_store")
         .col-md-6
           .form-group
             label( for="google_play" ) Enlace Google Play
@@ -78,7 +79,7 @@
           .form-group
             label( for="datasets" ) Conjuntos de datos
             .post-datasets( ng-repeat="dataset in post.datasets track by $index" )
-              input( type="text" name="datasets" class="form-control" placeholder="Dataset ID" ng-model="post.datasets[$index]" )
+              input( type="text" name="datasets" class="form-control" placeholder="Dataset ID" ng-model="post.datasets[$index]")
               button( type="button" class="btn btn-primary" ng-click="datasetAdd()" ng-if="$index == 0" ) Añadir Conjunto
               button( type="button" class="btn btn-danger" ng-click="datasetRemove( $index )" ng-if="$index != 0" ) Eliminar
       .row( ng-repeat="dataset_ext in post.datasets_ext track by $index" )
@@ -95,7 +96,7 @@
               button( type="button" class="btn btn-danger" ng-click="datasetExtRemove( $index )" ng-if="$index != 0" ) Eliminar
     //- uploaders
     .cover-photo-upload( data-config="configCover" data-img="post.cover_photo" file-uploader ng-class="{uploaded: post.cover_photo}" )
-      
+
     .post
       h1.title( medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: { align : 'left', buttons : [ 'bold', 'italic', 'underline' ], static : true, updateOnEmptySelection : true } }" data-placeholder="Título del artículo" ng-model="post.name" )
       p.author( medium-editor bind-options="{disableReturn: true, disableExtraSpaces: true, toolbar: false }" data-placeholder="Escuadron de datos" ng-model="post.author" )
@@ -103,7 +104,7 @@
   .col-md-4
     //- uploaders
     .grid-photo-upload( data-config="configGrid" data-img="post.grid_photo" file-uploader ng-class="{uploaded: post.grid_photo}" )
-    
+
     div.photo-gallery( ng-if="sectionName == 'Herramientas'" )
       h3 Galería de Fotos
       button( type="button" class="btn btn-primary" ng-click="photoAdd()" ) Añadir Imagen

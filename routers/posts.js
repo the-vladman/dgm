@@ -105,7 +105,7 @@ router.post('/', Session.validate, function(req, res, next) {
         });
       }
     },
-    getImagesFromContent = function(content, post){
+    getImagesFromContent = function(content, post) {
       var imagesFromContent = Utils.getImagesFromContent(content);
       if (imagesFromContent.length > 0) {
         var imagesUrls = Utils.saveImagesFromContent(imagesFromContent, post.id, path.join(config.uploads_path, post.id));
@@ -231,7 +231,24 @@ router.put('/:id', Session.validate, function(req, res, next) {
     updated = function(err, post) {
       res.json(post);
     },
-    getImagesFromContent = function(content, post){
+    changeFeatured = function(section){
+      console.log('ES impotante');
+      Post.find({
+          section: section,
+          featured: true
+        })
+        .then(sectionPosts => {
+          sectionPosts.forEach(spost => {
+            if (spost.featured) {
+              console.log(spost.featured);
+              spost.featured = false;
+              console.log(spost.featured);
+              spost.save();
+            }
+          });
+        });
+    },
+    getImagesFromContent = function(content, post) {
       var imagesFromContent = Utils.getImagesFromContent(content);
       if (imagesFromContent.length > 0) {
         var imagesUrls = Utils.saveImagesFromContent(imagesFromContent, post.id, path.join(config.uploads_path, post.id));
@@ -263,11 +280,7 @@ router.put('/:id', Session.validate, function(req, res, next) {
 
         post[key] = req.body[key];
       }
-
-      if (!req.body.featured) {
-        post.featured = false;
-      }
-
+      
       if (uploading.cover_photo || uploading.grid_photo || uploading.slider_photos) {
         if (uploading.cover_photo) {
           if (post.cover_photo) {
@@ -293,6 +306,9 @@ router.put('/:id', Session.validate, function(req, res, next) {
           moveImg('slider_photos', post);
         }
       } else {
+        if (req.body.featured) {
+          changeFeatured(req.body.section);
+        }
         post.save(updated);
       }
     }
