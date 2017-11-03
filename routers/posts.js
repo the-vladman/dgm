@@ -280,11 +280,7 @@ router.put('/:id', Session.validate, function(req, res, next) {
 
         post[key] = req.body[key];
       }
-
-      if (!req.body.featured) {
-        post.featured = false;
-      }
-
+      
       if (uploading.cover_photo || uploading.grid_photo || uploading.slider_photos) {
         if (uploading.cover_photo) {
           if (post.cover_photo) {
