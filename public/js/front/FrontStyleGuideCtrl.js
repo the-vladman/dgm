@@ -9,8 +9,8 @@ define(function () {
     $('#calendar').datepicker();
     $('#calendarYear').datepicker({changeYear: true});
 
-    // Desabilita la propagación de todos los anchors
-    $('a').on('click', function(e) { e.preventDefault() });
+    // Desabilita la propagación de todos los anchors de panel
+    $('.panel a').on('click', function(e) { e.preventDefault() });
 
     // Crea la animación del scroll para el submenú
     $('.right-side-menu a').on('click', function(e) {

@@ -1,18 +1,18 @@
 .row
     .col-md-6.col-md-offset-3
-        form( ng-submit="create()" )
-            .form-group
+        form( name="postForm" novalidate ng-submit="create()" )
+            .form-group#post-form
                 label( for="name" ) Nombre
-                input.form-control( type="text" name="name" placeholder="Nombre" ng-model="new_user.name" )
-            .form-group
+                input.form-control( type="text" name="name" placeholder="Nombre" ng-model="new_user.name" required)
+            .form-group#post-form
                 label( for="email" ) Correo electrónico
-                input.form-control( type="email" name="email" placeholder="Correo electrónico" ng-model="new_user.email" )
-            .form-group
+                input.form-control( type="email" name="email" placeholder="Correo electrónico" ng-model="new_user.email" required)
+            .form-group#post-form
                 label( for="pass" ) Contraseña
-                input.form-control( type="text" name="pass" placeholder="Contraseña" ng-model="new_user.pass" )
+                input.form-control( type="text" name="pass" placeholder="Contraseña" ng-model="new_user.pass" required)
             .form-group
                 label( for="type" ) Tipo
-                select.form-control( name="type" ng-model="new_user.type" )
+                select.form-control( name="type" ng-model="new_user.type" required)
                     option( value="" ) Seleccionar tipo...
                     option( value="0" ) Superadministrador
                     option( value="1" ) Administrador
