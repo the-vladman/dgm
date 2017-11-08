@@ -249,7 +249,6 @@ router.put('/:id', Session.validate, function(req, res, next) {
       res.json(post);
     },
     changeFeatured = function(section){
-      console.log('ES impotante');
       Post.find({
           section: section,
           featured: true
@@ -257,9 +256,7 @@ router.put('/:id', Session.validate, function(req, res, next) {
         .then(sectionPosts => {
           sectionPosts.forEach(spost => {
             if (spost.featured) {
-              console.log(spost.featured);
               spost.featured = false;
-              console.log(spost.featured);
               spost.save();
             }
           });
@@ -297,7 +294,7 @@ router.put('/:id', Session.validate, function(req, res, next) {
 
         post[key] = req.body[key];
       }
-      
+
       if (uploading.cover_photo || uploading.grid_photo || uploading.slider_photos) {
         if (uploading.cover_photo) {
           if (post.cover_photo) {
