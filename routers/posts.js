@@ -113,6 +113,20 @@ router.post('/', Session.validate, function(req, res, next) {
       } else {
         newContent = content;
       }
+    },
+    changeFeatured = function(section){
+      Post.find({
+          section: section,
+          featured: true
+        })
+        .then(sectionPosts => {
+          sectionPosts.forEach(spost => {
+            if (spost.featured) {
+              spost.featured = false;
+              spost.save();
+            }
+          });
+        });
     };
 
   if (req.uploading) {
@@ -129,6 +143,9 @@ router.post('/', Session.validate, function(req, res, next) {
       err.status = 401;
       next(err);
     } else {
+      if (req.body.featured) {
+        changeFeatured(req.body.section);
+      }
       Post.create({
         apple_store: req.body.apple_store,
         author: req.body.author,
