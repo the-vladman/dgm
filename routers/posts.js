@@ -113,6 +113,20 @@ router.post('/', Session.validate, function(req, res, next) {
       } else {
         newContent = content;
       }
+    },
+    changeFeatured = function(section){
+      Post.find({
+          section: section,
+          featured: true
+        })
+        .then(sectionPosts => {
+          sectionPosts.forEach(spost => {
+            if (spost.featured) {
+              spost.featured = false;
+              spost.save();
+            }
+          });
+        });
     };
 
   if (req.uploading) {
@@ -129,6 +143,9 @@ router.post('/', Session.validate, function(req, res, next) {
       err.status = 401;
       next(err);
     } else {
+      if (req.body.featured) {
+        changeFeatured(req.body.section);
+      }
       Post.create({
         apple_store: req.body.apple_store,
         author: req.body.author,
@@ -232,7 +249,6 @@ router.put('/:id', Session.validate, function(req, res, next) {
       res.json(post);
     },
     changeFeatured = function(section){
-      console.log('ES impotante');
       Post.find({
           section: section,
           featured: true
@@ -240,9 +256,7 @@ router.put('/:id', Session.validate, function(req, res, next) {
         .then(sectionPosts => {
           sectionPosts.forEach(spost => {
             if (spost.featured) {
-              console.log(spost.featured);
               spost.featured = false;
-              console.log(spost.featured);
               spost.save();
             }
           });
@@ -280,7 +294,7 @@ router.put('/:id', Session.validate, function(req, res, next) {
 
         post[key] = req.body[key];
       }
-      
+
       if (uploading.cover_photo || uploading.grid_photo || uploading.slider_photos) {
         if (uploading.cover_photo) {
           if (post.cover_photo) {
