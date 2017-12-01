@@ -46,7 +46,10 @@ function buildDGMOrganizationsVar(){
       console.log("Error updating DGM_ORGANIZATIONS_REDIRECT_ENGINE");
     }else{
       body = JSON.parse(body);
-      organizations = body.results instanceof Array ? body.results:organizations;
+      organizations = [];
+      for(var result of body.results ){
+        organizations.push(result.name);
+      }
     }
   });
 }
