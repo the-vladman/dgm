@@ -111,5 +111,5 @@ schedule.scheduleJob('15 1 * * *', function(){
   buildDGMOrganizationsVar();
 });
 
-// buildDGMOrganizationsVar();
+buildDGMOrganizationsVar();
 module.exports = router;
