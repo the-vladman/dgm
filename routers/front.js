@@ -3,6 +3,8 @@ var request = require('request'),
   express = require('express'),
   router = express.Router();
 
+var sem = require('semaphore')(1);
+
 /*
   redirect engine
 */
@@ -12,21 +14,50 @@ router.all("/", function(req, res, next){
 
   if(originUrl && originUrl.match(/.*gob.mx.*/gi)){
     var match = originUrl.match(/.*www\.(\w*)?\.?(?:gob\.mx\/)(\w*)?/i);
-    var organization = match==null ? null:match[1] ? match[1]:match[2];
+    var refererOrganization = match==null ? null:match[1] ? match[1]:match[2];
 
-    if(organization){
-      if(organizations.length == 0){
-        console.log("Error: array de organizaciones vacio.");
-      } else (organizations.indexOf(organization) > -1) {
-        res.redirect("busca/organization/" + organization);
+    if(match){
+
+      if(!organizations || organizations.length == 0){
+        console.log("Error: variable de organizaciones vacia.");
+
+        buildDGMOrganizationsVar();
+
+
+        console.log("Resolviendo referer mediante API.");
+        request.get("https://api.datos.gob.mx/v1/ckan-organizations?name=" + refererOrganization, function(error, response, body){
+          if(error){
+           console.log("Error en la respuesta del servidor.", error);
+          }
+
+          body = JSON.parse(body);
+
+          if(body.error){
+            console.log("Error en la petición.", body);
+            next();
+            return;
+          }
+
+          if(body.results.length == 0){
+            console.log("No se encontro la organización.", refererOrganization);
+          }else{
+            res.redirect("busca/organization/" + refererOrganization);
+            return;
+          }
+        });
+
+        return;
+      } else if (organizations.indexOf(refererOrganization) > -1) {
+        res.redirect("busca/organization/" + refererOrganization);
         return;
       }
-      console.log("Organización no encontrada.", organization, originUrl);
-    }else{
-      console.log("URL no valida para redirección.", originUrl);
-    }
-  }
 
+
+      console.log("Organización no encontrada.", refererOrganization, originUrl);
+
+    }
+
+  }
   next();
 });
 
@@ -43,30 +74,36 @@ router.get('*', function(req, res) {
 });
 
 /*
-  redirect engine env variable
-  From this env the function validates if is a valid organization
+  redirect engine variable
+  From this variable the function validates if the referer is a valid organization
 */
 function buildDGMOrganizationsVar(){
-  request.get("https://api.datos.gob.mx/v1/ckan-organizations?pageSize=9999", function(error, response, body){
-    console.log("Iniciando actualización de la variable del motor de redirección.");
+  if(sem.available(1)){
+    sem.take(function(){
+      request.get("https://api.datos.gob.mx/v1/ckan-organizations?pageSize=99999", function(error, response, body){
+        console.log("Iniciando actualización de la variable de redirección.");
 
-    if(error){
-      console.log("Error en la respuesta del servidor.", error);
-    }else{
-      body = JSON.parse(body);
+        if(error){
+          console.log("Error en la respuesta del servidor.", error);
+        }else{
+          body = JSON.parse(body);
 
-      if(body.results.length == 0){
-        console.log("Error: resultado del servidor vacio");
-      }else{
-        organizations = [];
-        for(var result of body.results ){
-          organizations.push(result.name);
+          if(body.error){
+            console.log("Error", JSON.stringify(body))
+          }else{
+            organizations = [];
+            for(var result of body.results ){
+              organizations.push(result.name);
+            }
+
+            console.log("Variable de redirección actualizada.", JSON.stringify(organizations));
+          }
         }
 
-        console.log("Variable actualizada.", organizations);
-      }
-    }
-  });
+        sem.leave();
+      });
+    });
+  }
 }
 
 // update the var each day

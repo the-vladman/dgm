@@ -43,6 +43,7 @@
     "request": "^2.83.0",
     "requirejs": "2.1.22",
     "rimraf": "2.5.2",
+    "semaphore": "^1.1.0",
     "wiredep": "4.0.0"
   }
 }
