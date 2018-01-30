@@ -28,8 +28,8 @@ block body
     script(async src=process.env.CDN_URL  + '../assets/js/jquery-ui-datepicker.min.js')
     
     if settings.env == 'production'
-        script(async  data-main='built/main' src='bower_components/requirejs/require.js' )
+        script(async  data-main='built/main' src=process.env.CDN_URL  + 'requirejs/requirejs_2.2.0.min.js' )
     else
-        script(async  data-main='js/main' src='bower_components/requirejs/require.js' )
+        script(async  data-main='js/main' src=process.env.CDN_URL  + 'requirejs/requirejs_2.2.0.min.js' )
     script.
         var _sf_async_config = { uid: 62850, domain: 'datos.gob.mx', useCanonical: true };
