@@ -8,6 +8,9 @@ html
         meta( name="description" content="Portal de Datos Abiertos del Gobierno de la República" )
         link( rel="shortcut icon" href="img/favicon.ico" )
 
+        link( rel="stylesheet" href=process.env.CDN_URL + '../assets/css/main.css' )
+        link( rel="stylesheet" href='css/sec-style.css' )
+
         link( rel="import" href="bower_components/polymer/polymer.html" )
         link( rel="import" href=process.env.CDN_URL  + 'dgm-navbar/dgm-navbar.html')
         link( rel="import" href=process.env.CDN_URL  + 'dgm-footer/dgm-footer.html')
@@ -16,9 +19,6 @@ html
         link(rel='stylesheet', href='bower_components/medium-editor/dist/css/medium-editor.css')
         link(rel='stylesheet', href='bower_components/medium-editor/dist/css/themes/default.css')
         // endbower
-
-        link( rel="stylesheet" href=process.env.CDN_URL + '../assets/css/main.css' )
-        link( rel="stylesheet" href='css/sec-style.css' )
 
         if settings.env == 'development'
             script(async  src="http://localhost:35729/livereload.js?snipver=1" )
