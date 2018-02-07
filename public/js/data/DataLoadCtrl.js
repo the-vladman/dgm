@@ -1,7 +1,7 @@
 'use strict';
 
 define(function() {
-  return function($scope, $stateParams, CkanService, Datasets) {
+  return function($scope, $stateParams, CkanService, Datasets, Apis) {
     var downloaded = [
         'concesiones-mineras',
         'directorio-registro-federal-de-las-organizaciones-de-la-sociedad-civil',
@@ -12,6 +12,30 @@ define(function() {
       query = function(type) {
         switch (type) {
           case 0:
+            $scope.datasets = Array();
+            Apis.query({
+              order: 'DESC',
+              page: 1,
+              per_page: 5,
+              sort: 'creation_date',
+              type: 'RECOMMENDED'
+            }).$promise.then(function(data) {
+              for (var i = 0; i < data.length; i++) {
+                $scope.datasets.push({
+                  link: data[i].link,
+                  organization: {
+                    title: data[i].organization
+                  },
+                  name: data[i].title,
+                  resources: [{
+                    format: data[i].format
+                  }],
+                  title: data[i].title
+                });
+              }
+            });
+          break;
+          case 1:
             $scope.datasets = Array();
             Datasets.query({
               order: 'DESC',
@@ -35,12 +59,12 @@ define(function() {
               }
             });
             break;
-          case 1:
+          case 2:
             var q = ($stateParams.category) ? 'tags:' + $stateParams.category : '';
 
             $scope.datasets = CkanService.datasets(q, 5, 'metadata_modified desc');
             break;
-          case 2:
+          case 3:
             $scope.datasets = Array();
             for (var i = 0; i < downloaded.length; i++) {
               $scope.datasets.push(CkanService.dataset(downloaded[i]));

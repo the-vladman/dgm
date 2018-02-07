@@ -1,0 +1,35 @@
+.row
+    .col-md-6.col-md-offset-3
+        form( name="postForm" novalidate ng-submit="create()" )
+            .form-group#post-form
+                label( for="name" ) Nombre
+                input.form-control( type="text" name="name" placeholder="Nombre" ng-model="api.title" required)
+            .form-group#post-form
+                label( for="link" ) Enlace
+                input.form-control( type="text" name="link" placeholder="http://www.google.com" ng-model="api.link" required)
+            .form-group#post-form
+                label( for="organization" ) Organización
+                input.form-control( type="text" name="organization" placeholder="SAGARPA" ng-model="api.organization" required)
+            .form-group
+                label( for="formats" ) Formatos
+                select.form-control( name="formats" ng-model="api.format" required)
+                    option( value="" ) Seleccionar formato...
+                    option( value="pdf" ) PDF
+                    option( value="xml" ) XML
+                    option( value="csv" ) CSV
+                    option( value="kml" ) KML
+                    option( value="json" ) JSON
+                    option( value="geojson" ) GEOJSON
+                    option( value="XLS" ) XLS
+                    option( value="XLSX" ) XLSX
+                    option( value="shp" ) SHP
+                    option( value="kmz" ) KMZ
+                    option( value="zip" ) ZIP
+            .form-group
+                label( for="type" ) Tipo
+                select.form-control( name="type" ng-model="api.type" required)
+                    option( value="" ) Seleccionar tipo...
+                    option( value="RECOMMENDED" ) Recomendado
+
+.modal.fade(tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+  .modal-dialog(role="document")

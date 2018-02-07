@@ -14,6 +14,7 @@ define( function ( require ) {
     require( 'users/UsersModule' );
     require( 'visualizers/VisualizersModule');
     require( 'settings/SettingsModule' );
+    require( 'apis/ApisModule' );
 
     var app     = angular.module( 'dgm', [
             'angular-medium-editor',
@@ -34,6 +35,7 @@ define( function ( require ) {
             'CommonModule',
             'DataModule',
             'DatasetsModule',
+            'ApisModule',
             'FrontModule',
             'LandingModule',
             'PostsModule',

@@ -7,7 +7,7 @@ nav.navbar.navbar-default.navbar-fixed-top
         span.icon-bar
         span.icon-bar
       a.navbar-brand( ui-sref="admin" )
-        img( src="img/ic_logo.png" alt="datos.gob.mx" )
+      img( src="img/ic_logo.png" alt="datos.gob.mx" )
     div#admin-menu.collapse.navbar-collapse
       ul.nav.navbar-nav
         li( ng-class="{active:$state.is('admin')}" )
@@ -30,6 +30,10 @@ nav.navbar.navbar-default.navbar-fixed-top
           a( ui-sref="datasets.list" )
             i.icon-box
             |  Datasets
+        li( ng-class="{active:$state.includes('apis')}" )
+          a( ui-sref="apis.list" )
+            i.icon-box
+            |  Apis
         li( ng-class="{active:$state.includes('visualizers')}" )
           a( ui-sref="visualizers.list" )
             i.icon-box
