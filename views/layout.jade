@@ -11,7 +11,9 @@ html
         link( rel="stylesheet" href=process.env.CDN_URL + '../assets/css/main.css' )
         link( rel="stylesheet" href='css/sec-style.css' )
 
-        link( rel="import" href="bower_components/polymer/polymer.html" )
+        script(async src=process.env.CDN_URL  + 'webcomponentsjs/webcomponents-lite.min.js')
+
+        link( rel="import" href=process.env.CDN_URL  + 'polymer/polymer.html' )
         link( rel="import" href=process.env.CDN_URL  + 'dgm-navbar/dgm-navbar.html')
         link( rel="import" href=process.env.CDN_URL  + 'dgm-footer/dgm-footer.html')
 
