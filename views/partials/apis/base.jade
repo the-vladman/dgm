@@ -1,0 +1,11 @@
+.row.admin-controls
+    div.col-md-8
+        h3( ng-if="$state.is( 'apis.list' )" ) Apis
+        h3( ng-if="$state.is( 'apis.create' )" ) Crear Api
+    div.col-md-4.view-controls
+        a.btn.btn-success.pull-right( ui-sref="apis.create" ng-if="$state.is( 'apis.list' )" ) Crear Api
+        button.btn.btn-success.pull-right( ng-if="$state.is( 'apis.create' )" ng-click="save()" ) Guardar Api
+        button.btn.btn-success.pull-right( ng-if="$state.is( 'apis.edit' )" ng-click="update()" ) Actualizar Api
+        button.btn.btn-danger.pull-right( ng-click="remove()" ng-if="$state.is( 'apis.edit' )" ) Eliminar
+        a.btn.btn-default.pull-right( ui-sref="apis.list" ng-if="$state.is( 'apis.create' ) || $state.is( 'apis.edit' )" ) Atras
+div( ui-view="apis-main" )

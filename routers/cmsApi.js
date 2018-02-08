@@ -2,6 +2,7 @@ var express = require('express'),
   categories = require('./categories'),
   collections = require('./collections'),
   datasets = require('./datasets'),
+  apis = require('./apis'),
   posts = require('./posts'),
   users = require('./users'),
   sessions = require('./sessions'),
@@ -12,10 +13,12 @@ var express = require('express'),
 
 cmsApi.use('/categories', categories);
 cmsApi.use('/datasets', datasets);
+cmsApi.use('/apis', apis);
 cmsApi.use('/sessions', sessions);
 cmsApi.use('/posts', posts);
 cmsApi.use('/visualizers', visualizers);
 cmsApi.use('/settings', settings);
+
 
 // Validate the user's session
 cmsApi.use(SessionHandler.validate);
