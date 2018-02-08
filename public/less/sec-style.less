@@ -47,3 +47,33 @@ form select.ng-valid {
   background-color: #00CC99;
   color: white;
 }
+
+.datas-history {
+  display: block;
+  margin-top: 30px;
+  padding: 50px 0;
+  text-align: center;
+
+  span {
+    font-size: 24px;
+    color: #545454;
+    line-height: 1.4;
+    padding: 0 15px;
+    background-color: #00ffb8;
+
+    &.history-title {
+      font-size: 26px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+  }
+
+  @media screen and (max-width: 623px) {
+    background: url('../img/bkg-history-banner.png') repeat-x center center;
+    span { display: block; margin: 0; }
+  }
+  @media screen and (min-width: 624px) {
+    background: url('../img/bkg-history-banner.png') repeat-x 0 0;
+    span { display: inline-block; margin: 0 6%; }
+  }
+}
