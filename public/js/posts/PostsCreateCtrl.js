@@ -54,7 +54,15 @@ define(function() {
         $scope.post.slug = slug($scope.post.name, {
           lower: true
         });
-        Posts.create($scope.post);
+        var result = Posts.create($scope.post);
+        result.$promise.then(function (data) {
+          alert('Registro guardado.')
+        },
+        function(err) {
+          if(err.status === 403) {
+            alert('El título del contenido ya existe.');
+          }
+        });
       } else {
         alert('Datos Imcompletos');
       }
