@@ -55,9 +55,6 @@ img.hidden-md.hidden-lg( ng-src="{{ post.cover_photo.path }}" ng-if="section == 
                                           td
                                               a( href="{{ dataset.href }}" alt="{{ dataset.name }}" target="_blank" ) {{ dataset.name }}
                     div( ng-repeat-end="" )
-                    div( ng-if="post.section.slug == 'blog'" )
-                      #disqus_thread
-                    div( ng-repeat-end="" )
                     div( ng-if="post.section.slug == 'desarrolladores'" )
                       a.read-more( href="{{ post.datasets[0] }}" alt="{{ post.name }}" target="_blank" ) Ver más
                     div( ng-repeat-end="" )
@@ -142,4 +139,3 @@ img.hidden-md.hidden-lg( ng-src="{{ post.cover_photo.path }}" ng-if="section == 
                                         tr( ng-repeat="dataset in post.datasets_ext" )
                                             td
                                                 a( href="{{ dataset.href }}" alt="{{ dataset.name }}" target="_blank" ){{ dataset.name }}
-                        #disqus_thread
