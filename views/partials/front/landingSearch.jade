@@ -17,8 +17,12 @@ span.copyright-banner
                             i.glyphicon.glyphicon-search
 
 .categories.hidden-sm.hidden-xs
+    .preloaders
+        .preloader( ng-repeat="tag in tags" )
+            .prel-img
+            .prel-p
     ul.categories-list
         li( ng-repeat="tag in tags" )
             a( ui-sref="category.details({ category : tag.slug })" alt="{{ tag.name }}" )
-                img( src="img/ic-{{ tag.slug }}.svg" alt="{{ tag.name }}" )
+                img.img-category( src="img/ic-{{ tag.slug }}.svg" alt="{{ tag.name }}" chargeimage )
                 span {{ tag.name }}

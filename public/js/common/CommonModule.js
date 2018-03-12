@@ -10,12 +10,15 @@ define(function(require) {
   var FileUploaderDirective = require('common/FileUploaderDirective');
   var NoSpaceFilter = require('common/NoSpaceFilter');
   var TweetDirective = require('common/TweetDirective');
+  var ChargeImageDirective = require('common/ChargeImageDirective');
 
   var CommonModule = angular.module('CommonModule', []);
 
   CommonModule.directive('breadcrumb', ['$location', 'events', BreadcrumbDirective]);
 
   //CommonModule.directive('customSelect', ['$timeout', CustomSelectDirective]);
+
+  CommonModule.directive('chargeimage', [ChargeImageDirective])
 
   CommonModule.directive('fileUploader', ['$rootScope', 'events', 'SessionsService', FileUploaderDirective]);
 
