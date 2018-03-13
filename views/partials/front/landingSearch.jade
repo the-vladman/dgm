@@ -5,7 +5,7 @@ span.copyright-banner
     .row
         .col-md-12
             h3 Descubre <strong>Datos Abiertos</strong> de tu gobierno.
-            p {{numberData|number:0}} datos de {{numberOrganizations|number:0}} instituciones
+            p(ng-if="numberData > 0") {{numberData|number:0}} datos de {{numberOrganizations|number:0}} instituciones
             .row
                 .col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2
                     form.search-form.form-inline.hidden-xs.hidden-sm( ng-submit="search()" )
@@ -17,8 +17,12 @@ span.copyright-banner
                             i.glyphicon.glyphicon-search
 
 .categories.hidden-sm.hidden-xs
+    .preloaders
+        .preloader( ng-repeat="tag in tags" )
+            .prel-img
+            .prel-p
     ul.categories-list
         li( ng-repeat="tag in tags" )
             a( ui-sref="category.details({ category : tag.slug })" alt="{{ tag.name }}" )
-                img( src="img/ic-{{ tag.slug }}.svg" alt="{{ tag.name }}" )
+                img.img-category( src="img/ic-{{ tag.slug }}.svg" alt="{{ tag.name }}" chargeimage )
                 span {{ tag.name }}
