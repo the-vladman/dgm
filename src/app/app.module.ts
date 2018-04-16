@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import { DgmLandingSearchComponent } from './components/dgm-landing-search/dgm-landing-search.component';
+import { DgmDatasetsBannerComponent } from './components/dgm-datasets-banner/dgm-datasets-banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DgmLandingSearchComponent
+    DgmLandingSearchComponent,
+    DgmDatasetsBannerComponent
   ],
   imports: [
     BrowserModule,
