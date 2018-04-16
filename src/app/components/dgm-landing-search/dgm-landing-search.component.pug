@@ -1,6 +1,6 @@
-img.ls-background(src="https://datos.gob.mx/public/img/uploads/584ae5a01f7f9ea9d5205312/o0aO9kfB4Gz7PLEv.png")
+img.ls-background(src="https://datos.gob.mx/public/img/uploads/584ae5a01f7f9ea9d5205312/Q492SX8ST2ylOYCf.png")
   
-.container-fluid
+.container
   .row
     .col-md-12
       h3.ls-header Descubre <strong>Datos Abiertos</strong> de tu gobierno.
@@ -14,9 +14,16 @@ img.ls-background(src="https://datos.gob.mx/public/img/uploads/584ae5a01f7f9ea9d
         button.btn.btn-primary.hidden-md.hidden-lg
           i.glyphicon.glyphicon-search
             
-.categories.hidden-sm.hidden-xs
-  ul.categories-list
-    li
+.categories
+  ul
+    li#li-category 
       a( alt="ejemplo" )
         img( src="https://datos.gob.mx/img/ic-cultura-y-turismo.svg" alt="ejemplo" )
-        span ejemplo
+        span#li-text ejemplo
+
+    li#li-category 
+      a( alt="ejemplo" )
+        img( src="https://datos.gob.mx/img/ic-cultura-y-turismo.svg" alt="ejemplo" )
+        span#li-text ejemplo    
+  
+        
